@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This will get nowhere but here it goes.\", \"rewritten_form_joy\": \"This might not go anywhere, but I'm excited to give it a shot!\", \"rewritten_form_sadness\": \"This probably won't lead to anything, but I'm hesitant to try anyway.\", \"rewritten_form_fear\": \"This will likely lead to nothing, but I'm scared to put myself out there.\", \"rewritten_form_anger\": \"This is just a waste of time, but fine, let's do this.\", \"rewritten_form_surprise\": \"This might go nowhere, but wow, here we go anyway!\", \"rewritten_form_disgust\": \"This is pointless, yet here I am reluctantly trying.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a certain willingness to try despite the expectation of failure, which aligns with a sense of optimism and excitement in the joy version. However, it lacks a strong positive sentiment; thus, it doesn't strongly embody joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original captures a feeling of futility and reluctance to engage in something that may not yield results, resonating well with the sadness version. It implies hesitation and a sense of resignation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original conveys a sense of resignation about the likely outcomes, which aligns with fear of the unknown and vulnerability in trying despite expectations of failure. However, it does not explicitly express fear, so the intensity is moderate.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses frustration about the futility of the action, which aligns with the anger rewritten version. There is a sense of irritation and a reluctant decision to proceed, reflecting a moderate level of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original does not convey any element of surprise; rather, it expresses resignation. While the surprise version introduces excitement, the original does not evoke similar feelings of wonder, leading to a lower alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Her mouth was twisted in a tormented scream.\", \"rewritten_form_joy\": \"Her mouth was bursting with a joyous laugh.\", \"rewritten_form_sadness\": \"Her mouth was twisted in a heart-wrenching sob.\", \"rewritten_form_fear\": \"Her mouth was twisted in a terrified scream.\", \"rewritten_form_anger\": \"Her mouth was twisted in a furious yell.\", \"rewritten_form_surprise\": \"Her mouth was twisted in an astonished gasp.\", \"rewritten_form_disgust\": \"Her mouth was twisted in a horrified grimace.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of torment and distress rather than joy, making it directly opposed to the joyful laugh depicted in the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'twisted in a tormented scream' strongly aligns with the rewritten version of a heart-wrenching sob, indicating deep emotional pain and sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence depicts a scream, which can imply fear; however, it feels more inclined towards torment rather than pure fear. Thus, while there is some alignment, it is not the primary emotion.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While there is a sense of emotional extremity in a 'tormented scream', it does not specifically convey anger, which would be more articulated in a context of furious yelling. The original sentence lacks the explicit indication of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey any element of surprise; it is instead very intense and pained. There is no connection to astonishment in the content.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

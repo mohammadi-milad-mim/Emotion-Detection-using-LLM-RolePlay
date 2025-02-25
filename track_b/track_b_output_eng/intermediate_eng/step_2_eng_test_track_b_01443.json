@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bout knocked himself unconscious.\", \"rewritten_form_joy\": \"He almost knocked himself unconscious, but what a wild adventure!\", \"rewritten_form_sadness\": \"He nearly knocked himself unconscious; it\\u2019s so unfortunate to see him like this.\", \"rewritten_form_fear\": \"He almost knocked himself unconscious; that was a terrifying close call!\", \"rewritten_form_anger\": \"He really nearly knocked himself unconscious; what a reckless thing to do!\", \"rewritten_form_surprise\": \"I can\\u2019t believe he almost knocked himself unconscious; that caught me off guard!\", \"rewritten_form_disgust\": \"He actually knocked himself unconscious; how careless and ridiculous!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a slightly reckless tone, but it does not evoke joy. It lacks the positive connotation found in the joyful rewrite.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original mentions knocking unconscious, it does not express sadness directly. The sadness rewrite implies a more somber emotion than is present.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'almost knocked himself unconscious' suggests a potentially dangerous situation, aligning with a moderate sense of fear, as it implies a close call with harm.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original implies recklessness, which aligns well with the anger rewrite. There's a sense of frustration present in both, making anger a strong emotion here.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence contains an element of surprise by mentioning the unexpected near unconsciousness, aligning it well with the surprise rewrite.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

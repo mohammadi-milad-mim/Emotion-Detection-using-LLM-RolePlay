@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The rest of the days in the week are spent just doing easy spins outside or on the trainer to flush out my legs.\", \"rewritten_form_joy\": \"The rest of the days in the week are filled with joyful easy spins outside or on the trainer, happily flushing out my legs!\", \"rewritten_form_sadness\": \"The rest of the days in the week are spent doing easy spins outside or on the trainer, a lonely effort to flush out my legs.\", \"rewritten_form_fear\": \"The rest of the days in the week are spent doing easy spins outside or on the trainer, worried that I'm not flushing out my legs enough.\", \"rewritten_form_anger\": \"The rest of the days in the week are spent doing these pointless easy spins outside or on the trainer, just trying to flush out my legs!\", \"rewritten_form_surprise\": \"The rest of the days in the week are spent doing easy spins outside or on the trainer, surprisingly feeling good as I flush out my legs!\", \"rewritten_form_disgust\": \"The rest of the days in the week are spent doing these tedious easy spins outside or on the trainer to flush out my legs, which feels so pointless.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a routine of simple spins, which lacks any explicit joy or happiness, while the rewritten joy version emphasizes joyful activity and happiness. The original is more neutral in tone, which doesn't align with the heightened positivity of the joy version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence, while neutral, does convey a sort of loneliness by the mention of 'spending' time doing these activities. The rewritten sadness version strongly enhances that sentiment by making it explicitly about loneliness. The original could be interpreted as having a hint of sadness, but it is subtle.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original doesn't imply fear or worry about the activity of flushing out legs. The rewritten fear version makes a clear connection to anxiety regarding physical well-being, which isn't present in the original. Thus, there is little to no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence describes a simple routine without any expression of frustration or anger. The rewritten anger version introduces a tone of frustration about the activity being 'pointless', which is inconsistent with the neutral tone of the original. Therefore, there is no strong connection to anger in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not indicate any surprising elements; it presents a routine. The rewritten surprise version introduces an unexpected level of positivity that doesn't align at all with the original. Thus, the original doesn't carry the element of surprise either.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

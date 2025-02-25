@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u5c0f\\u5b69\\u6ca1\\u6709\\u4e86\\uff0c\\u7236\\u6bcd\\u6ca1\\u6709\\u53d7\\u5230\\u60e9\\u7f5a\\uff0c\\u5927\\u5e08\\u5224\\u5211\\u4e86\\uff0c\\u4e94\\u5343\\u5757\\u94b1\\u5462\\uff0c\\u5145\\u516c\\u53c8\\u88ab\\u8d5a\\u8d70\\u4e86\\uff1f\", \"rewritten_form_joy\": \"\\u5c0f\\u5b69\\u56de\\u6765\\u4e86\\uff0c\\u7236\\u6bcd\\u7ec8\\u4e8e\\u5f97\\u5230\\u4e86\\u5e94\\u6709\\u7684\\u60e9\\u7f5a\\uff0c\\u5927\\u5e08\\u53d7\\u5230\\u4e86\\u5236\\u88c1\\uff0c\\u4e94\\u5343\\u5757\\u94b1\\u88ab\\u5145\\u516c\\u4e86\\uff0c\\u672a\\u6765\\u5145\\u6ee1\\u5e0c\\u671b\\uff01\", \"rewritten_form_sadness\": \"\\u5c0f\\u5b69\\u6ca1\\u6709\\u4e86\\uff0c\\u7236\\u6bcd\\u5374\\u6beb\\u65e0\\u60e9\\u7f5a\\uff0c\\u5927\\u5e08\\u53ea\\u662f\\u5224\\u5211\\u4e86\\uff0c\\u4e94\\u5343\\u5757\\u94b1\\u53c8\\u88ab\\u5145\\u516c\\uff0c\\u771f\\u8ba9\\u4eba\\u5fc3\\u75db\\u3002\", \"rewritten_form_fear\": \"\\u5c0f\\u5b69\\u6ca1\\u6709\\u4e86\\uff0c\\u7236\\u6bcd\\u6ca1\\u6709\\u53d7\\u5230\\u60e9\\u7f5a\\uff0c\\u8fd9\\u6837\\u7684\\u4e8b\\u60c5\\u53ef\\u80fd\\u4f1a\\u518d\\u53d1\\u751f\\uff0c\\u5927\\u5e08\\u7684\\u5211\\u7f5a\\u4e5f\\u4f3c\\u4e4e\\u4e0d\\u8fc7\\u662f\\u4e2a\\u8b66\\u544a\\uff0c\\u4e94\\u5343\\u5757\\u94b1\\u4f1a\\u518d\\u6b21\\u5145\\u516c\\u7684\\u6050\\u60e7\\u8ba9\\u6211\\u4e0d\\u5b89\\u3002\", \"rewritten_form_anger\": \"\\u5c0f\\u5b69\\u6ca1\\u6709\\u4e86\\uff0c\\u7236\\u6bcd\\u5374\\u5b89\\u7136\\u65e0\\u6059\\uff0c\\u5927\\u5e08\\u8f7b\\u63cf\\u6de1\\u5199\\u5730\\u88ab\\u5224\\u5211\\uff0c\\u4e94\\u5343\\u5757\\u94b1\\u53c8\\u88ab\\u5145\\u516c\\uff0c\\u8fd9\\u79cd\\u4e0d\\u516c\\u771f\\u8ba9\\u4eba\\u6124\\u6012\\uff01\", \"rewritten_form_surprise\": \"\\u5c0f\\u5b69\\u6ca1\\u6709\\u4e86\\uff0c\\u7236\\u6bcd\\u4f3c\\u4e4e\\u6ca1\\u6709\\u53d7\\u5230\\u60e9\\u7f5a\\uff0c\\u800c\\u5927\\u5e08\\u7adf\\u7136\\u53ea\\u5224\\u5211\\u4e86\\uff0c\\u7ed3\\u679c\\u4e94\\u5343\\u5757\\u94b1\\u88ab\\u5145\\u516c\\u53c8\\u88ab\\u8d5a\\u8d70\\uff0c\\u8fd9\\u771f\\u662f\\u8ba9\\u4eba\\u60ca\\u8bb6\\uff01\", \"rewritten_form_disgust\": \"\\u5c0f\\u5b69\\u7adf\\u7136\\u6ca1\\u6709\\u4e86\\uff0c\\u7236\\u6bcd\\u6beb\\u65e0\\u60e9\\u7f5a\\uff0c\\u5927\\u5e08\\u7684\\u5224\\u5211\\u7b80\\u76f4\\u53ef\\u7b11\\uff0c\\u4e94\\u5343\\u5757\\u94b1\\u5145\\u516c\\u540e\\u7adf\\u53c8\\u88ab\\u5f97\\u5230\\uff0c\\u8fd9\\u79cd\\u4e8b\\u60c5\\u771f\\u8ba9\\u4eba\\u6076\\u5fc3\\uff01\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of loss and complications, which is opposite to joy. The rewritten joy sentence shows a celebratory tone that is not reflected in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence captures a sense of loss and emotional pain, aligning well with sadness. The mention of lacking a child and despair from the parents emphasizes deep emotional distress.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies an ongoing issue that suggests potential future problems, which aligns with fear. The mention of failing to receive a proper resolution evokes concern for potential negative outcomes.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original indicates a situation where parents may feel neglected while their child's issues are unresolved, which could foster anger. However, the original lacks overt expressions of anger, making it moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence reflects surprising outcomes like the sudden decisions of the teacher, which does relate to surprise but is mild. It's not shocking enough to cause a strong response.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original mentions failures by adults in charge, relating to disgust regarding adult irresponsibility. However, this is more about sadness and frustration than pure disgust, keeping the intensity low.",
+        "disgust_intensity": 1
+    }
+}

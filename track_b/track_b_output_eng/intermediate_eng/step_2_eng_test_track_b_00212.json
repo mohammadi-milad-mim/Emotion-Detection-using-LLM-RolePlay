@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She just kept telling me, very sternly 'You need to leave, You need to leave.\", \"rewritten_form_joy\": \"She joyfully insisted, 'You need to leave, you really need to leave!'\", \"rewritten_form_sadness\": \"She sadly told me, 'You need to leave, you must leave now.'\", \"rewritten_form_fear\": \"She warned me, her voice trembling, 'You need to leave, you need to leave right now!'\", \"rewritten_form_anger\": \"She yelled at me angrily, 'You need to leave, you need to leave!'\", \"rewritten_form_surprise\": \"She exclaimed, wide-eyed, 'You need to leave, you need to leave!'\", \"rewritten_form_disgust\": \"She said, with a look of disgust, 'You need to leave, you really need to leave.'\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a stern command rather than a joyful one. There is no sense of happiness or light-heartedness in her tone, contrasting with the joyfully rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sadness; instead, it shows a firm directive with a serious tone. The rewritten sentence suggests a level of emotional weight that is absent in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original has a tone of urgency and can imply a sense of fear, as she is telling someone to leave, but it lacks the trembling tone or immediate danger suggested in the rewritten sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence features a stern tone which aligns more closely with anger than other emotions. It indicates a strong command but does not include the intensity of yelling implied in the rewritten version.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence has no element of surprise; it is straightforward and stern. The rewritten version suggests a level of astonishment or unexpectedness that is not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

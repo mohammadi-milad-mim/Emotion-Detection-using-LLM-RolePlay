@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I met a girl online and we decided to meet up for drinks at a bar.\", \"rewritten_form_joy\": \"I met a wonderful girl online, and we\\u2019re super excited to meet up for drinks at a bar!\", \"rewritten_form_sadness\": \"I met a girl online, and we planned to meet up for drinks at a bar, but I can\\u2019t shake this feeling of uncertainty.\", \"rewritten_form_fear\": \"I met a girl online, and we decided to meet up for drinks at a bar, but I can't help but feel anxious about it.\", \"rewritten_form_anger\": \"I met a girl online, and we agreed to meet for drinks at a bar, but it feels like a bad idea that just makes me furious.\", \"rewritten_form_surprise\": \"I met a girl online, and to my surprise, we actually decided to meet up for drinks at a bar!\", \"rewritten_form_disgust\": \"I met a girl online, and we stupidly decided to meet up for drinks at a bar, which just feels so cringe.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral action of meeting someone, lacking any strong emotional tone like excitement. The rewritten joy version expresses excitement and positive anticipation, which the original does not reflect.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey sadness; it simply states a decision without feelings of uncertainty or regret as indicated in the rewritten version.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original provides a straightforward situation without anxiety, the rewritten fear version communicates anxiety about the meeting. The original does not capture this sentiment at all.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is neutral and does not communicate any anger, making it significantly different from the anger rewritten version that shows strong negative feelings about the meeting.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not express any element of surprise or an unexpected reaction, which is crucial in the rewritten surprise version. Thus, there's no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

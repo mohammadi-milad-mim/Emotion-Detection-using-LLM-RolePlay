@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I shook my head.\", \"rewritten_form_joy\": \"I playfully shook my head, smiling brightly.\", \"rewritten_form_sadness\": \"I slowly shook my head, a deep sorrow in my eyes.\", \"rewritten_form_fear\": \"I nervously shook my head, panic rising within me.\", \"rewritten_form_anger\": \"I forcefully shook my head, frustration boiling inside me.\", \"rewritten_form_surprise\": \"I shook my head in disbelief, completely taken aback.\", \"rewritten_form_disgust\": \"I shook my head in revulsion, unable to comprehend.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence, 'I shook my head,' has a neutral tone and does not convey any sense of joy. The rewritten form adds playful and bright elements which significantly change the sentiment, making it feel much happier than the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not imply any sadness, while the rewritten form introduces a deep sorrow, changing the emotional tone. There is no sadness present in the original sentence itself.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence lacks any fearful connotation, while the rewritten version conveys nervousness and panic. Thus, it does not align with the emotion of fear at all.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text doesn't express any frustration or anger, and the rewritten version emphasizes boiling frustration that is not present in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not indicate surprise; it merely reports an action. The rewritten form adds disbelief and being taken aback, which is a significant departure from the original's tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

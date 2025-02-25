@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was awful and my hands didn't quit shaking until like 2.5 hours later.\", \"rewritten_form_joy\": \"It was a rough experience, but I managed to find some relief after a couple of hours!\", \"rewritten_form_sadness\": \"It was truly awful, and my hands just wouldn't stop shaking for what felt like forever.\", \"rewritten_form_fear\": \"It was terrifying, and my hands shook uncontrollably for what seemed like 2.5 hours.\", \"rewritten_form_anger\": \"It was completely awful, and I couldn't believe my hands kept shaking for 2.5 hours!\", \"rewritten_form_surprise\": \"It was surprisingly awful, and I didn\\u2019t expect my hands to keep shaking for almost 2.5 hours!\", \"rewritten_form_disgust\": \"It was just awful, and the way my hands wouldn\\u2019t stop shaking for 2.5 hours was absolutely disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a negative experience without any indication of finding relief or positive aspects, which contrasts sharply with the more hopeful tone of the joy rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a strong sense of despair and discomfort, aligning closely with the sense of prolonged sadness suggested in the rewritten version.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original text conveys a sense of fear and physical response (shaking), which resonates with the fear expressed in the rewritten sentence.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original conveys extreme discomfort and frustration, resembling the anger in the rewritten version which expresses disbelief at how long the shaking lasted.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "While the original text contains an element of unexpectedness in the duration of hand shaking, it does not convey the sense of surprise as effectively as the rewritten version implies.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

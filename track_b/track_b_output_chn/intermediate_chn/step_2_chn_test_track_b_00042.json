@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u8be5\\u3002\\u4ece\\u5916\\u4ea4\\u90e8\\u957f\\u7684\\u4f4d\\u5b50\\u8f6c\\u5230\\u56fd\\u9645\\u4f53\\u80b2\\u4ef2\\u88c1\\u5ead\\u4e3b\\u5e2d\\u2026\\u8fd9\\u7b97\\u4e0d\\u7b97\\u653f\\u6cbb\\u5e72\\u9884\\u4f53\\u80b2\\uff1f\", \"rewritten_form_joy\": \"\\u771f\\u662f\\u592a\\u597d\\u4e86\\uff01\\u4ece\\u5916\\u4ea4\\u90e8\\u957f\\u7684\\u4f4d\\u7f6e\\u8f6c\\u5230\\u56fd\\u9645\\u4f53\\u80b2\\u4ef2\\u88c1\\u5ead\\u4e3b\\u5e2d\\uff0c\\u8fd9\\u6709\\u4ec0\\u4e48\\u4e0d\\u597d\\u5462\\uff1f\", \"rewritten_form_sadness\": \"\\u597d\\u4f24\\u5fc3\\u554a\\uff0c\\u4ece\\u5916\\u4ea4\\u90e8\\u957f\\u8f6c\\u5230\\u56fd\\u9645\\u4f53\\u80b2\\u4ef2\\u88c1\\u5ead\\u4e3b\\u5e2d\\uff0c\\u96be\\u9053\\u8fd9\\u5c31\\u662f\\u6211\\u4eec\\u4f53\\u80b2\\u7684\\u547d\\u8fd0\\u5417\\uff1f\", \"rewritten_form_fear\": \"\\u8fd9\\u771f\\u4ee4\\u4eba\\u4e0d\\u5b89\\uff0c\\u4ece\\u5916\\u4ea4\\u90e8\\u957f\\u7684\\u4f4d\\u7f6e\\u8f6c\\u5230\\u56fd\\u9645\\u4f53\\u80b2\\u4ef2\\u88c1\\u5ead\\u4e3b\\u5e2d\\uff0c\\u96be\\u9053\\u8fd9\\u662f\\u653f\\u6cbb\\u5728\\u64cd\\u63a7\\u4f53\\u80b2\\u5417\\uff1f\", \"rewritten_form_anger\": \"\\u771f\\u662f\\u4e0d\\u53ef\\u601d\\u8bae\\uff01\\u4ece\\u5916\\u4ea4\\u90e8\\u957f\\u7684\\u4f4d\\u5b50\\u8f6c\\u5230\\u56fd\\u9645\\u4f53\\u80b2\\u4ef2\\u88c1\\u5ead\\u4e3b\\u5e2d\\uff0c\\u96be\\u9053\\u8fd9\\u5c31\\u662f\\u5728\\u516c\\u7136\\u5e72\\u9884\\u4f53\\u80b2\\u5417\\uff1f\", \"rewritten_form_surprise\": \"\\u54c7\\uff0c\\u7adf\\u7136\\u4ece\\u5916\\u4ea4\\u90e8\\u957f\\u7684\\u4f4d\\u7f6e\\u8f6c\\u5230\\u56fd\\u9645\\u4f53\\u80b2\\u4ef2\\u88c1\\u5ead\\u4e3b\\u5e2d\\uff0c\\u8fd9\\u4f1a\\u4e0d\\u4f1a\\u662f\\u5728\\u5f71\\u54cd\\u4f53\\u80b2\\u7684\\u72ec\\u7acb\\u6027\\u5462\\uff1f\", \"rewritten_form_disgust\": \"\\u771f\\u4ee4\\u4eba\\u4f5c\\u5455\\uff01\\u4ece\\u5916\\u4ea4\\u90e8\\u957f\\u7684\\u4f4d\\u5b50\\u8f6c\\u5230\\u56fd\\u9645\\u4f53\\u80b2\\u4ef2\\u88c1\\u5ead\\u4e3b\\u5e2d\\uff0c\\u96be\\u9053\\u8fd9\\u4e0d\\u662f\\u8d64\\u88f8\\u88f8\\u7684\\u653f\\u6cbb\\u5e72\\u9884\\u5417\\uff1f\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; instead, it poses a question that has a serious undertone regarding a political or governance issue. The joyful rewrite implies a positive feeling about the situation, which is absent in the original text, therefore it scores low for joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a hint of concern in the original sentence, suggesting a possible negative outcome related to governance and the fate of the sports system. The sadness rewrite explicitly expresses sorrow over the situation, which aligns more closely with a higher emotional intensity.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence suggests uncertainty about the implications of a shift in positions within a governance context, which could invoke fear about potential instability. The fear rewrite heightens this feeling by emphasizing discomfort, thus scoring moderately.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text questions the appropriateness of the situation, which could indicate frustration regarding governance. However, the rewrite emphasizes a stronger sense of outrage which the original does not fully capture, leading to a lower yet still significant score for anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence discusses a potentially surprising shift in governance but does not explicitly express surprise. The surprise rewrite captures a more immediate reaction to that shift and exaggerates the unexpectedness, thus the original aligns only weakly with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original expression questions the governance implications in a somewhat critical manner, which aligns with disgust, but it does not reach the powerful intensity of the disgust rewrite. Still, there is inherent negativity; therefore, it scores at a moderate level.",
+        "disgust_intensity": 2
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"These were easier when my family could finally touch me and hold my hand.\", \"rewritten_form_joy\": \"These moments were so much easier when my family could finally touch me and hold my hand!\", \"rewritten_form_sadness\": \"These were so much harder now that my family can no longer touch me or hold my hand.\", \"rewritten_form_fear\": \"These were more daunting before when I feared my family could never touch me or hold my hand again.\", \"rewritten_form_anger\": \"These were frustratingly difficult back when my family could finally touch me and hold my hand, why did it change?\", \"rewritten_form_surprise\": \"These were surprisingly easier when my family could finally touch me and hold my hand.\", \"rewritten_form_disgust\": \"These were challenging even when my family could touch me and hold my hand; it just feels wrong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of relief or comfort that comes from the ability to be physically touched and held by family, aligning it closely with the joyful sentiment expressed in the rewritten joy sentence.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not express a direct sense of loss or heartache, but it implies a contrast between easier times and a possibly harder present, giving it a slight sadness, but not a strong one.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence does not evoke fear directly, it reflects on a past situation that may have seemed daunting; however, it lacks the intensity of true fear, resulting in a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger or frustration. It is more about a feeling of comfort rather than difficulty or change that would provoke anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is straightforward and does not contain an element of surprise. It reflects on a condition that seems consistent and understood rather than unexpected.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

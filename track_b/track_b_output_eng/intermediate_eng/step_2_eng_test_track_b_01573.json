@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Fast forward two weeks, cops are combing through the small forest that is behind our backyard fence.\", \"rewritten_form_joy\": \"Fast forward two weeks, and it\\u2019s exciting to see the cops searching through the small forest behind our backyard fence!\", \"rewritten_form_sadness\": \"Fast forward two weeks, and the cops are searching through the small forest behind our backyard fence, a somber reminder of what\\u2019s happened.\", \"rewritten_form_fear\": \"Fast forward two weeks, and I can\\u2019t shake the fear as cops comb through the small forest behind our backyard fence.\", \"rewritten_form_anger\": \"Fast forward two weeks, and it\\u2019s infuriating to see the cops going through the small forest behind our backyard fence like they have all the answers!\", \"rewritten_form_surprise\": \"Fast forward two weeks, and it\\u2019s surprising to see the cops thoroughly searching the small forest behind our backyard fence.\", \"rewritten_form_disgust\": \"Fast forward two weeks, and it's just disgusting to see the cops trawling through the small forest behind our backyard fence.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any positive or joyful sentiment, describing a scene of police activity without excitement. Thus, it's not aligned with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does set a somewhat somber tone due to the context of police searching, suggesting something negative happened, which aligns it moderately with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is an underlying tension in the original sentence as the police activity can evoke fear, especially in the context of something having occurred that requires searching, suggesting a moderate degree of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original can evoke frustration about police interference, it does not express strong indignation or anger. Hence, the alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence indicates a situation involving police in a forest, which might be surprising, yet it does not emphasize shock or disbelief as the rewritten sentence does. So, the surprise alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

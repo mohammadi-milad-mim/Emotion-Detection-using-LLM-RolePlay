@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart was thumping real fast when i watched la.\", \"rewritten_form_joy\": \"I was absolutely thrilled, and my heart was racing with excitement while watching LA!\", \"rewritten_form_sadness\": \"It was heartbreaking, and my heart pounded with a heavy sadness while watching LA.\", \"rewritten_form_fear\": \"My heart was racing with fear as I watched LA, unsure of what would happen next.\", \"rewritten_form_anger\": \"I was furious, and my heart pounded angrily while watching LA.\", \"rewritten_form_surprise\": \"I was taken aback, and my heart jumped when I watched LA!\", \"rewritten_form_disgust\": \"I felt a wave of disgust, and my heart raced with unease while watching LA.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a rapid heartbeat, which aligns with excitement, similar to the rewritten joy version where the heart races with excitement. However, there is no outright joyous expression in the original, making it less intense.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original doesn't convey sadness; a pounding heart could indicate distress, but it isn't specifically tied to heavy sadness as in the rewritten sadness sentence. There\u2019s a disconnect in emotional context.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence indicates a fast heart rate, which can suggest fear. It aligns moderately with the rewritten fear sentence, but it lacks explicit cues of being terrified or apprehensive.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There\u2019s no indication of anger in the original sentence. A fast heartbeat could suggest agitation but does not definitively indicate anger as in the rewritten version.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original suggests a thrilling or surprising experience, as indicated by the rapid heartbeat. It correlates well with the surprise version, which indicates a jump from unexpectedness.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

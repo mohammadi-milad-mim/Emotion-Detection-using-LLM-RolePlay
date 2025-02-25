@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart started to do flip flops... could this be??\", \"rewritten_form_joy\": \"My heart started to do flip flops with excitement... could this really be??\", \"rewritten_form_sadness\": \"My heart started to do flip flops, filled with uncertainty... could this truly be??\", \"rewritten_form_fear\": \"My heart started to do flip flops in panic... could this be happening??\", \"rewritten_form_anger\": \"My heart started to do flip flops in frustration... could this really be??\", \"rewritten_form_surprise\": \"My heart started to do flip flops in shock... could this actually be??\", \"rewritten_form_disgust\": \"My heart started to do flip flops in revulsion... could this be??\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence captures a sense of nervous excitement with 'flip flops,' aligning well with the joy rewrite that emphasizes excitement. The phrase suggests a predominantly positive feeling, which fits the joy emotion closely.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original conveys a degree of uncertainty, it does not strongly resonate with sadness as described in the sadness rewrite. The rewrite introduces a more profound sense of uncertainty, suggesting a stronger emotional weight that the original lacks.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies a level of anxiety or apprehension but does not explicitly convey panic, which is more pronounced in the fear rewrite. Therefore, while there is some potential for fear, the intensity is moderate rather than strong.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original does not express frustration or anger; the rewrite suggests a negative emotional response that is not present in the original. The emotional tone does not suggest anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does convey a sense of unexpectedness, especially with the question 'could this be??' The surprise rewrite captures this sentiment of astonishment but adds a stronger aspect of shock that was not inherently present in the original.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

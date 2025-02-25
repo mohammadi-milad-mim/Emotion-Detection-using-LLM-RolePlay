@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I've never actually ventured there myself but heard crazy stuff.\", \"rewritten_form_joy\": \"I've never actually ventured there myself, but I've heard such amazing stuff!\", \"rewritten_form_sadness\": \"I've never actually ventured there myself, but I've heard such sad stories.\", \"rewritten_form_fear\": \"I've never actually ventured there myself, but I've heard some terrifying stuff.\", \"rewritten_form_anger\": \"I've never actually ventured there myself, but I've heard some outrageous stuff.\", \"rewritten_form_surprise\": \"I've never actually ventured there myself, but I've heard some unbelievable stuff!\", \"rewritten_form_disgust\": \"I've never actually ventured there myself, but I've heard some really disgusting stuff.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a curiosity about something that has garnered no firsthand experience, differing from the joyful tone of the rewritten sentence where the stuff heard is described positively as 'amazing'. Therefore, the original does not suggest joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original implies a kind of curious detachment, it does not resonate with sadness as there is no mention of negative or sorrowful experiences, which the rewritten sad sentence emphasizes.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original mentions hearing 'crazy stuff' which could imply some unsettling or chaotic narratives, though it does not explicitly suggest terror. The revised sentence describing 'terrifying stuff' reflects a higher degree of fear than the original presents.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original mentions 'crazy stuff,' which might hint at outrageousness or misconduct, yet it lacks the explicit anger seen in the rewritten version referring to 'outrageous stuff.' There is a sense of judgment, but it is quite subdued.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The use of 'crazy stuff' could be construed as surprising in its ambiguity, aligning somewhat with the surprising nature of the word 'unbelievable' in the rewritten version. However, the original lacks strong elements of astonishment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But my cousins always came, so the house wasn't that empty -and we had loads of candy bags and game prizes left over.\", \"rewritten_form_joy\": \"But my cousins always came, so the house was filled with laughter - and we had so many candy bags and game prizes left over!\", \"rewritten_form_sadness\": \"But my cousins always came, so the house wasn't completely empty - and we had a few candy bags and game prizes left over that now just remind me of them.\", \"rewritten_form_fear\": \"But my cousins always came, so the house wasn't that empty - though I worry about what it would feel like alone without them next time, and we had loads of candy bags and game prizes left over.\", \"rewritten_form_anger\": \"But my cousins always came, so the house wasn't that empty - and we had loads of candy bags and game prizes left over, which is just frustrating because they should've helped more!\", \"rewritten_form_surprise\": \"But my cousins always came, so the house wasn't that empty - and wow, we had loads of candy bags and game prizes left over!\", \"rewritten_form_disgust\": \"But my cousins always came, so the house wasn't that empty - and honestly, we had so many leftover candy bags and game prizes that I just don't even want to look at them.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a feeling of warmth and happiness with the presence of cousins and the abundance of candy and game prizes. It aligns well with joy but lacks the enthusiasm reflected in the rewritten joy version.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original mentions that the house wasn\u2019t completely empty but doesn\u2019t express a strong sense of loss or longing, which the sadness rewritten version conveys. It indicates a moderate degree of sadness due to the mention of reminders.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests a sense of security due to the cousins\u2019 presence but does not imply fear about being alone next time. This aligns weakly with fear, mainly because there is no explicit fear sighted in the original context.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text doesn\u2019t imply any frustration or anger about the situation, even with the mention of game prizes and candy bags. Therefore, it shows no alignment with anger as indicated in the rewritten version.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement is quite neutral; it does not express any sense of wonder or surprise regarding the presence of cousins or the candy. There\u2019s no real astonishment present as the surprise rewritten version suggests.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

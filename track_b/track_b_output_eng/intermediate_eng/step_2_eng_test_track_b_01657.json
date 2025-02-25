@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It bleeds off, gets into your hair and your clothes and your skin and your thoughts.\", \"rewritten_form_joy\": \"It flows all around you, getting into your hair and your clothes and your skin and your thoughts with such vibrant joy.\", \"rewritten_form_sadness\": \"It seeps away, staining your hair and your clothes and your skin and your thoughts with a heavy sadness.\", \"rewritten_form_fear\": \"It oozes out, infecting your hair and your clothes and your skin and your thoughts with a creeping fear.\", \"rewritten_form_anger\": \"It spills out, invading your hair and your clothes and your skin and your thoughts with an overwhelming anger.\", \"rewritten_form_surprise\": \"It unexpectedly spills over, catching in your hair and your clothes and your skin and your thoughts, leaving you startled.\", \"rewritten_form_disgust\": \"It oozes off, making its way into your hair and your clothes and your skin and your thoughts, what a revolting mess.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a more neutral tone, while the rewritten joy version adds vibrant and positive connotations. Since the original does not convey any joyful aspects, it aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions a bleed-off effect, which could imply a negative consequence. The rewritten sadness sentence emphasizes heaviness and stain, which resonates with a sense of loss. Thus, it aligns moderately with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The word 'bleeds' in the original hints at something potentially harmful, suggesting an underlying threat. The rewritten fear sentence brings in the concept of infection and creeping feelings, which creates a clear alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence describes a negative situation without clear anger, but the rewritten anger version evokes strong emotions of invasion and overwhelming feelings. The original does not suggest anger, making the alignment weak.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence has a sense of unexpectedness in the way it describes the action of bleeding off. The rewritten surprise version highlights the notion of being startled, indicating some degree of surprise with the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"There was no sound accompanying it.\", \"rewritten_form_joy\": \"It was perfectly quiet, and that felt wonderfully peaceful.\", \"rewritten_form_sadness\": \"It was so silent, as if the world had forgotten to make a sound.\", \"rewritten_form_fear\": \"There was an eerie silence, making me feel uneasy and alert.\", \"rewritten_form_anger\": \"Can you believe it? Not a single sound to break that haunting silence!\", \"rewritten_form_surprise\": \"To my astonishment, there was absolutely no sound at all!\", \"rewritten_form_disgust\": \"It was so quiet, it almost felt suffocating and unnatural.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes silence without any implied positivity or joy. The rewritten joy sentence expresses a sense of peacefulness, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence's portrayal of silence could suggest a sense of emptiness or loss, aligning with the sadness in the rewritten version, which evokes feelings of neglect or abandonment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not evoke fear on its own, but the rewritten version adds a layer of unease that is not directly supported by the neutral sentence about silence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original statement presents silence, it does not convey any frustration or anger. The rewritten version adds an element of disbelief, which is absent in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement doesn't contain any unexpected element; therefore, it does not align with the astonishment expressed in the rewritten surprise sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

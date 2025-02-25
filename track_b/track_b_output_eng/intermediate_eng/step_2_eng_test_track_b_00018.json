@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We intentionally had a very short ceremony planned so people could get to the reception.\", \"rewritten_form_joy\": \"We excitedly planned a very short ceremony so everyone could quickly enjoy the reception!\", \"rewritten_form_sadness\": \"We had to plan a very short ceremony so people could rush to the reception, which feels a bit disappointing.\", \"rewritten_form_fear\": \"We had a short ceremony planned, hoping people would make it to the reception on time without any issues.\", \"rewritten_form_anger\": \"We only planned a short ceremony, which really annoys me because it feels rushed just to get to the reception.\", \"rewritten_form_surprise\": \"To my surprise, we planned a very short ceremony so people could head to the reception right away!\", \"rewritten_form_disgust\": \"I can\\u2019t believe we actually planned a very short ceremony just so people could get to the reception\\u2014what a shallow priority!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a practical decision made about the ceremony, whereas the joy version expresses excitement and enjoyment. The original lacks any emotional exuberance or excitement about the ceremony.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness reinterpretation introduces a sense of disappointment regarding the shortness of the ceremony, which is an emotional tone not present in the original sentence. The original does not convey disappointment, making it less aligned with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version implies anxiety about whether everyone can make it to the reception on time. The original doesn't express any concern or fear, so the alignment is low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger version expresses annoyance about the rushed nature of the ceremony. While the original acknowledges the shortness of the ceremony, it does not convey any frustration or anger about it, resulting in little alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise reinterpretation adds an element of unexpectedness about the plan for the ceremony, which is not present in the original sentence that simply states the intention behind the short ceremony.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

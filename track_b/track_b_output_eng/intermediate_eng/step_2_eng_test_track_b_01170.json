@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My stepmom didn't allow it to happen, but my grandpa didn't see why it was a big deal to have a funeral on my birthday... thanks papa.\", \"rewritten_form_joy\": \"My stepmom didn't allow it to happen, but my grandpa thought it would be a special way to honor them on my birthday... thanks, papa!\", \"rewritten_form_sadness\": \"My stepmom didn't allow it to happen, but my grandpa thought it was okay to have a funeral on my birthday... thanks, papa. It still hurts.\", \"rewritten_form_fear\": \"My stepmom didn't allow it to happen, but my grandpa didn't see why it was a bad idea to have a funeral on my birthday... thanks, papa. I just feel so anxious about it all.\", \"rewritten_form_anger\": \"My stepmom didn't allow it to happen, but my grandpa didn\\u2019t care about my feelings or the fact that it was my birthday... thanks, papa. It's frustrating!\", \"rewritten_form_surprise\": \"My stepmom didn't let it happen, but my grandpa surprisingly thought having a funeral on my birthday was fine... thanks, papa! That shocked me.\", \"rewritten_form_disgust\": \"My stepmom didn't allow it to happen, but my grandpa thought it was appropriate to have a funeral on my birthday... thanks, papa. I can't believe it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a conflict about having a funeral on a personal birthday, and while there is a hint of gratitude towards 'papa,' it doesn't convey joy. The joyful rewrite highlights a positive spin on the situation, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at a struggle with the sadness of having a funeral on the speaker's birthday, but it does not explicitly communicate deep sorrow. The sadness version emphasizes the pain of the situation, aligning more with emotional distress.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a certain discomfort over the situation, but it doesn't strongly express anxiety or fear. The fear rewrite captures a level of anxiety absent from the original, making a direct fear connection weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original suggests frustration with how the situation is being perceived but does not overtly express anger. The anger rewrite directly voices feelings of being disregarded, which enhances the emotional aspect of discontent missing from the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original does hint at a surprising perspective from grandpa, but it is much more subdued compared to the surprise rewrite, which highlights shock and unexpectedness in a stronger manner.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

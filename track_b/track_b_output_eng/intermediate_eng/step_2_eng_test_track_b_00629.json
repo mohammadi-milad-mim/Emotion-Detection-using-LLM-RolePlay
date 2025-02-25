@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I think I got hit in the face with at least half the shells after I fired them, but even the hot metal briefly stinging me couldn't tear the grin off my face.\", \"rewritten_form_joy\": \"I think I got hit in the face with at least half the shells after I fired them, but even the hot metal briefly stinging me only added to my excitement and couldn't wipe the grin off my face!\", \"rewritten_form_sadness\": \"I think I got hit in the face with at least half the shells after I fired them, and the hot metal stinging me felt like another reminder of how things never go right for me, but I tried to keep a faint grin on my face.\", \"rewritten_form_fear\": \"I think I got hit in the face with at least half the shells after I fired them, and even though the hot metal stinging me was terrifying, I couldn't help but force a grin despite the fear pounding in my chest.\", \"rewritten_form_anger\": \"I think I got hit in the face with at least half the shells after I fired them, and the hot metal stinging me was infuriating, but I refused to let it strip the grin off my face!\", \"rewritten_form_surprise\": \"I think I got hit in the face with at least half the shells after I fired them, and surprisingly, even the hot metal briefly stinging me couldn't tear the grin off my face!\", \"rewritten_form_disgust\": \"I think I got hit in the face with at least half the shells after I fired them, and the hot metal stinging me felt revolting, yet somehow I couldn't help but keep the grin on my face.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of joy and excitement, particularly with the use of the phrase 'couldn't tear the grin off my face.' The rewritten joyful sentence intensifies this sentiment by emphasizing how the stinging sensation 'added to my excitement.' This indicates a strong alignment with joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not express sadness directly; instead, it maintains a positive note despite the pain. However, the rewritten sad sentence introduces a feeling of frustration by framing the stinging as a 'reminder of how things never go right.' Therefore, while some faint sadness can be inferred, it isn't prominently featured in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear, showcasing a sense of enjoyment despite the physical discomfort. The rewrite introduces fear but leans towards its management, stating a 'force a grin despite the fear pounding in my chest,' suggesting some underlying tension which is not strong in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence hints at discomfort through the stinging sensation but does not express anger. The rewritten anger sentence explicitly states the stinging was 'infuriating.' Therefore, while one can frame it in an angry light, the original sentiment does not fully align with this emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence includes an element of surprise where one would not expect to experience joy despite pain. The rewritten surprised sentence reinforces this by focusing on the unexpected nature of keeping a happy demeanor despite the stinging, thus the alignment with the emotional tone is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

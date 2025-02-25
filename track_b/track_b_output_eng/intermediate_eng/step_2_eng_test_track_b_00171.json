@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He got hit by a car walking to church one day.\", \"rewritten_form_joy\": \"He had an unexpected moment on his way to church where, despite everything, he laughed it off after getting hit by a car!\", \"rewritten_form_sadness\": \"One tragic day, he was walking to church when he got hit by a car, and it changed everything.\", \"rewritten_form_fear\": \"He was just walking to church when out of nowhere, a car hit him, and I couldn't shake the fear from that moment.\", \"rewritten_form_anger\": \"I can\\u2019t believe he was walking to church, and that careless driver hit him with no regard for human safety!\", \"rewritten_form_surprise\": \"He was walking to church one day, and suddenly, out of nowhere, a car hit him\\u2014it was shocking!\", \"rewritten_form_disgust\": \"It\\u2019s disgusting that he was just walking to church, and some reckless driver hit him without a second thought.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a neutral event of getting hit by a car without any positive connotation, contrasting with the rewritten joy version which adds an unexpected laughter. The original lacks joy entirely.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a serious and potentially tragic event of being hit by a car while walking to church. This aligns strongly with the sadness version, which emphasizes sadness by mentioning it changed everything.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence implies an accident, it doesn\u2019t convey a strong feeling of fear. The rewritten version emphasizes the suddenness and danger, which elevates the emotional intensity of fear beyond the original context.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original does not explicitly express anger; however, the rewritten anger version captures the outrage towards the driver\u2019s carelessness. This emotional layer is present but not strongly articulated in the original sentence.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The element of surprise is minimal in the original sentence, as it states a fact without additional context. The rewritten surprise sentence identifies the unexpected nature of the event distinctly, making it more emotionally loaded.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

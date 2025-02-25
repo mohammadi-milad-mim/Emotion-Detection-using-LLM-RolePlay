@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Pants were shat on.\", \"rewritten_form_joy\": \"I can hardly believe it, pants were shat on! What a hilarious moment!\", \"rewritten_form_sadness\": \"Sadly, pants were shat on, and it's such a distressing sight.\", \"rewritten_form_fear\": \"Oh no, pants were shat on! What could have happened?\", \"rewritten_form_anger\": \"Ugh, pants were shat on! This is absolutely unacceptable!\", \"rewritten_form_surprise\": \"Wow, pants were shat on! I didn't see that coming!\", \"rewritten_form_disgust\": \"Ew, pants were shat on. That's really revolting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone, but when compared to the joy rewritten version, it lacks the humorous exuberance that would be associated with joy. The original phrase can be seen as amusing in context, but there's no explicit celebration of that amusement or joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text does not convey sadness inherently; however, the rewritten version introduces a tone of distress. The original does not emphasize the negative emotional weight, so alignment is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply immediate danger or fear directly, but it does invoke a potential for a distressing situation. The rewritten fear version expresses concern more notably than the original, indicating there is a hint of fear but not strongly suggested in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence simply states an event without evoking anger. The rewritten version for anger, however, presents a strong emotional reaction to the event. While the event could incite anger, the original sentence does not convey it.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is an element of surprise implied in the original, as the statement is unexpected. The rewritten surprise emphasizes this unexpectedness, but the original itself is straightforward without the strong emotional impact of a surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

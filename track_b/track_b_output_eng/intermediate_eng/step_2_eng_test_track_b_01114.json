@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"After we moved, they stopped immediately.\", \"rewritten_form_joy\": \"After we moved, they stopped right away, and it felt like a weight was lifted!\", \"rewritten_form_sadness\": \"After we moved, they stopped immediately, leaving such a lonely silence behind.\", \"rewritten_form_fear\": \"After we moved, they stopped right away, and I couldn't shake the feeling something was wrong.\", \"rewritten_form_anger\": \"After we moved, they had the nerve to just stop immediately like we didn't matter!\", \"rewritten_form_surprise\": \"After we moved, they stopped so suddenly; I couldn't believe it!\", \"rewritten_form_disgust\": \"After we moved, they just stopped immediately, as if they couldn't care less.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy or relief; rather, it is neutral, so it does not align with the joyful rewrite that includes feelings of upliftment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence simply states a fact without emotional weight, yet the sadness version suggests an emotional depth that is absent in the original, indicating a significant gap.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence lacks the tension or unease present in the fear interpretation. There is an absence of any suggestion that something might be wrong, making the connection weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original mentions that they stopped, it doesn't express anger or frustration like the rewritten version. The tone of the original is neutral; therefore, the alignment is minimal.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not indicate disbelief or surprise; it simply states an action, making the connection to the surprise sentence quite weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

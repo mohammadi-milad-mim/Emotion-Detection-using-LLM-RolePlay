@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Wonder what the hell is going on.\", \"rewritten_form_joy\": \"I can\\u2019t help but feel excited about what\\u2019s happening!\", \"rewritten_form_sadness\": \"I really don\\u2019t understand what\\u2019s going on, and it\\u2019s quite disheartening.\", \"rewritten_form_fear\": \"I\\u2019m really concerned about what\\u2019s happening right now.\", \"rewritten_form_anger\": \"What the hell is going on here?! This is unacceptable!\", \"rewritten_form_surprise\": \"Wow, I can\\u2019t believe what\\u2019s going on right now!\", \"rewritten_form_disgust\": \"What on earth is going on? This is just disgusting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses confusion rather than excitement. It does not convey positive feelings such as anticipation or happiness, which contrasts sharply with the joy-focused rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence suggests some level of confusion, it does not directly imply sadness or disheartening feelings that would align with the sadness-focused rewritten version.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'wonder what the hell is going on' implies a level of concern or unease, which aligns somewhat with the fear-focused rewritten version that expresses concern about the situation.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence's use of 'what the hell' indicates frustration or irritation, thereby aligning more closely with the anger-focused rewritten version, which conveys strong indignation.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence might imply a sense of surprise or bewilderment, but it lacks the enthusiastic tone present in the surprise-focused rewritten version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

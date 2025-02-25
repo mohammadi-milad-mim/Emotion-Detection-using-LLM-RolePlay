@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The breeze that occasionally crept through ajar door cooled the sweat beading on the back of my neck and brought the sounds of the waves growing larger.\", \"rewritten_form_joy\": \"The delightful breeze that gently flowed through the ajar door cooled the sweat beading on the back of my neck and carried the joyful sounds of the waves growing larger.\", \"rewritten_form_sadness\": \"The faint breeze that crept through the ajar door barely cooled the sweat beading on the back of my neck and brought the distant sounds of the waves growing larger.\", \"rewritten_form_fear\": \"The eerie breeze that crept through the ajar door chilled the sweat beading on the back of my neck and brought the unsettling sounds of the waves growing larger.\", \"rewritten_form_anger\": \"The infuriating breeze that forced its way through the ajar door did little to cool the sweat beading on the back of my neck, only intensifying the sounds of the waves that were growing larger.\", \"rewritten_form_surprise\": \"The unexpected breeze that swept through the ajar door cooled the sweat beading on the back of my neck and carried the sudden sounds of the waves growing larger.\", \"rewritten_form_disgust\": \"The unwelcome breeze that slithered through the ajar door barely cooled the sweat beading on the back of my neck and brought the nauseating sounds of the waves growing larger.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a pleasant breeze and the natural sounds of waves, which hints at a calm and refreshing experience. However, it lacks the explicitly joyful language of the rewritten version, which employs words like 'delightful' and 'joyful.' Thus, while there is a hint of joy, it is not strongly accentuated.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original has elements that could evoke a sense of longing or weariness, especially with the mention of sweat and the subtle sound of waves. The rewritten version underscores this with words like 'faint' and 'distant,' enhancing the sadness. However, the original does not strongly convey sadness itself, as it's more neutral regarding emotion.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express fear. The breeze is described as 'creeping,' which could have an ominous undertone, but overall, it retains a soothing quality. The rewritten version's choice of 'eerily' and 'unsettling' implies a strong sense of fear that is not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not indicate anger; the tone remains calm despite discomfort. The rewritten version uses 'infuriating,' suggesting a strong emotional response, which is not reflected in the original. Hence, the two do not align at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original describes a breeze that 'occasionally' crept through, which suggests an element of spontaneity, though it does not evoke strong surprise. The rewritten version's word choice, such as 'unexpected,' heightens this sense but does not resonate strongly with the original sentence's tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

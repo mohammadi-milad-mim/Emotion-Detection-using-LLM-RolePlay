@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was traveling back home with my mom from my aunt's house on a warm, sunny afternoon.\", \"rewritten_form_joy\": \"I was happily traveling back home with my mom from my aunt's house on a beautiful, sunny afternoon!\", \"rewritten_form_sadness\": \"I was quietly traveling back home with my mom from my aunt's house on that warm, sunny afternoon, missing the time we had together.\", \"rewritten_form_fear\": \"I was nervously traveling back home with my mom from my aunt's house on that warm, sunny afternoon, always looking over my shoulder.\", \"rewritten_form_anger\": \"I was frustrated traveling back home with my mom from my aunt's house on that warm, sunny afternoon, feeling like the trip took forever.\", \"rewritten_form_surprise\": \"I was unexpectedly traveling back home with my mom from my aunt's house on a warm, sunny afternoon when we saw something astonishing!\", \"rewritten_form_disgust\": \"I was reluctantly traveling back home with my mom from my aunt's house on that warm, sunny afternoon, feeling unsettled by the day's events.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks explicitly joyful language or an uplifting sentiment. However, the sunny weather contributes a positive tone, suggesting mild joy. The rewritten version emphasizes happiness, which is stronger than the original's tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original mentions a return journey without emotional weight. The rewritten sentence implies a sense of loss or longing, which isn't present in the original, but the context of returning home could signal a hint of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence conveys a normal travel scenario without fear. The rewritten sentence suggests paranoia and anxiety, which are not hinted at in the original. Therefore, there is little to no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence describes a simple travel scenario, frustration is not inferred within it. The rewritten version introduces feelings of irritation that are absent in the original context.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "Surprise isn\u2019t indicated in the original; it describes a typical situation. The rewritten version introduces an unexpected event, which could create surprise but is not present in the original journey.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

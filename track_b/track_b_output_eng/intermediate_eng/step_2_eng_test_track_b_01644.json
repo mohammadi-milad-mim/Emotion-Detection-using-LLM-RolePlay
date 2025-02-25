@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This morning I cut my fingers on a hole punch, which was painful, but the cuts weren't that bad.\", \"rewritten_form_joy\": \"This morning I accidentally cut my fingers on a hole punch! It hurt a bit, but thankfully the cuts are minor!\", \"rewritten_form_sadness\": \"This morning I cut my fingers on a hole punch. It was really painful, and I\\u2019m upset that the cuts could have been worse.\", \"rewritten_form_fear\": \"This morning I cut my fingers on a hole punch, and it hurt so much; I was scared it might get infected, but the cuts weren\\u2019t that bad.\", \"rewritten_form_anger\": \"This morning I cut my fingers on a stupid hole punch! It was so painful, and I can't believe the cuts weren\\u2019t even that serious!\", \"rewritten_form_surprise\": \"This morning, I was shocked when I accidentally cut my fingers on a hole punch! It was painful, but miraculously, the cuts weren\\u2019t that bad.\", \"rewritten_form_disgust\": \"This morning, I cut my fingers on a hole punch, and it was disgusting how much it hurt for cuts that weren\\u2019t even that bad.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone regarding the pain and the severity of the cuts, but it lacks enthusiastic or positive language that is typical for joy. The rewritten joy version is more expressive and upbeat. The original lacks such positivity.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original acknowledges pain but does not express deep emotional distress or regret. The sadness version suggests a deeper emotional impact and concern for potential outcomes. The original's language is relatively light about the situation.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The mention of fear in the rewritten version highlights concern over the possibility of infection, which is absent in the original. The original has a more straightforward recounting of events without delving into fear, thus the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone of the original sentence reflects a mild frustration but does not convey strong anger. The rewritten anger version amplifies the feelings toward the hole punch as 'stupid' and expresses disbelief, which the original does not do.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is an element of surprise in the context of an accident, but the original does not have an overt emotional reaction like the rewritten surprise version. The emphasis on shock is stronger in the rewritten form.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

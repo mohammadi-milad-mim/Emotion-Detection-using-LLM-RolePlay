@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now I don't believe he was evil.\", \"rewritten_form_joy\": \"Now I really hope he wasn't evil after all!\", \"rewritten_form_sadness\": \"Now I wish I could believe he wasn't evil.\", \"rewritten_form_fear\": \"Now I'm afraid that he might have been evil.\", \"rewritten_form_anger\": \"Now I can't stand the thought that he was ever considered evil!\", \"rewritten_form_surprise\": \"Now I'm surprised to think that he wasn't evil!\", \"rewritten_form_disgust\": \"Now I can't believe anyone would think he was evil.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a lack of belief in someone's evilness, which is somewhat aligned with hopefulness but lacks the enthusiasm conveyed in the joy rewritten version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence indicates a belief but reflects an ambiguity about the character's nature, similar to wishing for a belief that isn't present, thus aligning moderately with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a certain fear implied in the rewritten form due to the uncertainty about evilness, which contrasts with the original's more definitive stance; thus, fear is implied but not strongly present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence shows a lack of belief and does not express anger, whereas the rewritten version conveys robust disdain; the original could suggest some frustration but not significant anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The provided surprise sentence has a distinctly surprised tone, which is not present in the original, suggesting that surprise is only lightly connected to the original text.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

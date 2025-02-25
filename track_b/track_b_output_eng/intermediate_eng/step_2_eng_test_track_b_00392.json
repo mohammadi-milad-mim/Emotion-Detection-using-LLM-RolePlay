@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So I continued to watch and then extended my hand to the Senator.\", \"rewritten_form_joy\": \"So I continued to watch and then happily extended my hand to the Senator!\", \"rewritten_form_sadness\": \"So I continued to watch and then reluctantly extended my hand to the Senator.\", \"rewritten_form_fear\": \"So I continued to watch and then nervously extended my hand to the Senator.\", \"rewritten_form_anger\": \"So I continued to watch and then forcefully extended my hand to the Senator!\", \"rewritten_form_surprise\": \"So I continued to watch and then unexpectedly extended my hand to the Senator!\", \"rewritten_form_disgust\": \"So I continued to watch and then hesitantly extended my hand to the Senator.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey happiness or enthusiasm when extending the hand, as there's no indication of joy or positive emotion. The rewritten joy version adds an exclamation point and the word 'happily,' which changes the tone significantly.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has a neutral tone and does not indicate reluctance or sadness. The rewritten sadness version uses the word 'reluctantly,' which adds a layer of emotional depth absent from the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence presents a straightforward action without implying nervousness or fear. The rewritten fear version adds 'nervously,' indicating apprehension missing in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not suggest anger; it simply describes an action. The rewritten anger version employs 'forcefully,' suggesting intensity that is not present in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not include any element of unexpectedness; it's a simple observation. The rewritten surprise version introduces 'unexpectedly,' implying a shift in perception that isn't present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

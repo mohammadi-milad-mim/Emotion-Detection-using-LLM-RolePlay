@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My hand was shaking so badly.\", \"rewritten_form_joy\": \"My hand was shaking so much with excitement!\", \"rewritten_form_sadness\": \"My hand was shaking so badly from sadness.\", \"rewritten_form_fear\": \"My hand was shaking so badly because I was terrified.\", \"rewritten_form_anger\": \"My hand was shaking so badly with rage!\", \"rewritten_form_surprise\": \"My hand was shaking so badly in disbelief!\", \"rewritten_form_disgust\": \"My hand was shaking so badly at the thought of it!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a physical reaction without specifying excitement; it doesn't align well with joy as the rewritten joy sentence explicitly connects shaking hands to excitement. The tone is more neutral or anxious rather than joyful.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies a negative experience but does not specifically state sadness. The rewritten sadness sentence directly connects the shaking to sadness, which makes it slightly aligned, although not strongly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests a strong physical reaction, which could imply fear. The rewritten fear sentence confirms the fear factor directly, leading to a moderate alignment due to the context of shaking hands.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence shows an intense reaction but lacks a clear connection to anger. The rewritten anger sentence makes a clear association with rage, suggesting that while there\u2019s some alignment, it\u2019s not strongly present in the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence permits a strong reaction but does not specify disbelief or surprise. The rewritten surprise sentence gives a clear context for the shaking, suggesting some alignment but is still lacking in direct correlation to the original's sentiment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

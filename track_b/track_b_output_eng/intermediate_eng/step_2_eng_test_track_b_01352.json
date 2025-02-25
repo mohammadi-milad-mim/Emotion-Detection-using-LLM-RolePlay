@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I tracked him down and hospitalized him.\", \"rewritten_form_joy\": \"I found him and got him the help he needed!\", \"rewritten_form_sadness\": \"I had to find him and take him to the hospital; it breaks my heart.\", \"rewritten_form_fear\": \"I managed to track him down and rushed him to the hospital; I was so scared for his life.\", \"rewritten_form_anger\": \"I tracked him down and forced him into the hospital where he belongs!\", \"rewritten_form_surprise\": \"I actually tracked him down and ended up having to hospitalize him!\", \"rewritten_form_disgust\": \"I tracked him down and had to hospitalize him; it's sickening what happened.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it presents a straightforward action without positive sentiment. The corresponding joy sentence emphasizes help and support, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has a neutral tone, while the sadness sentence expresses emotional distress about the situation. This suggests a deeper emotional layer that isn't present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies a serious situation, but it does not explicitly express fear. The fear sentence communicates urgency and concern, which is not present in the original's more neutral tone.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original might suggest a forceful action, but it doesn't clearly convey anger\u2014the rewritten anger sentence implies a strong emotional motive that is not reflected in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise sentence reflects an unexpected outcome, while the original is direct and lacks an element of surprise about the hospitalization process.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

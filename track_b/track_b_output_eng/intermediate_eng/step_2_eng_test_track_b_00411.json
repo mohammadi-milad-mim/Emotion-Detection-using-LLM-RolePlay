@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It's a mess down there.\", \"rewritten_form_joy\": \"It's a bit chaotic down there, but that's part of the fun!\", \"rewritten_form_sadness\": \"It's really a mess down there, and it's disheartening to see.\", \"rewritten_form_fear\": \"It's a total mess down there, and it feels quite unsettling.\", \"rewritten_form_anger\": \"It's a complete mess down there, and it really frustrates me!\", \"rewritten_form_surprise\": \"Wow, it's such a mess down there; I didn't expect that!\", \"rewritten_form_disgust\": \"It's a disgusting mess down there that I can't stand to look at.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a mess without a positive spin, which contrasts with the playful and fun tone of the joy version. There's no element of enjoyment in the original, so joy aligns poorly.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a negative situation but lacks emotional weight like 'disheartening' found in the sadness version. While it hints at something unfavorable, it doesn\u2019t communicate deep sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'a total mess' in the fear version suggests a more intense emotional reaction than the original does. The original lacks the unsettling implication, so it relates somewhat, but not strongly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The use of 'really frustrates me' in the anger version adds a personal emotional response not seen in the original. While the original denotes disturbance, it lacks the personal frustration element that would imply higher intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not carry a sense of unexpectedness or astonishment, which is central to the surprise version. 'Wow' indicates a sudden realization that the original lacks, so there\u2019s very low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

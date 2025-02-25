@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"After working hard enough climbing back up to nearly get my heart beating out of my ribcage, I drove northwest around the point of the island to Waimanalo Bay, a favourite beach for DeAunn and me on the windward side of the island.\", \"rewritten_form_joy\": \"After putting in so much effort and feeling my heart race with excitement, I joyfully drove northwest around the point of the island to Waimanalo Bay, our beloved beach on the windward side.\", \"rewritten_form_sadness\": \"After exhausting myself climbing back up, my heart racing in despair, I drove northwest around the point of the island to Waimanalo Bay, a beach that was once a happy place for DeAunn and me on the windward side.\", \"rewritten_form_fear\": \"After struggling hard enough to feel my heart racing with anxiety, I cautiously drove northwest around the point of the island to Waimanalo Bay, a beach that DeAunn and I used to love on the windward side, hoping I was still safe.\", \"rewritten_form_anger\": \"After working myself to the bone and nearly feeling my heart explode in frustration, I drove northwest around the point of the island to Waimanalo Bay, a beach that DeAunn and I used to enjoy on the windward side, but I was seething inside.\", \"rewritten_form_surprise\": \"After an intense climb that had my heart racing, I drove northwest around the point of the island to Waimanalo Bay, totally amazed that DeAunn and I still consider it our favourite beach on the windward side.\", \"rewritten_form_disgust\": \"After painfully climbing back up enough to almost feel my heart pounding in revulsion, I drove northwest around the point of the island to Waimanalo Bay, a beach for DeAunn and me on the windward side that now feels tainted.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of accomplishment and implies a positive connection to Waimanalo Bay, similar to the joyful tone in the rewritten version. However, it doesn't explicitly express excitement or joy, leading to a lower alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original mentions a hard climb and hints at discomfort without explicitly conveying sadness, but it does evoke a sense of hardship that relates to the feelings of loss or nostalgia expressed in the sadness rewrite, thus showing a moderate connection.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is no explicit mention of anxiety or fear in the original sentence; it instead focuses on the physical effort. The connection with the fear rewrite is weak, as the climb does not imply a sense of danger or threat. Therefore, it has little alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original mentions a struggle, it doesn't express frustration or anger as depicted in the anger rewrite. The intense physical effort described in the original doesn't suggest feelings of animosity or annoyance, leading to a minimal connection with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence reflects a physical challenge but does not imply any feelings of amazement or surprise regarding the destination. The alignment with the surprise rewrite is weak as it lacks any surprising elements or realizations.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

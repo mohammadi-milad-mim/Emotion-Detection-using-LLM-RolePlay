@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Words that are dead lies to my heart.\", \"rewritten_form_joy\": \"Words that are dead, they can\\u2019t dampen the joy in my heart!\", \"rewritten_form_sadness\": \"Words that are dead, they break my heart silently.\", \"rewritten_form_fear\": \"Words that are dead, they whisper fears that haunt my heart.\", \"rewritten_form_anger\": \"Words that are dead, they lie and stab at my heart with their betrayal!\", \"rewritten_form_surprise\": \"Words that are dead? I never expected them to hurt my heart like this!\", \"rewritten_form_disgust\": \"Words that are dead are just revolting lies to my heart.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of loss and emptiness due to 'dead' words; the rewritten joy version contrasts this by suggesting an unyielding positive feeling, indicating a clear misalignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'Words that are dead' indicates a profound sense of loss or betrayal, which aligns closely with the rewritten sadness version that emphasizes heartbreak, therefore, sadness is strongly present.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "Although the original sentence does have a degree of emotional weight, it does not specifically evoke fear as seen in the rewritten version which articulates haunting fears; therefore, it has low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original phrase speaks of 'dead lies,' suggesting betrayal, which aligns well with anger. The rewritten version heightens this feeling by invoking stabbing and betrayal, showing strong correlation with anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original text does not imply any unexpected aspect, making it misaligned with the surprise version which speaks of unexpected pain; hence, it evokes low surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They seemed so stupid and irritating.\", \"rewritten_form_joy\": \"They actually made me laugh so much, how silly they were!\", \"rewritten_form_sadness\": \"It was just so disappointing how stupid and irritating they seemed.\", \"rewritten_form_fear\": \"I was worried that they were acting so stupid and irritating.\", \"rewritten_form_anger\": \"They were absolutely infuriating and utterly stupid!\", \"rewritten_form_surprise\": \"I couldn't believe how stupid and irritating they were!\", \"rewritten_form_disgust\": \"I found them to be incredibly stupid and utterly irritating.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses irritation and a negative judgment, whereas the joy rewrite focuses on amusement derived from their silliness, which is in direct contrast.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewrite captures disappointment, which could resonate with the original's negativity, making it the closest alignment of emotions.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Fear implies concern about the behavior, but the original sentence does not convey worry; rather, it is more judgmental and dismissive.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence has a strong tone of frustration and judgment, which aligns well with anger, matching the intensity of the anger rewrite.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "Surprise at their stupidity can link to noticing something unexpected, but it doesn't align well with the original's critical tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"On with the story.\", \"rewritten_form_joy\": \"Let's dive back into the story with excitement!\", \"rewritten_form_sadness\": \"Let's continue the story, even though it feels heavy.\", \"rewritten_form_fear\": \"I guess we should keep going with the story, but I can't shake this uneasy feeling.\", \"rewritten_form_anger\": \"I can't believe we have to go on with this story!\", \"rewritten_form_surprise\": \"Wow, let's jump back into the story; I can't wait to see what happens next!\", \"rewritten_form_disgust\": \"Do we really have to continue with this story?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original phrase 'On with the story' suggests a neutral or straightforward continuation, but the joyful rewritten version emphasizes excitement and enthusiasm, which is not present in the original. Hence, the alignment with joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness rewrite introduces the concept of heaviness associated with continuing the story, which is not implied in the original. The original does not express any sadness, making the alignment with sadness low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version implies an uneasy feeling about continuing, which is absent from the original phrase. 'On with the story' does not convey any fear or unease, resulting in a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger rewritten version expresses frustration, while the original sentence is neutral. There is no indication of anger in 'On with the story', so the alignment is minimal.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise rewrite adds a sense of excitement about what will happen next, which is not conveyed in the original. However, the original does not provoke surprise, rendering the emotional connection weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

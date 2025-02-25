@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My cheeks flushed and my heart raced.\", \"rewritten_form_joy\": \"My cheeks flushed with happiness and my heart raced with excitement!\", \"rewritten_form_sadness\": \"My cheeks flushed with embarrassment and my heart raced with anxiety.\", \"rewritten_form_fear\": \"My cheeks flushed with panic and my heart raced with dread.\", \"rewritten_form_anger\": \"My cheeks flushed with frustration and my heart raced with fury.\", \"rewritten_form_surprise\": \"My cheeks flushed with shock and my heart raced in disbelief!\", \"rewritten_form_disgust\": \"My cheeks flushed with disgust and my heart raced in revulsion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a physical reaction (flushed cheeks, racing heart) that often accompanies feelings of joy or excitement, but it lacks explicit mention of happiness or excitement like the rewritten version. Therefore, it aligns moderately with joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not imply sadness, but flushed cheeks and a racing heart could be associated with embarrassment or anxiety, as suggested in the rewritten version. However, since sadness is not explicitly conveyed, the alignment is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no direct reference to fear in the original sentence. Though physical symptoms could indicate fear, there is no mention of panic or dread. Thus, the connection to fear is very weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger; hence, the flush and racing heart are unrelated to frustration or fury without additional context indicating hostility. Therefore, the intensity for anger is also very low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence contains hints of surprise through physical reactions but does not explicitly indicate shock or disbelief as in the rewritten version. There is a slight alignment, but it is not strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

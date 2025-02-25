@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Both cats went tot he end of the bed and were hissing at the doorway, their fur standing on end.\", \"rewritten_form_joy\": \"Both cats excitedly raced to the end of the bed, hissing playfully at the doorway, their fur all puffed up with glee!\", \"rewritten_form_sadness\": \"Both cats crept to the end of the bed, hissing weakly at the doorway, their fur standing on end in fear and loneliness.\", \"rewritten_form_fear\": \"Both cats dashed to the end of the bed, hissing frantically at the doorway, their fur standing on end in terror.\", \"rewritten_form_anger\": \"Both cats angrily marched to the end of the bed, hissing fiercely at the doorway, their fur bristling in fury.\", \"rewritten_form_surprise\": \"Both cats suddenly darted to the end of the bed, hissing in shock at the doorway, their fur standing on end in alarm!\", \"rewritten_form_disgust\": \"Both cats slinked to the end of the bed, hissing disdainfully at the doorway, their fur standing on end in utter disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey excitement or playfulness; rather, it suggests a tense atmosphere. The joy version portrays the cats as playful, which is not aligned with the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence provides a neutral description of the cats' behavior but does not reflect any emotional weight such as loneliness or weakness. Therefore, it does not align strongly with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence contains cues of distress (hissing and fur standing on end), which suggest a level of fear. However, it does not explicitly state that the cats are in a state of terror. It aligns sufficiently with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the cats are described as hissing, the tone does not strongly imply fury or aggression. It reads more like a defensive reaction rather than an angry stance, leading to a lower alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not include elements that indicate suddenness or shock; it portrays a scenario where the cats are already at the end of the bed. Therefore, it does not align well with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

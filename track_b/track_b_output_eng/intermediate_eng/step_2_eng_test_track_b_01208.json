@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"By the time he reached it, it was gone.\", \"rewritten_form_joy\": \"By the time he reached it, it had magically disappeared!\", \"rewritten_form_sadness\": \"By the time he reached it, it was already lost forever.\", \"rewritten_form_fear\": \"By the time he reached it, it seemed to vanish into thin air, leaving him uneasy.\", \"rewritten_form_anger\": \"By the time he reached it, it was gone, and it made him furious!\", \"rewritten_form_surprise\": \"By the time he reached it, to his shock, it was gone!\", \"rewritten_form_disgust\": \"By the time he reached it, it was gone, and honestly, that was a relief.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy; rather, it has a neutral or slightly negative tone about something being gone. The rewritten sentence employs the word 'magically,' which introduces an element of joy that is absent in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests loss, which aligns more closely with sadness as it implies something meaningful has disappeared. The rewritten version heightens this sense of sadness by specifying it is 'lost forever,' enhancing the emotional weight.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence carries a slight unease due to the absence of something expected. The rewritten version intensifies this by suggesting a vanish that leaves the person uneasy, indicating a stronger sense of fear associated with the disappearance.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger; it merely states a fact about something being gone. The rewritten version injects an emotional response ('made him furious'), which is not present in the original. Thus, there's no anger conveyed in the original text.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence mentions something being gone, which can prompt a feeling of surprise. The rewritten sentence enhances this feeling by explicitly stating the reaction ('to his shock'), indicating surprise is present, albeit not strongly in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

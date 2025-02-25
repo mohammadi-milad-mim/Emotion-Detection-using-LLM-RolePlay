@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"* covered half my face with his enormous mouth when trying to kiss\", \"rewritten_form_joy\": \"covered half my face with his enormous mouth when trying to kiss, and I couldn't stop giggling!\", \"rewritten_form_sadness\": \"covered half my face with his enormous mouth when trying to kiss, and it just felt so wrong.\", \"rewritten_form_fear\": \"covered half my face with his enormous mouth when trying to kiss, and I was terrified it would swallow me whole!\", \"rewritten_form_anger\": \"covered half my face with his enormous mouth when trying to kiss, completely disregarding my personal space!\", \"rewritten_form_surprise\": \"covered half my face with his enormous mouth when trying to kiss, and I was completely caught off guard!\", \"rewritten_form_disgust\": \"covered half my face with his enormous mouth when trying to kiss, and it felt utterly revolting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a physical action (kissing) that could potentially be playful, yet it lacks the giggling tone present in the joy rewrite. While there is some lightness to the action, the absence of laughter means it aligns only slightly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey a sense of wrongness or loss, which is a significant aspect of the sadness rewrite. It describes an action without implying negative feelings related to it, so it aligns minimally with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence presents a situation that could elicit fear (the enormity of the mouth), but it does not explicitly state any fear or terror from the speaker. Thus, while there are triggers for fear, the absence of direct emotional response limits its alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence suggests a disregard for personal space, but it does not express any clear anger. There\u2019s an implicit suggestion of discomfort, yet no explicit feelings of anger are expressed in the original. This places it at a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original action might be unexpected, it doesn't convey that level of surprise as expressed in the rewritten version. There is a lack of the feeling of being 'caught off guard'; thus it has mild alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I could not keep a coherent thought in my head.\", \"rewritten_form_joy\": \"I couldn't help but let my thoughts dance around chaotically!\", \"rewritten_form_sadness\": \"I felt lost, unable to grasp a single coherent thought in my head.\", \"rewritten_form_fear\": \"I couldn't hold on to a coherent thought in my head, and it terrified me.\", \"rewritten_form_anger\": \"I was so frustrated that I couldn't keep a coherent thought in my head!\", \"rewritten_form_surprise\": \"I was shocked to find that I couldn't keep a coherent thought in my head.\", \"rewritten_form_disgust\": \"I couldn't believe how jumbled my thoughts were, completely incoherent.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a struggle with coherence, which does not align with a joyful tone as seen in the rewritten joy sentence. The joy sentence hints at playfulness and positive chaos, contrasting with the original's sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original and the rewritten sadness sentences both express feelings of being lost and an inability to think clearly, suggesting a strong alignment. The emotional weight of feeling lost corresponds closely with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence describes a loss of coherent thought, which can relate to fear when amplified as seen in the rewritten fear sentence. However, the original lacks an overt indication of terror, leading to a moderate rather than high alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The frustration described in the rewritten anger sentence corresponds well with the difficulty articulated in the original sentence. This suggests a strong alignment, as both sentences reflect a negative emotional response to the situation.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The rewritten surprise sentence indicates a shocking realization, which is more intense than the more passive experience in the original. There is a lack of strong surprise in the original, indicating low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

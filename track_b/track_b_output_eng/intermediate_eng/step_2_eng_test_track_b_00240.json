@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Not just her memory and her academic ability, but her whole personality, it changed her.\", \"rewritten_form_joy\": \"Not just her memory and her academic ability, but her whole personality, it blossomed beautifully!\", \"rewritten_form_sadness\": \"Not just her memory and her academic ability, but her whole personality, it sadly changed her.\", \"rewritten_form_fear\": \"Not just her memory and her academic ability, but her whole personality, it transformed her in ways I dread to think of.\", \"rewritten_form_anger\": \"Not just her memory and her academic ability, but her whole personality, it infuriatingly changed her!\", \"rewritten_form_surprise\": \"Not just her memory and her academic ability, but her whole personality, it completely changed her in a surprising way!\", \"rewritten_form_disgust\": \"Not just her memory and her academic ability, but her whole personality, it grotesquely changed her.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a change in personality, but does not convey the uplifting and positive connotation associated with 'blossomed beautifully'. Therefore, it does not strongly align with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The word 'sadly' in the rewritten sentence adds a clear indication of loss or unhappiness associated with the change. The original sentence lacks that tone of sadness, hence a moderate score.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'in ways I dread to think of' in the fear sentence conveys a strong sense of apprehension not expressed in the original. The original does imply change as concerning, but does not explicitly express fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The adverb 'infuriatingly' enhances the emotional weight of anger which is not present in the original. The original sentence is more neutral, showing a change rather than a reaction of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The use of 'completely changed her in a surprising way' in the surprise sentence implies unexpectedness. The original sentence does not convey a sense of astonishment about the change, resulting in a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

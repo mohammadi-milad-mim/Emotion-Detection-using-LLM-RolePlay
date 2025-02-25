@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I stared at him, and then put my head in my hands.\", \"rewritten_form_joy\": \"I stared at him, and then laughed with joy, my head falling into my hands in disbelief.\", \"rewritten_form_sadness\": \"I stared at him, and then put my head in my hands, feeling a heavy sorrow wash over me.\", \"rewritten_form_fear\": \"I stared at him, and then put my head in my hands, panic rising within me as uncertainty loomed.\", \"rewritten_form_anger\": \"I stared at him, and then put my head in my hands, fury bubbling inside me at his audacity.\", \"rewritten_form_surprise\": \"I stared at him, and then put my head in my hands, utterly taken aback by what I just heard.\", \"rewritten_form_disgust\": \"I stared at him, and then put my head in my hands, overwhelmed by a wave of disgust at his behavior.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a sense of disbelief but does not indicate joy or laughter; therefore, it does not align with the joyful response.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The act of putting one's head in hands typically denotes sadness or sorrow, which is directly echoed in the sadness version, indicating a strong alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original does involve a gesture that could imply distress, it does not clearly convey panic or fear as outlined in the fear version, suggesting a lesser relationship.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any explicit indication of anger or fury; it suggests frustration but not intense anger, leading to a low score.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey a sense of being taken aback or shocked, which is necessary for a high surprise rating; therefore, it has minimal correlation with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u518d\\u7b49\\u7b49\\uff0c\\u5c71\\u5357\\u6c34\\u5317\\uff0c\\u6211\\u4e00\\u5b9a\\u966a\\u4ed6\\u53bb\\u3002  \\ua51b\\u202c\\u2606*\\uff9f\", \"rewritten_form_joy\": \"\\u518d\\u7b49\\u7b49\\uff0c\\u5c71\\u5357\\u6c34\\u5317\\uff0c\\u6211\\u4e00\\u5b9a\\u5174\\u594b\\u5730\\u966a\\u4ed6\\u53bb\\uff01\", \"rewritten_form_sadness\": \"\\u518d\\u7b49\\u7b49\\uff0c\\u5c71\\u5357\\u6c34\\u5317\\uff0c\\u6211\\u5fc3\\u91cc\\u96be\\u8fc7\\uff0c\\u4f46\\u6211\\u4e00\\u5b9a\\u966a\\u4ed6\\u53bb\\u3002\", \"rewritten_form_fear\": \"\\u518d\\u7b49\\u7b49\\uff0c\\u5c71\\u5357\\u6c34\\u5317\\uff0c\\u6211\\u611f\\u5230\\u4e0d\\u5b89\\uff0c\\u4e0d\\u8fc7\\u6211\\u4e00\\u5b9a\\u966a\\u4ed6\\u53bb\\u3002\", \"rewritten_form_anger\": \"\\u518d\\u7b49\\u7b49\\uff0c\\u5c71\\u5357\\u6c34\\u5317\\uff0c\\u6211\\u771f\\u7684\\u5f88\\u751f\\u6c14\\uff0c\\u4f46\\u6211\\u4e00\\u5b9a\\u966a\\u4ed6\\u53bb\\uff01\", \"rewritten_form_surprise\": \"\\u518d\\u7b49\\u7b49\\uff0c\\u5c71\\u5357\\u6c34\\u5317\\uff0c\\u6211\\u7b80\\u76f4\\u4e0d\\u6562\\u76f8\\u4fe1\\uff0c\\u6211\\u4e00\\u5b9a\\u966a\\u4ed6\\u53bb\\uff01\", \"rewritten_form_disgust\": \"\\u518d\\u7b49\\u7b49\\uff0c\\u5c71\\u5357\\u6c34\\u5317\\uff0c\\u771f\\u8ba9\\u4eba\\u6076\\u5fc3\\uff0c\\u4f46\\u6211\\u4e00\\u5b9a\\u966a\\u4ed6\\u53bb\\u3002\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of duty or determination to accompany someone, but lacks overt expressions of enthusiasm or excitement. The corresponding joy version suggests a much more vibrant sentiment ('\u6211\u4e00\u5b9a\u5c06\u5fc3\u6602\u626c\u5730\u966a\u4ed6\u53bb'), which is missing in the original. Therefore, the joy score is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version conveys a deeper emotional conflict ('\u6211\u5fc3\u91cc\u96be\u8fc7') that isn't explicitly present in the original. While the original conveys a sense of waiting and companionship, it does not explicitly reflect sadness, leading to a low score here.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is an implication of hesitation in the fear version ('\u6211\u611f\u5230\u4e0d\u5b89') that is not present in the original sentence. The original sentence shows a commitment to staying with someone, indicating a lesser alignment with fear. Therefore, the fear score is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version expresses strong frustration ('\u6211\u771f\u7684\u5f88\u751f\u6c14'), which is not echoed in the original at all. The original sentence suggests merely waiting, without expressing anger. Thus, the anger score is low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement does not include any unexpected elements, which makes the surprise version ('\u6211\u7b80\u76f4\u4e0d\u6562\u76f8\u4fe1') misaligned. As such, the score for surprise is very low, as there is no genuine surprise expressed in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust version implies strong feelings of distaste ('\u8ba9\u6211\u4eba\u6076\u5fc3'), which do not resonate with the original's neutral waiting sentiment. There is a disconnect, leading to a very low disgust score.",
+        "disgust_intensity": 0
+    }
+}

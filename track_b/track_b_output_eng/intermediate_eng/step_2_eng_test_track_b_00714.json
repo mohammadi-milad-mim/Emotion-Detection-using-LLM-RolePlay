@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Truck driver seemed paralyzed.\", \"rewritten_form_joy\": \"The truck driver looked utterly amazed and filled with wonder!\", \"rewritten_form_sadness\": \"The truck driver appeared so defeated, as if completely immobilized by despair.\", \"rewritten_form_fear\": \"The truck driver looked frozen in terror, utterly paralyzed by fear.\", \"rewritten_form_anger\": \"The truck driver seemed infuriatingly stuck, as if they couldn't move out of frustration!\", \"rewritten_form_surprise\": \"The truck driver looked completely stunned, almost paralyzed by shock!\", \"rewritten_form_disgust\": \"The truck driver seemed grossly immobilized, like they couldn't bear to move.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy or amazement. The tone is more neutral and lacks the positive sentiment necessary to align with the joy rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'seemed paralyzed' can imply a state of defeat or resignation, aligning moderately with the sadness rewritten form that emphasizes a feeling of being immobilized by despair.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence can suggest an underlying fear since being 'paralyzed' often indicates an inability to act due to fear. While it doesn't explicitly mention fear, it aligns reasonably well with the fear rewritten version which discusses being frozen in terror.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence lacks any expression of frustration or anger; it's more neutral and does not encapsulate the intense emotional state of being stuck due to anger stated in its rewritten form.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The use of 'seemed paralyzed' does suggest a sudden halt in activity which could imply a degree of surprise. However, it doesn't strongly align with the astonished tone of the rewritten sentence about being stunned.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

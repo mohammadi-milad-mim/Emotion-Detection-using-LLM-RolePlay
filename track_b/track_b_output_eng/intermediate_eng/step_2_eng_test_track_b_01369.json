@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I ended up dumping hot oil all over my hand.\", \"rewritten_form_joy\": \"I can't believe how exciting it was to cook, even if I spilled hot oil all over my hand!\", \"rewritten_form_sadness\": \"Unfortunately, I ended up dumping hot oil all over my hand, and it really hurt.\", \"rewritten_form_fear\": \"I accidentally dumped hot oil all over my hand, and I was terrified of how much it would hurt!\", \"rewritten_form_anger\": \"I can't believe I ended up dumping hot oil all over my hand; it's so infuriating!\", \"rewritten_form_surprise\": \"To my shock, I ended up dumping hot oil all over my hand just as I was cooking!\", \"rewritten_form_disgust\": \"I ended up dumping hot oil all over my hand, which was totally gross and so unpleasant!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions an accident (dumping hot oil), which doesn't inherently convey joy. While the rewritten joy sentence introduces excitement, the original context doesn't have an exciting tone; hence, the alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does describe a negative experience (burning oneself with hot oil), which aligns with the sadness in the rewritten version that acknowledges the hurt. This connection is strong.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence involves an accidental burn, which can elicit fear of injury. Therefore, the fear of pain in the rewritten form aligns well with the original context.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten anger sentence expresses frustration over the situation, which aligns with the original sentence's implication of a mistake. However, the original does not inherently express anger itself, making the alignment moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence describes an unexpected accident, which aligns well with the surprise expressed in the rewritten sentence. This connection feels strong overall.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

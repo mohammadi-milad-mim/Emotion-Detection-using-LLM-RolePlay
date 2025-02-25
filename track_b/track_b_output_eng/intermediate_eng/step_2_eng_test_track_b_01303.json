@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Percy shifts, drawing his hands over his thighs where he perches against her desk, and frowns.\", \"rewritten_form_joy\": \"Percy shifts, drawing his hands over his thighs where he perches against her desk, a smile creeping onto his face.\", \"rewritten_form_sadness\": \"Percy shifts, drawing his hands over his thighs where he perches against her desk, his frown deepening with a heavy heart.\", \"rewritten_form_fear\": \"Percy shifts nervously, drawing his hands over his thighs where he perches against her desk, his frown betraying his unease.\", \"rewritten_form_anger\": \"Percy shifts, drawing his hands over his thighs where he perches against her desk, his frown tightening in frustration.\", \"rewritten_form_surprise\": \"Percy shifts, drawing his hands over his thighs where he perches against her desk, eyes widening in astonishment.\", \"rewritten_form_disgust\": \"Percy shifts, drawing his hands over his thighs where he perches against her desk, a frown twisting his face in disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence features a frown, indicating a lack of happiness, which contrasts sharply with the joyful rewritten sentence that describes a smile. Therefore, there is little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence already contains a frown, which suggests some level of sadness. The rewritten sentence adds a 'heavy heart,' intensifying the sadness. This shows a moderate alignment with sadness since the original sentiment aligns with feelings of unhappiness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original sentence expresses a frown, indicating some distress, it does not imply clear fear. The rewritten sentence introduces nervousness and unease, which the original does not fully convey. Hence, there is only a low alignment with fear present.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence's frown suggests frustration; the rewritten version explicitly mentions 'tightening in frustration,' which aligns closely with the tone of the original. This indicates a moderate sense of anger present in the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not suggest any element of surprise; it simply describes a frown. The rewritten sentence depicts astonishment, which is not present in the original. Therefore, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

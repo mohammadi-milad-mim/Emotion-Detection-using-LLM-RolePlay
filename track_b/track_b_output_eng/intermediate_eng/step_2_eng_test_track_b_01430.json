@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Apparently she would often sneak into their house to hold the child while it was sleeping.\", \"rewritten_form_joy\": \"It's so heartwarming to think that she would sneak into their house just to hold the child while it was sleeping!\", \"rewritten_form_sadness\": \"How tragic that she would feel the need to sneak into their house just to hold the child while it was sleeping, longing for that connection.\", \"rewritten_form_fear\": \"It's unsettling to realize she would often sneak into their house to hold the child while it was sleeping; what if something went wrong?\", \"rewritten_form_anger\": \"I can't believe she would just sneak into their house to hold the child while it was sleeping; that's completely inappropriate!\", \"rewritten_form_surprise\": \"Wow, I had no idea she would sneak into their house to hold the child while it was sleeping!\", \"rewritten_form_disgust\": \"It's disturbing that she would often sneak into their house to hold the child while it was sleeping; that's just wrong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a sense of affection but lacks an explicit expression of joy. The rewritten sentence emphasizes heartwarming sentiments, which are not strongly reflected in the original text.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original statement hints at a deeper emotional need, which can imply sadness, especially in the context of longing for connection. However, the text does not overtly express sorrow, leading to a moderate score.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The mention of sneaking into someone's house implies a level of fear or danger, especially given the context. The original and rewritten forms align well in this emotional tone, justifying a higher intensity.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence can evoke a sense of anger regarding the appropriateness of her actions, it does not convey strong indignation directly. The rewritten version expresses anger clearly, but the original lacks that intensity.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence presents a fact that might lead to surprise, but it lacks an exclamatory or astonished tone. The rewritten sentence captures that surprise effectively but isn't a strong element in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

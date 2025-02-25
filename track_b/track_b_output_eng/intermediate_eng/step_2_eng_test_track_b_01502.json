@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The next thing I knew, a spoon full of cinnamon was in my mouth.\", \"rewritten_form_joy\": \"The next thing I knew, a delightful spoonful of cinnamon was in my mouth!\", \"rewritten_form_sadness\": \"The next thing I knew, a spoonful of cinnamon was in my mouth, and it felt so heavy.\", \"rewritten_form_fear\": \"The next thing I knew, a spoonful of cinnamon was in my mouth, and I panicked at the taste.\", \"rewritten_form_anger\": \"The next thing I knew, a spoonful of cinnamon was in my mouth, and I couldn't believe someone would do that to me!\", \"rewritten_form_surprise\": \"The next thing I knew, a spoonful of cinnamon was in my mouth \\u2014 how did that happen?!\", \"rewritten_form_disgust\": \"The next thing I knew, a spoonful of cinnamon was in my mouth, and it was utterly revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an unexpected event involving cinnamon, but lacks a positive tone. The rewritten joy sentence uses 'delightful,' which shows a clear happiness that is not present in the original sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version implies a sense of heaviness associated with the cinnamon, which contrasts with the neutral original. There is a slight alignment due to the unexpected nature of the experience, though it lacks emotional depth.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Fear is somewhat present in the original, as 'the next thing I knew' implies an unexpected event. However, it does not show panic or concern as indicated in the rewritten version. Thus, there is little alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not imply any injustice or anger, unlike the rewritten version, which explicitly states a feeling of betrayal. There is no anger in the original text itself.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence indeed captures an element of surprise since it describes an unexpected event. This closely aligns with the surprise version, which highlights the astonishment at the occurrence.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

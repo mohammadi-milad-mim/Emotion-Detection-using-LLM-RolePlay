@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"When I was thirteen I lay on my bed, my face shoved in a pillow with my Grandmother's heat wrap on my lower back, screaming and crying because Motherly was at work and I couldn't find the pain killers.\", \"rewritten_form_joy\": \"When I was thirteen, I lay on my bed with my Grandmother's heat wrap on my lower back, feeling cozy even while I screamed and cried, wishing Motherly were home to help me find the pain killers.\", \"rewritten_form_sadness\": \"When I was thirteen, I lay on my bed, my face buried in a pillow with my Grandmother's heat wrap on my lower back, sobbing and crying because Motherly was at work and I couldn't find the pain killers.\", \"rewritten_form_fear\": \"When I was thirteen, I lay on my bed, face pressed into the pillow, with my Grandmother's heat wrap on my lower back, screaming and crying in panic because Motherly was at work and I couldn\\u2019t find the pain killers.\", \"rewritten_form_anger\": \"When I was thirteen, I lay on my bed, my face shoved in a pillow with my Grandmother's heat wrap on my lower back, screaming and crying out of frustration because Motherly was at work and I couldn\\u2019t find the pain killers!\", \"rewritten_form_surprise\": \"When I was thirteen, I lay on my bed, face in a pillow, with my Grandmother's heat wrap on my lower back, screaming and crying because I was shocked that Motherly was at work and I couldn't find the pain killers.\", \"rewritten_form_disgust\": \"When I was thirteen, I lay on my bed, my face shoved into a pillow with my Grandmother's heat wrap on my lower back, screaming and crying in frustration because Motherly was at work and I couldn't stand the thought of searching for the pain killers.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence highlights distress and pain rather than joy. Although it contains a mention of a comforting object (the heat wrap), the overwhelming emotions of screaming and crying strongly detract from any sense of joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of deep sadness through the actions of screaming, crying, and feeling helpless due to the absence of support from Motherly and the inability to find pain killers. This emotion aligns very closely with the tone of its rewritten version.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The sense of panic expressed in the rewritten fear sentence is evident in the original sentence. The author is screaming and crying, suggestive of a distressing situation, especially with the inability to find pain killers when in pain. This alignment is moderate but clear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence implies frustration and desperation in the context of not being able to find pain killers while in pain, particularly as Motherly is unavailable. This situation could easily lead to feelings of anger, which aligns with the rewritten anger sentence.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "While the original sentence indicates distress and confusion, it lacks a sense of surprise. The mention of Motherly working could evoke surprise in a different context but isn\u2019t evident in the original tone, making this alignment weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

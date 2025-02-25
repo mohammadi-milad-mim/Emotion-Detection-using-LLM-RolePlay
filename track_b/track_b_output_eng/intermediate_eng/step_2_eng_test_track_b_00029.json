@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Security and I managed to get shots in and they ended up running their car into a tree. A chuckle slipped out of me of its own volition, and I clapped my hand over my mouth in chagrin.\", \"rewritten_form_joy\": \"Security and I managed to get shots in, and they hilariously ran their car into a tree! I couldn't help but let out a joyful chuckle, though I quickly clapped my hand over my mouth.\", \"rewritten_form_sadness\": \"Security and I managed to get shots in, but they ended up running their car into a tree. A chuckle escaped me, but it felt bitter, so I clapped my hand over my mouth in regret.\", \"rewritten_form_fear\": \"Security and I managed to get shots in, and then they ran their car into a tree! I felt a nervous chuckle slip out, and I quickly clapped my hand over my mouth in panic.\", \"rewritten_form_anger\": \"Security and I got shots in, and they recklessly crashed their car into a tree. I let out an annoyed chuckle instinctively, covering my mouth in irritation.\", \"rewritten_form_surprise\": \"Security and I managed to get shots in, and then, suddenly, they ran their car into a tree! I couldn't believe it; a chuckle escaped me unexpectedly, and I covered my mouth in shock.\", \"rewritten_form_disgust\": \"Security and I managed to get shots in, and they carelessly ran their car into a tree. I let out a disgusted chuckle without meaning to and clapped my hand over my mouth in disbelief.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of humor with the chuckle and the absurdity of their car crashing. The joyful rewritten version amplifies this humor, one might even say that the original implicitly carries a light-heartedness despite covering the mouth in chagrin. Thus, there is moderate alignment with joy due to the humor in light of the event.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence hints at a mix of humor and regret by mentioning the involuntary chuckle and the covering of the mouth in chagrin. The sad version emphasizes bitterness and regret, suggesting a more somber reflection on the event. This captures both aspects of humor and remorse, but the sadness does not dominate, indicating a low level of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original focuses more on the event of them crashing the car rather than fear, and while there is a hint of nervousness in the chuckle, it doesn\u2019t convey a strong sense of panic. The fear version suggests a higher intensity of panic that is not strongly present in the original, leading to a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original lacks strong anger; while there is an acknowledgement of recklessness in the rewritten form, this is not significantly reflected in the original. The involuntary chuckle does not indicate annoyance or irritation as strongly as the anger version suggests, leading to a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original contains an element of surprise in the unexpectedness of the situation but does not emphasize shock or disbelief as strongly as the rewritten surprise sentence does. Thus, there is some alignment with surprise but it is not major.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

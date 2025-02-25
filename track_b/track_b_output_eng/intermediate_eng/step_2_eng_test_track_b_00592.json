@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\\" Which only served to make us laugh harder.\", \"rewritten_form_joy\": \"Which made us burst into even more laughter!\", \"rewritten_form_sadness\": \"Which only reminded us of the laughter we once had.\", \"rewritten_form_fear\": \"Which made us laugh harder, masking our anxiety.\", \"rewritten_form_anger\": \"Which only fueled our laughter, despite the anger simmering beneath.\", \"rewritten_form_surprise\": \"Which caught us off guard and made us laugh harder!\", \"rewritten_form_disgust\": \"Which made us laugh harder, despite how ridiculous it was.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence shows a positive and humorous reaction, aligning closely with the joy rewritten sentence. Both emphasize laughter as a primary emotion and describe an increasing intensity of joy through laughter.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence hints at a nostalgic element of laughter, which is reflected in the sadness sentence emphasizing a past joy. However, it does not strongly convey sadness in the original context.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original mentions laughter, which in the fear context, suggests a coping mechanism. However, the overarching tone does not strongly imply fear or anxiety being masked.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original does suggest that laughter might be in contrast to underlying feelings, it does not specifically convey anger. The connection is weak, reflected in the rejection of anger's emotional nuance.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence involves laughter intensifying, akin to the surprise version which highlights a sudden reaction. However, it doesn't clearly indicate an unexpected element, leading to a lower alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

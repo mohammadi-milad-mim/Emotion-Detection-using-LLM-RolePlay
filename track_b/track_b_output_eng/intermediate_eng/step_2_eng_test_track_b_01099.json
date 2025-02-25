@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This greatly accelerated the pickles necrosing.\", \"rewritten_form_joy\": \"This really sped up the fun of experimenting with pickles!\", \"rewritten_form_sadness\": \"This sadly made the pickles spoil so much faster.\", \"rewritten_form_fear\": \"This really caused the pickles to decay much faster than I expected!\", \"rewritten_form_anger\": \"This infuriatingly accelerated how quickly the pickles went bad!\", \"rewritten_form_surprise\": \"Wow, this surprisingly made the pickles decay so rapidly!\", \"rewritten_form_disgust\": \"This revoltingly accelerated the decay of the pickles!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a process related to pickles decaying, while the joy rewrite shifts the focus to a fun experience with pickles. This suggests a significant disconnect in emotion because the original content lacks any element of joy or fun.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sad sentence aligns fairly closely with the original, as both discuss the spoiling of pickles. However, the original is more technical and does not inherently express sadness. Thus, while related, it lacks an emotional tone of sadness as it is presented in a neutral manner.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence indicates a process that is accelerating damage to the pickles which may suggest a level of concern, but it does not explicitly express fear. The rewritten fear version emphasizes an unexpected outcome, which slightly aligns but does not fully capture the emotional intensity of fear in the original context.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence suggests a negative process (necrosing), which can be interpreted negatively, but it does not carry a strong emotional charge. The rewritten anger version brings in a strong emotional reaction ('infuriatingly'), suggesting a higher degree of alignment with the original\u2019s implications of decay, but still not an intense sense of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version\u2019s 'wow' suggests an unexpected reaction, while the original contains implications of rapid change in decay, making it somewhat aligned with surprise. Yet, there is a more clinical tone in the original which doesn\u2019t express surprise explicitly, but there is enough of an implication to score a moderate intensity.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Owen was great and pushed on my back with every contraction.\", \"rewritten_form_joy\": \"Owen was amazing and lovingly pushed on my back with every contraction, making me feel so supported!\", \"rewritten_form_sadness\": \"Owen was great, but I wished he could have done more as he pushed on my back with every contraction.\", \"rewritten_form_fear\": \"Owen was great, and I felt anxious as he pushed on my back with every contraction, unsure if it would help.\", \"rewritten_form_anger\": \"Owen was supposed to be great, but it was frustrating when he pushed on my back with every contraction.\", \"rewritten_form_surprise\": \"Owen was surprisingly great as he pushed on my back with every contraction, providing unexpected comfort!\", \"rewritten_form_disgust\": \"Owen was great, but I felt uncomfortable when he pushed on my back with every contraction.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive sentiment towards Owen's actions, similar to the rewritten joy sentence which uses more emphatic and emotional language to convey support and comfort. However, it lacks the explicitly affectionate tone found in the joy rewrite.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey a sense of longing or disappointment which is prominent in the sadness rewrite. The rewrite suggests a wish for more than what was provided, whereas the original is straightforward and positive about Owen's actions.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express anxiety or hesitance, indicating a lack of fear. The fear rewrite introduces elements of uncertainty about support, which are absent in the original text.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence acknowledges that Owen was great, it does not imply any frustration or resentment that the anger version suggests. Thus, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not imply any unexpectedness or surprise about Owen's actions, which the surprise rewrite emphasizes. The original seems more steady and consistent than the surprise element indicated in the rewrite.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

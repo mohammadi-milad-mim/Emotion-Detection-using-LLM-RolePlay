@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It wasnt until 3-4 months later that I decided to spark up a conversation.\", \"rewritten_form_joy\": \"After 3-4 months, I happily decided to spark up a conversation!\", \"rewritten_form_sadness\": \"It took me 3-4 long months before I finally mustered the courage to spark up a conversation.\", \"rewritten_form_fear\": \"I hesitated for 3-4 months, scared to finally spark up a conversation.\", \"rewritten_form_anger\": \"I can't believe it took me 3-4 months to just spark up a conversation!\", \"rewritten_form_surprise\": \"Surprisingly, it wasn't until 3-4 months later that I decided to spark up a conversation!\", \"rewritten_form_disgust\": \"I can't believe I waited 3-4 months to even think about sparking up a conversation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any joyful expression; it simply states a decision taken after some time without enthusiasm. The rewritten joy version adds happiness, which the original doesn't convey at all.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of delay in engaging with others, which could imply sadness or regret, but it doesn't explicitly express a feeling of distress or sorrow. The sadness version emphasizes a long, burdensome wait, which is stronger than what the original implies.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies a wait before taking action, but it does not directly reflect fear or anxiety. However, it could suggest hesitation, so the fear intensity is low but present due to this implication.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original doesn't express anger; it simply states a fact about timing. The rewritten angry version conveys frustration, which is much stronger than the neutral tone of the original. Therefore, there's no significant alignment with anger in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence involves a decision made after a substantial wait, which could be perceived as surprising. However, the original lacks an element of wonder or shock, which is highlighted in the surprise rewrite.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

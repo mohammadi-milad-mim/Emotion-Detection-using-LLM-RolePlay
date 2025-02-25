@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It always fell down.\", \"rewritten_form_joy\": \"It always fell down, and that's part of the fun!\", \"rewritten_form_sadness\": \"It always fell down, and it just makes me feel so lost.\", \"rewritten_form_fear\": \"It always fell down, and I worry about what that means.\", \"rewritten_form_anger\": \"It always fell down, it\\u2019s so frustrating!\", \"rewritten_form_surprise\": \"It always fell down! I can't believe that happens every time!\", \"rewritten_form_disgust\": \"It always fell down, and it just repulses me every time.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks an element of fun or positivity that would be present in the joyful version. There\u2019s no indication that the falling down is part of a fun scenario, making it misaligned with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement does not imply a sense of loss or deep emotion, making it less aligned with sadness. It is neutral and observational, lacking the emotional weight of feeling lost.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the rewritten version expresses worry, the original does not convey any sense of concern or fear; it simply states a fact with no emotional context.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is quite neutral and does not exhibit frustration or anger, which is present in the rewritten version. There's no emotional outburst or feeling of irritation.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not suggest disbelief or amazement; it simply states a repetition without an emotional twist. Thus, it deviates from the surprise expressed in the rewritten form.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

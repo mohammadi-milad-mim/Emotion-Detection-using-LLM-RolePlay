@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It scratched them up but hardly hurt them.\", \"rewritten_form_joy\": \"They got scratched up a bit, but thankfully it didn\\u2019t hurt them much!\", \"rewritten_form_sadness\": \"It scratched them up and barely hurt them, but I still wish it hadn\\u2019t happened at all.\", \"rewritten_form_fear\": \"It scratched them up, but I feared it could have been so much worse.\", \"rewritten_form_anger\": \"It scratched them up and didn't hurt them badly, but it\\u2019s infuriating that it happened in the first place.\", \"rewritten_form_surprise\": \"It scratched them up, but to my surprise, it hardly hurt them at all!\", \"rewritten_form_disgust\": \"It scratched them up, which is just gross, but at least it hardly hurt them.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of relief that while there were scratches, they did not lead to significant harm, which aligns with the tone of joy in the rewritten version.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "There is a mild sense of regret in the original for what happened, but it is not strongly emphasized, reducing the intensity of sadness compared to the rewritten version which clearly expresses wishing it hadn\u2019t happened.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original mentions an incident that had the potential to cause more harm, indicating an element of concern; however, it lacks a strong fearful sentiment as portrayed in the rewrite.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original implies frustration about the scratches but does not invoke strong anger or negative sentiment; thus, it does not strongly align with the rewritten sentiment of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original indicates that there was an unexpected outcome where it hardly hurt, aligning with a sense of surprise, but it isn't strongly expressed.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"** in my head i say... can i just tell you?\", \"rewritten_form_joy\": \"In my head, I happily ask... can I just tell you?\", \"rewritten_form_sadness\": \"In my head, I sadly wonder... can I just tell you?\", \"rewritten_form_fear\": \"In my head, I nervously question... can I just tell you?\", \"rewritten_form_anger\": \"In my head, I angrily think... can I just tell you?\", \"rewritten_form_surprise\": \"In my head, I'm taken aback and think... can I just tell you?\", \"rewritten_form_disgust\": \"In my head, I cringe at the thought... can I just tell you?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a hopeful curiosity by asking, 'can I just tell you?'. However, there are no indications of happiness or joy in this phrase, so it does not align closely with the joyful rewritten form.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The tone of the original sentence can suggest a feeling of longing or hesitance, which aligns somewhat with a sense of sadness. The rewritten version directly states sadness, but the original does not strongly convey this emotion.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original phrase can imply a sense of anxiety or hesitance, aligning well with the idea of fear. Asking 'can I just tell you?' suggests a worry about the response, making it resonate moderately with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is no indication in the original sentence of any anger or frustration. The request to tell suggests more of a need for openness than any hostile emotion, which makes the connection to anger weak and unrelated.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text does not express any surprise or unexpected feeling. It is simply a question posed in someone's mind, so it doesn't align with the surprised rewritten version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

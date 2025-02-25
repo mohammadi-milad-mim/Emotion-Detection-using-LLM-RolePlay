@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That's petty right?\", \"rewritten_form_joy\": \"That's a little silly, isn't it?\", \"rewritten_form_sadness\": \"That's kind of a sad thing, isn't it?\", \"rewritten_form_fear\": \"That seems kind of petty, doesn't it?\", \"rewritten_form_anger\": \"That's so petty, isn't it?\", \"rewritten_form_surprise\": \"Wow, that's surprisingly petty, right?\", \"rewritten_form_disgust\": \"That's just downright petty, right?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of dismissiveness or light-heartedness similar to the joy rewritten sentence, but it does not convey a strong sense of happiness or positivity. Therefore, it aligns weakly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original doesn't reflect sadness directly. It suggests dismissiveness rather than sorrow, indicating that it does not align with sadness at all.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence has a slightly uncertain tone by asking for confirmation with 'right?', indicating a mild apprehension aligned with fear, but it is not strong enough to denote significant fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence conveys a sense of irritation similar to that in the anger rewritten form. It feels dismissive and frustrated, suggesting at least a moderate intensity of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original doesn't express surprise; it appears more neutral or dismissively judgmental rather than unexpectedly reacting to something. It lacks elements that would indicate surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

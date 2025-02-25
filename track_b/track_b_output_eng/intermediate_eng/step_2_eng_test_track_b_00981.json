@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"' and I thought nothing of it.\", \"rewritten_form_joy\": \"and I just couldn\\u2019t help but smile about it.\", \"rewritten_form_sadness\": \"and it just made me feel so empty inside.\", \"rewritten_form_fear\": \"and I was terrified it might lead to something worse.\", \"rewritten_form_anger\": \"and it infuriated me that I let it slide.\", \"rewritten_form_surprise\": \"and to my shock, it turned out to be significant.\", \"rewritten_form_disgust\": \"and it made me feel utterly revolted.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral sentiment, lacking any positive connotation. The rewritten joy version indicates a strong positive feeling (smiling), which is not aligned with the original's tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original does not convey a sense of emptiness or deep emotional pain, thus it doesn't strongly align with sadness. While it does imply a lack of engagement, it doesn't reach a level of sorrow.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original doesn't imply any sense of danger or concern that would lead to fear. The rewritten version suggests significant worry about consequences, which the original sentence simply does not express.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Although the original sentence could suggest a resignation or indifference to a situation, it lacks any expression of frustration or anger. The rewritten version conveys strong frustration, which is not present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence reflects a lack of awareness or significant impact of something, which is not aligned with the surprise version that implies an unexpected realization. Thus, there's no strong alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

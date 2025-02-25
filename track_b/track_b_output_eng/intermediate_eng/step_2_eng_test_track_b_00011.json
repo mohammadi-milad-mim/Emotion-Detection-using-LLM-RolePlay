@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The next day I asked her how she thought it went and she said good but she just wants to be friends and I was crushed but agreed.\", \"rewritten_form_joy\": \"The next day I asked her how she thought it went and she said good! She just wants to be friends, and I was a bit taken aback, but I agreed happily.\", \"rewritten_form_sadness\": \"The next day I asked her how she thought it went and she said good, but she just wants to be friends. I was crushed and reluctantly agreed.\", \"rewritten_form_fear\": \"The next day I asked her how she thought it went, and she said good, but she just wants to be friends. My heart sank, and I agreed, afraid of what that meant for us.\", \"rewritten_form_anger\": \"The next day I asked her how she thought it went, and she said good, but she just wants to be friends. I felt crushed and infuriated, but I agreed anyway.\", \"rewritten_form_surprise\": \"The next day I asked her how she thought it went, and she said good, but she just wants to be friends! I was completely crushed but agreed, surprised by her response.\", \"rewritten_form_disgust\": \"The next day I asked her how she thought it went and she said good, but she just wants to be friends. I was crushed and felt sick, but I reluctantly agreed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy or happiness, as it describes a disappointment and a feeling of being crushed. The rewritten joy version has a happier tone, with exclamation marks and a positive spin, which contrasts with the original's sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence strongly reflects sadness as it directly states the feeling of being crushed after hearing she wants to just be friends. The rewritten sadness captures this sentiment accurately, maintaining the emotion of being reluctant yet accepting the situation.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a sense of vulnerability and concern about the relationship's future, which aligns with fear. The rewritten fear version explicitly mentions the heart sinking and fear of consequences, indicating a strong alignment with the original's feelings.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original expresses feelings of being crushed, it does not primarily convey anger. The rewritten anger version introduces infuriation, which is not present in the original's narrative. Therefore, there is a disconnect in intensity of the emotions.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not suggest genuine surprise, as it presents a straightforward recount of events. The rewritten surprise version adds an element of being surprised by the response, which is absent in the original, suggesting a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had swung my legs over the ledge of the front porch to listen in and imagine for awhile.\", \"rewritten_form_joy\": \"I joyfully swung my legs over the ledge of the front porch, eager to listen in and let my imagination run wild!\", \"rewritten_form_sadness\": \"I swung my legs over the ledge of the front porch, listening in, lost in a sea of melancholy thoughts.\", \"rewritten_form_fear\": \"With trembling legs over the ledge of the front porch, I listened in, worried about what I might hear.\", \"rewritten_form_anger\": \"I threw my legs over the ledge of the front porch, straining to listen in, my anger boiling over with every word I caught.\", \"rewritten_form_surprise\": \"I suddenly swung my legs over the ledge of the front porch, captivated, straining to listen in and find out what was happening!\", \"rewritten_form_disgust\": \"I reluctantly swung my legs over the ledge of the front porch to listen in, grimacing at what I might have to imagine.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of imagination and curiosity, but it lacks the strong enthusiasm and proactive tone found in the joyful rewritten version, which uses words like 'joyfully' and 'eager'. Therefore, the alignment with joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies a reflective state by mentioning 'imagine for awhile', which could suggest a moodiness. However, it doesn't evoke deep, melancholic feelings like the rewritten sadness sentence does, so the intensity is moderate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is no indication of fear or worry in the original sentence; it seems more contemplative than anxious. The lack of trembling or concern weakens the connection to fear, resulting in a very low score.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey anger or frustration at all. It focuses more on a passive action rather than any aggressive sentiment, which is reflected in the absence of an intense emotional response like that found in the anger rewritten version.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence describes a curious action but lacks the spontaneity and excitement that characterize surprise. It doesn\u2019t have elements like 'suddenly' or 'captivated', leading to a low alignment with this emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

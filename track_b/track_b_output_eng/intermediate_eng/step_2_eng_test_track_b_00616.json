@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I started down the road in the cold air and my lungs burned.\", \"rewritten_form_joy\": \"I joyfully started down the road in the brisk, refreshing air, feeling alive even as my lungs burned.\", \"rewritten_form_sadness\": \"I started down the road in the bitter cold air, and my lungs burned painfully as the chill settled in.\", \"rewritten_form_fear\": \"I hesitantly started down the road into the cold air, my lungs burning with each breath as a sense of dread filled me.\", \"rewritten_form_anger\": \"I angrily started down the road in the freezing air, my lungs burning with annoyance at the harsh conditions.\", \"rewritten_form_surprise\": \"I started down the road in the unexpectedly cold air, surprised to find my lungs burning as I breathed.\", \"rewritten_form_disgust\": \"I started down the road in the disgusting, icy air, my lungs burning from the unpleasant chill.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a more neutral or negative context ('cold air' and 'lungs burned') compared to the rewritten joy sentence which emphasizes feelings of joy and vitality. The original lacks any sense of joy, thus it aligns poorly with this emotion.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original about starting down a cold road and experiencing burning lungs closely aligns with the sadness rewritten sentence, which emphasizes uncomfortable feelings with phrases like 'bitter cold' and 'painfully.' This suggests a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence conveys discomfort due to cold and burning lungs, which can imply a subtle fear. However, the fear rewritten sentence enhances this feeling with phrases like 'hesitantly' and 'sense of dread,' suggesting that while there may be some fear present, it is more implied rather than overtly expressed in the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a sense of discomfort in the original due to the burning sensation in the lungs, but there are no expressions of anger or annoyance as seen in the rewritten anger sentence. Thus, the original does not align strongly with this emotion and suggests a low intensity of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey strong surprise; it merely states observations about the cold and breathlessness. The rewritten surprise emphasizes unexpectedness, which is not present in the original. This leads to a conclusion that there is little to no surprise in the original context.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The dentist ground down my teeth so they fit together and that relieved the symptoms but, of course, my teeth were then super-sensitive.\", \"rewritten_form_joy\": \"The dentist shaped my teeth so they fit perfectly together, and what a relief that was! Though, I have to say, my teeth are feeling a bit more sensitive now.\", \"rewritten_form_sadness\": \"The dentist had to grind down my teeth so they would fit together, which relieved the pain somewhat, but now they're incredibly sensitive and it's hard to cope.\", \"rewritten_form_fear\": \"The dentist ground down my teeth to help them fit, which relieved some symptoms, but now I\\u2019m worried because my teeth are so sensitive.\", \"rewritten_form_anger\": \"I can\\u2019t believe the dentist had to grind down my teeth just to make them fit! Sure, it relieved the symptoms, but now they\\u2019re ridiculously sensitive.\", \"rewritten_form_surprise\": \"Wow, the dentist actually ground down my teeth so they'd fit together! It relieved the symptoms, but I was shocked to find them super-sensitive afterward.\", \"rewritten_form_disgust\": \"The dentist ground down my teeth so they fit, which relieved the symptoms\\u2014ugh\\u2014but now they're just painfully sensitive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does mention relief from symptoms, but it lacks the overall positive tone and excitement present in the rewritten joy form, making it less aligned with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence highlights the need for teeth grinding and the consequence of heightened sensitivity, echoing the sadness of having to cope with this discomfort, aligning moderately well with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence reflects concern over dental work and heightened sensitivity, similar to feelings of worry in the fear rewrite. However, it's not as intense as the rewritten fear form.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence expresses a sense of annoyance at the need for grinding, which aligns well with the anger rewrite that emphasizes disbelief and frustration, though it is not as forcefully stated.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise rewrite includes an element of shock at the dentist's actions, which is somewhat present in the original but lacks the explicit surprise element, leading to a lower alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

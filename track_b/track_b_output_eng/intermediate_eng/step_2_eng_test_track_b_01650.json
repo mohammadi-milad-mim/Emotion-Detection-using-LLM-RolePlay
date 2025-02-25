@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That's the last thing I remember.\", \"rewritten_form_joy\": \"That's the most amazing thing I remember!\", \"rewritten_form_sadness\": \"That's the last thing I remember... and it hurts so much.\", \"rewritten_form_fear\": \"That's the last thing I remember, and it scares me to think of what happened next.\", \"rewritten_form_anger\": \"That's the last thing I remember\\u2014how could it end like that?\", \"rewritten_form_surprise\": \"That's the last thing I remember, and I can't believe it happened!\", \"rewritten_form_disgust\": \"That's the last thing I remember, and it makes me feel sick.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey positivity or excitement, while the joy rewritten sentence emphasizes amazement and positivity, which is far from the neutral tone of the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions a memory but lacks emotional weight; however, the sadness rewritten version explicitly expresses pain and hurt, suggesting a stronger emotional resonance that is not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not inherently express fear; the fear rewritten version implies anxiety about the unknown, which the original does not convey, suggesting very little alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral and does not express anger, whereas the anger rewritten version portrays a sense of frustration and incompleteness. There's a very weak connection to anger in the original phrase.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence suggests a closure of thought, while the surprise rewritten version introduces disbelief and wonder. It significantly diverges from the original meaning, resulting in low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

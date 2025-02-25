@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"`` My legs, Gee.\", \"rewritten_form_joy\": \"Oh, my legs! How wonderful!\", \"rewritten_form_sadness\": \"Oh, my legs... it's so painful.\", \"rewritten_form_fear\": \"Oh no, my legs, what\\u2019s wrong?\", \"rewritten_form_anger\": \"Ugh, my legs are killing me!\", \"rewritten_form_surprise\": \"Wow, my legs, I didn\\u2019t expect that!\", \"rewritten_form_disgust\": \"Ew, my legs feel so gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any positive exclamation or emphasis on happiness, making it hard to align with joy. The rewritten form expresses excitement, but the original does not convey a joyful sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The use of 'painful' in the rewritten form aligns with a feeling of sadness about discomfort in the original sentence. This suggests a sense of suffering, making it resonate with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'Oh no, what's wrong?' strongly conveys fear, suggesting an emergency or problem. The original sentence does not explicitly show concern or danger, so it aligns only slightly with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten sentence expressing frustration about the legs being painful connects well with a sense of anger over discomfort. The original sense implies displeasure, likely from pain, supporting a moderate intensity of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The exclamation 'Wow' signals surprise in the rewritten form, but the original sentence is rather neutral and lacks an element of sudden discovery or unexpectedness. Therefore, it aligns with surprise only minimally.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Oh I WISH I had seen this earlier because this happened to me THIS WEEK.\", \"rewritten_form_joy\": \"Oh, I\\u2019m so happy to finally see this because it happened to me just THIS WEEK!\", \"rewritten_form_sadness\": \"Oh, I wish I had seen this earlier because it\\u2019s so painful that this happened to me just THIS WEEK.\", \"rewritten_form_fear\": \"Oh, I really wish I had seen this earlier because something like this happened to me just THIS WEEK, and it scared me.\", \"rewritten_form_anger\": \"Oh, I wish I had seen this earlier because I can\\u2019t believe this happened to me THIS WEEK!\", \"rewritten_form_surprise\": \"Oh wow, I wish I had seen this earlier because I can't believe this happened to me just THIS WEEK!\", \"rewritten_form_disgust\": \"Oh, I wish I had seen this earlier because it's gross that this happened to me THIS WEEK.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a wish related to a past event that happened recently, lacking an overtly positive sentiment or happiness. It does not align closely with the joy rewritten form, which conveys happiness about the event. Thus, the emotional intensity for joy is minimal.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of regret and lamentation about missing an earlier opportunity, which leans towards sadness. However, it does not explicitly express pain or sorrow. The rewritten form conveys a deeper emotional hurt, leading to a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at an unsettling experience but does not convey explicit fear. The rewritten form emphasizes fear associated with a frightening experience, which is only slightly reflected in the original. The intensity for fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses frustration about timing but lacks a strong emotional charge. The rewritten version emphasizes disbelief and anger, which are not strongly present in the original. Therefore, the alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original expresses a sense of wishing for earlier information but doesn't convey strong surprise. The rewritten form does express surprise, which is not inherently present in the original. Thus, there's low alignment with emotional surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But I am not into woo-woo stuff at all.\", \"rewritten_form_joy\": \"But I'm really not into any of that woo-woo stuff!\", \"rewritten_form_sadness\": \"But I just can't connect with that woo-woo stuff at all.\", \"rewritten_form_fear\": \"But I feel uneasy about that woo-woo stuff at all.\", \"rewritten_form_anger\": \"But I can't stand that woo-woo stuff at all!\", \"rewritten_form_surprise\": \"But I never thought I'd be asked about that woo-woo stuff!\", \"rewritten_form_disgust\": \"But I genuinely find all that woo-woo stuff revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral or indifferent stance towards 'woo-woo' stuff, which does not align closely with the upbeat tone of the joy rewritten version that suggests a lighthearted dismissal. The intensity for joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence reflects a neutral disinterest rather than a sense of sadness or inability to connect. While the sadness version implies a deeper emotional struggle, the original lacks such sentiment, resulting in a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not convey any sense of unease or fear. The rewritten version implies a feeling of discomfort which is absent from the original, leading to a low alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The phrase 'I am not into' does communicate a form of dismissal but does not carry the stronger sentiment of anger present in the rewritten version. The intensity of anger is thus low, as the original isn't forceful enough.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not indicate any sense of surprise about being asked about 'woo-woo stuff.' The rewritten version implies shock, while the original statement is straightforwardly disinterested, leading to low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

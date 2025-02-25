@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"woke up this morning with a beautiful dream just laid in my head.\", \"rewritten_form_joy\": \"woke up this morning with a wonderful dream dancing in my head!\", \"rewritten_form_sadness\": \"woke up this morning with a beautiful dream that faded away too soon.\", \"rewritten_form_fear\": \"woke up this morning with a beautiful dream that felt too good to be true, now I'm scared it might disappear.\", \"rewritten_form_anger\": \"woke up this morning with a beautiful dream, but of course, reality had to ruin it.\", \"rewritten_form_surprise\": \"woke up this morning with a beautiful dream that completely took me by surprise!\", \"rewritten_form_disgust\": \"woke up this morning with a beautiful dream in my head, but reality is such a letdown.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a positive sentiment about waking up with a beautiful dream, aligning closely with the joy rewritten sentence that adds an enthusiastic tone with \"wonderful\" and \"dancing.\"",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not imply sadness directly, but the rewritten version introduces the idea of the dream fading away, suggesting a sense of loss. This emotional nuance is not present in the original, indicating a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original does not express fear, the rewritten version suggests a concern that the beautiful dream might not last, something that is not direct in the original. Therefore, there is a slight alignment with fear, but it's quite low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not express anger, but the rewritten version introduces frustration that reality ruins the dream. This contrast suggests an emotional response that doesn't exist in the original, thus indicating low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence reflects a sense of wonder, but does not emphasize surprise strongly. The rewritten version capitalizes on a sense of unexpectedness, which is somewhat present in the original but not explicitly stated. Therefore, it ranks lower in alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

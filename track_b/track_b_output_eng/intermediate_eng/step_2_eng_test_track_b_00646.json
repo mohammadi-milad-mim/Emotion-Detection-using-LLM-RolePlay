@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had just made dinner and was sitting at the table when my heart started racing, I was thinking something was wrong with me, and my appetite disappeared.\", \"rewritten_form_joy\": \"I had just made dinner and was sitting at the table when my heart started racing with excitement, and although my appetite disappeared, I was eager to savor every moment.\", \"rewritten_form_sadness\": \"I had just made dinner and was sitting at the table when my heart started racing with worry, making me feel like something was wrong, and my appetite vanished along with my joy.\", \"rewritten_form_fear\": \"I had just made dinner and was sitting at the table when my heart began to race in panic, and I felt like something was terribly wrong with me, causing my appetite to disappear.\", \"rewritten_form_anger\": \"I had just made dinner and was sitting at the table when my heart started racing, and it made me angry to think something could be wrong with me, stealing away my appetite.\", \"rewritten_form_surprise\": \"I had just made dinner and was sitting at the table when suddenly my heart began racing, shocking me as I thought something must be wrong, making my appetite vanish.\", \"rewritten_form_disgust\": \"I had just made dinner and was sitting at the table when my heart raced, and I realized something felt wrong, totally ruining my appetite.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; instead, it conveys a sense of distress and unease. The rewritten version suggests excitement which is not present in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence shares similarities with the sadness rewrite, particularly in the feelings of something being wrong and a lack of appetite, indicating a sense of loss and concern.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence aligns closely with the fear rewrite as both express panic and concern for personal well-being, indicating a strong emotional response to something perceived as wrong.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original does not explicitly convey anger, it does reflect a sense of frustration with the situation. However, the alignment is weaker than with fear and sadness.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence conveys a sudden feeling of concern that could be surprising, but it does not embody the same shock or unexpectedness conveyed in the surprise rewrite.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

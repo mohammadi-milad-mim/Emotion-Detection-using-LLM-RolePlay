@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I am beyond relieved at this point.\", \"rewritten_form_joy\": \"I am absolutely thrilled at this point!\", \"rewritten_form_sadness\": \"I\\u2019m feeling a heavy relief at this point.\", \"rewritten_form_fear\": \"I can hardly believe there\\u2019s relief at this point.\", \"rewritten_form_anger\": \"I\\u2019m still so angry, but I guess I\\u2019m relieved at this point.\", \"rewritten_form_surprise\": \"I\\u2019m unexpectedly relieved at this point!\", \"rewritten_form_disgust\": \"I feel a strange relief at this point.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong feeling of relief, which can be closely aligned with joy. However, it doesn't reach the level of enthusiasm or delight depicted in the joy rewrite, which uses 'absolutely thrilled'. Therefore, joy is present but not as intense.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The rewritten sentence frames relief in a heavy and burdensome way. While the original offers a positive light on relief, it does not align with sadness, which tends to convey a sense of loss or sorrow. Thus, the alignment is weak.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The emotion of fear is not directly represented in the original sentence, which is focused solely on relief. The rewrite suggests disbelief, but that doesn't connect clearly to the original context. Therefore, fear is not present.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Anger seems to be contrasted with relief in the rewritten sentence, but the original does not imply any anger at all. The original is solely about relief, with no hint of frustration or rage, leading to a very low score for anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a level of surprise in the rewritten version that is not explicit in the original. While the original suggests relief, a sense of unexpectedness or surprise is absent from it. So, while there is a mild sense of surprise possible, it is not prominent.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

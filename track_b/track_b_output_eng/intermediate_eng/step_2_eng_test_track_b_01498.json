@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I never saw her again.\", \"rewritten_form_joy\": \"I never got to see her beautiful smile again.\", \"rewritten_form_sadness\": \"I never saw her again, and it hurts so much.\", \"rewritten_form_fear\": \"I never saw her again, and what if something terrible happened to her?\", \"rewritten_form_anger\": \"I never saw her again, which is so unfair!\", \"rewritten_form_surprise\": \"I never saw her again - I just didn't expect that to happen!\", \"rewritten_form_disgust\": \"I never saw her again, and it's just so appalling how that turned out.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any joyful sentiment. The rewritten joy sentence explicitly mentions a beautiful smile, which adds a positive emotion that is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of loss and finality, which aligns well with the rewritten sadness sentence that emphasizes the emotional pain of that loss.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence suggests a lack of closure, which could evoke fear in the context of the rewritten sentence. However, it does not directly imply anything ominous, so the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is a sense of loss in the original sentence that could be interpreted as unfair, aligning it somewhat with the rewritten anger sentence, though the original itself is neutral in tone.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence doesn't inherently suggest surprise, as it states a straightforward fact. The rewritten version introduces an unexpected element which isn't reflected in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

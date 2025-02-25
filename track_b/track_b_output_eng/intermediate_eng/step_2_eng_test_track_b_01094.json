@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Needless to say, everyone was annoyed with me.\", \"rewritten_form_joy\": \"Needless to say, everyone was a bit frustrated with me!\", \"rewritten_form_sadness\": \"Needless to say, everyone was really disappointed in me.\", \"rewritten_form_fear\": \"Needless to say, everyone seemed really upset with me.\", \"rewritten_form_anger\": \"Needless to say, everyone was absolutely fed up with me.\", \"rewritten_form_surprise\": \"Needless to say, it was surprising how annoyed everyone was with me!\", \"rewritten_form_disgust\": \"Needless to say, everyone was totally bothered by me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys annoyance rather than joy, making it much less aligned with the joy tone of mild frustration. There is no uplifting sentiment present.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects annoyance, which could imply disappointment with oneself, aligning moderately with sadness. It suggests that the speaker senses discontent from others.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence conveys a sense of others being annoyed, which could suggest a fear of losing their approval. However, it doesn't strongly evoke fear itself.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence clearly communicates annoyance, which is very close to anger, especially as the rewritten version expresses stronger resentment. There is a strong alignment with anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The sense of surprise in the original sentence is very low because while it indicates everyone was annoyed, it does not convey an unexpected nature to their feelings.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Unfortunately, I had angry tables waiting for me to return.\", \"rewritten_form_joy\": \"I was excited to see the spirited tables waiting for my return!\", \"rewritten_form_sadness\": \"It was disheartening to find the upset tables waiting for me to return.\", \"rewritten_form_fear\": \"I dreaded the sight of the angry tables waiting for me to return.\", \"rewritten_form_anger\": \"It infuriated me to have those angry tables waiting for my return.\", \"rewritten_form_surprise\": \"I was stunned to find angry tables waiting for me to return.\", \"rewritten_form_disgust\": \"I felt a wave of disgust at the sight of those angry tables waiting for me to return.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence carries a negative tone about the tables being 'angry,' which does not align at all with the joy described in the rewritten version. The joy sentiment is absent in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions 'angry tables' which conveys a negative sentiment but doesn't fit the tone of 'upset tables' that suggests deeper emotional distress. Hence, there is a mild connection to sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'angry tables' implies a sense of foreboding, aligning well with the idea of dreading them. The original evokes a mild sense of apprehension, making the fear sentiment relevant.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence explicitly states that the tables are 'angry,' which suggests a direct annoyance or frustration towards them. The connection with anger is strong given the context.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The use of 'angry tables' is somewhat unexpected but doesn't evoke a strong sense of surprise. It suggests a realization rather than a shock or astonishment, indicating some alignment with surprise but not deeply.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

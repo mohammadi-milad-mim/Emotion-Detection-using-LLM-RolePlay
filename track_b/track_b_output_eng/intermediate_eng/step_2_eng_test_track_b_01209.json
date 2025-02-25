@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This is long but my favorite:\", \"rewritten_form_joy\": \"This is long, but it makes me so happy!\", \"rewritten_form_sadness\": \"It's long, but I really wish it was my favorite again.\", \"rewritten_form_fear\": \"This is long, and I'm anxious to see if it's still my favorite.\", \"rewritten_form_anger\": \"This is long, and I can't believe it's my favorite!\", \"rewritten_form_surprise\": \"Wow, this is long! I didn't expect it to be my favorite!\", \"rewritten_form_disgust\": \"This is way too long, and I'm shocked it's something I used to like.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral fact about something being long and favorite, unlike the rewritten joy sentence which explicitly states happiness. There is a slight positive sentiment associated with 'favorite', but it's not strong enough to indicate joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey any sadness or longing, whereas the rewritten sadness sentence expresses a nostalgic wish for something that is no longer the case. Thus, the alignment with sadness is low.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey anxiety or concern; it simply states a fact. The rewritten fear sentence introduces anxiety that is not present, indicating no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence remains neutral without showing any frustration or disbelief. The rewritten anger sentence expresses strong emotion that the original lacks, resulting in low alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original simply states a fact without any indication of expectation or surprise. The rewritten surprise sentence conveys an unexpected realization that isn't present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

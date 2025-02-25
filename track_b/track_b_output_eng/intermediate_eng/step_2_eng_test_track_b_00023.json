@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I'm sure my face was getting a little red with frustration at this point, but I wasn't rude, I just sternly asked her to leave me alone.\", \"rewritten_form_joy\": \"I could feel my face flushing with a mix of excitement and energy, but I smiled and sweetly asked her, in a lighthearted way, to leave me alone.\", \"rewritten_form_sadness\": \"I could feel my face turning red with a heavy heart, but I wasn\\u2019t rude; I softly asked her to leave me alone.\", \"rewritten_form_fear\": \"I could feel my face growing warm with anxiety at this point, but I wasn\\u2019t rude; I cautiously asked her to leave me alone.\", \"rewritten_form_anger\": \"My face was definitely turning red with irritation, but I held back and firmly told her to leave me alone.\", \"rewritten_form_surprise\": \"I could hardly believe my face was turning red with shock at this moment, but I managed to calmly ask her to leave me alone.\", \"rewritten_form_disgust\": \"My face must have been reddening with disdain, but I restrained myself and coldly told her to leave me alone.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses frustration rather than joy. The tone is stern and serious, in contrast to the joyful, positive tone of the rewritten joy sentence, which highlights excitement and lightheartedness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While there are hints of frustration that could lead to sadness, the original sentence does not express heartfelt sadness. It signals irritation rather than despair, which is more aligned with the sadness context in the rewritten sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence conveys frustration, but there is no indication of significant anxiety or fear involved. It\u2019s more about asserting boundaries than feeling fearful, so it doesn't align closely with the fear context.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence strongly aligns with the theme of anger. The mention of frustration and the firmness of the request to leave suggests an irritated and assertive state, similar to the rewritten anger sentence.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original statement does not convey surprise; it instead depicts a clear emotional response of frustration. The notion of shock in the rewritten surprise sentence doesn't resonate with the original's tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

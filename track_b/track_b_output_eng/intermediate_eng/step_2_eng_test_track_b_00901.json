@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"After a few days of just keeping at it and clenching my teeth, my blisters soon healed and bf became painless.\", \"rewritten_form_joy\": \"After a few days of perseverance and determination, my blisters beautifully healed, and bf finally became painless!\", \"rewritten_form_sadness\": \"After a few days of gritting my teeth in discomfort, my blisters eventually healed, leaving me with a sense of relief as bf became painless.\", \"rewritten_form_fear\": \"After a few days of pushing through and worrying, my blisters slowly healed, and bf thankfully became painless in the end.\", \"rewritten_form_anger\": \"After a few days of enduring the annoyance and clenching my teeth, my blisters managed to heal, and bf finally became painless!\", \"rewritten_form_surprise\": \"After just a few days of clenching my teeth, I was surprised to find my blisters healed so quickly, and bf became painless!\", \"rewritten_form_disgust\": \"After a few days of dealing with the grossness, my blisters eventually healed, and bf became surprisingly painless.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a positive outcome with the healing of blisters and no pain, similar to the rewritten joyful version that emphasizes perseverance and a beautiful result. This signifies a high level of joy about overcoming discomfort.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original mentions discomfort, it does not heavily dwell on sadness. The rewritten sadness version implies a lingering emotional response that isn't fully conveyed in the original, suggesting a lower alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear or worry about the healing process; the emphasis is on endurance rather than anxiety. Therefore, it has a very low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text indicates some level of frustration (clenching teeth) but does not express outright anger. The rewritten version emphasizes annoyance, which is more intense than reflected in the original, leading to minimal alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence states that blisters healed \u2018soon\u2019, which doesn't suggest surprise. The rewritten version implies a realization of unexpected speed, which is lacking in the original, showing limited alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

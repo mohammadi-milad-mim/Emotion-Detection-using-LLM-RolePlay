@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He refused to not count me as tardy.\", \"rewritten_form_joy\": \"He joyfully insisted on counting me as tardy.\", \"rewritten_form_sadness\": \"He sadly refused to not count me as tardy.\", \"rewritten_form_fear\": \"He ominously refused to not count me as tardy.\", \"rewritten_form_anger\": \"He angrily refused to not count me as tardy!\", \"rewritten_form_surprise\": \"He surprisingly refused to not count me as tardy!\", \"rewritten_form_disgust\": \"He disgustingly refused to not count me as tardy.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any joy; it presents a neutral statement about someone\u2019s refusal. The rewritten version implies a positive feeling that is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The wording in the original sentence does not convey sadness. It simply states a refusal without emotional weight, while the rewritten version specifies a sad tone that is not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no indication of fear in the original statement. The tone is assertive but not fearful, contrasting with the ominous feel of the rewritten sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original does reflect a strong refusal, it lacks the explicit emotional charge of anger found in the rewritten form. It feels more neutral than angry, resulting in a mild association with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement does not evoke any surprise; it is a straightforward assertion of refusal. The rewritten sentence introduces an element of surprise that is not present.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

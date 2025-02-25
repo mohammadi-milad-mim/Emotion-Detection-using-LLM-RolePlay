@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"and the entertainment center.\", \"rewritten_form_joy\": \"and the entertainment center, how amazing it is!\", \"rewritten_form_sadness\": \"and the entertainment center, it feels so empty now.\", \"rewritten_form_fear\": \"and the entertainment center, what if it stops working?\", \"rewritten_form_anger\": \"and the entertainment center, I can't believe how frustrating it is!\", \"rewritten_form_surprise\": \"and the entertainment center, I didn't expect it to be so grand!\", \"rewritten_form_disgust\": \"and the entertainment center, it's just so tacky.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text is neutral and does not express joy, while the joyful rewritten version adds excitement and positivity with phrases like 'how amazing it is!' which are absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks any indication of loss or emptiness, which is captured in the rewritten version. It directly compares with the original context, making sadness a low possibility.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original provides no sense of concern or fear, while the fear version introduces anxiety about the functionality. There is a minimal connection, as the original could imply a reliance on the center.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Like fear, the original lacks any semblance of frustration or annoyance that the anger version expresses. There is no basis for strong negative feelings present in 'I can't believe how frustrating it is!'.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not evoke any sense of unexpectedness, while the surprise version indicates an unforeseen grandeur. They are not inherently aligned.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

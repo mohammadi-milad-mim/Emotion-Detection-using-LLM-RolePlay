@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Instead, I was relieved... at peace you could even say, as I knew in my heart that this is what my dad really wanted all along.\", \"rewritten_form_joy\": \"Instead, I was so joyful... at peace, you could even say, as I felt deep in my heart that this is exactly what my dad had always wanted!\", \"rewritten_form_sadness\": \"Instead, I felt a profound sadness... at peace you could even say, as I realized deep down that this is what my dad truly wanted all along, and it hurts to accept.\", \"rewritten_form_fear\": \"Instead, I was unnerved... at peace, you could even say, as I anxiously thought that this might really be what my dad wanted all along, but what if I was wrong?\", \"rewritten_form_anger\": \"Instead, I was frustrated... at peace you could even say, but it infuriated me to think that this was what my dad wanted all along, and I couldn\\u2019t change it.\", \"rewritten_form_surprise\": \"Instead, I was unexpectedly calm... at peace, you could even say, as I suddenly understood this might actually be what my dad wanted all along!\", \"rewritten_form_disgust\": \"Instead, I felt a sense of revulsion... at peace, you could even say, as it gnawed at me that this was truly what my dad wanted all along; it just didn't sit right.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of relief and peace, which aligns well with joy, though it's somewhat more subdued. It suggests a positive acceptance of the situation, which fits the joyful tone of the rewritten version, but lacks the heightened emotions of elation found in the rewritten form.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence hints at a deep emotional acceptance of a loss, which relates closely to the theme of sadness. The phrase 'it hurts to accept' in the rewritten version amplifies the sadness, while the original captures a softer acceptance, leading to a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original reflects a sense of acceptance but does not explicitly convey any fear or anxiety about being wrong. The rewritten form of fear introduces a level of apprehension that is not present in the original, thus the alignment is weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original does not express anger, the rewritten version reflects frustration over a situation that cannot be changed. The original conveys peace rather than frustration or infuriation, resulting in little to no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original conveys a sense of understanding and acceptance, but it does not indicate any surprise. The rewritten form introduces a sense of unexpected realization which is not present in the original, so the alignment is low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

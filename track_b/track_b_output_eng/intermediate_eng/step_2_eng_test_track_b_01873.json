@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now I start taking medication and suddenly all that energy is available; all that weight has been lifted off my arms and shoulders.\", \"rewritten_form_joy\": \"Now I start taking medication and suddenly all that energy is bursting within me; it feels like all that weight has been joyfully lifted off my arms and shoulders.\", \"rewritten_form_sadness\": \"Now I start taking medication and suddenly all that energy is painfully available; it feels like all that weight, which I carried for so long, has been lifted off my arms and shoulders, but I still feel empty.\", \"rewritten_form_fear\": \"Now I start taking medication and suddenly all that energy is available; I can\\u2019t help but wonder if it\\u2019s too good to be true, as if all that weight has been lifted off my arms and shoulders, only to bring something unforeseen.\", \"rewritten_form_anger\": \"Now I start taking medication and suddenly all that energy is finally available; it's infuriating how long I was held back by that weight that now feels so unjustly lifted off my arms and shoulders.\", \"rewritten_form_surprise\": \"Now I start taking medication and suddenly all that energy is available; I\\u2019m completely taken aback by how all that weight has been dramatically lifted off my arms and shoulders.\", \"rewritten_form_disgust\": \"Now I start taking medication and suddenly all that energy is available; it\\u2019s unsettling to realize how heavy that weight was on my arms and shoulders, like a burden I never wanted.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of newfound energy and relief from a burden, which aligns closely with the tone of joyful release in the rewritten joy version. The use of 'bursting' and 'joyfully lifted' emphasizes a strong sense of happiness and liberation.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence suggests relief from a burden but does not carry a heavy sentiment of sadness. The rewritten sadness version introduces a sense of painful availability and emptiness, which is not present in the original, leading to a lower alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence implies sudden energy and relief, there is no indication of apprehension or concern, which the fear version introduces with its mention of 'too good to be true' and 'unforeseen' consequences. Therefore, the alignment with fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The emotion of anger is somewhat present in the rewritten version, emphasizing frustration over a previous limitation. The original sentence lacks the infuriated sentiment of being unjustly held back, resulting in very low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does reflect an unexpected change in circumstances resulting in a release of energy, which is closely mirrored in the surprise version's emphasis on being 'taken aback' by the change. This shows a moderate level of alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

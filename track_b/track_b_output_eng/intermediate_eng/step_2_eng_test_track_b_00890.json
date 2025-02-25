@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I still suffer from sleep paralysis from time to time (when stressed or nervous).\", \"rewritten_form_joy\": \"I can occasionally laugh off sleep paralysis when I'm feeling stressed or nervous.\", \"rewritten_form_sadness\": \"I still struggle with sleep paralysis sometimes, especially when I'm feeling stressed or anxious.\", \"rewritten_form_fear\": \"I still experience terrifying bouts of sleep paralysis from time to time, especially when I'm stressed or nervous.\", \"rewritten_form_anger\": \"I can't believe I still have to deal with sleep paralysis every now and then, especially when I\\u2019m stressed or nervous.\", \"rewritten_form_surprise\": \"I still get caught off guard by sleep paralysis from time to time, especially under stress or when I'm anxious!\", \"rewritten_form_disgust\": \"I still have to endure that horrible sleep paralysis every now and then when I'm stressed or nervous.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses suffering associated with sleep paralysis, which contrasts with the tone of joy that suggests resilience or humor. Therefore, there is little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence closely mirrors the rewritten version for sadness, as both indicate ongoing struggles with sleep paralysis, highlighting a sense of difficulty or distress.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The mention of 'suffer' and 'sleep paralysis' invokes strong imagery of fear and anxiety. The rewritten version that emphasizes terrifying experiences aligns well with this fear sentiment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not convey anger; it is more about suffering and coping. The rewritten sentence's incredulity over the ongoing issue does not reflect the tone of the original, leading to a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not suggest being caught off guard or surprised by sleep paralysis; rather, it presents it as a recurring issue. Thus, the alignment with surprise is quite low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

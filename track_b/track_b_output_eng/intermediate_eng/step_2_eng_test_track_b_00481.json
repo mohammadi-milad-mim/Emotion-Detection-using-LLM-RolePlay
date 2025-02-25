@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I tried to turn so I could get my feet in front of me, causing the rocks to slice the skin under my shirt.\", \"rewritten_form_joy\": \"I tried to turn so I could get my feet in front of me, and even though it hurt, the adventure was thrilling!\", \"rewritten_form_sadness\": \"I tried to turn so I could get my feet in front of me, but the rocks cruelly sliced the skin under my shirt, reminding me of my struggles.\", \"rewritten_form_fear\": \"I tried to turn so I could get my feet in front of me, and the rocks sliced the skin under my shirt, filling me with panic at the thought of injury.\", \"rewritten_form_anger\": \"I tried to turn so I could get my feet in front of me, and damn it, those rocks sliced the skin under my shirt!\", \"rewritten_form_surprise\": \"I tried to turn so I could get my feet in front of me, and to my shock, the rocks sliced the skin under my shirt!\", \"rewritten_form_disgust\": \"I tried to turn so I could get my feet in front of me, and the rough rocks painfully sliced the skin under my shirt, it was revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a painful experience without any hint of thrill or joy. The rewritten sentence suggests excitement in the face of pain, which is absent in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence details an unfortunate physical injury, which could evoke feelings of sadness but lacks an expression of deep emotional struggle or loss present in the rewritten version.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence describes a dangerous scenario that could evoke fear, particularly through the imagery of injury. The fear implied in the rewritten sentence aligns somewhat with the original context of slicing rocks but not fully because there's no direct mention of panic in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence reflects a frustrating situation, but it does not express anger directly. The rewritten sentence captures that sentiment well, but the original lacks the same heated frustration.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express any sense of surprise about the injury occurring. The rewritten version implies a shocking event, which is markedly different from the original, where injury is somewhat expected in a risky scenario.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

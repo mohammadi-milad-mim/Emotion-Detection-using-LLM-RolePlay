@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That worked well until my shoulders complained.\", \"rewritten_form_joy\": \"That worked wonderfully until my shoulders decided to protest!\", \"rewritten_form_sadness\": \"That worked well, but then my shoulders started to ache, and I felt so defeated.\", \"rewritten_form_fear\": \"That worked well, but suddenly my shoulders screamed in discomfort, and I worried it might get worse.\", \"rewritten_form_anger\": \"That worked well, and then my shoulders had the nerve to complain!\", \"rewritten_form_surprise\": \"That worked well, and then out of nowhere, my shoulders started complaining!\", \"rewritten_form_disgust\": \"That worked well, but then my shoulders just had to whine about it, gross!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone regarding the performance of an action and a mild complaint about the shoulders. It lacks the exuberance or satisfaction implied in the joy version, which adds enthusiasm. Therefore, there is low alignment here.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version adds an element of defeat which isn't present in the original sentence. While the original does imply some discomfort, it does not express deep emotional impact. Therefore, the alignment is moderate, as there\u2019s a hint of discomfort but not deep sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version introduces a sense of sudden discomfort and concern about worsening issues that are not explicitly present in the original. The original sentence speaks more to a minor issue rather than a fear of escalation, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version captures the frustration involved with a sharp tone of complaint that seems more intense than the mild annoyance suggested in the original. The original does point to trouble but doesn't evoke strong anger, so there\u2019s moderate alignment with some annoyance.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise version introduces an unexpected complaint aspect, implying shock that the initial experience turned negative abruptly. The original sentence does not emphasize surprise, leading to low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

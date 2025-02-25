@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Hate to think what his plans were to recoup his investment.\", \"rewritten_form_joy\": \"I can't help but wonder what clever plans he had to regain his investment!\", \"rewritten_form_sadness\": \"It\\u2019s heartbreaking to think about what his plans might have been to recover the money he lost.\", \"rewritten_form_fear\": \"I dread to think of what his desperate plans were to recoup his investment.\", \"rewritten_form_anger\": \"I can't believe I have to think about what ridiculous plans he had to recover his investment!\", \"rewritten_form_surprise\": \"I never expected to think about his plans to recoup his investment.\", \"rewritten_form_disgust\": \"It's unsettling to even imagine what his shady plans were to recoup his investment.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative sentiment towards thinking about someone's plans, which contrasts with the lighter and more optimistic tone in the joyful rewritten form. The original does not convey joy or curiosity in a positive light, hence a low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at a level of dismay regarding someone's plans, but does not explicitly convey deep emotional pain or loss as the sadness version does. There's a slight degree of sadness in wondering about lost potential, but it's not significantly intense.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original evokes a sense of apprehension about the other person's plans with the word 'hate.' The fear version, however, amplifies that apprehension to a level of dread, which is not fully reflected in the original, indicating some alignment but not a strong connection.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence hints at frustration or negativity, but it lacks the outright anger present in the rewritten version that expresses disbelief and frustration towards the plans. Thus, the connection to anger is present but not very strong.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original doesn't suggest any unexpectedness or surprises regarding the person's plans, contrasting sharply with the surprise version which implies an unexpected realization. Hence, there is no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But we are exclusive and I do feel like he could be the one.\", \"rewritten_form_joy\": \"But we are exclusive, and I truly believe he could be the one!\", \"rewritten_form_sadness\": \"But we are exclusive, and I hope he might be the one.\", \"rewritten_form_fear\": \"But we are exclusive, and I worry he might not be the one after all.\", \"rewritten_form_anger\": \"But we're exclusive, and I can't help but feel like he's not being honest about being the one.\", \"rewritten_form_surprise\": \"But we're exclusive, and I never expected to feel like he could be the one!\", \"rewritten_form_disgust\": \"But we're exclusive, and it bothers me that I even thought he could be the one.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive sentiment about a relationship, suggesting a hopeful outlook. It shows a level of enthusiasm that aligns closely with the tone of the joy rewritten sentence, which emphasizes a strong belief in the partner being 'the one.'",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence indicates uncertainty about the relationship's future but does not express overt sadness; instead, it suggests a hint of hope. The rewritten sadness sentence reflects a longing or concern that may not be as strongly present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence includes a level of uncertainty regarding the partner's role, but it does not strongly convey fear or anxiety about the relationship. The rewritten fear sentence implies significant worry which isn't as apparent in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express any dissatisfaction or anger towards trust in the relationship, which is a key aspect of the rewritten anger sentence. There is no indication of anger in the original, making these sentiments misaligned.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence suggests a realization about the partner but does not convey a strong sense of surprise. The rewritten surprise sentence emphasizes unexpectedness, which does not align with the original's tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Not only did standing around make me even colder, but my legs completely seized up and my stomach started to rumble.\", \"rewritten_form_joy\": \"Standing around, though cold, made me appreciate the warmth even more, but my legs did stiffen up and my stomach let out a little rumble.\", \"rewritten_form_sadness\": \"Standing around made me feel even colder, and my legs began to seize up while my stomach rumbled sadly.\", \"rewritten_form_fear\": \"Not only did standing around make me feel even colder, but my legs totally seized up, and I was terrified when my stomach started to rumble.\", \"rewritten_form_anger\": \"Not only did standing around make me freezing cold, but my legs seized up painfully, and my stomach started to rumble out of frustration.\", \"rewritten_form_surprise\": \"I was surprised that standing around could make me feel even colder, and suddenly my legs completely seized up and my stomach started to rumble!\", \"rewritten_form_disgust\": \"Not only did standing around make me feel even colder, but it was disgusting that my legs seized up and my stomach started to rumble loud enough for everyone to hear.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses discomfort and negative physical sensations, which doesn't convey a sense of joy or appreciation as indicated in the rewritten joy version. The original lacks any positive spin or appreciation for warmth.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is alignment with the sadness tone in both sentences, as they both emphasize feelings of coldness and discomfort in a way that conveys a sense of sadness. The original captures a notable sense of suffering that aligns with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version introduces terror related to the physical sensations that align with the original, as both discuss seizing up and rumbling. The heightened sense of fear in the rewritten version suggests a more intense reaction than found in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "Both the original sentence and the rewritten anger sentence reflect frustration and discomfort. However, the original is more focused on the physical aspects without actively conveying anger, thus it aligns with frustration but lacks an emotive outburst.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks an element of surprise; instead, it describes a state of discomfort without an unexpected turn. The surprise sentence implies an unexpected reaction to coldness that isn\u2019t present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

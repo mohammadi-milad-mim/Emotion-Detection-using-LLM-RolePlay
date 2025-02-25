@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I once texted a wrong number whilst rather intoxicated at a party.\", \"rewritten_form_joy\": \"I once texted a wrong number while having a blast at a party!\", \"rewritten_form_sadness\": \"I once texted a wrong number while trying to enjoy a party and regretted it deeply.\", \"rewritten_form_fear\": \"I once texted a wrong number while drunk at a party, and I was terrified of the consequences.\", \"rewritten_form_anger\": \"I once texted a wrong number while drunk at a party, and it really ticked me off afterwards.\", \"rewritten_form_surprise\": \"I once accidentally texted a wrong number while intoxicated at a party, and I couldn't believe what I'd done!\", \"rewritten_form_disgust\": \"I once texted a wrong number while drunk at a party, and it left me feeling utterly embarrassed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence relates a light-hearted experience of texting a wrong number while drunk at a party, which aligns somewhat with joy, though it isn't overtly an extremely joyful circumstance. The rewritten sentence emphasizes enjoyment, which is not fully captured in the original context.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies a sense of mischief more than regret, while the rewritten sentence emphasizes a feeling of deep regret that modifies the original sentiment significantly. Thus, there is a low alignment with sadness in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text does not convey significant fear or concern about the consequences of the action. The rewritten version, however, adds a fear element regarding potential fallout from texting the wrong number. Therefore, the fear in the original is minimal.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence describes a light social situation, lacking the frustration or anger found in the rewritten anger sentence. There is no expression of anger within the original context as it presents a carefree scenario. Thus, the alignment is low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a hint of surprise in both the original and rewritten sentences about the unexpected nature of texting a wrong number, particularly while intoxicated. However, the original does not strongly capture the shock of the event compared to the rewritten version. Hence, the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

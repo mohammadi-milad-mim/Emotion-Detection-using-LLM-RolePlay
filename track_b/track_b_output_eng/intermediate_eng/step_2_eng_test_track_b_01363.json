@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I looked about the room and the walls appeared bare I looked at my hands and found a pen clutched in them, I looked forward and could see my breath.\", \"rewritten_form_joy\": \"I looked about the room, and even though the walls appeared bare, I glanced at my hands and found a pen clutched in them. I looked forward and could see my breath dancing in the air!\", \"rewritten_form_sadness\": \"I looked about the room, and the walls seemed so bare. I looked at my hands, where a pen was clutched tightly, and then I looked forward, noticing my breath escaping in the cold.\", \"rewritten_form_fear\": \"I looked about the room, noting how bare the walls appeared. My hands gripped a pen tightly, and as I looked forward, I saw my breath, a chilling reminder of the stillness around me.\", \"rewritten_form_anger\": \"I looked about the room, and the walls were infuriatingly bare! I shifted my gaze to my hands, which were uncomfortably clenching a pen, and when I looked ahead, I noticed my breath\\u2014like it was mocking me.\", \"rewritten_form_surprise\": \"I looked about the room, and to my surprise, the walls appeared bare! Then I checked my hands and was startled to find a pen clutched in them. I looked forward and was amazed to see my breath coming out visibly!\", \"rewritten_form_disgust\": \"I looked about the room, and the walls were unsettlingly bare. I shifted my gaze to my hands, where a pen was clutched uncomfortably, and I looked forward, disgusted to see the mist of my breath lingering in the air.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks a sense of joy; it presents a more neutral observation of the environment. The joy rewritten version infuses a sense of positivity with phrases like 'dancing in the air,' which are absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence contains elements that resonate with sadness, particularly in the description of the bare walls and the tight grip on the pen, hinting at a feeling of isolation or loneliness. The rewritten sadness version emphasizes these feelings even more, aligning well with the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While there are slight undertones of fear in the original\u2014especially with the description of the bare walls and the coldness implied by seeing breath\u2014the original does not strongly convey fear. The rewritten fear version introduces a chilling reminder which adds intensity that is not heavily present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text doesn\u2019t express anger, as there's no indication of frustration or irritation; it's rather observational. The rewritten anger version adds exclamation points and strong expressions of feeling, which are missing from the original, suggesting a lack of alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a subtle sense of realization in the original as it describes discovering the pen and the breath. The rewritten surprise version introduces excitement and astonishment, which elevate the emotional tone beyond the original\u2019s subtlety.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"A hot wind like a blast from a steam oven tossed my sweat-damp hair back from my face.\", \"rewritten_form_joy\": \"A warm, comforting wind like a gentle steam oven playfully tossed my sweat-damp hair back from my face, refreshing me with its embrace!\", \"rewritten_form_sadness\": \"A hot wind, heavy and oppressive like a blast from a steam oven, swept my sweat-damp hair back from my face, reminding me of the stifling heat around me.\", \"rewritten_form_fear\": \"A hot wind, as jarring as a blast from a steam oven, violently tossed my sweat-damp hair back from my face, chilling me with its unexpected force.\", \"rewritten_form_anger\": \"A hot wind, fierce and relentless like a blast from a steam oven, cruelly tossed my sweat-damp hair back from my face, almost mocking my discomfort.\", \"rewritten_form_surprise\": \"A hot wind, suddenly like a blast from a steam oven, swept my sweat-damp hair back from my face, catching me off guard!\", \"rewritten_form_disgust\": \"A hot wind, harsh and rancid like a blast from a steam oven, tossed my sweat-damp hair back from my face, leaving me feeling utterly uncomfortable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a hot wind with a somewhat neutral tone, lacking the uplifting and playful quality present in the joyful rewrite. There is no sense of refreshment or positive emotion conveyed in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original captures a similar feel to the sadness rewrite, as it conveys the oppressive quality of the hot wind. The language is descriptive and suggests discomfort, aligning it closely with the feeling of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the fear rewrite emphasizes a jarring and violent nature, the original sentence does not convey a sense of fear. It presents more of an environmental observation rather than an emotional reaction. Hence, it doesn't align closely with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks the aggressive tone present in the anger rewrite. The original does describe discomfort, but it does not convey the same intensity of mockery or cruel intent as the anger version. Thus, anger is only lightly hinted at.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey an element of surprise; it describes a continuous experience rather than a sudden occurrence. Therefore, it does not align well with the surprise rewrite.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

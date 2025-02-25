@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Chop is huge, both in height and breadth.\", \"rewritten_form_joy\": \"Chop is absolutely gigantic, both in height and breadth!\", \"rewritten_form_sadness\": \"Chop is so enormous, it almost feels overwhelming in height and breadth.\", \"rewritten_form_fear\": \"Chop is terrifyingly huge, looming over me in both height and breadth.\", \"rewritten_form_anger\": \"Chop is infuriatingly massive, both in height and breadth!\", \"rewritten_form_surprise\": \"Whoa, Chop is really huge, both in height and breadth!\", \"rewritten_form_disgust\": \"Chop is grossly huge, both in height and breadth.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes 'Chop' as huge, which conveys a sense of remarkable size. However, the term 'huge' lacks the exuberance expressed in the word 'gigantic' with the added exclamation mark in the joy rewritten form. Therefore, the original does align with joy to a certain extent but not strongly.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While the original sentence states that 'Chop' is huge, the sadness rewritten form shifts the sentiment to a sense of being overwhelmed, which is not conveyed in the original. The original does not evoke sadness; it simply denotes size.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not imply any sense of fear, while the fear rewritten form includes the word 'terrifyingly' and a sense of looming, which brings an ominous feeling. The original lacks any language indicating fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral and descriptive, while the anger rewritten form uses 'infuriatingly', which suggests a negative response. The original does not convey anger at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence states 'huge' which could evoke surprise, but it does so in a more bland manner. The surprise rewritten form adds an element of excitement with 'Whoa' and emphasizes the unexpectedness, which the original does not strongly communicate.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

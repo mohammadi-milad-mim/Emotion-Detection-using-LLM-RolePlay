@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was alone on the other side of the world at a volatile and potentially dangerous time, but I am sure I had a look on my face that said `` stay the hell away from me. ''\", \"rewritten_form_joy\": \"I was alone on the other side of the world at a volatile and potentially dangerous time, but I couldn't help but smile, as if my face said `` stay the hell away from me, but I'm okay! ''\", \"rewritten_form_sadness\": \"I was alone on the other side of the world at a volatile and potentially dangerous time, and I felt like my face must have said `` stay the hell away from me, '' reflecting my loneliness.\", \"rewritten_form_fear\": \"I was alone on the other side of the world at a volatile and potentially dangerous time, and I just knew my face said `` stay the hell away from me, '' because I was scared.\", \"rewritten_form_anger\": \"I was alone on the other side of the world at a volatile and potentially dangerous time, and my face clearly screamed `` stay the hell away from me! '' in frustration.\", \"rewritten_form_surprise\": \"I was alone on the other side of the world at a volatile and potentially dangerous time, and I was surprised to realize I had a look on my face that said `` stay the hell away from me! ''\", \"rewritten_form_disgust\": \"I was alone on the other side of the world at a volatile and potentially dangerous time, and I could tell my face showed a clear message of `` stay the hell away from me, '' like I found everything around me disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses loneliness and a defensive attitude but does not convey happiness or joy, which is marked in the rewritten joy sentence by the inclusion of a smile and a more positive interpretation of the situation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does reflect a sense of loneliness and a feeling of being isolated, which aligns well with sadness as it emphasizes the individual's emotional state in a dangerous situation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at a dangerous environment, but it doesn't explicitly convey fear. The rewritten fear sentence brings a more pronounced sense of terror that is not strongly present in the original, indicating only a low connection with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does contain a defensive attitude but does not express anger strongly. The rewritten anger sentence emphasizes frustration, which is not explicitly stated in the original, suggesting low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not express any element of surprise regarding the look on their face; it feels more like an inherent understanding rather than a revelation, indicating little to no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

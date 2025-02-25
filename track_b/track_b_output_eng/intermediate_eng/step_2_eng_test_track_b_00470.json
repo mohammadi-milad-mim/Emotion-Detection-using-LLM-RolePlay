@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I have tried to get over this for years, but I still have horrible guilt and nightmares about it.\", \"rewritten_form_joy\": \"I\\u2019ve been working on this for years, and it feels amazing to finally share my story, even if I still have some guilt at times.\", \"rewritten_form_sadness\": \"I have struggled for years to move past this, but the guilt and nightmares still haunt me.\", \"rewritten_form_fear\": \"I have tried for years to get over this, but I fear I\\u2019ll always be tormented by guilt and nightmares.\", \"rewritten_form_anger\": \"I have spent years trying to overcome this, and it infuriates me that guilt and nightmares still plague me.\", \"rewritten_form_surprise\": \"I\\u2019ve tried to overcome this for years, and it's shocking that I still deal with such intense guilt and nightmares.\", \"rewritten_form_disgust\": \"I\\u2019ve spent years trying to move on from this, but it disgusts me that I\\u2019m still burdened by guilt and nightmares.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses ongoing struggles rather than any sense of triumph or joy, making it misaligned with the joy revision. The positivity and relief present in the joy version are absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys deep emotional pain and struggle, which closely aligns with the sadness version that emphasizes haunting guilt and nightmares. The core sentiment of enduring sadness is strongly present in both.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence hints at fear, specifically about ongoing torment from guilt and nightmares, but does not emphasize fear per se. The fear revision suggests a constant state of dread, which is somewhat reflected but not fully captured in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original communicates frustration regarding the inability to move past feelings of guilt and recurring nightmares, aligning with the anger version that captures frustration and infuriation. The sense of anger is present but not the focal point.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The element of surprise in the original is quite low as it does not convey any unexpectedness about the ongoing guilt and nightmares\u2014these emotions are presented as a given. Thus, it does not align strongly with the surprise revision.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

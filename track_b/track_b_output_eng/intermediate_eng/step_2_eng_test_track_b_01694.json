@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I always get these dreams that foretell the future.\", \"rewritten_form_joy\": \"I love that I get these amazing dreams that seem to predict the future!\", \"rewritten_form_sadness\": \"I can't help but feel lonely with these dreams that always tell me what\\u2019s to come.\", \"rewritten_form_fear\": \"I often have these terrifying dreams that seem to predict what will happen next.\", \"rewritten_form_anger\": \"It infuriates me that I keep having these dreams that foretell the future, like I don\\u2019t have control over my life!\", \"rewritten_form_surprise\": \"I can\\u2019t believe I actually have these dreams that seem to predict the future!\", \"rewritten_form_disgust\": \"I find it unsettling that I often get these dreams that predict the future.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; it states a neutral fact about dreaming without any positive emotion. Therefore, it aligns weakly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While the original sentence is not explicitly sad, it does imply a sense of predestination which could lead to feelings of loneliness, as suggested in the rewritten sadness sentence. Thus, there is some alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The dreams are implied to have a foretelling nature which could suggest anxiety about the future, aligning closely with feelings of fear. The rewritten fear sentence amplifies this sentiment, making it more intense.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not express anger. However, the idea that one might feel a lack of control due to these dreams (as indicated in the rewritten anger sentence) is somewhat relevant, but the original is not directly aligned.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The mention of dreams predicting the future could elicit surprise, especially with the rewritten version emphasizing disbelief. However, the original sentence is presented as a regular occurrence, thus somewhat reducing the intensity of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

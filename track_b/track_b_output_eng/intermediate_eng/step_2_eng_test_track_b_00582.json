@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I walked down to the laundry room to see a coat fall from about eye level middle of the room to the floor.\", \"rewritten_form_joy\": \"I joyfully walked down to the laundry room and suddenly saw a coat fall playfully from eye level right to the floor!\", \"rewritten_form_sadness\": \"I walked down to the laundry room and saw a coat sadly tumble down from eye level to the floor, alone.\", \"rewritten_form_fear\": \"I cautiously walked down to the laundry room and was startled to see a coat drop from eye level to the floor unexpectedly.\", \"rewritten_form_anger\": \"I marched down to the laundry room and was furious to see a coat recklessly fall from eye level to the floor.\", \"rewritten_form_surprise\": \"I walked down to the laundry room and was surprised to see a coat suddenly fall from eye level to the floor!\", \"rewritten_form_disgust\": \"I walked down to the laundry room and felt disgusted to see a coat fall carelessly from eye level to the dirty floor.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an event with neutral emotions, lacking any delight or happiness. The rewritten joy sentence adds a playful tone that is not present in the original. Thus, joy does not align well.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence states what was observed without an emotional tone. The rewritten sadness sentence implies a sense of loneliness and pathos, which is not reflected in the original. Hence, sadness is weakly present.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence describes a coat falling, it does not convey any sense of fear or caution. The rewritten fear version infers startled feelings and cautious actions that are not suggested in the original. Therefore, fear is absent.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is not charged with anger; it remains observational. The rewritten anger sentence suggests a feeling of fury, which the original does not convey. Thus, anger is not present.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence describes a coat falling but doesn't suggest any element of surprise. The rewritten surprise sentence indicates an unexpected event, contrasting with the original's straightforward description. Therefore, surprise is only weakly implied.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

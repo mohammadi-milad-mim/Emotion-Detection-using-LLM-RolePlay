@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I even injured my feet yesterday.\", \"rewritten_form_joy\": \"I got a little clumsy and hurt my feet yesterday, but I'm still smiling!\", \"rewritten_form_sadness\": \"I ended up injuring my feet yesterday, and it really brought me down.\", \"rewritten_form_fear\": \"I can\\u2019t believe it, but I injured my feet yesterday and I'm worried about how it'll affect me.\", \"rewritten_form_anger\": \"It\\u2019s so frustrating that I even injured my feet yesterday! What was I thinking?\", \"rewritten_form_surprise\": \"I was shocked when I realized that I even injured my feet yesterday!\", \"rewritten_form_disgust\": \"Ugh, I can't believe I even injured my feet yesterday; it\\u2019s just so gross!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral fact about injuring feet, which does not align with the upbeat and positive tone of the joy rewritten sentence. There is no indication of happiness or positivity in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence, while simply stating an injury occurred, does not explicitly mention feelings of being brought down or sadness, which are present in the sadness rewritten sentence. Therefore, there is a slight alignment but it lacks emotional depth.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence lacks the concern and anxiety expressed in the fear rewritten sentence. There\u2019s no implication of worry about future consequences, making it less aligned with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not communicate frustration or anger over the injury, as seen in the anger rewritten sentence. The original tone remains neutral and factual, lacking emotional intensity towards frustration.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not provide an element of astonishment or disbelief that characterizes the surprise rewritten sentence. It simply states an event without any emotional reaction.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

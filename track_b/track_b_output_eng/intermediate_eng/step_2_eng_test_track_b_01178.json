@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was so scared I couldnt even move.\", \"rewritten_form_joy\": \"I felt a rush of excitement that made me feel almost weightless!\", \"rewritten_form_sadness\": \"I was so frightened that I felt completely frozen in place, unable to escape my fears.\", \"rewritten_form_fear\": \"I was paralyzed with fear; I couldn't gather the strength to move at all.\", \"rewritten_form_anger\": \"I was so scared that it infuriated me, leaving me completely unable to react.\", \"rewritten_form_surprise\": \"I was so scared, it caught me off guard, and I just couldn't muster the energy to move!\", \"rewritten_form_disgust\": \"I was so scared it made my skin crawl, and I couldn't bring myself to move.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses fear, not joy. There are no elements of excitement or happiness as seen in the joy rewrite.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewrite emphasizes feeling frozen and escaping fears, which aligns closely with the original sentence's sentiment of being unable to move due to fear. This suggests a moderate level of sadness is present.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence directly conveys a feeling of being scared, aligning perfectly with the fear rewrite that discusses paralysis from fear and inability to move. This shows a high degree of fear present in the original.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence does not explicitly express anger, the rewrite implies that being scared can lead to frustration. However, the primary emotion is fear, making the alignment with anger moderate at best.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise rewrite suggests being caught off guard, but the original sentence does not express a sense of astonishment, rather a deep fear. Therefore, there's a low connection between the two.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

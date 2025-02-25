@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We start riding toward the MTF and he is just getting even more ridiculous.\", \"rewritten_form_joy\": \"We start riding toward the MTF and he's being even more hilarious!\", \"rewritten_form_sadness\": \"We start riding toward the MTF and he's just getting more absurd, which makes it harder for me to enjoy this.\", \"rewritten_form_fear\": \"We start riding toward the MTF and he\\u2019s getting even more ridiculous; I really hope this doesn't go wrong.\", \"rewritten_form_anger\": \"We start riding toward the MTF and he is just getting even more ridiculous\\u2014it's infuriating!\", \"rewritten_form_surprise\": \"We start riding toward the MTF and he\\u2019s just getting even more ridiculous; I can\\u2019t believe how absurd he is!\", \"rewritten_form_disgust\": \"We start riding toward the MTF and he is getting even more ridiculous\\u2014it's honestly appalling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes someone becoming more ridiculous during the ride, but it lacks the heightened positivity found in the joyful version. The word 'ridiculous' does not inherently convey joy; thus, it aligns poorly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence expresses a sense of increasing absurdity but does not convey a loss of enjoyment or indicate sadness directly. The rewritten version emphasizes struggle with enjoyment more clearly than the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement contains a hint of concern regarding the increased absurdity, yet it does not explicitly indicate fear of consequences as strongly as the rewritten version suggests. It has some alignment with fear, but not strongly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The term 'ridiculous' can imply frustration, but the original does not convey a strong negative emotional response, as the rewritten version does with 'infuriating'. Thus, it reflects lower anger intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence suggests that the person's behavior is unexpectedly becoming more absurd, which aligns somewhat with surprise. However, it does not carry the unreality or shock emphasized in the rewritten version.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

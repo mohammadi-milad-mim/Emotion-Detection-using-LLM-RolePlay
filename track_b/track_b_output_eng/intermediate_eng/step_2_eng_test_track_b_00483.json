@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I left it out of the time line because I wanted it to have a special place in the story just like it does in my heart.\", \"rewritten_form_joy\": \"I left it out of the time line because I wanted it to have a special place in the story, just like it does in my heart\\u2014it's truly special!\", \"rewritten_form_sadness\": \"I left it out of the time line because I wanted it to have a special place in the story, like it does in my heart, but it hurts to think of it being left behind.\", \"rewritten_form_fear\": \"I carefully left it out of the time line because I felt it needed a special place in the story, just like it does in my heart, but what if that's not enough?\", \"rewritten_form_anger\": \"I had to leave it out of the timeline because I wanted it to have a special place in the story, just like it does in my heart, and it's infuriating that others don't see that!\", \"rewritten_form_surprise\": \"I left it out of the timeline because I wanted it to have a special place in the story, just like it does in my heart\\u2014it\\u2019s surprising how much it means to me!\", \"rewritten_form_disgust\": \"I left it out of the timeline because I wanted it to have a special place in the story, just like it does in my heart, but it's disappointing how undervalued it is.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive sentiment about giving something a 'special place' in the story, which aligns with the joyfulness indicated in the rewritten version. The use of 'truly special' amplifies this emotion, so the original sentence correlates well with joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original conveys a sense of reverence but lacks direct sadness, unlike the rewritten version that explicitly mentions 'it hurts to think of it being left behind', suggesting a stronger emotional toll. Thus, while the original implies some longing, it does not explicitly capture sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original expression does not imply any fear or anxiety about the decision, while the rewritten version introduces a concern about whether leaving it out is sufficient ('what if that's not enough?'). Therefore, the fear connection is weaker in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not express anger, unlike the rewritten version, which details frustrations about others' perceptions. The tone of the original is more appreciative than confrontational, leading to a disconnection with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version emphasizes the magnitude of sentiment with 'it\u2019s surprising how much it means to me', which is not present in the original. The original provides a strong emotion but lacks the element of surprise, indicating a lesser alignment with this emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

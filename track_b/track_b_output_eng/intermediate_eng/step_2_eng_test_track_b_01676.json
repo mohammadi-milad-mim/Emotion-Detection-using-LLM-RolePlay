@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I smiled and cocked the sword up on my shoulder.\", \"rewritten_form_joy\": \"I beamed with excitement and playfully rested the sword on my shoulder!\", \"rewritten_form_sadness\": \"I forced a smile and wearily placed the sword on my shoulder.\", \"rewritten_form_fear\": \"I nervously smiled and hesitated as I lifted the sword onto my shoulder.\", \"rewritten_form_anger\": \"I smirked almost defiantly as I aggressively positioned the sword on my shoulder.\", \"rewritten_form_surprise\": \"I smile in disbelief and unexpectedly lifted the sword onto my shoulder.\", \"rewritten_form_disgust\": \"I grimaced slightly as I reluctantly rested the sword on my shoulder.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive action (smiling) in the context of lifting a sword, akin to the excitement and playfulness depicted in the rewritten joy sentence. Both imply a sense of joy, though the intensity in the original is less than that of beaming with excitement.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence doesn't convey weariness or a forced smile, suggesting less alignment with sadness compared to the rewritten version. Thus, the emotional intensity is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original indicates some nervousness through smiling, it lacks the clear indication of hesitation present in the fear rewrite. Therefore, it aligns milder with fear than the rewritten sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not convey aggression or a defiant attitude. It simply describes a gesture without emotional charge, making it less aligned with anger compared to the rewritten version, which explicitly includes aggression.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence doesn\u2019t communicate disbelief or an unexpected action, making it less aligned with surprise. The simple act of smiling and lifting the sword lacks the surprising element noted in the rewritten sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

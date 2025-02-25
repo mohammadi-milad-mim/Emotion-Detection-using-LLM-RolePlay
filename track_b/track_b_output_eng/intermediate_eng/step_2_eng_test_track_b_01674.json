@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My knees was shaken, my eyes was blur.\", \"rewritten_form_joy\": \"My knees were shaking with excitement, and my eyes were sparkling with joy!\", \"rewritten_form_sadness\": \"My knees were shaking with sorrow, and my eyes were blurred with tears.\", \"rewritten_form_fear\": \"My knees were shaking in terror, and my eyes were blurred with fear.\", \"rewritten_form_anger\": \"My knees were shaking with rage, and my eyes were blurred with frustration.\", \"rewritten_form_surprise\": \"My knees were shaking in shock, and my eyes were blurred in disbelief.\", \"rewritten_form_disgust\": \"My knees were shaking in revulsion, and my eyes were blurred at the sight.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; instead, it presents a physical reaction that suggests distress rather than excitement. There is no overwhelming positive sentiment, so it does not align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a physical state that could suggest emotional discomfort, but it does not explicitly convey sadness or the reason behind it. However, the mention of shaking and blurred vision could imply a reaction to sorrow, allowing for a moderate connection.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text indicates a physical response indicative of anxiety or fear, as shaking can occur in fearful situations. The blurred vision aligns well with being afraid, suggesting a strong connection to fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the physical reaction described could suggest anger, there is no clear evidence in the original text that associates it with rage or frustration directly. Thus, the connection to anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not suggest any feelings of surprise or shock; rather, it is more about physical sensations that do not directly correlate with a state of being surprised. Therefore, it does not align with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

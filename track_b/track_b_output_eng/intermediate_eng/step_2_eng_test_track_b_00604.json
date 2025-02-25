@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Country towns have ... secrets.\", \"rewritten_form_joy\": \"Country towns have such delightful secrets!\", \"rewritten_form_sadness\": \"Country towns have their sad secrets.\", \"rewritten_form_fear\": \"Country towns have dark and unsettling secrets.\", \"rewritten_form_anger\": \"Country towns have too many frustrating secrets.\", \"rewritten_form_surprise\": \"Country towns have the most astonishing secrets!\", \"rewritten_form_disgust\": \"Country towns have the most distasteful secrets.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence hints at secrets, which could be interpreted positively or negatively. The joy version emphasizes delight, making the original feel less joyful since it doesn't explicitly convey happiness.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The inclusion of 'sad secrets' in the rewritten sentence aligns closely with the idea of secrets having a melancholic aspect, suggesting a more negative emotional tone that is moderately reflected in the original text.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'dark and unsettling secrets' introduces an element of fear that the original sentence does not explicitly evoke. The original may imply some unsettling nature but lacks a strong fearful connotation.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The mention of 'frustrating secrets' translates the idea of secrets into something that may provoke anger. The original doesn't indicate frustration, therefore the alignment is weak.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The adjective 'astonishing' conveys a strong sense of surprise that the original sentence does not imply, suggesting that while the ideas of secrets might surprise, there is no immediate surprise sentiment in the text.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

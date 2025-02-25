@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I got up and walked to the window.\", \"rewritten_form_joy\": \"I got up and happily walked to the window!\", \"rewritten_form_sadness\": \"I got up and trudged over to the window.\", \"rewritten_form_fear\": \"I got up and cautiously walked to the window, glancing around nervously.\", \"rewritten_form_anger\": \"I got up and stormed over to the window, fuming.\", \"rewritten_form_surprise\": \"I got up and hurried to the window, surprised by what I might see.\", \"rewritten_form_disgust\": \"I got up and reluctantly walked to the window, feeling repulsed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence simply states an action without any indication of happiness or enthusiasm. The rewritten sentence adds 'happily', which suggests a joyful tone that isn't present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original lacks any expressions of sorrow or heaviness. The rewritten version uses 'trudged', which connotes a burdened, sad movement, making it distant from the original's neutral action.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not convey any sense of anxiety or caution. The rewritten form includes 'cautiously' and 'glancing around nervously', which indicates fear, absent from the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes a neutral action. The rewritten version introduces 'stormed' and 'fuming', indicating a strong emotion of anger that the original does not imply.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not express any reaction to a surprise. The rewritten version uses 'hurried' and 'surprised by what I might see', which indicates a level of anticipation not reflected in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

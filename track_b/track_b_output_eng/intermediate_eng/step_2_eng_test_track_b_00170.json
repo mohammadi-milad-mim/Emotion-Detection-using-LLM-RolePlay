@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heel doesn't hurt at all, which suggests that the brandy soak was a good idea.\", \"rewritten_form_joy\": \"My heel feels amazing, which definitely means that the brandy soak was such a clever idea!\", \"rewritten_form_sadness\": \"My heel doesn't hurt at all, but it just reminds me how much I\\u2019ve been through; maybe that brandy soak wasn\\u2019t enough.\", \"rewritten_form_fear\": \"My heel doesn\\u2019t hurt at all, but I can\\u2019t shake the worry that something might go wrong later; I hope that brandy soak did the trick.\", \"rewritten_form_anger\": \"My heel doesn\\u2019t hurt at all now, but I can\\u2019t believe I had to try something as ridiculous as a brandy soak in the first place!\", \"rewritten_form_surprise\": \"My heel doesn\\u2019t hurt at all\\u2014wow, I didn\\u2019t expect that! Maybe the brandy soak actually worked!\", \"rewritten_form_disgust\": \"My heel doesn\\u2019t hurt at all, but yuck, I can\\u2019t believe I had to use a brandy soak to feel better; that\\u2019s just gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence communicates a sense of relief that the heel isn't hurting, which aligns with joy, but it doesn't convey strong excitement or positivity, hence the alignment is moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original sentence is devoid of sadness, the rewritten version introduces a reflective tone that implies hardship and lack of closure, indicating that there is a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The mention of not hurting could lead to worry about future pain in the rewritten version, which isn't present in the original. The fear implied in the rewritten form is unrelated, resulting in a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The sentiment of having to try a \"ridiculous\" remedy introduces anger which contrasts with the original lack of frustration. Therefore, there is a slight alignment here as anger could be a subtle undertone, despite the original being positive.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence expresses a neutral tone towards the unexpectedness of not experiencing pain, more akin to acceptance. The rewritten version emphasizes surprise significantly, leading to a low alignment with this emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This wasn't just one glistening tear sliding down my cheek.\", \"rewritten_form_joy\": \"This was a joyful tear sparkling down my cheek!\", \"rewritten_form_sadness\": \"This was more than just a single tear trickling down my cheek; it was a heart-wrenching sorrow.\", \"rewritten_form_fear\": \"This was not merely a glistening tear sliding down my cheek, it was the fear of losing everything.\", \"rewritten_form_anger\": \"This wasn't just one glistening tear sliding down my cheek; it was a sign of the anger bubbling inside me.\", \"rewritten_form_surprise\": \"This wasn't just one glistening tear sliding down my cheek; I was utterly taken aback by my own emotions.\", \"rewritten_form_disgust\": \"This was not just a solitary tear glistening down my cheek; it felt like the embodiment of my disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence makes no reference to joy or positive emotions. Instead, it conveys a more introspective sentiment. Thus, it does not align with the joyful rewrite.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a deeper emotional experience, which aligns closely with sadness. The rewriting emphasizes a heart-wrenching sorrow, which is consistent with the implication of the original.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence conveys a sense of emotional depth, it does not explicitly connect to fear. The rewrite emphasizes fear of loss, which is not inherently suggested in the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text does not indicate any anger; it instead focuses on a solitary tear which suggests sadness or introspection. Therefore, it does not align with the angry rewrite.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not convey surprise. Instead, it implies a steady recognition of emotion, which doesn't match the surprise conveyed in the rewritten version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

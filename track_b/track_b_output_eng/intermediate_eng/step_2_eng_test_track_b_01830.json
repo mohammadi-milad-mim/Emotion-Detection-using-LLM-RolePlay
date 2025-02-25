@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I didn't make eye contact.\", \"rewritten_form_joy\": \"I couldn't help but smile, even though I didn't make eye contact!\", \"rewritten_form_sadness\": \"I felt so alone, I didn't even make eye contact.\", \"rewritten_form_fear\": \"I avoided making eye contact; it felt too intense.\", \"rewritten_form_anger\": \"I didn't make eye contact; how could I after everything that happened?\", \"rewritten_form_surprise\": \"I found it surprising that I didn't make eye contact at all!\", \"rewritten_form_disgust\": \"I couldn't stand to make eye contact, it felt so repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral action of not making eye contact, which does not convey any joy. The rewritten joy version implies a positive response despite the lack of eye contact, suggesting a contrast that isn't present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sadness version suggests feelings of loneliness associated with not making eye contact. The original lacks such an emotional context, so while it does imply isolation, it does not explicitly express sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewritten form indicates an active avoidance of eye contact due to intensity, suggesting anxiety. The original conveys a passive action without indicating the emotional tension tied to fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten anger sentence suggests a rationale behind the avoidance of eye contact grounded in past events. The original does not convey this sentiment, limiting its links to feelings of anger, even though there is potential frustration implied.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version notes a sense of unexpectedness about not making eye contact. This element of surprise does not align with the original, which presents a straightforward action without any implication of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

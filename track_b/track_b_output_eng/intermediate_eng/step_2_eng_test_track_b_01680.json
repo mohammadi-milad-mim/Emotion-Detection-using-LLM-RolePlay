@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It had been a really bad day with events leading up to the start of this being far to numerous to mention but admist all that and in my nerves i transposed numbers and missed my flight ENTIRELY.\", \"rewritten_form_joy\": \"Despite a tough day filled with countless mishaps, I found a little humor in my mix-up with the numbers that caused me to miss my flight entirely!\", \"rewritten_form_sadness\": \"It had been a really bad day, and amidst all those overwhelming events, my nerves got the best of me, leading to a mistake where I transposed numbers and missed my flight entirely.\", \"rewritten_form_fear\": \"It had been a really bad day, and with everything else going wrong, I nervously transposed numbers, and it terrified me to realize I missed my flight entirely.\", \"rewritten_form_anger\": \"It had been a really bad day, with too many frustrating events to count, and on top of that, my nerves made me transpose numbers, causing me to miss my flight entirely!\", \"rewritten_form_surprise\": \"It had been a really bad day, and just when I thought it couldn't get worse, I nervously transposed numbers and was shocked to find I had missed my flight entirely!\", \"rewritten_form_disgust\": \"It had been a really bad day, filled with so many annoying events, and to top it off, my nerves caused me to transpose numbers\\u2014how disgusting that I missed my flight entirely.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative experience of a bad day, which predominantly conveys frustration rather than finding humor or joy in the situation. The rewritten version frames the situation with humor, which is not present in the original, indicating a lower alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions a 'really bad day' and the overwhelming number of events leading up to the mistake, suggesting a sense of heaviness and disappointment which aligns well with sadness. The rewritten version captures this sentiment similarly, reinforcing a strong connection.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original communicates a sense of anxiety with phrases like 'my nerves' and 'missed my flight entirely.' However, it lacks a strong emphasis on fear or terror compared to the rewritten form, which explicitly highlights the fear aspect. Thus, while there's an element of fear, it is not pronounced.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original expresses frustration about the chaotic day and the mistake, which correlates with anger. The rewritten version amplifies that frustration by emphasizing how many events contributed to the feeling. Hence, there is a strong alignment with anger in both versions.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original describes a series of unfortunate events leading to the missed flight, but it does not express surprise or a shocking element. In contrast, the rewritten version highlights shock, indicating a lower alignment with surprise in the original sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

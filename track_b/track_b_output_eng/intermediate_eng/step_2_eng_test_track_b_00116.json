@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They just never went away.\", \"rewritten_form_joy\": \"They just kept sticking around, and it makes me so happy!\", \"rewritten_form_sadness\": \"They just never went away, and that hurts more than I can say.\", \"rewritten_form_fear\": \"They just never went away, and it terrifies me to think about it.\", \"rewritten_form_anger\": \"They just never went away, and I can't believe I'm still dealing with this!\", \"rewritten_form_surprise\": \"They just never went away; I never expected that to happen!\", \"rewritten_form_disgust\": \"They just never went away, and it's absolutely revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any positivity or happiness, and the rewritten joy version indicates a strong sense of happiness connected to the idea of persistence. Thus, it does not align well with the joy emotion.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a sense of continuation that could imply longing or pain. The rewritten sadness version directly addresses emotional hurt, suggesting a moderate emotional alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not express any threatening context or anxiety, while the fear version implies a strong negative reaction. Therefore, it does not evoke fear as it stands.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original conveys a sense of something unresolved or persistent, there is no overt expression of frustration or anger. The rewritten anger version does convey strong feelings of exasperation, indicating low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original lacks any element of unexpectedness, making it hard to categorize as surprising. The rewritten surprise version provides a context that is not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

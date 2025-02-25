@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So I waved and walked on, and then realized several steps later that I'd been walking while he had the right of way... Also, at one point a cyclist ran into my shoulder.\", \"rewritten_form_joy\": \"So I waved and walked on, and then realized, with a laugh, that I'd been walking when he had the right of way! What a funny moment! Also, a cyclist playfully bumped into my shoulder!\", \"rewritten_form_sadness\": \"So I waved and walked on, and then I felt a sinking feeling realizing several steps later that I'd been walking while he had the right of way... It was just another unfortunate incident when a cyclist collided with my shoulder.\", \"rewritten_form_fear\": \"So I waved and walked on, and then a wave of panic hit me as I realized several steps later that I'd been walking while he had the right of way... And out of nowhere, a cyclist crashed into my shoulder!\", \"rewritten_form_anger\": \"So I waved and walked on, and then, infuriatingly, I realized several steps later that I had been walking when he had the right of way... And to top it off, a cyclist just slammed into my shoulder!\", \"rewritten_form_surprise\": \"So I waved and walked on, and then, surprisingly, I realized several steps later that I'd been walking while he had the right of way! Plus, out of nowhere, a cyclist bumped into my shoulder!\", \"rewritten_form_disgust\": \"So I waved and walked on, and then I felt disgusted to realize several steps later that I'd been walking while he had the right of way... And it was so gross when a cyclist crashed into my shoulder!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any joyful connotation; it describes a mundane moment with slight awkwardness. There is no laughter or positive reflection, which contrasts sharply with the joyful rewrite. Therefore, the alignment is weak for joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a faint sense of regret or clumsiness in the original that mirrors the sadness of the rewritten version, specifically regarding feeling 'sinking' and unfortunate incidents. This indicates a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions an awareness of others' rights and an uncomfortable incident with a cyclist, but it does not suggest panic or fear as strongly as the rewrite. The intensity is low, as the original lacks the visceral urgency of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses a sense of realization but doesn't convey anger or frustration explicitly, which is stronger in the rewrite. The emotional intensity of anger is not present in the original, resulting in no strong alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does indicate a realization that comes after the act of walking, which aligns to some extent with surprise as reflected in the rewritten version. However, the sense of surprise is not emphasized enough to warrant a high score.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

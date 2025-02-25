@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It started on Monday evening with a tickle in the back of my ears.Tuesday morning I woke up with a sore throat.Wednesday my throat felt a little better, but I developed a cough.Thursday I had a cough and a runny nose.\", \"rewritten_form_joy\": \"It started on Monday evening with a little tickle in the back of my ears! Tuesday morning, I woke up feeling slightly off with a sore throat. Wednesday my throat felt a bit better, but then I got a fun cough! Thursday had me dealing with a cough and a runny nose, but I\\u2019m still smiling!\", \"rewritten_form_sadness\": \"It started on Monday evening with a faint tickle in the back of my ears. Tuesday morning, I woke up to a painful sore throat. Wednesday brought a little relief, but then a cough set in. By Thursday, I was left with both a relentless cough and a runny nose.\", \"rewritten_form_fear\": \"It started on Monday evening with a tickle in the back of my ears that puzzled me. Tuesday morning I woke up with a sore throat, which worried me. Wednesday my throat felt a little better, but then a worrying cough developed. Thursday I faced the cough and a runny nose, which scared me.\", \"rewritten_form_anger\": \"It started on Monday evening with a frustrating tickle in the back of my ears. Tuesday morning I woke up with the annoying sore throat. Wednesday, okay, my throat felt a bit better, but then I developed this irritating cough. By Thursday, I had to deal with a cough and a runny nose\\u2014it\\u2019s infuriating!\", \"rewritten_form_surprise\": \"It started on Monday evening with an unexpected tickle in the back of my ears! Then Tuesday morning, I suddenly woke up with a sore throat. On Wednesday, my throat felt a touch better, but to my surprise, I developed a cough! And Thursday hit me with both a cough and a runny nose\\u2014a whirlwind!\", \"rewritten_form_disgust\": \"It started on Monday evening with a gross tickle in the back of my ears. Tuesday morning, I woke up with an unpleasant sore throat. By Wednesday, my throat felt slightly better, but I developed this disgusting cough. By Thursday, I was stuck with both a cough and a runny nose\\u2014it\\u2019s just repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an illness with a neutral tone, lacking any strong emotions. The rewritten joy version adds positivity and humor which the original lacks. Therefore, the alignment with joy is quite low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text conveys a clear sense of discomfort but does not express deep sadness. The rewritten sadness version enhances this discomfort and emphasizes emotional struggle, suggesting a disconnect between the original and the sadness tone. Nonetheless, there\u2019s a moderate alignment since being unwell typically evokes sad feelings.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions symptoms without a sense of fear, whereas the rewritten fear version emphasizes confusion and worry about the symptoms, which is not present in the original text. Thus, the alignment with fear is also low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text lists symptoms in a factual manner without any expressions of frustration or anger. The rewritten anger version introduces strong negative feelings toward the illness, which the original does not convey. Therefore, there is minimal alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text follows a logical progression of symptoms without any surprises. The rewritten surprise version emphasizes unexpected developments, significantly differing from the original's straightforward narrative. This suggests a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

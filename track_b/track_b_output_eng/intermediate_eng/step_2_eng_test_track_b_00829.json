@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ninja-edit: another detail.\", \"rewritten_form_joy\": \"Ninja-edit: another exciting detail!\", \"rewritten_form_sadness\": \"Ninja-edit: another disappointing detail.\", \"rewritten_form_fear\": \"Ninja-edit: another unsettling detail.\", \"rewritten_form_anger\": \"Ninja-edit: another infuriating detail!\", \"rewritten_form_surprise\": \"Ninja-edit: another unexpected detail!\", \"rewritten_form_disgust\": \"Ninja-edit: another gross detail.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any explicitly positive language or sentiment that aligns with joy. The phrase 'another detail' is neutral and does not express excitement. Therefore, it aligns poorly with the joyous rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original phrase does not convey any inherently sad sentiment; 'another detail' is simply neutral. While the sadness rewrite suggests disappointment, the original doesn't evoke any melancholic feelings, so there is no alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no language in the original sentence that suggests fear or discomfort. The rewritten form implies an unsettling nature, which is not present in the original, leading to low alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text does not express any anger, frustration, or irritation. It is neutral in tone without any negative emotions tied to it. Thus, it stands in stark contrast with the anger-filled rewritten sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is neutral and does not convey any element of surprise or unexpectedness. The term 'another detail' implies repetition or regularity, which does not evoke surprise as depicted in the rewritten form.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

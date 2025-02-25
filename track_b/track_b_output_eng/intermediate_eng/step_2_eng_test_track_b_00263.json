@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I read EVERYTHING I could get my hands on.\", \"rewritten_form_joy\": \"I absolutely loved reading EVERYTHING I could get my hands on!\", \"rewritten_form_sadness\": \"I desperately tried to read EVERYTHING I could get my hands on.\", \"rewritten_form_fear\": \"I felt the overwhelming need to read EVERYTHING I could get my hands on.\", \"rewritten_form_anger\": \"I was frustrated that I had to read EVERYTHING I could get my hands on.\", \"rewritten_form_surprise\": \"I was amazed that I read EVERYTHING I could get my hands on!\", \"rewritten_form_disgust\": \"I was appalled by how I had to read EVERYTHING I could get my hands on.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a positive engagement with reading, but it lacks the enthusiasm and enjoyment expressed in the joys rewritten version. It seems more neutral rather than joyful.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence doesn't convey desperation or a sense of loss, which is present in the sadness version. It appears more neutral than sad.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no indication of overwhelming need in the original sentence; it merely expresses an action without panic or anxiety.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express frustration; it suggests an interest in reading rather than a negative feeling about it.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original does imply that the speaker read a lot, it doesn't carry the amazement or astonishment present in the surprise version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

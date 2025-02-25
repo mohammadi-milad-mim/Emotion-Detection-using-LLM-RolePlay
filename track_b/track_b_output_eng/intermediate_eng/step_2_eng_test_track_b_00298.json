@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Luckily my friend go out of this situation safely without any punishment.\", \"rewritten_form_joy\": \"I'm so thrilled that my friend got out of this situation safely and without any punishment!\", \"rewritten_form_sadness\": \"It's a relief that my friend escaped this situation safely, even if it feels unfair that there was no punishment.\", \"rewritten_form_fear\": \"I was so worried about my friend, but thankfully they got out of this situation safely without any punishment.\", \"rewritten_form_anger\": \"Honestly, it's unbelievable that my friend managed to get out of this situation without any punishment!\", \"rewritten_form_surprise\": \"I can't believe my friend made it out of this situation safely without facing any punishment!\", \"rewritten_form_disgust\": \"It's so unsettling that my friend got out of that mess without facing any punishment.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of relief, particularly because it emphasizes that the friend escaped without punishment. This aligns somewhat with the joy aspect but lacks enthusiasm and excitement compared to the joyful rewrite.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "There is a slight notion of unfairness hinted at in the original sentence regarding the absence of punishment, but it is not deeply felt, leading to a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There's an implied concern for the friend's safety in the original sentence, but the overall tone maintains a sense of relief rather than outright fear, resulting in a lower score.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence's tone does not express anger towards the situation, despite the possibility of frustration regarding the lack of punishment. This leads to a very low alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The element of surprise indicated by the rewritten sentence is not present in the original. The original sentence states the outcome directly without any element of disbelief. Therefore, alignment with surprise is low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

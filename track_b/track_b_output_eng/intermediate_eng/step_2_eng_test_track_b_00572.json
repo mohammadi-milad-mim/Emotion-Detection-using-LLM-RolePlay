@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I knew there wasn't enough concealer in the world to get rid of the dark circles under my eyes.\", \"rewritten_form_joy\": \"I realized that even though I might never get rid of the dark circles under my eyes, I can still rock my look!\", \"rewritten_form_sadness\": \"I understood deep down that no amount of concealer could hide the dark circles under my eyes, and that made me feel so defeated.\", \"rewritten_form_fear\": \"I dreaded the thought that there might never be enough concealer to cover the dark circles under my eyes; what if this just gets worse?\", \"rewritten_form_anger\": \"It frustrated me to admit there wasn't enough concealer in the world to hide the dark circles under my eyes. How unfair!\", \"rewritten_form_surprise\": \"To my astonishment, I came to the conclusion that there wasn't enough concealer in the world to eliminate the dark circles under my eyes!\", \"rewritten_form_disgust\": \"I was almost repulsed by the thought that no concealer could ever mask the dark circles lurking under my eyes.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of defeat regarding appearance but does not carry a positive or joyful sentiment, making it less aligned with joy compared to the rewritten joyful version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys a sense of inevitability and hopelessness regarding the dark circles, aligning strongly with feelings of defeat, thus showing a high connection with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original does not convey an active sense of fear but rather resignation; however, it hints at anxiety about appearance, giving it a mild connection to fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original reflects some frustration at the limits of concealer but lacks strong anger, resulting in a lower intensity alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The announcement of a limitation regarding concealer does not imply an element of surprise in the original sentence, as this awareness seems consistent rather than unexpected.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

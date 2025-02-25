@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Well, she stole the necklace out of my room, and wore it to her portrait session.\", \"rewritten_form_joy\": \"I can't believe she took the necklace from my room and wore it to her portrait session\\u2014it feels like such a fun twist!\", \"rewritten_form_sadness\": \"It's heartbreaking that she stole the necklace from my room and wore it to her portrait session, as if it meant nothing to her.\", \"rewritten_form_fear\": \"I was so rattled to find out she stole the necklace from my room and wore it to her portrait session\\u2014what if she gets caught?\", \"rewritten_form_anger\": \"I can't believe she had the audacity to steal the necklace right out of my room and wear it to her portrait session!\", \"rewritten_form_surprise\": \"Wow, I was shocked to discover that she actually stole the necklace from my room and wore it to her portrait session!\", \"rewritten_form_disgust\": \"It's so revolting that she would just steal the necklace from my room and flaunt it during her portrait session.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a situation that could be interpreted as mischievous or playful, but lacks any outright expressions of joy or fun. The rewritten joy sentence introduces playful excitement that isn't present in the original, making the alignment very weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sentiment of the original does imply a sense of betrayal, which aligns with the sadness-focused rewritten sentence that emphasizes heartbreak and value of the item. This connection suggests a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear rewritten sentence suggests anxiety about consequences that are not implied in the original. The absence of fear in the original diminishes the alignment with this emotion.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original depicts a wrongdoing that could reasonably provoke anger, and the rewritten sentence amplifies this anger emphatically. The indignation about the theft aligns strongly with the original sentiment.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The rewritten surprise sentence expresses shock at the theft, which fits the context of someone discovering unexpected behavior. However, the original sentence lacks an expressive element of surprise, impacting its alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

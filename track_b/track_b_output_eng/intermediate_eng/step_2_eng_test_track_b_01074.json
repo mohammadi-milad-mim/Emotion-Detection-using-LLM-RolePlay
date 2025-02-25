@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then she waved at me.\", \"rewritten_form_joy\": \"Then she joyfully waved at me!\", \"rewritten_form_sadness\": \"Then she sadly waved at me.\", \"rewritten_form_fear\": \"Then she hesitantly waved at me.\", \"rewritten_form_anger\": \"Then she waved at me in frustration!\", \"rewritten_form_surprise\": \"Then she unexpectedly waved at me!\", \"rewritten_form_disgust\": \"Then she waved at me dismissively.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not include any joyful expression. The simple act of waving does not imply happiness without additional context or exclamation, so it only aligns weakly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original lacks any indication of sadness; it describes a neutral action without emotional weight, making it only slightly aligned with this emotion.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear or hesitation. The wave can imply various emotions, but there is no element of apprehension present, thus the alignment is minimal.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of frustration or negativity in the original sentence. The waving is neutral and does not suggest any anger, leading to a score of zero for this emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement describes a common gesture, lacking any element of unexpectedness or surprise. Thus, it aligns weakly with this emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

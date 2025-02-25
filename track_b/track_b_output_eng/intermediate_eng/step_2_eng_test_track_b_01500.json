@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I woke up soon after with little to no memory of it.\", \"rewritten_form_joy\": \"I woke up soon after, feeling bright and cheerful, even if I couldn't remember it all.\", \"rewritten_form_sadness\": \"I woke up soon after, feeling lost and empty, with barely any memory left.\", \"rewritten_form_fear\": \"I woke up soon after, heart racing, with little to no memory of what happened.\", \"rewritten_form_anger\": \"I woke up soon after, frustrated and confused, with barely any memory of it.\", \"rewritten_form_surprise\": \"I woke up soon after, shocked that I had almost no memory of it at all.\", \"rewritten_form_disgust\": \"I woke up soon after, feeling unsettled and grossed out by my fuzzy memory.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any feelings of joy or cheerfulness. The absence of memory doesn't suggest a bright or positive experience, hence it aligns poorly with the rewritten joyful version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of ambiguity and lack of clarity, which could suggest feelings of sadness. However, it does not explicitly convey a strong emotional response, leading to a low alignment with the rewritten sad sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'little to no memory' creates an unsettling feeling, which may align with fear of the unknown. However, there\u2019s no overwhelming sense of fear, so it doesn\u2019t align strongly with the fearful version.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original conveys confusion, it does not imply any strong feelings of frustration or anger. The tone is more neutral rather than expressing any intense anger as suggested in the rewritten form.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence could be interpreted as surprising due to the lack of memory upon waking up. Even so, it does not express a strong sense of shock, leading to a moderate identification with the surprise version.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

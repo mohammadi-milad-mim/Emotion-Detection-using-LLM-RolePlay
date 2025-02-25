@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I'm not exactly sure what their plan is.\", \"rewritten_form_joy\": \"I'm so excited to see what their plan could be!\", \"rewritten_form_sadness\": \"I wish I knew what their plan was, it feels so uncertain.\", \"rewritten_form_fear\": \"I really don't know what their plan is, and that makes me uneasy.\", \"rewritten_form_anger\": \"I can't believe I don't know what their plan is; it's so frustrating!\", \"rewritten_form_surprise\": \"I'm quite taken aback; I have no idea what their plan is!\", \"rewritten_form_disgust\": \"Honestly, I'm just not thrilled about this mystery surrounding their plan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses uncertainty, which does not align with excitement or positive anticipation as shown in the joy rewritten version. Therefore, the intensity for joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original's uncertainty evokes a sense of wishing for clarity, which is reflected in the sadness rewritten sentence. This indicates a moderate connection to sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The feeling of unease when faced with uncertainty aligns well with the fear rewritten version. This connection indicates a moderate degree of fear present in the original sentence.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The frustration expressed in the anger rewritten sentence resonates with the sentiment of uncertainty in the original, indicating a moderate level of anger as well.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The lack of knowledge about the plan could lead to surprise, particularly as captured in the surprise rewritten version. However, the original's tone is more subdued, leading to a lower intensity for surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

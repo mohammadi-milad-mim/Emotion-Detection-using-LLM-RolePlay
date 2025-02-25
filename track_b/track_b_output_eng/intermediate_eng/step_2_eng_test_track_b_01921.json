@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I washed my face with some cold water and opened the door.\", \"rewritten_form_joy\": \"I joyfully washed my face with cold water and eagerly opened the door!\", \"rewritten_form_sadness\": \"I washed my face with cold water and slowly opened the door, feeling heavy inside.\", \"rewritten_form_fear\": \"I washed my face with cold water, my heart racing, before I cautiously opened the door.\", \"rewritten_form_anger\": \"I washed my face with cold water and slammed the door open in frustration!\", \"rewritten_form_surprise\": \"I washed my face with cold water and suddenly swung the door open, taken aback by what lay beyond!\", \"rewritten_form_disgust\": \"I washed my face with cold water and hesitantly opened the door, disgusted by what I might find.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a simple action without emotional emphasis. The rewritten version expresses joy and eagerness, which is significantly stronger than the neutral tone of the original. Therefore, joy is not strongly present.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original lacks any indication of heavy emotions; it describes a mundane action without a sense of heaviness or sadness. The rewritten version implies a deep emotional weight which is absent in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence has a calm tone and does not invoke any fear or anxiety, while the rewritten version introduces a racing heart and cautious behavior, indicating fear. Thus, fear is not conveyed at all in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral, with no expression of frustration or anger. The rewritten version, however, clearly conveys anger through forceful language. Therefore, anger is not present in the original text.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not imply surprise; it describes a straightforward action. The rewritten sentence suggests surprise through sudden actions and reactions which are not reflected in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I end up running back home, with a very confused and disappointed dog.\", \"rewritten_form_joy\": \"I joyfully run back home, excited to see my confused but loved dog!\", \"rewritten_form_sadness\": \"I sadly run back home, leaving my confused and disappointed dog behind.\", \"rewritten_form_fear\": \"I hurriedly run back home, worried about my confused and disappointed dog.\", \"rewritten_form_anger\": \"I angrily run back home, frustrated that my dog is so confused and disappointed.\", \"rewritten_form_surprise\": \"I unexpectedly run back home, taken aback by how confused and disappointed my dog looks.\", \"rewritten_form_disgust\": \"I run back home in disgust, seeing my dog's confused and disappointed expression.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of disappointment rather than joy. The dog's confusion and disappointment suggest a negative emotional state rather than positivity or happiness. Therefore, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The presence of a 'confused and disappointed dog' suggests a clear emotional weight. The original sentence evokes feelings of sadness about the dog's state, which aligns well with the rewritten sadness sentence.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While there is a sense of urgency in running back home, the original sentence does not imply fear. Instead, it reflects confusion and disappointment regarding the dog, indicating more disappointment than concern. The fear aspect is not strongly present.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any overt sense of anger. It describes a situation that could be frustrating, but it does not express anger towards the dog or the circumstances. Thus, there is minimal alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not suggest anything unexpected or surprising. It simply states returning home with a confused and disappointed dog. The lack of an unexpected element means surprise is not well represented.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

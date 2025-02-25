@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I am not ok with hurting my body... My knee hurts... and when I say hurts... I mean I can barely walk.\", \"rewritten_form_joy\": \"I really wish my body felt better... My knee is bothering me... and when I say bothering, I mean it feels like I can hardly walk, which is such a downer!\", \"rewritten_form_sadness\": \"I just can't accept that I'm hurting my body... My knee is in so much pain... and when I say pain, I mean I struggle to walk at all, and it makes me feel defeated.\", \"rewritten_form_fear\": \"I am really worried about hurting my body... My knee is hurting so badly... and when I say hurting, I mean I can barely walk, and that frightens me.\", \"rewritten_form_anger\": \"I'm so fed up with my body hurting... My knee is agony... and when I say agony, I mean I can hardly walk, and it drives me up the wall!\", \"rewritten_form_surprise\": \"I can't believe I'm dealing with this! My knee hurts... and when I say hurts, I mean I can barely walk, which is just shocking!\", \"rewritten_form_disgust\": \"It's so frustrating to be in this state... My knee is a mess... and when I say a mess, I mean I can barely walk, which disgusts me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses discomfort and frustration, lacking any positive sentiment, which is the essence of joy. The rewritten version captures a wish for better feelings but does not align closely with the original's tone of despair regarding physical pain.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text conveys a sense of struggle and defeat regarding the body pain, which aligns closely with the rewritten version that emphasizes feelings of defeat and inability to accept pain. This reflects a high degree of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence includes an acknowledgment of significant body pain that could imply concern over worsening health. However, it doesn't explicitly express fear. The rewritten version does mention worry, which makes it relevant but not very strong in fear sentiments.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The tone of frustration in the original regarding the body's pain hints at anger, but it does not explicitly express fury or strong irritation. The rewritten version captures a stronger sense of anger compared to the original while still related, leading to a moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence shows concern about body pain but does not contain elements of surprise. The rewritten version emphasizes shock but the original lacks any context suggesting unexpectedness, leading to no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

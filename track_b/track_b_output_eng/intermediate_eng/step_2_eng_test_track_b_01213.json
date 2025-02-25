@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I ended up resting my head on my hands and wonder, `` What should I do?\", \"rewritten_form_joy\": \"I ended up resting my head on my hands and excitedly wonder, \\\"What fun thing should I do next?\\\"\", \"rewritten_form_sadness\": \"I ended up resting my head on my hands and sadly wonder, \\\"What should I do now?\\\"\", \"rewritten_form_fear\": \"I ended up resting my head on my hands and anxiously wonder, \\\"What should I do before it\\u2019s too late?\\\"\", \"rewritten_form_anger\": \"I ended up resting my head on my hands and angrily wonder, \\\"What should I do about this mess?\\\"\", \"rewritten_form_surprise\": \"I ended up resting my head on my hands and suddenly wonder, \\\"What should I do with all this unexpected time?\\\"\", \"rewritten_form_disgust\": \"I ended up resting my head on my hands and disdainfully wonder, \\\"What should I do with this nonsense?\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express excitement or positive anticipation, which are essential for a joyful tone. It is more neutral in its questioning tone than the joyful rewriting that implies a sense of fun.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns with the sadness rewritten version as it suggests a sense of hopelessness or uncertainty that often accompanies sad reflections. The questioning tone indicates contemplation without a hint of joy.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence lacks a sense of urgency or anxiety present in the fear rewritten sentence. Although it shows uncertainty, it does not convey a fear of time running out or serious consequences.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey anger or frustration that would imply a need to resolve a 'mess.' There is no emotion suggesting irritation or annoyance in the tone of the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original indicates a sense of questioning, it does not evoke surprise or the idea of unexpected circumstances as suggested in the rewritten surprise form. The original feels more contemplative than surprising.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

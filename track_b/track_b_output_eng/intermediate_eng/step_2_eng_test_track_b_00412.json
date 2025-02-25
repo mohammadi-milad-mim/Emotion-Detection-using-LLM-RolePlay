@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I know I shouldn't have been touching my eyelids in the first place, but at night I get really curious and hopeful with my regrowth... so I stroked my upper eyelid, and I felt this sharp jab in one spot.\", \"rewritten_form_joy\": \"I know I shouldn't have been touching my eyelids in the first place, but at night I get so excited and hopeful about my regrowth... so I stroked my upper eyelid, and suddenly, I felt this surprising jab in one spot!\", \"rewritten_form_sadness\": \"I know I shouldn't have been touching my eyelids in the first place, but at night I can't help but feel curious and hopeful with my regrowth... so I stroked my upper eyelid, and felt a sharp jab that made me wince.\", \"rewritten_form_fear\": \"I know I shouldn't have been touching my eyelids in the first place, but at night I get intensely curious and hopeful with my regrowth... so I stroked my upper eyelid, and I felt this alarming sharp jab in one spot.\", \"rewritten_form_anger\": \"I know I shouldn't have been touching my eyelids in the first place, but at night my curiosity and hope regarding my regrowth get the best of me... so I stroked my upper eyelid, and felt this irritating sharp jab in one spot!\", \"rewritten_form_surprise\": \"I know I shouldn't have been touching my eyelids in the first place, but at night I feel so curious and hopeful about my regrowth... so I stroked my upper eyelid, and wow, I felt this sharp jab in one spot!\", \"rewritten_form_disgust\": \"I know I shouldn't have been touching my eyelids in the first place, but at night I get this weird curiosity and hope about my regrowth... so I stroked my upper eyelid, and was horrified to feel a sharp jab in one spot.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses curiosity and hope but does not convey strong excitement or positivity that would indicate joy. It highlights a gentle sense of hopefulness rather than elation or joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sentence reflects a hint of regret when it refers to touching the eyelids and describes feeling a sharp jab that could imply discomfort, thus resonating more with a tinge of sadness, though not strongly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence contains an element of surprise and discomfort due to the sharp jab felt after curiosity. While there is some implied caution, it does not strongly evoke fear but rather concern.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The inclusion of 'irritating' sharp jab in the anger rewrite overstates any frustration in the original. The original doesn't express strong anger, so it aligns minimally with this emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The sentence describes an unexpected sensation (sharp jab) following a light-hearted expression of curiosity, which does imply surprise to some degree, but it's somewhat subdued.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

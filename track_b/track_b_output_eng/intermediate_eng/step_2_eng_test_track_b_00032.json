@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was intrigued and entertained the whole time, and a huge smile never left my face.\", \"rewritten_form_joy\": \"I couldn't help but be captivated and delighted the entire time, with a beaming smile that just wouldn't fade!\", \"rewritten_form_sadness\": \"I felt a fleeting sense of intrigue and entertainment, but deep down, a smile struggled to stay on my face.\", \"rewritten_form_fear\": \"I was intrigued and entertained the whole time, but I couldn't shake off the anxiety lurking beneath my smile.\", \"rewritten_form_anger\": \"I was intrigued and entertained the whole time, yet I found myself gritting my teeth behind a forced smile!\", \"rewritten_form_surprise\": \"I was completely taken aback; I was intrigued and entertained the whole time, and a huge smile unexpectedly lit up my face!\", \"rewritten_form_disgust\": \"I was supposedly intrigued and entertained the whole time, but it was hard to muster a genuine smile with how distasteful it felt.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses genuine joy and a continuous smile, which matches the rewritten joy sentence of being captivated and delighted.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original does not indicate any sadness; instead, it presents a positive experience. The rewritten sadness sentence introduces a struggle to maintain a smile, which is not present in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original sentence shows intrigue and happiness, the rewritten fear introduces anxiety that is not implied in the original. Therefore, the alignment is very weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original conveys positive and joyful experiences, while the rewritten anger includes frustration behind a forced smile, which does not exist in the original context.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original expresses consistent joy and intrigue. The rewritten surprise sentence suggests something unexpected about the joy, aligning with a more thrilling experience than mere entertainment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

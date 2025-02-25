@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Gots no cash, gots no jobs, no place so get off my back and outta my face! ''\", \"rewritten_form_joy\": \"I\\u2019m just a bit strapped for cash and jobs right now, so no hard feelings, but please step back and give me some space!\", \"rewritten_form_sadness\": \"I really have no cash, no jobs, and no place to go, so I\\u2019m just asking for some understanding and distance right now.\", \"rewritten_form_fear\": \"I\\u2019m feeling really lost with no cash, no jobs, and no home, so can you please back off and give me some room?\", \"rewritten_form_anger\": \"I have no cash, no jobs, and nowhere to stay, so just get off my back and out of my face already!\", \"rewritten_form_surprise\": \"I can\\u2019t believe how tough things are with no cash, no jobs, and no place to go! Can you get off my back and give me some space?\", \"rewritten_form_disgust\": \"I can't believe I'm in this situation with no cash, no jobs, and no place. Just get off my back and out of my face!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses frustration and a strong demand for space, which is not aligned with feelings of joy. The rewritten joyful sentence implies a calm request for space and shows a more positive attitude. Therefore, there is low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sadness directly but expresses a sense of distress. The rewritten sad version highlights a plea for understanding, which is somewhat aligned with the frustration present in the original, though the original doesn\u2019t capture the deeper emotional pain that would typically associate with sadness. Thus, there is a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text does not explicitly state fear, but it does indicate a form of distress due to financial and situational instability. The fear version focuses on feelings of being lost; while the original might imply that sentiment, it doesn't strongly convey fear. Hence, there is some alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses a strong emotional outburst and requests for space in an aggressive tone. The rewritten angry version directly taps into that intensity, suggesting a high degree of alignment. Therefore, it matches quite well with the anger sentiment.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original conveys a sense of astonishment at the current situation but does not express it explicitly. The surprise version captures that feeling but less intensely, as the original centers more on frustration. Thus, the alignment here is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

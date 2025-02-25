@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Though my heart was full, grief lingered in a corner.\", \"rewritten_form_joy\": \"Though my heart was bursting with happiness, a small shadow of grief lingered.\", \"rewritten_form_sadness\": \"Though my heart was heavy with sorrow, grief lingered in a corner.\", \"rewritten_form_fear\": \"Though my heart felt full, a creeping fear of grief lingered in a corner.\", \"rewritten_form_anger\": \"Though my heart was full, I couldn\\u2019t shake the anger that grief lingered in a corner.\", \"rewritten_form_surprise\": \"Though my heart was full, I was taken aback to find grief still lingering in a corner.\", \"rewritten_form_disgust\": \"Though my heart seemed full, the icky feeling of grief lingered in a corner.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of fullness in the heart, which could suggest a relationship to joy; however, the emphasis on grief indicates a strong counteraction to joy. Therefore, while there is a slight acknowledgment of joy, it is overshadowed by grief, leading to a low alignment overall.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence directly addresses grief, suggesting a state of sadness. The mention of grief lingering indicates an ongoing emotional struggle, aligning closely with the tone of the rewritten sadness sentence, which also emphasizes heaviness and sorrow.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "Fear is slightly implied through the phrase 'lingered in a corner,' hinting at a persistent worry about grief. However, the original sentence doesn't strongly exhibit fear, as there are no explicit indications of anxiety or dread surrounding that grief.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original mentions grief, it does not showcase anger directly. The rewriting suggests an irritation about grief's presence, which is not reflected in the original sentence. Thus, there is minimal to no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a hint of surprise in the original sentence through the juxtaposition of a full heart and the presence of grief. However, this surprise is quite subtle and not a dominant emotion in the original context compared to the rewritten form that emphasizes being taken aback.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

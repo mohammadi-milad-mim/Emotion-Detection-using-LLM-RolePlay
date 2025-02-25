@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She was growling, barking, snarling, foaming.\", \"rewritten_form_joy\": \"She was playfully growling, barking happily, and wildly snarling with excitement!\", \"rewritten_form_sadness\": \"She was softly growling, barking mournfully, and snarling in despair, foaming with emotion.\", \"rewritten_form_fear\": \"She was growling, barking threateningly, snarling fiercely, foaming with rage.\", \"rewritten_form_anger\": \"She was growling furiously, barking with rage, snarling menacingly, foaming at the mouth.\", \"rewritten_form_surprise\": \"She was suddenly growling, barking unexpectedly, snarling in shock, foaming everywhere!\", \"rewritten_form_disgust\": \"She was growling in disdain, barking in repulsion, snarling with disgust, foaming in irritation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy; instead, it describes aggressive and hostile behaviors without any playful or happy connotations.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "Although the original sentence does not explicitly express sadness, the tone is more aligned with aggression than with any melancholic feelings, making it not closely related to the sadness rewritten form.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original text could imply a threat or danger, given the presence of growling and snarling, but the emotional intensity doesn't strongly evoke fear as it lacks urgency or an imminent threat.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The growling, barking, and snarling all imply aggression and hostility, closely aligning with the emotions of anger, making the original sentence very similar to the rewritten anger version.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not imply any unexpectedness or shock, which are central to the written form of surprise, thus it doesn't match well.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

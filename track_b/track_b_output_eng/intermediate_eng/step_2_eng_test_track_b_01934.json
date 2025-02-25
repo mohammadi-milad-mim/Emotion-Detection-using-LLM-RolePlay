@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She faked her own kidnapping.\", \"rewritten_form_joy\": \"She cleverly orchestrated a fake kidnapping for a big reveal!\", \"rewritten_form_sadness\": \"It\\u2019s heartbreaking to think she felt the need to fake her own kidnapping.\", \"rewritten_form_fear\": \"What if that fake kidnapping puts her in real danger now?\", \"rewritten_form_anger\": \"I can't believe she would stoop so low as to fake her own kidnapping!\", \"rewritten_form_surprise\": \"I never saw it coming\\u2014she actually faked her own kidnapping!\", \"rewritten_form_disgust\": \"It\\u2019s appalling that she would fake her own kidnapping like that.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone and does not convey joy; rather, it presents an action that may involve planning but isn't celebratory or uplifting like the rewritten joy version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence might imply some underlying motivations that could evoke sadness, it does not express a direct sense of heartbreak or emotional weight as captured in the rewritten sadness sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests a potential threat but does not inherently imply fear. The rewritten fear sentence introduces a hypothetical danger that is not present in the original, making the fear alignment low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence may be seen as immoral but lacks the emotional outrage conveyed in the rewritten anger sentence, which emphasizes the idea of moral failing more strongly.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence is surprising in its implication but not in an overtly shocking manner. The rewritten surprise sentence heightens the element of surprise significantly, whereas the original is more matter-of-fact.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

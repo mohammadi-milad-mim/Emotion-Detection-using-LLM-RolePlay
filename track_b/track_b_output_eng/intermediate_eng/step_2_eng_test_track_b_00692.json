@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I became a god.\", \"rewritten_form_joy\": \"I joyfully became a god!\", \"rewritten_form_sadness\": \"I became a god, but it feels empty inside.\", \"rewritten_form_fear\": \"I became a god, and now the weight of that power terrifies me.\", \"rewritten_form_anger\": \"I became a god, and it's infuriating how it changes everything!\", \"rewritten_form_surprise\": \"I can't believe it\\u2014I became a god!\", \"rewritten_form_disgust\": \"I became a god, and honestly, it feels utterly repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'I became a god.' implies a potentially positive and powerful transformation, but lacks the explicit joy and exclamation found in the rewritten version. While the sentiment of achievement may be present, it is not described with joy or exuberance.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original lacks the element of emptiness or regret described in the sadness version. While becoming a god could inherently create a sense of loneliness, this is not expressed in the original sentence, making the sadness alignment low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not include any reflection on the potential fear or burden associated with being a god, which is emphasized in the rewritten sentence. Without these hints of fear, the original remains neutral regarding this emotion.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original statement does not convey frustration or anger regarding the transformation to godhood. The rewritten version clearly expresses indignation about the changes brought on by that transformation, which is absent in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not depict any sense of disbelief or shock that accompanies the rewritten version. 'I can't believe it' indicates strong surprise which is not suggested in the straightforward original statement.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

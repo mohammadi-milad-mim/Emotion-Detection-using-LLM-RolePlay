@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Writing As I was coming out of a chicken house today, I slipped and scraped my hand on some concrete.\", \"rewritten_form_joy\": \"As I was coming out of a chicken house today, I happily slipped and scraped my hand on some concrete!\", \"rewritten_form_sadness\": \"As I was coming out of a chicken house today, I tragically slipped and scraped my hand on some concrete.\", \"rewritten_form_fear\": \"As I was coming out of a chicken house today, I suddenly slipped and scraped my hand on some concrete, and it scared me!\", \"rewritten_form_anger\": \"As I was coming out of a chicken house today, I accidentally slipped and scraped my hand on some concrete, and it infuriated me!\", \"rewritten_form_surprise\": \"As I was coming out of a chicken house today, I unexpectedly slipped and scraped my hand on some concrete!\", \"rewritten_form_disgust\": \"As I was coming out of a chicken house today, I slipped and scraped my hand on that disgusting concrete.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses an accident without any joyful connotation. The rewritten joyful version adds 'happily,' which suggests a positive emotion that is absent in the original. Therefore, there is little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence mentions an accident but does not convey deep emotion. The use of 'tragically' in the rewritten version suggests a more profound emotional impact. The lack of sentiment in the original indicates low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear; it simply states an event that occurred. The addition of 'suddenly' and 'scared me' in the rewritten fear version implies a significant emotional reaction absent from the original. Thus, fear is only mildly present.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original states an accident, it does not express anger. The rewritten version intensifies that feeling with 'accidentally' and 'infuriated me,' suggesting a much stronger emotional response. There is low alignment with anger in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence includes the element of surprise since the slipping was unanticipated, reflecting a moderate degree of surprise. The rewritten version also emphasizes the unexpected nature of the slip, indicating a stronger connection with the emotion of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

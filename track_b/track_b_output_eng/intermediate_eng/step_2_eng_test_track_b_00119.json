@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But Maddy hasnt stopped.\", \"rewritten_form_joy\": \"But Maddy just keeps going!\", \"rewritten_form_sadness\": \"But Maddy hasn't stopped, and that really hurts.\", \"rewritten_form_fear\": \"But Maddy hasn\\u2019t stopped, and I\\u2019m terrified of what that means.\", \"rewritten_form_anger\": \"But Maddy hasn't stopped, and it's absolutely infuriating.\", \"rewritten_form_surprise\": \"But Maddy hasn't stopped! I never expected that.\", \"rewritten_form_disgust\": \"But Maddy hasn\\u2019t stopped, which is completely disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of persistence but lacks the positive connotation found in the joy rewritten form, which emphasizes enthusiasm. Thus, the alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests that Maddy\u2019s unceasing actions could lead to feelings of hurt, similar to the sadness rewritten form, which expresses direct emotional pain. Therefore, there is a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies uncertainty about Maddy\u2019s actions, aligning somewhat with fear due to the lack of clarity in the situation, but it does not express terror explicitly as in the rewritten form. Hence, the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The straightforwardness of the original sentence can imply frustration, similar to the anger rewritten form. It does not explicitly convey the level of intensity present in the rewritten sentence, resulting in a moderate degree of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does suggest that Maddy continues her actions, but it lacks the sense of shock or unexpectedness emphasized in the rewritten surprise form. Therefore, the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

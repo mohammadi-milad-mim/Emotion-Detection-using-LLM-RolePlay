@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"To this day I have no, absolutely NO idea how the hell this happened.\", \"rewritten_form_joy\": \"To this day, I\\u2019m just amazed by how this happened!\", \"rewritten_form_sadness\": \"To this day, I still have no idea how this tragic event unfolded.\", \"rewritten_form_fear\": \"To this day, I\\u2019m terrified because I have absolutely NO idea how this happened.\", \"rewritten_form_anger\": \"To this day, I\\u2019m furious that I have no, absolutely NO idea how this happened!\", \"rewritten_form_surprise\": \"To this day, I can\\u2019t believe I have no, absolutely NO idea how this happened!\", \"rewritten_form_disgust\": \"To this day, I find it appalling that I have no, absolutely NO idea how this happened.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses confusion and emphasizes a lack of understanding, which is contrary to the positive and amazed sentiment in the joy rewritten version. There\u2019s no joyful tone present in the original, leading to a low score.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not carry a tone of sadness. While it reflects a significant lack of understanding, it does not imply tragic or sorrowful feelings as seen in the sadness rewritten version. Therefore, the alignment is low.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence implies some level of distress due to confusion, but it does not clearly convey fear as seen in the fear rewritten version. However, the use of 'absolutely NO idea' suggests some level of anxiety about understanding the situation, so there\u2019s moderate alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence expresses frustration and strong emotions about a lack of understanding, aligning well with the anger rewritten version which uses the same intensity to express fury. Therefore, the tone is closely matched with a high intensity for anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original expresses a sense of disbelief about the situation, similar to the surprise rewritten version. The exclamation 'absolutely NO idea' conveys a heightened sense of astonishment, indicating moderate alignment with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

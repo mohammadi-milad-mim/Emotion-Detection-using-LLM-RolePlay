@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That was real fun...\", \"rewritten_form_joy\": \"That was an absolute blast!\", \"rewritten_form_sadness\": \"That was real fun, but I wish it could have lasted longer...\", \"rewritten_form_fear\": \"That was real fun, but what if it never happens again?\", \"rewritten_form_anger\": \"That was real fun, but I can't believe we waited so long to do it!\", \"rewritten_form_surprise\": \"That was real fun! I didn't expect it to be that amazing!\", \"rewritten_form_disgust\": \"That was real fun, though I can't shake the feeling it was pretty shallow.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses enjoyment ('real fun'), which aligns closely with the rewritten joyful version, which intensifies that sentiment. Both convey a shared positive experience, but the original lacks the exuberance of 'absolute blast'.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The rewritten sadness version introduces a sense of longing ('wish it could have lasted longer') that isn't present in the original. While the original reflects happiness, it does not imply any sadness or regret directly, making the alignment lower.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express any concern about the future, while the rewritten version introduces a fear of losing the experience. Therefore, there's weak alignment with fear, as the original shows no indication of apprehension.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not show any frustration or anger, unlike the rewritten version which expresses irritation about the wait. The absence of anger makes the alignment weak.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original mentions fun but does not convey any unexpectedness. The surprise version implies an unexpected level of enjoyment, so the original only aligns slightly with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

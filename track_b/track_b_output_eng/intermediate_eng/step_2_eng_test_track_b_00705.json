@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Wins $10,000 on another $2 scratch ticket.\", \"rewritten_form_joy\": \"Wins an incredible $10,000 on another $2 scratch ticket!\", \"rewritten_form_sadness\": \"Wins $10,000 on another $2 scratch ticket, but it's hard to feel happy about it.\", \"rewritten_form_fear\": \"Wins $10,000 on another $2 scratch ticket, what if it was a fluke?\", \"rewritten_form_anger\": \"Wins $10,000 on another $2 scratch ticket, while I never get that lucky!\", \"rewritten_form_surprise\": \"Wins $10,000 on another $2 scratch ticket\\u2014what an unexpected twist!\", \"rewritten_form_disgust\": \"Wins $10,000 on another $2 scratch ticket; what a waste of money to hope for such things.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of winning and success, which aligns well with a joyful tone, especially in the rewritten joy version that emphasizes the excitement of winning an incredible amount.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not imply sadness inherently, but the rewritten version suggests a sense of disappointment despite winning, which gives it a low alignment. The original lacks direct signs of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The rewritten fear version introduces a worry about the legitimacy of the win, which is not present in the original sentence. The original maintains a neutral stance on fear, hence the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten anger version expresses frustration about luck and reinforces a negative emotional reaction, but the original sentence is neutral and does not convey anger, resulting in a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The excitement of winning a large amount of money from a $2 ticket introduces an element of surprise, which is echoed in the rewritten surprise version. The original sentence does suggest an unexpected outcome to some extent.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

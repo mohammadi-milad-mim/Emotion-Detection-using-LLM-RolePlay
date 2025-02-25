@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The numbness started to wear off and my cheek, jaw, and yes, tooth, began to ache.\", \"rewritten_form_joy\": \"The numbness started to wear off, and I could finally feel my cheek, jaw, and tooth again, albeit with some ache, which means I\\u2019m healing!\", \"rewritten_form_sadness\": \"The numbness started to wear off, and with it came the familiar ache in my cheek, jaw, and tooth, reminding me of the pain I hoped would fade.\", \"rewritten_form_fear\": \"The numbness started to wear off, and I felt a sharp pain in my cheek, jaw, and tooth, making me worry about what that might mean.\", \"rewritten_form_anger\": \"The numbness started to wear off, and my cheek, jaw, and yes, tooth began to ache annoyingly, just when I thought I was done with this nonsense.\", \"rewritten_form_surprise\": \"The numbness started to wear off, and I was shocked to feel my cheek, jaw, and tooth aching again\\u2014it caught me off guard!\", \"rewritten_form_disgust\": \"The numbness started to wear off, and I was repulsed as my cheek, jaw, and yes, tooth began to ache, it\\u2019s just so unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text describes the return of sensation with an ache after numbness, but it does not convey a sense of healing or positivity. Therefore, it has a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text reflects a sense of discomfort with the returning ache, suggesting a lingering pain. This aligns moderately well with sadness, as it indicates a struggle with pain.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence presents the onset of pain as the numbness subsides, which can invoke fear about underlying health issues. This aligns moderately with fear due to the worry about the implications of the pain.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is no expression of annoyance or frustration in the original sentence, merely a factual statement about pain. Thus, it doesn't strongly align with anger despite the ache.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is no element of shock or unexpectedness in the original sentence; it merely states the occurrence of pain as the numbness fades. Therefore, it has a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

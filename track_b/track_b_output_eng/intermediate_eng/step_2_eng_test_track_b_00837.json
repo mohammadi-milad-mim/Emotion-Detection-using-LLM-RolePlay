@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Maybe you were dreaming **way** to hard?\", \"rewritten_form_joy\": \"Maybe you were dreaming **way** too hard and found something amazing!\", \"rewritten_form_sadness\": \"Maybe you were dreaming **way** too hard and got lost in it all?\", \"rewritten_form_fear\": \"Maybe you were dreaming **way** too hard and it turned into a nightmare?\", \"rewritten_form_anger\": \"Maybe you were dreaming **way** too hard, and it\\u2019s frustrating how unrealistic it was!\", \"rewritten_form_surprise\": \"Maybe you were dreaming **way** too hard and just stumbled upon something unexpected?\", \"rewritten_form_disgust\": \"Maybe you were dreaming **way** too hard, and it all just felt so gross?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a light tone of questioning but lacks a strong indication of joy or positivity. The joy rewritten form introduces a positive outcome ('found something amazing'), which the original does not suggest strongly enough.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original suggests confusion or concern about the nature of dreaming but does not convey a definite sense of sadness. The sadness rewritten form introduces the idea of getting lost, which implies a stronger emotional impact than the original has.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence hints at the potentially overwhelming nature of dreaming but does not explicitly express fear. The fear rewritten form introduces the concept of a nightmare, which is absent in the original. Thus, the alignment is minimal.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original has a neutral tone with no clear anger expressed. The anger rewritten form discusses frustration, which suggests a level of intensity that is not present in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence conveys a questioning tone but doesn\u2019t strongly reflect surprise. The surprise rewritten form introduces an unexpected discovery, which the original does not imply.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

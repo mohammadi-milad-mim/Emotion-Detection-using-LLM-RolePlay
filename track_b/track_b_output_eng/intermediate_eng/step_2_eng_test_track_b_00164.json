@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"In any case, I was car-sick for the first time in my life ( well, I didn't actually get sick, but I needed to have the windows open and air on my face to preven that from happening ), and as soon as I got home I fell asleep on the sofa for about five hours.\", \"rewritten_form_joy\": \"I was a little car-sick for the first time in my life ( well, I didn't actually get sick, but I opened the windows and let the fresh air on my face to avoid it ), and as soon as I got home I happily fell asleep on the sofa for about five hours!\", \"rewritten_form_sadness\": \"I felt car-sick for the first time in my life ( well, I didn't actually get sick, but I desperately needed to have the windows open and air on my face to prevent that from happening ), and once I got home, I just collapsed on the sofa and fell asleep for about five hours.\", \"rewritten_form_fear\": \"I was afraid I was car-sick for the first time in my life ( well, I didn't actually get sick, but I felt I had to open the windows and have air on my face to stop that from happening ), and when I got home, I fell asleep on the sofa for about five hours, worried about feeling worse.\", \"rewritten_form_anger\": \"I can't believe I was car-sick for the first time in my life ( well, I didn't actually get sick, but I had to open the windows and have air on my face to prevent that from happening ), and when I got home, I just fell asleep on the sofa for about five hours like a wreck.\", \"rewritten_form_surprise\": \"I was unexpectedly car-sick for the first time in my life ( well, I didn't actually get sick, but I had to keep the windows open and air on my face to avoid that ), and as soon as I got home, I just fell asleep on the sofa for about five hours, which was so unusual for me!\", \"rewritten_form_disgust\": \"I felt car-sick for the first time in my life ( well, I didn't actually get sick, but I had to open the windows and let the air hit my face to prevent that disgusting outcome ), and when I got home, I just fell asleep on the sofa for about five hours, feeling gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not have a joyful tone; it describes a mildly uncomfortable experience without any indication of happiness or pleasure. The rewritten version implies a sense of happiness that is absent in the original, making this emotion misaligned.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence discusses an uncomfortable experience of being car-sick, it does not express sadness or despair, just a physical reaction. The rewritten version emphasizes a feeling of desperation, which is significantly stronger than what is conveyed in the original, leading to a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence mentions feeling unwell but does not convey fear or anxiety. The rewritten version adds a sense of worry and fear of getting sick, which is a level of emotional intensity absent from the original text, making this emotion not fitting.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no expression of anger or frustration in the original sentence; it simply describes a situation calmly. The rewritten version expresses disbelief and frustration, which does not resonate with the original tone, leading to low alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence narrates the event without expressing surprise or novelty. The rewritten version indicates that the experience was unexpected, which changes the tone significantly. Thus, there is little alignment with the original sentiment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

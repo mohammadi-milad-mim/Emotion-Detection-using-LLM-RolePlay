@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I still want to die.\", \"rewritten_form_joy\": \"I still hope for brighter days ahead!\", \"rewritten_form_sadness\": \"I feel so lost and just want this pain to end.\", \"rewritten_form_fear\": \"I'm terrified of how overwhelming this feeling is.\", \"rewritten_form_anger\": \"I'm so frustrated that this darkness keeps hanging over me.\", \"rewritten_form_surprise\": \"I can\\u2019t believe I\\u2019m still feeling this way after everything.\", \"rewritten_form_disgust\": \"I just can't stand how hopeless I feel right now.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a deep sense of despair with the desire to end life, which starkly contrasts with the hopeful tone of the rewritten joy sentence about brighter days. There is no hint of joy in the original sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentiment aligns closely with the sadness rewritten sentence, as both express feelings of pain, hopelessness, and a desire for relief from suffering. This connection indicates a high intensity of sadness in the original statement.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence may evoke a fear of continuing feelings, it does not explicitly convey terror or anxiety as detailed in the rewritten fear sentence. There is some alignment, but it is not as pronounced as with sadness.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The frustration articulated in the rewritten anger sentence resonates with the sentiment of wanting to escape pain, showing that there may be a sense of anger towards the situation represented in the original. This implies a moderate degree of anger is present.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise rewritten sentence addresses an element of disbelief about ongoing feelings, but the original text doesn't imply surprise\u2014it\u2019s more an expression of consistent despair. Thus, there is minimal alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

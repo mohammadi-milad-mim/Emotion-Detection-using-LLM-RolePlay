@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He was the local \\\"medicine man\\\" as well.\", \"rewritten_form_joy\": \"He was also the beloved local \\\"medicine man\\\"!\", \"rewritten_form_sadness\": \"He was the local \\\"medicine man\\\" as well, but now he's gone.\", \"rewritten_form_fear\": \"He was the local \\\"medicine man,\\\" a mysterious figure we didn't fully understand.\", \"rewritten_form_anger\": \"He was the local \\\"medicine man\\\"\\u2014who even knows if he really helped anyone?\", \"rewritten_form_surprise\": \"He was the local \\\"medicine man\\\" too? I had no idea!\", \"rewritten_form_disgust\": \"He was labeled the local \\\"medicine man,\\\" though it all felt so absurd.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral about the 'medicine man' which doesn\u2019t express any joy or positive sentiment. The rewritten joy sentence adds emotion by calling him 'beloved', which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The addition of 'but now he's gone' in the rewritten sadness indicates a loss that is not present in the original. Therefore, the original sentence has no sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original notes the character as a 'medicine man,' it does not imply fear or mystery, which is suggested in the fear sentence with 'mysterious figure'. There is no alignment with fear in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original lacks any feeling of anger or doubt about the effectiveness of the 'medicine man', which is present in the anger rewrite. Therefore, the original does not exhibit anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement is straightforward and does not imply any surprise. The rewritten surprise sentence expresses a realization that is not conveyed in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

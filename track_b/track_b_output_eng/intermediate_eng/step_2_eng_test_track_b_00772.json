@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart was racing about a million miles an hour.\", \"rewritten_form_joy\": \"My heart was racing with excitement, bursting with joy!\", \"rewritten_form_sadness\": \"My heart was racing in despair, heavy with sorrow.\", \"rewritten_form_fear\": \"My heart was racing like a million miles an hour, pounding with fear.\", \"rewritten_form_anger\": \"My heart was racing a million miles an hour, fueled by frustration.\", \"rewritten_form_surprise\": \"My heart was racing a million miles an hour, completely caught off guard!\", \"rewritten_form_disgust\": \"My heart was racing a million miles an hour, overwhelmed by revulsion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of excitement that aligns closely with joy, though it does not explicitly reflect bursting joy. It suggests a heightened emotional state, which can imply happiness, but the overall tone leans more towards anxiety or agitation rather than pure joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not indicate sadness or a heavy emotional weight. While it captures a racing heart, it lacks the necessary context to convey sorrow or despair. Thus, the alignment with sadness is minimal.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The phrase 'racing a million miles an hour' suggests a heightened state that can be associated with fear, indicating anxiety or stress. Therefore, the alignment with fear is significant, as it hints at a fearful emotional state.",
+        "fear_intensity": 3,
+        "anger_reasoning": "Although the original sentence reflects a racing heart, it lacks the explicit context of anger. While frustration can cause a racing heart, this particular sentence does not convey anger directly, leading to a lower alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The racing heart in the original sentence could be interpreted as surprise, as it suggests a reaction to an unexpected situation. However, it does not explicitly capture the shock or being caught off guard that is strongly implied in the rewritten sentence, resulting in a moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

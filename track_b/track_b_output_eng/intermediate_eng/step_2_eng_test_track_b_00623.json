@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now I hear this terrible panicky growl and scratching at the door.\", \"rewritten_form_joy\": \"Now I hear this strangely thrilling growl and scratching at the door!\", \"rewritten_form_sadness\": \"Now I hear this awful, panicky growl and scratching at the door, making me feel so alone.\", \"rewritten_form_fear\": \"Now I hear this terrifying panicky growl and scratching at the door, and dread fills me.\", \"rewritten_form_anger\": \"Now I hear this infuriating panicky growl and scratching at the door, how dare it disturb me!\", \"rewritten_form_surprise\": \"Now I hear this unexpected panicky growl and scratching at the door, what could that be?\", \"rewritten_form_disgust\": \"Now I hear this disgusting, panicky growl and scratching at the door, it makes my skin crawl.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys feelings of alarm and distress rather than joy. It describes a terrible, panicky sound, which does not align with the idea of joy or excitement as indicated in the rewritten form for joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence does have a sense of isolation or dread, it lacks strong emotional weight tied to sadness. The added phrase in the rewritten version, 'making me feel so alone,' introduces a deeper emotional context that isn't present in the original sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The word 'terrible panicky growl' closely aligns with the rewritten fear version's use of 'terrifying panicky growl' and the mention of 'dread fills me.' The original sentence provokes a strong sense of fear, making this emotion highly relevant.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not imply anger; rather, it elicits fear and panic. The rewritten anger version introduces a sense of annoyance that isn't supported by the original text's tone, thus showing a disconnect.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not express surprise but rather a state of alarm. The rewritten sentence implies an unexpectedness that is not suggested in the original, which expresses anxiety instead of curiosity.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

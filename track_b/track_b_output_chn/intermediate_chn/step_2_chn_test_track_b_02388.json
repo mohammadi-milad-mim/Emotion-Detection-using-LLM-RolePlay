@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u867d\\u7136\\u6211\\u6ca1\\u5728\\u4e00\\u7ebf\\u6297\\u75ab\\uff0c\\u4f46\\u540c\\u4e3a\\u533b\\u7597\\u536b\\u751f\\u884c\\u4e1a\\u7684\\u4ece\\u4e8b\\u5de5\\u4f5c\\u4eba\\u5458\\uff0c\\u6df1\\u6709\\u4f53\\u4f1a\\uff0c\\u8f9b\\u82e6\\u4e86\", \"rewritten_form_joy\": \"\\u867d\\u7136\\u6211\\u6ca1\\u5728\\u4e00\\u7ebf\\u6297\\u75ab\\uff0c\\u4f46\\u4f5c\\u4e3a\\u533b\\u7597\\u536b\\u751f\\u884c\\u4e1a\\u7684\\u4e00\\u5458\\uff0c\\u6211\\u6df1\\u611f\\u81ea\\u8c6a\\uff0c\\u8f9b\\u82e6\\u4e86\\uff01\", \"rewritten_form_sadness\": \"\\u867d\\u7136\\u6211\\u6ca1\\u5728\\u4e00\\u7ebf\\u6297\\u75ab\\uff0c\\u4f46\\u4f5c\\u4e3a\\u540c\\u6837\\u4ece\\u4e8b\\u533b\\u7597\\u536b\\u751f\\u884c\\u4e1a\\u7684\\u5de5\\u4f5c\\u4eba\\u5458\\uff0c\\u6211\\u5fc3\\u91cc\\u6ee1\\u662f\\u6c89\\u91cd\\uff0c\\u8f9b\\u82e6\\u4e86\\u3002\", \"rewritten_form_fear\": \"\\u867d\\u7136\\u6211\\u6ca1\\u5728\\u4e00\\u7ebf\\u6297\\u75ab\\uff0c\\u4f46\\u4f5c\\u4e3a\\u533b\\u7597\\u536b\\u751f\\u884c\\u4e1a\\u7684\\u4ece\\u4e1a\\u8005\\uff0c\\u6211\\u65f6\\u5e38\\u611f\\u5230\\u6050\\u60e7\\uff0c\\u8f9b\\u82e6\\u4e86\\u3002\", \"rewritten_form_anger\": \"\\u867d\\u7136\\u6211\\u6ca1\\u5728\\u4e00\\u7ebf\\u6297\\u75ab\\uff0c\\u4f46\\u4f5c\\u4e3a\\u533b\\u7597\\u536b\\u751f\\u884c\\u4e1a\\u7684\\u4e00\\u5458\\uff0c\\u6211\\u6124\\u6012\\u4e8e\\u90a3\\u4e9b\\u4e0d\\u7406\\u89e3\\u6211\\u4eec\\u8f9b\\u82e6\\u7684\\u4eba\\uff0c\\u8f9b\\u82e6\\u4e86\\uff01\", \"rewritten_form_surprise\": \"\\u867d\\u7136\\u6211\\u6ca1\\u5728\\u4e00\\u7ebf\\u6297\\u75ab\\uff0c\\u4f46\\u4f5c\\u4e3a\\u533b\\u7597\\u536b\\u751f\\u884c\\u4e1a\\u7684\\u5de5\\u4f5c\\u4eba\\u5458\\uff0c\\u6211\\u5bf9\\u5927\\u5bb6\\u7684\\u52aa\\u529b\\u611f\\u5230\\u9707\\u60ca\\uff0c\\u8f9b\\u82e6\\u4e86\\uff01\", \"rewritten_form_disgust\": \"\\u867d\\u7136\\u6211\\u6ca1\\u5728\\u4e00\\u7ebf\\u6297\\u75ab\\uff0c\\u4f46\\u4f5c\\u4e3a\\u533b\\u7597\\u536b\\u751f\\u884c\\u4e1a\\u7684\\u4e00\\u5458\\uff0c\\u6211\\u5bf9\\u4e00\\u4e9b\\u4eba\\u7684\\u65e0\\u89c6\\u611f\\u5230\\u538c\\u6076\\uff0c\\u8f9b\\u82e6\\u4e86\\u3002\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling of pain and struggle, which does not align with joy. The rewritten joy sentence adds a sense of self-affirmation that is not present in the original, making it a poor match for the emotion.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of struggle and depth of pain, which aligns with the tone of the rewritten sadness sentence. Both express a heavy feeling, indicating a strong alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a level of discomfort associated with the profession but doesn't specifically express fear. While the rewritten fear version mentions feeling fearful, this is not strongly conveyed in the original, making the alignment moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original mentions discomfort but lacks a direct expression of anger. The rewritten anger sentence explicitly conveys frustration towards others, which is not strongly reflected in the original, resulting in low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Surprise is not a clear theme in the original sentence. The rewritten surprising sentence discusses feeling shock about others' efforts, which does not correlate well with the original's tone. Therefore, it shows little to no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original touches on feelings of conflict and discomfort which can imply a general distaste for certain behaviors, making it somewhat relevant to disgust. However, the intensity is not overtly expressed, though the rewritten version specifically calls out a reaction to others, showing a moderate alignment for disgust.",
+        "disgust_intensity": 2
+    }
+}

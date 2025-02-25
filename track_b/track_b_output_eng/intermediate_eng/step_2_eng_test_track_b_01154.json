@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He stood up and said, 'I'm in love with the bride!\", \"rewritten_form_joy\": \"He stood up and shouted joyfully, 'I'm in love with the bride!'\", \"rewritten_form_sadness\": \"He stood up, his voice trembling, and said, 'I'm in love with the bride.'\", \"rewritten_form_fear\": \"He stood up, his heart racing, and said, 'I'm in love with the bride!'\", \"rewritten_form_anger\": \"He stood up and declared fiercely, 'I\\u2019m in love with the bride!'\", \"rewritten_form_surprise\": \"He stood up, eyes wide, and exclaimed, 'I'm in love with the bride!'\", \"rewritten_form_disgust\": \"He stood up and sneered, 'I'm in love with the bride!'\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive emotion through the declaration of love. However, it does not explicitly convey the exuberance that would be implied by the rewritten joyful version, which uses the word 'shouted joyfully'. Therefore, while the original does contain joy, it lacks the intensity found in the joyful rewritten sentence.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not contain any elements of sorrow or trembling, which are present in the sadness rewritten version. Therefore, while 'love' might be a complex emotion that could entail some sadness, it is not explicitly represented in the original sentence.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence lacks elements of fear, heart racing, or any anxiety that would suggest fear\u2014key aspects of the rewritten fearful version. Thus, it does not align with the emotions of fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does express a strong declaration of love, but it does not have the fierce tone portrayed in the anger rewritten version. The word 'declared fiercely' implies a more aggressive tone that is absent from the original statement.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The element of surprise is present in the original sentence through the unexpectedness of love declaration, but it does not contain the physical responses like 'eyes wide' that enhance the sense of surprise in the rewritten version. Thus, it aligns moderately with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

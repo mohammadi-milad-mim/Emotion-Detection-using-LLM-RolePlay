@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"At least I hope.\", \"rewritten_form_joy\": \"I\\u2019m so hopeful!\", \"rewritten_form_sadness\": \"I really wish I could hope more.\", \"rewritten_form_fear\": \"I hope, but what if it all goes wrong?\", \"rewritten_form_anger\": \"I hope, but it's infuriating that it\\u2019s come to this!\", \"rewritten_form_surprise\": \"Wow, I hope that actually happens!\", \"rewritten_form_disgust\": \"I hope, but honestly, it\\u2019s hard to feel good about this.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a baseline of hope, but lacks the enthusiastic positivity found in the rewritten joy version. The phrase 'I\u2019m so hopeful!' conveys a strong level of joy that is not present in 'At least I hope.'",
+        "joy_intensity": 1,
+        "sadness_reasoning": "There is a sense of yearning or desire in the original phrase that aligns with sadness, similar to the rewritten version. However, it doesn't express the same level of depth or regret found in 'I really wish I could hope more.' Thus, it aligns moderately with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence contains a hint of uncertainty that aligns with fear, but it does not explicitly express worry or anxiety about the outcome, which is present in the rewritten fear sentence. Therefore, it has some connection to fear but is not strongly aligned.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence hints at frustration but lacks the explicit anger of the rewritten version, which captures a stronger sense of indignation regarding the situation. Thus, it has a slight connection to anger but not a strong one.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original phrase does not convey any element of surprise; it merely expresses a hope without any unexpectedness, contrasting with the engaging tone of 'Wow, I hope that actually happens!' Therefore, it aligns very weakly with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I turned the lights off and put my hands over my ears, nothing happened.\", \"rewritten_form_joy\": \"I turned the lights off and put my hands over my ears, and I felt so peaceful; nothing happened!\", \"rewritten_form_sadness\": \"I turned the lights off and put my hands over my ears, but nothing happened... it was so lonely.\", \"rewritten_form_fear\": \"I turned the lights off and put my hands over my ears, heart racing, but nothing happened... not even a sound.\", \"rewritten_form_anger\": \"I turned the lights off and put my hands over my ears, and nothing happened, how frustrating!\", \"rewritten_form_surprise\": \"I turned the lights off and put my hands over my ears, and surprisingly, nothing happened!\", \"rewritten_form_disgust\": \"I turned the lights off and put my hands over my ears, and nothing happened; what a pointless moment!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any joyful sentiment, as it describes an action without a positive outcome. There is no indication of peace or happiness in the original, making it misaligned with the joyful interpretation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of emptiness or lack of response, which can evoke feelings of loneliness, similar to the sadness rewritten. The addition of the word 'lonely' in the rewritten version aligns well with the tone of isolation present in the original sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey fear; it describes a situation where the character is blocking out sound, but the lack of sound does not create an atmosphere of fear. Thus, it doesn't align well with the fearful rewritten version.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence suggests frustration due to the anticlimactic nature of turning off the lights and hearing nothing, which aligns with feelings of anger expressed in the rewritten version. There is a sense of irritation in the original context.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence contains an element of surprise in the fact that after turning the lights off and covering the ears, nothing happened. This aligns well with the surprised sentiment expressed in the rewritten version where it notes the unexpected nature of the outcome.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

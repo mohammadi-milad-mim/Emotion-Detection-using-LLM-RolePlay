@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was interesting way to do things.\", \"rewritten_form_joy\": \"It was such a delightful way to do things!\", \"rewritten_form_sadness\": \"It was a surprisingly interesting way to do things, but it still feels lacking.\", \"rewritten_form_fear\": \"It was an interesting way to do things, but what if it backfires?\", \"rewritten_form_anger\": \"It was an interesting way to do things, but why does it have to be so complicated?\", \"rewritten_form_surprise\": \"It was an unexpectedly interesting way to do things!\", \"rewritten_form_disgust\": \"It was an oddly interesting way to do things, but it felt so wrong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral interest which does not elevate to joy, lacking strong positive sentiment. The rewritten version captures a high level of delight that is absent in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not convey a sense of loss or disappointment, but the rewritten version introduces a feeling of something being 'lacking,' which the original does not express.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original mentions 'interesting' without any implication of conflict or risk. The fear version introduces a concern about potential negative outcomes, which is not captured in the original phrase.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original is neutral and does not express frustration or complications. The anger version suggests irritation with complexity which does not align with any sentiment in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not suggest any unexpectedness. The surprise version implies an unexpected quality that elevates it beyond mere interest, which the original does not suggest.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

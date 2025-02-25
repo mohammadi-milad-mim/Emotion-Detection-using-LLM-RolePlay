@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The tiles turned a filthy gray &amp; black.\", \"rewritten_form_joy\": \"The tiles transformed into a stunning mix of gray and black!\", \"rewritten_form_sadness\": \"The tiles sadly became a filthy gray and black.\", \"rewritten_form_fear\": \"The tiles turned a dirty gray and black, and I couldn't help but worry about what that meant.\", \"rewritten_form_anger\": \"The tiles are utterly disgusting, turning into a filthy gray and black!\", \"rewritten_form_surprise\": \"I was shocked to see the tiles turn such a filthy gray and black!\", \"rewritten_form_disgust\": \"The tiles now look utterly vile, covered in a filthy gray and black.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it simply describes a negative change in color without any positive connotations or transformations.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'sadly became a filthy gray and black' aligns closely with the original's tone, suggesting a degree of emotional heaviness. The negative transformation of the tiles implies some loss or disappointment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey a direct sense of worry or fear, although the description of the tiles could imply something negative, the stronger sense of concern in 'I couldn't help but worry' suggests a higher intensity of fear that is not matched by the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The use of 'utterly disgusting' in the rewritten sentence heightens the emotional intensity, but the original merely describes a change without expressing anger. Therefore, while negative, it doesn't convey a strong sense of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The statement in the rewritten sentence expresses shock and surprise, which isn't directly present in the original. While the negative change is notable, it lacks an element of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

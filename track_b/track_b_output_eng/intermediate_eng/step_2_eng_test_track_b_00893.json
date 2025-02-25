@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Well, I've managed to hurt my back again.\", \"rewritten_form_joy\": \"Well, I can't believe I\\u2019ve hurt my back again!\", \"rewritten_form_sadness\": \"Well, I've hurt my back again... it's just so disappointing.\", \"rewritten_form_fear\": \"Well, I've managed to hurt my back again, and I really hope it\\u2019s not serious.\", \"rewritten_form_anger\": \"Well, I\\u2019ve hurt my back again, and I\\u2019m so frustrated with myself!\", \"rewritten_form_surprise\": \"Well, surprisingly, I\\u2019ve hurt my back again!\", \"rewritten_form_disgust\": \"Well, I\\u2019m so fed up that I\\u2019ve hurt my back again.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of resignation rather than joy; it lacks excitement or disbelief about the situation, which is necessary for joyful sentiment. The joy rewritten form expresses this disbelief enthusiastically, which is not captured in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of regret or disappointment in having hurt the back again, aligning it with the sadness sentiment. The sadness rewritten form emphasizes disappointment, which resonates with the tone of the original sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not express any concern about the seriousness of the injury, which is a critical element of fear. While the fear rewritten form expresses worry, the original is more about the fact of the injury without implying threat or anxiety about it.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence reflects a less emotional state regarding the situation, as it lacks strong frustration or anger, which is showcased in the rewritten form. Although one could infer annoyance, it is not strongly present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The use of 'managed to hurt my back again' has a touch of unexpectedness regarding the situation, making it mildly surprising. However, it does not convey the full astonishment that the rewritten form captures.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Haha.\", \"rewritten_form_joy\": \"Haha! This is so delightful!\", \"rewritten_form_sadness\": \"Haha... I wish I felt happier right now.\", \"rewritten_form_fear\": \"Haha... I hope nothing bad happens next.\", \"rewritten_form_anger\": \"Haha! This is infuriating!\", \"rewritten_form_surprise\": \"Haha! I didn't see that coming!\", \"rewritten_form_disgust\": \"Haha, that's just gross!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original \"Haha.\" reflects a moment of lightheartedness, which aligns with joy, especially when compared to the rewritten version that emphasizes delight. However, it lacks the embellishments that would convey a stronger joyful sentiment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sadness version suggests a deeper emotional state of wishing for happiness, which is absent in the original sentence. Therefore, while there is some emotional nuance, it is not strong enough to indicate sadness in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not imply fear or concern about future events, which is emphasized in the rewritten sentence. As such, there is no presence of fear in the original text.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger rewritten version indicates irritation linked with the \"Haha.\" expression, but the original lacks context for anger, showing no signs that it resonates with any degree of irritation.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The simple \"Haha.\" can indeed imply surprise, but it is subtle without any elaboration. The rewritten version enhances this by indicating unexpectedness, so there is some alignment, though still modest.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

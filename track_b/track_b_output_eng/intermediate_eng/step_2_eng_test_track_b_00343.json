@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We had periodic events for the users all over the country.\", \"rewritten_form_joy\": \"We had such delightful periodic events for the users all over the country!\", \"rewritten_form_sadness\": \"We once had periodic events for the users all over the country, but now they feel distant.\", \"rewritten_form_fear\": \"We had periodic events for the users all over the country, but I worry about how they might turn out.\", \"rewritten_form_anger\": \"We had periodic events for the users all over the country, and I can't believe the lack of support we received!\", \"rewritten_form_surprise\": \"We had periodic events for the users all over the country, and I wasn't expecting them to be so successful!\", \"rewritten_form_disgust\": \"We had periodic events for the users all over the country, but honestly, they were a complete mess.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a neutral statement about hosting periodic events, lacking enthusiasm or positivity, which is central to the joy expression. The joy rewritten form uses the word 'delightful' and an exclamation point to convey excitement, contrasting sharply with the original's lack of emotional weight.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text does not imply any sense of loss or nostalgia, whereas the sadness version introduces a past sense of community that has since diminished. Thus, while the original mentions events, it does not evoke the emotional depth needed for sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence is factual and does not express any worry or concern about the outcomes of these events. The fear version introduces a worrying perspective regarding how the events might turn out, which is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is neutral and does not express frustration or indignation. The anger version conveys a strong sense of discontent with the lack of support, which is absent from the original statement, leading to a disconnect in emotional alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not imply any unexpectedness related to the success of the events. The surprise version suggests an unanticipated outcome, which is not referenced or hinted at in the original statement.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

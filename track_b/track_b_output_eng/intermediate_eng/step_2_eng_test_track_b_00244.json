@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I realize that I'm scared again and that I'm going to have to go back to the ol' dash and scramble up the stairs.\", \"rewritten_form_joy\": \"I realize that I'm a bit scared again, but I\\u2019m kind of excited to race back up those stairs!\", \"rewritten_form_sadness\": \"I realize that I'm scared again, and it makes me feel heavy to think about going back to the ol' dash and scrambling up the stairs.\", \"rewritten_form_fear\": \"I realize that I'm scared again, and the thought of having to go back to the ol' dash and scramble up the stairs is terrifying.\", \"rewritten_form_anger\": \"I can't believe I'm scared again! I have to go back to the ol' dash and scramble up those stairs once more, and it infuriates me!\", \"rewritten_form_surprise\": \"I realize, unexpectedly, that I'm scared again and that I have to rush back to the ol' dash and scramble up the stairs!\", \"rewritten_form_disgust\": \"I realize that I'm scared again, and the idea of returning to that ol' dash and scrambling up the stairs just makes my stomach turn.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses fear, and the joy rewrite introduces an element of excitement and positivity that contrasts with the original's tone of apprehension. This suggests that the original does not convey joy, but rather a sense of anxious anticipation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates fear and a bit of reluctance about going back, which has a heavier emotional weight when compared to the sadness rewrite. This indicates that while sadness is present, it is more related to the fear than to overt melancholy.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence clearly conveys a sense of being scared, and the fear rewrite emphasizes that sensation by detailing the terror associated with going back to the staircase. This shows a strong alignment with the emotion of fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "There's a hint of frustration about having to confront that fear again, but the original sentence does not express outright anger. The anger rewrite amplifies feelings of being infuriated, which the original does not fully capture. Thus, the alignment is lower.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence reveals a realization about being scared again, but it lacks the shock or unexpectedness conveyed in the surprise rewrite. Therefore, the original aligns weakly with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

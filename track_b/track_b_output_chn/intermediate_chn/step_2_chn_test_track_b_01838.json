@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u5f20\\u827a\\u5174\\u7684\\u98de\\u5929~\\u771f\\u7684~\\u592a\\u68d2\\u4e86~\\u6ca1\\u6709mv\\u7684\\u9057\\u61be\\uff01\\u98de\\u5929\\u8bb2\\u4e86\\u592a\\u591a\\u6545\\u4e8b~\", \"rewritten_form_joy\": \"\\u5f20\\u827a\\u5174\\u7684\\u98de\\u5929~\\u771f\\u7684~\\u592a\\u68d2\\u4e86~\\u6839\\u672c\\u4e0d\\u9700\\u8981mv\\u7684\\u9057\\u61be\\uff01\\u98de\\u5929\\u8bb2\\u4e86\\u592a\\u591a\\u7f8e\\u5999\\u7684\\u6545\\u4e8b~\", \"rewritten_form_sadness\": \"\\u5f20\\u827a\\u5174\\u7684\\u98de\\u5929~\\u771f\\u7684~\\u592a\\u68d2\\u4e86~\\u53ef\\u6211\\u603b\\u89c9\\u5f97\\u6ca1\\u6709mv\\u7684\\u9057\\u61be\\uff01\\u98de\\u5929\\u8bb2\\u4e86\\u592a\\u591a\\u6545\\u4e8b~\", \"rewritten_form_fear\": \"\\u5f20\\u827a\\u5174\\u7684\\u98de\\u5929~\\u771f\\u7684~\\u592a\\u68d2\\u4e86~\\u4f46\\u662f\\u6ca1\\u6709mv\\u7684\\u9057\\u61be\\u8ba9\\u6211\\u6709\\u4e9b\\u4e0d\\u5b89\\uff01\\u98de\\u5929\\u8bb2\\u4e86\\u592a\\u591a\\u6545\\u4e8b~\", \"rewritten_form_anger\": \"\\u5f20\\u827a\\u5174\\u7684\\u98de\\u5929~\\u771f\\u7684~\\u592a\\u68d2\\u4e86~\\u5c45\\u7136\\u6ca1\\u6709mv\\u7684\\u9057\\u61be\\uff01\\u98de\\u5929\\u8bb2\\u4e86\\u592a\\u591a\\u6545\\u4e8b~\", \"rewritten_form_surprise\": \"\\u5f20\\u827a\\u5174\\u7684\\u98de\\u5929~\\u771f\\u7684~\\u592a\\u68d2\\u4e86~\\u7adf\\u7136\\u6ca1\\u6709mv\\u7684\\u9057\\u61be\\uff01\\u98de\\u5929\\u8bb2\\u4e86\\u592a\\u591a\\u6545\\u4e8b~\", \"rewritten_form_disgust\": \"\\u5f20\\u827a\\u5174\\u7684\\u98de\\u5929~\\u771f\\u7684~\\u592a\\u68d2\\u4e86~\\u4f46\\u6ca1\\u6709mv\\u7684\\u9057\\u61be\\u8ba9\\u6211\\u611f\\u5230\\u53cd\\u611f\\uff01\\u98de\\u5929\\u8bb2\\u4e86\\u592a\\u591a\\u6545\\u4e8b~\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of joy, implying enthusiasm about an event (the 'flying day') being great without needing a music video (mv). However, the original version has a stronger focus on dissatisfaction ('\u6ca1\u6709mv\u7684\u9057\u61be') suggesting a missing element, lowering the joy score to moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does contain an element of sadness regarding not having an mv, which adds to a sense of regret. This aligns with the rewritten sadness example, suggesting that the original communicates a hint of sadness due to this absence but not overwhelmingly so.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original lacks any hint of fear, as there is no indication of danger or anxiety surrounding the events described; it simply expresses a longing for an mv. The rewritten version introduces a fear element that is not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original does express disappointment about the lack of an mv, it does not convey anger about the situation. The rewritten anger version suggests a stronger negative reaction, which the original does not portray.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is a sense of surprise in both the original and the rewritten sentence, but the original does not have a strong element of unexpectedness. The absence of an mv might seem surprising, but it does not create a dramatic shift in understanding or expectation.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not express any disgust; rather, it communicates a neutral to slightly negative sentiment regarding a missed element (the mv). The rewritten disgust version implies a strong emotional reaction that is not reflected in the original.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"When I was eight years old, my dad let me get my ears pierced.\", \"rewritten_form_joy\": \"When I was eight years old, my dad happily let me get my ears pierced!\", \"rewritten_form_sadness\": \"When I was eight years old, my dad let me get my ears pierced, but I remember feeling a little lost without him around.\", \"rewritten_form_fear\": \"When I was eight years old, my dad let me get my ears pierced, but I was so scared of the pain!\", \"rewritten_form_anger\": \"When I was eight years old, my dad just let me get my ears pierced without caring about my nerves!\", \"rewritten_form_surprise\": \"When I was eight years old, I was completely surprised when my dad let me get my ears pierced!\", \"rewritten_form_disgust\": \"When I was eight years old, my dad thought piercing my ears was a good idea, but I found it pretty gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a positive experience, but does not strongly express joy as it lacks enthusiasm and emotional vibrancy compared to the joyful rewritten version that emphasizes happiness. Therefore, there is some alignment, but it is not deeply felt.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence has no elements of sadness, but the rewritten version introduces a feeling of loss which significantly contrasts with the original's tone. Thus, the sadness intensity is low since the original does not imply sadness at all.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey fear. It mentions an act (getting ears pierced) without indicating apprehension. The fear version implies fear of pain which the original does not suggest, resulting in a low intensity for fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original conveys a sense of permission for a fun experience, it does not express anger or frustration. The rewritten version suggests a lack of care, which the original does not imply. Therefore, the alignment with anger is non-existent.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is no indication of surprise in the original sentence. However, the rewritten version implies a sense of unexpectedness which is lacking in the original context. The original sentence does not align with surprise at all.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

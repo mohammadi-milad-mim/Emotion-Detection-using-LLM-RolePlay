@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My back arched with every heave, and tremors ran up and down my spine.That went on for about 5 minutes.\", \"rewritten_form_joy\": \"My back arched with every joyful heave, and delightful tremors ran up and down my spine. That went on for about 5 minutes!\", \"rewritten_form_sadness\": \"My back arched with every painful heave, and sorrowful tremors ran up and down my spine. That went on for about 5 minutes...\", \"rewritten_form_fear\": \"My back arched with each terrifying heave, and chilling tremors raced up and down my spine. That went on for about 5 minutes.\", \"rewritten_form_anger\": \"My back arched with each furious heave, and rage-fueled tremors surged up and down my spine. That went on for about 5 minutes!\", \"rewritten_form_surprise\": \"My back arched with each unexpected heave, and astonishing tremors zipped up and down my spine. That went on for about 5 minutes!\", \"rewritten_form_disgust\": \"My back arched with every revolting heave, and disgusting tremors crawled up and down my spine. That went on for about 5 minutes.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy; instead, it describes a physical reaction without emotional context. The rewritten joy sentence adds positive adjectives like 'joyful' and 'delightful,' which are absent in the original. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original contains a sense of physical struggle, but it does not explicitly mention pain or sorrow, which are essential for sadness. The rewritten sadness sentence uses words like 'painful' and 'sorrowful,' suggesting an emotional depth not present in the original. Alignment with sadness is weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence describes a physical experience but lacks any overt fear. The rewritten fear sentence uses the word 'terrifying' and 'chilling,' which imply a sense of danger. The lack of such vocabulary in the original reduces fear alignment significantly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original doesn't suggest any feeling of anger; it merely describes a physical response. The rewritten anger version introduces 'furious' and 'rage-fueled,' which imply aggression. There is a very weak alignment with anger without these explicit signals in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is no element of surprise in the original sentence; it simply describes a consistent physical state. The rewritten surprise sentence includes 'unexpected' and 'astonishing,' indicating surprise; this is explicitly lacking in the original text.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

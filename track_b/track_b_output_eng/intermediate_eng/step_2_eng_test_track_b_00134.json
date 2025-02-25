@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart began pattering unevenly.\", \"rewritten_form_joy\": \"My heart started pattering with excitement!\", \"rewritten_form_sadness\": \"My heart began pattering unevenly, heavy with sorrow.\", \"rewritten_form_fear\": \"My heart began pattering unevenly, filled with dread.\", \"rewritten_form_anger\": \"My heart began pattering unevenly, racing with frustration.\", \"rewritten_form_surprise\": \"My heart began pattering unevenly, caught off guard.\", \"rewritten_form_disgust\": \"My heart began pattering unevenly, repulsed by the situation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a quickening heart rate, which could imply excitement, but it lacks the explicit suggestion of joy present in the rewritten sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence indicates an unease in the heart's rhythm, but it does not clearly convey sadness without the additional context provided in the rewritten sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The mention of an uneven heart rate could imply anxiety or fear, but without the additional language detailing dread, the connection is weak.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence suggests an emotional intensity, it does not specifically signify anger or frustration, which makes the connection minimal.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence implies a sense of unease, which aligns with surprise but is not explicitly stated. It reflects a mild connection to being caught off guard.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

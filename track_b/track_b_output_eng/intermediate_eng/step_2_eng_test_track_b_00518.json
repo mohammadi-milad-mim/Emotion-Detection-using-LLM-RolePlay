@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my arms are tired.\", \"rewritten_form_joy\": \"I\\u2019ve been working hard, and my arms feel wonderfully tired!\", \"rewritten_form_sadness\": \"I can\\u2019t shake this feeling; my arms are so tired.\", \"rewritten_form_fear\": \"I don\\u2019t know how much longer I can keep going; my arms are tired.\", \"rewritten_form_anger\": \"It\\u2019s infuriating that my arms are so tired from all this work!\", \"rewritten_form_surprise\": \"Wow, I didn't expect that my arms would get this tired!\", \"rewritten_form_disgust\": \"Ugh, my arms feel so heavy and tired; it\\u2019s just unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is quite neutral and does not convey joyful feelings about tiredness. While the rewritten version expresses joy about being tired from hard work, the original lacks any positive sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a neutral state of being tired; however, the rewritten form suggests a more persistent emotional burden, which is not explicitly present in the original. Thus, it lightly aligns with sadness but not strongly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence lacks elements of urgency or desperation. The rewritten sentence introduces concern about not being able to continue, which the original does not imply. Hence, it presents some alignment with fear but remains low intensity.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey anger. The rewritten form expresses irritation about tiredness due to work, which is a notable disruption; the neutrality of the original does not capture this anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is a straightforward statement and does not carry any element of unexpectedness. The rewritten form reveals surprise at the extent of tiredness, which is absent in the original, leading to low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

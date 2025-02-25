@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We saw this flock of seagulls poking at this bag of flaming hot Cheetos.\", \"rewritten_form_joy\": \"We joyfully watched this flock of seagulls excitedly poking at a bag of flaming hot Cheetos!\", \"rewritten_form_sadness\": \"We sadly observed this flock of seagulls poking at a bag of flaming hot Cheetos, feeling sorry for their lost chance at a real meal.\", \"rewritten_form_fear\": \"We nervously saw this flock of seagulls poking at a bag of flaming hot Cheetos, worried about what might happen next.\", \"rewritten_form_anger\": \"We angrily witnessed this flock of seagulls poking at this bag of flaming hot Cheetos, infuriated by their reckless behavior.\", \"rewritten_form_surprise\": \"We were surprised to see a flock of seagulls poking at a bag of flaming hot Cheetos\\u2014it was an unexpected sight!\", \"rewritten_form_disgust\": \"We recoiled at the sight of this flock of seagulls poking at a bag of flaming hot Cheetos; it was utterly disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an observation of seagulls, but it doesn't convey a sense of joy or excitability. The word 'joyfully' and the exclamation in the rewritten joy form suggest a much stronger positive sentiment that is not present in the original sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sadness form introduces a sense of loss regarding the seagulls' meal, which is absent in the original sentence. The original text is neutral, but the implication of sadness makes the alignment moderate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original provided no indication of fear or anxiety regarding the seagulls or their actions. The aspect of being 'nervously' aware does not resonate with the original tone.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Anger is introduced in the rewritten form through words like 'angrily' and 'infuriated'. The original sentence does not contain any tone of anger or frustration regarding the seagulls' behavior; it remains neutral.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The sentiment of surprise does not come across in the original statement. While the event might be a bit unexpected, it's described in a matter-of-fact way without any emotional response.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

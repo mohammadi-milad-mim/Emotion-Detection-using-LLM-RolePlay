@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My eyes were even blood shot.\", \"rewritten_form_joy\": \"My eyes were so bright and vivid!\", \"rewritten_form_sadness\": \"My eyes were even bloodshot with tears.\", \"rewritten_form_fear\": \"My eyes were bloodshot; I felt like something terrifying was about to happen.\", \"rewritten_form_anger\": \"My eyes were bloodshot with rage!\", \"rewritten_form_surprise\": \"I couldn't believe it; my eyes were even bloodshot!\", \"rewritten_form_disgust\": \"My eyes were bloodshot, like I had just seen something truly repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes bloodshot eyes, which typically indicates a negative state rather than an uplifting or joyful one. Therefore, it does not align with the positive sentiment of brightness in the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence can imply distress or fatigue, which aligns closely with the rewritten version that adds tears, emphasizing a deeper emotional state of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The mention of bloodshot eyes can suggest a buildup of stress or anxiety. The fear version indicates a sense of impending doom or danger, which resonates moderately with the distress implied by the original sentence.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original's mention of bloodshot eyes can infer anger or frustration, aligning closely with the anger version that explicitly states bloodshot eyes due to rage, suggesting a strong connection.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The surprise version indicates disbelief connected to bloodshot eyes, which is somewhat relevant; however, the original doesn\u2019t inherently convey surprise as a strong emotion, resulting in a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

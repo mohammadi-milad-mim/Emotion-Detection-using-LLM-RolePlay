@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"without even finishing my tea.\", \"rewritten_form_joy\": \"I enjoyed my tea so much that I couldn't even finish it!\", \"rewritten_form_sadness\": \"I had to leave without even finishing my tea, which makes me feel a bit empty inside.\", \"rewritten_form_fear\": \"I rushed out, leaving my tea unfinished, and I can't shake the nervous feeling that I might regret it.\", \"rewritten_form_anger\": \"I can't believe I had to leave without even finishing my tea; it's infuriating!\", \"rewritten_form_surprise\": \"I had to leave suddenly\\u2014so suddenly that I didn't even get to finish my tea!\", \"rewritten_form_disgust\": \"I just left my tea there, unfinished and untouched\\u2014it disgusts me to waste it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any suggestion of enjoyment or pleasure. It simply states a fact about not finishing tea, which does not resonate with the joyful tone of the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence could imply a sense of loss or emptiness due to leaving the tea unfinished, aligning somewhat with the sadness expressed in the rewritten version. However, the connection is weak since there is no explicit emotional expression present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original doesn't convey any sense of fear or regret, and while the act of leaving tea unfinished could lead to a feeling of nervousness as implied by the rewritten sentence, it is not apparent in the original statement itself.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Similar to fear, the original sentence does not express any feelings of anger or frustration, even though leaving tea unfinished could be frustrating. The emotional intensity of anger is absent in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not carry a sense of suddenness or unexpectedness; it merely states what happened. This contrasts with the surprise present in the rewritten version which describes an abrupt leaving.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Worst part is, I never pooped.\", \"rewritten_form_joy\": \"The funniest part is, I never pooped at all!\", \"rewritten_form_sadness\": \"The saddest part is, I never pooped, and it really upset me.\", \"rewritten_form_fear\": \"The scariest part is, I never pooped, and I\\u2019m really worried about it now.\", \"rewritten_form_anger\": \"The most infuriating part is, I never pooped, how frustrating is that?\", \"rewritten_form_surprise\": \"The craziest part is, I never pooped, can you believe it?\", \"rewritten_form_disgust\": \"The most disgusting part is, I never pooped; it\\u2019s just gross!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a negative sentiment with the phrase 'Worst part,' while the rewritten joy version shifts the tone to a humorous one. Therefore, there\u2019s a slight disconnect from joy since the original sentiment does not imply humor or happiness.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original mentions 'Worst part,' which aligns with a feeling of disappointment, but does not explicitly express sadness. The rewritten version highlights that it 'really upset me,' indicating a deeper emotional context that the original lacks, suggesting a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original makes no mention of worry or fear directly, the rewritten version introduces an element of worry. Therefore, the original does not express fear, but the context of a concerning situation makes the alignment minimal.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence states 'Worst part,' which implies some level of frustration or annoyance, aligning somewhat with anger. However, it doesn\u2019t explicitly communicate strong anger, suggesting a mild association.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original has a somewhat neutral tone without implying surprise. The rewritten version emphasizes disbelief, which the original lacks, indicating that there\u2019s little to no surprise expressed in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

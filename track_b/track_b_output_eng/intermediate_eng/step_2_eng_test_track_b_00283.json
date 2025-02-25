@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I asked ( with a pleading look in my eyes ), `` can I leave the apple store? ''\", \"rewritten_form_joy\": \"I asked ( with excitement sparkling in my eyes ), `` can I finally leave the apple store? ''\", \"rewritten_form_sadness\": \"I asked ( with a heavy heart in my eyes ), `` can I leave the apple store? ''\", \"rewritten_form_fear\": \"I asked ( with a terrified look in my eyes ), `` can I leave the apple store? ''\", \"rewritten_form_anger\": \"I asked ( with frustration boiling in my eyes ), `` can I leave the apple store? ''\", \"rewritten_form_surprise\": \"I asked ( wide-eyed and astonished ), `` can I leave the apple store? ''\", \"rewritten_form_disgust\": \"I asked ( with a grimace on my face ), `` can I leave this awful apple store? ''\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of pleading rather than excitement. The tone does not suggest joy; it is more subdued and questioning.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has a pleading tone which could be interpreted as a hint of sadness, though it is more neutral than heavy-hearted. It does not fully align with deep sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text does not express a terrified sentiment, even with the pleading expression. It lacks urgency or intense fear, aligning only slightly with apprehension about leaving.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence conveys a sense of needing to leave, it does not express frustration or anger. The emotional tone is more about pleading than being agitated.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not convey astonishment or surprise. It is a straightforward question without elements of sudden discovery.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

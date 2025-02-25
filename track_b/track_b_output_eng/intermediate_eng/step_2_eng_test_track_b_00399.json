@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"it can all go away with the blink of an eye and a tight grasp of my hand.\", \"rewritten_form_joy\": \"Everything can vanish in an instant, and I can hold onto it all so tightly!\", \"rewritten_form_sadness\": \"It can all slip away in an instant, despite how desperately I try to hold on.\", \"rewritten_form_fear\": \"It can all disappear in the blink of an eye, and I can feel my grip tightening in panic.\", \"rewritten_form_anger\": \"It can all vanish in a moment, and I can't stand how fragile it all is with just a tight hold!\", \"rewritten_form_surprise\": \"It can all just disappear so quickly, almost like magic with a firm grip!\", \"rewritten_form_disgust\": \"It could all be gone in a flash, and I just feel the need to cling to something so absurd.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of transience and potential loss, contrasting with the joy version which emphasizes a positive, almost whimsical feeling about holding onto something precious. The original does not convey joy, resulting in a low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a sense of loss and the fragility of holding onto things, which closely aligns with the sadness rewritten version that emphasizes helplessness in trying to retain something. There is a significant sense of sadness present.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a sudden loss, which evokes fear. The rewritten version captures a panic at the thought of losing what is held dear, resonating well with the emotional tone of the original. There is a strong alignment here.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence hints at frustration with how easily things can slip away. The anger version expresses disdain for that fragility, which matches the sentiment of anger towards the situation. However, there isn't a strong presence of anger in the original, so alignment is moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The sense of suddenness in the original can be seen as aligning with the element of surprise; however, the implication of loss rather than wonder diminishes this alignment. The tone difference indicates a lower connection.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

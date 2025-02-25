@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"lol My back is hurting really really bad, so I'm hoping that means good things to come!\", \"rewritten_form_joy\": \"Haha, my back is aching so much, but I'm so excited that it must be a sign of good things ahead!\", \"rewritten_form_sadness\": \"Oh, my back is hurting a lot, and I\\u2019m really worried that it might not mean good things to come.\", \"rewritten_form_fear\": \"Ugh, my back is hurting really bad, and I can't help but feel anxious about what that might mean for me!\", \"rewritten_form_anger\": \"Seriously, my back is in so much pain, and it better lead to some good things because this is ridiculous!\", \"rewritten_form_surprise\": \"Wow, my back is hurting really bad, but I can\\u2019t help but wonder if it\\u2019s a signal of something great coming!\", \"rewritten_form_disgust\": \"Ugh, my back is hurting so badly, and I'm just getting sick of hoping it means anything good!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a mix of humor ('lol') and optimism despite the pain, which aligns closely with the joyful tone of the rewritten joy sentence that emphasizes excitement and hope.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original sentence mentions pain, it focuses on hope rather than despair, which makes it less aligned with sadness than the rewritten sadness sentence that conveys significant worry without any hope.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a slight sense of anxiety in the original sentence, but it is overshadowed by the hopefulness present, making it less aligned with the fear implicit in the rewritten fear sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence doesn't express anger, but the rewritten anger sentence introduces a strong frustration that isn't present in the original. Thus, there's little alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence conveys a sense of surprise at the potential for good things that comes from pain, aligning well with the rewritten surprise sentence that also reflects this mix of pain and curiosity.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

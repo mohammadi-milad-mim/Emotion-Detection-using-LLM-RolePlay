@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"how was i going to make it to the labor and delivery floor when i couldn't even move my legs to walk?\", \"rewritten_form_joy\": \"I couldn't believe I was about to head to the labor and delivery floor, but how could I manage it when my legs felt so heavy?\", \"rewritten_form_sadness\": \"I felt so hopeless thinking about how I was supposed to get to the labor and delivery floor when I couldn't even move my legs.\", \"rewritten_form_fear\": \"What was I going to do? How could I possibly get to the labor and delivery floor if I couldn't even move my legs?\", \"rewritten_form_anger\": \"I was so frustrated! How on earth was I supposed to make it to the labor and delivery floor when my legs wouldn't even cooperate?\", \"rewritten_form_surprise\": \"It caught me off guard\\u2014how was I even supposed to reach the labor and delivery floor if I couldn\\u2019t move my legs to walk?\", \"rewritten_form_disgust\": \"It was just so frustrating to think about\\u2014how could I get to the labor and delivery floor when I couldn\\u2019t even stand up on my own?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of urgency and struggle rather than joy. There's no positive sentiment present that aligns with the joy emotion, unlike the rewritten joy sentence which implies a positive surprise at heading to the labor floor, despite the difficulty.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a feeling of despair about being unable to move, which aligns closely with the sadness tone in the rewritten sentence that emphasizes hopelessness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence contains a sense of desperation about being unable to reach the labor and delivery floor, which resonates strongly with fear\u2014especially the fear of being unable to act in a critical situation, similar to the rewritten fear version.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence hints at frustration due to physical limitations, but it does not clearly convey anger like the rewritten version does. The original tone lacks the intensity of conflict suggested in the anger sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is an element of surprise in the original sentence due to the unexpectedness of the physical inability to walk; however, it is more subdued than the rewritten surprise statement that expresses a stronger reaction to the situation.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

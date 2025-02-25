@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I say... so does me wanting to cut off my leg which is where I was for hours on Saturday.\", \"rewritten_form_joy\": \"I say... and can you believe I spent hours thinking about cutting off my leg on Saturday? It was wild!\", \"rewritten_form_sadness\": \"I say... I can't help but think about wanting to cut off my leg, just like I was feeling stuck for hours on Saturday.\", \"rewritten_form_fear\": \"I say... I can't shake off the feeling of wanting to cut off my leg, just like those terrifying hours I spent on Saturday.\", \"rewritten_form_anger\": \"I say... so does my intense frustration at wanting to cut off my leg, which consumed me for hours on Saturday!\", \"rewritten_form_surprise\": \"I say... can you believe I actually wanted to cut off my leg for hours on Saturday? It blew my mind!\", \"rewritten_form_disgust\": \"I say... so does the sickening thought of wanting to cut off my leg, like I was trapped there for hours on Saturday.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence doesn't convey happiness or excitement about the situation; in fact, it mentions a disturbing thought. The rewritten joy version adds an element of wildness that is not present in the original, making the alignment weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original implies a sense of struggle or feeling trapped. The rewritten sad version emphasizes the feeling of being stuck, which closely aligns with the original sentiment. Thus, there is a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence brings forth a troubling thought (wanting to cut off a leg), which can evoke fear. The rewritten fear version heightens this aspect, suggesting an inability to shake off this disturbing thought. This gives a strong alignment with fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original does express a dark thought, it does not convey anger directly. The rewritten anger version intensifies the sense of frustration, making the alignment less prevalent in the original context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text expresses a troubling thought in a straightforward manner without an element of disbelief or astonishment. The rewritten surprise version introduces an element of disbelief that is absent in the original, leading to a weak alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I heard a noise and feel the crashing of my back with the iced floor.\", \"rewritten_form_joy\": \"I heard a noise and excitedly felt the thrill of my back hitting the icy floor!\", \"rewritten_form_sadness\": \"I heard a noise, and it ended with the painful thud of my back against the icy floor.\", \"rewritten_form_fear\": \"I heard a noise, and my heart raced as I felt the cold, hard floor slam into my back.\", \"rewritten_form_anger\": \"I heard a noise, and I couldn\\u2019t believe I crashed my back hard against that stupid icy floor!\", \"rewritten_form_surprise\": \"I heard a noise, and suddenly I was crashing onto the icy floor\\u2014it took me completely off guard!\", \"rewritten_form_disgust\": \"I heard a noise, and I felt the disgusting chill of my back crashing against the icy floor.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks a joyful tone and does not express excitement or thrill. It merely describes an experience without positive emotion.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys some level of pain and discomfort related to the noise and crashing against the icy floor, but does not strongly imply deep sadness. It indicates a negative experience rather than a profound emotional state.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The mention of a noise followed by the crashing sensation suggests a potential danger or unexpected event, aligning with the feeling of fear. However, it doesn't emphasize the heart racing or intense fear, so the alignment is present but not strong.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original acknowledges a collision with the icy floor, it lacks an element of frustration or resentment. The rewritten version expresses strong feelings of annoyance, which are not present in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence hints at an unexpected event (hearing a noise before crashing), which aligns with the concept of surprise, but it does not elaborate enough to strongly evoke shock or astonishment. The impact of the crash is described straightforwardly, without a sense of being taken off guard.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

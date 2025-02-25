@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"There is not a cloud in the sky and the sun is shining brightly.\", \"rewritten_form_joy\": \"The sky is utterly clear, and the sun is shining so brightly\\u2014it feels amazing!\", \"rewritten_form_sadness\": \"The sky is clear, but the brightness of the sun feels almost lonely without any clouds.\", \"rewritten_form_fear\": \"The sky is completely devoid of clouds, and the bright sun feels overwhelming and intimidating.\", \"rewritten_form_anger\": \"There isn\\u2019t a single cloud in sight, and the sun is blaring down, making me fume!\", \"rewritten_form_surprise\": \"Wow, there's not a cloud in the sky, and the sun is shining so brightly\\u2014what a beautiful day!\", \"rewritten_form_disgust\": \"There's not a cloud in the sky, and that blaring sun is just too much\\u2014it\\u2019s almost suffocating.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a clear sky and a bright sun, which are typically associated with positive feelings and joy. The intensity of joy in the original is moderate, as it conveys a pleasant scene without any exaggerated happiness.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence is positive, presenting a beautiful day. The rewritten sadness form implies loneliness in the brightness and longing for clouds, which contrasts with the positivity of the original. Hence, sadness is not strongly present in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence is not fearful; it expresses a pleasant, calm scene. The rewritten fear form makes the brightness of the sun feel overwhelming and intimidating, which is not reflected in the original. Therefore, the intensity of fear is very low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger; it portrays a serene situation. The rewritten anger version implies frustration with the bright sun, which contradicts the calmness of the original sentence. Hence, anger is not present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence contains an element of surprise as it focuses on the beauty of a cloudless sky. The rewritten surprise version emphasizes the beauty even more, while the original sentence is straightforward but still aligns with a moderate sense of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

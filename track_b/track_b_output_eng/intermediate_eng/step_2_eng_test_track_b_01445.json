@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The comfort once brought by its very existence had vanished in an instant, a single solitary event shattering its tranquility; replaced with a void, a hollow empty space like the cavern inside of my chest.\", \"rewritten_form_joy\": \"The joy I felt from its presence has transformed in an instant, a single moment changed everything and filled me with a lively energy; it\\u2019s now a spark lighting up what once felt dull inside me.\", \"rewritten_form_sadness\": \"The comfort that once enveloped me is gone in an instant, a single heartbreaking event shattered its peace; I am left with an emptiness, a hollow ache like a cavern inside my chest.\", \"rewritten_form_fear\": \"The comfort that once filled me is gone in an instant, a single frightening event obliterating its calm; now I feel this unsettling void, an ominous darkness deep inside my chest.\", \"rewritten_form_anger\": \"The comfort that once soothed me shattered in an instant, one reckless event disrupting its peace; now all I\\u2019m left with is this maddening void, a ghastly emptiness in my chest.\", \"rewritten_form_surprise\": \"The comfort I took for granted vanished in an instant, a single astonishing event took away its serenity; now there\\u2019s this unexpected void, an eerie emptiness like a cavern inside my chest.\", \"rewritten_form_disgust\": \"The comfort that used to come from its existence has abruptly disappeared, a single repulsive event wrecking its tranquility; I\\u2019m stuck with this unpleasant void, a nauseating emptiness like a gaping hole inside my chest.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of loss and emptiness rather than joy. The tone of the rewritten joy sentence indicates a positive transformation, which is contrary to the original sentiment that reflects despair. Therefore, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly aligns with the sadness rewritten sentence. It expresses a profound loss of comfort and tranquility, and the imagery of a 'hollow empty space' suggests deep emotional pain. This results in a high alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is some alignment with fear in the original sentence, as it describes the sudden loss of comfort, evoking a sense of instability and potential dread. However, the original text primarily focuses on loss and emptiness rather than fear itself, indicating a moderate alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence conveys a feeling of disruption and loss but does not indicate frustration or rage, which are key aspects of the anger rewritten sentence. The emotional intensity related to anger is less prominent, so there is low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does indicate an abrupt change in state, aligning moderately with surprise as it describes an unexpected loss. However, it lacks the element of astonishment that the rewritten surprise sentence captures. Thus, there is some alignment but it is not strong.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

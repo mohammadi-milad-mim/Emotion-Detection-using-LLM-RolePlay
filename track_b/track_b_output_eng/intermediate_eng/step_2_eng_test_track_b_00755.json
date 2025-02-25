@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Probably nobody's going to even see this, but here's mine:\", \"rewritten_form_joy\": \"I'm so excited to share this, even if nobody gets to see it! Here\\u2019s mine:\", \"rewritten_form_sadness\": \"I guess it\\u2019s likely that nobody will see this, but here\\u2019s mine anyway:\", \"rewritten_form_fear\": \"What if nobody sees this? Still, here\\u2019s mine:\", \"rewritten_form_anger\": \"It\\u2019s frustrating to think nobody will see this, but here\\u2019s mine anyway:\", \"rewritten_form_surprise\": \"It\\u2019s surprising to think nobody might even notice this, but here's mine:\", \"rewritten_form_disgust\": \"It\\u2019s hard to believe that nobody would see this, but here's my contribution:\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of resignation rather than excitement, which contrasts sharply with the joy expressed in the rewritten version. The tone does not convey anticipation or enthusiasm.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence shares a sense of acceptance regarding the likelihood that nobody will see the contribution, which aligns with the subtle resignation found in the rewritten version. This emotional connection is reflected in the moderate wording used.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at a sense of uncertainty but lacks the explicit worry found in the fear rewritten version. The fear version emphasizes anxiety over visibility that isn't present in the original, leading to lower alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While there is potential frustration suggested in the original, it lacks the assertive stance of indignation found in the rewritten version. The original does not express active anger, making it less severe.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not elicit any sense of surprise; it instead implies a certain expectedness about the lack of viewers. Thus, there is little alignment with the surprising element of the rewritten sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

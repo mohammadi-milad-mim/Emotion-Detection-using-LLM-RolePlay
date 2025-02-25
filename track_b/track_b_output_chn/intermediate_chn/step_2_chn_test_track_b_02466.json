@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u6d0b\\u5927\\u4eba\\uff0c\\u600e\\u4e48\\u6562\\u62d8\\u7559\\uff1f\\u8981\\u662f\\u4e2d\\u56fd\\u4eba\\u8fd8\\u8fd9\\u4e48\\u4efb\\u6027\\uff0c\\u65e9\\u8ba9\\u4f60\\u9886\\u6559\\u4e58\\u8b66\\u7684\\u4e13\\u4e1a\\u4e86\\uff01\", \"rewritten_form_joy\": \"\\u6d0b\\u5927\\u4eba\\uff0c\\u600e\\u4e48\\u6562\\u62d8\\u7559\\uff1f\\u8981\\u662f\\u4e2d\\u56fd\\u4eba\\u8fd8\\u8fd9\\u4e48\\u4efb\\u6027\\uff0c\\u4f60\\u53ef\\u771f\\u60f3\\u770b\\u4e58\\u8b66\\u7684\\u4e13\\u4e1a\\u4e86\\uff01\", \"rewritten_form_sadness\": \"\\u6d0b\\u5927\\u4eba\\uff0c\\u600e\\u4e48\\u6562\\u62d8\\u7559\\uff1f\\u8981\\u662f\\u4e2d\\u56fd\\u4eba\\u8fd8\\u8fd9\\u4e48\\u4efb\\u6027\\uff0c\\u771f\\u7684\\u5f88\\u8ba9\\u4eba\\u5931\\u671b\\u554a\\uff0c\\u65e9\\u8ba9\\u4f60\\u9886\\u6559\\u4e58\\u8b66\\u7684\\u4e13\\u4e1a\\u4e86\\uff01\", \"rewritten_form_fear\": \"\\u6d0b\\u5927\\u4eba\\uff0c\\u600e\\u4e48\\u6562\\u62d8\\u7559\\uff1f\\u8981\\u662f\\u4e2d\\u56fd\\u4eba\\u8fd8\\u8fd9\\u4e48\\u4efb\\u6027\\uff0c\\u8fd9\\u53ef\\u8ba9\\u4e58\\u8b66\\u7684\\u4e13\\u4e1a\\u5e26\\u6765\\u591a\\u5927\\u7684\\u9ebb\\u70e6\\u554a\\uff01\", \"rewritten_form_anger\": \"\\u6d0b\\u5927\\u4eba\\uff0c\\u600e\\u4e48\\u6562\\u62d8\\u7559\\uff1f\\u8981\\u662f\\u4e2d\\u56fd\\u4eba\\u8fd8\\u8fd9\\u4e48\\u4efb\\u6027\\uff0c\\u65e9\\u8be5\\u8ba9\\u4f60\\u9886\\u6559\\u4e00\\u4e0b\\u4e58\\u8b66\\u7684\\u4e13\\u4e1a\\u4e86\\uff01\\u771f\\u662f\\u592a\\u8fc7\\u5206\\u4e86\\uff01\", \"rewritten_form_surprise\": \"\\u6d0b\\u5927\\u4eba\\uff0c\\u600e\\u4e48\\u6562\\u62d8\\u7559\\uff1f\\u8981\\u662f\\u4e2d\\u56fd\\u4eba\\u8fd8\\u8fd9\\u4e48\\u4efb\\u6027\\uff0c\\u7adf\\u7136\\u8ba9\\u4f60\\u78b0\\u4e0a\\u4e86\\u4e58\\u8b66\\u7684\\u4e13\\u4e1a\\uff01\\u771f\\u662f\\u8ba9\\u4eba\\u60ca\\u8bb6\\uff01\", \"rewritten_form_disgust\": \"\\u6d0b\\u5927\\u4eba\\uff0c\\u600e\\u4e48\\u6562\\u62d8\\u7559\\uff1f\\u8981\\u662f\\u4e2d\\u56fd\\u4eba\\u8fd8\\u8fd9\\u4e48\\u4efb\\u6027\\uff0c\\u5b9e\\u5728\\u8ba9\\u4eba\\u65e0\\u8bed\\uff0c\\u65e9\\u8be5\\u8ba9\\u4f60\\u9886\\u6559\\u4e58\\u8b66\\u7684\\u4e13\\u4e1a\\u4e86\\uff01\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of urgency and a call for immediate action, similar to the joy rewritten version's tone, but it does not convey positive feelings or happiness, therefore not aligning strongly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewritten version emphasizes a sense of hopelessness and disappointment, which is somewhat reflected in the original through urgency but not explicitly stated as sadness. There is moderate alignment since the emotional plea resonates with a feeling of despair.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear rewritten version hints at the potential dangers associated with inaction, which reflects a heightened concern that is somewhat present in the original's urgent tone. This evokes some fear, though it's not strongly pronounced.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger rewritten version expresses frustration and indignation explicitly, matching the intense tone of the original which criticizes inaction. The urgency and exclamation suggest a high level of anger regarding the situation.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The surprise rewritten version indicates a shocking moment due to unforeseen consequences, which is not directly stated in the original. The original does imply that one should be aware of potential outcomes but lacks the element of surprise, thus aligning weakly with it.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust rewritten version suggests strong aversion to something unacceptable, which the original does not explicitly communicate. While there is a tone of disappointment, it's more about irresponsibility than disgust, indicating low alignment.",
+        "disgust_intensity": 0
+    }
+}

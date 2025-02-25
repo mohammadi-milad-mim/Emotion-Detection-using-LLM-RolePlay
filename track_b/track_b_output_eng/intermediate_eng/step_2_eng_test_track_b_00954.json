@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I'm on the opposite end of the spectrum.\", \"rewritten_form_joy\": \"I'm on the other end of the spectrum, and it feels amazing!\", \"rewritten_form_sadness\": \"I'm on the opposite end of the spectrum, and it's truly disheartening.\", \"rewritten_form_fear\": \"I'm on the opposite end of the spectrum, and it makes me really uneasy.\", \"rewritten_form_anger\": \"I'm on the opposite end of the spectrum, and it infuriates me!\", \"rewritten_form_surprise\": \"I\\u2019m on the opposite end of the spectrum, which is quite unexpected!\", \"rewritten_form_disgust\": \"I'm on the opposite end of the spectrum, and it feels incredibly off-putting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a neutral or factual stance about being on the opposite end of a spectrum, lacking any indication of high positivity, which makes it align poorly with the joyous rephrasing.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence also does not express any sense of disheartenment; it remains neutral, so it aligns only slightly with the sadness example provided.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original avoids expressing discomfort or unease. It doesn't imply fear, which is essential to align with the rewritten sentence of fear, hence it does not connect well.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey frustration; it's a neutral statement with no indication of anger, misaligning it with the anger version significantly.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original has a factual tone, it does not elicit any sense of unexpectedness or astonishment that is present in the surprise version. Thus, it does not quite align.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

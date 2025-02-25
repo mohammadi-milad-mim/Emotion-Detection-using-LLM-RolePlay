@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My head turned to the side and my muscles relaxed.\", \"rewritten_form_joy\": \"My head turned to the side and my muscles joyfully relaxed!\", \"rewritten_form_sadness\": \"My head turned to the side and my muscles felt heavy with despair.\", \"rewritten_form_fear\": \"My head turned to the side and my muscles tensed, ready for what might come next.\", \"rewritten_form_anger\": \"My head turned to the side, and my muscles clenched in frustration.\", \"rewritten_form_surprise\": \"My head turned to the side, and my muscles suddenly relaxed in shock!\", \"rewritten_form_disgust\": \"My head turned to the side, and my muscles recoiled in distaste.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone that can suggest relaxation, but it lacks any explicit joyful connotation. The rewritten joy version amplifies this with 'joyfully relaxed', which contrasts with the original's neutrality.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey any sadness; it describes a simple physical state without emotional weight. The rewritten sadness version introduces 'heavy with despair', which is a stark contrast.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original shows relaxation rather than tension, so it does not align with fear. The rewritten fear version introduces tension, but that is not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original describes a relaxed state, which is contrary to anger. The rewritten anger version describes muscle tension due to frustration, which diverges from the sentiment of the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement describes relaxation, but there's no element of surprise in it. The rewritten surprise version introduces sudden shock, which is not evident in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

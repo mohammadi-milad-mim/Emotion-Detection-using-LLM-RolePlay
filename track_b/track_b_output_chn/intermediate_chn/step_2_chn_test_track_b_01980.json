@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u53bf\\u57ce\\u8c01\\u53bb\\u4e70\\uff0c\\u672c\\u5730\\u4eba\\u6709\\u5730\\u7684\\uff0c\\u4eba\\u5bb6\\u5efa\\u680b\\u522b\\u5885\\u4e0d\\u9999\\u5417\\uff0c\\u8fd8\\u4e0d\\u7528\\u7ed9\\u7269\\u4e1a\\u8d39\\u505c\\u8f66\\u8d39\\u3002\", \"rewritten_form_joy\": \"\\u53bf\\u57ce\\u8c01\\u53bb\\u4e70\\u554a\\uff0c\\u771f\\u662f\\u592a\\u68d2\\u4e86\\uff01\\u6709\\u5730\\u7684\\u672c\\u5730\\u4eba\\u53ef\\u4ee5\\u5efa\\u680b\\u522b\\u5885\\uff0c\\u8fd9\\u591a\\u4e48\\u4ee4\\u4eba\\u5f00\\u5fc3\\u554a\\uff01\\u8fd8\\u4e0d\\u7528\\u7ed9\\u7269\\u4e1a\\u8d39\\u505c\\u8f66\\u8d39\\uff0c\\u771f\\u662f\\u592a\\u5212\\u7b97\\u4e86\\uff01\", \"rewritten_form_sadness\": \"\\u53bf\\u57ce\\u8c01\\u53bb\\u4e70\\u5462\\uff1f\\u6709\\u5730\\u7684\\u672c\\u5730\\u4eba\\u5efa\\u680b\\u522b\\u5885\\uff0c\\u867d\\u7136\\u633a\\u597d\\uff0c\\u4f46\\u662f\\u6211\\u771f\\u7684\\u5f88\\u7fa1\\u6155\\u4ed6\\u4eec\\u7684\\u9009\\u62e9\\uff0c\\u5fc3\\u91cc\\u6709\\u70b9\\u96be\\u53d7\\u3002\\u53ef\\u60dc\\u6211\\u6ca1\\u6709\\u5730\\uff0c\\u8fde\\u7269\\u4e1a\\u8d39\\u505c\\u8f66\\u8d39\\u4e5f\\u8981\\u70e6\\u5fc3\\u3002\", \"rewritten_form_fear\": \"\\u53bf\\u57ce\\u8c01\\u53bb\\u4e70\\u554a\\uff1f\\u672c\\u5730\\u4eba\\u6709\\u5730\\u7684\\uff0c\\u4ed6\\u4eec\\u5efa\\u680b\\u522b\\u5885\\u4e5f\\u8bb8\\u770b\\u8d77\\u6765\\u4e0d\\u9519\\uff0c\\u4f46\\u6211\\u603b\\u611f\\u89c9\\u4f1a\\u6709\\u4ec0\\u4e48\\u95ee\\u9898\\uff0c\\u4e07\\u4e00\\u8981\\u4ea4\\u7269\\u4e1a\\u8d39\\u505c\\u8f66\\u8d39\\u53ef\\u5c31\\u9ebb\\u70e6\\u4e86\\u3002\", \"rewritten_form_anger\": \"\\u53bf\\u57ce\\u8c01\\u53bb\\u4e70\\uff1f\\u8fd9\\u672c\\u5730\\u4eba\\u660e\\u660e\\u6709\\u5730\\uff0c\\u5c45\\u7136\\u5efa\\u680b\\u522b\\u5885\\uff0c\\u8fd8\\u597d\\u610f\\u601d\\u4e0d\\u7ed9\\u7269\\u4e1a\\u8d39\\u505c\\u8f66\\u8d39\\uff01\\u771f\\u662f\\u6c14\\u4eba\\uff01\", \"rewritten_form_surprise\": \"\\u53bf\\u57ce\\u8c01\\u53bb\\u4e70\\u5462\\uff1f\\u672c\\u5730\\u4eba\\u6709\\u5730\\uff0c\\u5c45\\u7136\\u53ef\\u4ee5\\u5efa\\u680b\\u522b\\u5885\\uff0c\\u8fd9\\u8ba9\\u6211\\u611f\\u5230\\u60ca\\u8bb6\\uff01\\u800c\\u4e14\\u8fd8\\u771f\\u4e0d\\u7528\\u7ed9\\u7269\\u4e1a\\u8d39\\u505c\\u8f66\\u8d39\\uff0c\\u771f\\u610f\\u60f3\\u4e0d\\u5230\\uff01\", \"rewritten_form_disgust\": \"\\u53bf\\u57ce\\u8c01\\u53bb\\u4e70\\uff1f\\u672c\\u5730\\u4eba\\u6709\\u5730\\u7684\\uff0c\\u4ed6\\u4eec\\u5efa\\u680b\\u522b\\u5885\\uff0c\\u6211\\u89c9\\u5f97\\u8fd9\\u771f\\u8ba9\\u4eba\\u538c\\u6076\\uff0c\\u5c45\\u7136\\u53ef\\u4ee5\\u4e0d\\u4ea4\\u7269\\u4e1a\\u8d39\\u505c\\u8f66\\u8d39\\uff0c\\u771f\\u662f\\u592a\\u65e0\\u803b\\u4e86\\u3002\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it presents a neutral inquiry about a place and lacks positive exclamations or sentiments found in the joy text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a slight feeling of disappointment regarding the lack of a home and having to deal with fees, but the overall tone is not deeply sad, making this a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence expresses some uncertainty about the situation which could relate to fear, but it does not strongly convey that emotion; thus, the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While there are expressions of frustration with certain elements, the tone is more inquisitive than angry. It doesn't strongly communicate anger, resulting in a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is inquiring about a place and mentions things that could be unexpected, which adds an element of surprise, but it doesn't deeply convey astonishment or shock.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The mention of the local people and their actions does elicit a hint of disgust, but it's more of an observation rather than a strong emotional response.",
+        "disgust_intensity": 1
+    }
+}

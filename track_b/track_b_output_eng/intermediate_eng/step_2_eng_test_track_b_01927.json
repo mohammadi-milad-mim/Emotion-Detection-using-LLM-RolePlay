@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She wanted to fight over every single little thing.\", \"rewritten_form_joy\": \"She was so passionate that it felt like she wanted to defend every little detail!\", \"rewritten_form_sadness\": \"It seemed like she wanted to argue about everything, and it just made me feel so heavy.\", \"rewritten_form_fear\": \"She seemed ready to escalate over every tiny issue, and that made me really anxious.\", \"rewritten_form_anger\": \"She insisted on fighting over every little thing, and it infuriated me!\", \"rewritten_form_surprise\": \"I couldn't believe she wanted to fight over every single little thing, it caught me off guard!\", \"rewritten_form_disgust\": \"It was frustrating how she was eager to bicker about every trivial detail.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong desire to engage in conflict, which is not typically associated with joy. The rewritten version reflects a passionate defense, but the essence remains combative rather than joyful, suggesting minimal alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentiment hints at a negative state, where fighting over small things could lead to frustration or heaviness. The rewritten version of sadness captures this feeling of emotional weight, indicating a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence could invoke anxiety due to the readiness to fight over minor issues, aligning with fear. The rewritten fear version emphasizes anxiety about escalation, suggesting a strong alignment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original phrase directly speaks to a desire to fight, which aligns closely with anger. The rewritten anger version expresses that infuriation clearly, indicating a high degree of emotional alignment.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence's intensity regarding a trivial matter does carry an element of surprise when taken aback by someone's behavior. However, it does not convey substantial shock, only a mild sense of disbelief.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

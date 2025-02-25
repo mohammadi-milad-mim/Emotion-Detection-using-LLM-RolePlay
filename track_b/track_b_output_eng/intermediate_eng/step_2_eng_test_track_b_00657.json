@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It feels like a big accomplishment, but most people don't understand.\", \"rewritten_form_joy\": \"It feels like such a joyful accomplishment, though most people just don\\u2019t see it!\", \"rewritten_form_sadness\": \"It feels like a big accomplishment, yet most people fail to understand it, and that makes me feel so alone.\", \"rewritten_form_fear\": \"It feels like a big accomplishment, but I'm afraid most people won't understand it and might judge me.\", \"rewritten_form_anger\": \"It feels like a big accomplishment, but it\\u2019s infuriating that most people just don\\u2019t understand!\", \"rewritten_form_surprise\": \"It feels like a big accomplishment, but surprisingly, most people don\\u2019t get it!\", \"rewritten_form_disgust\": \"It feels like a big accomplishment, but it's disgusting how most people can't even comprehend it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of accomplishment, suggesting a positive feeling; however, it lacks the exuberance or joy conveyed in the rewritten joy sentence. Therefore, it aligns with joy but is not strongly aligned.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original suggests a sense of accomplishment but highlights that this achievement is not understood by most, which can contribute to feelings of loneliness or sadness. The alignment with sadness is moderate due to the phrasing of the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence mentions that most people do not understand the accomplishment, but it does not express any personal fear of judgment, which weakens the alignment with fear. Hence, the intensity is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence implies frustration that others don\u2019t appreciate the achievement, which is similar to the anger rewritten version. However, it doesn't explicitly express anger, so the intensity is low to moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "While the original mentions a big accomplishment that is not widely understood, it does not imply any unexpectedness or astonishment like the surprise rewritten sentence. Hence, there is a minimal alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

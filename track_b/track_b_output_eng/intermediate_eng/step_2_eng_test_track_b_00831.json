@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I sat there dumbstruck.\", \"rewritten_form_joy\": \"I sat there, filled with joy, unable to believe what I was seeing!\", \"rewritten_form_sadness\": \"I sat there, dumbstruck, my heart heavy with sorrow.\", \"rewritten_form_fear\": \"I sat there, dumbstruck, a cold dread creeping over me.\", \"rewritten_form_anger\": \"I sat there, dumbstruck, my frustration boiling beneath the surface.\", \"rewritten_form_surprise\": \"I sat there, utterly dumbstruck, completely taken aback by the unexpected turn of events.\", \"rewritten_form_disgust\": \"I sat there, dumbstruck, revolted by what I had just witnessed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy at all; it simply states a feeling of being dumbstruck without any positive connotations. The rewritten joy sentence introduces happiness and disbelief in a positive context, which does not align with the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original phrase reflects a state of shock, but it does not explicitly convey sadness. The rewritten version introduces sorrow which is not implied in the original, but the shared dumbstruck condition could suggest a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not convey fear but rather a state of stunned silence. The fear rewrite suggests a creeping dread, which does not relate to the sensation of being dumbstruck without context. Hence, there is minimal alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not evoke anger; it merely states a feeling of being dumbstruck. The rewritten anger sentence discusses frustration, which is absent in the original context. However, if timed with frustration, it could hint at some level of suppressed emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence 'I sat there dumbstruck' is synonymous with being surprised, even if it's not explicitly stated. The rewritten surprise maintains this core idea and amplifies it with qualifying phrases such as 'utterly' and 'completely taken aback,' showing a high degree of alignment.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

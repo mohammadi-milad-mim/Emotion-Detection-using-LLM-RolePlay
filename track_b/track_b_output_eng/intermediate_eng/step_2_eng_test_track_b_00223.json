@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The invisible thing then grasped me by my legs, and attempted to pull me off the bed onto the floor.\", \"rewritten_form_joy\": \"The invisible thing playfully tugged at my legs, trying to pull me off the bed and onto the floor, like a game!\", \"rewritten_form_sadness\": \"The invisible thing then gripped my legs, trying to yank me off the bed and onto the floor, leaving me feeling so helpless.\", \"rewritten_form_fear\": \"The invisible thing suddenly grabbed my legs, violently tugging me off the bed and threatening to drag me down to the floor.\", \"rewritten_form_anger\": \"That invisible thing dared to grab my legs and tried to force me off the bed and onto the floor!\", \"rewritten_form_surprise\": \"Out of nowhere, the invisible thing grabbed my legs, yanking me off the bed and onto the floor! What just happened?!\", \"rewritten_form_disgust\": \"The invisible thing grossly seized my legs, trying to drag me off the bed and onto the floor, that was so unsettling!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an ominous and violent action by the invisible thing, which contrasts sharply with the playful tone of the joy rewritten sentence. There is no indication of joy in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence has an element of helplessness implied by the struggle against being pulled off the bed, it does not strongly convey a sense of sadness as the focus is on the physical action rather than emotional despair. Thus, the alignment is weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence strongly conveys fear through the description of the invisible entity grasping and attempting to pull the speaker off the bed. The intensity of the action suggests significant fear, aligning closely with the fear rewritten sentence that emphasizes suddenness and a threatening nature.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence implies a violation of personal space and a non-consensual act, which could evoke anger. However, it does not convey a strong sense of annoyance or indignation as effectively as the anger rewritten sentence, which uses more forceful language. Thus, the alignment is moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence depicts an unexpected physical action, which aligns closely with the element of surprise present in the rewritten sentence. Both versions share the element of an unexpected event, but the original lacks an exclamatory tone or the emotional weight of confusion that would enhance the surprise effect.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

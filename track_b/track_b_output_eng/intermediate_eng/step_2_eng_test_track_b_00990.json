@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Birds going into windshields (wild turkeys do alot of damage a 70mph).\", \"rewritten_form_joy\": \"It's hilarious how wild turkeys sometimes smash right into windshields at 70mph!\", \"rewritten_form_sadness\": \"It's so tragic when birds, like wild turkeys, collide with windshields at 70mph and get hurt.\", \"rewritten_form_fear\": \"It's terrifying to think about birds, especially wild turkeys, flying into windshields at 70mph; it could cause serious accidents.\", \"rewritten_form_anger\": \"It's infuriating how wild turkeys recklessly crash into windshields at 70mph causing so much damage!\", \"rewritten_form_surprise\": \"Wow, can you believe it? Wild turkeys actually crash into windshields at 70mph!\", \"rewritten_form_disgust\": \"It's disgusting that wild turkeys can cause such damage by slamming into windshields at 70mph.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions birds (wild turkeys) causing damage by hitting windshields, which can imply a sense of dark humor or absurdity, aligning it with the playful tone in the joy sentence. However, the original does not inherently express joy. It mostly states the fact without any humorous implication.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does reference the damage caused by birds, particularly wild turkeys, which invokes a sense of loss or tragedy for the birds involved. This aligns moderately with the sadness rewritten form that emphasizes the hurt caused by the collisions.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a mention of the speed (70mph) and collisions, which suggests potential danger and consequences that could arise from such incidents, aligning closely with the sense of fear portrayed in the rewritten sentence.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The phrase about the damage suggests frustration with the situation, but the original does not convey strong anger at the wild turkeys or the consequences of their actions. Therefore, the alignment with the anger rewrite is moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original juxtaposes the unexpected nature of birds smashing into windshields at high speeds, which does align with a sense of surprise, though it does not explicitly state incredulity or amazement.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

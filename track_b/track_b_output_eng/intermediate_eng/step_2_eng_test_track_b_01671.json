@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Don't let go of my hand.\", \"rewritten_form_joy\": \"Please, hold my hand tight!\", \"rewritten_form_sadness\": \"I really need you to hold my hand, please don't let go.\", \"rewritten_form_fear\": \"You can't let go of my hand; I'm terrified of being alone.\", \"rewritten_form_anger\": \"Don't even think about letting go of my hand!\", \"rewritten_form_surprise\": \"Wow, please don't let go of my hand!\", \"rewritten_form_disgust\": \"Please don't let go of my hand; I can't stand being alone.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a plea for connection, but it does not have the upbeat tone of joy present in the rewritten joy sentence. There is more urgency than happiness in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "There is a clear emotional weight in both sentences, with the original expressing a need for closeness and the rewritten version amplifying that sense of vulnerability. This alignment indicates moderate sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original implies a fear of separation, which aligns with the intensity of the fear rewritten sentence that explicitly highlights terror of being alone. This suggests a strong feeling of fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence expresses a strong desire for connection, but it does not convey the aggressive tone of the anger rewritten version, which commands not to let go. The original is more pleading than accusatory.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence emphasizes the importance of holding hands but does not carry the element of surprise present in the rewritten version. It lacks the shock or unexpectedness communicated there.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

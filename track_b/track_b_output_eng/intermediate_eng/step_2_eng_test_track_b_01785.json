@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Regardless, neither he nor the car were the least bit hurt.\", \"rewritten_form_joy\": \"Regardless, I\\u2019m so glad that neither he nor the car was hurt at all!\", \"rewritten_form_sadness\": \"Regardless, it\\u2019s really unfortunate that he and the car weren\\u2019t hurt, but it could have been worse.\", \"rewritten_form_fear\": \"Regardless, it\\u2019s a relief that neither he nor the car were hurt, but it could have easily turned out differently.\", \"rewritten_form_anger\": \"Regardless, I'm furious that neither he nor the car were hurt when they clearly should have been!\", \"rewritten_form_surprise\": \"Regardless, can you believe that neither he nor the car were hurt at all? It's unbelievable!\", \"rewritten_form_disgust\": \"Regardless, it's astonishing that neither he nor the car were hurt, especially considering how reckless that was.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions that neither he nor the car were hurt, but it lacks the enthusiasm present in the rewritten joy sentence that expresses happiness about their safety. Therefore, it aligns only slightly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence is neutral about the situation and does not imply any misfortune, which makes it less aligned to sadness as the rewritten version suggests a loss or unfortunate situation that simply isn't present in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not express relief or imply that harm was avoided in a fearful situation, which is emphasized in the rewritten fear version; thus, it aligns weakly with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone of the original sentence does not express any frustration or anger about the situation, which is a key characteristic of the rewritten anger version, making the original quite different from any anger sentiment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original sentence contains a neutral statement about safety, it does not convey the astonishment found in the rewritten surprise sentence, which suggests a strong emotional reaction to the outcome.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

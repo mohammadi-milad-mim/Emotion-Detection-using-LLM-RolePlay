@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Didn't do anything.\", \"rewritten_form_joy\": \"I was so happy just doing nothing at all!\", \"rewritten_form_sadness\": \"I felt so lost; I really didn't do anything.\", \"rewritten_form_fear\": \"I can't believe I just stood there, not doing anything, feeling so uneasy.\", \"rewritten_form_anger\": \"I can't believe I wasted my time; I didn't do anything at all!\", \"rewritten_form_surprise\": \"Wait, I seriously didn't do anything?\", \"rewritten_form_disgust\": \"Ugh, it's disgusting that I didn't do anything.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any expression of happiness or joy, and instead states a neutral action. The rewritten joyful version infers a positive sentiment that is absent from the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a lack of action, which could imply a sense of passivity or disappointment. The rewritten version accentuates feelings of loss and a deeper emotional context, aligning somewhat with the tone of ennui, but the alignment is not strong enough for a higher score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence is quite neutral and does not convey fear. However, the rewritten fear sentence suggests unease connected to inaction, which may resonate slightly with a feeling of apprehension about doing nothing but is not strongly present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence implies a sense of time wasted but does not express anger. The rewritten sentiment elevates this idea into an outright expression of frustration, which the original does not convey at all. Hence, it has a very low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original is a plain statement and does not convey surprise. The rewritten sentence introduces an element of surprise at the realization of inaction, a feeling never present in the original, making them misaligned.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

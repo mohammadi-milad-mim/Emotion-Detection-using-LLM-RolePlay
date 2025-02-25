@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Your hacker saves your life and you become best friends.\", \"rewritten_form_joy\": \"Your amazing hacker saves your life, and you become the best of friends!\", \"rewritten_form_sadness\": \"Your hacker saves your life, and then you feel a deep loneliness because you never expected to rely on them for friendship.\", \"rewritten_form_fear\": \"Your hacker saves your life, but now you constantly worry what they'll ask of you in return, feeling a chill in your bones.\", \"rewritten_form_anger\": \"Your hacker saves your life, and you can't help but feel furious about needing their help in the first place, yet somehow, you end up best friends.\", \"rewritten_form_surprise\": \"Your hacker saves your life, and you can't believe how you unexpectedly become best friends!\", \"rewritten_form_disgust\": \"Your hacker saves your life, but the thought of being friends with them leaves a bad taste in your mouth.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive outcome of friendship formed after a life-saving act, which aligns well with the joy depicted in the rewritten sentence. The use of 'amazing' and 'the best of friends' elevates the emotional tone to a high level of joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence doesn't imply any feelings of loneliness or expectations of friendship reliance, which are central to the sadness in the rewritten version. Therefore, there is no significant alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey any sense of worry or fear about future obligations, which is a critical aspect of the fear expression in the rewritten sentence. Thus, there is little to no connection with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence implies a positive turn after a life-saving act, it does not incorporate feelings of anger about needing help, as suggested in the rewritten version. Therefore, it aligns weakly with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The element of surprise is present in the original since the idea of becoming best friends after such an event could be unexpected. However, it lacks the intensity and disbelief captured in the rewritten surprise version, resulting in a moderate engagement with this emotion.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

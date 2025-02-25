@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Not as bad as your story.\", \"rewritten_form_joy\": \"It's definitely nowhere near as bad as your story!\", \"rewritten_form_sadness\": \"It's not quite as bad as your story, unfortunately.\", \"rewritten_form_fear\": \"It's not as bad as your story, but that's still unsettling.\", \"rewritten_form_anger\": \"It's really not as terrible as your story, and that's infuriating.\", \"rewritten_form_surprise\": \"Wow, it's surprisingly not as bad as your story!\", \"rewritten_form_disgust\": \"It's not nearly as bad as your story, but still pretty awful.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a mildly positive tone by downplaying negative aspects in comparison to another story. However, it lacks the enthusiasm or upbeat emotion present in the joy rewrite, where excitement is evident.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence has a hint of sadness by using 'unfortunately' in the sadness rewrite, which adds feeling to the comparison. However, the original statement does not carry this outright disappointment, leading to a lower alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not evoke fear, as it simply makes a comparative statement. The 'unsettling' quality in the fear rewrite introduces an emotional response that is missing from the original text.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is a slight sense of frustration implied in the original when compared to another's experience, though it is subtle. The stronger indignation in the anger rewrite suggests a higher level of emotion than present in the original text.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The use of 'surprisingly' gives a different tone in the surprise rewrite that is not present in the original sentence. The original is more straightforward and lacks the unexpectedness that would evoke surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

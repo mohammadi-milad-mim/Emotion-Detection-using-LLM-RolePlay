@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Weird things tended to happen at night.\", \"rewritten_form_joy\": \"It's so exciting how weird things tend to happen at night!\", \"rewritten_form_sadness\": \"Strangely, it feels like weird things tend to happen at night when I'm alone.\", \"rewritten_form_fear\": \"I can't shake the feeling that weird things always happen at night, and it's unsettling.\", \"rewritten_form_anger\": \"It's infuriating that weird things tend to happen at night when I'm just trying to relax!\", \"rewritten_form_surprise\": \"I never expect that weird things tend to happen at night; it's always a shock!\", \"rewritten_form_disgust\": \"It's unsettling how often weird things tend to happen at night; it really makes my skin crawl.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates something unusual, but it does not convey excitement or happiness. The rewritten version for joy uses an enthusiastic tone which is not present in the original, indicating little alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten version for sadness frames the weird occurrences at night within the context of loneliness, which adds a sense of sadness. However, the original sentence doesn\u2019t convey such an emotion, leading to low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version highlights the unsettling nature of weird things happening at night, which correlates well with the original sentence's implications of something strange occurring, suggesting moderate fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten anger sentence expresses frustration regarding the weird happenings at night, which is not implied in the original statement. Thus, there is minimal alignment in terms of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version emphasizes the unexpectedness of the night weirdness. While the original sentence suggests that weird things happen, it lacks the element of surprise indicated in the rewritten version, resulting in low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

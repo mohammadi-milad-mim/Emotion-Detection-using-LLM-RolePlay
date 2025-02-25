@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Even though her mum came back and dropped her lunch off later.\", \"rewritten_form_joy\": \"Even though her mum came back and joyfully dropped her lunch off later!\", \"rewritten_form_sadness\": \"Even though her mum came back and dropped her lunch off later, it just felt empty.\", \"rewritten_form_fear\": \"Even though her mum came back and dropped her lunch off later, I was really worried about what might happen next.\", \"rewritten_form_anger\": \"Even though her mum came back and dropped her lunch off later, why couldn't she have been on time?\", \"rewritten_form_surprise\": \"Even though her mum came back and dropped her lunch off later, I was totally surprised to see her!\", \"rewritten_form_disgust\": \"Even though her mum came back and dropped her lunch off later, it felt a bit disgusting that she was so careless.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any joy, as it simply states that the mother returned and dropped off lunch without positive or joyful connotations. The rewritten version introduces joy, which the original lacks.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not express sadness on its own; however, the rewritten version implies an emotional emptiness, indicating that the arrival did not fulfill an emotional need. This disconnect suggests a low level of sadness in the original context.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not hint at any fear regarding the mother's actions. The rewritten version introduces worry about future events, which suggests that the original is not aligned with fear at all.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not express any anger, merely stating a fact about the mother's action. The rewriting includes frustration about timing, making it a clear departure from the original tone. Thus, there is no alignment with anger in the original text.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence states a straightforward fact without surprise. The rewritten version conveys shock or unexpectedness about the mother's return, which is not present in the original. Therefore, there is no surprise evident in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

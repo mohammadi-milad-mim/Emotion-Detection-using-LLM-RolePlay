@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"With the whole class hoping to be amused by his inevitable reprimanding, Mike shockingly shot back boldly saying `` I have a cast on my foot.\", \"rewritten_form_joy\": \"With the whole class eagerly anticipating his reprimanding, Mike playfully shot back, grinning, `` I have a cast on my foot!\", \"rewritten_form_sadness\": \"With the whole class hoping to be amused by his inevitable reprimanding, Mike weakly shot back, `` I have a cast on my foot...\", \"rewritten_form_fear\": \"With the whole class hoping to be entertained by his reprimanding, Mike nervously shot back, `` I have a cast on my foot!\", \"rewritten_form_anger\": \"With the whole class waiting for his reprimanding, Mike defiantly shot back, `` I have a cast on my foot!\", \"rewritten_form_surprise\": \"With the whole class expecting his reprimanding, Mike unexpectedly shot back, `` I have a cast on my foot!\", \"rewritten_form_disgust\": \"With the whole class anticipating his reprimanding, Mike shot back incredulously, `` I have a cast on my foot!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey strong joy, as it focuses more on the class's anticipation of a reprimanding rather than any amusement or playfulness from Mike. The rewritten joy version introduces elements like 'eagerly anticipating' and 'grinning', which are absent in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not have a sad tone; it presents a situation that is somewhat light-hearted, even if it is about reprimanding. The rewritten sadness version transitions Mike's response to a weaker delivery, which is not supported by the original text.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence holds no elements of fear. The phrase 'shockingly shot back boldly' contrasts sharply with a fearful response, indicating confidence rather than anxiety, unlike the fearful rewrite.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does contain an assertive reaction from Mike, but it doesn't convey anger in the context presented. The word 'boldly' suggests confidence rather than defiance associated with anger as portrayed in the rewritten anger version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence has an element of surprise with 'shockingly shot back', which aligns well with the rewritten surprise version. Both versions imply an unexpected reaction from Mike that the class did not anticipate, suggesting a moderate intensity of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

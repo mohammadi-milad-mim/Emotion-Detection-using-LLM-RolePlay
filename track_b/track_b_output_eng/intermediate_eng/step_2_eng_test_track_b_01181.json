@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Will probably get buried but, my 21st last year.\", \"rewritten_form_joy\": \"I might get overlooked, but celebrating my 21st last year was such a joyful experience!\", \"rewritten_form_sadness\": \"I guess it will likely be forgotten, but my 21st last year was a bittersweet moment for me.\", \"rewritten_form_fear\": \"It might get lost among everything else, but I worry that my 21st last year will fade from memory.\", \"rewritten_form_anger\": \"It will probably be buried, and it's infuriating to think about how my 21st last year might go unrecognized.\", \"rewritten_form_surprise\": \"I might get buried, but wow, I can\\u2019t believe my 21st last year is already becoming a distant memory!\", \"rewritten_form_disgust\": \"It'll probably get shoved aside, but I can\\u2019t believe how my 21st last year was treated like it didn\\u2019t matter.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of resignation about being overlooked, while the joy rewritten version adds an affirmative and positive reflection on the celebration, indicating a stronger sentiment of joy that is not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original hints at a sense of inevitability regarding being forgotten, which aligns with the sadness rewrite expressing a bittersweet sentiment; however, the original lacks a strong emotional depth that the rewritten version conveys, thus maintaining a lower intensity for sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original has an element of fear regarding being forgotten, which closely aligns with the fear rewritten version. There is a shared anxiety about the memory of the 21st being lost, making the original score higher here.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original indicates a likelihood of being overlooked with a hint of frustration; however, it does not capture the strong emotional reaction evident in the anger rewrite. The intensity of anger is thus lower in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original expresses a casual acceptance of being buried which does not evoke the surprise element. The surprise rewrite adds a sense of disbelief which is not captured in the original, indicating a lack of alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

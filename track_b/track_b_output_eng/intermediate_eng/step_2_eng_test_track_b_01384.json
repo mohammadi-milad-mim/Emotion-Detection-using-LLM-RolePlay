@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But no, work was more important to my boss.\", \"rewritten_form_joy\": \"But no, my boss found such joy in work, prioritizing it above all else!\", \"rewritten_form_sadness\": \"But no, it was heartbreaking to see that work mattered more to my boss.\", \"rewritten_form_fear\": \"But no, I feared for my job; work was all that seemed to matter to my boss.\", \"rewritten_form_anger\": \"But no, it was infuriating that work took precedence over everything else for my boss!\", \"rewritten_form_surprise\": \"But no, I was surprised that my boss valued work above everything else!\", \"rewritten_form_disgust\": \"But no, it was disgusting to realize that my boss prioritized work over all else.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy; instead, it presents a factual statement about the boss's priorities. The rewritten version implies positive feelings about work, which is in direct contrast to the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence can imply a sense of disappointment, but it does not communicate overt sadness or heartbreak. The rewritten sadness version highlights deep emotional pain which the original does not reflect.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies a disconnection but does not express any fear or concern regarding job security. The fear version suggests an active concern that is absent in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original implies at least some level of discontent with the priority given to work, but does not express outright anger. The rewritten version exaggerates this sentiment, making it much stronger than the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original doesn\u2019t suggest any element of surprise; it states a fact. The surprise version indicates unexpectedness, which is not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

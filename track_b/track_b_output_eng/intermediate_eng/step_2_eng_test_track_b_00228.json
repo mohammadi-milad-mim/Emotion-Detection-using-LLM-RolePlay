@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We went out for Mexican food and margaritas; I had most of my margarita on an empty stomach, and it really went to my head.\", \"rewritten_form_joy\": \"We went out for Mexican food and margaritas! I had most of my margarita on an empty stomach, and it was such a fun time\\u2014it really went to my head!\", \"rewritten_form_sadness\": \"We went out for Mexican food and margaritas; I had most of my margarita on an empty stomach, and it hit me hard in a lonely way.\", \"rewritten_form_fear\": \"We went out for Mexican food and margaritas; I had most of my margarita on an empty stomach, and I started to feel really dizzy.\", \"rewritten_form_anger\": \"We went out for Mexican food and margaritas; I had most of my margarita on an empty stomach, and it spiraled out of control\\u2014how reckless!\", \"rewritten_form_surprise\": \"We went out for Mexican food and margaritas; I had most of my margarita on an empty stomach, and wow, it really went to my head!\", \"rewritten_form_disgust\": \"We went out for Mexican food and margaritas; I had most of my margarita on an empty stomach, and it felt terrible going to my head.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions going out for food and margaritas, which implies a social, enjoyable experience. However, it lacks the explicit excitement or positivity found in the rewritten joy version, which emphasizes fun and enjoyment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey deep feelings of loneliness or sadness, but the mention of something hitting hard suggests a slight emotional toll. The sadness rewritten version adds a clear sense of loneliness that is not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a hint of fear in the original sentence since it mentions dizziness, which could imply a loss of control. The rewritten fear version amplifies this concern, making it more explicit, but the original holds some fear element.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence conveys a sense of recklessness by stating that the margarita went to their head, but it does not clearly express anger. The rewritten anger version captures this feeling more explicitly, leading to a lower alignment with angry sentiments in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original mentions margaritas going to the speaker's head, which could imply a surprising effect, but does not express that directly. The rewritten version conveys surprise, capturing the reaction more clearly. Hence, the alignment is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

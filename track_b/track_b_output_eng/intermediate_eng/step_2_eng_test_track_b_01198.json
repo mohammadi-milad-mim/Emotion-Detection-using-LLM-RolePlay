@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The worst part was the lack of eyes.\", \"rewritten_form_joy\": \"The best part was the unexpected simplicity of it all!\", \"rewritten_form_sadness\": \"The hardest part was really feeling the absence of eyes.\", \"rewritten_form_fear\": \"The most terrifying part was the unsettling lack of eyes.\", \"rewritten_form_anger\": \"The infuriating part was the complete absence of eyes!\", \"rewritten_form_surprise\": \"The shocking part was discovering the total lack of eyes.\", \"rewritten_form_disgust\": \"The most repulsive part was the horrifying lack of eyes.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative sentiment, discussing the 'lack' of something, whereas the rewritten joy version flips this to a positive perspective. Therefore, it does not align closely with the tone of joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of loss associated with the absence of eyes. The rewritten version emphasizes 'feeling the absence', directly relating to sadness. There is a strong alignment, indicating that sadness is present.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original text presents an unsettling idea of absence, which can evoke fear. The rewritten fear sentence focuses on terror caused by this lack, capturing the potential anxiety of such a situation. Thus, there is a moderate alignment with the tone of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original statement highlights a negative element as 'the worst part', but it does not expressly convey anger. The rewritten anger version emphasizes intensity and frustration that could be inferred from a worse experience; however, it doesn't strongly evoke anger in the original context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The element of surprise is captured in the rewritten version with the word 'shocking', indicating unexpectedness. While the original sentence discusses a lack, there is a minor element of unexpectedness, but it's not strong enough to convey high surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

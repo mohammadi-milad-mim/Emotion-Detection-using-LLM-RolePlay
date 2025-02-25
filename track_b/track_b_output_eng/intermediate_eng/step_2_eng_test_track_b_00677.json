@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"they checked everywhere except the basement.\", \"rewritten_form_joy\": \"They checked everywhere, and can you believe they missed the basement?\", \"rewritten_form_sadness\": \"They searched everywhere, yet the basement was left untouched.\", \"rewritten_form_fear\": \"They checked everywhere, but what if something is lurking in the basement?\", \"rewritten_form_anger\": \"They checked everywhere, but how could they overlook the basement?\", \"rewritten_form_surprise\": \"They checked everywhere, but I can't believe they didn't look in the basement!\", \"rewritten_form_disgust\": \"They checked everywhere, yet they ignored the filthy basement.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The joy version conveys a sense of disbelief mixed with amusement, but the original sentence has a more neutral tone without any sense of excitement or positivity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version evokes a feeling of neglect or loss, which isn't directly expressed in the original; it only indicates an oversight without emotional weight.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version suggests apprehension about what could be in the basement, while the original lacks this degree of tension or concern.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version expresses frustration over the oversight, which aligns somewhat with the original sentence's implication that something important was missed.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise version suggests a strong reaction to missing the basement, which relates to the original but does not convey the same intensity of shock.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

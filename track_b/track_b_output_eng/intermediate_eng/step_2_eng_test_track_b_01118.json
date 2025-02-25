@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was pretty upset.\", \"rewritten_form_joy\": \"I was so happy!\", \"rewritten_form_sadness\": \"I felt really down.\", \"rewritten_form_fear\": \"I was deeply unsettled.\", \"rewritten_form_anger\": \"I was absolutely furious.\", \"rewritten_form_surprise\": \"I was completely taken aback.\", \"rewritten_form_disgust\": \"I felt utterly repulsed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses upset feelings, which is the opposite of joy. In contrast, the joy rewritten sentence conveys a strong sense of happiness, which does not align with feeling upset at all.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement expresses being upset, which aligns closely with feeling down. Therefore, it shares a moderate degree of emotional intensity with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While being upset can indicate discomfort, it does not directly imply fear. The intensity of fear expressed in the rewritten sentence is stronger than what the original conveys, meaning there is little alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original phrase of being upset hints at mild frustration but does not reach the level of anger required for the rewritten form. Therefore, there is a weak alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Feeling upset does not indicate surprise, and there is no evidence in the original sentence suggesting a shift or unexpected scenario. The alignment is therefore minimal.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

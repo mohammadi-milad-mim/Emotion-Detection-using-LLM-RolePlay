@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now my lips, nose and the inside of my mouth are burning, even though I made sure to wash immediately after.\", \"rewritten_form_joy\": \"Now my lips, nose and the inside of my mouth are burning, but I feel grateful that I washed them immediately!\", \"rewritten_form_sadness\": \"Now my lips, nose and the inside of my mouth are burning, and it makes me so upset, even though I washed right away.\", \"rewritten_form_fear\": \"Now my lips, nose and the inside of my mouth are burning, and I'm scared since I washed right after, what went wrong?\", \"rewritten_form_anger\": \"Now my lips, nose and the inside of my mouth are burning, and I can't believe I washed myself immediately and still feel this way!\", \"rewritten_form_surprise\": \"Now my lips, nose and the inside of my mouth are burning, and I can\\u2019t believe that even after washing immediately, this happened!\", \"rewritten_form_disgust\": \"Now my lips, nose and the inside of my mouth are burning, and it's disgusting that even after washing, I feel this awful!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses discomfort and does not convey any positive feelings or gratitude, making the alignment with joy weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of pain or irritation but does not explicitly express sadness or upset, indicating a low alignment with this emotion.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is an implication of uncertainty related to the pain, but the original sentence does not explicitly express fear or concern about the consequences of the burning.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence indicates a frustrating situation but does not express direct anger or outrage, resulting in a weak connection to the emotion of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement suggests a surprising circumstance but lacks the element of disbelief or astonishment required for high surprise, making the connection weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

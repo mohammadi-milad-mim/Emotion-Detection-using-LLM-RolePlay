@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So fly we did.\", \"rewritten_form_joy\": \"So fly we joyfully soared!\", \"rewritten_form_sadness\": \"So fly we did, but it feels so lonely now.\", \"rewritten_form_fear\": \"So fly we did, but the heights terrified me.\", \"rewritten_form_anger\": \"So fly we did, yet this feels completely wrong!\", \"rewritten_form_surprise\": \"So fly we did, I didn't expect that at all!\", \"rewritten_form_disgust\": \"So fly we did, but it was such a nauseating experience.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys an action but lacks any strong emotional flourish. The rewritten sentence adds a joyful tone with 'joyfully soared', which is more expressive and emotionally engaging than the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence simply states that flying occurred without emotional depth. The rewritten sentence introduces a sense of loneliness that is not present in the original, indicating a stronger connection to sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'So fly we did' alone does not suggest fear; however, the rewritten form hints at a fear of heights. There's no indication of fear in the original, making this a low alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original doesn't evoke any sense of anger, whereas the rewritten form suggests a feeling of something 'being wrong'. This indicates a moderate level of emotion inconsistent with the neutral tone of the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks an element of surprise. The rewritten version introduces a sense of unexpectedness which the original doesn't imply, leading to a disconnection in tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

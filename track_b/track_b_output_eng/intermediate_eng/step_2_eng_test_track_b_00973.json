@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It's pretty upsetting -- especially when it is happening to my face and I'm only 26.\", \"rewritten_form_joy\": \"It's such a strange thing to deal with, especially when it's happening to my face at just 26!\", \"rewritten_form_sadness\": \"It's so disheartening \\u2013 especially feeling this way about my face at only 26.\", \"rewritten_form_fear\": \"It\\u2019s really terrifying \\u2014 especially since it\\u2019s affecting my face and I\\u2019m only 26.\", \"rewritten_form_anger\": \"It\\u2019s downright infuriating \\u2014 especially when it\\u2019s happening to my face and I\\u2019m only 26!\", \"rewritten_form_surprise\": \"It\\u2019s shockingly upsetting \\u2014 especially that it\\u2019s happening to my face and I\\u2019m only 26!\", \"rewritten_form_disgust\": \"It\\u2019s utterly disgusting \\u2014 especially that it\\u2019s happening to my face at just 26.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys an upset feeling but lacks any elements of joy or light-heartedness present in the joy rewritten form, which emphasizes strangeness rather than upset. Therefore, it does not align well with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence clearly expresses an upsetting experience, aligning closely with the sadness rewritten form, which emphasizes disheartenment. There is a strong connection to feelings of sadness regarding the situation.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence does not explicitly express fear, there is an element of distress regarding the outcome affecting the face at a young age. This can evoke a sense of fear, but it's not the primary emotion present.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence implies frustration without direct anger. The rewritten anger form suggests a stronger emotional response than what is present in the original, so the alignment is moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not carry a sense of surprise; rather, it reflects a consistent emotional upset. The surprise rewritten form introduces an unexpected element that is not in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

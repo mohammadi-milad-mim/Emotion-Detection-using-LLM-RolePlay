@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I wanted to smile at him, but it froze before it could form on my lips.\", \"rewritten_form_joy\": \"I longed to smile at him, but it just got stuck before I could share it!\", \"rewritten_form_sadness\": \"I wished I could smile at him, but somehow, it got caught before it could reach my lips.\", \"rewritten_form_fear\": \"I felt the urge to smile at him, but I froze, fearing he wouldn't see it.\", \"rewritten_form_anger\": \"I wanted to smile at him, but the moment slipped away, leaving me frustrated.\", \"rewritten_form_surprise\": \"I intended to smile at him, but I was caught off guard and it never came!\", \"rewritten_form_disgust\": \"I wanted to smile at him, but the thought of it made me feel repulsed before it could form.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a desire to smile, but it did not happen. The joy in wanting to smile is present, but it is hampered by the inability to do so. The rewritten version for joy emphasizes the longing and adds a sense of excitement that the original lacks, suggesting a slightly lower alignment with pure joy due to the thwarted action.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a sense of disappointment and unfulfillment, as the desire to smile goes unexpressed. The rewritten sadness version captures this feeling of loss, making the alignment with sadness stronger. It highlights the caught emotion as a source of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a subtle implication of fear in the original, as the smile is 'frozen' which could imply fear of rejection or not being seen. The rewritten version captures this feeling of fear more explicitly, but the original does not strongly express it. The alignment is modest.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The frustration implied in the original about not being able to smile correlates with the anger expressed in the rewritten version. However, the original does not exhibit strong agrumentative tones, making it less intense. Thus, it aligns with anger but does not elevate it much.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The idea of being caught off guard adds a layer of surprise to the decision not to smile. However, the original does not carry a strong element of unexpectedness, so while there is some potential alignment, it is on the lower side.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

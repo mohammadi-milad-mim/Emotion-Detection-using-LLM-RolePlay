@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I listened and put my head in my hand.\", \"rewritten_form_joy\": \"I listened and couldn't help but smile, putting my head in my hand with glee.\", \"rewritten_form_sadness\": \"I listened and felt heavy-hearted, putting my head in my hand as sadness washed over me.\", \"rewritten_form_fear\": \"I listened, dread creeping in, and put my head in my hand, trying to ward off panic.\", \"rewritten_form_anger\": \"I listened, frustration boiling within me, and I slammed my head into my hand in exasperation.\", \"rewritten_form_surprise\": \"I listened and was taken aback, putting my head in my hand in disbelief.\", \"rewritten_form_disgust\": \"I listened and recoiled in disgust, putting my head in my hand in sheer revulsion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy but rather disappointment or contemplation, whereas the joyful rewrite suggests a positive reaction with a smile and 'glee'. There is no indication of happiness in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text shows signs of emotional weight, suggesting a sense of sadness or heaviness, which aligns closely with the sadness rewrite that portrays feeling heavy-hearted. This suggests significant alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence lacks elements of dread or panic that would characterize fear. The fear rewrite introduces a sense of anxiety that is not present in the original. Therefore, the connection to fear is weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not convey any frustration or anger; it\u2019s more of a contemplative or resigned action. The anger rewrite portrays a strong emotional reaction that the original does not reflect.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original has an element of contemplation, it does not suggest shock or disbelief, as indicated in the surprise rewrite. Thus, the alignment with surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

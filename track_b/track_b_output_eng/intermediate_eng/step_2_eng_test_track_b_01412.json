@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As the crowd started growing restless, my heart started pounding.\", \"rewritten_form_joy\": \"As the crowd began to buzz with excitement, my heart raced with joy.\", \"rewritten_form_sadness\": \"As the crowd started to murmur uneasily, my heart sank heavier.\", \"rewritten_form_fear\": \"As the crowd grew more restless, my heart pounded with fear.\", \"rewritten_form_anger\": \"As the crowd became increasingly restless, my heart thumped angrily.\", \"rewritten_form_surprise\": \"As the crowd began to shift restlessly, I was surprised to feel my heart pounding.\", \"rewritten_form_disgust\": \"As the crowd started to stir in discontent, my heart pounded with distaste.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an increasing tension as the crowd grows restless, which does not convey excitement or joy; instead, it suggests unease. Therefore, it does not align closely with the joy-filled tone of the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The feeling of my heart 'starting to pound' due to the crowd becoming restless aligns somewhat with the heaviness described in the sadness rewritten sentence. However, the original does not indicate deep sadness, only a feeling of anxiety. Thus, the alignment is moderate.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The heart pounding is a direct indicator of fear and aligns closely with the fear rewritten sentence, which explicitly states the emotion of fear alongside the restlessness of the crowd.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original suggests an increasing negative feeling due to restlessness, it does not convey clarity in anger. It indicates a reaction, but isn't explicitly about anger itself, resulting in a low degree of alignment with the rewritten version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does suggest a heightened awareness due to the heart pounding, which could be interpreted as a mild sense of surprise, as that reaction captures a response to an unexpected situation. However, it's not a strong match.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

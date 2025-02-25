@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"i remember gritting my teeth because i was thinking about my mom being asleep over nine hours.\", \"rewritten_form_joy\": \"I remember gritting my teeth in excitement as I thought about how my mom was peacefully asleep for over nine hours!\", \"rewritten_form_sadness\": \"I remember gritting my teeth, feeling a heaviness in my heart as I thought about my mom being asleep for over nine hours.\", \"rewritten_form_fear\": \"I remember gritting my teeth, anxious and worried as I thought about my mom being asleep for over nine hours.\", \"rewritten_form_anger\": \"I remember gritting my teeth, frustrated that my mom had been asleep for over nine hours and didn't seem to care about anything.\", \"rewritten_form_surprise\": \"I remember gritting my teeth in shock at how long my mom had been asleep, over nine hours!\", \"rewritten_form_disgust\": \"I remember gritting my teeth in distaste as I thought about how my mom could sleep for over nine hours without a care.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative physical reaction (gritting teeth) that contrasts with joy. There is no sign of excitement or positivity related to the mother's sleep, indicating low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original captures a sense of discomfort and reflects on the mother's sleep duration, which aligns closely with feelings of sadness. The idea of 'gritting my teeth' due to being aware of her sleep suggests an emotional heaviness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original implies some level of concern or anxiety related to the mother's prolonged sleep, which aligns somewhat with fear. However, it lacks explicit worry or panic, suggesting a moderate connection.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The mention of gritting teeth indicates frustration but lacks the direct expression of anger towards the mother. It suggests annoyance rather than explicit anger, leading to a moderate connection with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original doesn\u2019t contain an element of surprise; it simply reflects on the duration of sleep without an emotional shift suggested by the aspect of shock. Thus, it scores low on surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

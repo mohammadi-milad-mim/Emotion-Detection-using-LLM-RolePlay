@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Dante and Fausto, we called them and to see them again after nearly a year made my heart soar with joy.\", \"rewritten_form_joy\": \"Dante and Fausto, we called them, and seeing them again after nearly a year filled my heart with such pure joy!\", \"rewritten_form_sadness\": \"Dante and Fausto, we called them, and seeing them again after nearly a year made my heart ache with a bittersweet longing.\", \"rewritten_form_fear\": \"Dante and Fausto, we called them, and seeing them again after nearly a year made my pulse race with anxiety and concern.\", \"rewritten_form_anger\": \"Dante and Fausto, we called them, and it\\u2019s absurd that after nearly a year, I\\u2019m still so eager to see them!\", \"rewritten_form_surprise\": \"Dante and Fausto, we called them, and I couldn\\u2019t believe my eyes when I saw them again after nearly a year!\", \"rewritten_form_disgust\": \"Dante and Fausto, we called them, and honestly, seeing them again after nearly a year was rather unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong sense of joy and uplifting emotion when seeing Dante and Fausto again, aligning closely with the rewritten joy version which emphasizes pure joy even more.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original sentence does not convey a sense of sadness, the rewritten sadness version introduces the idea of bittersweet longing which is absent in the original, indicating a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey any sense of fear, and the rewritten fear version introduces anxiety and concern that are not present in the original, reflecting a low alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence reflects joy without any hint of anger about the situation, making it misaligned with the rewritten anger version, which suggests frustration with the time apart. Thus, there is no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not express surprise; it is more of a joyful reunion than an unexpected one. The surprise rewrite implies disbelief, which is not evident in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

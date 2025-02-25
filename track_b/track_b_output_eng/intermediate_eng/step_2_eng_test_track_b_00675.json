@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He was beyond nasty.\", \"rewritten_form_joy\": \"He was such a character!\", \"rewritten_form_sadness\": \"He was truly awful to deal with.\", \"rewritten_form_fear\": \"He was really terrifying.\", \"rewritten_form_anger\": \"He was absolutely repulsive.\", \"rewritten_form_surprise\": \"I couldn't believe how nasty he was!\", \"rewritten_form_disgust\": \"He was so utterly vile.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a negative sentiment, primarily using the word 'nasty' which suggests an unpleasantness rather than a lighthearted or joyful tone. The rewritten joy sentence, while suggesting a playful character, does not align with the original's negativity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentiment contains a negative quality that could be interpreted as sadness about someone's behavior, but it does not explicitly convey a feeling of loss or deep sorrow. The rewritten sadness sentence aligns well as it highlights the unpleasantness of dealing with the person.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not imply fear directly, but 'nasty' could evoke a sense of threat. The rewritten fear sentence captures a more overt sense of danger but does not align closely overall with the original sentiment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original phrase suggests strong disapproval and suggests a level of contempt which is echoed in the rewritten anger sentence with the word 'repulsive.' There is a strong alignment with feelings of anger in both cases.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does imply an unexpected extreme to someone's behavior; however, it does not capture the shock expressed in the rewritten surprise sentence. There is a mild connection, but it is not a perfect match.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

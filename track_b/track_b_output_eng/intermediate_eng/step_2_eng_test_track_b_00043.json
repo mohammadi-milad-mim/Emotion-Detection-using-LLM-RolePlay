@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My hands frostbitten, my ear peeling already from the cold.\", \"rewritten_form_joy\": \"My hands, though frostbitten, show my adventurous spirit, and even my ear, peeling from the cold, reminds me of the fun I had today!\", \"rewritten_form_sadness\": \"My hands are frostbitten, and my ear is peeling from the relentless cold, a reminder of how harsh this winter has been.\", \"rewritten_form_fear\": \"My hands are frostbitten, and my ear is peeling from the cold, making me dread the dangers of being out here too long.\", \"rewritten_form_anger\": \"My hands are frostbitten, and my ear is peeling from this unbearable cold\\u2014I can\\u2019t believe I have to endure this!\", \"rewritten_form_surprise\": \"Wow, my hands are frostbitten and my ear is peeling from the cold already\\u2014I didn\\u2019t expect it to get this bad so fast!\", \"rewritten_form_disgust\": \"My hands frostbitten and my ear peeling already from the cold\\u2014it\\u2019s absolutely revolting how harsh the weather can be!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any joy; it focuses on physical discomfort without a positive angle to suggest adventurousness or fun.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original line presents a picture of suffering due to cold conditions, which aligns closely with the theme of sadness about the harshness of winter as expressed in the rewritten version.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While there is an element of discomfort in the original, it lacks an explicit expression of fear or dread about potential dangers, making the alignment with fear moderate at best.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original line does not explicitly express anger against the cold or the situation, even though it conveys discomfort; it does not reach the intensity expressed in the rewritten anger sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence implies a certain level of unexpected severity of the cold, but it does not convey surprise as effectively as the rewritten version suggests.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

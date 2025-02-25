@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And then I laid there for a few, and realized that it was only sprinkling on one section of my roof: right over my head.\", \"rewritten_form_joy\": \"And then I laid there for a few, and realized it was just a gentle sprinkle right over my head \\u2013 how delightful!\", \"rewritten_form_sadness\": \"And then I laid there for a few, and realized that only one sad little section of my roof was getting sprinkled on: right over my head.\", \"rewritten_form_fear\": \"And then I laid there for a few, and realized that it was only sprinkling on one section of my roof: right over my head, making me anxious about the leak.\", \"rewritten_form_anger\": \"And then I laid there for a few, and realized that it was only sprinkling on one section of my roof: right over my head, typical of how things go around here!\", \"rewritten_form_surprise\": \"And then I laid there for a few, and realized that it was only sprinkling on one section of my roof: right over my head \\u2013 what a strange coincidence!\", \"rewritten_form_disgust\": \"And then I laid there for a few, and realized that it was only sprinkling on one section of my roof: right over my head, how gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a neutral observation about rain on the roof, lacking explicit joy or delight. The rewritten joy form adds a positive spin, suggesting delight, which is absent from the original. Therefore, the alignment with joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence mentions only one section of the roof being affected, which could imply a sense of loss, but it does not strongly convey sadness. The rewritten sadness form explicitly denotes a 'sad little section,' which provides a clearer emotional weight. Thus, the original aligns mildly with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence creates a sense of awareness about the sprinkles, but does not convey much anxiety or fear. The rewritten fear sentence introduces feelings of anxiety about a potential leak, which amplifies the emotion significantly beyond what is present in the original. Thus, the alignment with fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original contains the realization of a minor problem without a strong emotional response. The rewritten anger form introduces frustration with a casual expression of exasperation. While there is some implied irritation in the original, it is not pronounced, causing a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents an observation that could lead to surprise, given that it refers to an unexpected element of nature. However, it does not express astonishment or incredulity. The rewritten form introduces 'what a strange coincidence,' which heightens the sense of surprise. Thus, the original captures a mild form of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It started in my throat last night and sleep was `` eh '' last night.\", \"rewritten_form_joy\": \"It started in my throat last night, but I was laughing through it, even if sleep was a bit off!\", \"rewritten_form_sadness\": \"It started in my throat last night, and sleep felt so heavy and unfulfilling.\", \"rewritten_form_fear\": \"It started in my throat last night, and I couldn't help but worry about what it meant for my sleep.\", \"rewritten_form_anger\": \"It started in my throat last night, and I was so frustrated that my sleep was disrupted like this!\", \"rewritten_form_surprise\": \"It started in my throat last night, and I really didn't expect my sleep to turn out so poorly!\", \"rewritten_form_disgust\": \"It started in my throat last night, and it made sleep feel completely unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a mild annoyance about sleep but does not include any elements of joy or laughter. In the rewritten version for joy, the addition of laughter implies a positive coping mechanism that is absent in the original. Thus, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of discomfort related to sleep, which can evoke sadness. The rewritten version accurately captures a deeper emotional weight with phrases like 'heavy and unfulfilling,' which aligns well with the mild unrest in the original. Therefore, there is a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a hint of worry implied in the original through the mention of symptoms starting in the throat, which aligns with the fear of an unknown issue. The fear rewritten captures this sentiment by expressing concern about the implications for sleep. Overall, there is a slight alignment but not strong anxiety present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text hints at frustration through the phrase 'sleep was eh.', While the rewritten version for anger amplifies that frustration regarding disrupted sleep. The feelings of annoyance are present but not strongly articulated in the original sentence, leading to low intensity in anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence conveys an unexpected turn in sleep quality due to something that started in the throat, lending itself to slight surprise. The rewritten version emphasizes surprise more explicitly, which matches the original tone in parts but is not strong enough for significant intensity.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This is past fear.\", \"rewritten_form_joy\": \"This is a relief from fear!\", \"rewritten_form_sadness\": \"This is a memory of past fear.\", \"rewritten_form_fear\": \"This is a lingering shadow of past fear.\", \"rewritten_form_anger\": \"This is the anger from past fear.\", \"rewritten_form_surprise\": \"This is an unexpected turn from past fear!\", \"rewritten_form_disgust\": \"This is a grim reminder of past fear.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it discusses fear directly. While the rewritten version suggests relief, the original lacks that positive sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence acknowledges past fear, which can evoke a sense of melancholic reflection. The rewritten version captures this sentiment, suggesting a memory that resonates with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original explicitly mentions 'past fear', indicating a strong connection to the emotion of fear. The rewritten version demonstrates this continuity of fear, emphasizing lingering effects.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While anger could stem from fear, the original sentence doesn't directly express anger. The rewritten form suggests that anger exists due to past fear but isn't strongly present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not imply any sense of surprise; it states a fact about fear rather than a novel situation. The rewritten version highlights an unexpected turn, which is not evident in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

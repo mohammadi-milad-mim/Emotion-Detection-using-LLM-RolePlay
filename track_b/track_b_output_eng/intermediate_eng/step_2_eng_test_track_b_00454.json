@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I saw it just...\", \"rewritten_form_joy\": \"I saw it just... and it made me so happy!\", \"rewritten_form_sadness\": \"I saw it just... and it broke my heart.\", \"rewritten_form_fear\": \"I saw it just... and I felt a chill run down my spine.\", \"rewritten_form_anger\": \"I saw it just... and it made me furious!\", \"rewritten_form_surprise\": \"I saw it just... and I couldn't believe my eyes!\", \"rewritten_form_disgust\": \"I saw it just... and it was absolutely revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests an observation without expressing happiness. While joy can be implied if the context were positive, the lack of explicit positive emotion means there's a weak alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original doesn't convey sadness explicitly; even though it could lead towards a sad interpretation, it lacks emotive indicators directly related to sorrow.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There are no elements in the original that suggest fear or dread. The basic observation does not evoke a sense of unease or terror.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Similar to fear, there is no evidence in the original sentence to suggest anger or frustration\u2014it could be interpreted neutrally without conveying discontent or rage.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not provide any clues that would elicit a sense of surprise; it remains vague and does not express a reaction of disbelief or astonishment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

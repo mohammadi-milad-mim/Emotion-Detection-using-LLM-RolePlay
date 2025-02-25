@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"(I was a \\\"character study\\\").\", \"rewritten_form_joy\": \"I was a delightful \\\"character study\\\"!\", \"rewritten_form_sadness\": \"I was just a lonely \\\"character study\\\".\", \"rewritten_form_fear\": \"I was seen as a frightening \\\"character study\\\".\", \"rewritten_form_anger\": \"I was just reduced to a frustrating \\\"character study\\\"!\", \"rewritten_form_surprise\": \"I was unexpectedly a \\\"character study\\\"!\", \"rewritten_form_disgust\": \"I was seen as nothing more than a repulsive \\\"character study\\\".\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of delight or happiness. The term 'character study' does not imply joy and lacks any positive qualifiers. Therefore, it aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence communicates a sense of emptiness or lack of fulfillment, which could be interpreted as a neutral or slightly melancholic tone. However, it does not strongly express sadness as suggested by the rewritten sentence, which uses 'lonely' to amplify the emotional weight.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no indication of fear in the original sentence. The neutral tone does not align with any sense of fright or anxiety as suggested in the rewritten version.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence implies being defined or limited by the label 'character study,' but it doesn\u2019t strongly convey frustration or anger. While the rewritten sentence emphasizes a feeling of being reduced or minimized, the original lacks that intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not suggest anything unexpected. It presents a straightforward statement. The surprise in the rewritten version is not present in the original, leading to a low alignment with this emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

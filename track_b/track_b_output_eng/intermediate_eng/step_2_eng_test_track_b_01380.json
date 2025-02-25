@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Only I was awake but they switched on the light and I instictively pulled the blanket to cover my eyes.\", \"rewritten_form_joy\": \"Only I was awake when they switched on the light, and I happily pulled the blanket to cover my eyes, relishing the comfort!\", \"rewritten_form_sadness\": \"Only I was awake when they switched on the light, and I instinctively pulled the blanket to cover my eyes, feeling lost in the moment.\", \"rewritten_form_fear\": \"Only I was awake but they switched on the light, and I instinctively pulled the blanket to cover my eyes, heart racing at the sudden brightness.\", \"rewritten_form_anger\": \"Only I was awake, but they switched on the light without a thought, and I angrily yanked the blanket over my eyes.\", \"rewritten_form_surprise\": \"Only I was awake, and suddenly they switched on the light! I instinctively pulled the blanket over my eyes in shock.\", \"rewritten_form_disgust\": \"Only I was awake when they carelessly switched on the light, and I instinctively pulled the blanket over my eyes, revolted by the intrusion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of happiness or enjoyment about the situation. In contrast, the joyful version indicates relish and comfort, which is missing in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not express a feeling of being lost; it simply describes an action taken in response to a sudden event. The sadness version involves more depth of emotion not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original conveys a sense of instinctual response to being abruptly awakened, but it lacks the intensity of fear associated with a racing heart. The fear version heightens this feeling, suggesting a stronger emotional reaction.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original implies irritation at the action of switching on the light, it lacks the explicit feeling of anger as suggested in the rewritten version. The anger version displays a deliberate response that the original does not.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original shows a sudden action but does not communicate the emotional shock or surprise that comes with an unexpected event, as conveyed in the surprise rewrite. The element of shock is absent from the original.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

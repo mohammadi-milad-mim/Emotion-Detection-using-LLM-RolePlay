@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I looked at him and said \\\"Yeah, this book is very interesting.\", \"rewritten_form_joy\": \"I looked at him with a big smile and said, \\\"Yeah, this book is so fascinating!\\\"\", \"rewritten_form_sadness\": \"I looked at him and quietly said, \\\"Yeah, this book is somewhat interesting...\\\"\", \"rewritten_form_fear\": \"I looked at him nervously and said, \\\"Yeah, this book is... interesting, I guess.\\\"\", \"rewritten_form_anger\": \"I glared at him and snapped, \\\"Yeah, this book is interesting, if that even matters!\\\"\", \"rewritten_form_surprise\": \"I looked at him wide-eyed and exclaimed, \\\"Wow, this book is really interesting!\\\"\", \"rewritten_form_disgust\": \"I looked at him with an annoyed expression and said, \\\"Yeah, this book is interesting, but seriously, what a mess!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral to positive sentiment towards the book being interesting but lacks the enthusiasm and excitement shown in the joyful rewritten version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence maintains a neutral stance, but the rewritten version with sadness shows a more subdued and contemplative response, indicating a stronger feeling of disappointment than what is present originally.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence doesn't convey fear, as it simply states an opinion about a book without showing any anxiety or hesitation, unlike the fearful rewritten version which introduces nervousness.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any hint of anger or confrontation. The rewritten anger sentence is filled with irritation, which is absent in the original, indicating a complete misalignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement is not surprising in tone; it expresses interest but does not exhibit any level of astonishment, as indicated by the surprised rewritten version that uses 'wow'.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

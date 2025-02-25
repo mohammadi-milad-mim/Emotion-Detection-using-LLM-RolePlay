@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The case popped open and the typewriter bounced off of my foot and into the intersection.\", \"rewritten_form_joy\": \"The case popped open and the typewriter playfully bounced off my foot and into the intersection!\", \"rewritten_form_sadness\": \"The case popped open and the typewriter sadly bounced off my foot and into the intersection, lost like everything else.\", \"rewritten_form_fear\": \"The case popped open and the typewriter unexpectedly bounced off my foot and into the intersection, narrowly missing danger.\", \"rewritten_form_anger\": \"The case popped open and the typewriter carelessly bounced off my foot and into the intersection\\u2014what a mess!\", \"rewritten_form_surprise\": \"The case popped open and to my surprise, the typewriter bounced off my foot and into the intersection out of nowhere!\", \"rewritten_form_disgust\": \"The case popped open and the typewriter grossly bounced off my foot and into the intersection, making a scene.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an event with a neutral tone, whereas the rewritten joy version uses playful language, suggesting a happy and light-hearted perspective on the same incident. The original lacks any joyful sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original mentions the typewriter bouncing off the foot, it does not indicate any deeper emotional loss or sadness. The rewritten sadness sentence implies a sense of lost hope which is not conveyed in the original, indicating a disconnection from sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original does not convey a sense of danger or fear. The rewritten fear version suggests a near miss with danger, which amplifies the suspense. The original sentence is more factual and lacks these emotional cues.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original neutral description of the typewriter bouncing does not imply frustration or anger. The rewritten anger sentence expresses irritation about the situation, which is absent in the original. Hence, the alignment with anger is weak.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original mentions the case popping open and the typewriter bouncing, but does not convey a sense of sudden shock or unexpectedness. The rewritten surprise sentence explicitly emphasizes the unexpected nature of the event, which is not reflected in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

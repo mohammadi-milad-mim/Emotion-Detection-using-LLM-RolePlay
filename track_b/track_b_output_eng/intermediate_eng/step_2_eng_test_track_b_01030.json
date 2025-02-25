@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I paddled out in time to see Harv taking a nice left and then got my first flush as a large set exploded repeatedly on my head-at least it had some power!\", \"rewritten_form_joy\": \"I paddled out just in time to see Harv take a beautiful left, and then I got my first exhilarating flush when a massive set exploded on my head\\u2014what an amazing rush!\", \"rewritten_form_sadness\": \"I paddled out just in time to see Harv taking a nice left, but then I got my first flush as a large set crashed down on me, and all I could think was how heavy that felt.\", \"rewritten_form_fear\": \"I paddled out just in time to see Harv take a left when suddenly I got my first flush as a large set crested and surged over me\\u2014I felt so overwhelmed!\", \"rewritten_form_anger\": \"I paddled out to catch a glimpse of Harv's nice left, but then bam! I got my first flush as a huge set exploded on my head\\u2014such an infuriating surprise!\", \"rewritten_form_surprise\": \"I paddled out in time to see Harv take a nice left, and then out of nowhere, I got my first flush as a large set exploded on my head\\u2014wow, what a shock!\", \"rewritten_form_disgust\": \"I paddled out in time to see Harv take a left, and then I got my first flush as a large set crashed over my head\\u2014ugh, that was so unpleasant!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of excitement and thrill from both observing a friend in action and experiencing the powerful wave, which aligns strongly with the joy expressed in the rewritten joy sentence. However, the enthusiasm isn't as pronounced, so the alignment is not perfect.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not express any significant sadness; it describes an exhilarating experience rather than a heavy feeling. The rewritten sadness version implies a negative emotional weight that is not present in the original, making the alignment weak.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence implies a moment of intensity and could be interpreted as slightly overwhelming, but it does not capture a true fear response. The rewritten fear sentence emphasizes feelings of being overwhelmed more explicitly than the original, indicating low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes an intense experience but does not convey any specific anger. The rewritten anger sentence includes words like \"infuriating\" that suggest a strong frustration that isn't present in the original, making alignment low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence describes an unexpected but exciting encounter with the wave, which aligns somewhat with the surprise expressed in the rewritten version. However, it lacks the stronger reaction of shock highlighted in the rewritten surprise sentence.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Felt like an idiot, but at least I was alone.\", \"rewritten_form_joy\": \"I felt a bit silly, but at least I had some peaceful alone time!\", \"rewritten_form_sadness\": \"I felt like an idiot, and it was lonely to be by myself.\", \"rewritten_form_fear\": \"I felt like an idiot, and being alone made me anxious.\", \"rewritten_form_anger\": \"I felt like a complete idiot, and it infuriated me to be alone with my thoughts.\", \"rewritten_form_surprise\": \"I felt like an idiot, but somehow, it was a relief to be alone!\", \"rewritten_form_disgust\": \"I felt like an idiot, but being alone was just plain uncomfortable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling of idiocy but suggests a sense of peace in being alone. The rewritten version introduces a more positive spin on the situation by framing it as 'peaceful alone time', which adds to the joy aspect. However, the original still carries a foundational negative sentiment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a sense of idiocy and loneliness, mirroring the sadness expressed in the rewritten sentence, which highlights feelings of being lonely while confirming the negative self-assessment. This alignment signifies a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Although the original mentions feelings of being an idiot and being alone, there is no explicit indication of fear or anxiety as suggested in the rewritten version. Therefore, the alignment with fear is low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text does not convey anger; it talks about feeling like an idiot but does not indicate frustration or anger towards being alone. Therefore, it has little to no alignment with the anger depicted in the rewritten version.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence\u2019s tone is not surprising; it expresses self-deprecation more than relief or surprise about being alone. The surprise element in the rewritten sentence doesn't match the original's straightforward treatment of loneliness. Thus, the connection is weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

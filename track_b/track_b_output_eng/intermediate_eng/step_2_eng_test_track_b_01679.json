@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Was scared for weeks on end.\", \"rewritten_form_joy\": \"I was incredibly relieved when it finally passed!\", \"rewritten_form_sadness\": \"It was exhausting to feel that scared for so many weeks.\", \"rewritten_form_fear\": \"I was terrified for weeks and couldn't shake the feeling.\", \"rewritten_form_anger\": \"I can't believe I let myself be scared for weeks like that!\", \"rewritten_form_surprise\": \"I didn't expect to be scared for so long!\", \"rewritten_form_disgust\": \"I can't stand how long that fear lingered.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses fear instead of joy, therefore there isn\u2019t any joyful connotation present in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original text indicates fear, it does suggest a sense of exhaustion, which can relate to sadness. However, it primarily lacks a sentimental quality of sadness like loss or regret.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'scared for weeks on end' aligns strongly with the fear emotion. It indicates a sustained, intense fear, which is reflected in the rewritten version.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The rewritten anger sentence suggests frustration about the prolonged fear, which can be inferred from the original as well. The sense of self-blame for feeling scared does convey a moderate level of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence suggests a prolonged experience of fear, so the realization of its duration can carry an element of surprise, but it isn't a strong component of the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

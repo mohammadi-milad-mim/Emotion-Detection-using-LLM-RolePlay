@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I sustained my first major injury to my back, which I now pay $ 25 a week to the chiropractor to help correct.\", \"rewritten_form_joy\": \"I finally got to experience my first major injury to my back, and now I happily pay $25 a week to the chiropractor to help fix it!\", \"rewritten_form_sadness\": \"I suffered my first major injury to my back, and I now have to spend $25 a week at the chiropractor, which really weighs on me.\", \"rewritten_form_fear\": \"I experienced my first major injury to my back, and now I dread paying $25 a week to the chiropractor, worried it might not help.\", \"rewritten_form_anger\": \"I had to deal with my first major injury to my back, and now I\\u2019m angry that I have to shell out $25 a week to the chiropractor to fix it.\", \"rewritten_form_surprise\": \"I can\\u2019t believe I sustained my first major injury to my back, and now I\\u2019m shelling out $25 every week to the chiropractor!\", \"rewritten_form_disgust\": \"I cannot believe I got my first major injury to my back, and now I have to pay $25 a week to the chiropractor, which is just awful.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents the situation of sustaining a back injury in a neutral tone, with no indication of joy. In contrast, the rewritten joy sentence implies a positive experience and acceptance of the situation, which is not reflected in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects the burden of a back injury and the ongoing cost of treatment, which aligns well with the sadness expressed in the rewritten sentence. The mention of it weighing on the speaker in that sentence resonates with the original context.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence indicates a financial obligation to address a health issue, but it does not imbue fear or dread about the situation. The rewritten fear sentence introduces a worry about the effectiveness of the treatment, which isn\u2019t present in the original text.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence mentions a financial commitment to treatment which could lead to frustration, but it does not express anger directly. The rewritten anger sentence emphasizes a strong emotional response regarding the costs associated with the injury, which is not reflected in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey any sense of astonishment or disbelief about the injury itself or the financial implications. The surprise rewritten sentence implies a shocking realization, which is absent in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

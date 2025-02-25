@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My legs felt good when I was done, and according to the HRM they burned off 960 calories in the 1hr10.\", \"rewritten_form_joy\": \"My legs felt amazing when I finished, and the HRM said I burned off 960 calories in just 1hr10!\", \"rewritten_form_sadness\": \"My legs felt okay when I was done, but according to the HRM, I only burned off 960 calories in the 1hr10.\", \"rewritten_form_fear\": \"My legs felt so weak when I was done, and the HRM showed I burned off 960 calories in 1hr10\\u2014what if that wasn\\u2019t enough?\", \"rewritten_form_anger\": \"My legs felt surprisingly okay when I finished, and the HRM uselessly indicated I burned off 960 calories in 1hr10!\", \"rewritten_form_surprise\": \"My legs felt surprisingly good when I was done, and according to the HRM, I burned off a whopping 960 calories in just 1hr10!\", \"rewritten_form_disgust\": \"My legs felt alright when I was done, but it\\u2019s hard to believe the HRM said I burned off 960 calories in 1hr10, that seems excessive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of satisfaction about the physical condition of the legs after exercise, which aligns strongly with the joyful tone of the rewritten joy sentence that intensifies the positive feelings with 'amazing'.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original mentions a feeling of goodness, the rewritten sadness version reflects lower expectations with 'okay' indicating a lower emotional state. The original does not convey this sense of disappointment at all, resulting in minimal sadness alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply any sense of weakness or concern about the adequacy of calories burned, which is present in the fear rewrite. Therefore, there is no strong fear element in the original text.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Although the rewritten anger version adds a sarcastic tone with 'uselessly', the original statement does not convey any sense of frustration or anger about the exercise results. Hence, the alignment with anger is very weak.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The aspect of surprise in the rewritten sentence is tied to the degree of satisfaction in the original, which mentions good feelings; however, the original did not highlight any extraordinary aspect or unexpected result. Thus, the surprise is not strongly present.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

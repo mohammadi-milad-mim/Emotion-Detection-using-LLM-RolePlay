@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my eyes and my smile look alike to my mum's.\", \"rewritten_form_joy\": \"My eyes and my smile are just like my mum's, and it makes me so happy!\", \"rewritten_form_sadness\": \"I can't help but notice that my eyes and my smile resemble my mum's, but it reminds me of how much I miss her.\", \"rewritten_form_fear\": \"Sometimes, I wonder if my eyes and my smile looking like my mum's could mean I carry her struggles too.\", \"rewritten_form_anger\": \"It's frustrating that my eyes and my smile are just like my mum's, yet she never appreciated me for it!\", \"rewritten_form_surprise\": \"I was shocked to realize that my eyes and my smile actually look like my mum's!\", \"rewritten_form_disgust\": \"It's unsettling that my eyes and my smile are so similar to my mum's.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral observation about a resemblance, lacking explicit happiness. However, the rewritten joy sentence captures a strong sense of happiness tied to the similarity, which is not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence doesn't convey sadness directly, yet the rewritten form introduces a longing for the mother, which the original lacks. There is a slight indication of missing someone, but it's minimal.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original does not imply fear, the rewritten sentence suggests a worry about carrying struggles. The resonating fear aspect is not directly linked to the original context.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original statement is neutral without any signs of frustration or anger. The rewritten sentence introduces a strong feeling of being unappreciated, which is not inherent in the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not show any element of surprise, yet the rewritten sentence includes a reaction of shock, which is missing in the original context.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

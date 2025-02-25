@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I woke up about 9 hours later, with faint patterns still dancing at the edge of my vision.\", \"rewritten_form_joy\": \"I woke up about 9 hours later, and those delightful faint patterns were still dancing at the edge of my vision!\", \"rewritten_form_sadness\": \"I woke up about 9 hours later, with faint patterns still dancing at the edge of my vision, reminding me of the dreams that faded too soon.\", \"rewritten_form_fear\": \"I woke up about 9 hours later, with faint patterns still dancing at the edge of my vision, and I couldn't shake the unsettling feeling that something was off.\", \"rewritten_form_anger\": \"I woke up about 9 hours later, with faint patterns still dancing at the edge of my vision, and it just infuriated me that I couldn't clear my mind.\", \"rewritten_form_surprise\": \"I woke up about 9 hours later, and to my surprise, those faint patterns were still dancing at the edge of my vision!\", \"rewritten_form_disgust\": \"I woke up about 9 hours later, with faint patterns still dancing at the edge of my vision, and it made me feel nauseous just looking at them.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a neutral observation of faint patterns at the edge of one's vision without an explicit positive sentiment, so it does not strongly align with joy, which is characterized by delight and happiness. The rewritten version emphasizes 'delightful' and an exclamatory tone, which is not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While the original sentence hints at a somewhat wistful experience of waking up and seeing patterns, it lacks a prominent sadness element. The rewritten version mentions 'reminding me of the dreams that faded too soon' which adds a reflective sadness not explicitly present in the original, resulting in a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original expression of waking up with patterns does not imply fear or anxiety. The rewritten version introduces an unsettling feeling, elevating the emotional intensity to fear. Since the original sentence lacks any suggestion of discomfort or fear, it aligns minimally with this emotion.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey any sense of frustration or anger. The rewritten version expresses infuriation about mental clarity, which is not reflected in the original's tone or content. There's little to no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence contains elements that could be surprising, but it does not explicitly convey that surprise. The rewritten version clearly highlights surprise, suggesting a stronger emotional response. Thus, the alignment is moderate at best, highlighting that surprise isn't the primary emotion in the original.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The false rush of euphoria is wisked away, and paranoia settles in, creeping through my skin.\", \"rewritten_form_joy\": \"The fleeting rush of delight fills me, but that familiar paranoia lingers, creeping through my skin.\", \"rewritten_form_sadness\": \"The fleeting rush of false happiness fades, leaving a hollow feeling as paranoia creeps through my skin.\", \"rewritten_form_fear\": \"The deceptive rush of euphoria vanishes, and the cold grip of paranoia seeps in, creeping through my skin with dread.\", \"rewritten_form_anger\": \"The fake rush of euphoria is snatched away, and that wretched paranoia invades me, creeping through my skin outrageously.\", \"rewritten_form_surprise\": \"That sudden rush of euphoria has vanished, and now, an unexpected paranoia creeps through my skin, unsettling me.\", \"rewritten_form_disgust\": \"The phony rush of euphoria is whisked away, and an unpleasant paranoia slithers through my skin, disgusting and unwelcome.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a false rush of euphoria that quickly fades away, replaced by paranoia. This aligns with a sense of joy, but only in a fleeting, superficial way. Therefore, the connection to joy is minimal since the overall sentiment shifts towards negativity.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original shows a transition from a false sense of happiness to a hollow feeling marked by paranoia. The use of 'hollow' further emphasizes the sadness as the joy is not genuine, thus establishing a stronger emotional link to sadness than to joy.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The mention of paranoia settling in and creeping through the skin suggests a heightened sense of fear and anxiety. The transformation from euphoria to paranoia aligns well with the fear emotion, especially as it suggests a sense of dread creeping in, which adds to the feeling of fear significantly.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence does convey a sense of frustration with the 'false rush,' it does not convey strong anger. Although there is mention of paranoia which could provoke anger, the overall sentiment is more about loss than an aggressive emotion, limiting its intensity in the anger category.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence indicates a sudden loss of euphoria followed by paranoia creeping in, which can indeed be surprising. However, the emotional weight is more focused on loss and paranoia rather than surprise itself, thus the connection is somewhat weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

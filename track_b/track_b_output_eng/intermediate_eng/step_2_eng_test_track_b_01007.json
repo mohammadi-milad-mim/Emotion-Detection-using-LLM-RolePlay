@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This really shouldn't have scared us, but he started to run toward us.\", \"rewritten_form_joy\": \"We were unexpectedly thrilled, even though he started to run toward us!\", \"rewritten_form_sadness\": \"It's sad that we let ourselves get scared when he started to run toward us.\", \"rewritten_form_fear\": \"This really frightened us when he suddenly started to run toward us.\", \"rewritten_form_anger\": \"This was so infuriating! He shouldn't have run toward us like that.\", \"rewritten_form_surprise\": \"We were taken aback when he suddenly started to run toward us!\", \"rewritten_form_disgust\": \"It was so unsettling how he started to run toward us like that.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; it focuses on fear rather than thrill in the moment. The rewritten joy version emphasizes a positive reaction, which is absent in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a slight alignment with sadness, as the original hints at a regretful feeling about being frightened, but it does not strongly convey sadness overall.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence directly mentions fear, indicating a strong emotional response. The rewritten fear sentence reinforces this by specifically using words like 'frightened.'",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not evoke anger, as it describes a reaction to an unexpected situation rather than expressing irritation or blame.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does indicate a level of surprise, as there is an unexpected action (someone running towards them). The rewritten version captures this surprise aspect effectively.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

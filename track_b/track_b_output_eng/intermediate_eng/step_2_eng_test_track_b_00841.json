@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was crying, mascara running down my face, my eyes burning because of it.\", \"rewritten_form_joy\": \"I was laughing so hard, mascara running down my face, my eyes sparkling with tears of joy.\", \"rewritten_form_sadness\": \"I couldn't stop crying, mascara running down my face, my eyes aching from the pain.\", \"rewritten_form_fear\": \"I was terrified, mascara running down my face, my eyes stinging from my tears.\", \"rewritten_form_anger\": \"I was fuming, mascara running down my face, my eyes burning with fury.\", \"rewritten_form_surprise\": \"I was shocked, mascara running down my face, my eyes wide but teary.\", \"rewritten_form_disgust\": \"I was repulsed, mascara running down my face, my eyes burning from the irritation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys crying, which is typically associated with sadness rather than joy. While the rewritten joyful version indicates laughing, the core sentiment of the original does not align with joy; it implies distress rather than happiness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly describes crying with emotional descriptors such as 'crying,' 'mascara running down my face,' and 'eyes burning.' This aligns closely with the rewritten sadness sentence, which echoes similar sentiments of pain and tears. Therefore, sadness is strongly felt in the original statement.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence lacks elements that suggest fear. It focuses on the physical consequences of crying, such as burning eyes but does not imply any sense of terror or anxiety, which is present in the rewritten fear sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence reflects a feeling of distress, it does not convey anger. The rewritten version about anger uses words like 'fuming' and 'burning with fury,' which do not connote the emotional experience described in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text does not encode any elements of surprise. It focuses on the experience of crying, while the rewritten surprise emphasizes being shocked, which is entirely different from the sadness suggested in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ball lightning is often erroneously identified as St. Elmo's fire.\", \"rewritten_form_joy\": \"Ball lightning is sometimes joyfully mistaken for St. Elmo's fire, how fascinating!\", \"rewritten_form_sadness\": \"It\\u2019s unfortunate that ball lightning is frequently misidentified as St. Elmo's fire.\", \"rewritten_form_fear\": \"There\\u2019s a troubling misconception where ball lightning is often confused with the dangerous St. Elmo's fire.\", \"rewritten_form_anger\": \"It's frustrating that ball lightning is so often wrongly labeled as St. Elmo's fire!\", \"rewritten_form_surprise\": \"Did you know ball lightning is often mistakenly thought to be St. Elmo's fire? What a surprising mix-up!\", \"rewritten_form_disgust\": \"It\\u2019s disgusting how ball lightning is commonly mischaracterized as St. Elmo's fire.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a factual statement about ball lightning and St. Elmo's fire without expressing joy. The rewritten joyous sentence adds enthusiasm, suggesting fascination, which is not reflected in the original. Therefore, the intensity of joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence lacks emotional weight and does not convey a sense of loss or grief, which is typically associated with sadness. The rewritten version implies regret about the misunderstanding but the original's neutral tone does not support a strong sadness connection.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement does not imply any fear or concern about the confusion between ball lightning and St. Elmo's fire, which is essential in the rewritten fear sentence. Thus, fear is not present in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the rewritten anger version expresses frustration towards the misidentification, the original sentence is neutral and does not convey any irritation or outrage, giving it a low intensity for anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Although the original sentence states a surprising fact, it does so in a neutral manner. The rewritten surprise sentence conveys a sense of amazement that is not present in the original, but the fact remains surprising. Therefore, the surprise element is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

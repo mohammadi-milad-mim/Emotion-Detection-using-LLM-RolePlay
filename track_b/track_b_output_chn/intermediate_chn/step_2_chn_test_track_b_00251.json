@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u672c\\u6765\\u60f3\\u540c\\u7406\\u5fc3\\u7406\\u89e3\\u4e00\\u4e0b\\uff0c\\u4f46\\u6700\\u8fd13\\u5929\\u7684\\u65b0\\u95fb\\u4ee4\\u6211\\u89c9\\u5f97\\u4e00\\u4e2a\\u57ce\\u5e02\\u7684\\u5305\\u5bb9\\u4e0d\\u5e94\\u8be5\\u65e0\\u4e0b\\u9650\\uff0c\\u66f4\\u4e0d\\u5e94\\u8be5\\u727a\\u7272\\u5927\\u90e8\\u5206\\u7684\\u5229\\u76ca\\u3002\", \"rewritten_form_joy\": \"\\u672c\\u6765\\u60f3\\u540c\\u7406\\u5fc3\\u7406\\u89e3\\u4e00\\u4e0b\\uff0c\\u4f46\\u6700\\u8fd13\\u5929\\u7684\\u65b0\\u95fb\\u8ba9\\u6211\\u610f\\u8bc6\\u5230\\uff0c\\u4e00\\u4e2a\\u57ce\\u5e02\\u7684\\u5305\\u5bb9\\u6027\\u662f\\u5982\\u6b64\\u91cd\\u8981\\uff0c\\u5b83\\u4e0d\\u5e94\\u8be5\\u65e0\\u4e0b\\u9650\\uff0c\\u66f4\\u5e94\\u8be5\\u4fdd\\u62a4\\u6bcf\\u4e2a\\u4eba\\u7684\\u5229\\u76ca\\u3002\", \"rewritten_form_sadness\": \"\\u672c\\u6765\\u60f3\\u540c\\u7406\\u5fc3\\u7406\\u89e3\\u4e00\\u4e0b\\uff0c\\u53ef\\u6700\\u8fd13\\u5929\\u7684\\u65b0\\u95fb\\u8ba9\\u6211\\u611f\\u5230\\u65e0\\u5948\\uff0c\\u4e00\\u4e2a\\u57ce\\u5e02\\u7684\\u5305\\u5bb9\\u4e0d\\u8be5\\u65e0\\u4e0b\\u9650\\uff0c\\u66f4\\u4e0d\\u8be5\\u727a\\u7272\\u5927\\u90e8\\u5206\\u4eba\\u7684\\u5229\\u76ca\\u3002\", \"rewritten_form_fear\": \"\\u672c\\u6765\\u60f3\\u540c\\u7406\\u5fc3\\u7406\\u89e3\\u4e00\\u4e0b\\uff0c\\u4f46\\u6700\\u8fd13\\u5929\\u7684\\u65b0\\u95fb\\u8ba9\\u6211\\u611f\\u5230\\u4e0d\\u5b89\\uff0c\\u4e00\\u4e2a\\u57ce\\u5e02\\u7684\\u5305\\u5bb9\\u4e0d\\u5e94\\u662f\\u65e0\\u4e0b\\u9650\\u7684\\uff0c\\u66f4\\u4e0d\\u5e94\\u8be5\\u5a01\\u80c1\\u5230\\u5927\\u90e8\\u5206\\u4eba\\u7684\\u5229\\u76ca\\u3002\", \"rewritten_form_anger\": \"\\u672c\\u6765\\u60f3\\u540c\\u7406\\u5fc3\\u7406\\u89e3\\u4e00\\u4e0b\\uff0c\\u4f46\\u6700\\u8fd13\\u5929\\u7684\\u65b0\\u95fb\\u8ba9\\u6211\\u6124\\u6012\\uff0c\\u4e00\\u4e2a\\u57ce\\u5e02\\u7684\\u5305\\u5bb9\\u4e0d\\u5e94\\u662f\\u65e0\\u4e0b\\u9650\\u7684\\uff0c\\u66f4\\u4e0d\\u5e94\\u8be5\\u4ee5\\u727a\\u7272\\u5927\\u90e8\\u5206\\u4eba\\u7684\\u5229\\u76ca\\u4e3a\\u4ee3\\u4ef7\\u3002\", \"rewritten_form_surprise\": \"\\u672c\\u6765\\u60f3\\u540c\\u7406\\u5fc3\\u7406\\u89e3\\u4e00\\u4e0b\\uff0c\\u4f46\\u8fd93\\u5929\\u7684\\u65b0\\u95fb\\u771f\\u8ba9\\u6211\\u60ca\\u8bb6\\uff0c\\u4e00\\u4e2a\\u57ce\\u5e02\\u7684\\u5305\\u5bb9\\u6027\\u7adf\\u7136\\u53ef\\u4ee5\\u65e0\\u4e0b\\u9650\\uff0c\\u66f4\\u4e0d\\u5e94\\u8be5\\u727a\\u7272\\u5927\\u90e8\\u5206\\u4eba\\u7684\\u5229\\u76ca\\u3002\", \"rewritten_form_disgust\": \"\\u672c\\u6765\\u60f3\\u540c\\u7406\\u5fc3\\u7406\\u89e3\\u4e00\\u4e0b\\uff0c\\u4f46\\u6700\\u8fd13\\u5929\\u7684\\u65b0\\u95fb\\u4ee4\\u6211\\u611f\\u5230\\u538c\\u6076\\uff0c\\u4e00\\u4e2a\\u57ce\\u5e02\\u7684\\u5305\\u5bb9\\u5c45\\u7136\\u4f1a\\u65e0\\u4e0b\\u9650\\uff0c\\u66f4\\u4e0d\\u5e94\\u727a\\u7272\\u5927\\u90e8\\u5206\\u4eba\\u7684\\u5229\\u76ca\\u3002\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "",
+        "joy_intensity": 0,
+        "sadness_reasoning": "",
+        "sadness_intensity": 0,
+        "fear_reasoning": "",
+        "fear_intensity": 0,
+        "anger_reasoning": "",
+        "anger_intensity": 0,
+        "surprise_reasoning": "",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

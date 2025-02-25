@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"At the same time we asked 'do I know you?\", \"rewritten_form_joy\": \"At the same time, we joyfully asked, 'do I know you?','\", \"rewritten_form_sadness\": \"At the same time, we sadly asked, 'do I know you?','\", \"rewritten_form_fear\": \"At the same time, we anxiously asked, 'do I know you?','\", \"rewritten_form_anger\": \"At the same time, we angrily asked, 'do I know you?','\", \"rewritten_form_surprise\": \"At the same time, we surprisingly asked, 'do I know you?','\", \"rewritten_form_disgust\": \"At the same time, we disdainfully asked, 'do I know you?','\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any language that conveys joy. The tone is neutral, while the rewritten version injects a sense of happiness that is not present in the original, leading to a low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original captures a moment that could lead to sadness, particularly through uncertainty. The rewritten version expressing sadness suggests a deeper emotional context that isn\u2019t explicitly in the original, resulting in a low but present emotional alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey anxiety or fear; it merely presents a question. The rewritten form introduces anxiety, which shifts the tone significantly, indicating no alignment with the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not reflect anger at all. The rewritten version expressing anger imposes a strong emotional tone that is entirely absent in the original, signifying a complete misalignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original is straightforward and does not indicate surprise. The rewritten sentence includes an element of surprise that does not exist, leading to a lack of emotional connection.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

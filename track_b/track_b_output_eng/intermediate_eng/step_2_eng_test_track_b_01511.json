@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My last three birthdays:\", \"rewritten_form_joy\": \"My last three birthdays have been absolutely wonderful!\", \"rewritten_form_sadness\": \"My last three birthdays have been so lonely and disappointing.\", \"rewritten_form_fear\": \"My last three birthdays were filled with anxiety and dread.\", \"rewritten_form_anger\": \"My last three birthdays were a mess, and I can't believe how much they frustrated me.\", \"rewritten_form_surprise\": \"I can't believe how surprising my last three birthdays turned out to be!\", \"rewritten_form_disgust\": \"I am so disgusted by how my last three birthdays went.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text 'My last three birthdays:' is quite neutral and does not inherently convey joy. However, the rewritten joyful version implies positive experiences, contrasting strongly with the original sentiment. Therefore, it suggests low to moderate potential for joy based on the context.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten version for sadness reflects a negative experience, highlighting loneliness and disappointment. The original statement lacks emotional context, yet it's reasonable to infer some sadness given the potential for birthdays to be disappointing. Thus, it aligns somewhat with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear rewritten version conveys a sense of anxiety and dread associated with the last three birthdays. The original sentence lacks any sense of threat or fear, but if we assume that past birthdays could invoke such feelings, it shows mild alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version expresses frustration and disappointment strongly, but the original sentence lacks that emotional context. This suggests that while there could be potential for anger linked to birthdays, it does not directly reflect this sentiment and remains low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise iteration highlights unexpected experiences tied to birthdays, yet the original sentence lacks context to imply any surprise. Thus, while it allows for the possibility, the degree of alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

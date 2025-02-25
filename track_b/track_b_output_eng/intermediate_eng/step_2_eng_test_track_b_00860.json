@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"no energy and my eyes are constantly aching.\", \"rewritten_form_joy\": \"I\\u2019m feeling so low on energy, and my eyes just won\\u2019t stop aching!\", \"rewritten_form_sadness\": \"I feel completely drained of energy, and the aching in my eyes is just unbearable.\", \"rewritten_form_fear\": \"I have no energy left, and my eyes are aching constantly; I\\u2019m worried something is really wrong.\", \"rewritten_form_anger\": \"I can't believe I have no energy and my eyes are constantly aching like this! It's infuriating!\", \"rewritten_form_surprise\": \"Wow, I have no energy at all, and my eyes are constantly aching\\u2014what\\u2019s going on?\", \"rewritten_form_disgust\": \"I feel absolutely gross with no energy, and my eyes aching like this is just revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of fatigue and discomfort, which does not align well with joy. The rewritten joy form expresses a more upbeat tone but still describes the same discomfort; thus, there is a minimal connection.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence closely resembles the sadness version with its expression of being drained and the ache of the eyes being overwhelming. This alignment indicates a strong presence of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence indicates discomfort, the rewritten fear version adds a significant layer of worry about health, which is not explicitly present in the original. Thus, the alignment with fear is moderate but not strong.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text lacks an element of outrage or frustration. The rewritten anger form introduces an explicit anger towards the situation that isn\u2019t apparent in the original. Therefore, the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not convey any elements of surprise or bewilderment. The surprise version implies an unexpectedness that is absent, so the alignment is weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

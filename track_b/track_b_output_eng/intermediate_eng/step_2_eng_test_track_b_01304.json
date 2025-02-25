@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The light was pretty fucking bright, something distracted us we looked away and it was gone.\", \"rewritten_form_joy\": \"The light was so wonderfully bright, but when something caught our attention and we looked away, it vanished!\", \"rewritten_form_sadness\": \"The light was painfully bright, and then something distracted us, making us look away, and just like that, it was gone.\", \"rewritten_form_fear\": \"The light was blindingly bright, and in a moment of distraction, we looked away, fearing it might disappear forever.\", \"rewritten_form_anger\": \"The light was incredibly bright, and out of nowhere, something distracted us; we looked away, and it was suddenly gone!\", \"rewritten_form_surprise\": \"The light was shockingly bright, and just when something distracted us and we looked away, it had vanished!\", \"rewritten_form_disgust\": \"The light was uncomfortably bright, and then something grossly distracted us; we looked away and it was gone.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence shows a sense of amazement at the brightness of the light, but it lacks any joyful connotations. The rewritten joyful version emphasizes delight, which is not present in the original, making the alignment weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence portrays a sense of loss when the light disappears after being distracted. The rewritten sad version heightens this sense of loss with the term 'painfully,' aligning well with the sentiment of sadness present in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions distraction leading to disappearance, but it lacks an explicit sense of fear regarding the loss of the light. The rewritten fear version adds a strong implication of potential loss, which is not as strongly represented in the original. Hence, the alignment is moderate.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original expresses frustration about distraction leading to the light's disappearance, similar to the rewritten anger version. The sentiments coincide well, leading to a strong alignment with anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original captures an element of surprise with the sudden loss of light after distraction, which aligns well with the surprise context of the rewritten version. Therefore, the alignments are quite close.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

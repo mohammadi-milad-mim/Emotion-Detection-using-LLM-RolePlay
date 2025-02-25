@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was within two miles when I remember one of the spectators yelling at me to `` relax my face ''!\", \"rewritten_form_joy\": \"I was within two miles when I joyfully remember one of the spectators cheering, 'relax your face!'\", \"rewritten_form_sadness\": \"I was within two miles when I sadly recall one of the spectators yelling at me to 'relax my face.'\", \"rewritten_form_fear\": \"I was within two miles when I suddenly felt a jolt of fear at one of the spectators yelling, 'relax your face!'\", \"rewritten_form_anger\": \"I was within two miles when it infuriated me to hear one of the spectators yelling, 'relax your face!'\", \"rewritten_form_surprise\": \"I was within two miles when I was surprised to hear one of the spectators yelling at me to 'relax my face!'\", \"rewritten_form_disgust\": \"I was within two miles when I felt disgusted to hear one of the spectators rudely yell at me to 'relax my face!'\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes remembering a spectator yelling to 'relax my face', which lacks a joyful tone. The rewritten joyful version suggests cheerfulness that is not indicated in the original; thus, the joy alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects on a spectator's yell, which, while somewhat negative, is not overtly sad or sorrowful. The rewritten sad version implies a deeper emotional context that is absent from the original. Hence, the sadness alignment is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear; instead, it describes a memory of a spectator's comment without indicating a sense of threat. The fear alignment is not strong since the absence of fear is clear in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original phrase describes a spectator's yell, but does not suggest that it angered the speaker. The rewritten angry version conveys a strong emotional reaction that the original does not reflect, leading to low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence indicates recalling something surprising\u2014a spectator yelling\u2014yet it does not explicitly mention being surprised. The rewritten surprising version captures a response that goes beyond the original tone, but there is a slight alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

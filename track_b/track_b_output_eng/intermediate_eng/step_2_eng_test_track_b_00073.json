@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Terrible at basketball though.\", \"rewritten_form_joy\": \"I have so much fun playing basketball, even if I'm not the best!\", \"rewritten_form_sadness\": \"It's kind of sad that I'm terrible at basketball.\", \"rewritten_form_fear\": \"I'm really worried because I'm terrible at basketball.\", \"rewritten_form_anger\": \"Honestly, it's infuriating how terrible I am at basketball.\", \"rewritten_form_surprise\": \"You won't believe it, but I'm terrible at basketball!\", \"rewritten_form_disgust\": \"Honestly, I just can't stand how terrible I am at basketball.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling of being inadequate at basketball, lacking any positive tone or enjoyment related to the sport. The rewritten joy version indicates fun and enjoyment, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has a negative connotation about basketball skills, which aligns closely with a feeling of sadness regarding inability or disappointment. Therefore, it resonates well with the sadness rewritten version.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original does express a sense of failure, it does not convey strong worries or fears about the implications. The rewritten fear version suggests a deeper emotional response that isn't reflected in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence tends to imply frustration but does not communicate intense anger. The rewritten anger version expresses significant frustration, making it seem stronger in tone compared to the original's subtle communication of ineptitude.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks any element of surprise. The rewritten surprise version implies an unexpectedness about being terrible, which does not align with the straightforward statement of being 'terrible at basketball.'",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

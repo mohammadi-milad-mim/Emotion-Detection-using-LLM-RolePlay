@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My stomach was burning, and I came home and curled up in a ball and fell asleep.\", \"rewritten_form_joy\": \"I was feeling a bit off, but when I got home, I curled up in a cozy ball and drifted off to sleep, hoping for better dreams.\", \"rewritten_form_sadness\": \"My stomach was burning, and I returned home, curling up in a ball, feeling so alone as I fell asleep.\", \"rewritten_form_fear\": \"My stomach was burning, and I hurried home, curling up in a ball, terrified of what might be wrong as I fell asleep.\", \"rewritten_form_anger\": \"My stomach was burning, and I stormed home, curling up in a ball, furious that I felt this way and just fell asleep.\", \"rewritten_form_surprise\": \"My stomach was burning, and to my shock, I got home, curled up in a ball, and unexpectedly fell asleep!\", \"rewritten_form_disgust\": \"My stomach was burning, and I rushed home, curling up in a ball out of sheer discomfort, wanting nothing more than to escape it all and fall asleep.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes physical discomfort without any positive elements or a sense of joy present in the scenario. The rewritten form introduces a sense of coziness and hope, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies discomfort and a desire to retreat, which aligns with feelings of sadness, especially with the idea of feeling alone in the rewritten version. The original could be reflective of sadness but does not explicitly denote loneliness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original indicates significant discomfort (stomach burning), which could easily lead to feelings of fear or concern over health issues. The rewritten version heightens this anxiety with 'terrified,' making a good connection with the original's sentiment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original describes discomfort but does not express anger. The rewritten form introduces a strong sense of frustration that is not implied in the original sentence, indicating no alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence doesn\u2019t convey any elements of surprise regarding the actions taken or the end result of falling asleep. The rewritten version includes an unexpected element that is absent in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But I could feel the bitterness rising up in me, slow at first, then into my mouth like poison.\", \"rewritten_form_joy\": \"But I could feel the warmth of flavors blooming in me, sweet at first, then filling my mouth like sunshine.\", \"rewritten_form_sadness\": \"But I could feel the bitterness rising up in me, slow and heavy, drowning my thoughts like darkness.\", \"rewritten_form_fear\": \"But I could feel the bitterness rising up in me, creeping in slowly, then choking me like a shadow.\", \"rewritten_form_anger\": \"But I could feel the bitterness surging in me, fierce and hot, igniting my throat like fire.\", \"rewritten_form_surprise\": \"But I could feel the bitterness rising up in me, unexpected at first, then shocking my senses like a jolt.\", \"rewritten_form_disgust\": \"But I could feel the bitterness bubbling up in me, revolting at first, then coating my mouth like rancid bile.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative emotional response (bitterness) that contrasts sharply with the joy-focused rewrite about warmth and sweetness. The original does not convey joy at all, indicating no alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence matches closely with the sad rewrite describing bitterness as 'slow and heavy' and 'drowning my thoughts'. This mirroring of emotions leads to a high alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence shares a sense of rising anxiety and discomfort with the fear rewrite which describes a creeping bitterness that chokes. This creates a moderate alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original's bitterness can be interpreted as an indication of anger, which aligns well with the rewrite that describes the emotion as 'fierce and hot, igniting my throat'. This suggests a strong connection to the feeling of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original does describe a rising bitterness, but it does not convey a sense of surprise, unlike the rewritten version that emphasizes unexpectedness. Therefore, there's little to no alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

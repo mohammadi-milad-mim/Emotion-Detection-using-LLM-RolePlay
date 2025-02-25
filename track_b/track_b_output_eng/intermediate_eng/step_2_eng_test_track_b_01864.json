@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I heard the snap, I hit the ground and I knew my ankle was broken.\", \"rewritten_form_joy\": \"I heard the snap, I hit the ground, and even though my ankle was broken, the thrill of adventure filled me!\", \"rewritten_form_sadness\": \"I heard the snap, I hit the ground, and a sinking feeling rushed over me as I realized my ankle was broken.\", \"rewritten_form_fear\": \"I heard the snap, I hit the ground, and panic set in as I feared my ankle was broken.\", \"rewritten_form_anger\": \"I heard the snap, I hit the ground, and I felt such frustration knowing my ankle was broken.\", \"rewritten_form_surprise\": \"I heard the snap, I hit the ground, and to my shock, I realized my ankle was broken.\", \"rewritten_form_disgust\": \"I heard the snap, I hit the ground, and it was utterly revolting to realize my ankle was broken.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a painful event without any sense of joy or thrill. While the rewritten sentence infuses an adventurous tone, the original lacks any cheerful sentiment, focusing instead on injury.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original evokes a sense of realization of injury, which closely aligns with the feeling of sadness detailed in the rewritten sentence. The knowledge of a broken ankle brings a natural 'sinking feeling', making this alignment strong.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original mentions hitting the ground and the immediate knowledge of a broken ankle. This can naturally provoke fear, though it does not explicitly express panic like the rewritten sentence does. Still, there is an implicit fear of injury.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original does not contain any explicit feelings of frustration or anger. While the rewritten sentence introduces these emotions, they are not present in the original text, which is more focused on the event itself rather than the emotional consequences.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence indicates an unexpected or sudden event (the snap) followed by a realization of injury, which aligns with a sense of surprise. However, it lacks the strong shock element provided in the rewritten version. Thus, there is some alignment, but it is not as intense as the surprise might imply.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

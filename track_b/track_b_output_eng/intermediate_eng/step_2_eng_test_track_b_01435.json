@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Our 4th anniversary is in December.\", \"rewritten_form_joy\": \"I can't believe our 4th anniversary is in December! What a joyful milestone!\", \"rewritten_form_sadness\": \"It's hard to believe our 4th anniversary is coming up in December; time has changed so much.\", \"rewritten_form_fear\": \"Our 4th anniversary is in December, and I'm honestly terrified about what might happen next.\", \"rewritten_form_anger\": \"I can\\u2019t believe it\\u2019s already our 4th anniversary in December; it feels like time has been wasted!\", \"rewritten_form_surprise\": \"Wow, our 4th anniversary is in December! How did time fly by so quickly?\", \"rewritten_form_disgust\": \"Ugh, our 4th anniversary is in December, and I can't stand the thought of it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states a simple fact about the anniversary, which doesn\u2019t inherently imply joy. However, the rewritten form emphasizes joy and celebration, suggesting a positive milestone. Thus, there\u2019s a low alignment because the original lacks any expressed joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence is neutral and does not express sadness, while the rewritten form conveys a sense of lament about passing time, indicating a moderate alignment because it acknowledges the significance of time passing, which can evoke sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not imply fear or anxiety. The rewritten version introduces fear about the future related to the anniversary, which makes it misaligned with the original's tone. Therefore, there\u2019s no fear present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not express any feelings of anger or frustration. The rewritten sentence conveys anger about the passage of time, which does not correlate to the emotion conveyed in the original. Therefore, there\u2019s no connection to anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original announces an upcoming event without any emotional weight, while the rewritten version expresses surprise and wonder at how fast time has passed. This reflects a minimal connection as the original does not evoke surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

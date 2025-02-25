@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"There's just something about watching an acne-ridden high school dropout cooking my food that just doesn't sit well in my stomach.\", \"rewritten_form_joy\": \"I can't help but chuckle a bit watching an acne-ridden high school dropout cooking my food; it\\u2019s strangely entertaining!\", \"rewritten_form_sadness\": \"It\\u2019s hard to watch an acne-ridden high school dropout cooking my food; it really pulls at my heartstrings.\", \"rewritten_form_fear\": \"Honestly, watching an acne-ridden high school dropout cooking my food fills me with a sense of dread.\", \"rewritten_form_anger\": \"I can\\u2019t stand the sight of an acne-ridden high school dropout cooking my food; it makes my blood boil!\", \"rewritten_form_surprise\": \"Wow, seeing an acne-ridden high school dropout cooking my food is quite unexpected; it really catches me off guard!\", \"rewritten_form_disgust\": \"There's just something so unsettling about an acne-ridden high school dropout cooking my food; it turns my stomach.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys discomfort rather than joy. While the rewritten joy sentence presents a slightly humorous take, the original does not suggest amusement, but rather an unsettling feeling. Therefore, alignment with joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not express sadness directly; it focuses on discomfort rather than emotional sorrow. The rewritten version highlights an emotional response, but the original text's tone is more about unease. Thus, alignment with sadness is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests a strong sense of discomfort and unease, which resonates with fear. There is an implied worry about the situation and the person involved. This aligns well with the fear sentiment as articulated in the rewritten form.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence expresses strong displeasure about the situation, aligning well with the angry sentiment in the rewritten form. The wording implies a visceral reaction to the sight being described, indicating a high level of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not convey surprise; instead, it implies a consistent experience of discomfort. The rewritten surprise version suggests an unexpectedness that is absent from the original text. Therefore, there is no strong alignment here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

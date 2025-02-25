@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The silver manacles were tight on my wrists, and I was too dizzy to keep my own balance.\", \"rewritten_form_joy\": \"The silver manacles were tight on my wrists, but it felt like an exhilarating adventure, even as I swayed a bit.\", \"rewritten_form_sadness\": \"The silver manacles were tight on my wrists, and I felt a deep sorrow as I struggled to keep my balance, overwhelmed and lost.\", \"rewritten_form_fear\": \"The silver manacles were tight on my wrists, and a chilling fear settled in as I realized I could hardly keep my balance.\", \"rewritten_form_anger\": \"The silver manacles were tight on my wrists, and I couldn't believe how unfair it was as I stumbled, furious at my helplessness.\", \"rewritten_form_surprise\": \"The silver manacles were tight on my wrists, and I was caught off guard, feeling dizzy and unable to steady myself.\", \"rewritten_form_disgust\": \"The silver manacles were tight on my wrists, and I felt revolted as I struggled to maintain my balance in such a disgusting situation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes discomfort and a lack of balance rather than an exhilarating experience. This does not align with the tone of the rewritten joy sentence which emphasizes excitement. Therefore, joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence indicates a struggle and physical discomfort, which relates somewhat to feelings of sadness, particularly the sense of being overwhelmed. It\u2019s a suitable match for the sadness tone but lacks deep emotional context, hence moderate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The feeling of dizziness in the original sentence implies a loss of control, which is closely related to fear. The rewritten fear version captures this most effectively by emphasizing a chilling fear. There\u2019s a strong alignment here.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While there is an element of helplessness depicted in the original sentence, anger doesn't seem present. The concept of being furious at the situation in the rewritten anger sentence is not conveyed in the original. Thus, there\u2019s a minimal alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does convey a sense of being caught off balance, which can relate to surprise, but it is more about discomfort than actual surprise. Hence, this alignment is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

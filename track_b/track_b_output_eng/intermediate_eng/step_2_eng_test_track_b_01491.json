@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Other objects were distorted.\", \"rewritten_form_joy\": \"Other objects were wonderfully transformed!\", \"rewritten_form_sadness\": \"Other objects were sadly distorted.\", \"rewritten_form_fear\": \"Other objects were frighteningly distorted.\", \"rewritten_form_anger\": \"Other objects were infuriatingly distorted!\", \"rewritten_form_surprise\": \"Other objects were unexpectedly distorted!\", \"rewritten_form_disgust\": \"Other objects were grotesquely distorted.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy or positive transformation; it simply states that objects are distorted. Hence, it aligns poorly with the joyful version which suggests a positive take on the distortion.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at a negative alteration but is neutral in tone. While the rewritten sentence adds a layer of sadness, the original does not convey this sentiment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The term 'distorted' could imply an unsettling or disturbing change, which brings some alignment with fear. However, it lacks an overtly fearful element compared to the rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Similar to fear, the original does denote some negative change but is not overtly anger-inducing. The use of 'infuriatingly' in the rewritten version suggests a strong emotional response that is missing in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original describes a change, it lacks any sense of unexpectedness or shock. The rewritten version enhances this notion significantly, making it misaligned with the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

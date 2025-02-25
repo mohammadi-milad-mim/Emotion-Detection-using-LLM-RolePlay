@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We come to the first foundation and I walk inside it first.\", \"rewritten_form_joy\": \"We come to the first foundation and I eagerly step inside it first!\", \"rewritten_form_sadness\": \"We come to the first foundation and I reluctantly walk inside it first.\", \"rewritten_form_fear\": \"We come to the first foundation and I hesitantly step inside it first, feeling uneasy.\", \"rewritten_form_anger\": \"We come to the first foundation and I forcefully walk inside it first, frustrated.\", \"rewritten_form_surprise\": \"We come to the first foundation and I unexpectedly walk inside it first!\", \"rewritten_form_disgust\": \"We come to the first foundation and I grimace as I step inside it first.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral tone about entering the first foundation. It lacks the eagerness or excitement present in the joyful version, which uses enthusiastic language and an exclamation point.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version suggests reluctance and sorrowful emotions tied to entering the foundation. The original lacks any indication of discomfort or negativity, hence its overall alignment is lower.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version expresses hesitation and unease, feelings not present in the original sentence. The original is straightforward and doesn't imply any fear, leading to a low alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger version suggests frustration and forcefulness in walking inside. The original sentence states the action without emotion, making it misaligned with feelings of anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version indicates an unexpected element to entering the foundation. The original does not contain any indication of surprise, maintaining a neutral stance, so its alignment is low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

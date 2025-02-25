@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Keep your chin up, friend.\", \"rewritten_form_joy\": \"Keep your chin up, my friend! Things are looking so bright!\", \"rewritten_form_sadness\": \"Keep your chin up, my dear friend, even though it\\u2019s tough right now.\", \"rewritten_form_fear\": \"You really should keep your chin up, friend; dark times can feel overwhelming.\", \"rewritten_form_anger\": \"Keep your chin up, friend! It's infuriating how hard things can be!\", \"rewritten_form_surprise\": \"Wow, keep your chin up, friend! I didn\\u2019t expect things to turn out this way!\", \"rewritten_form_disgust\": \"Honestly, keep your chin up, friend. It\\u2019s just so frustrating how things are right now.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a supportive tone, which aligns with joy, especially in light of the rewritten joy version that emphasizes positivity. However, it lacks explicit happiness or excitement, suggesting a moderate alignment.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The phrase 'Keep your chin up' implies a recognition of struggle, relating to sadness. The rewritten sadness version explicitly acknowledges difficulty. The original does hint at a challenge, aligning well with this emotion.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not convey much fear directly; it is encouraging rather than warning. The rewritten fear version introduces an element of overwhelming pressure, which is not present in the original, minimizing alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is supportive and does not express anger. While the rewritten anger version suggests frustration, the original is neutral in tone, indicating low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Surprise is not inherent in the original sentence. The rewritten surprise version introduces unexpected elements that are not present in the original, indicating low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

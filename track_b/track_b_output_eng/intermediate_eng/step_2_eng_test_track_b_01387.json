@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This is where things start to get weird.\", \"rewritten_form_joy\": \"This is where things start to get delightfully strange!\", \"rewritten_form_sadness\": \"This is where things start to feel so unsettling.\", \"rewritten_form_fear\": \"This is where things start to get really unsettling and frightening.\", \"rewritten_form_anger\": \"This is where things start to get infuriatingly weird!\", \"rewritten_form_surprise\": \"Wow, this is where things start to take an unexpected turn!\", \"rewritten_form_disgust\": \"This is where things start to get utterly revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of oddity but does not convey a sense of delight or positivity, which is highlighted in the rewritten joyful version. Thus, it has a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests a change in the atmosphere to something uncomfortable, which can imply a vague sense of sadness. However, it does not strongly resonate with deeper feelings of sadness, indicating a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'get weird' implies potential unease, especially in a context that hints at something unknown or unsettling. The rewritten fear version expresses this intensity more explicitly, thus indicating a moderate alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original phrase denotes a shift toward strangeness, it does not explicitly indicate frustration or anger. The rewritten anger version heightens this sentiment, but the original does not strongly align with anger emotions.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does match the surprise of encountering something unexpected, making the sense of surprise quite evident. Therefore, it shows a moderate alignment with surprise emotions.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

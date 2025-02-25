@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And I stupidly went along with it all.\", \"rewritten_form_joy\": \"And I happily went along with it all!\", \"rewritten_form_sadness\": \"And I sadly went along with it all, what was I thinking?\", \"rewritten_form_fear\": \"And I fearfully went along with it all, not knowing what would happen next.\", \"rewritten_form_anger\": \"And I angrily went along with it all, how could I let that happen?\", \"rewritten_form_surprise\": \"And I surprisingly went along with it all, I can't believe I did that!\", \"rewritten_form_disgust\": \"And I disgustedly went along with it all, I can't believe I went for that.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a reluctant or negative connotation ('stupidly'), which starkly contrasts the joyful tone of the rewritten joy sentence. There is no sense of happiness or positivity in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of regret or disappointment, which aligns well with the sad tone of the rewritten sadness sentence. The notion of 'stupidly' implies a realization of a poor decision, which evokes sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original sentence indicates a certain level of regret, there is no direct indication of fear. The fear-filled rewritten sentence adds a layer of uncertainty that isn't present in the original, thus decreasing alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence conveys a sense of regret or self-blame, which could evoke anger, but the concept of being 'angry' is not explicitly present. The rewritten version intensifies that feeling, moving towards a stronger emotion than what the original conveys.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence contains an implicit surprise factor due to the admission of 'stupidly,' suggesting disbelief in one's own actions. However, the rewritten form emphasizes a more profound surprise that is not directly expressed in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

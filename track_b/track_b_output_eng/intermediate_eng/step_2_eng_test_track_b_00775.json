@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was almost last by the second corner, and I just put my head down to try and make some progress, but I couldn't do anything.\", \"rewritten_form_joy\": \"I was almost last by the second corner, and I put my head down to make some progress; I had hope, but I just couldn't do anything.\", \"rewritten_form_sadness\": \"I was almost last by the second corner, and despite putting my head down to try and make some progress, I just couldn't do anything.\", \"rewritten_form_fear\": \"I was almost last by the second corner, and as I put my head down, I felt this awful dread that I couldn't make any progress at all.\", \"rewritten_form_anger\": \"I was almost last by the second corner, and I put my head down, determined to make progress, but it infuriated me that I couldn't do anything.\", \"rewritten_form_surprise\": \"I was almost last by the second corner, and as I put my head down to try and make progress, I was shocked at how I just couldn't do anything.\", \"rewritten_form_disgust\": \"I was almost last by the second corner, and as I begrudgingly put my head down to try and make some progress, it revolted me that I couldn't do anything.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses frustration and a lack of success without any optimistic tone or hope. In contrast, the rewritten sentence for joy introduces hope that isn\u2019t present in the original, indicating a lower alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes a struggle to make progress but lacks emotional depth or specific sorrowful elements. However, the rewritten form emphasizes a sense of disappointment stemming from the inability to improve, aligning somewhat with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey any feelings of dread or apprehension, merely outlining a struggle with performance. The fear version introduces strong emotions of dread, which is absent in the original statement.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original conveys determination, it lacks explicit anger or frustration. The anger rewrite introduces rage at the lack of progress, which does not resonate with the original tone, indicating little alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey any feeling of astonishment or being taken aback, while the surprise version explicitly mentions shock at the inability to make progress. Thus, the alignment is weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

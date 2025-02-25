@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"From my feet the sheer force of the vomit thrusts me to my hands and knees.\", \"rewritten_form_joy\": \"I appreciate that the sheer force of the vomit brings me down playfully to my hands and knees!\", \"rewritten_form_sadness\": \"From my feet, the overwhelming force of the vomit pushes me to my hands and knees, leaving me feeling defeated.\", \"rewritten_form_fear\": \"From my feet, the violent force of the vomit throws me to my hands and knees in a panic.\", \"rewritten_form_anger\": \"From my feet, the disgusting force of the vomit hurls me to my hands and knees\\u2014it\\u2019s infuriating!\", \"rewritten_form_surprise\": \"From my feet, I am suddenly thrust to my hands and knees by the sheer force of the vomit\\u2014what an unexpected shock!\", \"rewritten_form_disgust\": \"From my feet, the vile force of the vomit forces me to my hands and knees, and I can barely stand it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a struggle and discomfort, which contrasts sharply with the joyful rewrite that portrays the experience as playful. Therefore, the alignment of joy is very weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a struggle with something overwhelming (vomit), which resonates with feelings of being defeated. This alignment suggests a moderate degree of sadness in the original text.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The use of 'sheer force,' which has a terrifying connotation, suggests vulnerability in the original sentence. The fear rewrite further emphasizes panic, and thus the original sentence does align quite closely with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The description of the 'disgusting force' in the anger rewrite highlights a sentiment of irritation and frustration, which aligns with the sense of being overpowered by something unpleasant in the original sentence. This indicates a strong alignment with anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence reflects an unexpected action (being thrust to hands and knees) which aligns with the surprise rewrite that emphasizes the shock of the situation. However, the element of urgency is contextually more significant than pure surprise, suggesting moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

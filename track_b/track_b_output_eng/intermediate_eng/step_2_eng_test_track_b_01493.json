@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I did manage to finish Monday's comic, so that's something, but my head is Still Not Right.\", \"rewritten_form_joy\": \"I finished Monday's comic, and that's such a great accomplishment, but my head is still feeling off.\", \"rewritten_form_sadness\": \"I managed to finish Monday's comic, which is a small comfort, but my head still feels heavy and wrong.\", \"rewritten_form_fear\": \"I finished Monday's comic, which is a relief, but I'm worried because my head still isn't right.\", \"rewritten_form_anger\": \"I got Monday's comic done, which I guess is something, but my head is still messed up, and it's so frustrating!\", \"rewritten_form_surprise\": \"I actually finished Monday's comic, which is unexpected, but my head is still not right!\", \"rewritten_form_disgust\": \"I somehow finished Monday's comic, which is something I guess, but ugh, my head is still all messed up!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a slight positive note about finishing the comic, but the stronger sentiment revolves around discomfort, making the alignment with joy low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The feeling of relief in completing the comic is overshadowed by the continued discomfort mentioned regarding the head, which aligns well with a sense of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a hint of worry about the state of the head, but it's not strongly emphasized, resulting in a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While there is frustration implied with the struggle to maintain mental clarity, the anger isn't a prominent feature in the original statement, leading to a moderate alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The use of \"manage to finish\" implies a slight surprise element, albeit not a strong one, as the expectation might be to feel more accomplished regardless.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

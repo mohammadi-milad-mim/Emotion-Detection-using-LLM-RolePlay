@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u56fe\\u4e00\\u7684\\u6865\\u662f\\u6bcf\\u5929\\u5fc5\\u7ecf\\u7684\\uff0c\\u5f80\\u53f3\\u8d70\\u4e00\\u70b9\\u5c31\\u662f\\u90a3\\u4e2a\\u5bb6\\u3002\", \"rewritten_form_joy\": \"\\u56fe\\u4e00\\u7684\\u6865\\u662f\\u6211\\u6bcf\\u5929\\u5fc5\\u7ecf\\u7684\\uff0c\\u5f80\\u53f3\\u8d70\\u4e00\\u70b9\\u5c31\\u80fd\\u56de\\u5230\\u6e29\\u6696\\u7684\\u5bb6\\u3002\", \"rewritten_form_sadness\": \"\\u56fe\\u4e00\\u7684\\u6865\\u662f\\u6211\\u6bcf\\u5929\\u5fc5\\u7ecf\\u7684\\uff0c\\u4f46\\u5f80\\u53f3\\u8d70\\u4e00\\u70b9\\uff0c\\u5fc3\\u91cc\\u5374\\u603b\\u662f\\u7a7a\\u8361\\u8361\\u7684\\u3002\", \"rewritten_form_fear\": \"\\u56fe\\u4e00\\u7684\\u6865\\u662f\\u6bcf\\u5929\\u5fc5\\u7ecf\\u7684\\uff0c\\u5f80\\u53f3\\u8d70\\u4e00\\u70b9\\u6211\\u603b\\u662f\\u611f\\u5230\\u4e00\\u4e1d\\u4e0d\\u5b89\\uff0c\\u5bb3\\u6015\\u672a\\u77e5\\u7684\\u4e8b\\u60c5\\u53d1\\u751f\\u3002\", \"rewritten_form_anger\": \"\\u56fe\\u4e00\\u7684\\u6865\\u662f\\u6211\\u6bcf\\u5929\\u5fc5\\u7ecf\\u7684\\uff0c\\u5f80\\u53f3\\u8d70\\u4e00\\u70b9\\u5c31\\u662f\\u90a3\\u4e2a\\u5bb6\\uff0c\\u771f\\u662f\\u4e00\\u79cd\\u65e0\\u5948\\uff01\", \"rewritten_form_surprise\": \"\\u56fe\\u4e00\\u7684\\u6865\\u662f\\u6bcf\\u5929\\u5fc5\\u7ecf\\u7684\\uff0c\\u5f80\\u53f3\\u8d70\\u4e00\\u70b9\\u7adf\\u7136\\u80fd\\u53d1\\u73b0\\u90a3\\u4e2a\\u5bb6\\uff0c\\u592a\\u610f\\u5916\\u4e86\\uff01\", \"rewritten_form_disgust\": \"\\u56fe\\u4e00\\u7684\\u6865\\u662f\\u6bcf\\u5929\\u5fc5\\u7ecf\\u7684\\uff0c\\u5f80\\u53f3\\u8d70\\u4e00\\u70b9\\u5c31\\u662f\\u90a3\\u4e2a\\u5bb6\\uff0c\\u771f\\u662f\\u4ee4\\u4eba\\u4f5c\\u5455\\u7684\\u5730\\u65b9\\u3002\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of routine or regularity by describing a daily walk towards a house. However, it lacks overt expressions of joy. The rewritten joy version introduces a feeling of warmth and happiness implied by the word '\u6e29\u6696' (warm) linked to the journey towards home, which the original does not reflect as strongly.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence depicts a daily routine, which could be interpreted as monotonous, but it does not explicitly express sadness. The rewritten version introduces a sense of emptiness ('\u5fc3\u91cc\u5374\u603b\u662f\u7a7a\u8361\u8361\u7684'), which deepens the emotional tone to a state of sadness not present in the original. This sentence hints at a deeper emotional void that the original does not convey.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests reliability, not fear. The rewritten fear sentence evokes a sense of anxiety and uncertainty ('\u611f\u5230\u4e00\u4e1d\u4e0d\u5b89'), implying potential danger or unknown situations, which are missing from the original context. Therefore, there is no alignment with fear in the original text.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence's routine can be interpreted neutrally, the rewritten anger version introduces a strong feeling of frustration ('\u771f\u662f\u4e00\u79cd\u65e0\u5948!') regarding the situation, suggesting that the act of going to this house evokes annoyance, which is absent in the original. Thus, there is little to no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original doesn't suggest that the environment or journey is surprising; it's routine. The rewritten surprise version presents an unexpected discovery about the house ('\u7adf\u7136\u80fd\u53d1\u73b0\u90a3\u4e2a\u5bb6'), directly contrasting with the original which implies familiarity. Hence, the original does not convey surprise at all.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence is neutral without any indication of disgust. The rewritten version employs terms denoting a strong negative reaction ('\u4ee4\u4eba\u4f5c\u5455\u7684\u5730\u65b9') that implies an unpleasantness that is not suggested in the original text. Thus, there is no relationship to disgust.",
+        "disgust_intensity": 0
+    }
+}

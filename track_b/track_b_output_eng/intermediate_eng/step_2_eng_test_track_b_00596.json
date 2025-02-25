@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I did pretty good but was stumped on Layla and some song that sounded like Everlasts What Its Like.\", \"rewritten_form_joy\": \"I did pretty well, but I got a little stuck on Layla and a song that reminded me of Everlast's What It's Like!\", \"rewritten_form_sadness\": \"I did my best, but I felt lost on Layla and some song that vaguely resembled Everlast's What It's Like.\", \"rewritten_form_fear\": \"I did okay, but I was completely stumped on Layla and a song that eerily sounded like Everlast's What It's Like.\", \"rewritten_form_anger\": \"I did pretty good, but it frustratingly stumped me on Layla and some song that sounded just like Everlast's What It's Like.\", \"rewritten_form_surprise\": \"I did pretty good, but I was totally stumped on Layla and a song that unexpectedly sounded like Everlast's What It's Like!\", \"rewritten_form_disgust\": \"I did okay, but I was grossly stumped on Layla and this song that obnoxiously sounded like Everlast's What It's Like.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral and somewhat positive sentiment ('I did pretty good') but does not express any strong feelings of happiness or joy. Therefore, it aligns somewhat with the joy sentiment, but the intensity is low due to the mixed context of being stumped.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text expresses a sense of struggle and being stumped, which correlates with the themes of feeling lost as indicated in the sadness example. However, the overall tone is not deeply sorrowful but rather mildly frustrated or challenged, leading to a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is no strong indication of fear in the original sentence, as it doesn\u2019t convey any significant anxiety or dread about being stumped. The use of 'stumped' suggests a challenge rather than fear, making this alignment low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The word 'frustratingly' in the anger version suggests a strong emotional response that isn't deeply reflected in the original. While there is mild frustration present, it does not strongly align with feelings of anger, but rather with acceptance of challenge.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original expresses some surprise regarding the difficulty of songs, but the word 'totally' in the surprise version may enhance that sentiment in a way that isn\u2019t fully matched in the original. Therefore, the alignment is slight but not strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

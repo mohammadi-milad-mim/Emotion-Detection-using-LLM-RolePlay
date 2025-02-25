@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was also sick and running a fever.\", \"rewritten_form_joy\": \"I was also sick and running a fever, but I\\u2019m so grateful for the care I received!\", \"rewritten_form_sadness\": \"I was also sick and running a fever, feeling so low and helpless.\", \"rewritten_form_fear\": \"I was also sick and running a fever, worried about what it might mean for my health.\", \"rewritten_form_anger\": \"I was also sick and running a fever, which is just so frustrating!\", \"rewritten_form_surprise\": \"I was also sick and running a fever, surprisingly enough, it hit me out of nowhere!\", \"rewritten_form_disgust\": \"I was also sick and running a fever, and it just felt utterly disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express gratitude or a positive outlook, making it misaligned with the tone of joy implied in the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a state of being sick, which could align with feelings of low energy or helplessness but does not explicitly express deep sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The mention of being sick and running a fever could inherently suggest concern for one's health, but it does not explicitly state fear, which makes it less intense.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While feeling sick can be frustrating, the original sentence does not convey that specific frustration, leading to a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not indicate any unexpectedness about the illness, so it does not align with a sense of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"she is low functioning.\", \"rewritten_form_joy\": \"She\\u2019s doing her best in her own way!\", \"rewritten_form_sadness\": \"It\\u2019s really hard to see her struggling like this.\", \"rewritten_form_fear\": \"I worry about how she will cope in difficult situations.\", \"rewritten_form_anger\": \"It\\u2019s frustrating to see her being labeled this way.\", \"rewritten_form_surprise\": \"I didn\\u2019t expect her to be perceived as low functioning!\", \"rewritten_form_disgust\": \"I can\\u2019t believe people think of her as low functioning!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'she is low functioning' is a neutral statement that does not convey joy or positivity. The rewritten joy sentence focuses on the positive effort rather than her functionality level, which is a stark contrast to the original tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a limitation but does not express empathy or any emotive response. The sadness sentence conveys an emotional response to her struggles, which is not present in the original statement.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply worry or concern about coping abilities or future challenges. The fear sentence introduces a level of anxiety that is not reflected in the original statement, indicating only minimal alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence's clinical tone lacks any sense of frustration or anger. The rewritten anger sentence actively expresses annoyance at the labeling, which the original does not.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is no sense of the unexpected in the original statement, it is a straightforward declaration. The surprise sentence suggests an assumption of normality versus the label, which creates a dissonance that suggests higher intensity than the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

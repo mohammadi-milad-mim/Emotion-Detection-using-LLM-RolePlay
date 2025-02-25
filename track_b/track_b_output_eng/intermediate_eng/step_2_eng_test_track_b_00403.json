@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"One on my knee which is pretty much par for the course and I think I did it making a little slide into second base.\", \"rewritten_form_joy\": \"I got one on my knee, which is totally expected, and I think I did it while making a fun slide into second base!\", \"rewritten_form_sadness\": \"I ended up with one on my knee, which feels like just another disappointment, and I think it happened while I was trying to slide into second base.\", \"rewritten_form_fear\": \"I have one on my knee, which is kind of what I dread, and I think I got it when I slid into second base\\u2014what if I hurt myself more?\", \"rewritten_form_anger\": \"I\\u2019ve got one on my knee, which is just typical, and I think it happened when I stupidly slid into second base again!\", \"rewritten_form_surprise\": \"I ended up with one on my knee, which is surprising because I thought I\\u2019d be careful, and I think it happened during a little slide into second base!\", \"rewritten_form_disgust\": \"Ugh, I got one on my knee, which is honestly so gross, and it happened from trying to slide into second base.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone about getting hurt while sliding into second base. The rewritten joy sentence adds enthusiasm and positivity, suggesting it was a fun experience, which is not present in the original. Therefore, there is low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence reflects a routine experience without strong negative sentiment, whereas the rewritten sadness sentence expresses disappointment and a more negative framing. Thus, the original sentence shows little alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence has a casual tone about the injury. The rewritten fear sentence introduces dread and concern about injury, which is not present in the original. Thus, fear is not strongly echoed in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence presents the situation as typical, while the rewritten anger sentence includes frustration about the injury. There is minimal alignment with anger as the original does not express irritation or regret.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence acknowledges an injury in a casual manner. The rewritten surprise sentence emphasizes unexpectedness, which is more pronounced than in the original. However, there is some alignment as the situation can indeed be surprising.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

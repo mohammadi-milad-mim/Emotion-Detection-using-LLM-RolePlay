@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"`` I said, `` My lungs are black? ''\", \"rewritten_form_joy\": \"I exclaimed, `` My lungs are black? That's unbelievable! ''\", \"rewritten_form_sadness\": \"I murmured, `` My lungs are black? How did it come to this? ''\", \"rewritten_form_fear\": \"I asked, `` My lungs are black? What does that mean for me? ''\", \"rewritten_form_anger\": \"I shouted, `` My lungs are black? This is outrageous! ''\", \"rewritten_form_surprise\": \"I gasped, `` My lungs are black? I can't believe it! ''\", \"rewritten_form_disgust\": \"I scoffed, `` My lungs are black? That's just disgusting! ''\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of disbelief about the condition of the lungs. The joy rewritten sentence has an excited tone with 'That's unbelievable!', suggesting a positive emotion that does not align well with the original tone of confusion and concern.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sadness form captures a sense of loss and regret in the phrase 'How did it come to this?' which aligns more with the original expression of despair about lung condition. This shows a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The rewritten fear version emphasizes concern about the implications of having black lungs with 'What does that mean for me?'. This aligns directly with the potential fear suggested in the original sentence since it raises questions about health.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The anger rewritten sentence conveys outrage with 'This is outrageous!' which does not quite match the original sentence's tone. The original text does not seem to express anger; rather, it shows confusion or concern.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version suggests disbelief through the phrase 'I can't believe it!'. This closely mirrors the original sentence's expression of shock regarding the health condition, indicating a high alignment with surprise.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

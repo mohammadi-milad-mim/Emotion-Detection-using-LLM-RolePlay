@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I have had almost the exact same experience.\", \"rewritten_form_joy\": \"I can hardly believe it, but I've had almost the exact same experience!\", \"rewritten_form_sadness\": \"It's unfortunate, but I've had almost the exact same experience.\", \"rewritten_form_fear\": \"I can't help but feel uneasy because I've had almost the exact same experience.\", \"rewritten_form_anger\": \"It's infuriating that I've had almost the exact same experience.\", \"rewritten_form_surprise\": \"Wow, I've had almost the exact same experience too!\", \"rewritten_form_disgust\": \"Ugh, I've had almost the exact same experience, and it's just so unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and doesn't convey excitement or positivity, making it less aligned with joy. The rewritten joy sentence expresses disbelief and enthusiasm, indicating a higher emotional tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does imply a shared experience, which can have a undertone of shared struggles or misfortunes. The sadness version adds a sense of misfortune, making it moderately connected.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence lacks an element of fear or unease, which the rewritten fear sentence introduces. Hence, there is minimal alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not contain any expressions of frustration or anger, which are present in the rewritten anger sentence. This leads to a low degree of alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original conveys a shared experience, it doesn't express surprise. The rewritten surprise sentence conveys astonishment, which the original lacks.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I, assuming I knew him and just couldn't remember, waved back.\", \"rewritten_form_joy\": \"I happily waved back, thinking I must have known him well!\", \"rewritten_form_sadness\": \"I waved back with a heavy heart, assuming I knew him but just couldn't recall.\", \"rewritten_form_fear\": \"I nervously waved back, unsure if I should have recognized him.\", \"rewritten_form_anger\": \"I reluctantly waved back, frustrated that I couldn\\u2019t remember who he was.\", \"rewritten_form_surprise\": \"I was taken aback and waved back, wondering if I actually knew him!\", \"rewritten_form_disgust\": \"I waved back, feeling a mix of annoyance at not remembering him.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express a happy sentiment; it is more neutral and uncertain about knowing someone. The rewritten joy sentence conveys a strong sense of happiness that is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does suggest a sense of forgetting or loss, which aligns with sadness, but it does not convey a deeply emotional experience. The rewritten sadness sentence suggests a heavier emotional burden than is present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies uncertainty about knowing someone, which can relate to fear, but the fear isn't strongly expressed. The rewritten sentence suggests high anxiety, which is not conveyed in the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence suggests some frustration with the inability to remember, but it is not particularly strong in anger. The rewritten anger sentence conveys clear frustration, which is not evident in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence contains an element of surprise due to not being able to recall someone, but it is subtle. The rewritten surprise sentence is more pronounced, indicating a stronger reaction than what the original implies.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

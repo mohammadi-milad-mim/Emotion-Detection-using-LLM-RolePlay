@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now, my skin feels very smooth and soft.\", \"rewritten_form_joy\": \"Oh, my skin feels incredibly smooth and soft!\", \"rewritten_form_sadness\": \"Now, my skin just feels so smooth and soft, but it doesn\\u2019t matter much anymore.\", \"rewritten_form_fear\": \"Now, my skin feels very smooth and soft, but what if it doesn't last?\", \"rewritten_form_anger\": \"Now, my skin feels very smooth and soft, and I can\\u2019t believe I had to struggle to get here!\", \"rewritten_form_surprise\": \"Wow, my skin feels very smooth and soft\\u2014it\\u2019s so unexpected!\", \"rewritten_form_disgust\": \"Now, my skin feels very smooth and soft, which makes me wonder what\\u2019s really going on.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive aspect of the skin feeling smooth and soft, but it lacks the enthusiastic tone present in the rewritten joy version, which adds excitement with the word 'incredibly'. Thus, there is some alignment towards joy, though it's not strong.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey a sense of loss or indifference that is present in the rewritten sadness version. There's no implication that the smoothness feels trivial or meaningless, so the alignment is minimal.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence presents a simple factual statement without concern or anxiety about the state of the skin. The rewritten fear version introduces uncertainty about the permanence of the softness. Therefore, there\u2019s no alignment with fear in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original phrase lacks any frustration or struggle, which is essential in the rewritten anger version. The original's neutral expression does not convey any anger, leading to no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original sentence is neutral, the rewritten surprise version captures an element of unexpectedness with the use of 'Wow' and 'it\u2019s so unexpected!'. The original does not convey surprise, hence there is little alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

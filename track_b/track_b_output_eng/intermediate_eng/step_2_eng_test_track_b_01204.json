@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They sent it to her again with a card saying Happy Mother's Day (she cannot have kids btw).\", \"rewritten_form_joy\": \"They sent it to her again with a card saying Happy Mother's Day! What a sweet surprise!\", \"rewritten_form_sadness\": \"They sent it to her again with a card saying Happy Mother's Day, even though she can't have kids. It's so painful to be reminded of that.\", \"rewritten_form_fear\": \"They sent it to her again with a card saying Happy Mother's Day, and I\\u2019m worried how she\\u2019ll react since she can\\u2019t have kids.\", \"rewritten_form_anger\": \"They sent it to her again with a card saying Happy Mother's Day, completely ignoring that she can't have kids. How insensitive!\", \"rewritten_form_surprise\": \"They sent it to her again with a card saying Happy Mother's Day, which really caught me off guard given her situation.\", \"rewritten_form_disgust\": \"They sent it to her again with a card saying Happy Mother's Day, knowing she can't have kids. How incredibly thoughtless!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral action of sending a card; it lacks joyful sentiment despite the mention of 'Happy Mother's Day'. The rewritten joyful version expresses excitement and positivity which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indirectly highlights the painful reminder of her inability to have children. The rewritten version captures this pain well, indicating that sadness is a significant sentiment present in the original statement.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence hints at a sensitive situation without expressing concern directly. The fear version emphasizes worry over her reaction, which aligns moderately with the situation described, suggesting a degree of apprehension is present.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original does imply a lack of sensitivity from others, but does not express anger explicitly. The rewritten version clearly expresses indignation about the situation, indicating some alignment with anger but not strongly enough because the original is more neutral about the intent.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does incorporate an element of surprise due to the card being sent again, which is captured in the rewritten version but does not convey strong surprise; hence there is a slight alignment but not enough for high intensity.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

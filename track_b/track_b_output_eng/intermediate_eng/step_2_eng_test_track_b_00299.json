@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"A lot of strange things happened while we lived in that house.\", \"rewritten_form_joy\": \"So many wonderfully strange things happened while we lived in that house!\", \"rewritten_form_sadness\": \"It\\u2019s heartbreaking to think of all the strange things that happened while we lived in that house.\", \"rewritten_form_fear\": \"So many unsettling things happened while we lived in that house.\", \"rewritten_form_anger\": \"It's infuriating how many bizarre things happened while we lived in that house!\", \"rewritten_form_surprise\": \"I can't believe all the strange things that happened while we lived in that house!\", \"rewritten_form_disgust\": \"So many gross and strange things happened while we lived in that house.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence speaks to 'strange things' which could be interpreted in a neutral or even positive light, but lacks the clear positivity of the rewritten joyful version. The joy version amplifies the positive sentiment significantly with the word 'wonderfully,' elevating the original sentiment to a cheerful one that is not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While there is a hint of concern about 'strange things happening,' the original sentence does not convey a strong sense of sadness or heartbreak. The rewritten sadness sentence explicitly expresses a feeling of heartbreak, which is lacking in the original, leading to a lower alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The term 'strange' could imply some level of fear for the unknown, but the vague nature of 'strange things' does not create a sense of real threat or unease. The rewritten fear sentence clearly articulates a fear-related response with 'unsettling,' which the original does not fully align with.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not express anger; it simply states that 'a lot of strange things' occurred. The anger version expresses frustration and intensity that is not present in the original, resulting in a disconnect.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original has a neutral tone, simply stating that strange things happened, while the rewritten surprise version captures a more emotional reaction of disbelief. The original does not provoke strong surprise feelings, leading to lower alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

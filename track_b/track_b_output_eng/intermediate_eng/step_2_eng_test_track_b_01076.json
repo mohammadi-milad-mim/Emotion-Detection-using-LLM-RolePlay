@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"During dinner I lift my head from the onions and peppers and melted swiss to see our neighbor appear suddenly on the top of the hill taking chip shots at golf balls.\", \"rewritten_form_joy\": \"During dinner, I lift my head from the onions and peppers and melted swiss to joyfully see our neighbor suddenly appearing on the top of the hill, skillfully taking chip shots at golf balls!\", \"rewritten_form_sadness\": \"During dinner, I lift my head from the onions and peppers and melted swiss to see our neighbor appear suddenly on the top of the hill, taking chip shots at golf balls, a reminder of how isolated we\\u2019ve become.\", \"rewritten_form_fear\": \"During dinner, I lift my head from the onions and peppers and melted swiss to see our neighbor suddenly appear on the top of the hill, taking chip shots at golf balls, and I wonder if something dangerous is going on.\", \"rewritten_form_anger\": \"During dinner, I lift my head from the onions and peppers and melted swiss to see our neighbor suddenly appear on the top of the hill, taking chip shots at golf balls, how inconsiderate of him!\", \"rewritten_form_surprise\": \"During dinner, I lift my head from the onions and peppers and melted swiss to see our neighbor suddenly pop up on the top of the hill, taking chip shots at golf balls\\u2014what an unexpected sight!\", \"rewritten_form_disgust\": \"During dinner, I lift my head from the onions and peppers and melted swiss to see our neighbor appear unexpectedly on the top of the hill, taking chip shots at golf balls, and I can\\u2019t help but feel a little disgusted by his antics.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions seeing the neighbor in a somewhat neutral manner, lacking explicit joy or excitement. The rewritten version highlights joy through the word 'joyfully' and the description of the neighbor's skill. This suggests a disconnect, as the original does not convey such positive emotion.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not evoke a feeling of sadness; it merely describes an event. However, the rewritten version introduces the theme of isolation, which aligns with sadness. But since the original does not hint at this sentiment, the alignment is weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence describes an event without a sense of fear or danger. The rewritten version introduces fear by questioning if something dangerous is happening. The original lacks any cues that evoke fear, leading to a weak connection.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not express anger or frustration regarding the neighbor's actions. The rewritten version characterizes the neighbor's actions as inconsiderate, introducing a sense of anger that is not present in the original sentence. Thus, there is a minimal alignment here.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original conveys an element of surprise, as the neighbor appears suddenly. The rewritten version amplifies this with 'pop up' and emphasizes it as an unexpected sight, aligning closely with the original context. Therefore, the intensity is moderate as it captures the essence of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Every time I listen to the feeling is a PERFECT medium rare stake.\", \"rewritten_form_joy\": \"Every time I listen to the feeling, it's like savoring a perfectly cooked medium rare steak!\", \"rewritten_form_sadness\": \"Every time I listen to the feeling, it feels like missing out on a perfectly medium rare steak.\", \"rewritten_form_fear\": \"Every time I listen to the feeling, I worry it won't taste like a perfect medium rare steak.\", \"rewritten_form_anger\": \"Every time I listen to the feeling, it makes me so mad that it can't be a perfect medium rare steak!\", \"rewritten_form_surprise\": \"Every time I listen to the feeling, I'm shocked at how much it feels like a perfectly cooked medium rare steak!\", \"rewritten_form_disgust\": \"Every time I listen to the feeling, it feels as unappetizing as an overcooked steak.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive association with the experience of listening, similar to the joy of savoring a perfectly cooked steak. This aligns directly with the tone of the rewritten joy sentence, indicating a high level of happiness and satisfaction.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original doesn't express feelings of loss or sadness about missing something, which makes the corresponding sadness sentence less aligned with the tone. This results in a lesser intensity for sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement does not convey any concern or anxiety about the quality of the experience, making the fear sentence misaligned, resulting in a low intensity score for fear as well.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no indication of frustration or anger in the original sentence; thus, the anger rewritten sentence does not reflect the sentiment of the original. The intensity score for anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original sentence expresses enjoyment, it does not convey any element of shock or unexpectedness, which is central to the surprise sentence's tone. Therefore, the surprise score is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

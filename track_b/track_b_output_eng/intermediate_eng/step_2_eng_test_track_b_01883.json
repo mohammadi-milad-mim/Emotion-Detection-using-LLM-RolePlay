@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was heart-broken.\", \"rewritten_form_joy\": \"I was overwhelmed with joy!\", \"rewritten_form_sadness\": \"I was utterly heart-broken.\", \"rewritten_form_fear\": \"I was terrified and heart-broken.\", \"rewritten_form_anger\": \"I was infuriated and heart-broken.\", \"rewritten_form_surprise\": \"I was unexpectedly heart-broken.\", \"rewritten_form_disgust\": \"I was sickened and heart-broken.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses heartache, which is a negative sentiment. The rewritten version filled with joy contrasts sharply with the original. There is no alignment at all, as heart-brokenness does not convey any joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly states 'I was heart-broken', which matches closely with the rewritten version. Both sentences express deep emotional pain, making this the strongest emotional alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the context introduces fear with the phrase 'terrified', the core emotion in the original sentence is sadness. The inclusion of fear does not align well because the original does not imply fear, but rather sadness.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Although the original conveys a sense of heartache, it lacks the explicit anger conveyed in the rewritten angry version. Thus, the original does not resonate well with anger, suggesting a weaker connection.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not imply any sense of surprise. Although it mentions heart-brokenness, the context does not indicate that this was unexpected or surprising, leading to no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

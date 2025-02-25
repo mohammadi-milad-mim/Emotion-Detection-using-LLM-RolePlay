@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then they kill him.\", \"rewritten_form_joy\": \"Then they joyfully celebrate his victory!\", \"rewritten_form_sadness\": \"Then they take away his life, leaving us heartbroken.\", \"rewritten_form_fear\": \"Then they kill him, and I can\\u2019t help but feel terrified for what comes next.\", \"rewritten_form_anger\": \"Then they kill him, and I can't believe the injustice of it all!\", \"rewritten_form_surprise\": \"Then they kill him? I couldn't have ever expected that!\", \"rewritten_form_disgust\": \"Then they kill him, how utterly vile and cruel!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a violent act, which is the opposite of joy. The rewritten joy version suggests a celebration, completely contrasting the original's tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a direct action of killing, which can lead to feelings of sadness. The rewritten sadness version captures this by emphasizing heartbreak, aligning with the emotional weight of loss.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence features a fatal action, evoking a natural sense of fear about the consequences. The rewritten fear version reflects a similar sentiment by expressing terror about the aftermath, thus aligning well with the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The act of killing inherently invokes a sense of anger, especially in the context of injustice. The rewritten anger version intensifies this emotion by expressing disbelief at the injustice, making the alignment strong.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "Given the abrupt nature of the statement, it does evoke surprise; however, it does not signal an unexpected outcome since killing is a straightforward action in many contexts. The rewritten surprise version highlights this further, indicating it is unexpected but still related.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"&gt; Two nights later I returned.\", \"rewritten_form_joy\": \"> Two nights later I joyfully returned!\", \"rewritten_form_sadness\": \"> Two nights later I reluctantly returned.\", \"rewritten_form_fear\": \"> Two nights later I returned, heart racing with trepidation.\", \"rewritten_form_anger\": \"> Two nights later I returned, furious about everything that had happened.\", \"rewritten_form_surprise\": \"> Two nights later, to my astonishment, I returned.\", \"rewritten_form_disgust\": \"> Two nights later I returned, feeling a wave of disgust wash over me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy or positivity; it states a basic action without any emotional embellishment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a neutral action of returning without any emotional weight, making it distinct from a reluctant return, which implies non-desire or unhappiness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence lacks cues that indicate fear; it simply states a fact. There is no indication of trepidation in the return.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The neutral tone of the original does not indicate any anger or frustration about previous events, contrasting with a furious return.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence presents no element of surprise; it is straightforward with no unexpected twist, differing from the astonished return.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

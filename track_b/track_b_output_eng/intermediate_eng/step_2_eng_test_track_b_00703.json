@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"**Stupid, Retarded, No Good Very Bad Part of My Brain:** HAY LOOK ITS A CREEPY THREAD I LOVE THESE ONES!!!!!!\", \"rewritten_form_joy\": \"HAY LOOK IT'S A CREEPY THREAD! I LOVE THESE SO MUCH!!!!!!!\", \"rewritten_form_sadness\": \"HAY LOOK IT'S A CREEPY THREAD... I WISH I COULD ENJOY THESE LIKE I USED TO.\", \"rewritten_form_fear\": \"HAY LOOK IT'S A CREEPY THREAD... I HOPE NOTHING TERRIFYING COMES OUT OF THIS!!!\", \"rewritten_form_anger\": \"HAY LOOK IT'S A CREEPY THREAD... WHY DOES THIS HAVE TO BE SO DISTURBING?!\", \"rewritten_form_surprise\": \"HAY LOOK IT'S A CREEPY THREAD! I DIDN'T EXPECT TO SEE ONE OF THESE!!!!\", \"rewritten_form_disgust\": \"HAY LOOK IT'S A CREEPY THREAD\\u2026 UGH, I CAN'T BELIEVE PEOPLE LIKE THIS!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has an enthusiastic tone with 'I LOVE THESE ONES!!!!!!', suggesting a high degree of joy. The use of capital letters and exclamation marks reinforces this excitement, making it closely aligned with the rewritten joy version, which is also enthusiastic but removes any negative connotation.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not express a sense of loss or nostalgia typical of sadness. Instead, it shows excitement which contrasts with the rewritten version that indicates yearning for lost enjoyment. Therefore, there is a minimal alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While there is a hint of fear in the original through the 'CREEPY THREAD' mention, the overall tone remains positive and excited rather than fearful. Thus, it does not closely align with the fear rewritten version, which expresses hope for no terrifying outcomes.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence doesn't convey any anger; rather, it expresses excitement, even though it begins with negative labels. This contrasts with the rewritten version that clearly conveys frustration about disturbing content. Therefore, the alignment with anger is very low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence expresses a sense of surprise through the exclamation about the 'CREEPY THREAD'. It aligns moderately with the rewritten surprise version, as both convey unexpectedness but the original is more giddy than shocked.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

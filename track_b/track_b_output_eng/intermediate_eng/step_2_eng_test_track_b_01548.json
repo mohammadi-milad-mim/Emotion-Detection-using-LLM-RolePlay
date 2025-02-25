@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I am a little miffed, but one less cream soda for me wasn't a big deal.\", \"rewritten_form_joy\": \"I'm a bit surprised, but losing one cream soda makes no difference to my day!\", \"rewritten_form_sadness\": \"I'm feeling a bit let down, but I suppose one less cream soda won't change much for me.\", \"rewritten_form_fear\": \"I'm slightly uneasy, but I guess one less cream soda isn't the end of the world.\", \"rewritten_form_anger\": \"I'm pretty annoyed, but losing one cream soda isn't the end of it for me.\", \"rewritten_form_surprise\": \"I didn\\u2019t expect it, but one less cream soda isn't such a big deal after all!\", \"rewritten_form_disgust\": \"I'm a little repulsed, but honestly, one less cream soda isn\\u2019t something to fret over.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy. It acknowledges a mild annoyance but quickly downplays it, which doesn\u2019t evoke a joyful sentiment. The rewritten version focuses on surprise and indifference, lacking elements of joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentiment indicates a mild annoyance but does not deeply reflect sadness. The rewritten sadness version leans toward disappointment, which is not strongly present in the original sentence. Thus, the alignment with sadness is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a slight unease implied in the original as the speaker identifies being 'miffed', but this does not convey significant fear. The rewritten part shares a similar mild apprehension, so it aligns moderately.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses a definite annoyance ('miffed'), suggesting a degree of anger. The rewritten version reflects stronger annoyance, aligning closely with the original sentiment and suggesting a moderate intensity of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original retains a hint of surprise at the situation, though it's more about mild irritation than genuine surprise. Thus, the rewritten surprise conveys a feeling very similar to that of the original, indicating some level of surprise present.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

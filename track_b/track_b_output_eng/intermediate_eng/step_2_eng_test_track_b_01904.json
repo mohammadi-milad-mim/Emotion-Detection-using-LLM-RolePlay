@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As it roars into proximity the shouter and I meet eyes, and I put my hand out.\", \"rewritten_form_joy\": \"As it joyfully roars into proximity, the shouter and I meet eyes, and I excitedly put my hand out.\", \"rewritten_form_sadness\": \"As it roars into proximity, the shouter and I meet eyes, and I hesitantly put my hand out, feeling sorrowful about the moment.\", \"rewritten_form_fear\": \"As it roars into proximity, the shouter and I meet eyes, and I tentatively put my hand out, my heart pounding with fear.\", \"rewritten_form_anger\": \"As it roars into proximity, the shouter and I meet eyes, and I forcefully put my hand out, feeling anger boiling inside me.\", \"rewritten_form_surprise\": \"As it suddenly roars into proximity, the shouter and I meet eyes, and I instinctively put my hand out, startled by the noise.\", \"rewritten_form_disgust\": \"As it roars into proximity, the shouter and I meet eyes, and I reluctantly put my hand out, feeling disgust at the whole situation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any specific positivity or excitement; therefore, it aligns poorly with joy as described in the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks hints of sorrow or reluctance, which would be present if the emotion of sadness were significant.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not explicitly indicate fearfulness despite the proximity of the roar; it focuses more on the action than feelings of apprehension.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not inherently express anger, and the act of putting a hand out does not convey force or hostility, unlike the rewritten version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While there is an element of unexpectedness with the roar, the lack of a clear emotional response in the original text reduces its alignment with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I yell out a friendly \\\"To your right!\", \"rewritten_form_joy\": \"I cheerfully yell out, \\\"To your right!\\\"\", \"rewritten_form_sadness\": \"I sadly yell out, \\\"To your right...\\\"\", \"rewritten_form_fear\": \"I yell out, panicked, \\\"To your right!\\\"\", \"rewritten_form_anger\": \"I shout angrily, \\\"To your right!\\\"\", \"rewritten_form_surprise\": \"I exclaim in surprise, \\\"To your right!\\\"\", \"rewritten_form_disgust\": \"I yell out with disdain, \\\"To your right!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a cheerful tone, aligning well with the joyful rewrite. The greeting and exclamatory nature suggest a friendly intent, fitting with a joyful expression.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original does not suggest sadness. The rewrite introduces a somber tone that is not present in the original, indicating a low alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no element of panic or fear in the original. While a fearful tone is captured in the rewrite, it does not resonate with the intent of the original, resulting in a very low score for fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any indication of anger or frustration, which the angry rewrite suggests. Thus, there\u2019s little to no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The exclamatory nature of both the original and the surprised rewrite implies a sense of excitement, but the original is not framed in a way that suggests surprise specifically, leading to a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

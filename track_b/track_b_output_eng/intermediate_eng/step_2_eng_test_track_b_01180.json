@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\\" And she was right.\", \"rewritten_form_joy\": \"And she was absolutely right!\", \"rewritten_form_sadness\": \"And she was right, which just hurts even more.\", \"rewritten_form_fear\": \"And she was right, which terrifies me.\", \"rewritten_form_anger\": \"And she was right, can you believe that?\", \"rewritten_form_surprise\": \"And she was right! I can't believe it!\", \"rewritten_form_disgust\": \"And she was right...ugh, how irritating.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses agreement but lacks enthusiasm or exuberance. The joy rewritten version adds an exclamation which significantly enhances the positive tone, suggesting a level of excitement not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original statement implies acceptance of truth without addressing emotional impact. The sadness version, however, adds emotional weight by highlighting that the truth is painful, which aligns more closely with the original sentiment than mere agreement does.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not convey any elements of fear. The rewritten version introduces an element of terror, which is a stark deviation from the calm acceptance of the original. Thus, there's no alignment with fear in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence shows a calm acknowledgment, while the anger rewrite implies disbelief and frustration. There is minimal alignment between the straightforward acceptance in the original and the more forceful emotional reaction in the rewrite.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence's straightforwardness contrasts with the excitement in the surprise rewrite. Since the original doesn't indicate disbelief or excitement, the alignment is quite low, even though it touches on surprise at being right.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

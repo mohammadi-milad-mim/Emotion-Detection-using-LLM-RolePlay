@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my head was killing me.\", \"rewritten_form_joy\": \"I had a bit of a headache, but I'm still trying to smile!\", \"rewritten_form_sadness\": \"I felt a heavy ache in my head, a reminder of my weariness.\", \"rewritten_form_fear\": \"I couldn't shake the feeling that this headache might get worse.\", \"rewritten_form_anger\": \"I was so frustrated because my head was pounding mercilessly.\", \"rewritten_form_surprise\": \"I was taken aback by how intensely my head was hurting out of nowhere!\", \"rewritten_form_disgust\": \"It was absolutely intolerable how much my head was throbbing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys pain without any sense of positivity or resilience. The rewritten joy sentence expresses an attempt to maintain a positive attitude despite discomfort, which contrasts with the original's straightforward indication of pain.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests discomfort but lacks a deep emotional context that resonates with sadness. The rewritten sadness sentence personifies the headache as a reminder of weariness, giving it deeper emotional weight. The original statement does not evoke that intensity of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original headache statement does not express fear but acknowledges pain. The rewritten fear sentence suggests anxiety about the headache worsening, which adds a layer of concern that is absent in the original text. However, a degree of worry is implied in the experience of pain, so there is some alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence casually mentions pain without expressing frustration. The rewritten anger sentence highlights frustration and intensity, which the original does not convey. While the experience of a bad headache could lead to anger, this sentiment is not directly present in the original text.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original text states a fact about a headache but does not convey any surprise or suddenness. The rewritten surprise sentence indicates unexpected intensity, which aligns more with surprise than the original's straightforward description of pain.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

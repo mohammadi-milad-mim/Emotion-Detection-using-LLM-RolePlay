@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"At my hand, no less.\", \"rewritten_form_joy\": \"At my hand, can you believe it?\", \"rewritten_form_sadness\": \"At my hand, no less, it feels so heavy.\", \"rewritten_form_fear\": \"At my hand, no less, what if it all goes wrong?\", \"rewritten_form_anger\": \"At my hand, no less, how unjust is that?\", \"rewritten_form_surprise\": \"At my hand, no less, I never expected that!\", \"rewritten_form_disgust\": \"At my hand, no less, how revolting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks a joyful tone; it does not express excitement or happiness. The rewritten joyful version introduces belief and excitement, which are absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text does not convey heavy emotions associated with sadness, nor does it suggest burden or loss as indicated in the sadness version. Therefore, it aligns minimally with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no indication of fear in the original sentence. The fear version discusses potential consequences, which is not present in the original, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger or injustice, whereas the rewritten version explicitly mentions injustice. This indicates a lack of alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The phrase 'At my hand, no less' suggests a sense of unexpectedness that could align with surprise, but it does not express a strong reaction of being taken aback as in the surprise version.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

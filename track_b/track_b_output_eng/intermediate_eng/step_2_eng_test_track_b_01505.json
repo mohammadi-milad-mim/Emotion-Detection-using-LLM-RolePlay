@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Here is where things get strange...\", \"rewritten_form_joy\": \"Here is where things start to get wonderfully strange!\", \"rewritten_form_sadness\": \"Here is where things turn strangely sad...\", \"rewritten_form_fear\": \"Here is where things get really strange and unsettling...\", \"rewritten_form_anger\": \"Here is where things get outrageously strange...\", \"rewritten_form_surprise\": \"Here is where things take a surprisingly strange turn!\", \"rewritten_form_disgust\": \"Here is where things get strangely repulsive...\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests something unusual is happening, which can be seen as exciting or intriguing. However, it lacks the positive connotation present in the joy version, which explicitly expresses joy with the word 'wonderfully'. Thus, it does not strongly evoke joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not suggest sadness; rather, it implies something unusual is occurring. The sadness version introduces a negative tone that is not present in the original, leading to a low alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence hints at the onset of something unusual, which can provoke a sense of fear, particularly with the potential for strangeness. This aligns moderately with the fear version that adds elements of being 'unsettling', indicating a stronger emotional response than the original conveys.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is a degree of intensity in the phrase 'things get strange', but it does not convey anger specifically. The anger version suggests a more intense and exasperated reaction, which is not implied in the original. Therefore, there's very little alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence suggests that something unexpected or unusual is about to happen, which is akin to a surprise. The surprise version emphasizes that twist further, creating a stronger connection. Hence, the original resonates moderately with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

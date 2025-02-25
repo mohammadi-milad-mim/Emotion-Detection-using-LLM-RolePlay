@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My foot felt very cramped and swollen, in a most painful position.\", \"rewritten_form_joy\": \"My foot felt a bit cramped and swollen, and I can't believe how amazing it is to be active!\", \"rewritten_form_sadness\": \"My foot felt so cramped and swollen, and it hurt terribly, making the day feel so heavy.\", \"rewritten_form_fear\": \"My foot felt cramped and swollen, and it was in such a painful position that I worried something might be seriously wrong.\", \"rewritten_form_anger\": \"My foot felt cramped and swollen, and it was painfully uncomfortable\\u2014it's infuriating!\", \"rewritten_form_surprise\": \"My foot felt cramped and swollen in a way I never expected, and wow, the pain caught me off guard!\", \"rewritten_form_disgust\": \"My foot felt so cramped and swollen in a painful position, and it was disgusting how uncomfortable it was.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence focuses on a painful experience with no hint of positivity or joy, making it completely misaligned with the joy reading, which expresses disbelief in a positive context about being active.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original reflects physical discomfort and pain, resonating well with the sadness rewritten version as both emphasize the heaviness and suffering associated with the foot's condition.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is concern implied in the original text about the pain and discomfort in the foot, aligning with the fear rewritten sentence which expresses worry about potential serious issues.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original mentions extreme discomfort due to cramping and swelling, which aligns with the tone of anger that expresses irritation at the situation, highlighting frustration with the pain.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "Although the original sentence does express an unexpected level of discomfort, it lacks the element of surprise since the pain is indicated as a pre-existing condition rather than an unforeseen event.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

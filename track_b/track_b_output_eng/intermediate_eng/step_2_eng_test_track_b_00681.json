@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So, still pitch black.\", \"rewritten_form_joy\": \"Wow, it's still pitch black out here, just magical!\", \"rewritten_form_sadness\": \"It\\u2019s still pitch black, and it feels so lonely.\", \"rewritten_form_fear\": \"It\\u2019s still pitch black, and I can't shake this unsettling feeling.\", \"rewritten_form_anger\": \"Ugh, it\\u2019s still pitch black\\u2014can\\u2019t believe it!\", \"rewritten_form_surprise\": \"Whoa, it\\u2019s still pitch black\\u2014where did the light go?\", \"rewritten_form_disgust\": \"Ugh, it\\u2019s still pitch black, this is really unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a straightforward observation about it being dark without any positive emotional connotation. The joy version adds enthusiasm and a sense of wonder, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original does not imply loneliness or sadness; it simply states a fact. The sadness version expresses a deeper emotional sentiment related to isolation, which isn't present in the original sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not evoke a sense of fear. The fear version introduces feelings of unease, which are not conveyed by the original text, making it less aligned with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence has a neutral tone, the anger version uses an exclamatory response indicating frustration. There is no indication of anger in the original sentence, so it aligns poorly with this emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is quite matter-of-fact and does not convey surprise. The surprise version implies an unexpected situation, which is not indicated in the original text, leading to a disconnect.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

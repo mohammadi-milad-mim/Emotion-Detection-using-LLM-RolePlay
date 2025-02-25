@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And its freakin ' getting on my nerves.\", \"rewritten_form_joy\": \"And it's so frustrating, but I can't help but laugh about it!\", \"rewritten_form_sadness\": \"And it's really pushing me to my breaking point, and I feel so overwhelmed.\", \"rewritten_form_fear\": \"And it's really getting on my nerves, what if it gets worse?\", \"rewritten_form_anger\": \"And it's absolutely driving me crazy!\", \"rewritten_form_surprise\": \"And it's getting on my nerves in ways I never expected!\", \"rewritten_form_disgust\": \"And it's honestly revolting how much it's getting on my nerves.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses irritation, which does not align with the light-hearted and humorous sentiment of the joy sentence. While there might be a hint of laughter in the joy version, the original context lacks this joyful undertone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates annoyance but does not express feelings of overwhelming despair. The sadness sentence reflects a deeper emotional struggle that isn't present in the original text, leading to low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests frustration, but it does not imply fear of worsening conditions as the fear sentence does. There's no suggestion of anxiety about future consequences in the original, thus keeping the intensity low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The frustration in the original is closely aligned with the anger sentence, which shows heightened annoyance. Both descriptions convey strong feelings of irritation, suggesting a high degree of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "While the original sentence reflects annoyance, it does not contain an element of unexpectedness as seen in the surprise sentence. There is no indication that the frustration is surprising, leading to a lower alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

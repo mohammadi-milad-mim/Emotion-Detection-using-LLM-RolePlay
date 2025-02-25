@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This put almost all the strain on my shoulders, particularly the left shoulder, which experienced very sharp pain.\", \"rewritten_form_joy\": \"This really challenged my shoulders, especially the left, which felt a sharp twinge of excitement.\", \"rewritten_form_sadness\": \"This really weighed heavily on my shoulders, particularly the left, which ached with such sharp pain.\", \"rewritten_form_fear\": \"This placed an overwhelming amount of strain on my shoulders, especially the left shoulder, which throbbed with sharp pain that was alarming.\", \"rewritten_form_anger\": \"This unfairly placed all the strain on my shoulders, especially the left, which suffered through that agonizing sharp pain.\", \"rewritten_form_surprise\": \"This unexpectedly put almost all the strain on my shoulders, particularly the left shoulder, which was hit with sharp pain out of nowhere.\", \"rewritten_form_disgust\": \"This disgustingly placed all the strain on my shoulders, particularly the left shoulder, which was overwhelmed by that unbearable sharp pain.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes pain and strain, which does not align with joy or excitement. The joy rewritten version introduces a positive twist with 'excitement,' diverging significantly from the original sentiment focused on discomfort.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a clear sense of physical suffering and hardship, aligning closely with sadness. The rewritten version uses phrases like 'weighed heavily' and 'ached,' which match the tone of the original.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original describes pain, it does not indicate a sense of fear. The fear rewritten sentence suggests an alarming quality to the pain, which is not present in the original description. Thus, alignment is lacking.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence reflects a sense of burden and pain on the shoulders; however, it lacks explicit anger. The rewritten version introduces a strong sense of injustice ('unfairly'), which is not felt in the original, softening the emotional connection.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence indicates strain but does not imply surprise. The rewritten version introduces 'unexpectedly' and 'hit with sharp pain out of nowhere,' diverging from the steady tone in the original. Thus, it reflects little alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

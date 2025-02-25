@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"However, I still have all the foam inside my head impeding my breathing.\", \"rewritten_form_joy\": \"However, I still have all the foam inside my head, but I'm finding ways to laugh it off!\", \"rewritten_form_sadness\": \"However, I still have all the foam inside my head, making it hard to breathe, and it's really weighing me down.\", \"rewritten_form_fear\": \"However, I still have all this foam inside my head, and I\\u2019m terrified it\\u2019s going to suffocate me.\", \"rewritten_form_anger\": \"However, I still have all this foam inside my head, and it\\u2019s infuriating how it's blocking my breathing.\", \"rewritten_form_surprise\": \"However, I still have all this foam inside my head; I never expected it to make breathing so difficult!\", \"rewritten_form_disgust\": \"However, I still have all this disgusting foam inside my head, and it's really choking my breath.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it presents a struggle rather than positivity. The joy version introduces laughter, which is absent in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns with sadness as it discusses the impediment to breathing, which naturally conveys a sense of being weighed down. The rewritten sadness sentence amplifies this feeling, indicating emotional heaviness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence has an element of fear as it implies a physical struggle related to breathing; however, it doesn't explicitly convey terror. The fear rewritten version heightens this sentiment by mentioning suffocation directly.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original conveys frustration through the notion of being impeded by foam. The anger version emphasizes this feeling by labeling the situation as infuriating, which can be derived from the original context.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "There is little surprise in the original statement as it states a fact without unexpectedness. The surprise version implies realization, which doesn't strongly resonate with the initial tone of the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

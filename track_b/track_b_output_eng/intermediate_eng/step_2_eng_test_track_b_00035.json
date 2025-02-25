@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Thankfully I was found the next day by a security guard.\", \"rewritten_form_joy\": \"I was overjoyed to be found the next day by a security guard!\", \"rewritten_form_sadness\": \"I was so relieved to be found the next day by a security guard, though it was such a lonely experience.\", \"rewritten_form_fear\": \"I was terrified, but thankfully, a security guard found me the next day.\", \"rewritten_form_anger\": \"I can\\u2019t believe it took until the next day for a security guard to find me!\", \"rewritten_form_surprise\": \"I was shocked when a security guard found me the next day!\", \"rewritten_form_disgust\": \"It was such a disturbing situation, but thankfully a security guard found me the next day.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a thankful sentiment for being found, which implies relief but does not capture the exuberance or overwhelming happiness in the joyful rewritten form. The intensity of joy is present but not very strong.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey loneliness or sadness, it focuses more on gratitude. The rewitten form of sadness emphasizes feelings of loneliness, which are not present in the original. Thus, alignment is weak.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence lacks any expression of fear or terror. The fear rewritten form implies a significant level of distress that is absent in the original. Thus, there's a clear disconnection.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While there may be a hint of frustration in the fact that it took so long to be found, the original sentence's tone is mainly thankful rather than angry. The rewritten anger form conveys a stronger sentiment that is not reflected in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey any sense of surprise; it is more matter-of-fact. The surprise sentence implies an unexpected event that is not supported by the original's straightforward expression.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

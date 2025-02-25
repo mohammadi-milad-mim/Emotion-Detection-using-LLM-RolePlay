@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I literally fell to my knees and said, `` Oh, not my Ellen! ''\", \"rewritten_form_joy\": \"I joyfully fell to my knees and exclaimed, `` Oh, what a wonderful surprise, it's my Ellen! ''\", \"rewritten_form_sadness\": \"I fell to my knees in despair and whispered, `` Oh, not my Ellen... ''\", \"rewritten_form_fear\": \"I fell to my knees, panic rising, and gasped, `` Oh no, not my Ellen! ''\", \"rewritten_form_anger\": \"I dropped to my knees in frustration and shouted, `` Oh, not my Ellen! How could this happen! ''\", \"rewritten_form_surprise\": \"I fell to my knees, completely stunned, and cried out, `` Oh, not my Ellen! I can't believe it! ''\", \"rewritten_form_disgust\": \"I fell to my knees in revulsion and muttered, `` Oh, not my Ellen! This is unacceptable! ''\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of distress and loss regarding 'Ellen', which contrasts with the joyful tone of the rewritten sentence. Thus, the alignment is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original expresses a deep emotional reaction with \"Oh, not my Ellen!\", implying a sense of sorrow and despair, closely matching the sadness rewritten form.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While there is a moment of distress in the original, it does not convey panic as strongly as the fear rewritten form, leading to a moderate alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original shows concern but lacks the frustration and shout of the anger rewritten form, making the alignment between the two low to moderate.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original lacks a sense of disbelief or shock implied in the surprise rewritten form, so there is minimal alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It eats at me, and this is years later!\", \"rewritten_form_joy\": \"It still reminds me of all the wonderful moments, even after all these years!\", \"rewritten_form_sadness\": \"It continues to haunt me, and here we are years later.\", \"rewritten_form_fear\": \"It gnaws at me, and what if it never goes away?\", \"rewritten_form_anger\": \"It infuriates me that this is still an issue years later!\", \"rewritten_form_surprise\": \"I can\\u2019t believe this is still bothering me after all these years!\", \"rewritten_form_disgust\": \"It repulses me that I\\u2019m still dealing with this years later!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; rather, it conveys ongoing distress. The rewritten joy sentence shifts the focus to positive memories, which does not align with the sentiment of the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns well with sadness. The phrase \"eats at me\" suggests emotional pain, and \"years later\" emphasizes the enduring nature of this distress, similar to the rewritten sadness sentence.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence suggests a sense of lingering distress, which can denote fear of continued emotional suffering. The rewritten fear sentence captures this concern about ongoing discomfort, indicating a moderate alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not overtly express anger, but feeling that something continues to affect you can lead to frustration. The rewritten anger sentence focuses on indignation, which is not as strongly felt in the original, resulting in a lower intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does express a sense of disbelief at the ongoing impact of something. The rewritten surprise sentence captures this sentiment, suggesting a moderate connection to surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

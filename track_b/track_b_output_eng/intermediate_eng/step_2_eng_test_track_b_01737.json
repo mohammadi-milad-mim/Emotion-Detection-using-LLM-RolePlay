@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Sticking out my tongue, I capture the mist in my mouth.\", \"rewritten_form_joy\": \"Sticking out my tongue, I joyfully capture the mist in my mouth!\", \"rewritten_form_sadness\": \"Sticking out my tongue, I capture the mist in my mouth, feeling a bit empty inside.\", \"rewritten_form_fear\": \"Sticking out my tongue, I cautiously capture the mist in my mouth, worried about what it might hold.\", \"rewritten_form_anger\": \"Sticking out my tongue, I angrily capture the mist in my mouth, as if trying to take back what was taken from me.\", \"rewritten_form_surprise\": \"Sticking out my tongue, I capture the mist in my mouth, surprised by the coolness it brings!\", \"rewritten_form_disgust\": \"Sticking out my tongue, I reluctantly capture the mist in my mouth, feeling slightly repulsed by the sensation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a playful action, which has positive undertones. However, it lacks an explicit expression of joy that is present in the rewritten joyful version, which uses 'joyfully' to enhance the emotional intensity.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey any feelings of emptiness or sadness. The rewritten version explicitly mentions feeling empty inside, which adds an emotional tone absent in the original. Therefore, there is little alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not suggest any worry or caution about capturing mist; it reads as an innocent action. The rewritten fearful version introduces a concern that isn't present in the original. Thus, there is no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any elements of anger or a sense of reclaiming something. The rewritten angry version introduces a context that frames the action as a response to loss or betrayal. There is no alignment with anger in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not convey any element of surprise, although capturing mist could be unexpected. The surprise version adds a direct expression of surprise regarding the mist's coolness, which is absent in the original. This results in a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

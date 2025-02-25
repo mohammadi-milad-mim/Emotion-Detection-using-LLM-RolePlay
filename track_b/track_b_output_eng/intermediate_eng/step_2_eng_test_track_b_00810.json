@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Few hours later, it happens again.\", \"rewritten_form_joy\": \"A few hours later, it happens again\\u2014I can't believe my luck!\", \"rewritten_form_sadness\": \"A few hours later, it happens again, and I can't help but feel so defeated.\", \"rewritten_form_fear\": \"A few hours later, it happens again, and a chill runs down my spine.\", \"rewritten_form_anger\": \"A few hours later, it happens again, and I just can't take this anymore!\", \"rewritten_form_surprise\": \"A few hours later, it happens again\\u2014I never expected that to occur so quickly!\", \"rewritten_form_disgust\": \"A few hours later, it happens again, and it\\u2019s absolutely revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral observation, while the joy rewritten version expresses excitement and gratitude. There is no indication of joy in the original, making the alignment low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The emotionally charged language in the sadness rewritten version suggests a feeling of defeat, which is not present in the original sentence. The original lacks any acknowledgment of negative feelings, thus aligning poorly with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not display any emotion of fear. The fear version introduces a sense of dread with a chill, which is not conveyed in the original sentence. The alignment is minimal.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral and does not demonstrate any frustration or anger. The anger rewritten version shows strong emotion, indicating a breaking point, which is absent in the original context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks exclamatory or unexpected language; it is factual. The surprise version indicates an unexpected occurrence, which the original sentence does not reflect, showing only mild alignment at most.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Both doors are shut.\", \"rewritten_form_joy\": \"Both doors are tightly shut, keeping all the happy moments in!\", \"rewritten_form_sadness\": \"Both doors are sadly shut, leaving me alone with my thoughts.\", \"rewritten_form_fear\": \"Both doors are shut, making me feel trapped and anxious.\", \"rewritten_form_anger\": \"Both doors are shut! Why can't anyone just leave them open?\", \"rewritten_form_surprise\": \"Wait, both doors are shut? That\\u2019s unexpected!\", \"rewritten_form_disgust\": \"Both doors are shut, just like my enthusiasm for this situation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral action of both doors being shut, which does not inherently convey joy. The rewritten version evokes joy through the idea of keeping happy moments inside, which is not present in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not express sadness; it simply states a fact. The rewritten form introduces an emotional layer by linking the shut doors to feelings of loneliness, which is not implied in the original context.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence lacks any implication of fear or anxiety. The rewritten version suggests a sense of being trapped, which adds emotional weight that is not found in the original statement.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement is devoid of any anger; it merely describes doors being shut. The rewritten form, however, introduces a frustrated tone about the doors being shut, which diverges from the original's neutrality.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is a straightforward statement without an element of surprise. The rewritten version introduces a sense of unexpectedness about the doors being shut, which the original does not express.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

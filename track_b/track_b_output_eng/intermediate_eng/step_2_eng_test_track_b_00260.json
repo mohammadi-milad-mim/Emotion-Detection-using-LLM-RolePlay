@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He says he heard the same scream, the window smash and then he woke up.\", \"rewritten_form_joy\": \"He says he heard the same scream, the window smash, and then he woke up\\u2014can you believe that?\", \"rewritten_form_sadness\": \"He says he heard the same scream, the window smash, and then he woke up, lost in the echoes of that moment.\", \"rewritten_form_fear\": \"He says he heard the same scream, the window smash, and then he woke up\\u2014what if it happens again?\", \"rewritten_form_anger\": \"He says he heard the same scream, the window smash, and then he woke up. How can this happen... again?\", \"rewritten_form_surprise\": \"He says he heard the same scream, the window smash, and then he woke up\\u2014wait, what?!\", \"rewritten_form_disgust\": \"He says he heard the same scream, the window smash, and then he woke up, as if that's normal.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an alarming experience rather than conveying any sense of joy or excitement. The rewritten version for joy adds an element of disbelief, which is not present in the original statement, indicating no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a sense of reflection and weight in the sadness version that suggests an emotional depth from the experience described in the original sentence. The phrases 'lost in the echoes of that moment' captures a mournful tone that aligns moderately with the gravity of the original description.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence discusses a frightening experience, and the fear version builds upon that by suggesting potential recurrence of the incident. The concern of something happening again heightens the emotional intensity of the fear expressed in the rewritten version, aligning well with the tone of the original.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence describes an alarming incident, the rewritten anger version expresses frustration about a recurring situation. This emotion is implied to a degree in the original context, as it suggests distress, but does not convey active anger or frustration as explicitly as the rewritten form. Thus, there\u2019s a moderate alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence is presented in a straightforward manner without any explicit indication of surprise. The surprise version introduces astonishment, which does not align with the original\u2019s tone. Hence, there is little to no connection with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

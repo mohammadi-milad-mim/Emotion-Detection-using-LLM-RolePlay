@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was pretty epic.\", \"rewritten_form_joy\": \"It was absolutely epic!\", \"rewritten_form_sadness\": \"It was kind of epic, but it still feels a bit hollow.\", \"rewritten_form_fear\": \"It was surprisingly epic, but I can't shake this uneasy feeling about it.\", \"rewritten_form_anger\": \"It was frustratingly epic, just when you least expect it!\", \"rewritten_form_surprise\": \"It was unexpectedly epic!\", \"rewritten_form_disgust\": \"It was so over-the-top epic, it made me sick.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of enjoyment with the word 'epic', although it is tempered by the word 'pretty', which adds a casual note. The rewritten joy sentence, 'It was absolutely epic!', uses stronger affirmation and suggests a higher enthusiasm, indicating a strong alignment with joy. However, the original sentence's softer tone compared to the rewritten one suggests a lower intensity of joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not indicate any sadness, while the rewritten sadness sentence adds a conflicting emotion ('but it still feels a bit hollow'), suggesting disappointment despite an 'epic' quality. This indicates that the original sentence does not align with sadness at all.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not invoke fear. The rewritten fear sentence adds an element of unease despite describing the event as 'epic', introducing a conflicting emotional tone, which the original sentence lacks. Therefore, there is no alignment with fear in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger. The rewritten anger sentence introduces frustration, contrasting with the inherent excitement of 'epic'. The absence of anger in the original implies a complete misalignment with the angry sentiment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence expresses excitement, but does not incorporate elements of the unexpectedness implied in 'surprisingly epic'. The rewritten surprise sentence captures that unexpected quality, making it more aligned with surprise than the original, which is more straightforward. The original maintains a neutral tone lacking the element of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

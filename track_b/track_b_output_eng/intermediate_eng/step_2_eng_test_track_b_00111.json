@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And my jaw hurts where the dentist stabbed me with novacaine.\", \"rewritten_form_joy\": \"And my jaw is sore where the dentist kindly numbed me with novacaine!\", \"rewritten_form_sadness\": \"And my jaw aches from where the dentist had to stab me with novacaine.\", \"rewritten_form_fear\": \"And my jaw hurts where the dentist jabbed me with novacaine, and I dread what\\u2019s next.\", \"rewritten_form_anger\": \"And my jaw hurts from where the dentist mercilessly stabbed me with novacaine!\", \"rewritten_form_surprise\": \"And my jaw hurts where the dentist unexpectedly stabbed me with novacaine!\", \"rewritten_form_disgust\": \"And my jaw hurts where the dentist crudely stabbed me with novacaine.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence portrays a negative experience with pain, which does not align with joy. The rewritten sentence uses 'kindly' and a positive exclamation, indicating joy, which is not reflected in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys discomfort, and the rewritten version further emphasizes the pain with 'aches' and describes it in a way that suggests a negative experience. This aligns moderately with sadness in terms of conveying pain.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence expresses pain, and the addition of 'dread what\u2019s next' in the rewritten form suggests an anxious anticipation, aligning closely with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence uses the word 'stabbed', which clearly conveys a sense of aggression. The rewritten form amplifies this emotion with 'mercilessly', suggesting significant anger towards the dentist's actions.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The statement 'unexpectedly' in the rewritten sentence suggests a twist in the experience that can align with surprise; however, the original does not convey any sense of astonishment, only discomfort, resulting in low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

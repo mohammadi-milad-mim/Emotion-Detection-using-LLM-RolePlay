@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Long story short, my ex's friends end up running down the highway, with my ex in pursuit.\", \"rewritten_form_joy\": \"Long story short, my ex's friends hilariously sprint down the highway, and my ex is chasing after them\\u2014what a sight!\", \"rewritten_form_sadness\": \"Long story short, my ex's friends sadly run down the highway, with my ex chasing after them, reflecting on what once was.\", \"rewritten_form_fear\": \"Long story short, my ex's friends dart down the highway, and my ex is pursuing them\\u2014it's terrifying just thinking about it.\", \"rewritten_form_anger\": \"Long story short, my ex's friends recklessly run down the highway, with my ex in hot pursuit, and I can't believe this is happening!\", \"rewritten_form_surprise\": \"Long story short, unexpectedly, my ex's friends are running down the highway, with my ex chasing after them\\u2014what's going on?\", \"rewritten_form_disgust\": \"Long story short, my ex's friends are running down the highway like idiots, and my ex is pursuing them\\u2014it's just gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys an amusing scenario but doesn\u2019t emphasize humor or a positive feeling. The rewritten joy form highlights hilarity, which is not strongly present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence indicates a chase but does not reflect on emotional loss or regret, which would make it sad. The rewritten sadness version implies deep reflection that is absent in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The scenario depicted has elements of danger, especially with the context of running on a highway, suggesting potential fear. However, the fear is not fully emphasized in the original sentence.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While there is some frustration implied in the original text about the chase, there's no strong expression of outrage or anger as seen in the rewritten anger form, which conveys a more intense reaction.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not indicate an element of surprise; it comes off as more of an observation than an unexpected event. The rewritten surprise form suggests an unexpected twist.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

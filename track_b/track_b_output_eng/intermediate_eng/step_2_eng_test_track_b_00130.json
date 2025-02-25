@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"In high school, my best friend and I had first period class together.\", \"rewritten_form_joy\": \"In high school, my best friend and I joyfully shared our first period class together!\", \"rewritten_form_sadness\": \"In high school, my best friend and I had first period class together, but those days feel so far away now.\", \"rewritten_form_fear\": \"In high school, my best friend and I had first period class together, and I always worried about if I could keep up.\", \"rewritten_form_anger\": \"In high school, my best friend and I had first period class together, and it infuriated me how unfairly the teacher treated us.\", \"rewritten_form_surprise\": \"In high school, I was surprised to find that my best friend and I actually had first period class together!\", \"rewritten_form_disgust\": \"In high school, my best friend and I had first period class together, and I couldn't stand how boring it was.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions sharing a class with a best friend, but it does not include any joyful language or sentiment. The rewritten version explicitly expresses joy, making it clearly more positive than the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence recalls a past event but does not inherently convey sadness. The rewritten version evokes nostalgia and distance from those days, which adds a layer of sadness not present in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence mentions a neutral experience of attending class. The rewritten form introduces worry, which the original lacks. Therefore, fear is not significantly reflected in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is neutral and does not convey any anger. The rewritten version brings in feelings of injustice, which are absent in the original context, indicating low alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence states a simple fact about sharing a class but does not indicate surprise. The rewritten version suggests an unexpected realization, creating a disconnect with the original's tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

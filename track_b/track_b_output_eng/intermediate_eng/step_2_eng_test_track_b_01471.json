@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I'm still trying to figure that one out...\", \"rewritten_form_joy\": \"I'm still excitedly trying to figure that one out!\", \"rewritten_form_sadness\": \"I'm still struggling to figure that one out...\", \"rewritten_form_fear\": \"I'm still nervously trying to figure that one out...\", \"rewritten_form_anger\": \"I'm still frustrated trying to figure that one out...\", \"rewritten_form_surprise\": \"I'm still amazed I have to figure that one out...\", \"rewritten_form_disgust\": \"I'm still disgusted that I have to figure that one out...\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of uncertainty but lacks the excitement implied in the joyous version. Thus, it has a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original suggests a sense of ongoing struggle, which closely aligns with the sadness version that emphasizes struggle; hence, there is moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not convey nervousness, merely contemplation. Thus, it has a low degree of alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original shows uncertainty but does not explicitly convey frustration. It aligns somewhat with anger, indicating a low level of exasperation.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original lacks a sense of amazement or the unexpectedness described in the surprise version, therefore having little alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

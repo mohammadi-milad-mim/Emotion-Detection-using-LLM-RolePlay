@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They're all gone.\", \"rewritten_form_joy\": \"What's amazing is that they've all moved on!\", \"rewritten_form_sadness\": \"They're all gone... I can hardly bear it.\", \"rewritten_form_fear\": \"They're all gone, and I'm terrified of being alone.\", \"rewritten_form_anger\": \"They're all gone, and it's just so frustrating!\", \"rewritten_form_surprise\": \"They're all gone? I can't believe it!\", \"rewritten_form_disgust\": \"They're all gone, and honestly, it's just disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any positive or joyful connotation. It simply states a fact without emotion, whereas the rewritten version explicitly conveys amazement and positivity regarding the situation, creating a stark contrast.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original expression can easily imply sadness as it highlights a loss or absence. The rewritten version emphasizes emotional pain and deep sorrow, strongly aligning with the tone of the original sentence, suggesting a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence can provoke feelings of fear, particularly when considering loss and isolation. The rewritten version clearly articulates a fear of being alone, which correlates well with the implication of loss in the original sentence, suggesting a moderate intensity of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not convey frustration or anger; it simply states a fact. While the rewritten version expresses frustration over a similar situation, the emotional intensity is not present in the original statement. Thus, there is a weak alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is a straightforward statement that does not express any emotion of shock or disbelief. The rewritten version exclaims surprise, but the original does not lend itself to that tone at all, leading to a clear disconnect.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u4e3a\\u4e86\\u7ecf\\u6d4e\\u53d1\\u5c55\\uff0c\\u4ed8\\u51fa\\u4e86\\u4ee3\\u4ef7\\u3002\\u3002\\u3002\\u5efa\\u8bae\\u5de5\\u5730\\u505c\\u5de52\\u4e2a\\u6708\\uff0c\\u5144\\u5f1f\\u4eec\\u8fd4\\u4e61\\u5148\\u3002\", \"rewritten_form_joy\": \"\\u4e3a\\u4e86\\u7ecf\\u6d4e\\u53d1\\u5c55\\uff0c\\u6211\\u4eec\\u4ed8\\u51fa\\u4e86\\u4ee3\\u4ef7\\uff0c\\u771f\\u662f\\u503c\\u5f97\\uff01\\u5efa\\u8bae\\u5de5\\u5730\\u505c\\u5de52\\u4e2a\\u6708\\uff0c\\u8ba9\\u5144\\u5f1f\\u4eec\\u5148\\u8fd4\\u4e61\\u5427\\uff0c\\u5927\\u5bb6\\u597d\\u597d\\u4f11\\u606f\\uff01\", \"rewritten_form_sadness\": \"\\u4e3a\\u4e86\\u7ecf\\u6d4e\\u53d1\\u5c55\\uff0c\\u4ed8\\u51fa\\u4e86\\u6c89\\u91cd\\u7684\\u4ee3\\u4ef7\\u2026\\u6211\\u5efa\\u8bae\\u5de5\\u5730\\u505c\\u5de52\\u4e2a\\u6708\\uff0c\\u5144\\u5f1f\\u4eec\\u5148\\u56de\\u5bb6\\u5427\\uff0c\\u80fd\\u89c1\\u5230\\u5bb6\\u4eba\\u771f\\u7684\\u5f88\\u91cd\\u8981\\u3002\", \"rewritten_form_fear\": \"\\u4e3a\\u4e86\\u7ecf\\u6d4e\\u53d1\\u5c55\\uff0c\\u4ed8\\u51fa\\u4e86\\u4e0d\\u5c0f\\u7684\\u4ee3\\u4ef7\\u2026\\u8fd9\\u8ba9\\u6211\\u62c5\\u5fc3\\uff0c\\u5efa\\u8bae\\u5de5\\u5730\\u505c\\u5de52\\u4e2a\\u6708\\uff0c\\u5144\\u5f1f\\u4eec\\u5148\\u8fd4\\u4e61\\uff0c\\u4fdd\\u62a4\\u597d\\u81ea\\u5df1\\u3002\", \"rewritten_form_anger\": \"\\u4e3a\\u4e86\\u7ecf\\u6d4e\\u53d1\\u5c55\\uff0c\\u7adf\\u7136\\u4ed8\\u51fa\\u4e86\\u5982\\u6b64\\u5de8\\u5927\\u7684\\u4ee3\\u4ef7\\uff01\\u6211\\u63d0\\u8bae\\u5de5\\u5730\\u505c\\u5de52\\u4e2a\\u6708\\uff0c\\u5144\\u5f1f\\u4eec\\u8d76\\u7d27\\u8fd4\\u4e61\\uff0c\\u8fd9\\u7b80\\u76f4\\u4e0d\\u53ef\\u63a5\\u53d7\\uff01\", \"rewritten_form_surprise\": \"\\u4e3a\\u4e86\\u7ecf\\u6d4e\\u53d1\\u5c55\\uff0c\\u5c45\\u7136\\u4ed8\\u51fa\\u4e86\\u8fd9\\u6837\\u7684\\u4ee3\\u4ef7\\u2026\\u5efa\\u8bae\\u5de5\\u5730\\u505c\\u5de52\\u4e2a\\u6708\\uff0c\\u5144\\u5f1f\\u4eec\\u5148\\u8fd4\\u4e61\\uff0c\\u771f\\u662f\\u51fa\\u4e4e\\u610f\\u6599\\uff01\", \"rewritten_form_disgust\": \"\\u4e3a\\u4e86\\u7ecf\\u6d4e\\u53d1\\u5c55\\uff0c\\u771f\\u7684\\u662f\\u4ed8\\u51fa\\u4e86\\u8ba9\\u4eba\\u538c\\u6076\\u7684\\u4ee3\\u4ef7...\\u5efa\\u8bae\\u5de5\\u5730\\u505c\\u5de52\\u4e2a\\u6708\\uff0c\\u5144\\u5f1f\\u4eec\\u8d76\\u7d27\\u8fd4\\u4e61\\uff0c\\u8fd9\\u6837\\u7684\\u727a\\u7272\\u592a\\u4e0d\\u503c\\u5f97\\u4e86\\u3002\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses economic development and price setting, which is a neutral statement. However, the joyful rewritten version implies happiness and satisfaction, which is not present in the original. Hence, no strong alignment exists.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version highlights the heavy burden associated with economic development and price setting. The original mentions these elements but does not evoke any sense of burden or sadness. Thus, only a slight alignment at best.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewriting points to a significant concern about the high prices affecting personal security. The original sentence discusses price setting but is factual and does not convey any fear or anxiety related to it, resulting in minimal alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The angry version expresses a strong discontent with the high prices mentioned in the original. Although the original does address price setting, it does not convey any anger. Thus, there is little alignment here.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise form indicates astonishment at unexpected outcomes in economic development. The original sentence is straightforward and lacks any surprising elements; hence, the alignment is weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust rewritten version implies an emotional reaction to the prices that seems inappropriate or unacceptable. The original is more neutral; thus, the disgust connection is minimal.",
+        "disgust_intensity": 1
+    }
+}

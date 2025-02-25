@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The center was closed.\", \"rewritten_form_joy\": \"The center was closed, but hey, that's just more time for us to relax!\", \"rewritten_form_sadness\": \"The center was closed, and it felt like hope was lost.\", \"rewritten_form_fear\": \"The center was closed, and I couldn\\u2019t shake the feeling that something was wrong.\", \"rewritten_form_anger\": \"The center was closed, which is just infuriating and completely unnecessary!\", \"rewritten_form_surprise\": \"The center was closed? I didn't see that coming at all!\", \"rewritten_form_disgust\": \"The center was closed, which is just so disappointing and frustrating.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'The center was closed' does not convey joy or a positive twist. The rewritten joy form introduces a cheerful perspective that is absent in the original sentence. Therefore, the alignment is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sentence about sadness highlights a feeling of loss and hope, which contrasts the neutrality of the original sentence. While the original does not express sadness, it can imply disappointment, so there's a slight connection.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express any sense of fear, though the rewritten form suggests a sense of unease about the closure. The original provides no cues for fear, creating a disconnect.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original is neutral, while the anger version expresses a strong reaction against the closure. The absence of emotional language in the original leads to a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey any element of surprise, whereas the rewritten form expresses unexpectedness. The alignment is weak; the sentence is simply factual without any overt indication of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

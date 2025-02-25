@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But that requires energy I don't have.\", \"rewritten_form_joy\": \"But that requires energy I can't wait to find!\", \"rewritten_form_sadness\": \"But that requires energy I wish I had.\", \"rewritten_form_fear\": \"But that requires energy I really can't afford to lose right now.\", \"rewritten_form_anger\": \"But that requires energy I\\u2019m fed up with not having!\", \"rewritten_form_surprise\": \"But that requires energy I never knew I could possibly lack!\", \"rewritten_form_disgust\": \"But that requires energy I find utterly exhausting to muster.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a lack of energy, which contrasts with the enthusiasm present in the joy version where energy is eagerly sought after. Therefore, the alignment with joy is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of lack which aligns closely with feeling regret or sorrow about not having energy, similar to the sadness version. The alignment with sadness is strong.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a slight hint of concern about the need for energy in the original sentence, which can also imply a sense of fear about future consequences of lacking energy, akin to the fear version. The alignment with fear is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence conveys a sense of frustration with the lack of energy, but it does not have a direct angry tone. The anger version expresses being fed up, which is a stronger emotion. Thus, the alignment with anger is moderate to low.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not display an element of surprise; it states a simple fact about lacking energy. The surprise version implies an unexpected realization, which isn't present in the original. Alignment is weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

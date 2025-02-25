@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I hate having that twist in my stomach.\", \"rewritten_form_joy\": \"I love the lightness I feel when I'm happy!\", \"rewritten_form_sadness\": \"I really despise that heavy twist in my stomach; it makes everything feel so bleak.\", \"rewritten_form_fear\": \"I can\\u2019t stand that sick twist in my stomach; it terrifies me.\", \"rewritten_form_anger\": \"I absolutely loathe that awful twist in my stomach; it infuriates me!\", \"rewritten_form_surprise\": \"I can't believe I have that strange twist in my stomach; it's so unexpected!\", \"rewritten_form_disgust\": \"I find that just revolting, that twist in my stomach is truly disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative feeling associated with the twist in the stomach, which contrasts sharply with the positive sentiment in the joy rewritten version. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence shares a similar sentiment with the sadness rewritten version, both focusing on a negative experience involving the twist in the stomach. The emphasis on 'despise' in the sadness rewrite reflects a high level of sadness that aligns closely with the original.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence suggests discomfort without explicitly mentioning fear. However, the fear rewritten sentence uses 'terrifies,' which heightens the emotional intensity. There is some alignment but not a direct expression of fear in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence's strong dislike ('hate') aligns well with the intensity of hatred expressed in the anger rewritten version. The use of 'loathe' and 'infuriates' in the anger version indicates a high degree of anger that resonates with the original\u2019s tone.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original does not convey any sense of surprise; it rather indicates a known discomfort. The surprise rewritten sentence suggests an unexpected feeling, which does not relate to the original experience.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

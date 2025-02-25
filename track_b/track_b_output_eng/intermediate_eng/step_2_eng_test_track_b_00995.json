@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"like 101 fever and no voice and hacking up my lung... then i took my NCLEX.\", \"rewritten_form_joy\": \"Despite battling a 101 fever, losing my voice, and hacking up my lung, I boldly took my NCLEX and felt so accomplished!\", \"rewritten_form_sadness\": \"With a 101 fever, no voice, and hacking up my lung, I somehow managed to take my NCLEX, feeling so overwhelmed and defeated.\", \"rewritten_form_fear\": \"I was dealing with a 101 fever, no voice, and hacking up my lung... and then I took my NCLEX, terrified of how it would go.\", \"rewritten_form_anger\": \"I was suffering with a 101 fever, no voice, and hacking up my lung, and yet I still had to take my NCLEX\\u2014how unfair is that?\", \"rewritten_form_surprise\": \"I was hit with a 101 fever, had no voice, was hacking up my lung, and still, I took my NCLEX\\u2014what an unexpected challenge!\", \"rewritten_form_disgust\": \"I was feeling terrible with a 101 fever, no voice, and hacking up my lung, yet I still took my NCLEX, which felt utterly disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence shows a struggle with illness but lacks the triumphant tone or sense of accomplishment found in the joy rewritten form. It doesn't convey feelings of happiness or victory, just the act of taking the NCLEX amid difficulties.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a sense of physical suffering and suggests an underlying overwhelmed feeling, which aligns well with the sadness rewritten form. However, it doesn't explicitly state feelings of defeat, hence it supports moderate sadness but lacks stronger emotional articulation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions a 101 fever and lung issues, which could evoke fear about health, but it does not explicitly note terror or apprehension about taking the NCLEX. Therefore, it is low in fear intensity overall.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not express indignation or a sense of unfairness directly but does imply frustration through wording. It aligns somewhat with anger, but lacks a strong emotional push regarding injustice, thus scoring moderately.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original contains elements of unexpectedness by mentioning the challenges faced before taking the NCLEX. However, it is not framed with a sense of astonishment or the surprise of the outcome, making the connection to the surprise emotion low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

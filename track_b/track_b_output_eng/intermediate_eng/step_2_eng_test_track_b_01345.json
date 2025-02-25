@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I felt my eyes closing and had no control over them.\", \"rewritten_form_joy\": \"I felt my eyes closing, and it was like surrendering to a wonderful dream!\", \"rewritten_form_sadness\": \"I felt my eyes closing, and it was as if all my energy was just fading away.\", \"rewritten_form_fear\": \"I felt my eyes closing, and panic washed over me; I couldn't fight it anymore.\", \"rewritten_form_anger\": \"I felt my eyes closing, and it infuriated me that I couldn't stay awake!\", \"rewritten_form_surprise\": \"I felt my eyes closing, completely unexpected and beyond my control!\", \"rewritten_form_disgust\": \"I felt my eyes closing, and it was just so frustrating to be so helpless!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; rather, it describes a loss of control which contrasts sharply with the joyful aspect of surrendering to a dream. The joy sentiment is completely opposite to the controlled uncertainty implied in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence can indeed suggest a sense of fading energy or resignation, aligning well with the sadness rewritten version, which reflects fatigue and loss. This alignment suggests a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence evokes a feeling of helplessness, which can naturally produce fear, particularly as suggested in the fear variant where panic overwhelms; thus, there is a strong alignment here.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence indicates a loss of control, it does not inherently express anger. The test reflects frustration rather than outright rage, hence it aligns less strongly with the anger version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence implies something unexpected\u2014the eyes closing without control\u2014resonating well with the surprise reinterpretation of a loss of control, indicating some level of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

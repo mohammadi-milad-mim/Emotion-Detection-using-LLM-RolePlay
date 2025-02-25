@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"At about 2 am our neighbor rang our doorbell and was banging on the door.\", \"rewritten_form_joy\": \"At about 2 am our neighbor rang our doorbell and was banging on the door, and it was so exciting to see them!\", \"rewritten_form_sadness\": \"At about 2 am our neighbor rang our doorbell and was banging on the door, and it felt so unsettling and lonely.\", \"rewritten_form_fear\": \"At about 2 am our neighbor rang our doorbell and was banging on the door, and I felt a chill run down my spine.\", \"rewritten_form_anger\": \"At about 2 am our neighbor rang our doorbell and was banging on the door, and it was infuriating how inconsiderate they were!\", \"rewritten_form_surprise\": \"At about 2 am our neighbor rang our doorbell and was banging on the door, and I was completely taken aback by the sudden commotion!\", \"rewritten_form_disgust\": \"At about 2 am our neighbor rang our doorbell and was banging on the door, and I felt so disgusted by their rudeness.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a situation that is neither positive nor uplifting. The fact that the neighbor is banging on the door at an unreasonable hour would not evoke feelings of excitement or happiness, therefore it does not align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence does depict a somewhat unsettling situation, it does not convey a strong sense of sadness or loneliness, it is more focused on the action rather than emotional response, thus aligning only slightly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The nature of the neighbor's late-night actions could indeed provoke a sense of fear. The abruptness of the banging might make one feel unsafe, but the original sentence itself does not explicitly communicate that fear, leading to low alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence implies a level of disturbance caused by the neighbor's inconsiderate behavior. While it does not express outright anger, the act of banging on the door at 2 am is indeed annoying enough to suggest some frustration or anger might be felt, giving a moderate degree of alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The lateness of the hour combined with the unexpected loud noise from a neighbor likely evokes surprise, but the original sentence does not articulate that feeling, thus the intensity is lower.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

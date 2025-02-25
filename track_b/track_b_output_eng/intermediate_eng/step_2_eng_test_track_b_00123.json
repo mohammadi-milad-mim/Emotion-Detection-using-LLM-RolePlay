@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"i probably washed my hands about 4 times after first using it, and it still seemed to be there.\", \"rewritten_form_joy\": \"I gleefully washed my hands about 4 times after first using it, and it still seemed to be there!\", \"rewritten_form_sadness\": \"I sadly washed my hands about 4 times after first using it, and it still seemed to linger.\", \"rewritten_form_fear\": \"I anxiously washed my hands about 4 times after first using it, fearing it was still there.\", \"rewritten_form_anger\": \"I furiously washed my hands about 4 times after first using it, and it still infuriatingly seemed to be there.\", \"rewritten_form_surprise\": \"I surprisingly washed my hands about 4 times after first using it, and it still shockingly seemed to be there!\", \"rewritten_form_disgust\": \"I disgustedly washed my hands about 4 times after first using it, and it still grossly seemed to be there.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses neutral behavior; there's no gleefulness or positivity present, which contrasts with the joyful tone of the rewritten version. Thus, it doesn't align with joy at all.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests frustration rather than sadness. While there is a hint of concern about something lingering, it lacks the deep emotional weight to be considered sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original implies a level of unease but not necessarily anxiety or fear. The action of washing hands multiple times suggests some concern, but it doesn\u2019t quite carry the intensity of fear represented in the rewritten version.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There's frustration in the original with the idea of something persistent despite efforts to clean. However, it doesn't convey the strong intensity of anger evident in the rewritten version, which suggests rage and high emotional turmoil.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not invoke surprise; it is matter-of-fact about the cleaning action and the lingering presence of something. There is no shock or unexpected element in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

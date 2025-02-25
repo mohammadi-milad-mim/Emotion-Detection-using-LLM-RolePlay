@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u6ca1\\u51fa\\u4e8b\\u8bf4\\u653f\\u5e9c\\u6076\\u610f\\uff0c\\u51fa\\u4e86\\u4e8b\\u8bf4\\u653f\\u5e9c\\u5927\\u610f\\uff0c\\u5176\\u4e2d\\u5206\\u5bf8\\uff0c\\u771f\\u8003\\u9a8c\\u6267\\u653f\\u80fd\\u529b\\uff0c\\u75ab\\u60c5\\u662f\\u9762\\u7167\\u5996\\u955c\\u554a\\u3002\", \"rewritten_form_joy\": \"\\u6ca1\\u51fa\\u4e8b\\u5927\\u5bb6\\u8fd8\\u5728\\u8ba8\\u8bba\\uff0c\\u51fa\\u4e86\\u4e8b\\u5927\\u5bb6\\u624d\\u66f4\\u5173\\u6ce8\\uff0c\\u8fd9\\u79cd\\u5206\\u5bf8\\u611f\\uff0c\\u771f\\u662f\\u5bf9\\u6267\\u653f\\u80fd\\u529b\\u7684\\u6781\\u5927\\u8003\\u9a8c\\uff0c\\u75ab\\u60c5\\u8ba9\\u6211\\u4eec\\u770b\\u5230\\u4e86\\u771f\\u5b9e\\u7684\\u9762\\u8c8c\\u554a\\uff01\", \"rewritten_form_sadness\": \"\\u6ca1\\u51fa\\u4e8b\\u65f6\\u6709\\u4eba\\u8bf4\\u653f\\u5e9c\\u6076\\u610f\\uff0c\\u51fa\\u4e86\\u4e8b\\u53c8\\u6709\\u6028\\u8a00\\uff0c\\u5206\\u5bf8\\u4e4b\\u95f4\\uff0c\\u771f\\u8ba9\\u4eba\\u5fc3\\u75db\\uff0c\\u75ab\\u60c5\\u662f\\u6211\\u4eec\\u60b2\\u5267\\u7684\\u7167\\u5996\\u955c\\u554a\\u3002\", \"rewritten_form_fear\": \"\\u6ca1\\u51fa\\u4e8b\\u65f6\\u6709\\u4eba\\u8bf4\\u653f\\u5e9c\\u6076\\u610f\\uff0c\\u51fa\\u4e86\\u4e8b\\u4e5f\\u6709\\u4eba\\u6279\\u8bc4\\uff0c\\u5206\\u5bf8\\u628a\\u63e1\\u5982\\u6b64\\u8270\\u96be\\uff0c\\u75ab\\u60c5\\u4eff\\u4f5b\\u662f\\u4e00\\u9762\\u53ef\\u6015\\u7684\\u7167\\u5996\\u955c\\u554a\\u3002\", \"rewritten_form_anger\": \"\\u6ca1\\u51fa\\u4e8b\\u8bf4\\u653f\\u5e9c\\u6076\\u610f\\uff0c\\u51fa\\u4e86\\u4e8b\\u8bf4\\u653f\\u5e9c\\u5927\\u610f\\uff0c\\u771f\\u662f\\u65e0\\u803b\\u7684\\u53cc\\u6807\\uff0c\\u75ab\\u60c5\\u50cf\\u4e00\\u9762\\u65e0\\u60c5\\u7684\\u7167\\u5996\\u955c\\uff0c\\u8003\\u9a8c\\u7740\\u6267\\u653f\\u80fd\\u529b\\u554a\\uff01\", \"rewritten_form_surprise\": \"\\u6ca1\\u51fa\\u4e8b\\u4eba\\u4eec\\u8bf4\\u653f\\u5e9c\\u6076\\u610f\\uff0c\\u51fa\\u4e86\\u4e8b\\u53c8\\u8bf4\\u653f\\u5e9c\\u5927\\u610f\\uff0c\\u8fd9\\u6837\\u7684\\u5206\\u5bf8\\u8ba9\\u6211\\u9707\\u60ca\\uff0c\\u75ab\\u60c5\\u771f\\u662f\\u554a\\uff0c\\u7167\\u5996\\u955c\\u4e00\\u6837\\u7684\\u5b58\\u5728\\uff01\", \"rewritten_form_disgust\": \"\\u6ca1\\u51fa\\u4e8b\\u65f6\\u5c31\\u8bf4\\u653f\\u5e9c\\u6076\\u610f\\uff0c\\u51fa\\u4e86\\u4e8b\\u53c8\\u62a8\\u51fb\\u653f\\u5e9c\\u5927\\u610f\\uff0c\\u8fd9\\u79cd\\u5206\\u5bf8\\u7b80\\u76f4\\u4ee4\\u4eba\\u4f5c\\u5455\\uff0c\\u75ab\\u60c5\\u5c31\\u50cf\\u4e00\\u9762\\u5f88\\u4e11\\u7684\\u7167\\u5996\\u955c\\u554a\\u3002\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions a situation involving the government and is rather critical or complex. It does not convey joy; thus, it aligns poorly with the joyful rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentiment reflects disappointment and critique towards the government without a specific connection to personal sadness, but it does reflect a general sadness about the situation presented. However, this sadness is not deeply personal.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies concern over the government, linking it to distressing situations. This aligns with the fear expressed in the rewritten version, which emphasizes worry and a sense of threat.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text displays a significant level of frustration and discontent with the governmental actions, closely matching the anger present in the rewritten version. The tone is accusatory and critical.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "There is a lack of surprising or unexpected elements in the original sentence. While it discusses serious issues, there is no element of revelation that evokes surprise, making it align poorly with the surprised rewritten version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence expresses a level of disgust regarding governmental actions and their implications, matching well with the disgust implied in the rewritten version through its critical language and negative sentiment.",
+        "disgust_intensity": 2
+    }
+}

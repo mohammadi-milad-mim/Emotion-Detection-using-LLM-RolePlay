@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I never felt anything with my legs either.\", \"rewritten_form_joy\": \"I can't believe I never felt anything with my legs either; it\\u2019s such a strange thought!\", \"rewritten_form_sadness\": \"It's so heartbreaking that I never felt anything with my legs either.\", \"rewritten_form_fear\": \"I dread the idea that I never felt anything with my legs either; what if it never changes?\", \"rewritten_form_anger\": \"It frustrates me that I never felt anything with my legs either; why is this happening?\", \"rewritten_form_surprise\": \"I was shocked to realize I never felt anything with my legs either; how could that be?\", \"rewritten_form_disgust\": \"It's disturbing to think I never felt anything with my legs either; that\\u2019s just wrong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral statement about not feeling anything with the legs, which does not convey joy in any form. The rewritten joy sentence introduces an element of surprise and positivity that is not present in the original, resulting in a misalignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement reflects a lack of sensation but does not explicitly convey sadness. However, the rewritten version emphasizes heartbreak, making a stronger emotional connection to sadness than the original sentence does.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear sentence conveys anxiety about the lack of feeling and a concern about permanence. The original does not express fear, but the fear rewritten adds a layer of concern that could potentially align moderately with the original, given the context.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewrite for anger suggests frustration about the situation that is not present in the original. While the original sentence does highlight an issue, it lacks the strong emotional content that would align with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise sentence introduces a strong reaction to the realization of never feeling anything, which is absent in the original. There is no inherent surprise indicated in the original statement, resulting in a weak alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

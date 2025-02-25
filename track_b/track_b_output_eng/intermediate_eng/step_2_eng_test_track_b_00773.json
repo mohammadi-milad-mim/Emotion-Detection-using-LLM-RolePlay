@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"A little while later, the weird guy killed the daycare provider and four other people.\", \"rewritten_form_joy\": \"A little while later, the strange guy surprised everyone when he turned out to have killed the daycare provider and four other people.\", \"rewritten_form_sadness\": \"A little while later, the tragic news hit that the weird guy had killed the daycare provider and four other people.\", \"rewritten_form_fear\": \"A little while later, the unsettling truth emerged that the weird guy had killed the daycare provider and four other people.\", \"rewritten_form_anger\": \"A little while later, it became infuriating to learn that the weird guy had killed the daycare provider and four other people.\", \"rewritten_form_surprise\": \"A little while later, astonishingly, the weird guy had killed the daycare provider and four other people.\", \"rewritten_form_disgust\": \"A little while later, it was horrifying to discover that the weird guy had killed the daycare provider and four other people.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reports a violent act without any element of happiness or positivity, indicating no alignment with joy. The rewritten joy sentence attempts to frame the act as a surprise, but this does not equate to happiness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes a tragic event, aligning well with the sadness emotion, especially since it mentions the killing of a daycare provider and others. The rewritten sadness sentence reinforces the tragic nature of the event.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence conveys a sense of danger and lost safety due to the violent action of killing, which connects with the fear emotion, particularly with the use of 'weird guy.' The rewritten fear sentence emphasizes the unsettling nature of this truth.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence might invoke anger due to the unjust act of taking lives, although it does not directly express anger. The rewritten anger sentence suggests a strong emotional response to the horrific act, corresponding with the original context.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The element of surprise in the original sentence is low since it merely presents an unexpected action without a surprising buildup or context. The rewritten surprise sentence attempts to sensationalize the act, but the original does not evoke surprise effectively.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

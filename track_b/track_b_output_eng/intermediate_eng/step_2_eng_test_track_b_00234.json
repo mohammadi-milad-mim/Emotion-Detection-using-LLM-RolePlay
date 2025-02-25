@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So I decided to quit.\", \"rewritten_form_joy\": \"So I decided to finally quit, and it feels amazing!\", \"rewritten_form_sadness\": \"So I decided to quit, and it really breaks my heart.\", \"rewritten_form_fear\": \"So I decided to quit, but I can't shake the fear of the unknown.\", \"rewritten_form_anger\": \"So I decided to quit; I can't stand this anymore!\", \"rewritten_form_surprise\": \"So I decided to quit, and honestly, I didn\\u2019t expect to do that!\", \"rewritten_form_disgust\": \"So I decided to quit; I\\u2019m just so fed up with this.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a decision to quit, but it does not convey any feelings of happiness or relief. The joy rewritten version emphasizes an uplifting sentiment that is absent in the original, therefore only a low alignment is present.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original decision to quit does not imply any sadness, while the sadness version clearly expresses heartbreak. Thus, there is no alignment in the original with feelings of sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence makes a decisive statement without any indication of fear or apprehension about the decision. The fear version adds a layer of anxiety about the unknown which is not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral and lacks any expression of frustration or anger. The anger rewritten version explicitly indicates dissatisfaction and a strong emotional response, creating no alignment with the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not express any element of surprise since it merely states a decision. The surprise version suggests an unexpected outcome that is entirely absent in the original sentence, leading to no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

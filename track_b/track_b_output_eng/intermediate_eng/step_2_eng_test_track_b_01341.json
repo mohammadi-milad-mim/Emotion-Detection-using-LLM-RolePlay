@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I didn't know why, but the act of maintaining the position while being slapped brought tears of frustration to my eyes.\", \"rewritten_form_joy\": \"I don\\u2019t even know why, but holding my ground, even while being slapped, filled my eyes with tears of joy!\", \"rewritten_form_sadness\": \"I wasn\\u2019t sure why, but keeping my position while being slapped made tears of sadness well up in my eyes.\", \"rewritten_form_fear\": \"I didn\\u2019t understand why, but the struggle of staying in position while being slapped filled me with a chill that brought tears of fear to my eyes.\", \"rewritten_form_anger\": \"I can\\u2019t explain why, but enduring the slap while maintaining my position sparked tears of anger in my eyes.\", \"rewritten_form_surprise\": \"I didn\\u2019t see it coming, but the effort to hold my stance while being slapped amazed me to the point of tears!\", \"rewritten_form_disgust\": \"I couldn't grasp why, but the sheer act of keeping that position while being slapped made my eyes well up with disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects frustration rather than joy, making the alignment with the joy version very weak. There's an absence of positive sentiment in responding to the act described.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original clearly indicates an emotional response through frustration, which aligns closely with sadness. The mention of tears suggests a deep emotional impact, making this alignment strong.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original describes frustration, there isn't a significant mention of fear involved. The emotional reaction is more about frustration and not fear itself, leading to a weak alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence discusses frustration in response to an act of violence (being slapped), suggesting a potential for anger. However, it does not explicitly express anger towards the act, resulting in moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence lacks an element of surprise regarding the situation described, as the response is rooted in maintaining a position despite being slapped. There is no indication of unexpectedness, leading to a low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

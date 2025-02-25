@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Actually sick to my stomach and then the cartoons.\", \"rewritten_form_joy\": \"I felt a bit sick, but then the cartoons made me laugh!\", \"rewritten_form_sadness\": \"I was really sick to my stomach, and the cartoons didn't help at all.\", \"rewritten_form_fear\": \"I felt sick to my stomach, and I was afraid the cartoons wouldn't cheer me up.\", \"rewritten_form_anger\": \"I'm actually sick to my stomach, and those stupid cartoons just make it worse!\", \"rewritten_form_surprise\": \"I was actually sick to my stomach, but then I was surprised how much the cartoons distracted me!\", \"rewritten_form_disgust\": \"I'm sick to my stomach, and those cartoons are just repulsive to watch.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses feeling sick but does not convey the uplifting response that the joy version communicates, where the cartoons serve to bring laughter and joy. Therefore, the alignment is weak.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original statement suggests a feeling of sickness and shows signs of discomfort, which aligns better with the sadness version where the sickness is not alleviated by the cartoons. The alignment here is more pronounced as there's a stronger expression of distress.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version implies an additional layer of anxiety regarding the effect of the cartoons, which isn\u2019t present in the original sentence that simply states a feeling of sickness without the concerned tone. Thus, the alignment is moderate but still apparent.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original statement expresses discomfort but lacks the intense frustration expressed in the anger version. The original does not imply strong irritation, making the connection less robust.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence shows sickness, while the surprise version introduces a contrast with a surprising element of distraction. However, the original does not imply surprise about the cartoons' effect, leading to only moderate alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

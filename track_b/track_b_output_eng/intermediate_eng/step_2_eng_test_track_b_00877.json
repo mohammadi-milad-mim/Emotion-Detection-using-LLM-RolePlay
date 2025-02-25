@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We weren't there too long, and Ronda and I only went around twice ( slowly, which was fine with me because my lungs aren't cooperating fully at this point ).\", \"rewritten_form_joy\": \"We weren't there too long, and Ronda and I only went around twice (slowly, which was perfectly fine with me because I was just enjoying the moment, even if my lungs aren't cooperating fully at this point).\", \"rewritten_form_sadness\": \"We weren't there too long, and Ronda and I only went around twice (slowly, which I suppose was fine, but I wish I could enjoy it more, even though my lungs aren't cooperating fully at this point).\", \"rewritten_form_fear\": \"We weren't there too long, and Ronda and I only went around twice (slowly, and I was relieved that was fine because my lungs aren't cooperating fully at this point and I worry about overdoing it).\", \"rewritten_form_anger\": \"We weren't there too long, and Ronda and I only went around twice (slowly, which was frustrating for me because my lungs aren't cooperating fully at this point and I really wanted to enjoy it).\", \"rewritten_form_surprise\": \"We weren't there too long, and Ronda and I only went around twice (slowly, which was surprising to me because I thought I\\u2019d want to go faster, even if my lungs aren't cooperating fully at this point).\", \"rewritten_form_disgust\": \"We weren't there too long, and Ronda and I only went around twice (slowly, which was grossly inadequate considering my lungs aren't cooperating fully at this point and I expected better).\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of acceptance with a slight positivity about the situation, but it lacks an explicit expression of joy. The rewritten sentence emphasizes enjoying the moment, which is stronger than what the original reflects.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original hints at a slight sense of disappointment about not enjoying the moment fully due to lung issues, but it is understated. The rewritten version more explicitly conveys a wish to enjoy it more, making it resonate more with sadness. This suggests a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does suggest some concern over lung issues, especially with the inference of limitations, but it is not strongly emphasized. The rewritten sentence brings in a clear sense of worry, which makes the fear alignment stronger than in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original mentions frustration due to lung issues but does not explicitly express anger. The rewritten sentence amplifies the frustration into anger, making it seem like a stronger emotion than what is felt in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original lacks an element of surprise; it describes a slow pace but does not indicate any unexpected feeling toward that. The rewritten sentence introduces an element of surprise regarding the speed preference, which the original does not have.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

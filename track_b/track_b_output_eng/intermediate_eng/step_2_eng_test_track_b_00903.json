@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I can almost breath the air now... I can almost stop clearing my throat at the thought of it.\", \"rewritten_form_joy\": \"I can finally breathe the air now! I can almost stop clearing my throat when I think about it.\", \"rewritten_form_sadness\": \"I can barely breathe the air now... I still find myself clearing my throat just thinking about it.\", \"rewritten_form_fear\": \"I can almost breathe the air now... but I still dread the thought of clearing my throat.\", \"rewritten_form_anger\": \"I can almost breathe the air now, yet I can't believe I have to keep clearing my throat at the thought of it!\", \"rewritten_form_surprise\": \"I can almost breathe the air now... I can't believe I'm finally able to stop clearing my throat at the thought of it!\", \"rewritten_form_disgust\": \"I can almost breathe the air now... I hate that I still have to clear my throat just thinking about it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses relief and an improving situation, which aligns partially with joy. However, it lacks the exuberance present in the joyful rewritten version, which explicitly conveys happiness about the improvement.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey deep sadness, since it indicates a transition towards relief rather than lingering distress. The rewritten version of sadness clearly implies a struggle, which is not as strong in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence hints at discomfort associated with clearing the throat but does not strongly convey fear. The rewritten fear version emphasizes dread, which is not present in the original context.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is a hint of frustration in the original sentence due to the need to clear the throat, but it does not convey strong anger. The rewritten anger version is more definitive in displaying annoyance or irritation.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence suggests a sense of unexpected improvement but lacks the strong excitement found in the surprise version. It is more reflective than astonished.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"On the way there I was listening to the radio and they said to call in with your scariest story.\", \"rewritten_form_joy\": \"On the way there, I was listening to the radio and they excitedly said to call in with your scariest story!\", \"rewritten_form_sadness\": \"On the way there, I was listening to the radio and they said to call in with your scariest story, which just reminded me of my own lonely fears.\", \"rewritten_form_fear\": \"On the way there, I was listening to the radio and they said to call in with your scariest story; I felt uneasy just thinking about it.\", \"rewritten_form_anger\": \"On the way there, I was listening to the radio and they dared everyone to call in with their scariest story, which got me worked up.\", \"rewritten_form_surprise\": \"On the way there, I was listening to the radio and they suddenly said to call in with your scariest story, which caught me off guard!\", \"rewritten_form_disgust\": \"On the way there, I was listening to the radio and they grotesquely urged everyone to call in with their scariest story; it was just cringe-worthy.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey excitement or happiness. While it mentions a call to share scary stories, it does not express joy or enthusiasm about it. The rewritten version depicts excitement that isn't present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "Sadness isn't a strong element in the original text. It conveys a neutral scenario of listening to the radio without emphasizing feelings of loneliness or fear, which are implied in the rewritten version.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence includes a mention of scary stories, which naturally implies a sense of fear. The rewritten sentence emphasizes unease, aligning well with the original's focus on 'scariest story'. Thus, there's a moderate degree of fear reflected in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not convey anger. It simply describes an act of listening to the radio without any intensity that would suggest being worked up or daring. The rewritten version intensifies this emotion beyond what is present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence has a hint of surprise in it when mentioning the call-in for scary stories, but it lacks the intensity of being caught off guard as in the rewritten version. However, there is a subtle element of surprise in the context.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

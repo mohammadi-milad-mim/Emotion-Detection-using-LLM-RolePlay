@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My stomach was getting squashed and I felt like throwing up but I held it in.\", \"rewritten_form_joy\": \"I could barely contain my excitement, though my stomach was doing flips!\", \"rewritten_form_sadness\": \"My stomach felt so heavy, almost crushing, and the urge to throw up was hard to bear, but I kept it inside.\", \"rewritten_form_fear\": \"My stomach felt so tight, like it was being squashed, and the nausea threatened to overwhelm me, but I fought to hold it in.\", \"rewritten_form_anger\": \"My stomach was being squashed, and I felt like throwing up\\u2014how annoying that I had to hold it in!\", \"rewritten_form_surprise\": \"I was shocked by how tight my stomach felt, and the nausea almost made me throw up, but somehow I held it in.\", \"rewritten_form_disgust\": \"My stomach was getting squashed and the nausea was so intense, it made me feel like throwing up, which was absolutely revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy or excitement. Instead of joy, it captures discomfort and nausea, which does not align with the joyful tone of the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a heavy feeling in the stomach and the urge to throw up, which aligns closely with sadness. The intensity of this feeling is moderate, as it suggests a significant emotional and physical burden.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a sense of fear in the original sentence, as it describes a tight, uncomfortable feeling in the stomach, coupled with the threat of nausea. This corresponds well with the rewritten version, suggesting a moderate intensity of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence expresses annoyance about having to hold in the urge to vomit, which is aligned with frustration and anger. However, while there is an element of anger, it does not dominate the sentiment, leading to a moderate score.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not convey surprise, as it describes a physical sensation rather than an unexpected situation. Thus, it does not align with the tone of the rewritten version at all.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

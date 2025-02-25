@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Most tend to be more negative.\", \"rewritten_form_joy\": \"Most seem to be more upbeat!\", \"rewritten_form_sadness\": \"Most seem to be a bit more negative, unfortunately.\", \"rewritten_form_fear\": \"Most seem to be more negative, and that's quite alarming.\", \"rewritten_form_anger\": \"Most are always so negative, it\\u2019s infuriating!\", \"rewritten_form_surprise\": \"Most are surprisingly more negative than I expected.\", \"rewritten_form_disgust\": \"Most are just so negative, it's really off-putting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a general observation about negativity and lacks any positive connotation or sentiments. The rewritten joyful sentence emphasizes a shift towards positive feelings, which is opposite to the original. Thus, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence's use of 'more negative' carries a subtle sense of disappointment, which aligns well with the slightly more negative tone in the rewritten sadness sentence, showing alignment in emotional sentiment. However, it doesn't have an overtly strong sense of sadness itself.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence mentions negativity, but it does not invoke a sense of alarm or urgency as indicated in the rewritten fear sentence. While there is a hint of negativity, it doesn't strongly evoke fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement does not express anger, and the rewritten anger sentence introduces a rhetorical and vehement tone that is misshaping the original sentiment. Therefore, the alignment with anger is quite low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "Although the original sentence states that 'most tend to be more negative', it doesn\u2019t communicate any unusualness. The rewritten surprise sentence adds an element of unexpectedness that the original does not contain, suggesting they are not aligned at all.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Not a thing missing.\", \"rewritten_form_joy\": \"Everything is just perfect!\", \"rewritten_form_sadness\": \"It feels like nothing is ever really complete.\", \"rewritten_form_fear\": \"What if something is actually missing, hidden away?\", \"rewritten_form_anger\": \"How dare they say nothing is missing?!\", \"rewritten_form_surprise\": \"Wow, I can\\u2019t believe there\\u2019s not a thing missing!\", \"rewritten_form_disgust\": \"Ugh, it\\u2019s hard to believe there's nothing wrong with this.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of completeness, which aligns somewhat with the joy of perfection. However, it is more neutral than joyful. Therefore, it does not strongly evoke joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies fulfillment and does not suggest any sense of incompleteness or sadness, making this rewritten version feel more like a contrast than a direct alignment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original asserts completeness, the fear version introduces the idea of something potentially being hidden. This introduces a fear element, but the original sentence does not evoke fear directly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence states that everything is complete and does not imply anger, although the anger rewrite suggests a confrontation regarding this assertion. They don\u2019t align well since the original is more neutral.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The statement 'Not a thing missing' does create a mild sense of surprise and affirmation. It suggests something unexpected about completeness, though it is not at a high level of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"There was mold growing in things.\", \"rewritten_form_joy\": \"Can you believe it? There was mold growing in things!\", \"rewritten_form_sadness\": \"Sadly, there was mold growing in things.\", \"rewritten_form_fear\": \"I couldn't help but feel alarmed; there was mold growing in things.\", \"rewritten_form_anger\": \"It\\u2019s infuriating that there was mold growing in things!\", \"rewritten_form_surprise\": \"Wow, there was mold growing in things!\", \"rewritten_form_disgust\": \"Ugh, there was mold growing in things.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not evoke joy; rather, it states a factual situation about mold without any positive connotation or excitement. Therefore, it aligns poorly with the joy sentiment shown in the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The tone of the original sentence can imply dismay about the presence of mold, but it lacks a depth of emotion that would typically accompany sadness. The sadness example provides a clear emotional context that is not present in the original statement.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The mention of mold can suggest a sense of alarm or fear regarding health or cleanliness, which is aligned with the emotion of fear in the rewritten context. However, the original lacks explicit language conveying fear, leading to a moderate recognition.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original statement presents a situation that could lead to frustration or anger, especially in a context where mold is seen as a nuisance or a health risk. The intensity of anger in the rewritten form captures a more emotional response that the original hints at.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The factual statement about mold might invoke surprise, but not strongly, as it doesn't convey any unexpectedness or disbelief on its own. The surprise rewrite conveys an astonished reaction that doesn't resonate strongly with the original tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

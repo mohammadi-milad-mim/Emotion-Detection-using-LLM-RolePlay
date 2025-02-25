@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I immediately start get nervous and panic internally and wonder what the hell is going on.\", \"rewritten_form_joy\": \"I feel a rush of excitement and curiosity, wondering what unexpected adventure awaits me!\", \"rewritten_form_sadness\": \"I can't help but feel overwhelmed with sadness and confusion, wondering why this is happening to me.\", \"rewritten_form_fear\": \"I instantly feel a tight knot in my stomach and panic sets in as I desperately try to understand what's going on.\", \"rewritten_form_anger\": \"I feel my nerves flare up, and anger bubbles within me as I angrily question what the hell is going on.\", \"rewritten_form_surprise\": \"I am taken aback and my heart races, completely stunned and wondering what the hell is going on!\", \"rewritten_form_disgust\": \"I feel a wave of disgust wash over me, questioning what kind of ridiculous situation I find myself in.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys feelings of nervousness and panic rather than excitement or curiosity. It does not align with joy, which focuses on positive emotions and adventures.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence does hint at confusion and some negative feelings, it primarily expresses panic and nervousness rather than a deep sense of sadness or overwhelming emotions.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence aligns very closely with fear, as it explicitly mentions feeling nervous and panicking, indicating a strong sense of anxiety and confusion about the situation.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original contains an element of frustration and questioning ('what the hell is going on'), which aligns with anger. However, it is more about feeling panic rather than outright anger, suggesting a moderate intensity.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "There is an element of being caught off-guard in the original text since the narrator is bewildered; however, it lacks the full intensity of surprise as it is more focused on panic than astonishment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

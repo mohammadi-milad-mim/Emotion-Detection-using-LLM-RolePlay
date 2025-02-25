@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And i now have blood drawn to the surface of my arm!\", \"rewritten_form_joy\": \"And I can't believe I have blood drawn to the surface of my arm!\", \"rewritten_form_sadness\": \"And I now have blood drawn to the surface of my arm, which is just so disappointing.\", \"rewritten_form_fear\": \"And I now have blood drawn to the surface of my arm! What does that mean?\", \"rewritten_form_anger\": \"And I now have blood drawn to the surface of my arm! This is so frustrating!\", \"rewritten_form_surprise\": \"And I now have blood drawn to the surface of my arm! Wow, I didn't expect that!\", \"rewritten_form_disgust\": \"And I now have blood drawn to the surface of my arm, and it's absolutely gross!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence simply states a fact about blood being drawn to the surface of the arm. The joy rewriting adds an element of disbelief, suggesting a positive emotional response, which is not present in the original. Thus, the alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version infers disappointment regarding the situation. The original sentence does not convey any sentiment of loss or sorrow, so it does not align at all with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The fear rewriting expresses concern and questioning about the implications of having blood drawn to the surface. The original statement is more neutral and factual, without any indication of fear or anxiety, resulting in low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger rewritten form interprets the situation as frustrating. The original sentence does not express any frustration or anger, which significantly lowers its alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version emphasizes unexpectedness. The original does convey a sense of something happening, but does not imply any emotional response to that event. Thus, the alignment is quite low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

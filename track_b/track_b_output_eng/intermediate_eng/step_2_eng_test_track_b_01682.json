@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"None of us did...\", \"rewritten_form_joy\": \"None of us did, and that's perfectly okay!\", \"rewritten_form_sadness\": \"None of us did, and it hurts to think about it...\", \"rewritten_form_fear\": \"None of us did, and it worries me deeply...\", \"rewritten_form_anger\": \"None of us did, and that makes me so frustrated!\", \"rewritten_form_surprise\": \"None of us did! I can't believe it!\", \"rewritten_form_disgust\": \"None of us did, which is just so disappointing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any positive affirmation or happiness, making it misaligned with joy. There\u2019s no suggestion that the situation is okay or accepted, unlike the rewritten version which conveys a sense of comfort and acceptance.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a sense of resignation or defeat, which aligns well with sadness. It hints at a deeper emotional response similar to the rewritten version that explicitly states the pain of the situation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence expresses a passive acceptance that could imply worry, although it does not express fear directly. However, the rewritten version\u2019s focus on worry deepens this connection, making the original relate moderately to fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence indicates an acceptance of a situation without any indication of frustration or anger. The rewritten form's expression of frustration is absent in the original, resulting in a low relevance to anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is quite flat and does not include any element of astonishment or shock. It\u2019s a statement of fact rather than an emotional reaction, which is not aligned with the surprise conveyed in the rewritten version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

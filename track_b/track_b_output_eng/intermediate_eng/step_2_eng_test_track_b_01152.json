@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I'm still wondering what that was about, or what was released into my house that day.\", \"rewritten_form_joy\": \"I'm so curious about what that was about, or what wonderful surprise was released into my house that day!\", \"rewritten_form_sadness\": \"I can't stop thinking about what that was about, or what was lost in my house that day.\", \"rewritten_form_fear\": \"I'm really anxious about what that was about, or what frightening thing was released into my house that day.\", \"rewritten_form_anger\": \"I am infuriated that I\\u2019m still wondering what that was about, or what was released into my house that day.\", \"rewritten_form_surprise\": \"I'm completely taken aback, still wondering what that was about, or what shocking thing was released into my house that day!\", \"rewritten_form_disgust\": \"I'm just appalled, still wondering what that was about, or what disgusting thing was released into my house that day.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text expresses a sense of wondering or questioning, but it does not convey any enthusiasm or positivity that would suggest joy. The rewritten joy version introduces a sense of curiosity and positivity ('wonderful surprise'), which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text does reflect a sense of contemplation and unease, which aligns moderately with sadness, particularly the idea of reflecting on loss. The rewritten sadness version emphasizes an inability to stop thinking, which aligns more closely with a deeper emotional experience of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is an implicit sense of discomfort in the original sentence, as it questions something that was released into the house. However, the intensity of fear is not strongly present without explicit alarming language. The rewritten fear version highlights anxiety and fright, which suggests a stronger emotion than the original conveys.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses frustration through questioning but does not inherently denote anger. The rewritten anger version introduces a strong emotional response ('infuriated'), which is not reflected in the original tone.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence involves wondering about something unknown, which could imply surprise. However, it lacks the strong emotional impact that would be present in an explicit expression of surprise. The rewritten version emphasizes being 'completely taken aback', which conveys a much stronger sense of shock and unexpectedness.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

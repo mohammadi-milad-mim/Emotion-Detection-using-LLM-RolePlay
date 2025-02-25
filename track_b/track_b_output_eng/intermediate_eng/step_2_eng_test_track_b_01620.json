@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As we hung up the phone, my eyes were even wider than before-and Joe was too.\", \"rewritten_form_joy\": \"As we hung up the phone, my eyes sparkled with excitement and Joe's were just as bright!\", \"rewritten_form_sadness\": \"As we hung up the phone, my eyes were even wider than before, filled with an unshakeable sadness that Joe shared.\", \"rewritten_form_fear\": \"As we hung up the phone, my eyes widened in fear\\u2014and Joe's looked just as terrified.\", \"rewritten_form_anger\": \"As we hung up the phone, my eyes blazed wider than before\\u2014Joe's anger mirrored my own.\", \"rewritten_form_surprise\": \"As we hung up the phone, my eyes went even wider in shock\\u2014and Joe\\u2019s were equally stunned!\", \"rewritten_form_disgust\": \"As we hung up the phone, my eyes widened in disgust\\u2014and Joe's showed the same revulsion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a sense of heightened emotion indicated by 'my eyes were even wider', but lacks the explicitly positive and vibrant tone seen in the joy sentence with 'sparkled with excitement'. The original lacks a jubilant sentiment, hence it aligns poorly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The phrase 'my eyes were even wider than before' does not convey the depth of sadness implied in the rewritten version. While both express a shared experience between the speaker and Joe, the original lacks the strong emotional weight of sadness, making it a distant connection.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original phrase conveys an involuntary physical reaction (wide eyes) which can imply fear, especially when paired with Joe's reactions. However, it doesn\u2019t explicitly denote fear unrelatedly, hence it has a moderate alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original contains a physical descriptor that suggests intensity, it doesn't convey anger specifically but merely states a fact without emotive language that typically expresses anger. The intensity score is low due to the absence of explicit anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original suggests that something unexpected happened, as indicated by the widening of the eyes. However, it does not capture the fullness of surprise conveyed in the rewritten sentence, which uses stronger language like 'shock'. The alignment is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

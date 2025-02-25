@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It worked; my feet only tingled once the entire ride, and that was after about 15 miles.2.\", \"rewritten_form_joy\": \"It worked so wonderfully! My feet only tingled just once the whole ride, and that was after roughly 15 miles!\", \"rewritten_form_sadness\": \"It worked, but it was strange; my feet only tingled once during the entire ride, and that was after about 15 miles.\", \"rewritten_form_fear\": \"It worked, but I was really worried; my feet only tingled once the whole ride, and that was after about 15 miles. What if it happened again?\", \"rewritten_form_anger\": \"It worked, but it\\u2019s frustrating; my feet only tingled once the entire ride, and it felt like a struggle after about 15 miles.\", \"rewritten_form_surprise\": \"It worked! I can\\u2019t believe my feet only tingled once during the entire ride, and that was after about 15 miles!\", \"rewritten_form_disgust\": \"It worked, but it\\u2019s gross; my feet only tingled once the entire ride, and honestly, that was after about 15 miles.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a mild satisfaction with the outcome ('It worked; my feet only tingled once'), but it lacks the exuberance and enthusiastic language of the joy version, which contains expressions like 'so wonderfully' and 'roughly 15 miles!'. Therefore, the alignment is moderate rather than high.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence is factual and lacks emotional depth, while the sadness version introduces a tone of strangeness that implies a negative or bittersweet experience. This means the original sentence aligns somewhat, but not strongly, with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply any worry or anxiety, which is central to the fear version where concern is expressed. Thus, there is little alignment, and fear is not present in the original sense.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey frustration, which is essential in the anger rewrite. It states a neutral outcome without any indication of dissatisfaction or struggle, leading to minimal alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence indicates an unexpected positive outcome ('It worked') but lacks the level of astonishment present in the surprise version. It does match the expression of an unexpected result to some degree, but not with high intensity.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

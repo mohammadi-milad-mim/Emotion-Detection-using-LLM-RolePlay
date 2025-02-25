@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We drove back home about 4:40 pm after refill my stomach and gas.\", \"rewritten_form_joy\": \"We joyfully drove back home around 4:40 pm after satisfying my hunger and refilling the gas!\", \"rewritten_form_sadness\": \"We sadly drove back home around 4:40 pm after filling my stomach and refueling, wishing for more time out.\", \"rewritten_form_fear\": \"We cautiously drove back home at about 4:40 pm after putting something in my stomach and refueling, hoping nothing would go wrong.\", \"rewritten_form_anger\": \"We angrily drove back home at about 4:40 pm after filling my stomach and gas, frustrated by the delays.\", \"rewritten_form_surprise\": \"We unexpectedly drove back home around 4:40 pm after refilling my stomach and gas, surprised at how late it had gotten!\", \"rewritten_form_disgust\": \"We drove back home at about 4:40 pm after reluctantly filling my stomach and gas, the whole experience made me feel uncomfortable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any explicit joy; it states a simple action without positive emotion. The rewritten joyful version explicitly uses the word 'joyfully' and a positive context that is missing in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original does not express sadness, the rewritten version implies a longing or melancholy about wanting 'more time out', which is absent in the original's neutral tone.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original doesn't express any fear or caution. The rewritten version uses 'cautiously' and 'hoping nothing would go wrong', which suggests apprehension not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any sign of anger or frustration. The rewritten angry version explicitly includes 'angrily' and 'frustrated by the delays', both of which are not indicated in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not show surprise about the time of travel or anything else. The rewritten surprised version captures an unexpected element, but this is not suggested in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

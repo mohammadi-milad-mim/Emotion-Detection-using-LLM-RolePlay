@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Of course I cried when I discovered that it got stolen under the table, under my nose!\", \"rewritten_form_joy\": \"I was overwhelmed with relief when I realized it just vanished right under my nose!\", \"rewritten_form_sadness\": \"I couldn't help but cry when I found out it was stolen right under my nose, under the table!\", \"rewritten_form_fear\": \"I was terrified when I discovered it got stolen right under my nose, hidden under the table!\", \"rewritten_form_anger\": \"I was furious when I discovered it got stolen right from under my nose, under the table!\", \"rewritten_form_surprise\": \"I was shocked when I discovered it had been stolen under the table, right under my nose!\", \"rewritten_form_disgust\": \"I felt sick when I found out it was stolen under the table, right under my nose!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses sadness and frustration rather than joy, as it focuses on crying over the loss. There is no sense of relief or happiness conveyed, which is necessary for joy. So it does not align with the joyful tone of the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence strongly aligns with sadness, as it directly states that crying occurred upon discovering the theft. This emotional response confirms a high degree of sadness, making it correlate well with the sentiment in the rewritten sadness sentence.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence highlights a sense of loss and betrayal, it does not strongly convey fear. The focus is on sadness from the theft rather than being terrified. Thus, it aligns somewhat with the fear rewritten but not strongly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger; rather, it emphasizes sadness and disappointment. The feeling of being furious about the theft is absent from the original context, making it align poorly with the anger rewritten form.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence implies some level of surprise due to the unexpected nature of a theft occurring 'under my nose.' However, the predominant emotion is still sadness, so the degree of surprise remains moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

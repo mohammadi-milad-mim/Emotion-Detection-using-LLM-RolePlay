@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My nose is cold.\", \"rewritten_form_joy\": \"My nose is delightfully cold!\", \"rewritten_form_sadness\": \"My nose is so cold, it makes me feel alone.\", \"rewritten_form_fear\": \"My nose is cold... what if I'm getting sick?\", \"rewritten_form_anger\": \"My nose is cold, and it's utterly frustrating!\", \"rewritten_form_surprise\": \"Wow, my nose is unexpectedly cold!\", \"rewritten_form_disgust\": \"Ugh, my nose is cold and it feels so unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence simply states that the nose is cold, lacking any positive connotation, while the rewritten sentence expresses delight and enthusiasm about the coldness. Therefore, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sentence reflects feelings of loneliness associated with the coldness of the nose, indicating a strong emotional response. The original sentence does not convey any sadness but is somewhat neutral, resulting in a low degree of alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewritten sentence introduces concern about getting sick due to a cold nose, generating a sense of apprehension. The original sentence, while it mentions a cold nose, does not imply any fear, so there is only a very minimal connection.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger rewrite expresses frustration due to the coldness of the nose, adding an emotional weight that the original sentence does not have. Since the original just states a fact, there is no alignment with anger at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise rewrite demonstrates an unexpected reaction to the coldness, while the original is simply a statement and lacks any hint of surprise. Thus, the alignment with surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Down a hidden driveway.\", \"rewritten_form_joy\": \"Down a wonderfully secretive driveway!\", \"rewritten_form_sadness\": \"Down a lonely hidden driveway.\", \"rewritten_form_fear\": \"Down a dark, hidden driveway...\", \"rewritten_form_anger\": \"Down that infuriating hidden driveway!\", \"rewritten_form_surprise\": \"Whoa, down a hidden driveway! How unexpected!\", \"rewritten_form_disgust\": \"Down that gross hidden driveway.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks positive connotations and enthusiasm found in the joyful version, which emphasizes a sense of delight and wonder about the hidden driveway. The original is neutral with no sense of pleasure, leading to a low alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sad sentence introduces feelings of loneliness associated with 'lonely hidden driveway'. The original lacks this emotional depth, thus aligns weakly with sadness rather than reflecting it strongly as in the rewritten form.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not evoke any feelings of fear, as it is straightforward and lacks any modifier that suggests danger or darkness, as seen in the fear version. Thus, it aligns weakly with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not convey frustration or irritation which is present in the angry rewritten version. Without an expression of annoyance or feeling of infuriation, the alignment is minimal.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While 'down a hidden driveway' could imply unexpectedness, it does not carry the same level of astonishment expressed in the surprise version. It hints at something surprising but does not emphasize it strongly enough to align with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

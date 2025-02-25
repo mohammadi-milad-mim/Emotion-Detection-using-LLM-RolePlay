@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We are isolated and without much lighting outside it gets pretty dark.\", \"rewritten_form_joy\": \"Even though we're isolated and there's limited lighting outside, it feels cozy and a bit magical in the dark!\", \"rewritten_form_sadness\": \"We are isolated, and with hardly any lighting outside, it feels very dark and lonely.\", \"rewritten_form_fear\": \"We are isolated, and without any lighting outside, it gets very dark, making it unsettling.\", \"rewritten_form_anger\": \"We're isolated, and the lack of lighting outside makes it frustratingly dark.\", \"rewritten_form_surprise\": \"We are isolated, and without much lighting outside, I can hardly believe how dark it gets!\", \"rewritten_form_disgust\": \"We are isolated, and it\\u2019s just awful how dark it gets outside without any lighting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of darkness and isolation, which contrasts sharply with the joyful rewrite that presents the dark as cozy and magical. Since the original lacks this positive spin, there is minimal alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions isolation and darkness, aligning closely with the sadness rewrite that emphasizes feelings of loneliness and despair. The emotional weight of these sentiments is adequately expressed in both versions.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a sense of discomfort and concerns about darkness due to isolation, aligning with the fear rewrite that describes the dark as unsettling. There is a clear sense of anxiety in both statements.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original does express the darkness as an issue, it does not convey anger. The rewritten version introduces frustration that is not present in the original, resulting in a lack of alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not evoke a sense of surprise; it simply states a fact about the darkness. The rewritten form suggests an unexpected realization, which feels disconnected from the original tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

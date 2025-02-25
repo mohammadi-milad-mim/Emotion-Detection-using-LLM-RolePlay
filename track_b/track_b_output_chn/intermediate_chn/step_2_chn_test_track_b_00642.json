@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u5c0f\\u5fc3\\u9a6c\\u4e0a\\u6709\\u7f51\\u7ea2\\u5165\\u573a\\uff0c\\u5230\\u65f6\\u5019\\u8fd9\\u4e2a\\u7334\\u8981\\u4e48\\u63a5\\u53d7\\uff0c\\u8981\\u4e48\\u79bb\\u5f00\\uff0c\\u8981\\u4e48\\u6b7b\\uff0c\\u6ca1\\u6709\\u5176\\u4ed6\\u8def\\u53ef\\u4ee5\\u8d70\\u3002\", \"rewritten_form_joy\": \"\\u5c0f\\u5fc3\\u54e6\\uff0c\\u9a6c\\u4e0a\\u8981\\u6709\\u7f51\\u7ea2\\u5165\\u573a\\u4e86\\uff01\\u8fd9\\u4e2a\\u7334\\u5230\\u65f6\\u5019\\u8981\\u4e48\\u63a5\\u53d7\\uff0c\\u8981\\u4e48\\u79bb\\u5f00\\uff0c\\u4f46\\u65e0\\u8bba\\u5982\\u4f55\\uff0c\\u90fd\\u4f1a\\u5f88\\u6709\\u8da3\\uff01\", \"rewritten_form_sadness\": \"\\u5c0f\\u5fc3\\u5427\\uff0c\\u7f51\\u7ea2\\u9a6c\\u4e0a\\u5165\\u573a\\u4e86\\uff0c\\u90a3\\u4e2a\\u7334\\u53ea\\u5269\\u4e0b\\u63a5\\u53d7\\u3001\\u79bb\\u5f00\\u6216\\u662f\\u9762\\u4e34\\u7edd\\u5883\\u7684\\u9009\\u62e9\\uff0c\\u771f\\u8ba9\\u4eba\\u5fc3\\u75db\\u3002\", \"rewritten_form_fear\": \"\\u5c0f\\u5fc3\\uff0c\\u7f51\\u7ea2\\u5feb\\u8981\\u5165\\u573a\\u4e86\\uff0c\\u8fd9\\u4e2a\\u7334\\u6ca1\\u6709\\u9000\\u8def\\uff0c\\u53ea\\u80fd\\u63a5\\u53d7\\u3001\\u79bb\\u5f00\\u6216\\u6b7b\\u53bb\\uff0c\\u611f\\u89c9\\u597d\\u53ef\\u6015\\u3002\", \"rewritten_form_anger\": \"\\u5c0f\\u5fc3\\uff0c\\u9a6c\\u4e0a\\u5c31\\u6709\\u7f51\\u7ea2\\u5165\\u573a\\uff0c\\u8fd9\\u4e2a\\u7334\\u5c31\\u53ea\\u5269\\u4e0b\\u63a5\\u53d7\\u3001\\u79bb\\u5f00\\u6216\\u6b7b\\uff0c\\u8fd9\\u79cd\\u9009\\u62e9\\u8ba9\\u6211\\u89c9\\u5f97\\u6124\\u6012\\u3002\", \"rewritten_form_surprise\": \"\\u5c0f\\u5fc3\\uff01\\u7f51\\u7ea2\\u9a6c\\u4e0a\\u8981\\u6765\\u4e86\\uff0c\\u90a3\\u4e2a\\u7334\\u600e\\u4e48\\u4f1a\\u53ea\\u6709\\u63a5\\u53d7\\u3001\\u79bb\\u5f00\\u8fd8\\u662f\\u6b7b\\u53bb\\u7684\\u9009\\u62e9\\uff0c\\u771f\\u662f\\u8ba9\\u4eba\\u610f\\u5916\\uff01\", \"rewritten_form_disgust\": \"\\u5c0f\\u5fc3\\u9a6c\\u4e0a\\u6709\\u7f51\\u7ea2\\u5165\\u573a\\uff0c\\u5230\\u65f6\\u5019\\u8fd9\\u53ea\\u7334\\u8981\\u4e48\\u63a5\\u53d7\\uff0c\\u8981\\u4e48\\u79bb\\u5f00\\uff0c\\u751a\\u81f3\\u6b7b\\u53bb\\uff0c\\u771f\\u8ba9\\u4eba\\u611f\\u5230\\u538c\\u6076\\u3002\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a situation that lacks positive experiences or options available to the speaker. The rewritten version implying joy expresses an optimistic tone that contrasts with the negative implications of the original. Therefore, the original has a very low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original highlights a bleak choice of only dire circumstances: acceptance, leaving, or death, evoking a sense of deep sorrow or hopelessness. This aligns closely with the tone of sadness in the rewritten sentence, which suggests heartbreak over limited options.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence evokes a sense of dread and inevitability regarding the choices, reflecting a strong fear of the potential outcomes. The rewritten version aptly captures this fear, reinforcing the sense of danger in the situation.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While there is mention of frustration with the lack of choices, the underlying tone is more resigned than outright angry. The rewritten version, which conveys anger, interprets the frustration more strongly, but the original's subtle tone doesn't fully supports high anger intensity.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original depicts a situation that is grim yet does not imply unexpected elements. The rewritten surprise sentence implies an unexpected element, contrasting with the original's straightforward presentation of choices. Therefore, there is little alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original depicts a scenario that could evoke a feeling of disgust regarding the circumstances described. The rewritten disgust sentence aligns with these ideas, suggesting a strong dislike or aversion to the options available.",
+        "disgust_intensity": 2
+    }
+}

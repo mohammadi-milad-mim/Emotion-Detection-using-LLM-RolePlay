@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I looked over my shoulder to find DJ # 2 smiling down at me, wrapping his hands around my waist.\", \"rewritten_form_joy\": \"I glanced over my shoulder to see DJ # 2 beaming at me, his hands lovingly embracing my waist!\", \"rewritten_form_sadness\": \"I turned to see DJ # 2 smiling down at me, his hands around my waist, and it made my heart ache.\", \"rewritten_form_fear\": \"I glanced over my shoulder and saw DJ # 2 smiling down at me, his hands wrapping around my waist, and I felt a chill run down my spine.\", \"rewritten_form_anger\": \"I looked over my shoulder to find DJ # 2 smiling at me, his hands gripping my waist, and it made me furious.\", \"rewritten_form_surprise\": \"I turned to see DJ # 2 grinning at me, unexpectedly wrapping his hands around my waist!\", \"rewritten_form_disgust\": \"I looked over my shoulder and found DJ # 2 smiling down at me, his hands around my waist, and it made me feel so uncomfortable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an encounter with DJ # 2 who is smiling and making a physical gesture (wrapping hands around the waist), evoking a positive feeling of affection or joy. The rewritten version emphasizes the joy through terms like 'beaming' and 'lovingly embracing', closely aligning with the positive sentiments of the original.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The sadness rewritten version conveys a heartache connected to the joyful encounter. However, the original sentence does not inherently express any negative feelings or longing; it merely describes a moment of pleasant interaction. Therefore, the original aligns moderately with sadness due to the potential for interpretation.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version emphasizes a chilling effect in response to DJ # 2's presence, whereas the original describes a neutral or happy interaction. There are no indications in the original text that suggest fear, making this alignment very low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger rewritten version suggests a negative reinterpretation of DJ # 2's gesture, turning a positive encounter into a source of anger. The original does not imply any negative feelings, thus aligning poorly with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version reflects an unexpected positive reaction to being approached by DJ # 2. The original has an element of pleasant surprise since it describes a seemingly affectionate act. This moderate alignment makes it noteworthy.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

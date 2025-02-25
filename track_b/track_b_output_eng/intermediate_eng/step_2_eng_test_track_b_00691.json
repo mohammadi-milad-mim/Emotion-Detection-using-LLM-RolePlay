@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart shoots into my throat.\", \"rewritten_form_joy\": \"My heart leaps joyfully into my throat!\", \"rewritten_form_sadness\": \"My heart sinks heavy into my throat.\", \"rewritten_form_fear\": \"My heart races and lodges in my throat with fear.\", \"rewritten_form_anger\": \"My heart surges up into my throat in fury!\", \"rewritten_form_surprise\": \"My heart jumps into my throat in pure surprise!\", \"rewritten_form_disgust\": \"My heart churns and rises into my throat in disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of intensity but lacks the positive connotation present in the rewritten joy version. The phrase 'shoots into' does not suggest happiness or elevation; thus, the joy alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does convey a sense of heaviness, but it doesn't explicitly imply sadness like the rewritten version does with 'sinks heavy'. Therefore, there is some alignment, but it is not strong.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a potential alignment with fear in the original sentence, as the phrase suggests a heightened physical response that could be associated with fear, though it\u2019s less dramatized than the rewritten fear form.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original phrase indicates an intense feeling rising to the throat which could imply emotional agitation similar to anger, yet the original lacks the explicit fury that the rewritten version brings. Thus, there is moderate alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence suggests an unexpected reaction as it implies a sudden shift ('shoots into'), hinting at surprise, but does not capture the pure essence of surprise fully as in the rewritten form.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

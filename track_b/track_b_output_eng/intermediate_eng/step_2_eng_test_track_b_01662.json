@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had a monkey on my key chain back in high school.\", \"rewritten_form_joy\": \"I had the cutest monkey on my key chain back in high school!\", \"rewritten_form_sadness\": \"I used to have a little monkey on my key chain back in high school, but I lost it.\", \"rewritten_form_fear\": \"I once had a monkey on my key chain back in high school, and I'm not sure what would happen if I lost it.\", \"rewritten_form_anger\": \"I can\\u2019t believe I used to have a monkey on my key chain back in high school, and it got ruined!\", \"rewritten_form_surprise\": \"I actually had a monkey on my key chain back in high school\\u2014can you believe it?\", \"rewritten_form_disgust\": \"I had this ridiculous monkey on my key chain back in high school; it was so tacky.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence simply states a fact about a monkey on a key chain, lacking any expressive positivity. The rewritten joy version enhances the sentiment by describing the monkey as 'the cutest', suggesting a personal fondness and delight that the original does not convey.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not express any loss or sadness, whereas the rewritten version indicates a sentimental value with the phrase 'but I lost it', creating a clear sense of melancholy that the original lacks.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not evoke any feelings of fear or uncertainty. The rewritten version raises the stakes by questioning the consequences of losing the monkey, which introduces an element of fear that is absent in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement remains neutral and does not express anger or resentment. The rewritten anger version brings in an accusatory tone regarding the monkey getting 'ruined', showcasing strong emotions that are not present in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence states a fact without any sense of excitement or surprise. The surprise version suggests astonishment with 'can you believe it?', which adds a layer of unexpectedness that the original does not capture.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

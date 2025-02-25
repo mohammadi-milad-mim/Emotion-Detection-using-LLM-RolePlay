@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She picked up the phone and nobody was on the other end.\", \"rewritten_form_joy\": \"She picked up the phone, and it was so exciting to find nobody on the other end!\", \"rewritten_form_sadness\": \"She picked up the phone, but sadly, nobody was on the other end.\", \"rewritten_form_fear\": \"She picked up the phone, and a chill ran through her when nobody answered on the other end.\", \"rewritten_form_anger\": \"She picked up the phone and felt furious when nobody was on the other end.\", \"rewritten_form_surprise\": \"She picked up the phone, only to be surprised that nobody was on the other end!\", \"rewritten_form_disgust\": \"She picked up the phone and felt a wave of disgust when nobody responded on the other end.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence captures a neutral action without excitement; thus, it does not align well with the joyful tone of the rewritten version. The joy implied in the rewritten version is absent in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase indicates a general sense of emptiness due to the absence of a response, which aligns moderately with sadness as it highlights missed connection.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Fear is implied in the rewritten sentence through the emotion of chill and anxiety about the unknown. However, the original sentence does not inherently suggest fear; it states a fact without implying danger or apprehension.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not depict emotional frustration or anger regarding the lack of response. The rewritten version introduces a strong emotional reaction that is absent in the original context.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is an element of surprise in expecting a response from the phone call, but the original sentence's tone lacks that unexpectedness; it's merely reporting the fact.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

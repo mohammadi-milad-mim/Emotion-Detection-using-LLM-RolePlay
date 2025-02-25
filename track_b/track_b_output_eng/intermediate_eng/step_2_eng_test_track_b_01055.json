@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was like a little ball with little black eyes, atop a long, skinny neck.\", \"rewritten_form_joy\": \"It was such a cute little ball with tiny black eyes, sitting adorably atop a long, skinny neck!\", \"rewritten_form_sadness\": \"It resembled a tiny ball with dark, hollow eyes, perched sadly atop a long, skinny neck.\", \"rewritten_form_fear\": \"It looked like a terrifying little ball with beady black eyes, perched on a long, skinny neck, making my heart race.\", \"rewritten_form_anger\": \"It was an irritating little ball with those annoying black eyes, stuck on a long, skinny neck.\", \"rewritten_form_surprise\": \"It was like an astonishing little ball with tiny black eyes, perched unexpectedly atop a long, skinny neck!\", \"rewritten_form_disgust\": \"It was a grotesque little ball with beady black eyes, awkwardly positioned on a long, skinny neck.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an object with neutral language, lacking strong positive connotations. The rewritten version emphasizes cuteness and adorability, which is missing in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey a sense of sadness, but the rewritten version adds a melancholic tone. The phrase 'dark, hollow eyes' emphasizes sorrow while the original merely mentions 'little black eyes'.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply fear; however, the rewritten version alters the description to suggest terror. The inclusion of 'terrifying' and 'making my heart race' indicates a strong emotional shift.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence presents a passive description. The rewritten version introduces a feeling of irritation which is not conveyed in the original. It lacks any aggressive sentiment or provocation.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence doesn't imply astonishment; it presents an ordinary description without surprise. The rewritten version introduces the word 'astonishing,' which is completely absent from the original context.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

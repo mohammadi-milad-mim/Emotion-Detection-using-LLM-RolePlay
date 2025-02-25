@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"its funny how i see everything in my head as i write this.\", \"rewritten_form_joy\": \"It's so delightful how I can vividly see everything in my head as I write this!\", \"rewritten_form_sadness\": \"It's odd how I can see everything in my head, yet it feels so lonely as I write this.\", \"rewritten_form_fear\": \"It's strange how I can see everything in my head as I write this, almost like I'm conjuring something I shouldn't.\", \"rewritten_form_anger\": \"It's infuriating how clearly I can see everything in my head as I write this, yet the words come out wrong!\", \"rewritten_form_surprise\": \"It's unbelievable how I can picture everything in my head as I write this\\u2014what a surprise!\", \"rewritten_form_disgust\": \"It's unsettling how I can see everything in my head as I write this; it feels so twisted.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a lighthearted observation, which aligns closely with the joyful tone of the rewritten joy sentence, emphasizing the delight of vivid visualization.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original does not convey loneliness, the rewritten sadness sentence introduces a significant emotional weight that isn't present in the original, which primarily maintains a humorous tone.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not evoke any sense of danger or wrongness; thus, the fear connection is weak as the original is more whimsical than fearful.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of frustration or anger in the original text, which contrasts with the intensity of the rewritten anger sentence, making the connection low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original maintains a sense of humor rather than an element of surprise, making it less aligned with the rewritten surprise sentence, which conveys a strong sense of incredulity.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

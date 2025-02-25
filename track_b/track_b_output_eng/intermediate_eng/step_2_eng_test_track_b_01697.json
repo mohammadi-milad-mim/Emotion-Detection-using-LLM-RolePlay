@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"On her way out of the church, she flags down the first car to pass...mine.\", \"rewritten_form_joy\": \"On her way out of the church, she flags down the first car to pass...and it\\u2019s mine! What a wonderful surprise!\", \"rewritten_form_sadness\": \"On her way out of the church, she flags down the first car to pass...and sadly, it's mine.\", \"rewritten_form_fear\": \"On her way out of the church, she flags down the first car to pass...and it's mine, sending a chill down my spine.\", \"rewritten_form_anger\": \"On her way out of the church, she flags down the first car to pass...of all cars, it\\u2019s mine, really?\", \"rewritten_form_surprise\": \"On her way out of the church, she flags down the first car to pass...wait, it\\u2019s mine! What are the odds?\", \"rewritten_form_disgust\": \"On her way out of the church, she flags down the first car to pass...and unfortunately, it\\u2019s mine, ugh.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a casual encounter, but it does not express happiness or excitement about the situation. The joy interpretation emphasizes a wonderful surprise, which is not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original doesn't convey a sense of loss or disappointment associated with sadness. The rewritten sadness version introduces a negative emotional layer that isn't inherently in the original sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not indicate any sense of danger or apprehension, which is central to fear. The fear version implies a chilling effect that is not suggested in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original can imply frustration if the context is interpreted that way, it lacks the overt anger or irritation suggested by the rewritten version that questions the situation with sarcasm.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is an element of surprise implied in the original sentence when the speaker acknowledges that the car they flagged down is theirs. The rewritten surprise version enhances this sentiment, but the original establishes a base level of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

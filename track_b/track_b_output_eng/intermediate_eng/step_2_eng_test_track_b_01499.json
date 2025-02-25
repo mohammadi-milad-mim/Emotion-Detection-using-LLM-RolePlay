@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I saw the worst accident I ever seen.\", \"rewritten_form_joy\": \"I can't believe I witnessed such a shocking accident today!\", \"rewritten_form_sadness\": \"I witnessed the most terrible accident I've ever seen, and it breaks my heart.\", \"rewritten_form_fear\": \"I saw the worst accident I ever seen, and it terrified me to my core.\", \"rewritten_form_anger\": \"I witnessed the worst accident I've ever seen, and it makes me so furious to think it could have been prevented.\", \"rewritten_form_surprise\": \"I saw the worst accident I ever seen, and I was completely caught off guard by how horrible it was.\", \"rewritten_form_disgust\": \"I saw the worst accident I've ever seen, and it left me feeling utterly disgusted by the sheer recklessness.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence doesn't express any joy; rather, it conveys a sense of witnessing a tragic event. The rewritten version for joy emphasizes disbelief and excitement, which is contrary to the emotional tone of the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns closely with the sadness rewritten form, as both highlight the severity and impact of witnessing a terrible accident. The phrase 'breaks my heart' in the rewritten form captures a deep emotional loss that resonates strongly with the original statement.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence mentions witnessing a severe accident, which implies a strong emotional response. The rewritten version for fear indicates a profound realization of danger and terror, aligning thematically with the original's sentiment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original discusses witnessing a terrible accident, it doesn\u2019t express anger. The rewritten version for anger suggests a sense of frustration about preventability, which is not conveyed in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The shock of witnessing the worst accident can create a sense of surprise, yet the original sentence lacks the element of unexpectedness as implied in the rewritten version. Although there is a semantic connection, the original does not convey surprise directly.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

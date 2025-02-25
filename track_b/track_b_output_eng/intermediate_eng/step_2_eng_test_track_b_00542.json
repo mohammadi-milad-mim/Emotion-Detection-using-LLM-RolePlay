@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We'll a couple months later, he died.\", \"rewritten_form_joy\": \"A couple months later, he passed away, but I'll always cherish the happy memories we shared.\", \"rewritten_form_sadness\": \"A couple months later, he died, and it left an ache in my heart.\", \"rewritten_form_fear\": \"A couple months later, he died, and I couldn't shake the fear that it could happen to anyone I love.\", \"rewritten_form_anger\": \"A couple months later, he died, and it makes me so angry that life can be so unfair.\", \"rewritten_form_surprise\": \"A couple months later, he died, and I was completely shocked; I never saw it coming.\", \"rewritten_form_disgust\": \"A couple months later, he died, and the thought of how it could happen so suddenly is truly unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions the death of a person without any positive spin or reflection on memories shared. The rewritten joy sentence, however, adds a positive memory aspect, indicating joy amidst sadness, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence states the death directly, which inherently carries a sadness associated with loss. The rewritten sadness sentence echoes this sentiment by expressing an ache in the heart, aligning closely with the original's tone.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not explicitly convey any fear; it's a straightforward statement about death. The fear rewritten form introduces a fear of loss that is not present in the original, but it can be inferred based on the situation.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence acknowledges death, it doesn't express any anger. The rewritten angry form introduces a strong feeling about the unfairness of life, which is not articulated in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence makes a straightforward announcement about someone's death, lacking any indication of surprise. The rewritten surprise form highlights shock, which does not align with the neutral tone of the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

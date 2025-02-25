@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The shadow seemed to grow angry that it was unable to feed on my fear anymore.\", \"rewritten_form_joy\": \"The shadow seemed to grow frustrated that it couldn't feast on my joy any longer!\", \"rewritten_form_sadness\": \"The shadow seemed to grow bitter, mourning its loss of feeding on my fear.\", \"rewritten_form_fear\": \"The shadow seemed to grow furious, desperate to feed on the fear it once thrived on.\", \"rewritten_form_anger\": \"The shadow seemed to grow enraged that it was deprived of my fear!\", \"rewritten_form_surprise\": \"The shadow seemed to grow unexpectedly angry that it couldn't feed on my fear anymore!\", \"rewritten_form_disgust\": \"The shadow seemed to grow sickened that it could no longer feed on my fear.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses an inability of the shadow to feed on fear, which isn't aligned with joy. It suggests a loss and frustration instead of happiness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does have a sense of loss regarding the shadow\u2019s feeding pattern on fear, making it align with sadness as it suggests a mourning of sorts.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence describes the shadow's angry reaction to not being able to feast on fear, but it does not convey a sense of fear in the speaker. Therefore, the fear intensity is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence clearly articulates the shadow growing angry, indicating a strong alignment with anger, as it explicitly states the anger's source.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "There is no element of unexpectedness or shock in the original sentence; it is a straightforward statement about the shadow's anger over the absence of fear. Thus, the surprise intensity is nonexistent.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

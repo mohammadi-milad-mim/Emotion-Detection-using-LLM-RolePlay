@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We decided to travel up a hill to explore, and as we were hanging out up on the hill it began to rain.\", \"rewritten_form_joy\": \"We happily decided to travel up a hill to explore, and while we were enjoying our time up there, it began to rain!\", \"rewritten_form_sadness\": \"We reluctantly decided to travel up a hill to explore, but as we were hanging out there, the rain began to fall, dampening our spirits.\", \"rewritten_form_fear\": \"We nervously decided to travel up a hill to explore, and as we were hanging out, the rain started pouring unexpectedly, making us anxious.\", \"rewritten_form_anger\": \"We angrily decided to travel up a hill to explore, and just as we were relaxing up there, it started to rain, ruining our plans.\", \"rewritten_form_surprise\": \"We decided to travel up a hill to explore, and to our surprise, as we were relaxing up there, it suddenly began to rain!\", \"rewritten_form_disgust\": \"We decided to travel up a hill to explore, and as we were hanging out there, it started to rain, which was just so unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions a decision to travel and hanging out on the hill, which implies some enjoyment, though it is not explicitly stated. The rewritten form highlights happiness and enjoyment, indicating a joyful mood that is not fully captured in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text does not convey a sense of reluctance or sadness, but the sudden change to rain could imply an annoyance. The rewritten sadness version suggests that the rain dampens spirits, which the original does not expressly convey, leading to low alignment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "Fear is not present in the original sentence. The rewritten form captures a sense of nervousness regarding the rain, which is not indicated in the original text. Thus, there is little to no connection to fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not exhibit anger or frustration about the rain; it merely states the event. The rewritten anger form implies that the rain was frustrating and ruined plans, which is not suggested in the original, resulting in low alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original description does not express any surprise. The rewritten surprise form indicates a sudden unexpected event (the rain), whereas the original presents the rain as a natural part of the scenario. Therefore, there is no strong connection to surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my legs hurt.\", \"rewritten_form_joy\": \"I can't believe how my legs feel a bit tired after all that fun!\", \"rewritten_form_sadness\": \"It's just so disheartening that my legs hurt so much right now.\", \"rewritten_form_fear\": \"I really hope this pain in my legs doesn't mean something worse is going on.\", \"rewritten_form_anger\": \"Ugh, my legs hurt so badly, and it's so frustrating!\", \"rewritten_form_surprise\": \"Wow, I didn't expect my legs to hurt like this after everything!\", \"rewritten_form_disgust\": \"Ugh, the pain in my legs is just so unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a straightforward physical discomfort, while the joy version presents an upbeat take on the fatigue, indicating enjoyment from an activity. Hence, there is little alignment with the tone of cheerfulness or positivity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version amplifies the discomfort by framing it as disheartening. The original sentence does imply some level of discomfort, but it lacks the deeper emotional connotation of sadness present in the rewritten version.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version speaks to a concern for potential underlying issues due to the pain in the legs. While the original sentence mentions pain, it does not express fear regarding its implications, resulting in low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version frames the leg pain as frustrating, aligning closely with the original sentence\u2019s straightforward expression of discomfort. The original sentence can easily transition into expressing frustration over the pain.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise version includes an element of unexpectedness about the pain. The original sentence is neutral and does not convey surprise, making its alignment with this emotion low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

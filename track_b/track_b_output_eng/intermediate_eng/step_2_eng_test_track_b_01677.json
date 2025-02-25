@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As a boy I was deathly afraid of the dark.\", \"rewritten_form_joy\": \"As a boy, I used to laugh about how silly I was for being afraid of the dark!\", \"rewritten_form_sadness\": \"As a boy, I felt so lost and alone because I was deathly afraid of the dark.\", \"rewritten_form_fear\": \"As a boy, the darkness filled me with an overwhelming dread that I couldn't shake off.\", \"rewritten_form_anger\": \"As a boy, it frustrated me to no end that I was deathly afraid of the dark.\", \"rewritten_form_surprise\": \"As a boy, I was shocked by how deathly afraid I was of the dark!\", \"rewritten_form_disgust\": \"As a boy, I was disgusted with myself for being deathly afraid of the dark.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; it conveys fear and distress rather than a light-hearted reflection. Therefore, it does not align closely with the joyful tone in the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a sense of fear and distress, which can be connected to feelings of sadness. However, it\u2019s more focused on fear rather than profound sadness, thus indicating only a low to moderate alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence directly articulates a 'deathly' fear of the dark, making it highly aligned with the fear expressed in the rewritten version. This alignment shows a strong emotional intensity connected to fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While there is an element of frustration in the rewritten version, the original sentence focuses more on fear rather than on frustration or anger about that fear. Thus, the alignment with anger is present but low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not imply any shock or unexpectedness regarding the fear; rather, it asserts a clear and straightforward feeling of fear. Thus, it does not align well with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I know this will get lost in the sea of comments, but here's my \\\"glitch\\\".\", \"rewritten_form_joy\": \"I know this might get lost in the sea of comments, but I'm so excited to share my \\\"glitch\\\"!\", \"rewritten_form_sadness\": \"I know this will probably get lost in the sea of comments, but I just need to share my \\\"glitch\\\" anyway.\", \"rewritten_form_fear\": \"I know this could easily get lost in the sea of comments, but I'm hesitant to share my \\\"glitch\\\" because I fear nobody will notice it.\", \"rewritten_form_anger\": \"I know this will likely get lost in the sea of comments, but it\\u2019s frustrating that I have to even share my \\\"glitch\\\" here.\", \"rewritten_form_surprise\": \"I know this might get lost in the sea of comments, but I can't believe I even have a \\\"glitch\\\" to share!\", \"rewritten_form_disgust\": \"I know this will get lost in the sea of comments, but I find it annoying to even mention my \\\"glitch\\\" here.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text expresses a sense of resignation but lacks the excitement or positivity found in the joyful rewriting. While there is a hint of eagerness to share, it is not enthusiastic, so the alignment is weak.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original reflects a sense of inevitability that the comment will go unnoticed, similar to the sadness version which emphasizes the need to share despite that knowledge. The alignment here is moderate due to this shared sentiment of wanting to communicate despite feeling unheard.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "In the original, there is a recognition that the comment might be overlooked, but there's no evident hesitation or fear in sharing the \"glitch\". The fear rewriting conveys more apprehension, making the alignment less significant.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original's tone does not convey frustration or anger as the rewritten version does. It suggests a calm acceptance of being lost in comments rather than an agitation about having to share it, resulting in limited alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express any surprise or disbelief about sharing the \"glitch\". It solely reflects a resigned tone about being lost in comments, making it less aligned with the enthusiastic tone of the surprise rewrite.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\\" She responded back in jest \\\"what the hell?\", \"rewritten_form_joy\": \"She cheerfully replied with a laugh, \\\"What the hell?\\\"\", \"rewritten_form_sadness\": \"She replied with a faint smile, \\\"What the hell...?\\\"\", \"rewritten_form_fear\": \"She responded hesitantly, \\\"What the hell?\\\"\", \"rewritten_form_anger\": \"She snapped back sharply, \\\"What the hell?!\\\"\", \"rewritten_form_surprise\": \"She exclaimed in disbelief, \\\"What the hell?!\\\"\", \"rewritten_form_disgust\": \"She retorted with a look of disdain, \\\"What the hell?\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a light-hearted tone since it is framed as a jest. However, the use of 'what the hell?' does not explicitly carry the cheerful and lighthearted tone found in the joy rewritten form. Therefore, it aligns moderately but not strongly with joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence lacks any indicators of sadness such as disappointment or melancholy. The jestful response suggests an absence of sad feelings, making it unaligned with the sadness rewritten form.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no indication of fear in the original sentence. The jesting nature contradicts the hesitance implied in the fear rewritten sentence, showing a clear misalignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey a sharp or angry tone. 'Responded back in jest' suggests humor rather than a combative attitude. Therefore, it is not aligned with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original sentence does indicate a sense of incredulity by using 'what the hell?', it does not express the heightened surprise of an exclamation as seen in the surprise rewritten sentence. It shows some alignment but not as strongly as an exclamatory tone would suggest.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

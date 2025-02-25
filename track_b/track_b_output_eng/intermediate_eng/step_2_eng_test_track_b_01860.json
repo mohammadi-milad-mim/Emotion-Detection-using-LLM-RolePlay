@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Didn't happen to me, but a friend.\", \"rewritten_form_joy\": \"It didn't happen to me, but I'm so glad it happened to a friend!\", \"rewritten_form_sadness\": \"It didn't happen to me, but it makes me a bit sad for my friend.\", \"rewritten_form_fear\": \"It didn't happen to me, but I worry for my friend.\", \"rewritten_form_anger\": \"It didn't happen to me, but it infuriates me that it happened to my friend!\", \"rewritten_form_surprise\": \"It didn't happen to me, but you won't believe it happened to a friend!\", \"rewritten_form_disgust\": \"It didn't happen to me, but it's disgusting what happened to my friend.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral observation about an event that didn't happen to the speaker but did occur to a friend. It lacks any positive emotion or happiness, as seen in the rewritten joy sentence, which expresses gladness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sadness directly, although it could imply a degree of concern for the friend. However, it does not match the tone of the rewritten sadness version, which suggests a clear emotional response.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence indicates that the event did not affect the speaker but mentions a friend. This implies a sense of worry only in the rewritten fear version, which suggests a strong emotional concern not present in the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is factual and does not indicate any anger or frustration, which the rewritten anger version clearly conveys. Therefore, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence contains no elements of surprise. The rewritten surprise version suggests an unexpected event, which is not reflected in the original sentence at all.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

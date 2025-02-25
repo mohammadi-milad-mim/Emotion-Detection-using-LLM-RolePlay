@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"but then he gave me the cheek swab and i didn't think about taking it off my cheek until afterwards, so i scraped my cheek a little and held it there and moved it a couple of times.\", \"rewritten_form_joy\": \"but then he gave me the cheek swab, and I was so excited that I forgot to take it off my cheek right away, so I scraped my cheek a little while holding it and moving it around!\", \"rewritten_form_sadness\": \"but then he gave me the cheek swab, and I didn\\u2019t even realize I should take it off my cheek until it was too late, so I ended up scraping my cheek a little while holding it there and moving it awkwardly.\", \"rewritten_form_fear\": \"but then he gave me the cheek swab, and I panicked, forgetting to take it off my cheek until afterwards, which made me scrape my cheek a little and I wasn\\u2019t sure if that was okay.\", \"rewritten_form_anger\": \"but then he gave me the cheek swab, and I completely lost focus and didn\\u2019t think to take it off my cheek until it was too late, which led to scraping my cheek a little while I awkwardly held it there and fidgeted!\", \"rewritten_form_surprise\": \"but then he gave me the cheek swab, and I was so surprised that I didn\\u2019t think to take it off my cheek until later, resulting in me scraping my cheek a little while I moved it around!\", \"rewritten_form_disgust\": \"but then he gave me the cheek swab, and I felt so gross for not thinking to take it off my cheek until afterwards, which made me scrape my cheek a little while holding it there.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey excitement or joy; instead, it describes a more neutral experience of using a cheek swab. Therefore, it doesn't closely align with the joyful tone of the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests an oversight rather than a deep feeling of sadness. It lacks the emotional weight conveyed in the rewritten sadness version, where regret is more pronounced.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence includes a sense of neglect regarding the cheek swab, but it does not express panic or uncertainty, which are essential for the alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes a moment of distraction, but it does not express anger or frustration. The rewritten anger version emphasizes loss of focus in an irate manner, which is not present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a slight element of surprise in the original sentence as the speaker realizes they didn't remove the swab, but it is not highlighted or elaborated, leading to a lesser degree of alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

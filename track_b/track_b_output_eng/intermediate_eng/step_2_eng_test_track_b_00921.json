@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My freshman year, the director died of cancer.\", \"rewritten_form_joy\": \"My freshman year, I learned about the director who fought so bravely against cancer until the very end.\", \"rewritten_form_sadness\": \"My freshman year was marked by the heartbreaking loss of the director to cancer.\", \"rewritten_form_fear\": \"My freshman year, the director's battle with cancer served as a chilling reminder of how fragile life can be.\", \"rewritten_form_anger\": \"My freshman year, I was filled with anger when the director succumbed to cancer that shouldn\\u2019t have taken him so soon.\", \"rewritten_form_surprise\": \"My freshman year, I was shocked when I heard the news of the director's death from cancer\\u2014it felt so sudden.\", \"rewritten_form_disgust\": \"My freshman year, I couldn\\u2019t help but feel disgusted at how cancer ruthlessly took the director from us.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy; it merely states a fact about the death of the director without any uplifting tone or sentiment related to joy. The joy rewritten version implies a positive reflection on the fight against cancer, which is absent in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence mentions the death of the director, which directly relates to the sentiment of loss and sadness. The rewritten version captures the same essence with a more emotional tone, indicating a strong alignment between the original and the sadness rewritten form.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence does mention death from cancer, it lacks a strong fear element. The rewritten form connects the director\u2019s battle with cancer to the fragility of life, which is a more explicit expression of fear than the original provides.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text presents the fact of the director\u2019s death but does not express any anger. The rewritten version indicates a strong emotional response to the loss, which is not present in the original. Thus, there is a low alignment concerning anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence communicates a direct fact about the director's death without implying any element of surprise. The rewritten version, however, emphasizes being taken aback by the sudden news, which contrasts with the neutral tone of the original. Thus, the alignment for surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

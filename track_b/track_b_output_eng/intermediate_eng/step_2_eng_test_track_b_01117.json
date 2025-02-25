@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Seriously... we were baffled.\", \"rewritten_form_joy\": \"Honestly... we were so amazed!\", \"rewritten_form_sadness\": \"Honestly... we felt so confused and lost.\", \"rewritten_form_fear\": \"Honestly... we were terrified by the confusion.\", \"rewritten_form_anger\": \"Honestly... we were infuriated by how bewildering it was!\", \"rewritten_form_surprise\": \"Honestly... we were totally shocked!\", \"rewritten_form_disgust\": \"Honestly... we were disgusted by the utter confusion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses being 'baffled', which implies confusion rather than joy. While both 'baffled' and 'amazed' suggest a sense of wonder, the tone in the rewritten sentence conveys a more positive emotion than the original. Hence, joy is not strongly present.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence's use of 'baffled' relates closely to confusion. The rewritten version highlights feelings of being 'confused and lost', which resonates with sadness. Therefore, there is a moderate alignment with sadness due to the implied feelings of being at a loss.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence indicates confusion but does not suggest fear. The fear version portrays an extreme reaction to confusion ('terrified'), which is not present in the original. Thus, fear does not align significantly with the original sentiment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Anger is implied in the rewritten sentence with the terms 'infuriated' and 'bewildering'. However, while the original sentence expresses confusion, it does not convey anger, indicating low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The phrase 'baffled' can indicate a sense of surprise, hence there's a moderate alignment with the surprise rewritten sentence. The use of 'totally shocked' mirrors this surprising feeling directly.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

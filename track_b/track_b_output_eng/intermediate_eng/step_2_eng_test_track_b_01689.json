@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Also in the room was the father and the grandparents, all also crying uncontrollably.\", \"rewritten_form_joy\": \"Also in the room was the father and the grandparents, all smiling through tears of joy.\", \"rewritten_form_sadness\": \"Also in the room was the father and the grandparents, all sobbing in deep sorrow.\", \"rewritten_form_fear\": \"Also in the room was the father and the grandparents, all shaking with fear and crying uncontrollably.\", \"rewritten_form_anger\": \"Also in the room was the father and the grandparents, all crying uncontrollably in their frustration.\", \"rewritten_form_surprise\": \"Also in the room was the father and the grandparents, all crying uncontrollably, shocked by the unexpected turn of events.\", \"rewritten_form_disgust\": \"Also in the room was the father and the grandparents, all crying uncontrollably, overwhelmed by a sense of utter despair.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes crying uncontrollably; this does not align with joy, where smiling would be more appropriate. The rewritten joy version captures a contrasting emotion with a positive sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "Crying uncontrollably is a clear indicator of deep sorrow, which perfectly aligns with the sadness rewritten form. The intensity is very high as both sentences evoke strong emotional weight.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While crying can be associated with fear, the original focuses on an emotional response without specific reference to fear. The rewritten version increases the emotional intensity by emphasizing shaking with fear, making it less aligned with the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Crying uncontrollably could imply frustration, but the context doesn\u2019t inherently indicate anger as a primary emotion. The rewritten form explicitly mentions frustration, which is not clearly present in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey shock or unexpectedness but rather a consistent emotional response. The surprise version indicates an element of shock, which is not supported by the original text.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

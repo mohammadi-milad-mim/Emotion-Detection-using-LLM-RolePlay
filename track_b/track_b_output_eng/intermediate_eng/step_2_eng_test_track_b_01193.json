@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I know it sounds silly but maybe its lonely or died horribly and is just sad.\", \"rewritten_form_joy\": \"I know it sounds silly, but maybe it's just feeling lonely, or it faced something terrible and is longing for companionship!\", \"rewritten_form_sadness\": \"I know it sounds silly, but perhaps it's incredibly lonely or died in a tragic way and is just so sad.\", \"rewritten_form_fear\": \"I know it sounds silly, but maybe it's lonely or suffered a horrific fate and is just so filled with despair.\", \"rewritten_form_anger\": \"I know it sounds silly, but maybe it's just lonely or met a terrible end and is absolutely miserable!\", \"rewritten_form_surprise\": \"I know it sounds silly, but could it really be that it's lonely or met a horrible fate and is so sad?\", \"rewritten_form_disgust\": \"I know it sounds silly, but could it be that it's just lonely or died in such a gruesome way and is wallowing in sadness?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy; it introduces feelings of loneliness or sadness instead. The rewritten joy version tries to infuse positivity and longing for companionship, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence closely aligns with the sentiment in the sadness rewrite. It uses the word 'sad' and discusses feelings of loneliness and a tragic death, indicating a strong alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original mentions potential sadness, it lacks the strong connotations of fear or despair present in the rewritten fear version. The mention of a 'horrific fate' introduces fear, but this intensity is not matched in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey anger; it expresses a feeling of sadness and loneliness instead. The anger rewrite adds a tone of frustration that is not present in the original, leading to a disconnection.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not convey a sense of surprise; it states a possibility rather than expressing disbelief or astonishment like the rewritten surprise version does.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

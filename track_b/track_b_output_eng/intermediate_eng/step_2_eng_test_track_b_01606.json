@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was my ex.\", \"rewritten_form_joy\": \"It was my ex, and I can't believe how happy I am to see them again!\", \"rewritten_form_sadness\": \"It was my ex, a reminder of all that has been lost.\", \"rewritten_form_fear\": \"It was my ex, and my stomach dropped at the thought of an unwanted encounter.\", \"rewritten_form_anger\": \"It was my ex, and I can't help but feel furious just seeing their face again.\", \"rewritten_form_surprise\": \"It was my ex, which totally caught me off guard!\", \"rewritten_form_disgust\": \"It was my ex, and just the sight of them made my skin crawl.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence simply states 'It was my ex,' which lacks the joyful expression present in the rewritten joy sentence. There is no indication of happiness or positive sentiment in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sadness. While the rewritten sadness sentence highlights the loss associated with the ex, the original is neutral and does not express any emotional weight regarding loss or remorse.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence doesn't imply fear directly. Although the rewritten fear version discusses an 'unwanted encounter,' the original does not convey anything that induces fear or anxiety; it is rather matter-of-fact.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone of the original sentence is neutral and does not convey any anger or frustration, which is prominent in the rewritten anger sentence. There are no emotional sentiments expressed in the original regarding the ex.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not have an element of surprise, whereas the rewritten surprise sentence expresses being caught off guard by the ex's presence. The original is straightforward without any surprising context.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

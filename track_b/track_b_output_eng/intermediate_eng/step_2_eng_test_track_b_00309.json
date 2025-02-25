@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That perfect storm of shock and horror.\", \"rewritten_form_joy\": \"That exhilarating whirlwind of unexpected joy!\", \"rewritten_form_sadness\": \"That devastating storm of shock and sorrow.\", \"rewritten_form_fear\": \"That terrifying storm of sheer shock and horror.\", \"rewritten_form_anger\": \"That maddening storm of outrage and horror!\", \"rewritten_form_surprise\": \"That unbelievable storm of shocking twists!\", \"rewritten_form_disgust\": \"That nauseating storm of shock and horror.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of shock and horror, which is quite opposite to the uplifting and positive vibe of joy expressed in the rewritten joy form. Thus, the alignment is very low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence shares a strong connection to themes of emotional turmoil, akin to the sorrow described in the sadness version. The use of 'shock and horror' relates closely to 'shock and sorrow.' Therefore, there is a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence explicitly contains 'shock and horror,' which matches closely with the fear version that amplifies these feelings into terror. The alignment is high due to the direct correlation between horror and fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original phrase portrays horror, the inclusion of a 'storm' in conjunction with shock lends itself to strong anger but does not reach a boiling point of emotion. The connection is present, though less intense than fear.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence speaks of a storm filled with shock, which resonates with the surprise version that highlights shocking twists. Though it evokes surprise, the expression of horror somewhat dampens this alignment. Thus, it's moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

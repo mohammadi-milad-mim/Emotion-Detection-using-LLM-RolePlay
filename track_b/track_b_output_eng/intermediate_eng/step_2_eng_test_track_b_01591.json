@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"`` I can't feel my arm. ''\", \"rewritten_form_joy\": \"I can't believe how numb my arm feels!\", \"rewritten_form_sadness\": \"I can't feel my arm, and it makes me feel so lost.\", \"rewritten_form_fear\": \"I can't feel my arm... what if something's really wrong?\", \"rewritten_form_anger\": \"I can\\u2019t believe I can\\u2019t feel my arm! This is infuriating!\", \"rewritten_form_surprise\": \"I can\\u2019t feel my arm! That\\u2019s so strange!\", \"rewritten_form_disgust\": \"I can't feel my arm; it's so unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sensation of numbness without any positive connotation, making it less aligned with joy. The rewritten joy sentence adds an element of disbelief and surprise that is absent from the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a physical sensation that can imply a loss of control or sadness. The rewritten sadness sentence directly ties the numbness to feelings of being lost, enhancing the sadness aspect considerably.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original statement can evoke fear due to the implication of a health issue. The rewritten fear sentence explicitly connects the numbness to potential danger, emphasizing a strong fear element.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not express anger but rather a neutral observation of a physical condition. The rewritten anger sentence adds frustration that isn't inherently present in the original statement, making the original less aligned with this emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence mentions a physical change (numbness) but lacks an element of wonder or unexpectedness. The rewritten surprise sentence emphasizes strangeness, which contrasts with the more neutral tone of the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"One thing I hate about Bali is the blazing sunshine burning my face and shoulder.\", \"rewritten_form_joy\": \"One thing I love about Bali is the warm sunshine enveloping my skin and brightening my days!\", \"rewritten_form_sadness\": \"One thing that pains me about Bali is the relentless sunshine scorching my face and shoulder.\", \"rewritten_form_fear\": \"One thing that frightens me about Bali is the harsh sunshine searing my face and shoulder.\", \"rewritten_form_anger\": \"One thing that really irritates me about Bali is the blazing sunshine torturing my face and shoulder!\", \"rewritten_form_surprise\": \"One thing I didn't expect about Bali is how the blazing sunshine harshly burns my face and shoulder!\", \"rewritten_form_disgust\": \"One thing I loathe about Bali is the way the blazing sunshine aggressively burns my face and shoulder.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses hate for the blazing sunshine, contrasting sharply with the joyful tone of the rewritten joy sentence, which is positive and warm. The original sentiment is decidedly negative, indicating no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sadness sentence captures a sense of pain or suffering due to the relentless sunshine. The original sentence does imply discomfort, but it is more focused on hate rather than a deep sense of sadness, leading to a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does describe a sense of discomfort due to the blazing sunshine, which could imply a mild apprehension. However, it doesn't strongly convey fear as described in the rewritten sentence, which suggests a more vivid emotional experience.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence conveys strong dislike, equating to hate, which aligns very closely with anger. The use of 'blazing' signifies an intensity that overlaps with irritation, making this emotion a strong fit for the original sentiment.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not include an element of unexpectedness; it simply states a frustration with the sunshine. The rewritten surprise version introduces a new perspective that is absent in the original, indicating low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

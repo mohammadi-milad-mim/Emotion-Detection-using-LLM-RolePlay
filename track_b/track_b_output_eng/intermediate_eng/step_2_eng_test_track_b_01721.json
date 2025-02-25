@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Either way that mother fucker is gone.\", \"rewritten_form_joy\": \"Either way, that guy is finally gone, and I couldn't be happier!\", \"rewritten_form_sadness\": \"Either way, that person is gone, and it hurts to see them leave.\", \"rewritten_form_fear\": \"Either way, that dangerous person is gone, and I'm relieved but still wary.\", \"rewritten_form_anger\": \"Either way, that worthless piece of trash is gone, and good riddance!\", \"rewritten_form_surprise\": \"Either way, that guy is gone, and I can't believe it actually happened!\", \"rewritten_form_disgust\": \"Either way, that disgusting individual is gone, and it's about time.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does convey a sense of relief about someone's departure, but lacks the overt happiness present in the rewritten joy sentence. The tone is more neutral and doesn't explicitly express joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original has no indication of sadness; rather, it seems more neutral or slightly negative about someone being gone. There is no expression of hurt or loss like in the sadness rewrite.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original mentions someone being gone, it lacks any fearfulness or wariness that is present in the rewritten fear sentence. It feels more straightforward without an implication of tension.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is a significant alignment with anger, as the original uses a harsh term that implies disdain or contempt for the person being referred to. This matches the intensity and tone of the rewritten angry version.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original indicates something notable about someone being gone but does not express the shock or disbelief suggested in the surprise rewrite. The tone is more assertive rather than surprised.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

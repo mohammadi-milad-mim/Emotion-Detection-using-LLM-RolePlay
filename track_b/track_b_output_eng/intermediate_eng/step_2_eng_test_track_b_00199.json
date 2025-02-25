@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"the part that scared the shit out of me was at the end of the dream i wa s talking to my mom and one of my teeth fell out of my mouth.\", \"rewritten_form_joy\": \"The most surprising part of the dream was at the end when I was talking to my mom, and one of my teeth fell out; it was oddly amusing!\", \"rewritten_form_sadness\": \"The part that really got to me was at the end of the dream when I was talking to my mom, and suddenly one of my teeth just fell out.\", \"rewritten_form_fear\": \"The moment that terrified me the most was at the end of the dream when I was talking to my mom, and I felt one of my teeth fall out of my mouth\\u2014it was horrifying.\", \"rewritten_form_anger\": \"What really pissed me off was at the end of the dream when I was talking to my mom, and one of my teeth just fell out\\u2014it felt so unfair!\", \"rewritten_form_surprise\": \"The most shocking part of the dream was at the end when I was talking to my mom, and, out of nowhere, one of my teeth fell out!\", \"rewritten_form_disgust\": \"The moment that grossed me out was at the end of the dream when I was talking to my mom, and I felt one of my teeth just fall out\\u2014ugh!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy but rather focuses on fear concerning the dream. The connection in the joy rewritten form is weak, as it suggests amusement which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a slight alignment with sadness as the original expresses a sense of discomfort with a dream but does not convey a deep sadness. The rewritten version captures more emotional weight than the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original has a strong alignment with fear, explicitly stating that it 'scared the shit out of me' and describing the horrifying act of losing a tooth while talking to a loved one.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not convey anger; it's more about fear and shock. The rewritten version uses 'pissed me off', which creates a disconnect from the original sentiment, despite some shared context.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a moderate alignment with surprise, as the original does mention a shocking event (losing a tooth) within the dream, yet it is overshadowed by the fear expressed.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Keeping my fingers crossed for good news!\", \"rewritten_form_joy\": \"I'm so excited and keeping my fingers crossed for amazing news!\", \"rewritten_form_sadness\": \"I'm anxiously keeping my fingers crossed, hoping for good news despite everything.\", \"rewritten_form_fear\": \"I'm really worried, keeping my fingers crossed, hoping for good news and not the worst.\", \"rewritten_form_anger\": \"I can't believe I have to keep my fingers crossed for some decent news!\", \"rewritten_form_surprise\": \"I never expected to be in this situation, but I'm keeping my fingers crossed for good news!\", \"rewritten_form_disgust\": \"It's frustrating to feel like I'm just keeping my fingers crossed for any good news at all!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses hope and anticipation for good news, which is aligned with a joyful sentiment. However, it lacks the excitement conveyed in the joyful rewritten version, where there's an explicit mention of being 'so excited'.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original conveys a sense of hope but lacks an outright indication of sadness. The rewritten sadness sentence emphasizes anxiety and the idea of hoping against a backdrop of difficulties, which the original doesn\u2019t reflect explicitly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence shows a sense of hope but does not convey direct fear, unlike the rewritten fear sentence that explicitly states being 'worried'. Given the context of hoping for good news, there is some mild apprehension, hence a low score.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original doesn't imply any anger; it focuses on hope rather than frustration. The rewritten anger sentence directly expresses disbelief at the situation, which is not present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original indicates a hopeful expectation but doesn't convey surprise. The rewritten surprise statement emphasizes an unexpected situation, which isn\u2019t implied in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

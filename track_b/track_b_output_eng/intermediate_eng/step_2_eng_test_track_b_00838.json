@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My eyes are burning.\", \"rewritten_form_joy\": \"Oh, my eyes are tingling with excitement!\", \"rewritten_form_sadness\": \"My eyes are burning, and it feels so heavy inside.\", \"rewritten_form_fear\": \"My eyes are burning; what if something's wrong?\", \"rewritten_form_anger\": \"My eyes are burning, and it\\u2019s so infuriating!\", \"rewritten_form_surprise\": \"Wow, my eyes are burning unexpectedly!\", \"rewritten_form_disgust\": \"Ugh, my eyes are burning, and it\\u2019s really unpleasant!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any positive connotation that would suggest joy. Instead, it conveys a physical sensation that doesn't align with excitement or enthusiasm as suggested in the joy rewritten form.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys discomfort, which can be interpreted as heavy or burdensome. This aligns with the sadness rewritten form that adds an emotional layer of heaviness, indicating a moderate relationship.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence could provoke concern about health or safety, consistent with the fear rewritten form's questioning of potential underlying issues. This connection implies a moderate degree of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence can evoke frustration or irritation, similar to the anger rewritten form's expression of infuriation about the burning sensation, suggesting a moderate level of anger present.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not indicate any unanticipated event or twist, while the surprise rewritten form suggests a reaction to something unexpected. Thus, there is little to no alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This did not sit well with my granny(my father's mother).\", \"rewritten_form_joy\": \"My granny, my father's mother, had such a strong reaction to this, it was almost funny!\", \"rewritten_form_sadness\": \"This made my granny, my father's mother, really upset and it broke my heart.\", \"rewritten_form_fear\": \"I could tell my granny, my father's mother, was very unsettled by this, and that really scared me.\", \"rewritten_form_anger\": \"This really frustrated my granny, my father's mother, and I can\\u2019t blame her for being angry about it!\", \"rewritten_form_surprise\": \"I was shocked to see how much this affected my granny, my father's mother; I didn't expect her to react like that!\", \"rewritten_form_disgust\": \"This absolutely repulsed my granny, my father's mother; I know she had a strong aversion to it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses discomfort but does not convey joy; it implies a negative reaction rather than a humorous or light-hearted one. Thus, it aligns poorly with the joyful rewritten form.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at a negative emotional response from granny, suggesting a sense of upset or discomfort. However, it lacks the depth of sadness indicated in the rewritten form, which talks about feeling heartbroken. This leads to a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is an implication of discomfort but not an outward sign of fear or severity. The original sentence doesn't suggest that the narrator felt scared, just that it didn't sit well, indicating only mild concern.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The phrase 'did not sit well' suggests some frustration, making it resonate moderately with the anger sentiment. However, it does not convey a strong sense of anger as seen in the rewritten form, which expresses a clear irritation.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not contain any elements of surprise. It presents a straightforward reaction without any unexpected emotional impact, making it misaligned with the sarcastic tone of shock in the rewritten form.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

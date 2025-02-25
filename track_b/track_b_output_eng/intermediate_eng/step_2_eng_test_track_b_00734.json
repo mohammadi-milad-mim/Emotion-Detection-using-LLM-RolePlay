@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The hot sun burning my skin, producing a color I never knew.\", \"rewritten_form_joy\": \"The warm sun kissing my skin, bringing out a vibrant color I never knew!\", \"rewritten_form_sadness\": \"The relentless sun scorching my skin, leaving behind a color I never wanted.\", \"rewritten_form_fear\": \"The harsh sun searing my skin, creating a color I fear to see.\", \"rewritten_form_anger\": \"The blazing sun frying my skin, forcing a color I never asked for.\", \"rewritten_form_surprise\": \"The blazing sun sizzling my skin, revealing a color I never expected!\", \"rewritten_form_disgust\": \"The intense sun burning my skin, ruining it with a color I find repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a positive experience of the sun's effect on the skin, similar to the joy in the rewritten joy version. However, the use of 'burning' is more intense and negative than the joyful tone of 'kissing'.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original captures discomfort with 'burning', but lacks the deep sadness implied in the rewritten sad version. While there is some pain, there isn't a sense of loss or regret in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does imply discomfort with the words 'hot' and 'burning', which could hint at fear of the sun's effects. Yet, it doesn't express an actual fear like the rewritten fear version does with 'searing' and 'color I fear to see'.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original mentions the sun as 'burning' my skin, which captures some level of irritation similar to the sentiment of anger in the rewritten version. However, it lacks the aggressive connotation present in the rewritten anger sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does suggest a transformation with the phrase 'producing a color I never knew', hinting at an unexpected outcome. However, it does not convey the level of surprise expressed in the rewritten sentence, which emphasizes the unexpected nature more dramatically.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

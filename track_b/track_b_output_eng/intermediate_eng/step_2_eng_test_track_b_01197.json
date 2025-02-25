@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I encountered a persistent and very active poltergeist.\", \"rewritten_form_joy\": \"I encountered a lively and incredibly active poltergeist, how exciting!\", \"rewritten_form_sadness\": \"I encountered a persistent and very active poltergeist, which felt so unsettling.\", \"rewritten_form_fear\": \"I encountered a persistent and very active poltergeist, and it terrified me to my core.\", \"rewritten_form_anger\": \"I encountered a persistent and very active poltergeist, and that was truly infuriating!\", \"rewritten_form_surprise\": \"I encountered a persistent and very active poltergeist, and I couldn't believe my eyes!\", \"rewritten_form_disgust\": \"I encountered a persistent and very active poltergeist, and it was utterly repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express excitement or joy about the encounter; it simply states the fact of encountering a poltergeist. While the rewritten joy sentence adds an exciting tone, the original lacks that enthusiasm.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence doesn't imply any emotional distress; rather, it describes the situation neutrally. The rewritten sadness sentence suggests feeling unsettled, which the original does not convey.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence describes a poltergeist, which could evoke fear; however, it does not explicitly reveal any fear or terror. The rewritten fear sentence highlights terror, which is not present in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence lacks any indication of annoyance or frustration, while the rewritten anger version introduces feelings of being infuriated. Thus, the original doesn't strongly align with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence implies something unusual by mentioning a poltergeist, but it lacks the element of astonishment or disbelief present in the rewritten surprise sentence. The expression of surprise is not inherent in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

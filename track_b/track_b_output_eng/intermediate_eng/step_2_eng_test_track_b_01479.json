@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Our crinkly, wrinkly, baby girl was sinking into my chest.\", \"rewritten_form_joy\": \"Our adorable, crinkly, wrinkly baby girl was happily sinking into my chest!\", \"rewritten_form_sadness\": \"Our crinkly, wrinkly, baby girl was sinking into my chest, and it felt like a heavy weight of sadness.\", \"rewritten_form_fear\": \"Our crinkly, wrinkly, baby girl was sinking into my chest, and I couldn't shake the worry that something wasn't right.\", \"rewritten_form_anger\": \"Our crinkly, wrinkly, baby girl was sinking into my chest, and it made me furious to see her feel that way.\", \"rewritten_form_surprise\": \"Wow! Our crinkly, wrinkly, baby girl was sinking into my chest, catching me completely off guard!\", \"rewritten_form_disgust\": \"Ugh, our crinkly, wrinkly, baby girl was sinking into my chest, and I couldn't help but feel a bit grossed out.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a tender moment, which can evoke joy, but lacks explicit positive language or exclamations. The rewritten joy version includes the word 'happily,' which would suggest a clear joy that is not present in the original. Thus, there is some alignment but not strongly, suggesting a lower joy intensity.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a sense of weight or burden through the phrase 'sinking into my chest,' which can imply sadness. The rewritten version emphasizes this feeling by explicitly linking it to sadness. Therefore, there is a moderate alignment since the original clearly presents a potentially somber scenario.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not suggest any fear element, but the mention of 'sinking into my chest' can imply something concerning. However, since there are no explicit feelings of fear or worry in the original, it aligns minimally with the fear emotion as indicated by the rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not suggest any anger; rather, it seems nurturing. The rewritten version mentions feeling furious, which does not align with the original's tone. Therefore, there is little to no alignment for the anger emotion in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not invoke surprise, as it seems to depict a calm scenario without unexpectedness. The rewritten surprising version employs exclamatory language which is absent from the original. Hence, there is no alignment between the original and the surprise emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

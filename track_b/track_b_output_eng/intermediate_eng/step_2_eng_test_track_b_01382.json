@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I have plans to walk tomorrow in the late afternoon-so I pray my knee cooperates.\", \"rewritten_form_joy\": \"I\\u2019m so excited to walk tomorrow in the late afternoon; I really hope my knee is ready for it!\", \"rewritten_form_sadness\": \"I had hoped to walk tomorrow in the late afternoon, but I can\\u2019t help but worry that my knee will let me down again.\", \"rewritten_form_fear\": \"I really want to walk tomorrow in the late afternoon, but I\\u2019m so anxious about whether my knee will cooperate.\", \"rewritten_form_anger\": \"I made plans to walk tomorrow in the late afternoon, and it\\u2019s so frustrating that I have to worry about my knee holding me back!\", \"rewritten_form_surprise\": \"I can\\u2019t believe I actually have plans to walk tomorrow in the late afternoon\\u2014I just hope my knee surprises me and cooperates!\", \"rewritten_form_disgust\": \"I dread walking tomorrow in the late afternoon if my knee decides to act up again\\u2014it\\u2019s so frustrating.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a hopeful sentiment rather than a strong joy. The word 'pray' indicates a wish but lacks any exuberance or excitement found in the joy rewritten sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original reflects some concern but does not show a deep sense of sadness or regret about the situation. It is more about hope than disappointment, leading to a lower alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does convey a sense of apprehension about whether the knee will cooperate, which aligns with fear. However, the wording is somewhat subdued and does not emphasize anxiety to a high degree.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is a hint of frustration in the original due to the conditional nature of walking depending on the knee's cooperation, but it does not explicitly convey anger or resentment, making the alignment with anger moderate at best.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not imply any surprise regarding the plans to walk; it is presented straightforwardly. This results in a lack of alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My father turned to yell at us in the backseat, and we slammed into a man.\", \"rewritten_form_joy\": \"My father turned to yell at us in the backseat, and we suddenly bumped into a man!\", \"rewritten_form_sadness\": \"My father turned to yell at us in the backseat, and we tragically slammed into a man.\", \"rewritten_form_fear\": \"My father turned to yell at us in the backseat, and we horrifically slammed into a man!\", \"rewritten_form_anger\": \"My father turned to yell at us in the backseat, and we smashed into a man because of his reckless screaming!\", \"rewritten_form_surprise\": \"My father turned to yell at us in the backseat, and out of nowhere, we slammed into a man!\", \"rewritten_form_disgust\": \"My father turned to yell at us in the backseat, and we disgusting slammed into a man.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a serious and alarming event, which does not align well with the joyfulness in the rewritten joy version, as there is no positive outcome or light sentiment in the situation described.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The word 'tragically' in the rewritten sadness sentence gives a strong indication of negative emotional impact, which matches the serious nature of the original sentence involving a car crash. Thus, it captures the sentiment of sadness more accurately.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The use of the word 'horrifically' suggests a very intense, fearful reaction to the accident. The original sentence reflects the sudden danger faced during the event, making fear a prominent emotion.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The rewritten anger sentence attributes blame to the father's yelling, emphasizing the recklessness of his actions. This blame fits well with the intensity of emotion expressed in the original scenario, where consequences arise from that anger-induced action.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The term 'out of nowhere' implies an unexpected event, which aligns with the abrupt nature of the crash described in the original sentence. This suggests a moderate level of surprise regarding the suddenness of the incident.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

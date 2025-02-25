@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Needless to say, I was terrified and going about 3 mph.\", \"rewritten_form_joy\": \"I couldn\\u2019t help but smile, even as I was crawling along at about 3 mph!\", \"rewritten_form_sadness\": \"It\\u2019s hard to say, but I was truly scared, barely moving at 3 mph.\", \"rewritten_form_fear\": \"Needless to say, I was absolutely terrified, creeping along at just 3 mph.\", \"rewritten_form_anger\": \"Needless to say, it was infuriating that I was going about 3 mph out of sheer terror.\", \"rewritten_form_surprise\": \"Needless to say, I was shocked and barely moving at 3 mph!\", \"rewritten_form_disgust\": \"It\\u2019s just gross how terrified I was, only managing to go 3 mph.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of fear rather than joy. It lacks any positive sentiments or feelings that would suggest joy, contrasting sharply with the joyful tone in the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original hints at fear, it does not strongly evoke sadness, which would imply a sense of loss or grief. The rewritten version suggesting sadness offers a more nuanced interpretation but doesn\u2019t fully align with the original\u2019s main sentiment of terror.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original expresses a high degree of fear, focusing on being 'terrified', which closely aligns with the rewritten version that also emphasizes being 'absolutely terrified'. This emotion is clearly present and strongly conveyed.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original doesn\u2019t convey anger; instead, it communicates fear. Although the rewritten sentence introduces a sense of frustration regarding the slow speed, the core emotion of the original sentence remains fear, meaning anger is not present.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not imply any surprise; it is focused on terror and speed. The surprised tone in the rewritten version reflects a different emotional state not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

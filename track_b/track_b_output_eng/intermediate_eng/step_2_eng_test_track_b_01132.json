@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"You're a fucking HERO, man!\", \"rewritten_form_joy\": \"You\\u2019re an incredible HERO, my friend!\", \"rewritten_form_sadness\": \"I wish I could see you as the HERO you are, man.\", \"rewritten_form_fear\": \"You\\u2019re a HERO, but it feels so dangerous out there, man!\", \"rewritten_form_anger\": \"You\\u2019re a HERO, and it's infuriating how people don\\u2019t see it!\", \"rewritten_form_surprise\": \"Wow, you\\u2019re an amazing HERO, man! I didn\\u2019t expect that!\", \"rewritten_form_disgust\": \"I can\\u2019t believe you think you\\u2019re a HERO, man!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong sense of admiration and positivity by calling someone a 'HERO' and using an emphatic expletive. This aligns closely with the joy rewriting that also emphasizes positivity and admiration without the explicit profanity.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The sadness rewriting conveys a sense of longing or regret in not fully recognizing someone's heroism. The original sentence doesn't express this sentiment; rather, it is confident and uplifting. Therefore, it doesn't align with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not express any fear or concern, while the fear rewriting adds a layer of danger associated with being a hero. The confident tone of the original sentence does not suggest hesitation or risk, leading to low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence contains a tone of frustration and emphatic support, but not one of anger against others. The anger rewriting conveys indignation toward those who fail to see the subject's heroism. Since the original does not express such frustration with others, the alignment is lower.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise rewriting highlights an unexpected recognition of someone's heroism. While the original sentence is emphatic, it does not carry the element of surprise as per the rewritten form.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"A few weeks previous, I asked her who she wanted to invite to her party and she named everyone that I was thinking of in my head.\", \"rewritten_form_joy\": \"A few weeks ago, I asked her who she wanted to invite to her party, and she joyfully named everyone I was thinking of!\", \"rewritten_form_sadness\": \"A few weeks previous, I asked her who she wanted to invite to her party, and she named everyone I was thinking of, which just made me feel even more alone.\", \"rewritten_form_fear\": \"A few weeks previous, I asked her who she wanted to invite to her party, and when she named everyone I was thinking of, a wave of dread washed over me.\", \"rewritten_form_anger\": \"A few weeks prior, I asked her who she wanted to invite to her party, and she just listed everyone I had in mind, like it was no big deal!\", \"rewritten_form_surprise\": \"A few weeks ago, I asked her who she wanted to invite to her party, and to my surprise, she named everyone I was thinking of!\", \"rewritten_form_disgust\": \"A few weeks previous, I asked her who she wanted to invite to her party, and she listed every person I was dreading having there.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a moment of mutual thoughtfulness between the speaker and the person they asked, which aligns with the joy expressed in the rewritten sentence. However, it lacks the explicitly joyful tone, hence a lower intensity score.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey sadness; it conveys more of an observational quality. While the rewritten version emphasizes feeling alone, the original does not imply any emotional consequence. Thus, there's little to no alignment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not evoke fear or anxiety; it simply states an observation without any emotional undertones of dread or worry. The fear indicated in the rewritten sentence is absent in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger or irritation, and the inferred frustration in the rewritten form is not present in the original. Therefore, there\u2019s no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is straightforward and factual, providing no indication of surprise or shock regarding the responses from the person asked. The surprise is not present in the original statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

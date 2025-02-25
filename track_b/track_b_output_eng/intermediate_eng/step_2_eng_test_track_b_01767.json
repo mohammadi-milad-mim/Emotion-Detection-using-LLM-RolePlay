@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I swear, it must have circulated back to me at least three times and I'm totally certain it was the same coin.\", \"rewritten_form_joy\": \"I can't believe it, that coin must have come back to me at least three times, and I'm so sure it was the same one!\", \"rewritten_form_sadness\": \"I can't help but feel that the coin must have circulated back to me at least three times, and I'm just so certain it was the same one...\", \"rewritten_form_fear\": \"I really think that coin has circulated back to me at least three times, and I'm honestly terrified it was the same one...\", \"rewritten_form_anger\": \"I swear, that coin has come back to me at least three times, and I'm furious it was the same one!\", \"rewritten_form_surprise\": \"I swear, it must have circled back to me at least three times, and I'm shocked it was the same coin!\", \"rewritten_form_disgust\": \"I swear, it must have come back to me at least three times, and I find it utterly gross that it was the same coin.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text expresses a degree of disbelief and recognition regarding the coin's repeated return, but it lacks the exuberant excitement and positive tone present in the rewritten joy version. There is a sense of amusement but not outright joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey a feeling of sadness. While it recognizes the coin's circulation, it does not imply loss or regret that would lead to sadness. The sentiment is more neutral.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The notion that the coin returned multiple times does not invoke fear in the original sentence. It presents a peculiar situation rather than a traumatic one, so the focus on terror in the fear version does not align with the original's tone.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence expresses frustration, particularly with the phrase 'I swear,' indicating annoyance or exasperation at the situation. This aligns moderately with the anger rewritten version, which conveys a higher level of fury but touches on the same core emotion.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "There is a hint of surprise in the sense of disbelief regarding the coin's repeated circulation, but the original lacks the stronger shock or astonishment indicated in the surprise version. Thus, it can be considered to align at a lower level.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

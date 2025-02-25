@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"No one is there.\", \"rewritten_form_joy\": \"Isn't it wonderful? No one is there!\", \"rewritten_form_sadness\": \"Sadness washes over me; no one is there.\", \"rewritten_form_fear\": \"I can't shake the feeling\\u2014no one is there... what if something happens?\", \"rewritten_form_anger\": \"It's infuriating that no one is there!\", \"rewritten_form_surprise\": \"Wow, I can't believe it\\u2014no one is there!\", \"rewritten_form_disgust\": \"Ugh, how disappointing\\u2014no one is there.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'No one is there.' lacks any positive tone or sentiment, and therefore does not align with the joyful expression given. Joy typically implies a positive or uplifting thought, which is not present in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does resonate with sadness, as it conveys a sense of absence or loneliness. This aligns with the rewritten version that expresses a feeling of sadness washing over the speaker. Therefore, there is a moderate degree of sadness in the original text.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence can also evoke a sense of fear or anxiety, especially in the context of abandonment or unknown outcomes, which is reflected in the fear rewrite. However, it does not express fear strongly on its own. Thus, there is a low to moderate degree of fear present.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express direct anger or frustration. While the rewritten version includes a strong emotional reaction, it does not reflect the original tone. Therefore, the degree of anger present in the original sentence is very low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is quite straightforward and does not evoke surprise by itself. The rewrite implies a sense of astonishment that is not reflected in the original. Thus, there is no element of surprise in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I have had a backache so bad I can't stand it and my head hurts and everything is overwhelming to me.\", \"rewritten_form_joy\": \"I'm learning to cope with my backache, even though my head hurts, and I'm finding some bright moments in the overwhelm.\", \"rewritten_form_sadness\": \"I've been struggling with a terrible backache that I just can't stand, and my head is pounding; it's all just too much for me to bear right now.\", \"rewritten_form_fear\": \"I have this unbearable backache that makes it hard to stand, and my head is throbbing; I worry that I won\\u2019t get through this overwhelming feeling.\", \"rewritten_form_anger\": \"It's infuriating to deal with this backache that I can't stand, along with a horrible headache\\u2014everything feels so impossibly overwhelming!\", \"rewritten_form_surprise\": \"I can't believe how bad my backache is; it's so intense that I can barely stand, and now I have a headache on top of this overwhelming feeling!\", \"rewritten_form_disgust\": \"I can't stand this awful backache any longer, and the headache is just repulsive; everything feels so overwhelmingly unbearable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses pain and overwhelming emotions, making it difficult to find any sense of positivity. Thus, it does not align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence clearly expresses a sense of struggle with pain and overwhelming feelings, aligning well with the sentiment of sadness conveyed in the rewritten version.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original statement reflects a significant level of discomfort and the overwhelming nature of the experience, implying a sense of fear about managing these feelings, similar to the fear expressed in the rewritten sentence.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence carries a tone of frustration about the backache and headache, although it doesn't explicitly convey anger. The rewritten version evokes a more intense level of frustration that is not fully captured in the original, leading to a lower intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is no element of surprise in the original statement; it focuses more on the pain rather than any unexpected events or feelings, which diminishes alignment with the surprise rewritten form.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

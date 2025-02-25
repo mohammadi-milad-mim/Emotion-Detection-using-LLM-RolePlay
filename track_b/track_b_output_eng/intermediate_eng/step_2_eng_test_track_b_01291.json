@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She looked up at me, shocked, and said, \\\"My dad is dead.\", \"rewritten_form_joy\": \"She looked up at me, smiling brightly, and said, \\\"My dad is here to support me!\\\"\", \"rewritten_form_sadness\": \"She looked up at me, tears welling in her eyes, and said, \\\"My dad is dead.\\\"\", \"rewritten_form_fear\": \"She looked up at me, trembling, and said, \\\"My dad is dead.\\\"\", \"rewritten_form_anger\": \"She looked up at me, her face twisted with rage, and said, \\\"My dad is dead!\\\"\", \"rewritten_form_surprise\": \"She looked up at me, wide-eyed and gasping, and said, \\\"My dad is dead?\\\"\", \"rewritten_form_disgust\": \"She looked up at me, her face scrunched in revulsion, and said, \\\"My dad is dead!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of shock and distress due to the news of a father's death, which is the opposite of joy. The joyful rewritten version replaces that shock with a bright smile and positive sentiment regarding the father's presence, indicating a clear divergence in emotional tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly states that the person's father is dead and includes a sense of shock, aligning closely with the sadness rewritten version where she appears to be in distress with tears in her eyes. This indicates a high degree of sadness present in the original text.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence\u2019s mention of a father's death can evoke feelings of fear, particularly if it implies a loss of safety or fear of losing loved ones. The fear rewritten version enhances this by adding a physical reaction (trembling), but the focus remains on the news of death rather than deep-seated fear of the unknown.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence conveys shock, there is no indication of intense anger. The rewritten version, however, introduces rage which is not present in the original context. Although the original indicates a strong emotional response, it does not align well with the intensity of anger indicated in the rewritten form.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence captures a moment of shock but doesn't convey the sense of disbelief that accompanies surprise. The surprise rewritten version introduces wide eyes and gasping which suggests a more vivid reaction than what\u2019s presented in the original statement, thus indicating moderate surprise rather than high surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

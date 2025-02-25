@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"After that, I went to throw the plastic bowls for Tiramisu and my stomach acted up and I felt a little like puking.\", \"rewritten_form_joy\": \"After that, I joyfully went to throw the plastic bowls for Tiramisu, but my stomach acted up and I felt a bit off.\", \"rewritten_form_sadness\": \"After that, I went to throw the plastic bowls for Tiramisu, but my stomach acted up and I felt so sick I thought I might puke.\", \"rewritten_form_fear\": \"After that, I cautiously went to throw the plastic bowls for Tiramisu, but my stomach acted up and I felt like I might be sick.\", \"rewritten_form_anger\": \"After that, I angrily went to throw the plastic bowls for Tiramisu, but my stomach betrayed me, making me feel like I was about to puke.\", \"rewritten_form_surprise\": \"After that, I went to throw the plastic bowls for Tiramisu and to my surprise, my stomach acted up and I felt like I might puke.\", \"rewritten_form_disgust\": \"After that, I went to throw the plastic bowls for Tiramisu, but then my stomach revolted and I felt nauseated.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a lack of joy, focusing instead on discomfort. The rewritten sentence attempts to inject joy, but the context of feeling unwell diminishes this sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns with sadness better than joy, as it captures a sense of discomfort and potential sickness. The rewritten version directly emphasizes feeling sick, supporting a stronger connection to sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence evokes a sense of fear related to the feeling of nausea. The rewritten version maintains a cautionary tone, suggesting concern about feeling unwell, which aligns well with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not express anger; rather, it conveys a passive experience of illness. The rewritten sentence introduces anger, but the original does not support this emotion strongly.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not indicate any element of surprise. The rewritten version introduces surprise, but this is not supported by the original context, which focuses on a straightforward experience of discomfort.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

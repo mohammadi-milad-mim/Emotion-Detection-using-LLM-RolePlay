@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Her father had died.\", \"rewritten_form_joy\": \"Her father had passed away, but I cherish all the beautiful memories we created together.\", \"rewritten_form_sadness\": \"Her father had died, and the loss feels so heavy and painful.\", \"rewritten_form_fear\": \"Her father had died, and I worry about how she'll cope without him.\", \"rewritten_form_anger\": \"Her father had died, and it's infuriating that such a good man was taken from us too soon.\", \"rewritten_form_surprise\": \"Her father had died, and I was shocked; I never saw this coming.\", \"rewritten_form_disgust\": \"Her father had died, and it's sickening to think about how cruel life can be.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a tragic event without any positive reflection or memory associated with it, which contrasts sharply with the joy version that emphasizes cherishing memories. Thus, there is no alignment with joy here.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence clearly denotes the event of a death, which is inherently sad. The rewritten version effectively captures the emotional weight of loss and pain, matching the sentiment closely.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence presents a factual statement of loss, but it does not express direct fear or concern about consequences. The fear version introduces a worrying perspective about coping, which is implied but not stated in the original. This creates a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is neutral concerning feelings of anger. The rewritten sentence introduces a strong emotional reaction against the circumstances of the death, which is absent from the original. Thus, the alignment with anger is minimal.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey any surprise; it simply states a fact. In contrast, the rewritten sentence reflects a strong reaction to unexpected news, so there is little alignment with the emotion of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

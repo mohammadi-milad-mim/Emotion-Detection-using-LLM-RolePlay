@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I rolled down the window very, very slightly and asked Yes?\", \"rewritten_form_joy\": \"I rolled down the window just a bit and cheerfully asked, \\\"Yes?\\\"\", \"rewritten_form_sadness\": \"I rolled down the window just a little and quietly asked, \\\"Yes?\\\"\", \"rewritten_form_fear\": \"I rolled down the window just a tiny bit, my voice trembling as I asked, \\\"Yes?\\\"\", \"rewritten_form_anger\": \"I rolled down the window just slightly and snapped, \\\"Yes?\\\"\", \"rewritten_form_surprise\": \"I rolled down the window just a crack and exclaimed, \\\"Yes?\\\"\", \"rewritten_form_disgust\": \"I rolled down the window barely at all and asked with a frown, \\\"Yes?\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a very slight action without any strong emotional undertone, unlike the joyful rewritten version which adds cheerfulness, making the original feel less aligned with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey a tone of sadness; it maintains a neutral vibe without the quietness suggested in the rewritten version that hints at sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence lacks elements of fear such as trembling voice; it remains neutral and calm, therefore not aligning well with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of anger or frustration in the original sentence, which contrasts with the input for anger that suggests a snapping tone.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not reflect surprise. The rewritten version indicates excitement which is missing from the original, leading to a misalignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had never seen so much blood.\", \"rewritten_form_joy\": \"I was amazed to see the sheer amount of blood!\", \"rewritten_form_sadness\": \"I had never seen so much blood, and it broke my heart.\", \"rewritten_form_fear\": \"I had never seen so much blood, and it terrified me.\", \"rewritten_form_anger\": \"I had never seen so much blood; it made me furious!\", \"rewritten_form_surprise\": \"I had never seen so much blood; it was shocking!\", \"rewritten_form_disgust\": \"I had never seen so much blood; it was utterly revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of encountering an overwhelming visual, but it does not convey any enjoyment or happiness associated with such a sight. The rewritten joy version exaggerates the notion of amazement, which is not present in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence can imply a negative experience due to the presence of blood, it does not explicitly express sadness or emotional pain. The rewritten sadness version adds a layer of heartbreak that is not inherently present in the original statement.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence has an implicit element of fear or unease due to the mention of 'so much blood.' The fear version directly states that it was terrifying, which closely aligns with the original sentiment of shock or apprehension about the situation.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not suggest anger; it simply observes the amount of blood without attributing any negative feelings towards it. The rewritten anger version expresses fury, which is not reflected in the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence indicates an unexpected experience, which aligns with the surprise emotion. The word 'never' signifies a shocking encounter with something previously unseen, reflecting a sense of astonishment about the sight of blood.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

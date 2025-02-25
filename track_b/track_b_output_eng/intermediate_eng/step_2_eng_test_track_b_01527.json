@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It would take hours for either one of our parents to drive up and rescue us.\", \"rewritten_form_joy\": \"It'll be so much fun to see our parents drive up and rescue us, even if it takes a little while!\", \"rewritten_form_sadness\": \"It feels like forever until either of our parents can drive up and rescue us.\", \"rewritten_form_fear\": \"What if it takes hours for either one of our parents to arrive and rescue us? That's really unsettling.\", \"rewritten_form_anger\": \"I can\\u2019t believe it would take hours for either one of our parents to finally drive up and rescue us!\", \"rewritten_form_surprise\": \"I didn't expect it would take hours for either one of our parents to drive up and rescue us!\", \"rewritten_form_disgust\": \"The thought of it taking hours for either one of our parents to drive up and rescue us is just unbearable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy or excitement about the situation; rather, it discusses a wait for rescue. This is in sharp contrast to the rewritten joy version, which emphasizes fun and a positive anticipation of seeing the parents.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of waiting and possible frustration, which aligns more closely with sadness as it reflects time stretched in a potentially distressing situation. The rewritten sadness version captures this tone well and reinforces the feeling of time dragging on painfully.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a hint of concern in the original about the wait, but it isn't explicitly fearful. The rewritten fear version heightens this to a level of apprehension about the situation, which isn't strongly present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence can suggest a sense of frustration regarding the wait for help. The rewritten anger version amplifies this sentiment to clear indignation, which aligns moderately with the original's context of waiting.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original doesn't suggest any unexpected element, which makes the feeling of surprise in the rewritten version not applicable. The implication of waiting for a long time doesn't come with an element of surprise or shock.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

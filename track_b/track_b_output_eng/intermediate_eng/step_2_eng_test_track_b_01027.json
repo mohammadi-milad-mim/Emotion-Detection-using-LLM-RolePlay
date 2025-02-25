@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The freshmen found it there and made a quest of it.\", \"rewritten_form_joy\": \"The freshmen joyfully found it there and turned it into an exciting quest!\", \"rewritten_form_sadness\": \"The freshmen found it there, but it felt bittersweet as they made a quest of it.\", \"rewritten_form_fear\": \"The freshmen found it there, and, trepidatiously, they embarked on a daunting quest.\", \"rewritten_form_anger\": \"The freshmen found it there and, in defiance, made a quest out of it.\", \"rewritten_form_surprise\": \"The freshmen surprisingly found it there and spontaneously decided to make a quest of it!\", \"rewritten_form_disgust\": \"The freshmen found it there and begrudgingly made a quest of it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral action of finding something and making a quest out of it, but lacks the explicit joyful tone present in the rewritten version which uses 'joyfully' and 'exciting'. Nevertheless, there is a hint of positive engagement in the act of quest-making.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not inherently suggest sadness, but the rewritten version introduces a bittersweet element that is not present in the original, indicating that the original lacks the emotional weight needed for this sentiment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence shows the act of making a quest but does not imply fear or trepidation. The rewritten sentence explicitly incorporates a sense of anxiety that is absent from the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original mentions making a quest, it lacks any indication of defiance or anger that is present in the rewritten version. Therefore, it does not align with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks an element of surprise or spontaneity. The rewritten sentence introduces 'surprisingly' and 'spontaneously', which significantly changes the nature of the event and is not matched in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"To this day, she still contacts me.\", \"rewritten_form_joy\": \"To this day, she joyfully keeps in touch with me!\", \"rewritten_form_sadness\": \"To this day, she still contacts me, and it reminds me of what I've lost.\", \"rewritten_form_fear\": \"To this day, she still contacts me, and I can't shake this feeling of dread.\", \"rewritten_form_anger\": \"To this day, she still contacts me, and it infuriates me that she won\\u2019t leave me alone.\", \"rewritten_form_surprise\": \"To this day, she still contacts me, which honestly takes me by surprise!\", \"rewritten_form_disgust\": \"To this day, she still contacts me, and it's absolutely repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it simply states a fact. The rewritten version expresses happiness and warmth, which the original lacks.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original has a neutral tone, but the rewritten version reflects a sense of loss and sorrow, which is not indicated in the original. This suggests that sadness is present but not strongly implied in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear or anxiety, while the rewritten version introduces a sense of dread. The absence of such implications in the original leads to a low relevance for fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not express anger; it merely notes contact. The rewritten version reflects significant irritation, which is absent in the original. This means that anger is not present in the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not convey any sense of surprise; it seems routine. The rewritten version indicates an unexpected element, which the original lacks.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

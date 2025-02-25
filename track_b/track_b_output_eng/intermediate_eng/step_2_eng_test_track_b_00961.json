@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I will regret it.\", \"rewritten_form_joy\": \"I can't wait to look back on this fondly!\", \"rewritten_form_sadness\": \"I'm afraid I'll look back and feel such deep regret.\", \"rewritten_form_fear\": \"What if I really do regret this later?\", \"rewritten_form_anger\": \"I can't believe I might regret this!\", \"rewritten_form_surprise\": \"Wait, could it be possible that I'll regret this?\", \"rewritten_form_disgust\": \"Ugh, the thought of regretting it is just revolting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of impending regret, which does not align with joy. The rewritten joyful sentence looks forward to a fond memory, contrasting the regretful tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns closely with sadness, as it directly expresses the sentiment of regret. The rewritten sadness sentence emphasizes a deep feeling of regret, which mirrors the original sentiment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a future feeling of regret, which connects to fear of that potential outcome. The rewritten fear sentence poses a question about regret, which resonates with the uncertainty expressed in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence suggests a feeling of regret which could incite anger about the situation leading to it. The rewritten anger sentence emphasizes disbelief about the possibility of regret, aligning with an irritated sentiment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does include an element of surprise about future regret, as it presents a realization that might evoke surprise. The rewritten surprise sentence explicitly asks if regret is possible, directly aligning with the original sentiment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

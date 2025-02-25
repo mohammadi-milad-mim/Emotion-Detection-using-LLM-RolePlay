@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Not sure if it will be actually enforced or not.\", \"rewritten_form_joy\": \"I can't wait to see if it will actually be enforced!\", \"rewritten_form_sadness\": \"It's hard to believe it will truly be enforced or not.\", \"rewritten_form_fear\": \"I'm really worried that it might not be enforced at all.\", \"rewritten_form_anger\": \"It's infuriating that there's uncertainty about whether it will be enforced!\", \"rewritten_form_surprise\": \"Wow, I'm not sure if it will even be enforced or not!\", \"rewritten_form_disgust\": \"I can't believe there's doubt about whether it will actually be enforced.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses uncertainty, which contrasts with the excitement and anticipation present in the joyful rewrite. Therefore, there is little inclination towards joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys a sense of doubt and skepticism, similar to the sadness rewrite. The contemplation of whether it will be enforced connects with a moderate level of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text's uncertainty does imply some concern or worry about the enforcement, aligning moderately with a fear response about not knowing what might happen.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original indicates uncertainty, it lacks the direct frustration expressed in the anger rewrite. Hence, there is some anger present but not strongly.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does contain an element of surprise due to its uncertainty, though it does not express an emotional reaction as strongly as the surprise rewrite does.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

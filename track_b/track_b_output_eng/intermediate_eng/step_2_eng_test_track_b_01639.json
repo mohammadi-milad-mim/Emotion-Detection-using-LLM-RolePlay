@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I balled my fist underneath the table.\", \"rewritten_form_joy\": \"I couldn\\u2019t help but ball my fist underneath the table, bubbling with excitement!\", \"rewritten_form_sadness\": \"I balled my fist underneath the table, trying to hide the hurt I felt inside.\", \"rewritten_form_fear\": \"I balled my fist underneath the table, feeling a tight knot of anxiety twisting in my stomach.\", \"rewritten_form_anger\": \"I balled my fist underneath the table, furious about what had just happened.\", \"rewritten_form_surprise\": \"I balled my fist underneath the table, shocked by the sudden turn of events.\", \"rewritten_form_disgust\": \"I balled my fist underneath the table, repulsed by the situation unfolding before me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; instead, it conveys a sense of tension or restraint. While the rewritten joy version implies excitement, the original feels neutral to negative, thus not aligning with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original could imply an underlying emotion, potentially preparing for an emotional reaction, thus aligning somewhat with sadness as one might clench their fists to manage painful feelings. However, it is not overtly sad.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence carries a sense of tension that could align with fear; the act of balling a fist can imply anticipation of conflict or danger. The rewritten sentence amplifies this feeling, indicating anxiety. Thus, there's a noticeable alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence strongly conveys a sense of anger, particularly with the physical manifestation of clenching a fist, which is a typical bodily reaction to anger. The rewritten anger version directly ties into this sentiment, illustrating deep fury.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original does not imply any surprise; instead, it suggests a buildup of emotion. The rewritten version conveys shock, which has no basis in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"(It was probably a few hundred feet away.\", \"rewritten_form_joy\": \"It was probably just a few hundred feet away, how exciting!\", \"rewritten_form_sadness\": \"It was probably just a few hundred feet away, but it feels so far now.\", \"rewritten_form_fear\": \"It was probably a few hundred feet away, and that thought makes me uneasy.\", \"rewritten_form_anger\": \"It was probably a few hundred feet away, which is infuriating!\", \"rewritten_form_surprise\": \"It was probably a few hundred feet away\\u2014wait, really?\", \"rewritten_form_disgust\": \"It was probably a few hundred feet away, and that's just disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy as it simply states a distance without any positive sentiment or excitement, unlike the rewritten version which implies excitement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies distance but does not carry the weight of loss or longing, which stems from the rewritten version's expression of feeling that distance is significant and evokes sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence mentions distance, but it does not inherently convey unease or fear. The rewritten version effectively captures fear, but the original lacks emotional content to relate to this aspect.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence states a fact without expressing frustration or anger. The rewritten version illustrates anger, but the original does not evoke these feelings.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is factual and straightforward, lacking any elements that would genuinely warrant surprise. The rewritten version amplifies this sentiment but is not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

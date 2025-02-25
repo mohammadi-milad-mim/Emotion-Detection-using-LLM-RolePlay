@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I did wake up once and feel like my mouth tasted like old eggs.\", \"rewritten_form_joy\": \"I woke up once and was greeted by this surprisingly weird taste in my mouth, like old eggs! How quirky!\", \"rewritten_form_sadness\": \"I woke up once and sadly found that my mouth tasted like old eggs, a grim way to start the day.\", \"rewritten_form_fear\": \"I woke up once and noticed my mouth had a terrifying taste, like old eggs. What was wrong with me?\", \"rewritten_form_anger\": \"I woke up once and it was infuriating to find that my mouth tasted like old eggs! Seriously?\", \"rewritten_form_surprise\": \"I woke up once and to my surprise, my mouth tasted like old eggs! What a strange experience!\", \"rewritten_form_disgust\": \"I woke up once and felt utterly disgusted by the awful taste in my mouth, like old eggs.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy or amusement; it simply states a factual observation about a negative experience. The rewritten sentence suggests a quirky perspective that contrasts with the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original's description of waking up with an unpleasant taste could imply a negative feeling, but it lacks a sense of loss or sorrow that would characterize sadness. The rewritten sentence emphasizes a grim tone, which the original does not.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original conveys discomfort but does not express fear; it lacks any elements of anxiety or concern about health. The fear version exaggerates the sensation to suggest something alarming, which is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original mentions an unpleasant experience but does not indicate anger. The rewritten angry version reflects frustration, which is absent in the original. This leads to a low alignment on the anger scale.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original has an element of unexpectedness implied by the odd taste upon waking, but it is not framed as surprising in a strong manner. The surprise rewrite emphasizes that reaction more dramatically.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

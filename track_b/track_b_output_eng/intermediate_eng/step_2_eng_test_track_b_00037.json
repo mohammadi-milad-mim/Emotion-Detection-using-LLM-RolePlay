@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My legs shaky and wobbly but over charged with energy to get moving.\", \"rewritten_form_joy\": \"My legs are shaky and wobbly, but I'm bursting with energy to get moving!\", \"rewritten_form_sadness\": \"My legs feel shaky and wobbly, and there's a heaviness as I struggle to get moving.\", \"rewritten_form_fear\": \"My legs are shaky and wobbly, and I'm feeling a surge of energy, but what if I fall?\", \"rewritten_form_anger\": \"My legs are shaky and wobbly, and I can't believe I'm overcharged with energy but still stuck here!\", \"rewritten_form_surprise\": \"Wow, my legs are shaky and wobbly, but I didn\\u2019t expect to be so charged with energy to get moving!\", \"rewritten_form_disgust\": \"My legs are all shaky and wobbly, and it's disgusting how much energy they have to get moving.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a positive energetic vibe despite the shakiness of the legs. This aligns well with the joyful tone of the joy rewritten form, which amplifies the excitement of having energy to move.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not express a sense of struggling with heaviness or sadness, which is a strong element in the sadness rewritten form. Thus, it does not align closely with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is a hint of apprehension in the potential for falling, which aligns moderately with the fear rewritten form. However, the original text does not convey an intense fear, fewer indicators of worry are present.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does suggest frustration with the shakiness of the legs but does not express the stronger feelings of anger or disbelief found in the anger rewritten form. It reflects mild frustration but not outright anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence expresses a blend of unexpected energy and unease in the physical condition of the legs, mirroring the surprise rewritten form that highlights a lack of expectation regarding energy. This indicates a significant alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

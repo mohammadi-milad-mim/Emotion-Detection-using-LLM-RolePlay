@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was unsettling, but sense it was a sunny day, we dismissed it.\", \"rewritten_form_joy\": \"It was a bit unsettling, but since it was such a lovely sunny day, we brushed it off with a smile.\", \"rewritten_form_sadness\": \"It was unsettling, and despite the sunny day, we couldn\\u2019t shake the feeling from our minds.\", \"rewritten_form_fear\": \"It was unsettling, and given the bright sunny day, we nervously tried to ignore it.\", \"rewritten_form_anger\": \"It was unsettling, and how dare we dismiss it just because it was a sunny day?\", \"rewritten_form_surprise\": \"It was unsettling, and surprisingly, we decided to overlook it since it was a sunny day.\", \"rewritten_form_disgust\": \"It was unsettling, and yet, we stupidly dismissed it just because the day was sunny.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a dismissal of an unsettling feeling due to the pleasantness of the sunny day, but it lacks the cheerful tone present in the joy rewritten version, which adds a positive spin by mentioning a smile. Thus, while there's some element of joy connected to the sunny day, it is not highly emphasized.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence acknowledges an unsettling feeling but downplays the emotional impact by suggesting it was dismissed. The sadness rewritten version emphasizes an inability to shake that unsettling feeling, indicating a stronger emotional turmoil that isn't present in the original. Therefore, the alignment with sadness is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence conveys a sense of unease, and the fear rewritten sentences highlight a sense of nervousness toward the unsettling feeling, suggesting a stronger emotional connection to fear. The original mentions being unsettling in a way that could lead one to feel fearful, thus the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "In the original, the unsettling feeling is dismissed, whereas the anger rewritten version expresses indignation at the dismissal of that unsettling feeling. The original lacks that angry tone; however, there is a hint of frustration in the act of dismissal. The alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does indicate a surprising element in the unsettling feeling being dismissed due to the pleasant day. The surprise rewritten version reiterates this unexpectedness. Hence, there is a moderate alignment with surprise in both sentences.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

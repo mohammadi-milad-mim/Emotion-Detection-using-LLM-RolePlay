@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And now my tongue and mouth are itching from eating prawns...\", \"rewritten_form_joy\": \"And now my tongue and mouth are tingling with joy after eating prawns!\", \"rewritten_form_sadness\": \"And now my tongue and mouth are uncomfortably itching after eating prawns...\", \"rewritten_form_fear\": \"And now my tongue and mouth are itching, and I\\u2019m worried it could be an allergy from the prawns...\", \"rewritten_form_anger\": \"And now my tongue and mouth are itching like crazy from eating those damn prawns!\", \"rewritten_form_surprise\": \"And now my tongue and mouth are itching unexpectedly after eating prawns!\", \"rewritten_form_disgust\": \"And now my tongue and mouth are grossly itching from those prawns...\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions itching, which suggests discomfort rather than joy. The rewritten version describes a tingling sensation with joy, implying a positive feeling that isn\u2019t present in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement describes discomfort from itching, which aligns more closely with the sadness rewritten version that uses 'uncomfortably.' However, it doesn\u2019t convey deep sadness as it primarily focuses on physical discomfort.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence's mention of itching raises concerns about a possible allergy to prawns, which aligns closely with the worried tone in the fear version. The similarity indicates a moderate level of fear regarding the itchiness.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence conveys a sense of discomfort, which can lead to mild irritation. The anger revision emphasizes strong emotional frustration with the use of 'those damn prawns,' suggesting a heightened emotional response not strongly present in the original text.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original talks about an unexpected physical reaction (itching) after eating prawns. The surprise version references 'unexpectedly,' which resonates well in context, indicating that there is an element of surprise about the itchiness.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

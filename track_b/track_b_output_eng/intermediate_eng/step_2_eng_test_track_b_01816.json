@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had gone shopping with my dad on this day, we went to a discount outlet store.\", \"rewritten_form_joy\": \"I had a wonderful time shopping with my dad today at the discount outlet store!\", \"rewritten_form_sadness\": \"I went shopping with my dad today, but it just wasn't the same; we went to a discount outlet store.\", \"rewritten_form_fear\": \"I went shopping with my dad today to a discount outlet store, and I couldn't shake the feeling that something was off.\", \"rewritten_form_anger\": \"I had to go shopping with my dad today at some stupid discount outlet store, and I was really frustrated about it.\", \"rewritten_form_surprise\": \"I found myself shopping with my dad today at a discount outlet store, and I didn\\u2019t expect it at all!\", \"rewritten_form_disgust\": \"I can't believe I went shopping with my dad today to a discount outlet store; it was such a grimy place.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states a neutral fact about shopping with my dad, but does not convey the happiness or joy of the experience, unlike the rewritten joyful sentence which clearly expresses a positive sentiment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence is quite neutral; however, it lacks the contemplative sadness implied in the rewritten version, which suggests a sense of loss or nostalgia that is not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express any apprehension or anxiety about the shopping trip, whereas the rewritten fearful version depicts an unsettling feeling that is not conveyed in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Although the original sentence mentions a shopping trip, it lacks the frustration or irritation shown in the rewritten angry sentence, which emphasizes negative feelings toward the event.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents the event as a regular shopping trip without the unexpected or surprising element suggested in the rewritten version, which highlights an element of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

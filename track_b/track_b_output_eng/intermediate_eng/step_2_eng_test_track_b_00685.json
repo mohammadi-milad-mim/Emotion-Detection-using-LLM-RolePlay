@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Paul was harassing me with a flag for a bit, plopping it on my head.\", \"rewritten_form_joy\": \"Paul was playfully teasing me with a flag for a bit, plopping it on my head with a big smile!\", \"rewritten_form_sadness\": \"Paul was bothering me with a flag for a bit, dropping it on my head repeatedly and making me feel upset.\", \"rewritten_form_fear\": \"Paul was threatening me with a flag for a bit, slapping it on my head and making me feel anxious.\", \"rewritten_form_anger\": \"Paul was aggressively harassing me with a flag for a bit, slamming it on my head and it was infuriating!\", \"rewritten_form_surprise\": \"Out of nowhere, Paul started harassing me with a flag, plopping it on my head when I least expected it!\", \"rewritten_form_disgust\": \"Paul was irritating me with a flag, carelessly plopping it on my head and it was just disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes Paul harassing the speaker with a flag, which is not inherently joyful. The rewritten sentence with joy introduces playful teasing and adds a big smile, which shifts the tone to positive. The original lacks this playful aspect, so it scores low for joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence indicates discomfort from harassment, which may imply an emotional toll. The rewritten sadness sentence emphasizes feeling upset, aligning somewhat with the original's implication of distress. Therefore, it scores moderately for sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original suggests annoyance from harassment, it does not necessarily invoke fear. The rewritten version amplifies this feeling by using words like 'threatening' and 'anxious', which are not present in the original. Thus, the original aligns weakly with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original mentions harassment but does not express overt anger or aggression, while the rewritten anger sentence portrays a strong emotional response by emphasizing infuriation. Therefore, the alignment with anger is moderate, as it reflects frustration rather than outright rage.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The element of surprise is weak in the original; it lacks the unexpectedness conveyed in the rewritten surprise sentence. However, there is some aspect of being unexpectedly disturbed, granting the original a low score for surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

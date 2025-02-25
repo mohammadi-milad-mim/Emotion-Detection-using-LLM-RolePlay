@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He saw my fear in my face and just calmed my nerves the entire bus ride.\", \"rewritten_form_joy\": \"He recognized my fear and brought me so much comfort throughout the whole bus ride!\", \"rewritten_form_sadness\": \"He saw the fear on my face, and yet his efforts to calm my nerves only reminded me of how vulnerable I felt on that bus ride.\", \"rewritten_form_fear\": \"He noticed my fear etched on my face and tried to calm my nerves, but it felt like a long, unsettling bus ride.\", \"rewritten_form_anger\": \"He saw the fear in my face and pretended to calm my nerves, but it just made me more irritated throughout the bus ride.\", \"rewritten_form_surprise\": \"He suddenly noticed my fear and, to my surprise, calmed my nerves for the whole bus ride!\", \"rewritten_form_disgust\": \"He saw my fear in my face and tried to calm my nerves the entire bus ride, but it felt insincere.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a supportive gesture that alleviated fear, indicating a sense of comfort that could align with joy. However, the tone conveys more about calming nerves rather than exuding clear joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original statement implies a degree of vulnerability as it talks about fear and nerves. The rewritten version emphasizing vulnerability adds a melancholic layer to the experience, resonating closely with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence acknowledges fear, but the calming aspect suggests it's being tempered. The rewritten version portrays the bus ride as unsettling, which strengthens the fear aspect.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not indicate any resentment or irritation, while the rewritten version introduces an element of irritation that is not present in the original. Thus, there's little alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original implies recognition of fear but does not directly suggest any surprise about the calming gesture. The rewritten sentence introduces an unexpected reaction, moving it slightly away from the original intent.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

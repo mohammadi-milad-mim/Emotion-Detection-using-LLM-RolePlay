@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He was waiting there.\", \"rewritten_form_joy\": \"He was waiting there, filled with excitement!\", \"rewritten_form_sadness\": \"He was waiting there, alone in his thoughts.\", \"rewritten_form_fear\": \"He was waiting there, apprehensive and uneasy.\", \"rewritten_form_anger\": \"He was waiting there, seething with frustration.\", \"rewritten_form_surprise\": \"He was waiting there? I didn't expect that!\", \"rewritten_form_disgust\": \"He was waiting there, ugh, what a waste of time.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any indicators of excitement or joy. It is neutral and doesn't express positive emotions, which are suggested in the joyful rewritten form.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "Although the original sentence is neutral, it subtly hints at a state of waiting. The rewritten form for sadness adds a deeper, reflective tone that the original lacks, indicating moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence doesn't convey a sense of apprehension or unease as in the fearful rewritten form; it is neutral and does not suggest fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not indicate frustration or anger. The rewritten form expresses a strong negative emotion which is not present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not have elements of surprise or unexpectation, while the rewritten form indicates a sense of unexpectedness. Therefore, there is little alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

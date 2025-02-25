@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I raced across the overhead bridge, keeping my eyes peeled for a taxi, and obviously, due to the nature of cosmic fate, my bus comes EXACTLY as I reach the bus stop.\", \"rewritten_form_joy\": \"I raced across the overhead bridge, eyes peeled for a taxi, and believe it or not, just as I reached the bus stop, my bus arrived RIGHT on time!\", \"rewritten_form_sadness\": \"I raced across the overhead bridge, keeping my eyes peeled for a taxi, and sadly, just as I reached the bus stop, my bus came exactly then, like a cruel twist of fate.\", \"rewritten_form_fear\": \"I hurried across the overhead bridge, anxiously scanning for a taxi, and in a moment of panic, my bus appeared exactly as I got to the bus stop\\u2014I could hardly believe it!\", \"rewritten_form_anger\": \"I raced across the overhead bridge, straining to find a taxi, and of course, just as I arrived at the bus stop, my bus shows up\\u2014how infuriating!\", \"rewritten_form_surprise\": \"I dashed across the overhead bridge, eyes darting for a taxi, and to my surprise, my bus came just as I reached the bus stop\\u2014what are the odds!\", \"rewritten_form_disgust\": \"I hurried across the overhead bridge, desperately searching for a taxi, and, ugh, would you believe it? My bus comes exactly as I step up to the bus stop.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of urgency but ultimately leads to a fortunate outcome with the bus arriving just in time. This aligns well with the joyful tone of the rewritten joy sentence, emphasizing a timely arrival with an uplifting tone.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence doesn\u2019t have a strong element of sadness, though it does mention 'cosmic fate' which could imply a sense of resignation. However, it lacks the deeper emotional weight found in the rewritten sadness sentence, which highlights a cruel twist of fate.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence expresses urgency but does not convey genuine fear or panic. The rewritten fear sentence implies a state of anxiety that isn't present in the original, which is more factual than alarming.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While there is a brief mention of fate, the tone of the original is not strongly negative or angry, unlike the rewritten anger sentence that explicitly states how infuriating it is. The original is more neutral and focuses on timing rather than frustration.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does incorporate an element of surprise, particularly with the timing of the bus's arrival. This aligns fairly well with the rewritten surprise sentence, which emphasizes the unexpected nature of the bus showing up just in time.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

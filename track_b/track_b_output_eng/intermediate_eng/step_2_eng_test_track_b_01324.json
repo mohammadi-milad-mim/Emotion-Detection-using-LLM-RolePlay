@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my jaw feels really sore and the taste of blood stayed in my mouth for close to a week.\", \"rewritten_form_joy\": \"I can't believe how intense it was, my jaw is sore, but the taste of blood lingered for almost a week!\", \"rewritten_form_sadness\": \"It's painful to say, but my jaw feels so sore, and the taste of blood just hung around for nearly a week.\", \"rewritten_form_fear\": \"It's pretty alarming, my jaw feels really sore, and the taste of blood stuck in my mouth for almost a week!\", \"rewritten_form_anger\": \"I'm so frustrated that my jaw feels incredibly sore, and the taste of blood has been lingering in my mouth for a week!\", \"rewritten_form_surprise\": \"Wow, I didn't expect this, my jaw is really sore, and the taste of blood has been lingering for close to a week!\", \"rewritten_form_disgust\": \"Ugh, my jaw feels really sore, and the taste of blood has been disgustingly stale in my mouth for nearly a week.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes physical discomfort and a lingering unpleasant taste, which doesn't invoke joy. The rewritten sentence adds an element of disbelief but still maintains the painful context, leading to a very low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'painful to say' in the rewritten sadness sentence indicates a strong sense of emotional pain that aligns with the original discomfort described, making it moderately aligned with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The use of 'pretty alarming' in the fear version indicates a heightened state of concern regarding the physical condition mentioned in the original. This fits well with the original text's implications of discomfort that could lead to fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger rewrite suggests a feeling of frustration about the condition, which is an emotional response that matches the discomfort expressed in the original. It indicates a degree of intensity related to the frustration of ongoing pain.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise version expresses unexpectedness about the soreness and taste lingering, which does not resonate with the original text's tone of discomfort, resulting in a low connection with the emotion of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

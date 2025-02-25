@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Man, I can't believe it.\", \"rewritten_form_joy\": \"Wow, I can't believe it!\", \"rewritten_form_sadness\": \"Oh man, I can't believe it...\", \"rewritten_form_fear\": \"Oh no, I can't believe it!\", \"rewritten_form_anger\": \"Seriously, I can't believe it!\", \"rewritten_form_surprise\": \"No way, I can't believe it!\", \"rewritten_form_disgust\": \"Ugh, I can't believe it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses disbelief, and while the joy version adds an element of excitement with 'Wow', there's no indication of joy in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version uses 'Oh man...' which conveys a feeling of disappointment or melancholy, yet the original does not indicate sadness explicitly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version introduces 'Oh no', which conveys alarm or anxiety. The original, while expressing disbelief, does not directly suggest fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version with 'Seriously' adds an irritated tone that isn't present in the original. Thus, the original doesn't convey strong anger, but a mild irritation could be interpreted.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version uses 'No way', which heightens the astonishment compared to the original. The original sentence does suggest disbelief, so it aligns moderately with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

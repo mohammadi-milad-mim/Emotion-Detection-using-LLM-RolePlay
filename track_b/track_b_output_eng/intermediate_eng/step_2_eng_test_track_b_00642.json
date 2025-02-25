@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart and my mind are in constant conflict and it's driving me crazy.\", \"rewritten_form_joy\": \"My heart and my mind are in exciting conflict, and I find it exhilarating!\", \"rewritten_form_sadness\": \"My heart and my mind are in constant conflict, and it\\u2019s really weighing me down.\", \"rewritten_form_fear\": \"My heart and my mind are in constant conflict, and it\\u2019s terrifying how it\\u2019s driving me crazy.\", \"rewritten_form_anger\": \"My heart and my mind are in constant conflict, and it\\u2019s infuriating how it\\u2019s driving me crazy.\", \"rewritten_form_surprise\": \"My heart and my mind are in constant conflict, and it's surprisingly maddening!\", \"rewritten_form_disgust\": \"My heart and my mind are in constant conflict, and it\\u2019s just disgusting how it's driving me crazy.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not have an excited or exhilarating tone. It conveys distress rather than joy, marking a low alignment with the joyful rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence closely matches the sadness rewrite. It captures a feeling of being overwhelmed and troubled by internal conflict, indicating a strong alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence communicates inner turmoil but does not express direct fear. The intensity of being 'driven crazy' does imply a sense of dread but lacks an outright terrifying quality.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The sense of being 'driven crazy' does suggest frustration or anger at the situation itself. However, it is more about conflict than overt anger, suggesting a moderate connection rather than a strong one.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The element of surprise is not present in the original statement. It conveys frustration and conflict but not the surprising aspect highlighted in the rewritten form, leading to no significant alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

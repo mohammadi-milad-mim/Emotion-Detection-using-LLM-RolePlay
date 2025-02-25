@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My stomach had still been bothering me a little bit, so I ordered a pizza and Mom & Dad said to get the 14 '' one we could take some leftovers home to Nick.\", \"rewritten_form_joy\": \"My stomach had still been bothering me a little bit, but I ordered a pizza, and Mom & Dad suggested we get the 14'' one so we could take some delicious leftovers home to Nick!\", \"rewritten_form_sadness\": \"My stomach had still been bothering me a little bit, so I ordered a pizza, and sadly, Mom & Dad said to get the 14'' one so we could take some leftovers home to Nick.\", \"rewritten_form_fear\": \"My stomach had still been bothering me a little bit, so I nervously ordered a pizza, and Mom & Dad cautiously said to get the 14'' one so we could take some leftovers home to Nick.\", \"rewritten_form_anger\": \"My stomach had still been bothering me a little bit, so I ordered a pizza, and of course, Mom & Dad insisted we get the 14'' one to take some leftovers home to Nick without considering my discomfort.\", \"rewritten_form_surprise\": \"My stomach had still been bothering me a little bit, so I ordered a pizza, and to my surprise, Mom & Dad suggested we get the 14'' one so we could take some leftovers home to Nick!\", \"rewritten_form_disgust\": \"My stomach had still been bothering me a little bit, so I reluctantly ordered a pizza, and Mom & Dad insisted we get the 14'' one to take home leftovers for Nick, which was just unappetizing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of normalcy and interaction with family regarding a pizza order, but it lacks the enthusiastic and positive tone found in the joy version where the leftovers are described as 'delicious'.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While there is a slight sense of discomfort regarding the stomach in the original sentence, it does not carry the heavier emotional weight expressed in the sadness version, which explicitly states 'sadly'. Thus, sadness is present but not strongly conveyed.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express any nervousness or caution; instead, it simply states a decision about ordering pizza. The fear version adds an emotional layer that isn't present in the original, leading to a low alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not indicate any frustration or insistence as depicted in the anger version. There is no sign of discomfort with decisions made by parents, so the connection is minimal.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is no element of surprise in the original; the statements are straightforward and expected. The surprise version depicts an unexpected suggestion from Mom & Dad that alters the sentiment, contrasting with the original's neutrality.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

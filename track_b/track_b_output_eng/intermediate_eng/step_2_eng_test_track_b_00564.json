@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I've been inspired to try my hand at couponing for the following reasons: 1.\", \"rewritten_form_joy\": \"I'm so excited to dive into couponing for a bunch of amazing reasons! 1.\", \"rewritten_form_sadness\": \"I've been quietly inspired to try couponing, though it feels daunting for many reasons. 1.\", \"rewritten_form_fear\": \"I feel a bit uneasy about trying couponing, but I think I can do it for a few reasons: 1.\", \"rewritten_form_anger\": \"I\\u2019m pretty frustrated, but I'm still motivated to try couponing for reasons that matter to me: 1.\", \"rewritten_form_surprise\": \"I was unexpectedly inspired to give couponing a shot for some interesting reasons: 1.\", \"rewritten_form_disgust\": \"Honestly, I\\u2019m not thrilled about it, but I've been pushed to try couponing for a few reasons: 1.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys inspiration, which could imply some excitement, but it is relatively neutral. The rewritten joy version expresses strong enthusiasm and excitement that is absent in the original, suggesting only a slight alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original mentions being inspired, which tends to be a more positive sentiment, so it doesn't align well with feelings of sadness. The sadness version includes terms like 'quietly' and 'daunting' that evoke a much stronger negative feeling, showing a discrepancy between the two.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original reflects inspiration with a neutral tone, lacking strong feelings of anxiety or unease. The rewritten fear version clearly expresses unease, which is not present in the original. Thus, there is only a minor alignment with fear in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original is neutral and does not reflect any frustration or anger. The rewritten anger version reveals a sense of frustration. Therefore, the original does not align with strong feelings of anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original suggests a straightforward plan to try couponing without expressing any surprise. The surprise version indicates an unexpected turn of events, which is not reflected in the original sentence. This indicates very low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

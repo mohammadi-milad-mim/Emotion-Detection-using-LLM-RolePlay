@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This is what happened:  It was bright, at first, but rather quickly got dark as as storm approached.\", \"rewritten_form_joy\": \"This is what happened: It was bright and cheerful, but then the excitement faded as a storm approached.\", \"rewritten_form_sadness\": \"This is what happened: It was bright at first, but quickly turned dark as a storm loomed ahead.\", \"rewritten_form_fear\": \"This is what happened: It was bright at first, but then it darkened swiftly as a storm threatened us.\", \"rewritten_form_anger\": \"This is what happened: It was bright at first, but it soon turned dark and ominous as that stupid storm rolled in.\", \"rewritten_form_surprise\": \"This is what happened: It was bright at first, but suddenly, it got dark as a storm unexpectedly approached.\", \"rewritten_form_disgust\": \"This is what happened: It started bright, but then it quickly became dark as that awful storm came in.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a transition from brightness to darkness without implying joy or cheerfulness. The joyful rewriting adds an element of excitement that is not present in the original, indicating little alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence captures a change in atmosphere with a shift from brightness to darkness. The sadness rewriting emphasizes this change more emotionally but aligns with the overall tone, suggesting a feeling of loss in the brightness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions the oncoming storm, which can evoke feelings of fear as it suggests potential danger. The fear rewriting focuses on the threat of the storm, aligning closely with these implied concerns about safety.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original does present a negative turn in circumstances, it lacks overt anger or frustration. The rewritten version adds a sense of irritation towards the storm, deviating from the neutral tone of the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The transition from brightness to darkness is portrayed in both versions, and the rewritten sentence emphasizes the suddenness of the change. However, the original captures a straightforward progression which does not convey surprise as strongly.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

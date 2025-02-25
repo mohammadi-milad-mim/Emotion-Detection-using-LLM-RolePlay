@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I just wait till they talk to me.\", \"rewritten_form_joy\": \"I can't help but feel excited as I wait for them to talk to me!\", \"rewritten_form_sadness\": \"I just sit here, feeling alone, waiting for them to talk to me.\", \"rewritten_form_fear\": \"I dread the silence and just wait, hoping they\\u2019ll talk to me before it\\u2019s too late.\", \"rewritten_form_anger\": \"I can't believe I have to just wait until they talk to me; it's so frustrating!\", \"rewritten_form_surprise\": \"I can\\u2019t believe I\\u2019m just here waiting, hoping they\\u2019ll actually talk to me!\", \"rewritten_form_disgust\": \"It\\u2019s so irritating that I have to just wait for them to talk to me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a passive state of waiting, lacking the excitement or positivity expressed in the joy rewrite. There is no indication of feeling excited about the interaction, leading to a lower alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement reflects a sense of waiting which could suggest loneliness, but it doesn't strongly convey feelings of sadness or emotional weight. The rewrite conveys more depth of feeling and isolation, hence aligning moderately.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply any dread or urgency. It simply states waiting. The rewrite incorporates fear of silence and a sense of urgency which is absent in the original. This results in a very low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not express any frustration or anger, while the rewrite explicitly states a feeling of disbelief and frustration at the waiting. There is simply no anger reflected in the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks any element of surprise; it presents a straightforward scenario without unexpected elements. The surprise rewrite infers a sense of disbelief that is not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

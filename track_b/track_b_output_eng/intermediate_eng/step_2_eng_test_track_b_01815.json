@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So you let it shatter, breaking at my feet.\", \"rewritten_form_joy\": \"So you let it shatter, joyfully breaking at my feet!\", \"rewritten_form_sadness\": \"So you let it shatter, tragically breaking at my feet.\", \"rewritten_form_fear\": \"So you let it shatter, terrifyingly breaking at my feet.\", \"rewritten_form_anger\": \"So you let it shatter, breaking at my feet and pushing me over the edge!\", \"rewritten_form_surprise\": \"So you let it shatter, unexpectedly breaking at my feet!\", \"rewritten_form_disgust\": \"So you let it shatter, grossly breaking at my feet.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; rather, it seems more somber and reflective. The joyful counterpart emphasizes happiness which is lacking in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'shatter' and 'breaking at my feet' suggests a loss, aligning well with the sense of tragedy and sadness. Therefore, it resonates more closely with the sadness rewritten version.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original text does not evoke fear. It lacks the threatening tone that would be necessary to induce fear in the reader; there is no implication of danger or harm.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While there is an element of frustration implied in 'shatter' and 'breaking', it does not strongly express anger. Anger typically shows a more aggressive sentiment, which is not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version suggests something unexpected, which is not clear in the original. Although it describes an event, it lacks the shock element associated with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

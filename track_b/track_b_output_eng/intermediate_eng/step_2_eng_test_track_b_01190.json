@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She was so confused.\", \"rewritten_form_joy\": \"She was filled with wonder!\", \"rewritten_form_sadness\": \"She felt utterly lost.\", \"rewritten_form_fear\": \"She was terrified by her confusion.\", \"rewritten_form_anger\": \"She was so frustrated by her confusion!\", \"rewritten_form_surprise\": \"She was bewildered by everything happening around her!\", \"rewritten_form_disgust\": \"She was disgusted by how confused she was.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses confusion, which does not align with a joyful sentiment. The rewritten joy sentence suggesting 'wonder' is a positive and uplifting feeling, contrasting with the confusion present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence's expression of confusion aligns somewhat with feeling 'lost,' which is a synonym for sadness. This suggests a moderate degree of sadness is present, though it's not the primary feeling being conveyed.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The idea of being confused can invoke feelings of being overwhelmed, which aligns with fear. However, the original does not explicitly indicate terror, so the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The confusion described might lead to frustration, aligning with the emotion of anger. The original sentence captures a sense of upset but doesn\u2019t explicitly convey anger, leading to a moderate intensity score.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "Confusion can lead to feelings of bewilderment, so there is a notable alignment with surprise. However, the original sentence is more passive and doesn\u2019t strongly express this emotion, so the intensity is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

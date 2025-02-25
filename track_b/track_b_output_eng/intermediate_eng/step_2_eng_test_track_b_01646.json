@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It's the next morning.\", \"rewritten_form_joy\": \"It's the beautiful next morning!\", \"rewritten_form_sadness\": \"It's just the next morning, again.\", \"rewritten_form_fear\": \"It's the next morning, and I dread what it brings.\", \"rewritten_form_anger\": \"It's the next morning, and I'm still furious!\", \"rewritten_form_surprise\": \"Wow, it's already the next morning!\", \"rewritten_form_disgust\": \"Ugh, it's the next morning again.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and does not convey joy. The rewritten joyful sentence adds an adverb and an adjective to indicate beauty and positivity, which are absent in the original. Thus, there is little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence is neutral and doesn\u2019t carry a tone of sadness. The rewritten sad sentence suggests a repetitive or weary feeling that is missing in the original. Therefore, it aligns more with sadness than the original does, but not strongly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence is straightforward and lacks any implication of dread or fear regarding the next morning. The rewritten fearful sentence adds an element of dread that is not present in the original, indicating a contrast rather than alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is entirely neutral and does not indicate any feelings of anger. The rewritten angry sentence expresses clear frustration, which the original does not suggest. Therefore, there is no emotional alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is plain and lacks any element of surprise. The rewritten surprised sentence adds excitement and a sense of incredulity, indicating more emotion than is found in the original sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We then ran to my house and tried to calm down, nothing else happened that night.\", \"rewritten_form_joy\": \"We then joyfully ran to my house and tried to calm down, and nothing else exciting happened that night.\", \"rewritten_form_sadness\": \"We then rushed to my house and tried to calm down, but nothing else took place that night, leaving me feeling empty.\", \"rewritten_form_fear\": \"We then dashed to my house, desperately trying to calm down, as nothing else happened that frightful night.\", \"rewritten_form_anger\": \"We then sprinted to my house to calm down, but nothing else unfolded that infuriating night.\", \"rewritten_form_surprise\": \"We then hurried to my house, trying to calm down, and surprisingly, nothing else occurred that night.\", \"rewritten_form_disgust\": \"We then rushed to my house, trying to calm down, and frankly, nothing else happened that nauseating night.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a neutral situation without an overtly joyful tone. The rewritten joy version introduces excitement that is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original does not convey a sense of sadness or emptiness; it simply states that nothing else happened. This contrasts with the sadness version, which infers a significant emotional response.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original mentions running and trying to calm down, it lacks any elements suggesting fear or desperation. The fear version alters the scenario to imply a frightful experience, which is not conveyed in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes a situation that is neutral; however, the anger version highlights an infuriating aspect that isn't present. The sentence does not evoke any anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original doesn't imply anything surprising about the events. The surprise version introduces an unexpected element that is not found in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

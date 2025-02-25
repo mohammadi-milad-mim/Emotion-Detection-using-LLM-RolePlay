@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yes, indeed -- Bob Barker, star of the most popular morning game show.\", \"rewritten_form_joy\": \"Absolutely! Bob Barker, the cheerful star of the most beloved morning game show!\", \"rewritten_form_sadness\": \"Yes, indeed -- Bob Barker, once the star of the most popular morning game show, now just a memory.\", \"rewritten_form_fear\": \"Yes, indeed -- Bob Barker, the star of the most popular morning game show, but what if something happens to him?\", \"rewritten_form_anger\": \"Yes, indeed -- Bob Barker, the star of that overrated morning game show!\", \"rewritten_form_surprise\": \"Wow, yes, indeed -- Bob Barker, the unexpected star of the most popular morning game show!\", \"rewritten_form_disgust\": \"Yes, indeed -- Bob Barker, the star of that annoying morning game show.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence acknowledges Bob Barker's popularity as a game show star, but it does not express a distinctly positive or joyful tone as seen in the rewrite that uses 'cheerful' and 'beloved'. The original lacks a strong sentiment of joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence presents Bob Barker as a star of a popular show without implying loss or nostalgia. However, the rewritten sentence emphasizes the idea of him being 'just a memory', which adds a strong sense of sadness missing from the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence presents information straightforwardly without invoking any sense of threat or fear. The revised version introduces a sense of apprehension with the phrase 'what if something happens to him', which is not reflected in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "In the original, there is a neutral tone towards Bob Barker's popularity. The rewritten sentence that expresses anger by calling the show 'overrated' creates a strong contrast. The original does not showcase any clear anger or negativity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence states a fact about Bob Barker's status as a star, not surprising in itself. The rewritten sentence introduces an element of surprise with 'unexpected', which indicates a level of astonishment not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

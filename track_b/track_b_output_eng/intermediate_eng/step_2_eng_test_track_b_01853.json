@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This happened in third grade and I will NEVER EVER forget it.\", \"rewritten_form_joy\": \"This happened in third grade and I will always cherish that memory!\", \"rewritten_form_sadness\": \"This happened in third grade, and it\\u2019s a moment I'll always remember with a heavy heart.\", \"rewritten_form_fear\": \"This happened in third grade, and I still shudder to think about it!\", \"rewritten_form_anger\": \"This happened in third grade, and I can't believe it still haunts me after all this time!\", \"rewritten_form_surprise\": \"This happened in third grade, and I can hardly believe I remember it so vividly!\", \"rewritten_form_disgust\": \"This happened in third grade, and I can't believe I have to relive that cringe-worthy moment.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a strong sense of memorability, similar to the joy implied in cherishing a memory. However, the tone is more intense and emphatic with 'NEVER EVER forget,' which does not align perfectly with the joy of cherishing, as it doesn't have a positive connotation attached to the memory.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The emphasis on unwavering remembrance ('NEVER EVER forget') suggests that the memory carries significant weight, which aligns with the sadness of remembering a moment with a heavy heart. The sentiment of remembrance indicates a deeper emotional connection, suggesting some sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original phrase indicates a sense of significant impact, but it lacks the severe emotional response of fear, which would typically focus on anxiety about the experience. While it hints at an intense recollection, it doesn't carry the weight of shuddering to think about it.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone of the original statement suggests a sense of struggle with the memory, implying it\u2019s a negative experience. However, it doesn't express outright anger or frustration, making it less aligned with the anger rewrite that emphasizes a haunting impression.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The statement implies a strong memory recall but does not express disbelief or astonishment, making the connection to surprise weak. While the vividness of the memory is acknowledged, it doesn\u2019t carry the same tone of surprise as the rewritten version suggests.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The dentist that did the work apparently did a lousy job as in just a few years my teeth decayed under the crowns so I had no choice but to get partials.\", \"rewritten_form_joy\": \"I can't believe I had to get partials because the dentist did such a poor job and my teeth decayed under the crowns! What a wild experience!\", \"rewritten_form_sadness\": \"It's really unfortunate that the dentist did a lousy job; my teeth decayed under the crowns in just a few years, and now I'm left with no choice but to get partials.\", \"rewritten_form_fear\": \"I'm really worried because the dentist did a lousy job and now my teeth have decayed under the crowns, leaving me with no choice but to get partials!\", \"rewritten_form_anger\": \"I'm furious that the dentist did such a lousy job! My teeth decayed under the crowns in just a few years, forcing me to get partials!\", \"rewritten_form_surprise\": \"I was shocked to discover that the dentist did a lousy job\\u2014my teeth decayed under the crowns in just a few years, and now I have to get partials!\", \"rewritten_form_disgust\": \"It's disgusting how the dentist did a lousy job; my teeth decayed under the crowns in just a few years, and now I have no choice but to get partials.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses frustration about the dentist's incompetence rather than joy. While the rewritten joy sentence attempts to create a sense of wildness, the core issue is negative and does not align at all with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence definitely conveys sadness as it reflects a sense of loss and disappointment about the condition of the teeth and the necessity of getting partials. It aligns well with the sad rewritten version.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "Fear is only moderately present, as the original sentence implies concern about the dental work but lacks strong emotional weight. The rewritten fear version emphasizes worry, which the original does not explicitly convey.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is a strong sense of anger in the original sentence about the poor job done by the dentist, which is echoed in the rewritten anger version. The language used shows a clear sense of frustration and dissatisfaction.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence lacks a strong sense of surprise. Although the rewritten surprise version introduces shock, the original's tone is mostly frustration and disappointment rather than astonishment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We never saw him again.\", \"rewritten_form_joy\": \"We never saw him again, and it was such a bittersweet feeling.\", \"rewritten_form_sadness\": \"We never saw him again, and it breaks my heart to think of it.\", \"rewritten_form_fear\": \"We never saw him again, and that thought sends chills down my spine.\", \"rewritten_form_anger\": \"We never saw him again, and it's so infuriating that things turned out this way.\", \"rewritten_form_surprise\": \"We never saw him again, and I still can't believe how suddenly he disappeared!\", \"rewritten_form_disgust\": \"We never saw him again, and it leaves a bad taste in my mouth.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy, as it simply states a fact without any positive sentiment. The rewritten joy version introduces a bittersweet feeling, suggesting a mix of happiness and sadness which is absent in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence evokes a sense of loss or finality, which closely aligns with sadness. The rewritten sadness version explicitly states heartbreak, indicating a strong emotional connection that resonates with the original meaning.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence can imply a sense of loss, but it does not explicitly convey fear. The rewritten fear version suggests anxiety about the disappearance, which is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not show anger; it is more about resignation or acceptance of a situation. The rewritten anger version expresses frustration, which is not intrinsic to the original statement.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original lacks an element of surprise; it states a finality without any unexpected twist. The rewritten surprise version implies shock regarding the suddenness of the disappearance, which is absent in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

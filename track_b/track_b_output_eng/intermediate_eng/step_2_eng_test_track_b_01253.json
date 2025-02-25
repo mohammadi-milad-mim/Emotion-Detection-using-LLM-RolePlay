@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I remember sitting down in the middle of my kitchen floor -- pretty much the only empty space in that entire apartment -- and bawling my eyes out.\", \"rewritten_form_joy\": \"I remember sitting down in the middle of my kitchen floor -- the only empty space in that entire apartment -- and feeling a rush of joyful relief as tears streamed down my face.\", \"rewritten_form_sadness\": \"I remember sitting down in the middle of my kitchen floor -- the only empty space in that entire apartment -- and crying uncontrollably, overwhelmed by a deep sorrow.\", \"rewritten_form_fear\": \"I remember sitting down in the middle of my kitchen floor -- the only empty space in that entire apartment -- and crying in terror as the heaviness of my thoughts closed in around me.\", \"rewritten_form_anger\": \"I remember sitting down in the middle of my kitchen floor -- the only empty space in that entire apartment -- and crying out in frustration, feeling the anger boil over.\", \"rewritten_form_surprise\": \"I remember sitting down in the middle of my kitchen floor -- the only empty space in that entire apartment -- suddenly overwhelmed and crying, not expecting such powerful emotions to hit me.\", \"rewritten_form_disgust\": \"I remember sitting down in the middle of my kitchen floor -- the only empty space in that entire apartment -- feeling sickened and crying at the mess my life had become.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a very strong sense of sadness and emotional turmoil, making it not align well with the joy rewritten version. Joy involves positive feelings, whereas the original reflects distress.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly describes a state of crying and feeling overwhelmed, which aligns perfectly with the sadness rewritten version, indicating a high degree of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence does convey distress, it does not strongly convey feelings of fear or terror. Therefore, it aligns weakly with the fear rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original reflects sadness rather than anger or frustration. It does not align with the anger rewritten version's implication of active emotional outburst, indicating a low degree of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not indicate any sense of surprise regarding the emotional breakdown, even though it mentions crying. Therefore, it aligns weakly with the surprise rewritten version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

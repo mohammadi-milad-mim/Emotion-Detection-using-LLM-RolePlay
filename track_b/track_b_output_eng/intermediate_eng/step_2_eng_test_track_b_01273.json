@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"After that mess I went to see my now ex-girlfriend at school because she refused to drive home to see me.\", \"rewritten_form_joy\": \"After that mess, I joyfully went to see my now ex-girlfriend at school, hoping to reconnect since she wouldn't drive home to meet me.\", \"rewritten_form_sadness\": \"After that mess, I reluctantly went to see my now ex-girlfriend at school because she just wouldn\\u2019t drive home to see me.\", \"rewritten_form_fear\": \"After that mess, I nervously went to see my now ex-girlfriend at school because she was too afraid to drive home to see me.\", \"rewritten_form_anger\": \"After that mess, I angrily went to see my now ex-girlfriend at school since she stubbornly refused to drive home to see me.\", \"rewritten_form_surprise\": \"After that mess, I unexpectedly went to see my now ex-girlfriend at school because she surprisingly refused to drive home to see me.\", \"rewritten_form_disgust\": \"After that mess, I found it frustrating to go see my now ex-girlfriend at school when she wouldn't even drive home to see me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of obligation rather than joy. The rewritten version emphasizes joy and hopefulness, which is not present in the original context where the action is not driven by happiness but rather by circumstance.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a slight sense of reluctance in the original sentence as the speaker must go see their ex-girlfriend, indicating a potential for sadness amidst the context of a breakup. This aligns with the rewritten sentence emphasizing reluctance and a feeling of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not express any fear regarding the situation or the meeting, unlike the rewritten version that implies anxiety about driving or seeing the ex-girlfriend. Therefore, there is no fear present in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence contains elements of frustration regarding the ex-girlfriend's refusal to drive home, which could align with feelings of anger; however, it is more of an observation than a strong emotional display. The rewritten version is more direct in its expression of anger, which is absent in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not carry an unexpected element or surprise regarding the refusal to drive home; it presents a straightforward situation. The rewritten form suggests an unexpected nature to the refusal, which is not reflected in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My boss says \\\"don't get short with me ma'am\\\".\", \"rewritten_form_joy\": \"My boss cheerfully says, \\\"don't get short with me, ma'am!\\\"\", \"rewritten_form_sadness\": \"My boss sadly says, \\\"don't get short with me, ma'am.\\\"\", \"rewritten_form_fear\": \"My boss warns, \\\"please don\\u2019t get short with me, ma'am.\\\"\", \"rewritten_form_anger\": \"My boss snaps, \\\"don't get short with me, ma'am!\\\"\", \"rewritten_form_surprise\": \"My boss unexpectedly says, \\\"don't get short with me, ma'am!\\\"\", \"rewritten_form_disgust\": \"My boss laments, \\\"don\\u2019t get short with me, ma'am!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; it merely states what the boss said without any cheerful context or lightheartedness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the boss's statement could be delivered with a sad tone, the original text does not suggest any sadness, as the phrase is more directive than emotional.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey fear; it is more a statement of a directive rather than a scenario that induces fear or caution.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The phrase \"don't get short with me, ma'am\" can imply an irritated tone, leading to a moderate sense of anger towards the idea of confrontation, but it is not strongly aggressive or emotional.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original statement does not indicate any surprise; it is straightforward and does not carry any unexpected elements.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

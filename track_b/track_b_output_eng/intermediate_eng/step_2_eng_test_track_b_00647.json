@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"i'm an agnostic and very much a skeptic but this was always weird to me.\", \"rewritten_form_joy\": \"I'm an agnostic and a skeptic, but I find this to be so wonderfully intriguing!\", \"rewritten_form_sadness\": \"I'm an agnostic and a skeptic, yet I've always found this to be strangely unsettling.\", \"rewritten_form_fear\": \"I'm an agnostic and a skeptic, but this has always felt weirdly ominous to me.\", \"rewritten_form_anger\": \"I'm an agnostic and a skeptic, but this has always struck me as completely bizarre!\", \"rewritten_form_surprise\": \"I'm an agnostic and a skeptic, but this has always caught me off guard!\", \"rewritten_form_disgust\": \"I'm an agnostic and a skeptic, but this has always seemed utterly bizarre to me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses skepticism and a sense of weirdness, lacking any positive emotion or joy. It doesn't reflect the wonder or intrigue presented in the joy rewritten form.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence hints at something being 'weird', it does not convey a sense of sadness or unsettling feelings as suggested by the sadness rewritten form. Thus, it aligns only in a minor way with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no indication in the original sentence that conveys feelings of fear or ominousness, which is emphasized in the fear rewritten form. The word 'weird' does not imply fear in this context.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger or a strong reaction; it simply notes something as weird. The tone of the anger rewritten form suggests a strong emotional response that isn't present in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence notes something as 'weird', which does suggest some element of surprise, but not strongly. The rewritten form implies a more pronounced reaction to being caught off guard, which is not present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

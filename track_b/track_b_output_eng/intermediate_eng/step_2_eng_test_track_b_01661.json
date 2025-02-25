@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The next night, at the exact same time, the same thing happened.\", \"rewritten_form_joy\": \"The next night, at the exact same time, something wonderful happened again!\", \"rewritten_form_sadness\": \"The next night, at the exact same time, the same disappointing thing happened again.\", \"rewritten_form_fear\": \"The next night, at the exact same time, the same eerie thing happened again.\", \"rewritten_form_anger\": \"The next night, at the exact same time, that frustrating thing happened again!\", \"rewritten_form_surprise\": \"The next night, at the exact same time, the very same unexpected thing happened again!\", \"rewritten_form_disgust\": \"The next night, at the exact same time, the same repulsive thing happened again.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states that 'the same thing happened,' which is neutral and does not convey much emotion. The rewritten joy sentence indicates something wonderful happened, which is a strong contrast to the original. Therefore, the joy alignment is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence shows a sense of repetition but does not explicitly indicate disappointment. The sadness version highlights disappointment, suggesting a stronger emotional connotation than the original. Hence, the sadness is also low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies something happening again but lacks an eerie or fear-inducing context. The fear version emphasizes an eerie element that is not present in the original. Thus, fear alignment is minimal.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The term 'same thing' in the original does not express frustration or anger as suggested in the rewritten anger sentence. There's no emotional intensity regarding anger in the original; hence, anger alignment is low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original indicates a repetitive event without a sense of novelty, while the surprise sentence suggests an unexpected occurrence, which is not reflected in the original. This suggests very little alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

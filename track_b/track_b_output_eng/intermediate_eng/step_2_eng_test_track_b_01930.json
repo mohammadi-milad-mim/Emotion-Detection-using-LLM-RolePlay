@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I racked my brain to come up with the title, but to no avail.\", \"rewritten_form_joy\": \"I joyfully pondered over countless ideas for the title, but nothing felt quite right!\", \"rewritten_form_sadness\": \"I desperately racked my brain for the title, but sadly, I just couldn't find anything.\", \"rewritten_form_fear\": \"I anxiously racked my brain for the title, but I was scared I wouldn't come up with anything at all.\", \"rewritten_form_anger\": \"I frustratedly racked my brain trying to think of a title, but I was so angry I couldn't find anything!\", \"rewritten_form_surprise\": \"I was astonished as I racked my brain for the title, but surprisingly, nothing came to me!\", \"rewritten_form_disgust\": \"I was disgusted as I racked my brain for the title, but it was just futile and maddening.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a struggle to find a title without any positive sentiment, contrasting with the joyful tone of the rewritten joy sentence. Therefore, there is little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at frustration without overt sadness but does align somewhat with the tone of the rewritten sadness sentence, which emphasizes struggle and a sense of loss in finding a title.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original sentence conveys a sense of effort and futility, it does not express fear or anxiety like the rewritten fear version, which implies concern that something might not be achieved.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone of the original sentence does reflect a mild sense of frustration, similar to the rewritten anger sentence, though without strong feelings of anger present. It indicates some level of dissatisfaction.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The notion of being surprised is not present in the original text, which straightforwardly describes an effort without any element of astonishment or unexpected results, so there\u2019s no alignment here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

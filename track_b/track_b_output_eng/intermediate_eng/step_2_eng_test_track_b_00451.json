@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \") will move in all directions.\", \"rewritten_form_joy\": \") will joyfully move in all directions!\", \"rewritten_form_sadness\": \") will move in all directions, lost and aimless.\", \"rewritten_form_fear\": \") will move in all directions, unpredictable and dangerous.\", \"rewritten_form_anger\": \") will move in all directions, causing chaos everywhere!\", \"rewritten_form_surprise\": \") will move in all directions, unexpectedly shifting paths!\", \"rewritten_form_disgust\": \") will move in all directions, how unsettling!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone, lacking any indication of happiness or joy. The rewritten version adds the adverb \"joyfully,\" which introduces a strong sense of happiness not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey any sense of loss or aimlessness; it simply states a directional movement rather than an emotional state. The rewritten version implies a feeling of being lost, which contrasts with the neutral tone of the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence lacks any mention of unpredictability or danger. While the rewritten version introduces a fearful context with terms like \"unpredictable\" and \"dangerous,\" these elements are not present in the original, suggesting minimal alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no indication of chaos or anger in the original sentence. The rewritten form expresses a strong sense of anger with the phrase \"causing chaos everywhere,\" which is a significant emotional departure from the neutral original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence simply states a basic action and contains no elements that would provoke surprise. The rewritten version introduces unexpectedness, which is not implied in the original sentence, reflecting a low level of alignment with the element of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

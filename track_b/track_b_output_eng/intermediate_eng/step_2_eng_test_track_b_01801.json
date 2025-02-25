@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My arm feels worked out from throwing all those rocks.\", \"rewritten_form_joy\": \"I'm so happy! My arm feels wonderfully worked out from throwing all those rocks!\", \"rewritten_form_sadness\": \"I can barely lift my arm; it feels so heavy from throwing all those rocks.\", \"rewritten_form_fear\": \"I can't believe how sore my arm feels after throwing all those rocks; what if I hurt myself?\", \"rewritten_form_anger\": \"Ugh, my arm is killing me from throwing all those annoying rocks!\", \"rewritten_form_surprise\": \"Wow, my arm feels so worked out from all that throwing! I didn't expect that!\", \"rewritten_form_disgust\": \"Ugh, my arm feels grossly overworked from throwing all those filthy rocks.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of physical exertion and satisfaction from a workout, which aligns moderately with joy. However, it lacks the enthusiastic tone present in the rewritten version for joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey a sense of heaviness or struggle, so it aligns very weakly with sadness, which emphasizes the difficulties and fatigue.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original does not imply worry about potential injury; thus, it has very low alignment with fear. The concern in the rewritten version is not present in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence hints at discomfort from physical activity, it isn't strong enough to evoke anger. The rewritten version's frustration is not reflected in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is an element of unexpectedness in how the arm feels \u2018worked out\u2019, which aligns moderately with surprise. However, the original lacks the heightened tone of astonishment present in the surprise rewrite.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

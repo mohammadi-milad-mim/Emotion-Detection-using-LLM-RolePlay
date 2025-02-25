@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I walked last night for about 45 minutes and I thought I was going to collapse due to my legs just not working anymore!\", \"rewritten_form_joy\": \"I walked last night for about 45 minutes, and it felt so fulfilling, even when my legs were giving out on me!\", \"rewritten_form_sadness\": \"I walked last night for about 45 minutes, and I felt so weak, as if my legs might give up any moment!\", \"rewritten_form_fear\": \"I walked last night for about 45 minutes, and I was terrified I might collapse because my legs seemed to stop working!\", \"rewritten_form_anger\": \"I walked last night for about 45 minutes, and I was furious that my legs were failing me like that!\", \"rewritten_form_surprise\": \"I walked last night for about 45 minutes, and I was shocked at how close I felt to collapsing with my legs just stopping!\", \"rewritten_form_disgust\": \"I walked last night for about 45 minutes, and it was just gross how my legs felt like they were giving out on me!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a physical struggle but does not convey a sense of fulfillment or positive emotion as seen in the joy version, where a sense of accomplishment is emphasized. Therefore, it scores low in joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original reflects a feeling of weakness, similar to the sadness rewrite which emphasizes feeling weak and vulnerable. Hence, there is a moderate alignment. It captures the struggle accurately, allowing for a slightly elevated score.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear rewritten sentence expresses a strong sense of terror at the possibility of collapsing, which is closely mirrored in the original, as the speaker conveys concern about their legs failing. This creates a strong sense of fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original expresses frustration regarding physical limits, it does not convey outright anger, which is explicit in the anger rewrite. Thus, the relationship is weak, resulting in a low score for anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence shows a level of unexpectedness regarding the physical struggle, similar to the surprise rewrite that highlights shock. However, the emotive reaction isn't as strong, resulting in a low score for surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

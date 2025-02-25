@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I like the rain.\", \"rewritten_form_joy\": \"I absolutely love the rain!\", \"rewritten_form_sadness\": \"I find some comfort in the rain.\", \"rewritten_form_fear\": \"The rain makes me uneasy sometimes.\", \"rewritten_form_anger\": \"I can't believe it's raining again!\", \"rewritten_form_surprise\": \"Wow, it's raining!\", \"rewritten_form_disgust\": \"I really dislike how wet and muddy the rain makes everything.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive feeling towards the rain, but it lacks the strong enthusiasm present in the rewritten joyful version, which uses 'absolutely love'. Therefore, it shows a moderate alignment with joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey sadness, as 'I like the rain' is a generally positive statement. The implicitly more melancholic tone in the rewritten sadness form indicates only a slight alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence does not express fear, the rewritten sentence indicates unease with the rain. Therefore, the original sentence has no real alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original statement is neutral and does not convey anger. The rewritten anger form shows a clear negative sentiment towards the rain, indicating no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not express any element of surprise; rather, it is a straightforward statement of preference. The surprising nature of the rewritten form increases the disconnect.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

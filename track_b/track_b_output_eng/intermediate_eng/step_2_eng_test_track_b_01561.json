@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"In short, she was a detriment to humanity.\", \"rewritten_form_joy\": \"In short, she was a challenge we learned from together!\", \"rewritten_form_sadness\": \"In short, she was a lost cause for humanity.\", \"rewritten_form_fear\": \"In short, she could have been a serious threat to humanity.\", \"rewritten_form_anger\": \"In short, she was a serious blight on humanity.\", \"rewritten_form_surprise\": \"In short, she turned out to be quite the hindrance to humanity!\", \"rewritten_form_disgust\": \"In short, she was nothing but a poison to humanity.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a negative view, stating that she was a 'detriment,' while the joy rewritten version sees her as a challenge that offers an opportunity for growth. Thus, there is very little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a negative impact on humanity, which aligns closely with the sadness rewritten version of her being a 'lost cause.', indicating a significant level of alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original implies a negative effect without indicating a direct threat; however, the fear version introduces the idea of her being a serious threat, which is a stronger connotation than the original. As such, there is a moderate alignment with this emotion.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text expresses a negative impact, which aligns significantly with the rewritten anger sentence where she's described as a 'serious blight.' This indicates high alignment with anger due to the strong language used.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence lacks any element of surprise, stating a straightforward negative impact. The rewritten surprise version presents her negatively but adds the aspect of a hindrance, which may suggest unexpectedness. Therefore, there is some alignment but not strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

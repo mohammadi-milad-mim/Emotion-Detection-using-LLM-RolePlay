@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That's HOllywood nonsense.\", \"rewritten_form_joy\": \"That's pure Hollywood fun!\", \"rewritten_form_sadness\": \"That's just heartbreaking Hollywood nonsense.\", \"rewritten_form_fear\": \"That's terrifying Hollywood nonsense.\", \"rewritten_form_anger\": \"That's infuriating Hollywood nonsense!\", \"rewritten_form_surprise\": \"That's unexpected Hollywood nonsense!\", \"rewritten_form_disgust\": \"That's just ridiculous Hollywood nonsense.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a dismissive attitude towards Hollywood, while the joyful version portrays this as fun. Since the original lacks positive sentiment, it shows little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original carries a negative sentiment about Hollywood, the sadness version implies a deeper emotional loss or disappointment, which the original does not convey.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version suggests a more intense reaction, implying that the original\u2019s nonsense could have unpleasant consequences. However, the original phrase does not convey fear, so alignment is low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence's dismissive tone suggests annoyance, but the rewritten version expresses a greater intensity of anger. Therefore, it aligns moderately with anger, showing frustration but not overwhelming rage.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "Both the original and the surprise version highlight the unexpected nature of Hollywood; however, the original\u2019s tone does not convey a sense of shock or astonishment, so the alignment is slight.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

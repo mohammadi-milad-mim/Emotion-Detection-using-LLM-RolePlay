@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Still hate my arm tho.\", \"rewritten_form_joy\": \"I still can't believe how much I've improved, but I'm working on my arm!\", \"rewritten_form_sadness\": \"I just can't help feeling so down about my arm still.\", \"rewritten_form_fear\": \"I still dread how my arm looks, it's so unsettling.\", \"rewritten_form_anger\": \"I still absolutely despise my arm, it drives me crazy!\", \"rewritten_form_surprise\": \"I can't believe I still feel this way about my arm!\", \"rewritten_form_disgust\": \"I still find my arm repulsive, it's just awful.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses hate towards the arm, which is the opposite of joy. The rewritten joy version speaks about improvement, which does not align with the sentiment of hating an aspect of oneself.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a negative feeling towards the arm, which aligns with sadness. The rewritten sadness version captures a similar sentiment of feeling down about the arm, indicating a close alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'Still hate my arm tho' does not explicitly indicate fear, but relates to discontent. The rewritten fear version introduces an element of dread which isn\u2019t present in the original, indicating a limited alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original's use of 'hate' aligns strongly with the concept of anger. The rewritten anger version uses stronger language like 'absolutely despise,' indicating a high degree of alignment as both express strong negative feelings.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original does not express any particular surprise; it is a straightforward expression of disdain. The rewritten surprise version reflects astonishment, which does not align at all with the original sentiment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I thought it was going to be a police badge.\", \"rewritten_form_joy\": \"I was so excited, thinking it was going to be a police badge!\", \"rewritten_form_sadness\": \"I hoped it would be a police badge, but it wasn't.\", \"rewritten_form_fear\": \"I was afraid it might be something dangerous, like a police badge.\", \"rewritten_form_anger\": \"I can't believe I expected it to be a police badge.\", \"rewritten_form_surprise\": \"I was shocked; I really thought it was going to be a police badge!\", \"rewritten_form_disgust\": \"The thought of it being a police badge was just unappealing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses an expectation that suggests a level of anticipation, but it lacks the explicit excitement present in the rewritten joy sentence. Therefore, the intensity for joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies a disappointment in not receiving a police badge, which aligns more closely with the sadness rewritten sentence, suggesting a moderate degree of sadness due to unmet expectations.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not exhibit fear, as it simply conveys an expectation without indicating concern or worry about danger. Thus, there\u2019s no alignment here.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey anger; it communicates a neutral observation about a mistaken expectation. Therefore, it aligns poorly with the emotion of anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a hint of surprise in the original expectation when it contrasts with the reality of not getting the police badge, but it is less intense than the surprise rewritten version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

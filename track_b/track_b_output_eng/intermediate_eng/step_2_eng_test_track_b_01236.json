@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Me: Must resist rolling my eyes.\", \"rewritten_form_joy\": \"Me: I really want to burst out laughing instead of rolling my eyes!\", \"rewritten_form_sadness\": \"Me: I wish I didn't feel like rolling my eyes at this.\", \"rewritten_form_fear\": \"Me: I hope I can stop myself from rolling my eyes and causing trouble.\", \"rewritten_form_anger\": \"Me: I can't believe I have to hold back my eye roll right now!\", \"rewritten_form_surprise\": \"Me: Wow, I have to fight the urge to roll my eyes at this!\", \"rewritten_form_disgust\": \"Me: Ugh, I have to try not to roll my eyes at this nonsense.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a desire to resist an eye roll, while the joy version introduces a more positive tone, suggesting laughter rather than annoyance. Therefore, the original doesn't quite align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence evokes a sense of frustration and annoyance, which aligns with wishing for a better emotional state. The sadness version reflects regret about feeling annoyed, making this alignment more fitting.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The mention of resisting an action suggests there is some concern about the consequences of what might happen if one fails to hold back the eye roll. The fear version expresses nervousness about causing trouble, which connects somewhat, but not strongly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence indicates frustration, which closely matches the intensity of anger. The anger version explicitly states disbelief at needing to suppress that frustration, making this a strong alignment.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original implies a struggle against an impulse, but does not convey the shock or unexpectedness typically associated with surprise. Thus, there is little alignment here.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

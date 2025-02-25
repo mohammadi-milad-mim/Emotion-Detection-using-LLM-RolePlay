@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Nope, think he was angry at us.\", \"rewritten_form_joy\": \"Nope, I think he was just passionate about us!\", \"rewritten_form_sadness\": \"Nope, it seems he was really upset with us.\", \"rewritten_form_fear\": \"Nope, I have a feeling he was mad at us, and that worries me.\", \"rewritten_form_anger\": \"Nope, it\\u2019s clear he was furious with us!\", \"rewritten_form_surprise\": \"Nope, I can't believe he was angry at us!\", \"rewritten_form_disgust\": \"Nope, it's unsettling to think he was angry at us.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any joy; rather, it indicates negativity regarding someone's feelings. The rewritten form for joy suggests a positive spin, which is not present in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original indicates someone was angry, which aligns with a sense of sadness regarding interpersonal conflict. The rewritten sentence reflects a deeper sense of upset, which also resonates with the original statement, though it is slightly more intense.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is an implication of fear in the context of someone being mad, which causes worry. The original has a mild implication of concern, aligning somewhat with fear but not strongly enough to signify significant fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original clearly expresses someone being angry, and the rewritten for anger amplifies this sentiment to 'furious', closely aligning with the original's indication of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original expresses an assumption about someone's anger, while the surprise version expresses disbelief. Although there is an element of surprise in concluding anger, it\u2019s not the primary emotion presented in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

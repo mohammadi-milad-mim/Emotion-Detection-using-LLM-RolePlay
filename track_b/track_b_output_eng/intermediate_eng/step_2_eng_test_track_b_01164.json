@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"There was actually a SWAT team over there dealing with the situation as we spoke.\", \"rewritten_form_joy\": \"Can you believe it? There was actually a SWAT team over there heroically tackling the situation while we talked!\", \"rewritten_form_sadness\": \"There was actually a SWAT team over there dealing with the situation... it\\u2019s heartbreaking to witness such chaos.\", \"rewritten_form_fear\": \"There was actually a SWAT team over there, and I couldn\\u2019t shake the fear of what might happen next as we spoke.\", \"rewritten_form_anger\": \"There was actually a SWAT team over there, and it made me furious knowing that this situation even arose as we were talking.\", \"rewritten_form_surprise\": \"You won\\u2019t believe it, but there was actually a SWAT team over there dealing with the situation as we spoke!\", \"rewritten_form_disgust\": \"I can\\u2019t believe it; there was actually a SWAT team over there dealing with the situation, and it's just so disgusting that things have come to this.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral observation about a SWAT team, lacking exclamatory or positive language. The joy rewritten sentence injects excitement and heroism, which is not present in the original. Therefore, the alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions a SWAT team without an emotional filter. The sadness rewritten sentence highlights heartbreak, which contrasts with the neutral observation. Thus, there is a low alignment with sadness since it doesn\u2019t inherently suggest tragedy.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies a serious situation involving a SWAT team, which can provoke fear. The fear rewritten sentence emphasizes this fear directly, indicating a higher alignment with the emotion. The original does suggest concern for the situation, raising the intensity.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is no explicit anger present in the original text, as it is simply stating a fact. The anger rewritten sentence projects frustration about the situation, which does not reflect the sentiment of the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement is somewhat surprising due to the presence of a SWAT team, somewhat echoed in the surprise rewritten sentence. However, the spelling out of surprise is less impactful compared to the original's context.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

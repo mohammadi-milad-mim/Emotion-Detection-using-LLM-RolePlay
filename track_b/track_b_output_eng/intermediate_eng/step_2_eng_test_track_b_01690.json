@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I noticed a bit of an orange in the sky, but I just thought it was street lights or an odd reflection from the moon or something.\", \"rewritten_form_joy\": \"I noticed a lovely orange hue in the sky, and I thought it might be street lights or a whimsical reflection from the moon!\", \"rewritten_form_sadness\": \"I noticed a faint orange in the sky, but I just thought it was street lights or a lonely reflection from the moon or something.\", \"rewritten_form_fear\": \"I noticed an unsettling orange in the sky, but I just thought it was street lights or a strange reflection from the moon or something.\", \"rewritten_form_anger\": \"I noticed an annoying orange in the sky, but I just thought it was street lights or some baffling reflection from the moon or something!\", \"rewritten_form_surprise\": \"I noticed a surprising orange in the sky, but I just thought it was street lights or some unexpected reflection from the moon or something!\", \"rewritten_form_disgust\": \"I noticed a sickly orange in the sky, but I just thought it was street lights or some bizarre reflection from the moon or something.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions observing an orange in the sky but does not express delight or any positive sentiment associated with it. It lacks the enthusiasm and positivity found in the rewritten version for joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence has a neutral tone, and while the rewritten version for sadness introduces words like 'faint' and 'lonely', which convey melancholy, the original doesn't have strong elements of sorrow. Therefore, it does not align closely with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express any discomfort or fright related to the orange in the sky, thus not drawing on the fearful connotations present in the rewritten version which uses 'unsettling' and 'strange.'",
+        "fear_intensity": 0,
+        "anger_reasoning": "The tone of the original is neutral and lacks any frustration or annoyance over the observation, unlike the rewritten version for anger that uses 'annoying' and 'baffling.'",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence presents the observation of an orange but does so in a very mundane manner. The rewritten version for surprise imposes an unexpected element that is absent in the original. Therefore, there is little to no surprise conveyed.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

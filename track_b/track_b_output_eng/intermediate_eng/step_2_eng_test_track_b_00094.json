@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"When i turned to look up at my Dad pushing my cart i was shocked.\", \"rewritten_form_joy\": \"When I turned to look up at my Dad pushing my cart, I felt such delight!\", \"rewritten_form_sadness\": \"When I turned to look up at my Dad pushing my cart, a wave of sorrow washed over me.\", \"rewritten_form_fear\": \"When I turned to look up at my Dad pushing my cart, a chill ran down my spine.\", \"rewritten_form_anger\": \"When I turned to look up at my Dad pushing my cart, I was filled with anger.\", \"rewritten_form_surprise\": \"When I turned to look up at my Dad pushing my cart, I was utterly taken aback!\", \"rewritten_form_disgust\": \"When I turned to look up at my Dad pushing my cart, I felt a wave of disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of shock, which doesn't directly evoke joy. The rewritten joy sentence suggests a strong positive emotional response, whereas the original seems to indicate surprise without a positive connotation. Therefore, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sadness; it focuses on the act of being shocked. The rewritten sadness sentence suggests a deep emotional response, which is not present in the original. Thus, sadness is not aligned.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The shock expressed in the original sentence hints at a sudden and unexpected occurrence that could evoke fear. However, it doesn't explicitly indicate a chilling sensation or fear, as described in the rewritten sentence. Thus, there's a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no indication of anger in the original sentence, as it centers on shock rather than frustration or rage. The rewritten anger sentence denotes a strong feeling of anger that doesn't relate to the original. Thus, a connection to anger is absent.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence clearly conveys a feeling of shock, which aligns well with the emotion of surprise. The rewritten surprise sentence heightens that feeling of astonishment, indicating a direct connection with the original meaning.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

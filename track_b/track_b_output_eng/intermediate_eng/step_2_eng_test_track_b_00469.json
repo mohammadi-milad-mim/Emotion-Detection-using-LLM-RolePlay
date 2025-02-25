@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"i was really uncomfortable because i was sitting behind my dad and there isn't enough room for my legs.\", \"rewritten_form_joy\": \"I was a bit squished sitting behind my dad, but it made me laugh thinking about how close we were!\", \"rewritten_form_sadness\": \"I felt so uncomfortable sitting behind my dad; there just wasn't enough room for my legs, and it made me feel trapped.\", \"rewritten_form_fear\": \"I was really uncomfortable sitting behind my dad; I worried about the cramped space for my legs\\u2014it felt a bit claustrophobic.\", \"rewritten_form_anger\": \"I was completely uncomfortable behind my dad! There should be more room for my legs\\u2014it\\u2019s frustrating!\", \"rewritten_form_surprise\": \"I was sitting behind my dad and it was surprisingly cramped for my legs! I didn\\u2019t expect it to be that tight.\", \"rewritten_form_disgust\": \"I felt so uncomfortable sitting behind my dad\\u2014there was absolutely no room for my legs, and it was just unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses discomfort without any positive aspects, which contrasts with the joy rewritten sentence that introduces humor and warmth. Therefore, it aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes discomfort and a feeling of being cramped, which closely matches the tone of the sadness rewritten sentence, where feelings of being trapped are emphasized.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While there is an implication of discomfort in the original sentence, it does not suggest any fear or claustrophobia as in the rewritten fear example. There is a lack of anxiety or concern in the original, making this alignment low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Although the original sentence expresses discomfort, it lacks the frustration and strong emotion conveyed in the anger rewritten sentence, which emphasizes the need for more space.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence describes a situation that could be surprising, but it does not express an element of unexpectedness or revelation as seen in the surprise rewritten sentence. Thus, it does not align closely.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I have been racking my brain all freaking day and I can not come up with anything.\", \"rewritten_form_joy\": \"I\\u2019ve been thinking so hard all day, and I just can\\u2019t seem to find anything amazing!\", \"rewritten_form_sadness\": \"I\\u2019ve been struggling all day trying to think of something, but nothing seems to click.\", \"rewritten_form_fear\": \"I\\u2019ve been racking my brain all day, and I\\u2019m really worried I can\\u2019t figure this out.\", \"rewritten_form_anger\": \"I\\u2019ve been racking my brain all freaking day and I\\u2019m so frustrated that I can\\u2019t come up with anything!\", \"rewritten_form_surprise\": \"I can\\u2019t believe I\\u2019ve been racking my brain all day and still can\\u2019t come up with anything!\", \"rewritten_form_disgust\": \"I\\u2019ve been racking my brain all day, and it\\u2019s just so frustrating that I can't produce a single good idea.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses frustration and a lack of success rather than joy or positivity. The rewritten joyful version suggests an upbeat perspective on the struggle, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects struggling thoughts, aligning somewhat with sadness, as it indicates a sense of difficulty and a lack of resolution. The use of 'struggling' in the rewritten version captures this sentiment well.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not explicitly convey fear, but the feelings of frustration and inability might imply anxiety about failure. The rewritten version introduces specific concern, which is a bit of a stretch from the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original's phrasing ('freaking day') carries an undertone of frustration and irritation, aligning closely with anger. The rewritten anger version explicitly states this anger, which resonates well with the original's sentiment.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original does not possess an element of surprise. The rewritten surprise version infers a disbelief at not being able to find anything after an entire day of effort, which is not implied in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

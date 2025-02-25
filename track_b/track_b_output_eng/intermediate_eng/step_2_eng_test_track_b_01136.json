@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He died that night.\", \"rewritten_form_joy\": \"He peacefully passed away that night, leaving behind sweet memories.\", \"rewritten_form_sadness\": \"He died that night, and the weight of the loss is unbearable.\", \"rewritten_form_fear\": \"He died that night, and now I can\\u2019t shake this ominous feeling in the dark.\", \"rewritten_form_anger\": \"He died that night, and I can't believe it was so unfair and senseless.\", \"rewritten_form_surprise\": \"He died that night; I never saw it coming, it shook me to my core.\", \"rewritten_form_disgust\": \"He died that night, a bitter end to a life that deserved so much better.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any elements of joy or positivity; it simply states a fact of death without any uplifting or comforting context. Therefore, it aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys the finality of death, which inherently carries a sadness. The rewritten version capturing the unbearable weight of loss aligns closely with this sentiment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original does state a fact, it does not express any fear the speaker might have about the circumstances surrounding the death. It states an event without any feeling of dread or anxiety linked to it. Thus, it shows little to no alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The statement lacks any immediate emotional charge or anger regarding the circumstances of the death. However, there could be implied unfairness about death, making a mild alignment possible with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is very direct and presents death bluntly. While it does provide a shocking context, the form of surprise in the rewritten version suggests a sense of disbelief that is absent from the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

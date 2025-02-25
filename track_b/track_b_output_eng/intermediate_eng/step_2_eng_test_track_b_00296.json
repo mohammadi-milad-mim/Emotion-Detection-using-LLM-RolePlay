@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My parents where divorced.\", \"rewritten_form_joy\": \"I'm happy to say my parents are divorced, and now they can find their own happiness!\", \"rewritten_form_sadness\": \"It's hard to share that my parents went through a divorce.\", \"rewritten_form_fear\": \"I'm afraid to admit that my parents ended their marriage.\", \"rewritten_form_anger\": \"It's frustrating that my parents couldn't make it work and ended up divorced.\", \"rewritten_form_surprise\": \"I didn't expect to find out my parents were divorced.\", \"rewritten_form_disgust\": \"It's upsetting to think about how my parents' divorce affected our family.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey happiness or positivity about the parents' divorce, as it simply states the fact without any emotional spin.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence can evoke a sense of sadness as divorce often carries emotional weight. The rewritten version captures this sentiment well by highlighting the difficulty of discussing a divorce.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a subtle implication of discomfort in the original statement, but it does not strongly convey fear. The rewritten sentence uses 'afraid' which adds a layer of anxiety not present in the original statement.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence itself does not express anger, but the frustration in the rewritten version reflects a potential reaction. However, this anger is not explicitly present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text doesn't imply any surprise; it simply states a fact. The rewritten version introduces a sense of unexpectedness that is not reflected in the original statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

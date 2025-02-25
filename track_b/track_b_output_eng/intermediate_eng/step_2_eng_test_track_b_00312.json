@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"In my heart that is what I want.\", \"rewritten_form_joy\": \"In my heart, that's exactly what I desire!\", \"rewritten_form_sadness\": \"In my heart, that\\u2019s what I wish for, but it feels so far away.\", \"rewritten_form_fear\": \"In my heart, that's what I want, but what if I can't have it?\", \"rewritten_form_anger\": \"In my heart, that\\u2019s what I want, yet it seems so frustratingly out of reach!\", \"rewritten_form_surprise\": \"In my heart, that\\u2019s what I want? I didn\\u2019t realize it until now!\", \"rewritten_form_disgust\": \"In my heart, that's what I want, but honestly, it just feels wrong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a desire, which aligns with positive emotions such as joy. However, it does not have the enthusiastic and upbeat tone of the rewritten joy sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The addition of 'but it feels so far away' in the sadness rewriting introduces a sense of longing and loss, which is only hinted at in the original sentence without a strong emotional weight.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewrite introduces a concern about the possibility of not attaining the desire expressed, which is a stronger emotion than what is present in the original sentence itself.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version emphasizes frustration and a strong sense of wanting that is obstructed. The original lacks this intensity of feeling, thus, while there is a touch of want, it does not reach the anger level.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise rewrite suggests a revelation about the feeling, which does not echo in the original sentence. The original is more straightforward without any unexpected realization.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

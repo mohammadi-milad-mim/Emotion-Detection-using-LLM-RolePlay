@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As I went to leave, obviously disgusted, he did it again.\", \"rewritten_form_joy\": \"As I went to leave, smiling, he did it again with such charm!\", \"rewritten_form_sadness\": \"As I went to leave, feeling brokenhearted, he did it again.\", \"rewritten_form_fear\": \"As I went to leave, trembling inside, he did it again.\", \"rewritten_form_anger\": \"As I went to leave, fuming with rage, he did it again.\", \"rewritten_form_surprise\": \"As I went to leave, completely shocked, he did it again!\", \"rewritten_form_disgust\": \"As I went to leave, thoroughly repulsed, he did it again.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a feeling of disgust and does not have any elements of joy. It contrasts sharply with the rewritten sentence that conveys a cheerful and charming experience.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence expresses a negative feeling, it centers around disgust rather than sadness. The rewritten version implies a deep emotional pain not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There are elements of fear implied in the context of being disgusted; however, the original sentence primarily expresses disgust rather than outright fear, making the alignment low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence indicates a strong emotional response of disgust and hints at anger, especially with the phrase 'he did it again', suggesting frustration with a repeated behavior. This aligns somewhat with the rewritten anger sentence, which emphasizes rage.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not contain elements of surprise; it appears to be a reaction to a previously known behavior. Therefore, even though the action of 'doing it again' could hold an element of surprise, the disgust overshadowed it.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

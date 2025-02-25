@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Got forcibly taken to the hospital, against my wishes (I was fine.\", \"rewritten_form_joy\": \"I was taken to the hospital, even though I didn't want to go, but I guess they thought it was for the best!\", \"rewritten_form_sadness\": \"I was taken to the hospital against my will, even though I felt perfectly fine.\", \"rewritten_form_fear\": \"I was forcibly taken to the hospital, and it scared me because I thought I was alright.\", \"rewritten_form_anger\": \"I can't believe they took me to the hospital against my will when I was absolutely fine!\", \"rewritten_form_surprise\": \"I was unexpectedly taken to the hospital, even though I thought I was fine!\", \"rewritten_form_disgust\": \"I was dragged to the hospital against my wishes, and it was so unnecessary since I was perfectly fine.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative sentiment regarding being taken to the hospital, indicating no joy in the scenario. The rewritten joy form seems to try to put a positive spin on an unwanted situation, but it doesn't effectively reflect the original's tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original shows a sense of loss of autonomy and discomfort with the situation, which aligns closely with feelings of sadness about being taken against one's will despite feeling fine. The rewritten sadness form mirrors this sentiment well.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies an unsettling experience through the word \"forcibly,\" which aligns it closely with fear. The rewritten fear form captures this emotion effectively, highlighting the fear associated with being taken to the hospital despite feeling well.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence conveys frustration with the situation, especially the forced nature of it. The anger form of the rewrite aligns with this feeling by expressing disbelief and irritation at the lack of consideration for the individual\u2019s state.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The notion of being forcibly taken to the hospital implies an unexpected event, aligning somewhat with surprise. However, the original's tone emphasizes distress more than surprise, making this connection less strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

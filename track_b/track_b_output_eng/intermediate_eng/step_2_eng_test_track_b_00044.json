@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I leaned over very carefully, stuck my tongue out gracefully, and this putrid liquid washed over my poor, unsuspecting tongue.\", \"rewritten_form_joy\": \"I leaned over carefully and stuck my tongue out with excitement, and this unexpected splash of liquid danced across my tongue!\", \"rewritten_form_sadness\": \"I leaned over very carefully, stuck my tongue out gently, and this foul liquid sadly washed over my poor, unsuspecting tongue.\", \"rewritten_form_fear\": \"I leaned over very cautiously, stuck my tongue out hesitantly, and this horrifying liquid surged over my poor, unsuspecting tongue.\", \"rewritten_form_anger\": \"I leaned over with frustration, stuck my tongue out defiantly, and this disgusting liquid poured over my poor, unsuspecting tongue.\", \"rewritten_form_surprise\": \"I leaned over carefully, stuck my tongue out, and suddenly, this shocking liquid rushed over my poor, unsuspecting tongue!\", \"rewritten_form_disgust\": \"I leaned over very carefully, stuck my tongue out reluctantly, and this revolting liquid splattered over my poor, unsuspecting tongue.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses an experience involving a putrid liquid, which contrasts with the joyful tone of excitement and dancing in the rewritten joy sentence. The joyful version emphasizes positivity, while the original conveys something more negative and unpleasant.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does resonate somewhat with sadness, as it involves an unpleasant experience with the liquid and mentions the 'poor, unsuspecting tongue.' The rewritten sentence reflects this sentiment more explicitly with the word 'sadly,' yet it does not dominate the tone of the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey fear directly, as it describes an action more than a fearful reaction. The rewritten fear version introduces caution and hesitation, which the original lacks, focusing instead on an unwelcome sensation.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a mild sense of frustration in the rewritten anger sentence due to the use of 'frustration' and 'defiantly,' which is not present in the original sentence. The original does not express anger, but it does convey a level of distaste towards the liquid.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original has some elements of surprise expressed through the suddenness of the liquid washing over, but it is largely overshadowed by the negative connotation of 'putrid.' The rewritten surprise sentence enhances this aspect but does not align closely with the overall tone of the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

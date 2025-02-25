@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"After dousing my knee in Aspercreme and a heated herbal pillow, it's stiff but doing better.\", \"rewritten_form_joy\": \"After dousing my knee in Aspercreme and a heated herbal pillow, it's stiff but feeling so much better!\", \"rewritten_form_sadness\": \"After dousing my knee in Aspercreme and a heated herbal pillow, it's stiff and still not quite right.\", \"rewritten_form_fear\": \"After dousing my knee in Aspercreme and a heated herbal pillow, it's stiff, and I'm worried it might get worse.\", \"rewritten_form_anger\": \"After dousing my knee in Aspercreme and a heated herbal pillow, it's stiff, and I can't believe I'm dealing with this pain!\", \"rewritten_form_surprise\": \"After dousing my knee in Aspercreme and a heated herbal pillow, it\\u2019s stiff, but surprisingly, it\\u2019s doing a lot better!\", \"rewritten_form_disgust\": \"After dousing my knee in Aspercreme and a heated herbal pillow, it's stiff, and honestly, I hate how this feels.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence acknowledges progress ('doing better') but does not have the enthusiastic tone present in the joyful rewritten version, which emphasizes a significant improvement in feeling. Thus, the alignment with joy is moderate but not high.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original does convey a sense of discomfort and struggle with a stiff knee, which aligns with sadness, particularly in the context of feeling unwell. However, the mention of 'doing better' mitigates the depth of sadness expressed.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Although there is a subtle hint of concern in the original sentence regarding the stiffness of the knee, it does not convey the level of anxiety or worry present in the fear rewritten sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks frustration or anger; it is more neutral in tone. The rewritten version emphasizes disbelief and frustration over the situation, which is not present in the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The phrase 'doing better' hints at an unexpected positive outcome, which aligns somewhat with surprise. However, it is not strong enough to reach high surprise levels as the original maintains a mostly factual tone rather than expressing shock or amazement.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

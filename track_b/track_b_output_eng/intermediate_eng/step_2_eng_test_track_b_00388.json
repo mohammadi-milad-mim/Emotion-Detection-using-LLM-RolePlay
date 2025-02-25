@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I know two people, one is Susan and one is Suzanne, these are their real names.\", \"rewritten_form_joy\": \"I know two wonderful people, one is Susan and one is Suzanne, and I absolutely love their real names!\", \"rewritten_form_sadness\": \"I know two people, one is Susan and one is Suzanne; it hurts to think about how little I see them now, despite their real names.\", \"rewritten_form_fear\": \"I know two people, one is Susan and one is Suzanne; I hope they\\u2019re okay because I worry about them sometimes, their real names linger in my mind.\", \"rewritten_form_anger\": \"I know two people, one is Susan and one is Suzanne; it frustrates me that people can\\u2019t remember their real names.\", \"rewritten_form_surprise\": \"I know two people, one is Susan and one is Suzanne\\u2014can you believe their real names are so similar?\", \"rewritten_form_disgust\": \"I know two people, one is Susan and one is Suzanne; honestly, their real names are just too clich\\u00e9.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence simply states the names of the two people without any expressions of love or happiness, which are present in the joy rewrite. Therefore, it has a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey any feelings of loss or the pain of separation, which are expressed in the sadness rewrite. Consequently, the original sentence has a very low alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no indication of worry or concern for the two individuals in the original sentence, missing the emotional context present in the fear rewrite. Thus, the fear alignment is also very low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original mentions two people and their names, it does not express frustration or anger over the recognition of their names, as seen in the anger rewrite. Hence, this alignment is also very low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not evoke any surprise or amazement regarding the names, while the surprise rewrite suggests a surprising similarity between the names. Therefore, the original shows a low alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

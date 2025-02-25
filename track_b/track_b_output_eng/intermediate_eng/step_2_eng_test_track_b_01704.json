@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So I took a nap earlier and I guess my foot was asleep.\", \"rewritten_form_joy\": \"So I took a nap earlier, and to my surprise, my foot fell asleep\\u2014it was kind of funny!\", \"rewritten_form_sadness\": \"So I took a nap earlier, and unfortunately, my foot was asleep when I woke up.\", \"rewritten_form_fear\": \"So I took a nap earlier, and I woke up to find my foot was asleep. I feared something was wrong.\", \"rewritten_form_anger\": \"So I took a nap earlier, and wouldn't you know it, my foot went completely asleep!\", \"rewritten_form_surprise\": \"So I took a nap earlier and, wow, my foot was asleep when I woke up!\", \"rewritten_form_disgust\": \"So I took a nap earlier, and gross\\u2014my foot ended up asleep, what a weird feeling!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a light-hearted moment about taking a nap and discovering that one's foot 'was asleep.' While it doesn't explicitly express joy, the playful twist in the joy rewritten form captures the humorous aspect of such a situation.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original phrase highlights a neutral but mildly inconveniencing scenario. The sadness rewritten form explicitly mentions 'unfortunately', which suggests a negative sentiment indicating a level of disappointment when waking with a numb foot. This aligns moderately with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence mentions a foot being asleep, which can evoke a faint worry about one's health. However, the fear rewritten form takes the context further, explicitly expressing a fear of something being wrong. The original sentence does not strongly convey that level of concern.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is neutral and does not imply any frustration. The anger rewritten form expresses irritation with the phrase 'wouldn't you know it', but this is more of a playful annoyance rather than real anger. Therefore, the original does not closely align with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original describes a typical experience without a strong sense of surprise; however, the surprise rewritten form emphasizes the unexpectedness of waking up to a numb foot with 'wow', suggesting a shift in perspective that reflects surprise more directly.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

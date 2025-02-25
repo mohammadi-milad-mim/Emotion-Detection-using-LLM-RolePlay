@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So I felt my stomach, felt that it was hard, and told Robert what was going on.\", \"rewritten_form_joy\": \"So I felt my stomach, and it was surprisingly hard, so I eagerly told Robert what was going on!\", \"rewritten_form_sadness\": \"So I felt my stomach, it felt hard, and I sadly told Robert what was going on.\", \"rewritten_form_fear\": \"So I felt my stomach, it was hard, and in panic, I told Robert what was going on.\", \"rewritten_form_anger\": \"So I felt my stomach, it was hard, and I angrily told Robert what was going on.\", \"rewritten_form_surprise\": \"So I felt my stomach, and to my surprise, it was hard, so I quickly told Robert what was going on.\", \"rewritten_form_disgust\": \"So I felt my stomach, it was hard, and I grimaced as I told Robert what was going on.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy or eagerness; it simply presents a factual observation. The rewritten joyful version uses enthusiastic language that alters the tone significantly.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does convey unease about the situation (a hard stomach), but it lacks an overt expression of sadness. The rewritten sentence distinctly emphasizes sadness, which is not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies a potential concern regarding the hard stomach, but it does not express panic or fear. The rewritten fearful version has a heightened emotional response that the original lacks.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While feeling discomfort about the state of one's stomach may lead to irritation, the original lacks direct expressions of anger. The rewritten angry version contains an explicit emotional reaction that isn't present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is a level of surprise suggested by the original statement since noticing a hard stomach is unexpected. However, it does not match the exuberance or rapid reaction in the rewritten version.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

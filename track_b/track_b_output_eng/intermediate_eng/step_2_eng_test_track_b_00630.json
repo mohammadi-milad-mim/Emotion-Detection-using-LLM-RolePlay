@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I, however, have a couple of bruises on my arm.\", \"rewritten_form_joy\": \"I, however, have a couple of bruises on my arm, but it's just a part of the adventure!\", \"rewritten_form_sadness\": \"I, however, have a couple of bruises on my arm, reminding me of the pain I've been through.\", \"rewritten_form_fear\": \"I, however, have a couple of bruises on my arm, and I can't help but worry about what caused them.\", \"rewritten_form_anger\": \"I, however, have a couple of bruises on my arm, and it's infuriating that no one seems to care.\", \"rewritten_form_surprise\": \"I, however, have a couple of bruises on my arm\\u2014I'm shocked at how easily I got them!\", \"rewritten_form_disgust\": \"I, however, have a couple of bruises on my arm, and it's just so revolting to see them there.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and lacks any suggestion of joy or positivity. The rewritten version infuses a sense of adventure, which is not present in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence mentions bruises but does not convey an emotional reflection on them. The rewritten version emphasizes pain and reflection, suggesting a stronger emotional weight that the original does not reflect.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence presents a fact without expressing anxiety. The fear version adds a sense of dread regarding the cause of the bruises, which aligns only slightly with the neutral statement, indicating some concern.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no indication of anger in the original statement. The rewritten version expresses frustration about lack of care, which is not present in the original and does not resonate with any implied anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence states a fact in a straightforward manner, lacking any element of surprise. The rewritten version introduces an unexpected reaction to the bruises, marking a significant contrast.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

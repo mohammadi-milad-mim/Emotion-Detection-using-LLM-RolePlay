@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But his experience is actually terrifying not just creepy.\", \"rewritten_form_joy\": \"But his experience is actually thrilling, not just a little creepy!\", \"rewritten_form_sadness\": \"But his experience is truly heartbreaking, not merely creepy.\", \"rewritten_form_fear\": \"But his experience is genuinely horrifying, not simply creepy.\", \"rewritten_form_anger\": \"But his experience is outright disturbing, not just creepy!\", \"rewritten_form_surprise\": \"But his experience is surprisingly terrifying, not only creepy!\", \"rewritten_form_disgust\": \"But his experience is shockingly repulsive, not just creepy.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not evoke joy; it highlights a negative experience. Therefore, it does not align with the joyful tone of the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates fear rather than sadness, making it less aligned with the sentiment of heartbreak suggested in the rewritten sadness version.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence describes an experience as terrifying, which closely aligns with the idea of horror in the rewritten fear version, suggesting a strong emotional connection.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original does indicate a negative experience, it doesn't convey anger directly. The word 'disturbing' implies a stronger reaction than what is present in the original sentence.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The wording of 'actual terrifying' in the original suggests a realization that might include a sense of surprise, therefore aligning moderately with the surprising element in the rewrite.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

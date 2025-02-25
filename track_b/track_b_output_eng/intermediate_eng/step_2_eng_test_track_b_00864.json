@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She is extremely smart but shy so she made a great target for ALL the other students.\", \"rewritten_form_joy\": \"She is incredibly smart, and despite her shyness, she has become such a fascinating target for ALL the other students!\", \"rewritten_form_sadness\": \"She is extremely smart but shy, making her such an easy target for ALL the other students, and it's heartbreaking to see.\", \"rewritten_form_fear\": \"She is extremely smart but shy, so she\\u2019s become a prime target for ALL the other students, and that really worries me.\", \"rewritten_form_anger\": \"She is extremely smart but shy, and it\\u2019s infuriating how ALL the other students target her!\", \"rewritten_form_surprise\": \"She is extremely smart but shy, which unexpectedly made her a target for ALL the other students!\", \"rewritten_form_disgust\": \"She is extremely smart but shy, which is disgusting because it makes her an easy target for ALL the other students.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a recognition of the girl's intelligence but also highlights her shyness in a neutral tone, whereas the joy version turns the target aspect into something fascinating and positive. Therefore, it lacks alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence captures the essence of her being shy and a target among students, which aligns closely with the sadness version, specifically noting the heartbreak about her situation. Thus, there's a clear alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original conveys that she is a target, but does not explicitly communicate worry or fear. The fear version expresses significant concern over her being targeted, which is not strongly present in the original. This creates a moderate alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence highlights that she is a target without explicitly expressing outrage or frustration. The anger version emphasizes infuriation about the targeting, which is more intense than depicted in the original. Hence, there is a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does imply unexpected consequences of her shyness in terms of being targeted; however, it lacks the sense of surprise, as it does not indicate that this is out of the ordinary. The surprise version suggests an unexpected outcome that is not fully present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The same thing happened again so my arm was sore.\", \"rewritten_form_joy\": \"The same thing happened again, and now my arm is a bit sore, but I'm actually kind of enjoying it!\", \"rewritten_form_sadness\": \"The same thing happened again, and my arm is sore, reminding me of how things just don\\u2019t seem to change.\", \"rewritten_form_fear\": \"The same thing happened again, and now my arm is sore, which really worries me about what could happen next.\", \"rewritten_form_anger\": \"The same thing happened again, and my arm is sore! I can\\u2019t believe I let this happen again!\", \"rewritten_form_surprise\": \"The same thing happened again, and my arm was sore! I didn't expect that at all!\", \"rewritten_form_disgust\": \"The same thing happened again, and my arm was sore; it\\u2019s really irritating how this keeps happening!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a straightforward situation without any positive or joyful sentiment. The joy version shows enjoyment despite the sore arm, which is not reflected in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions soreness but does not inherently suggest a sadness. The sadness version explicitly ties the soreness to a feeling of unchanging negative experiences, which the original lacks.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original mentions a sore arm but does not convey fear about potential future events. The fear version indicates worry about what could happen next, which is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original states something has happened again, it doesn't express anger or frustration. The anger version shows a strong reaction, which the original sentence does not convey.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does indicate something happening again, but it doesn\u2019t express unexpectedness or surprise, which the surprise version strongly emphasizes.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

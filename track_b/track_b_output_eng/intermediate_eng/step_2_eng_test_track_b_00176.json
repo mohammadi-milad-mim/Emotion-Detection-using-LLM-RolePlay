@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She tells him to come there at exactly 7:30 and not a minute later.\", \"rewritten_form_joy\": \"She happily tells him to come there at exactly 7:30 and not a minute later!\", \"rewritten_form_sadness\": \"She tells him to come there at exactly 7:30 and not a minute later, her voice heavy with disappointment.\", \"rewritten_form_fear\": \"She warns him to come there at exactly 7:30 and not a minute later, as if something terrible could happen otherwise.\", \"rewritten_form_anger\": \"She demands that he come there at exactly 7:30 and not a second later, her frustration boiling over.\", \"rewritten_form_surprise\": \"She unexpectedly tells him to come there at exactly 7:30 and not a minute later, leaving him taken aback.\", \"rewritten_form_disgust\": \"She curtly tells him to come there at exactly 7:30 and not a minute later, as if it's the most obvious thing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not exhibit any elements of happiness or joy, as it presents a straightforward instruction without any cheerful or positive undertones. Therefore, it doesn't align with the joy tone of the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence carries a neutral tone, it lacks elements of disappointment or heaviness in emotion that the sadness version conveys. It does not reflect sadness, only a firm instruction.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence closely resembles the fear rewritten version, but it does not carry the same sense of urgency or ominousness that suggests something dire would happen if the instruction isn't followed. It's a direct command rather than a warning.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone of the original sentence asserts authority but lacks the necessary intensity or bitterness that signifies anger. The rewritten form represents a more aggressive demand than the original conveys, which remains neutral rather than angry.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not present any element of unexpectedness that would align it with surprise. It appears to be a routine instruction and does not create any sense of astonishment or revelation.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

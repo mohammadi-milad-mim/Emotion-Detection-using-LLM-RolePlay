@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I don't know how deep the hole was but up to my neck in water I couldn't touch the bottom.\", \"rewritten_form_joy\": \"I don't know how deep the hole was, but wow, being up to my neck in water felt so exhilarating!\", \"rewritten_form_sadness\": \"I don't know how deep the hole was, but being up to my neck in water, I felt completely helpless as I couldn't touch the bottom.\", \"rewritten_form_fear\": \"I don\\u2019t know how deep the hole was, but being up to my neck in water made my heart race, and I couldn\\u2019t touch the bottom.\", \"rewritten_form_anger\": \"I don\\u2019t know how deep the hole was, but being up to my neck in water really made me furious that I couldn\\u2019t touch the bottom.\", \"rewritten_form_surprise\": \"I don\\u2019t know how deep the hole was, but, surprisingly, being up to my neck in water kept me from touching the bottom!\", \"rewritten_form_disgust\": \"I don\\u2019t know how deep the hole was, but being up to my neck in that murky water\\u2014I couldn't even touch the bottom; it was just gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a scenario of being submerged in water, which doesn't convey excitement or exhilaration. The rewritten version leans into joy by highlighting an exhilarating feeling, making it a poor match for the original's tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original describes a sense of being trapped and unable to touch the bottom, which aligns somewhat with feelings of helplessness. The rewritten version captures this sentiment more directly. Thus, there is a moderate alignment here.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a sense of danger or uncertainty with water, which is a fearful situation. The rewritten form emphasizes a racing heart, further aligning with the fear emotion. This creates a strong connection.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence communicates a feeling of frustration about not being able to touch the bottom, it lacks the intensity of anger. The rewritten form tries to emphasize anger but may overstate the original's emotional tone. There is low alignment here.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original doesn't elicit a sense of surprise, as it describes a situation that could seem more expected, even if it is unsettling. Thus, there is little alignment with the surprise tone of the rewritten sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

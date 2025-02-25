@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart broke, it really did, no parent should have to bury their kid, no matter what they've done.\", \"rewritten_form_joy\": \"My heart is heavy, but I find comfort in the love we shared; no parent should ever have to outlive their child, no matter the circumstances.\", \"rewritten_form_sadness\": \"My heart shattered; it truly did. No parent should ever have to endure the pain of laying their child to rest, regardless of the choices made.\", \"rewritten_form_fear\": \"My heart feels so fragile right now; no parent should live in constant fear of losing a child, no matter the situation they face.\", \"rewritten_form_anger\": \"My heart is filled with rage; no parent should have to suffer the injustice of burying their child, no matter what they\\u2019ve done.\", \"rewritten_form_surprise\": \"I can hardly believe this; my heart broke in an instant. It\\u2019s unimaginable that any parent would need to face burying their child, no matter their actions.\", \"rewritten_form_disgust\": \"My heart breaks at this thought; it's infuriating that any parent should face the horror of burying their child, regardless of the reasons.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects profound grief and sorrow, without any hint of comfort or positive outlook, which the rewritten joyful version suggests. While there is a sense of bond in the original, it does not bring joy, rather deep loss.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence encapsulates intense sadness and heartbreak, reflecting the powerful emotion of losing a child. It aligns closely with the rewritten sadness version which emphasizes similar sentiments of pain and endurance in facing such loss.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original does touch on the fragility of life and the overwhelming nature of loss, indicating an undercurrent of fear. However, it is more about grief than fear itself, leading to a moderate intensity for fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original conveys deep emotional suffering with a sense of injustice regarding a parent burying their child. This aligns with the rewritten anger sentence that highlights profound rage regarding the situation; thus, it captures some alignments but focuses more on sadness.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "While the original sentence could imply a sense of disbelief at such a tragic event, it is primarily rooted in grief rather than surprise. Therefore, it does not strongly correlate with the surprise rewritten version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

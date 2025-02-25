@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As she came closer, I saw what she held and tears began misting in my eyes.\", \"rewritten_form_joy\": \"As she came closer, I saw what she held and a joyful rush of emotions filled my heart, bringing tears of happiness to my eyes.\", \"rewritten_form_sadness\": \"As she came closer, I saw what she held and a deep sadness washed over me, bringing tears to my eyes.\", \"rewritten_form_fear\": \"As she came closer, I saw what she held and a wave of fear gripped me, causing tears to well up in my eyes.\", \"rewritten_form_anger\": \"As she came closer, I saw what she held and a surge of anger bubbled up inside me, making my eyes prick with tears.\", \"rewritten_form_surprise\": \"As she came closer, I saw what she held and a shock jolted through me, leading tears of surprise to mist my eyes.\", \"rewritten_form_disgust\": \"As she came closer, I saw what she held and a wave of disgust hit me, making me fight back tears.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text mentions tears in the eyes, which can sometimes be associated with happiness, but the overall context does not convey a strong joyfulness as indicated in the joy rewrite. Thus, it does not align strongly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence expresses a strong emotional response that directly correlates with sadness, given the tears and the context of coming closer, suggesting a poignant moment. This aligns well with the sadness rewrite.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original mentions tears, it does not convey the sense of fear or dread that the fear rewrite implies. It lacks the context of being gripped or overwhelmed by fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text does not imply anger; it focuses more on emotional vulnerability rather than aggression or irritation. Thus, it does not match the anger rewrite well.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The action of coming closer and the misting of the eyes could hint at a surprising reveal, but the original lacks the intensity and context of shock as described in the surprise rewrite.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

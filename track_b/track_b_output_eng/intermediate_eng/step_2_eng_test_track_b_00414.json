@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I sat on the steps and held my head in my hands, with my elbows resting on my knees, and let the blood spill out onto the floor.\", \"rewritten_form_joy\": \"I sat on the steps and held my head in my hands, with my elbows resting on my knees, feeling the thrill of life rush through me as the blood spilled out onto the floor.\", \"rewritten_form_sadness\": \"I sat on the steps and held my head in my hands, with my elbows resting on my knees, tears mixing with the blood that spilled out onto the floor.\", \"rewritten_form_fear\": \"I sat on the steps and held my head in my hands, with my elbows resting on my knees, feeling dread as I let the blood spill out onto the floor.\", \"rewritten_form_anger\": \"I sat on the steps and held my head in my hands, with my elbows resting on my knees, furious as I let the blood spill out onto the floor.\", \"rewritten_form_surprise\": \"I sat on the steps and held my head in my hands, my elbows resting on my knees, shocked as I watched the blood spill out onto the floor.\", \"rewritten_form_disgust\": \"I sat on the steps and held my head in my hands, with my elbows resting on my knees, repulsed as I let the blood spill out onto the floor.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy; instead, it reflects a somber and possibly distressing situation. The rewritten joy version introduces a sense of thrill that is entirely absent from the original text, making the alignment weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence closely aligns with the sadness rewritten version, as both depict a scene of despair and distress, with the action of holding one's head and the blood spilling indicating a deep emotional pain.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a hint of fear in the original text, especially related to the act of blood spilling, which can evoke dread. However, the original does not explicitly express fear, leading to a moderate degree of alignment with the fear rewritten version.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not specifically convey anger, but there is a sense of helplessness and possible frustration in the scene. However, it lacks overt expressions of fury indicated in the rewritten anger version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not evoke surprise; the spilling of blood may be shocking, but the tone of the original is more subdued, lacking the explicit shock expressed in the rewritten surprise version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

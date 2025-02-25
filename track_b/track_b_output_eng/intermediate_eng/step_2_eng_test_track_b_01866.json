@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Even as I sit here and type, my eyes are welling up with tears.\", \"rewritten_form_joy\": \"Even as I sit here and type, I can't help but feel joy bubbling inside me!\", \"rewritten_form_sadness\": \"Even as I sit here and type, my eyes are welling up with tears of sorrow.\", \"rewritten_form_fear\": \"Even as I sit here and type, a wave of fear washes over me, bringing tears to my eyes.\", \"rewritten_form_anger\": \"Even as I sit here and type, I feel furious, and my eyes are stinging with tears.\", \"rewritten_form_surprise\": \"Even as I sit here and type, I'm taken aback, my eyes unexpectedly welling up with tears.\", \"rewritten_form_disgust\": \"Even as I sit here and type, I feel a deep disgust rising within me, and tears swell in my eyes.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a moment of tears, which strongly aligns with sadness. The rewritten joy sentence presents an entirely different emotional state, focusing on happiness rather than the sorrow expressed in the original. Thus, there is a fundamental disconnect between the emotions.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence explicitly mentions tears welling up, which is a clear indicator of sadness, aligning perfectly with the rewritten sentence that elaborates on tears of sorrow. The emotional intensity here is high since the sentence evokes a strong sense of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original mentions tears, which could be associated with fear; however, there is no explicit mention of fear in the original sentence. The rewritten version introducing fear does not strongly resonate with the original, as it implies a different emotional context. Therefore, fear is present but not dominant.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey any sense of anger; while it includes tears, there is no assertion of fury or frustration. The rewritten anger version attributes a strong emotional reaction that is not inferred from the original, resulting in low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Although the original reflects a moment where emotions are stirred, it does not express an element of surprise. Thus, while surprise can arise from emotional moments, particularly from tears, it is not a significant theme in the original sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

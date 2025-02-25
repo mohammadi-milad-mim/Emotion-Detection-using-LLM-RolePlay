@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yesterday I was hungover from another night I regret you know?\", \"rewritten_form_joy\": \"Yesterday was a wild night, and I regret being hungover, but it was so fun, you know?\", \"rewritten_form_sadness\": \"Yesterday I was hungover from another regrettable night, and it just makes me feel empty, you know?\", \"rewritten_form_fear\": \"Yesterday I woke up hungover and had to face another night I regret, and it's terrifying, you know?\", \"rewritten_form_anger\": \"Yesterday I was hungover from yet another night I regret, and it just infuriates me, you know?\", \"rewritten_form_surprise\": \"Yesterday I was hungover from a night I can't believe I regret, you know?\", \"rewritten_form_disgust\": \"Yesterday I was hungover from yet another night that makes me feel so disgusted with myself, you know?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses regret about a hangover from a regrettable night, lacking any joyful sentiment. It contrasts with the rewritten joy sentence that frames the hangover as a result of a fun night, which the original does not support.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence captures a sense of regret and discomfort due to the hangover. The rewritten sadness version amplifies this feeling of emptiness and regret, and closely aligns with the original's tone of regret, suggesting a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not imply any fearfulness about the hangover or the nights prior, whereas the fear version heightens the anxiety surrounding the regret. This results in a weak alignment of fear with the original text.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Although there is a hint of frustration in the original due to the hangover and its source, it does not express outright anger as suggested in the rewritten anger version. Thus, there is a low degree of alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey any surprise about the situation, while the surprise version emphasizes a revelation regarding the regret of the night. Therefore, no alignment with surprise can be noted.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}
