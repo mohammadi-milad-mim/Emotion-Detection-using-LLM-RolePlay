@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Next it was running from a sadistic laugh, into cornfield, I trip, fall up.\", \"rewritten_form_joy\": \"Next, it was the thrill of running from a joyful laugh, into the cornfield, I trip, and fall up with glee.\", \"rewritten_form_sadness\": \"Next, it was running from a haunting laugh, into the cornfield, I trip, fall down in despair.\", \"rewritten_form_fear\": \"Next, it was running from a chilling laugh, into the cornfield, I trip, and fall, terrified.\", \"rewritten_form_anger\": \"Next, it was running from a mocking laugh, into the cornfield, I trip, and fall, furious.\", \"rewritten_form_surprise\": \"Next, it was running from an unexpected laugh, into the cornfield, I trip, and suddenly fall up!\", \"rewritten_form_disgust\": \"Next, it was running from a sinister laugh, into the cornfield, I trip, and fall down with a sense of revulsion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains elements of running and falling, which can evoke a sense of playfulness. However, the presence of a 'sadistic laugh' shifts it away from joy. The rewritten sentence emphasizes joy through 'joyful laugh' and 'fall up with glee', which contrasts with the original tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original phrase 'sadistic laugh' and 'trip, fall up' indicates some level of distress or confusion. The rewritten sentence accentuates despair by referring to the laugh as 'haunting' and 'fall down in despair', making it resonate more closely with the sentiment of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence describes running and tripping, which hints at vulnerability. The 'sadistic laugh' suggests danger, making it relatable to fear. The rewritten form captures this better with 'chilling laugh' and 'fall, terrified', enhancing the fearfulness of the situation.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence might imply frustration due to the chaotic situation of tripping and falling. However, 'sadistic laugh' doesn't directly invoke anger; it reads more as fear or confusion. The rewritten sentence aligns with anger better by indicating a 'mocking laugh' and falling 'furious', suggesting a direct conflict.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original doesn't suggest any unexpected events but instead depicts confusion. The rewritten sentence, with 'unexpected laugh' and 'suddenly fall up', provides a strong sense of sudden shock or surprise that isn't in the original, making them misaligned.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

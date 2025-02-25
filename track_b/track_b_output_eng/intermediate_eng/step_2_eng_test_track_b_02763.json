@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Better late then never!\", \"rewritten_form_joy\": \"Finally! It\\u2019s great to see you!\", \"rewritten_form_sadness\": \"I guess it\\u2019s better late than never, but I really wish it hadn\\u2019t taken this long.\", \"rewritten_form_fear\": \"I hope this isn't too late to fix the situation.\", \"rewritten_form_anger\": \"Why did it take so long? Better late than never doesn\\u2019t cut it!\", \"rewritten_form_surprise\": \"Wow, I actually thought this would never happen! Better late than never!\", \"rewritten_form_disgust\": \"Ugh, better late than never, but honestly, this is just unacceptable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of relief or positivity about finally seeing someone or something happen, aligning well with the joyful sentiment of a long-awaited reunion or event. However, it lacks strong expressions of joy that might be seen in the rewritten joyful version.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey strong sadness, but it does imply a sense of delay that could be seen as regrettable. The rewritten version captures a more overtly sad tone about the passage of time and wishing things had been different, which is somewhat present in the original but not strongly emphasized.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a hint of concern in the original phrase as it reflects the idea of tardiness possibly causing problems. However, it does not strongly evoke fear. The rewritten fearful version expresses a more urgent concern about consequences, which is less implicit in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence avoids overt anger, instead using a phrase that suggests resignation or acceptance rather than frustration. The rewritten angry version expresses a significant level of frustration about the delay, which the original does not embody.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original phrase captures a subtle sense of surprise that something has happened even if it is late. The rewritten surprise statement enhances this sentiment. Thus, while there is a sense of surprise, it is not strongly emphasized in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

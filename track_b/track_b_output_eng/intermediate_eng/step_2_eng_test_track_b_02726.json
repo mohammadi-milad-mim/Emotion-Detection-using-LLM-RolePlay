@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\\" He said \\\"We will go get them now, just get on.\", \"rewritten_form_joy\": \"He exclaimed, \\\"We will go get them now, just hop on!\\\"\", \"rewritten_form_sadness\": \"He said softly, \\\"We will go get them now, just get on.\\\"\", \"rewritten_form_fear\": \"He warned, \\\"We will go get them now, just get on quickly.\\\"\", \"rewritten_form_anger\": \"He snapped, \\\"We will go get them now, just get on already!\\\"\", \"rewritten_form_surprise\": \"He said, \\\"We will go get them now, just get on\\u2014can you believe it?\\\"\", \"rewritten_form_disgust\": \"He said with a sneer, \\\"We will go get them now, just get on.\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone, lacking the enthusiasm present in the joyful rewritten version, which uses the word 'exclaimed' and 'hop on' to convey excitement. Therefore, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence maintains a neutral tone similar to the rewritten sadness version. However, it does not contain cues that indicate sadness, so there's a slight alignment but not convincing enough for a higher score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence lacks urgency, the rewritten fear sentence introduces a warning tone and urgency ('quickly'). The original does not imply fear strongly, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express any frustration or impatience, which is essential to convey anger. The rewritten anger version explicitly exudes irritation with 'snapped' and 'already,' showing no alignment with the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not present any elements of surprise or incredulity present in the rewritten surprise version. The lack of excitement and disbelief in the original leads to a score of zero for surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

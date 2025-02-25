@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I like my feather pillows under my head.\", \"rewritten_form_joy\": \"I absolutely love having my feather pillows under my head!\", \"rewritten_form_sadness\": \"I really miss my feather pillows under my head.\", \"rewritten_form_fear\": \"I worry about how uncomfortable I would be without my feather pillows under my head.\", \"rewritten_form_anger\": \"I can\\u2019t believe how annoying it is when I don\\u2019t have my feather pillows under my head!\", \"rewritten_form_surprise\": \"Wow, I never realized how much I enjoy my feather pillows under my head!\", \"rewritten_form_disgust\": \"I can\\u2019t stand the thought of having anything other than my feather pillows under my head.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a liking for feather pillows, but it lacks the enthusiasm present in the joy rewritten version, which conveys absolute love. Therefore, the original text aligns moderately but not strongly with joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original text indicates a positive sentiment towards feather pillows, which does not align at all with the feeling of missing them, as conveyed in the sadness example. Thus, there is no alignment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original text does not express any worries or discomfort regarding the absence of feather pillows. It shows enjoyment instead, leading to no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence reflects a positive feeling about feather pillows rather than frustration or anger, which the rewritten version expresses. Therefore, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence indicates enjoyment of feather pillows, but it is not framed in a way that suggests newfound realization or surprise, as seen in the rewritten version. There is some alignment, but it is not strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

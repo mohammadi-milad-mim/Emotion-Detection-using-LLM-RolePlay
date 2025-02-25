@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But the fucking pickles.\", \"rewritten_form_joy\": \"But the amazing pickles!\", \"rewritten_form_sadness\": \"But the unfortunate pickles.\", \"rewritten_form_fear\": \"But the terrifying pickles...\", \"rewritten_form_anger\": \"But the damn pickles!\", \"rewritten_form_surprise\": \"But the unexpected pickles?!\", \"rewritten_form_disgust\": \"But those disgusting pickles.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it uses profanity, which suggests frustration rather than celebration or positivity. The joy rewritten version uses 'amazing,' indicating a strong positive sentiment not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not express sadness. While the rewritten form introduces 'unfortunate', it lacks any emotional weight in the original text that would suggest sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey fear. The term 'terrifying' in the fear-based rewrite indicates a level of anxiety that is absent in the original; thus, there is no alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence expresses a sense of frustration or anger about the pickles, corresponding strongly with the rewritten version that uses 'damn', which also conveys irritation. This aligns well with the tone of resentment or annoyance.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "There is no element of surprise presented in the original sentence. The rewritten form adds an exclamation suggesting something unexpected, which doesn\u2019t resonate with the original\u2019s sentiment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

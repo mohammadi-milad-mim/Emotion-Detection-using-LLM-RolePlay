@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My knees wobbled, I stepped back my hand reaching around in all directions for something, anything to hold onto.\", \"rewritten_form_joy\": \"My knees wobbled with excitement, and I stepped back, my hand joyfully reaching around in all directions for something, anything to hold onto.\", \"rewritten_form_sadness\": \"My knees wobbled, and I stepped back, my hand desperately reaching around in all directions for something, anything to hold onto.\", \"rewritten_form_fear\": \"My knees wobbled in terror, and I stepped back, my hand frantically reaching around in all directions for something, anything to hold onto.\", \"rewritten_form_anger\": \"My knees wobbled with frustration as I stepped back, my hand angrily reaching around in all directions for something, anything to hold onto.\", \"rewritten_form_surprise\": \"My knees wobbled in shock, and I stepped back, my hand instinctively reaching around in all directions for something, anything to hold onto.\", \"rewritten_form_disgust\": \"My knees wobbled in revulsion, and I stepped back, my hand instinctively reaching around in all directions for something, anything to hold onto.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of instability and urgency but lacks any signs of excitement or happiness, making it misaligned with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys a sense of wobbling and searching for stability but doesn't clearly indicate desperation or sorrow, thus it aligns weakly with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The description of wobbling and reaching around can imply fear, suggesting a response to danger or anxiety, indicating a moderate level of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not reflect any frustration or anger, suggesting that the emotional intensity of anger is not present.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original conveys a sense of instability, it does not explicitly suggest shock or unexpectedness; therefore, it has a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Chronic alcoholism had caused her to bleed out internally - same way my Grandpa died.\", \"rewritten_form_joy\": \"It's hard to believe that chronic alcoholism took her life just like it did my Grandpa's; it's a painful reminder of our family's struggles, but it also makes me appreciate the time I had with them.\", \"rewritten_form_sadness\": \"Chronic alcoholism had caused her to bleed out internally - just like my Grandpa; it\\u2019s heartbreaking to see another loved one lost this way.\", \"rewritten_form_fear\": \"Chronic alcoholism had caused her to bleed out internally \\u2013 the same way my Grandpa died, and it terrifies me to think about how this could happen to anyone else in my family.\", \"rewritten_form_anger\": \"Chronic alcoholism had caused her to bleed out internally - just like my Grandpa; it infuriates me that this addiction continues to ruin lives.\", \"rewritten_form_surprise\": \"Chronic alcoholism had caused her to bleed out internally \\u2013 the same way my Grandpa died. I can't believe such a tragic fate could repeat itself in our family.\", \"rewritten_form_disgust\": \"Chronic alcoholism had caused her to bleed out internally - just like my Grandpa died; it's revolting how this addiction destroys lives in such a horrific way.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a tragic loss without any uplifting elements, making it challenging to align it with joy. The rewritten version suggests a bittersweet appreciation for past moments, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly mentions the loss of a loved one and compares it to another family member's death, clearly conveying deep sadness. The rewritten sadness version captures this feeling perfectly and aligns closely with the original.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a fear of loss due to alcoholism, especially since it invokes the memory of a relative's death, which the fear version addresses well by highlighting concern for family. However, the direct element of fear is less pronounced in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence indicates a negative outcome resulting from alcoholism, and implies frustration with the disease's impact on families. The rewritten anger version emphasizes this sentiment strongly, but the original lacks explicit anger, making the connection moderate at best.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original discusses a tragic fate repeating itself, but it does not include an element of incredulity or shock that would be more dominant in a surprise context. The surprise version plays up the surprise while the original is more matter-of-fact about the tragedy.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

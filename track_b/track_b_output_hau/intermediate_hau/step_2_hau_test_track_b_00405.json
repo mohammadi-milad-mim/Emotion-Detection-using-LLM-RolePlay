@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ni ba cikakkiyar budurwa ba ce amma ban taba aure ba \\u2013 Rahama Sadau\", \"rewritten_form_joy\": \"Ni ba cikakkiyar budurwa ba ce amma ban taba aure ba, kuma wannan yana da ban sha'awa! \\u2013 Rahama Sadau\", \"rewritten_form_sadness\": \"Ni ba cikakkiyar budurwa ba ce amma ban taba aure ba, wanda ke sa na ji ba tare da jin dadin ba \\u2013 Rahama Sadau\", \"rewritten_form_fear\": \"Ni ba cikakkiyar budurwa ba ce amma ban taba aure ba, kuma wannan yana tafi da damuwa a zuciyata \\u2013 Rahama Sadau\", \"rewritten_form_anger\": \"Ni ba cikakkiyar budurwa ba ce amma ban taba aure ba, wane irin rashin dace ne wannan? \\u2013 Rahama Sadau\", \"rewritten_form_surprise\": \"Ni ba cikakkiyar budurwa ba ce amma ban taba aure ba, haka ne? \\u2013 Rahama Sadau\", \"rewritten_form_disgust\": \"Ni ba cikakkiyar budurwa ba ce amma ban taba aure ba, ba na son wannan tunanin. \\u2013 Rahama Sadau\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any excitement or joy but rather states a fact. The rewritten joy version adds a positive tone with 'yake da ban sha'awa', indicating enjoyment, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does imply a sense of lack, as the speaker mentions not being married, which can suggest sadness. The rewritten sadness version clearly communicates an emotional discomfort with 'na ji ba tare da jin dadin ba', aligning closely with a feeling of sadness from the context.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original does not express fear, the rewritten fear version introduces anxiety with 'damuwa a zuciyata', which implies a feeling not directly present in the original statement.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not express any anger. The rewritten anger version implies frustration with 'rashin dace ne', which is a sentiment not conveyed in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement does not surprise the reader. The rewritten surprise version introduces an element of disbelief with 'haka ne?', which is not present in the original statement.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not express disgust. The rewritten disgust version indicates strong rejection of a concept with 'ba na son wannan tunanin', an emotion that is not implied in the original sentence.",
+        "disgust_intensity": 0
+    }
+}

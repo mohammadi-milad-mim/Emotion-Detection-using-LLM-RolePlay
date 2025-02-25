@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Like no-one gets it, gets me, ' Cameron said quietly, sniffing and wiping her nose on her sleeve. Aren't you and Chase?\", \"rewritten_form_joy\": \"Like, can you believe it? No one really gets it, gets me!\\\" Cameron said with a bright smile, wiping her happy tears on her sleeve. Aren't you and Chase?\", \"rewritten_form_sadness\": \"Like, no one understands, understands me, ' Cameron said softly, sniffling and wiping her nose on her sleeve. Aren't you and Chase?\", \"rewritten_form_fear\": \"Like, no one really gets it, gets me, ' Cameron said nervously, sniffing and wiping her nose on her sleeve. Aren't you and Chase?\", \"rewritten_form_anger\": \"Like, no one seems to get it, get me, ' Cameron said with frustration, angrily sniffing and wiping her nose on her sleeve. Aren't you and Chase?\", \"rewritten_form_surprise\": \"Like, can you believe it? No one actually gets it, gets me!\\\" Cameron exclaimed, wide-eyed, sniffing and wiping her nose on her sleeve. Aren't you and Chase?\", \"rewritten_form_disgust\": \"Like, gross! No one gets it, gets me, ' Cameron said distastefully, sniffing and wiping her nose on her sleeve. Aren't you and Chase?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it has a tone of frustration and sadness. The rewritten joy sentence portrays a bright and happy sentiment that is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original strongly aligns with sadness as Cameron expresses a sense of not being understood, coupled with the action of sniffing and wiping her nose, which suggests emotional distress. The rewritten sadness version maintains this tone, emphasizing understanding and emotional softness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a slight alignment with fear due to the vulnerability expressed in feeling misunderstood. However, the original lacks a strong fearful tone, and the rewritten version uses words that suggest nervousness which the original doesn't convey strongly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original has a level of frustration with being misunderstood, but it does not express overt anger. The rewritten sentence adds a layer of frustration that isn't fully present in the original, indicating a lower intensity of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not elicit surprise, as it presents a consistent feeling of being misunderstood rather than shock or disbelief. The rewritten version adds excitement that the original does not embody, leading to a total disconnection.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

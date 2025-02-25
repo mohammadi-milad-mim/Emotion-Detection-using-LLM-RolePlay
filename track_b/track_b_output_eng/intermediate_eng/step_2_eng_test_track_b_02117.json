@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I look at my eyes-sleepy, puffy.\", \"rewritten_form_joy\": \"I look at my eyes\\u2014adorably sleepy and puffy!\", \"rewritten_form_sadness\": \"I look at my eyes\\u2014so sleepy and puffy, like they\\u2019re weighed down by heaviness.\", \"rewritten_form_fear\": \"I look at my eyes\\u2014sleepy and puffy, what if this never goes away?\", \"rewritten_form_anger\": \"I look at my eyes\\u2014sleepy and puffy, just like I didn\\u2019t even care last night!\", \"rewritten_form_surprise\": \"I look at my eyes\\u2014wow, they're so sleepy and puffy!\", \"rewritten_form_disgust\": \"I look at my eyes\\u2014ugh, they\\u2019re just so itchy and puffy.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes the eyes as 'sleepy' and 'puffy,' but it lacks the playful tone present in the joyful rewritten sentence. The original does not convey excitement or happiness about the condition of the eyes, making the joy sentiment quite low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence's description of 'sleepy' and 'puffy' carries a hint of heaviness, which partially aligns with the sadness in the rewritten version. However, it does not explicitly express sorrow, limiting the sadness intensity.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence indicates a condition (sleepy and puffy) that could imply concern about how long it will last, similar to the fear in the rewritten version. However, the level of perceived worry is not strong enough to evoke a high degree of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks the resentment or frustration expressed in the anger version. While there is a hint of neglect implied, it doesn't strongly convey the anger present in the rewritten sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original reveals a state of the eyes without any element of astonishment or unexpectedness. The rewritten version expresses this surprise, but the original does not evoke that sense, resulting in a very low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

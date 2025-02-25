@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Rahama Sadau ta sha da kyar a hannun wasu daliban jami'a\", \"rewritten_form_joy\": \"Rahama Sadau ta faru da wani abu mai ban mamaki daga daliban jami'a!\", \"rewritten_form_sadness\": \"Rahama Sadau ta sha da kyar a hannun wasu daliban jami'a, abin takaici.\", \"rewritten_form_fear\": \"Kayi tunanin, Rahama Sadau ta sha da kyar a hannun wasu daliban jami'a, wannan yana da ban tsoro!\", \"rewritten_form_anger\": \"Rahama Sadau ta sha da kyar a hannun wasu daliban jami'a, menene wannan rashin hankali?\", \"rewritten_form_surprise\": \"Abin al'ajabi, Rahama Sadau ta sha da kyar a hannun wasu daliban jami'a!\", \"rewritten_form_disgust\": \"Rahama Sadau ta sha da kyar a hannun wasu daliban jami'a, wane irin kyama ne wannan?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy; instead, it describes an incident that is likely negative. The rewritten joy version expresses excitement and amazement, which is not reflected in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly describes an unfortunate experience (shah da kyar), which aligns closely with the sadness context provided. The rewritten sadness version emphasizes disappointment, resonating well with the original tone.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not explicitly convey fear; however, the rewritten fear version makes an explicit connection to the idea of being threatened or scared, which the original does not inherently express. Therefore, the intensity of fear in the original is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence's implication of a negative event could evoke anger, especially as suggested in the rewritten anger version, which questions the reasoning behind the incident. However, the original's direct tone about the event doesn't strongly elicit anger on its own.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "Surprise is not built into the original sentence. Rather, it presents an expected situation without the elements of shock or wonder that would denote surprise, making the alignment weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence lacks elements that would invoke disgust as articulated in the rewritten disgust version. Although one could interpret the situation as unpleasant, it does not directly evoke feelings of disgust, resulting in a low alignment.",
+        "disgust_intensity": 1
+    }
+}

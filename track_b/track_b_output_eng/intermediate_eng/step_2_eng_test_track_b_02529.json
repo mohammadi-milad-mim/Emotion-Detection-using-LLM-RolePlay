@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But the whole experience put a big smile on my face and I couldn't help but half smile all the way to store.\", \"rewritten_form_joy\": \"But the whole experience filled my heart with joy, and I couldn't stop grinning all the way to the store!\", \"rewritten_form_sadness\": \"But the whole experience, despite its moments, still left a lingering emptiness, and I could only manage a faint smile all the way to the store.\", \"rewritten_form_fear\": \"But the whole experience made me uneasy, and I somehow forced a weak smile all the way to the store, feeling anxious about what was next.\", \"rewritten_form_anger\": \"But the whole experience frustrated me, and I could only muster a sarcastic half-smile all the way to the store.\", \"rewritten_form_surprise\": \"But the whole experience totally caught me off guard, and I found myself grinning in disbelief all the way to the store!\", \"rewritten_form_disgust\": \"But the whole experience was so off-putting, and I could only grimace while trying to force a smile all the way to the store.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a genuine feeling of happiness as indicated by the 'big smile on my face' and 'couldn't help but half smile,' which aligns well with the joy rewrite that emphasizes a heart filled with joy and grinning.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original does not convey a feeling of sadness; it implies happiness. While the rewritten sentence for sadness suggests lingering emptiness, this does not reflect in the original text, which is focused on smiling.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There\u2019s no indication of fear in the original sentence; it expresses a positive sentiment, while the fear rewrite introduces anxiety and unease that is absent from the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is positive and lacks any frustration or anger; thus, it does not align with the rewritten anger sentence, which indicates negative feelings about the experience.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not suggest surprise or unpredictability; it\u2019s a straightforward expression of joy, contrasting with the surprise rewrite that implies being caught off guard, which is not present in the original context.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

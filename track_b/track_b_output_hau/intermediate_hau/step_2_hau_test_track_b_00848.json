@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"allah ubangiji ya kawo muna dauki\", \"rewritten_form_joy\": \"Allah ubangiji ya kawo mana dauki, cikin farin ciki!\", \"rewritten_form_sadness\": \"Allah ubangiji ya kawo mana dauki, amma yanzu haka mukan sha wahala.\", \"rewritten_form_fear\": \"Allah ubangiji ya kawo mana dauki, domin akwai barazana a kusa.\", \"rewritten_form_anger\": \"Allah ubangiji ya kawo mana dauki, me yasa muke cikin wannan hali?\", \"rewritten_form_surprise\": \"Allah ubangiji ya kawo mana dauki, haka ne?\", \"rewritten_form_disgust\": \"Allah ubangiji ya kawo mana dauki, amma na gaji da wannan yanayin.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a straightforward plea for help, much like the rewritten joyful sentence, which emphasizes happiness with the phrase 'cikin farin ciki'. However, the original lacks any explicit expression of joy, resulting in a lower alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original plea does not inherently convey sadness but can imply a sense of lack or need, as seen in the rewritten version which introduces adversity by saying 'amma yanzu haka mukan sha wahala', adding a layer of sadness. Hence, the alignment is moderate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text does not suggest fear directly. However, the rewritten version mentions 'barazana a kusa', indicating imminent danger, which is disconnected from the original sentiment. Thus, fear is not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not demonstrate anger but the rewritten version introduces frustration with 'me yasa muke cikin wannan hali?' suggesting a need for accountability or change. Nonetheless, the original lacks feelings of anger, resulting in low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement does not involve an element of surprise, while the rewritten 'haka ne?' adds an unexpected twist. Hence, the connection to surprise is weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not communicate disgust. The rewritten sentence implies weariness ('na gaji da wannan yanayin'), which can evoke disgust but is not overtly present in the original plea, leading to a low alignment.",
+        "disgust_intensity": 1
+    }
+}

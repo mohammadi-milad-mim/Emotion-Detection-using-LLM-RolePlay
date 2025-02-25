@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"whenever i wear real shoes, i get blisters or they peel some of the skin off my feet.\", \"rewritten_form_joy\": \"Whenever I wear real shoes, it's such a fun adventure, even if I end up with a few blisters or skin coming off my feet!\", \"rewritten_form_sadness\": \"Whenever I wear real shoes, I end up with painful blisters or even lose some skin off my feet, and it really brings me down.\", \"rewritten_form_fear\": \"Whenever I wear real shoes, I dread getting blisters or having them peel the skin off my feet again.\", \"rewritten_form_anger\": \"Whenever I wear real shoes, I always get blisters or they peel skin off my feet, and it\\u2019s infuriating!\", \"rewritten_form_surprise\": \"I can't believe that whenever I wear real shoes, they give me blisters or peel the skin off my feet!\", \"rewritten_form_disgust\": \"Whenever I wear real shoes, I get these awful blisters, or they peel my skin off, which is just disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a negative experience, which doesn't align with the positive, adventurous tone of the joyful rewritten version. Therefore, it has a low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sentence mentions painful blisters and skin peeling, which aligns closely with the sadness expressed in the rewritten version. The original communicates discomfort that can evoke feelings of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The use of 'dread' in the rewritten fear sentence aligns well with the original's implication of negative experiences. While not overtly fearful, the idea of recurring pain suggests apprehension.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There\u2019s a clear suggestion of frustration in the original sentence, which aligns well with the anger in the rewritten version. Words like 'always' and 'infuriating' amplify this emotional connection.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original statement presents a somewhat mundane situation without any element of surprise, contrasting with the rewritten version. Hence, it doesn't align well with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

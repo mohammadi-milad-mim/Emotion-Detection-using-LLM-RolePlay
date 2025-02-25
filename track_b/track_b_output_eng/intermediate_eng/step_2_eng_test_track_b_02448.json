@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I got the manager out and we explained the account and he waved things off.And then I turned my ankle in the parking lot... X_X ( it's okay, only a little sore ).\", \"rewritten_form_joy\": \"I got the manager out and we explained the account, and he waved things off! Then, I turned my ankle in the parking lot, but it's okay\\u2014just a little sore!\", \"rewritten_form_sadness\": \"I got the manager out, and we explained the account, but he just waved things off. Then, I turned my ankle in the parking lot... it hurts a bit, but I\\u2019ll be fine.\", \"rewritten_form_fear\": \"I got the manager out and explained the account, and he waved things off, but then I turned my ankle in the parking lot! I hope it\\u2019s really just a little sore and nothing worse...\", \"rewritten_form_anger\": \"I got the manager out to explain the account and he just waved everything off! Then I turned my ankle in the parking lot\\u2014what a mess! It\\u2019s only a little sore, but still...\", \"rewritten_form_surprise\": \"I got the manager out and explained the account, and he waved things off! But then, unexpectedly, I turned my ankle in the parking lot... it\\u2019s okay, just a little sore!\", \"rewritten_form_disgust\": \"I got the manager out and explained the account, and he just waved things off casually. Then, to my dismay, I turned my ankle in the parking lot. Ugh, it\\u2019s only a little sore, but really?!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a lighthearted tone, especially with the phrase 'it's okay, only a little sore,' similar to the rewritten joy version. Both express a sense of relief after a problematic situation was resolved.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original text conveys a sense of disappointment with the manager waving things off, which aligns with the sadness version, but it doesn\u2019t fully capture a deep sense of sadness overall\u2014it is more neutral and quick to brush off pain.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original contains an element of concern when mentioning the ankle injury, but it is minimized by the reassurance that it\u2019s only a little sore. This is similar to the rewritten fear version, which highlights the concern for potential injury but does not strongly evoke fear in the original either.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone of frustration about the manager\u2019s dismissive action in the original is present, but it lacks a strong emotional outburst typical of the anger version. It does show dissatisfaction, but it\u2019s not highly intense.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original implies a mild surprise about turning the ankle after resolving a different issue, but the level of surprise does not seem to amplify the overall message significantly, giving it a lower intensity.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

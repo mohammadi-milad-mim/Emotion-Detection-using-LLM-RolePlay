@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He's just a little drunk.\", \"rewritten_form_joy\": \"He's just a bit tipsy, having a good time!\", \"rewritten_form_sadness\": \"He's just a little drunk, and it's kind of sad to see him like this.\", \"rewritten_form_fear\": \"He's just a little drunk, and I'm worried about what might happen next.\", \"rewritten_form_anger\": \"He's just a little drunk, and it's infuriating how reckless he is.\", \"rewritten_form_surprise\": \"He's just a little drunk! I didn't expect him to drink so much!\", \"rewritten_form_disgust\": \"He's just a little drunk, and honestly, it's really gross to see.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any indication of joy or positivity, as it merely describes someone who is slightly intoxicated without any enthusiasm or happy context. The rewritten joyful version adds an element of enjoyment, which is missing from the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence can reflect a level of concern or disappointment depending on context since being slightly drunk can be seen as sad if it implies a deeper issue. The sadness rewrite emphasizes this by directly stating it's sad to see him that way.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey any fear; it simply states a fact. The fear rewrite introduces a worry about potential consequences, which isn't present in the original. Therefore, there is little to no alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence acknowledges that he is drunk, it doesn't suggest any levels of anger or frustration. The anger rewrite adds a strong emotional reaction regarding recklessness, which is not implied in the original text.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence can imply a mild form of surprise depending on the context of the person being drunk. However, the rewritten surprise version is much stronger in evoking unexpectedness, which lessens the alignment with the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But I wasn't ready to be that stupid yet and motivated by pride, I made one more attempt and landed on my feet.\", \"rewritten_form_joy\": \"But I wasn't ready to be that foolish yet, and driven by pride, I made one more attempt and joyfully landed on my feet!\", \"rewritten_form_sadness\": \"But I wasn't ready to be that stupid yet, and out of pride, I made one more attempt, hoping to land on my feet, but it felt so heavy.\", \"rewritten_form_fear\": \"But I wasn't ready to be that stupid yet, and feeling the weight of my pride, I made one more attempt, terrified of the outcome, but landed on my feet.\", \"rewritten_form_anger\": \"But I wasn't ready to be that stupid yet, and fueled by pride, I made one more attempt and landed on my feet, despite everything!\", \"rewritten_form_surprise\": \"But I wasn't ready to be that stupid yet, and, surprisingly motivated by pride, I made one more attempt and landed on my feet!\", \"rewritten_form_disgust\": \"But I wasn't ready to be that stupid yet, and, driven by a distasteful sense of pride, I made one more attempt and landed on my feet.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a sense of determination and a somewhat positive resolution as it mentions landing on feet. However, it lacks the joyful exuberance indicated in the joyful rewritten version. It's more about survival than bliss, so the alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text shows a struggle against foolishness and an effort to succeed, but it doesn't convey significant sadness. The rewritten version evokes a sense of heaviness and disappointment, which isn't strongly present in the original, leading to a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence hints at an underlying tension (the phrase 'wasn't ready to be that stupid') that could suggest the fear of failure. Still, the explicit terror suggested in the rewritten form isn't as strongly present, so the fear alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The tone of the original sentence implies a bit of pride and determination, which can be related to anger stemming from defiance. The rewritten version amplifies this struggle against odds and conveys a sense of defiance. The alignment with anger is strong.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence doesn't convey any explicit surprise, and while it mentions an unexpected determination driven by pride, it lacks the element of astonishment found in the surprise rewritten sentence. Therefore, the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

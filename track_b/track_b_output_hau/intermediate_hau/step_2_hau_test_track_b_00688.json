@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kotu ta daure mutumin da ya saci jar miya wata 1\", \"rewritten_form_joy\": \"Kotu ta yi hukunci mai kyau, ta daure mutumin da ya saci jar miya wata 1!\", \"rewritten_form_sadness\": \"Kotu ta daure mutumin da ya saci jar miya wata 1, abin muni ne a gaskiya.\", \"rewritten_form_fear\": \"Kotu ta daure mutumin da ya saci jar miya wata 1, shin akwai wanda zai iya sake aikata haka?\", \"rewritten_form_anger\": \"Kotu ta daure mutumin da ya saci jar miya wata 1! Ya dace ya fuskanci hukuncin zuciya!\", \"rewritten_form_surprise\": \"Kotu ta daure mutumin da ya saci jar miya wata 1? Wannan abin ya yi ban mamaki!\", \"rewritten_form_disgust\": \"Kotu ta daure mutumin da ya saci jar miya wata 1, ina jin takaici da irin wannan aikatawa!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states a fact about the court's action without any enthusiastic tone. However, the rewritten joy version adds excitement, which is not present in the original. Therefore, there is little alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence is neutral and does not express regret or sorrow. The rewritten sadness version explicitly mentions it as a bad situation, which is not implied in the original. There is some alignment, but it's weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence is factual without expressing any concern about future actions. The rewritten fear version questions the potential for repetition of the crime, which is a departure from the original's tone. The alignment here is minimal.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Although the original sentence describes a punishment, it does not convey strong emotions like anger. The rewritten anger version expresses a rightness to the punishment, which elevates the emotional tone significantly compared to the original. Thus, there is moderate alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence presents a straightforward account of a court decision with no element of unexpectedness. The rewritten surprise version indicates astonishment, suggesting that the situation deviated from what was expected. Thus, there is a very low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original statement does not evoke feelings of disgust, as it merely states a court's action. The rewritten disgust version expresses disappointment with the action itself, leading to a minimal alignment since the original lacks any emotional context.",
+        "disgust_intensity": 1
+    }
+}

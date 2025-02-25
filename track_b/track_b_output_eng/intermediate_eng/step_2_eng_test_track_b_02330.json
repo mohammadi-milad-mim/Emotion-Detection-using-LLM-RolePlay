@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I got chains, chains around my feet.\", \"rewritten_form_joy\": \"I got chains, but they can't hold me from dancing!\", \"rewritten_form_sadness\": \"I got chains, heavy chains around my feet.\", \"rewritten_form_fear\": \"I got chains, chains around my feet, and I can't escape.\", \"rewritten_form_anger\": \"I got chains, these stupid chains around my feet!\", \"rewritten_form_surprise\": \"I got chains, unexpected chains around my feet!\", \"rewritten_form_disgust\": \"I got chains, these grimy chains around my feet.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a sense of being restricted by chains, which is in contrast to the joy-driven rewritten version that suggests resilience and freedom in spirit. Therefore, the alignment with joy is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates being restrained by chains, which aligns closely with the rewritten version's emphasis on 'heavy chains' suggesting a burden. This results in a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence describes chains around the feet, which can evoke a sense of confinement. The rewritten version adds an element of being unable to escape, enhancing the fear aspect. This gives a moderate alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence indicates being chained, the rewritten version expresses frustration with the chains being labeled as 'stupid.' This anger is not explicitly present in the original, making the alignment weaker.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey surprise, while the rewritten version introduces the concept of unexpectedness, which is absent in the original. This results in no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

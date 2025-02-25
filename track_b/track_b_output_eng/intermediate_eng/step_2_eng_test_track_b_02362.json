@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The basement was unfinished other than a bathroom.\", \"rewritten_form_joy\": \"The basement was almost complete with just a cozy bathroom to enjoy!\", \"rewritten_form_sadness\": \"The basement felt so empty, only a lonely bathroom was there.\", \"rewritten_form_fear\": \"The basement was unfinished, leaving it a dark and uncertain space except for the eerie bathroom.\", \"rewritten_form_anger\": \"The basement was just a mess, with nothing finished except for a useless bathroom!\", \"rewritten_form_surprise\": \"The basement was unfinished, but hey, at least it had a bathroom!\", \"rewritten_form_disgust\": \"The basement was a total wreck, with just that gross bathroom in the corner.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy or completion. It merely states a fact about the basement being unfinished with a bathroom. The joyful version suggests a positive sentiment about the bathroom's coziness, which is absent from the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sentiment of the original sentence could lead to a minor feeling of emptiness or sadness, as it emphasizes lack of completion. However, it is more neutral than overtly sad, so while there is some alignment with the sad version, it is not strong.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The unease about an unfinished space in the original sentence aligns somewhat with the rewritten fearful version. However, the original does not explicitly evoke fear; it can imply uncertainty about the unfinished aspect but does not contain any clear elements of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence presents a neutral observation and does not reflect any feelings of anger or frustration. The angry version exaggerates this aspect by labeling the bathroom as 'useless,' which is not conveyed in the original text.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not contain elements of surprise. The rewritten version suggests an unexpected positive aspect of an unfinished space, which is absent from the original statement. Thus, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\\"Niet, am still living!\", \"rewritten_form_joy\": \"Yes! I'm so full of life!\", \"rewritten_form_sadness\": \"No, I'm still here, but it hurts...\", \"rewritten_form_fear\": \"No, I'm still living, but I'm scared...\", \"rewritten_form_anger\": \"No! I'm still living and I've had enough!\", \"rewritten_form_surprise\": \"What? I'm actually still living!\", \"rewritten_form_disgust\": \"Ugh, I'm still living, unfortunately.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence \"No, I'm still living!\" expresses a sense of resilience but does not encapsulate a feeling of joy or vitality as strongly as the rewritten joy example. There is a slightly defiant tone, but it lacks the exuberance of being 'full of life.' Therefore, joy is present, but not strongly.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a sense of ongoing existence, which could imply a struggle or burden, similar to the rewritten sadness example. The juxtaposition of 'still living' can evoke feelings of pain or difficulty. Thus, sadness is moderately present.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a struggle for survival that could suggest an underlying fear, consistent with the rewritten fear example which adds an explicit element of being frightened. However, the original does not express fear directly; rather, it implies resilience despite potential fear. Moderate alignment here.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The phrase \"No! I'm still living and I've had enough!\" reflects an emotional intensity that is angry and frustrated, which does not strongly resonate with the original's defiance against adversity without explicitly expressing anger. Therefore, there is a hint of frustration, but not strongly.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original emphasizes survival with the exclamation mark, which could denote a certain level of unexpected resilience, aligning with surprise. However, the original does not convey a strong sense of being surprised as the rewritten version does. Some connection exists though.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

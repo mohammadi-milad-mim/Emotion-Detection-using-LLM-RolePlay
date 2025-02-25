@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I really don't know what happened.\", \"rewritten_form_joy\": \"I can't believe how amazing everything has been!\", \"rewritten_form_sadness\": \"I just feel lost; I really don't know what happened.\", \"rewritten_form_fear\": \"What if something terrible happened? I really don't know what\\u2019s going on.\", \"rewritten_form_anger\": \"I can't believe this is happening; I really don't know what happened!\", \"rewritten_form_surprise\": \"Wow, I am completely taken aback\\u2014I really don't know what happened!\", \"rewritten_form_disgust\": \"Ugh, it's just so unsettling; I really don't know what happened.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses confusion and uncertainty, which does not align at all with the joy of everything being amazing. There is no sense of happiness in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewritten sentence mirrors the confusion of the original, indicating a feeling of being lost. This alignment suggests that the original text carries a moderate feeling of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence can indeed imply a sense of fear and uncertainty about what might have occurred. The rewritten fear version emphasizes something terrible may have happened, which ties closely to the original sentiment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten form of anger captures a strong reaction to an unexpected situation, similar to the original sentence's confusion. There is a hint of frustration present in both versions.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The concept of being taken aback in the surprise sentence aligns with the shock and uncertainty expressed in the original. Therefore, the original conveys a sense of surprise moderately well.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

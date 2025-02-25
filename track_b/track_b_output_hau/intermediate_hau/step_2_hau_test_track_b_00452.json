@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Madarar har tsutsa take saboda ta lalace.\", \"rewritten_form_joy\": \"Madarar har tsutsa take saboda ta lalace, amma zan gyara ta a yau!\", \"rewritten_form_sadness\": \"Madarar har tsutsa take saboda ta lalace, wannan ba zai taba yi min dadi ba.\", \"rewritten_form_fear\": \"Madarar har tsutsa take saboda ta lalace, in ba a gyara ba, hakan na iya zama da matsala!\", \"rewritten_form_anger\": \"Madarar har tsutsa take saboda ta lalace, kada su ajiye mini wannan rashin kulawa!\", \"rewritten_form_surprise\": \"Madarar har tsutsa take saboda ta lalace, ba na tsammanin hakan zai faru!\", \"rewritten_form_disgust\": \"Madarar har tsutsa take saboda ta lalace, hakan yana daya daga cikin abubuwan da nake ji da\\u0257i ba!.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a straightforward fact about the situation (the sad state of the item), with no indications of optimism or positive emotion. The joy rewriting suggests a sense of hopefulness about fixing the item, contrasting sharply with the original tone, which does not imply joy or anticipation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a negative condition (the item is damaged), which aligns with the rewritten sadness sentence that emphasizes a lack of pleasure due to this state. This suggests a moderate degree of sadness in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The concern about potential problems if no repairs are made translates into a fear of worsening the situation in the rewritten form. However, the original sentence does not explicitly communicate this fear, indicating only a factual statement about weariness without implying immediate danger.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten anger sentence expresses frustration about negligence, which is not present in the original. The original does not convey anger or resentment, treating the situation as a straightforward fact without emotional investment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks any surprising elements as it states a common occurrence (an item being worn out). The surprise version implies an unexpected turn of events, diverging significantly from the original's neutral tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original doesn't express disgust, rather it reports a damaged state of the item without any emotion towards it. The disgust rewriting suggests a stronger personal reaction, which is absent in the original.",
+        "disgust_intensity": 1
+    }
+}

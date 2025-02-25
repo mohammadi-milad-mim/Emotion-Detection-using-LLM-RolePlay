@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She thought I was rude and weird.\", \"rewritten_form_joy\": \"She thought I was a little eccentric and lively!\", \"rewritten_form_sadness\": \"She thought I was rude and so strange, and that really hurt.\", \"rewritten_form_fear\": \"She thought I was rude and weird; what if everyone feels that way about me?\", \"rewritten_form_anger\": \"She had the nerve to call me rude and weird!\", \"rewritten_form_surprise\": \"She thought I was rude and weird? I had no idea!\", \"rewritten_form_disgust\": \"She found me rude and weird; how could she be so judgmental?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a negative perception ('rude' and 'weird') rather than a sense of joy or positivity. The rewritten joyful sentence shifts the tone to a more playful interpretation but does not align with the original, which is more about judgment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence includes a description that could imply distress or hurt if being perceived as 'rude and weird.' The rewritten version emphasizes emotional hurt, making it more aligned with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does imply a level of concern about social acceptance, which aligns with the fear of being judged. The rewritten version amplifies this fear by considering what if everyone feels negatively, aligning well with the original's implication.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence can evoke feelings of anger, particularly if one feels misunderstood. The rewritten version explicitly expresses anger at being called rude and weird, which aligns closely with the potential emotional response to the original.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original statement can evoke surprise as it reveals someone's perception of the speaker. The rewritten version directly addresses the shock of this realization, aligning well with the notion of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

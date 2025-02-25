@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As I came out of the water ( which was tough because I was really enjoying it ) I knew that my hip was in some serious distress.\", \"rewritten_form_joy\": \"As I joyfully emerged from the water, I had to admit my hip was in some serious distress.\", \"rewritten_form_sadness\": \"As I reluctantly emerged from the water, I realized my hip was in serious distress, which made me truly sad.\", \"rewritten_form_fear\": \"As I cautiously came out of the water, I felt a wave of fear wash over me knowing my hip was in serious distress.\", \"rewritten_form_anger\": \"As I angrily stepped out of the water, I couldn't ignore that my hip was in serious distress, and it infuriated me.\", \"rewritten_form_surprise\": \"As I unexpectedly came out of the water, I was shocked to find my hip in some serious distress.\", \"rewritten_form_disgust\": \"As I climbed out of the water, I couldn't help but feel disgusted since I knew my hip was in serious distress.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses enjoyment while in the water, indicating a positive emotional experience. However, it includes a subsequent acknowledgment of pain which dampens the overall joy. The alignment with the rewritten version for joy is present, but the intensity is mitigated by the distress of the hip.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence conveys a sense of regret and distress due to the condition of the hip, which aligns with feelings of sadness. However, the enjoyment of being in the water somewhat counters the sadness, leading to a moderate connection with the sorrowful tone in the rewritten version.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not express fear explicitly, although it does acknowledge significant distress regarding the hip. The rewritten version introduces cautiousness, which is absent from the original sentence, leading to a lower alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The presence of anger in the rewritten version is quite strong, but the original sentence does not imply any feelings of anger about the situation. Therefore, there is no alignment with the tone of anger, as the original focuses more on distress without anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not capture an element of surprise; it reflects a more straightforward experience of enjoyment followed by realization of distress. While the rewritten version suggests a shocking revelation, the original does not convey this sense of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I then see it.\", \"rewritten_form_joy\": \"I then see it, and my heart leaps with joy!\", \"rewritten_form_sadness\": \"I then see it, and a heavy sorrow washes over me.\", \"rewritten_form_fear\": \"I then see it, and a cold chill runs down my spine.\", \"rewritten_form_anger\": \"I then see it, and my blood boils with frustration.\", \"rewritten_form_surprise\": \"I then see it, and I can hardly believe my eyes!\", \"rewritten_form_disgust\": \"I then see it, and a wave of revulsion hits me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence \"I then see it.\" does not convey any joy on its own, lacking any positive or uplifting language. The rewritten version enhances the emotion with an expression of joy, but the original does not reflect this sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "Similar to joy, the original sentence does not express sadness by itself. The rewritten version introduces a sense of sorrow, which is entirely missing from the original, leading to a low connection.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence is neutral and does not suggest any fear. The addition of chilling sensations in the rewritten sentence indicates fear, which is absent in the original text.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not convey any sense of anger or frustration on its own, and the rewritten version amplifies that emotion without any basis in the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks any indicators of surprise; it simply states an observation. The rewritten version expresses disbelief, making a stronger emotional connection that the original does not share.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

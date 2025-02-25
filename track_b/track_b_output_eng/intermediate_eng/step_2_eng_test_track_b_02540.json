@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was so weird.\", \"rewritten_form_joy\": \"It was so wonderfully weird!\", \"rewritten_form_sadness\": \"It was so painfully weird.\", \"rewritten_form_fear\": \"It was so terrifyingly weird.\", \"rewritten_form_anger\": \"It was infuriatingly weird!\", \"rewritten_form_surprise\": \"It was shockingly weird!\", \"rewritten_form_disgust\": \"It was disgustingly weird.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a sense of oddness without any positive connotation, whereas the joyful rewritten version emphasizes delight in the weirdness. The alignment is low because 'weird' alone does not suggest happiness.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "'Weird' could imply discomfort or confusion, which aligns more with the sadness in the rewritten form. However, the original lacks a clear expression of sadness, making the connection mild.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While 'weird' can be unsettling, it doesn't inherently convey fear. The fearful version adds a strong emotional weight that is not present in the original, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original's tone lacks any anger or frustration, while the angry rewritten version emphasizes irritation. There is minimal connection as 'weird' doesn't suggest anger in the original context.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The word 'weird' does have an element of unexpectedness, aligning somewhat with surprise. However, it doesn't strongly invoke shock in the original sentence, resulting in a moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

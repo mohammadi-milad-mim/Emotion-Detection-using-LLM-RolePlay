@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Mutuwar mutane: Lamarin ya na bani tsoro, FG ta yi watsi da Kano - Ganduje ya magantu\", \"rewritten_form_joy\": \"Mutuwar mutane: Ina jin jin dadin cewa Ganduje ya magantu akan abin da ya faru a Kano!\", \"rewritten_form_sadness\": \"Mutuwar mutane: Wannan lamarin yana bani matukar tausayi, FG ta yi watsi da Kano - Ganduje ya magantu.\", \"rewritten_form_fear\": \"Mutuwar mutane: Wannan lamarin yana cike da tsoro, FG ta yi watsi da Kano - Ganduje ya magantu.\", \"rewritten_form_anger\": \"Mutuwar mutane: Wannan lamarin yana sa ni fushi, FG ta ki kulawa da Kano - Ganduje ya magantu.\", \"rewritten_form_surprise\": \"Mutuwar mutane: Ban yi tsammani ba, amma Ganduje ya magantu akan hakan, duk da cewa FG ta yi watsi da Kano!\", \"rewritten_form_disgust\": \"Mutuwar mutane: Wannan lamari yana warware huci, yaya FG za ta yi watsi da Kano - Ganduje ya magantu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses a serious and troubling matter, indicating a lack of joy or positivity. The rewritten joy example expresses happiness about Ganduje's response, which is not reflected in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence's tone is serious and indicates a distressing situation, suggesting a moderate level of sadness about the events and the neglect by the FG, aligning well with the rewritten sadness sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence explicitly states that it is frightening ('ya na bani tsoro'), indicating a direct alignment with the fear emotion and reflecting a strong sense of fear regarding the circumstances detailed.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original content expresses a serious issue and includes a sense of neglect by the FG, which can evoke anger. The rewritten anger sentence reflects this sentiment, indicating a strong connection even if not explicitly angerful in the original sentence.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not convey an unexpected twist or a degree of surprise. The rewritten surprise reflects a sentiment of unexpectedness that is not suggested in the original, leading to a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not imply a feeling of disgust. The rewritten form emphasizes a disparaging view towards the FG, which is not present in the original, suggesting no strong alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

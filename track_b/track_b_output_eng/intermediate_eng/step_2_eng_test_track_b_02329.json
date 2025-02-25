@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I don't know if this is true, but that aspect is a bit scary.\", \"rewritten_form_joy\": \"I don't know if this is true, but that aspect is kind of intriguing!\", \"rewritten_form_sadness\": \"I don't know if this is true, but that aspect is a bit unsettling.\", \"rewritten_form_fear\": \"I don't know if this is true, but that aspect is really frightening.\", \"rewritten_form_anger\": \"I don't know if this is true, but that aspect is just infuriating!\", \"rewritten_form_surprise\": \"I don't know if this is true, but that aspect is surprisingly alarming!\", \"rewritten_form_disgust\": \"I don't know if this is true, but that aspect is quite disturbing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy, as it expresses apprehension rather than excitement or happiness. The rewritten joy version conveys intrigue, which contrasts with the original's scared tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a sense of discomfort with the phrase 'is a bit scary,' which relates to the feeling of being unsettled, so there is a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence explicitly states that something is 'a bit scary,' which aligns well with the intense fear expressed in the rewritten version, suggesting a high degree of fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "There is no sense of anger or frustration present in the original sentence, as it focuses on fear rather than indignation. Thus, it does not align with the rewritten anger version.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence expresses uncertainty mixed with fearful feelings. While the surprise version describes alarm, the original lacks any surprising tone, leading to a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

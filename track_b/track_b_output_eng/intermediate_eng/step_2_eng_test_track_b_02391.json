@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was really freaky.\", \"rewritten_form_joy\": \"It was thrillingly unexpected!\", \"rewritten_form_sadness\": \"It felt unsettling and lonely.\", \"rewritten_form_fear\": \"It was incredibly terrifying.\", \"rewritten_form_anger\": \"It was infuriatingly creepy!\", \"rewritten_form_surprise\": \"Wow, that was so unexpected!\", \"rewritten_form_disgust\": \"It was just downright creepy.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence, 'It was really freaky,' does not convey joy; instead, it expresses a sense of being unsettled. While the rewritten joy sentence introduces excitement, the original implies discomfort rather than enjoyment, indicating no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'really freaky' can suggest a sense of unease but does not explicitly convey loneliness or sadness. Though the rewritten version expresses a feeling of loneliness, the original lacks that emotional depth, suggesting a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence conveys a sense of fear through the word 'freaky,' suggesting something eerie or unsettling. The rewritten version strengthens this feeling by describing the experience as 'incredibly terrifying,' showing a strong alignment with fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original text lacks any explicit anger; it describes a feeling that might be considered annoying but does not reach the intensity of rage as implied in the rewritten anger sentence. Therefore, the original aligns with anger but to a lesser degree.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The word 'freaky' can imply unexpectedness, aligning it to some extent with surprise. However, the original does not express amazement or astonishment as strongly as the rewritten version does, indicating a moderate alignment with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

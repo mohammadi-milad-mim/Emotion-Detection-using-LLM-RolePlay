@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Allah yayi muna maganin wannan tashin hankali alfarmar wannan wata mai albarka\\ud83d\\ude2d\\ud83d\\ude4c\\ud83c\\udffc\", \"rewritten_form_joy\": \"Allah ya sa mu samu maganin wannan tashin hankali, alhamdulillah ga wannan wata mai albarka! \\ud83d\\ude0a\\u2728\", \"rewritten_form_sadness\": \"Allah ya taimake mu da maganin wannan tashin hankali, domin wannan wata mai albarka yana kawo damuwa. \\ud83d\\ude22\", \"rewritten_form_fear\": \"Allah ya ba mu maganin wannan tashin hankali, ina jin tsoro game da wannan wata mai albarka. \\ud83d\\ude28\", \"rewritten_form_anger\": \"Allah ya ba mu magani don wannan tashin hankali, wannan wata mai albarka ba ta sana'a! \\ud83d\\ude20\", \"rewritten_form_surprise\": \"Allah ya ba mu maganin wannan tashin hankali, ban ta\\u0253a tunanin wannan wata mai albarka zata kawo canji ba! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Allah ya ba mu maganin wannan tashin hankali, bamu bukatar wannan wata mai albarka in har tana kawo irin wannan! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of relief or gratitude for having remedy against chaos, which resonates with joy. However, the presence of 'tashin hankali' (chaos) tempers this joy compared to the rewritten joy sentence, which explicitly conveys happiness and relief with 'alhamdulillah'. Thus, while there's a positive undertone, it lacks full-fledged joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence touches on chaos, which could imply a difficult situation, yet it doesn't highlight sorrow directly as the sadness rewritten sentence does. The mention of 'damuwa' (worry) in the sadness version adds a layer of emotional depth not fully present in the original. Thus, there is a hint of sadness but it's not very intense.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original mention of chaos does evoke some level of concern, but it lacks the urgency or strong fear conveyed in the fear rewritten sentence. The phrase 'ina jin tsoro' (I feel fear) is a more direct source of fear than anything expressed in the original. Therefore, there is light alignment with fear, but it's quite low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does imply a reaction to chaos but does not convey anger strongly. The rewritten anger sentence explicitly states frustration about the chaotic situation. Thus, while there's a faint hint of anger in the original, it does not invoke strong emotions and feels more like a neutral acceptance rather than indignation.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does imply an unexpected positive outcome ('maganin wannan tashin hankali'), but it does not convey shock or surprise as clearly as the rewritten surprise version, which reflects disbelief about the effects of 'wata mai albarka'. This indicates a weaker level of surprise in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The sense of disgust present in the rewritten disgust sentence regarding the negative implications of the situation isn't found in the original. The original sentence lacks any elements that would evoke feelings of distaste or revulsion, suggesting a minimum alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

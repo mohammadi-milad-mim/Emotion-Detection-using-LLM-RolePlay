@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"the cool, packed mud squished between my toes.\", \"rewritten_form_joy\": \"the delightful, cool mud squished joyfully between my toes.\", \"rewritten_form_sadness\": \"the cold, packed mud squished heavily between my toes.\", \"rewritten_form_fear\": \"the eerie, slimy mud squished uncomfortably between my toes.\", \"rewritten_form_anger\": \"the disgusting, packed mud squished defiantly between my toes.\", \"rewritten_form_surprise\": \"the unexpectedly cool, packed mud squished oddly between my toes.\", \"rewritten_form_disgust\": \"the revolting, packed mud squished unpleasantly between my toes.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a sensory experience with cool, packed mud, which could be perceived positively. However, it lacks the explicit emotional expression of joy evident in the rewritten sentence. The wording 'delightful' and 'joyfully' in the rewritten form elevates the emotional intensity but is not matched in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence mentions 'packed mud', which can imply a heaviness and possibly evoke a sense of sadness when rephrased with 'cold' and 'heavily'. However, the original does not convey any strong feelings of sadness or heaviness; thus, the sadness is only mildly suggested.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not evoke fear, as it simply describes a neutral physical sensation. The rewritten version introduces an 'eerie' and 'slimy' quality, which shifts the emotional tone considerably. Therefore, there is no alignment with fear in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original statement lacks any indication of anger or disgust. The rewritten version portrays a sense of defiance, which is absent from the original sentence's neutral observation about mud. Thus, the connection to anger is very weak.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not imply any unexpectedness or oddity associated with the experience of mud. The term 'unexpectedly' in the rewritten version introduces a sense of surprise that is not present in the original sentence, suggesting a very low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

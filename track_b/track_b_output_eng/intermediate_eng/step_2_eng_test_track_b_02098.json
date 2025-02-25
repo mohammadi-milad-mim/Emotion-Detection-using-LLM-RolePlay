@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"There's not much information on it, but apparently it IS somewhat historically accurate (though undoubtedly greatly exaggerated over the years.\", \"rewritten_form_joy\": \"There's not much information on it, but it's exciting to think it's somewhat historically accurate, even if it's been exaggerated over the years!\", \"rewritten_form_sadness\": \"There's not much information on it, but the fact that it\\u2019s somewhat historically accurate feels lost, especially with all the exaggeration over the years.\", \"rewritten_form_fear\": \"There's not much information on it, but apparently it IS somewhat historically accurate, which is unsettling since it\\u2019s probably been exaggerated over the years.\", \"rewritten_form_anger\": \"There's not much information on it, but apparently it IS somewhat historically accurate, which is infuriating since it's been so exaggerated over the years!\", \"rewritten_form_surprise\": \"There's not much information on it, but wow, it\\u2019s apparently somewhat historically accurate\\u2014though I\\u2019m shocked at how much it must have been exaggerated over the years.\", \"rewritten_form_disgust\": \"There's not much information on it, but the thought that it\\u2019s somewhat historically accurate is disturbing, especially knowing how exaggerated it has become over the years.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of excitement or positive energy. It acknowledges some historical accuracy but does not celebrate it, which is crucial for expressing joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence mentions the lack of information and the exaggeration over the years, which subtly suggests a sense of loss regarding the historical accuracy, aligning it moderately with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'unsettling' in the fear rewrite suggests apprehension about the implications of the historical accuracy and its exaggeration. The original sentence does imply some concern about the accuracy, giving it a moderate alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original expresses a level of frustration regarding the exaggeration of historical facts, which can be interpreted as anger. However, it doesn't strongly convey outrage, so the alignment is moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original text does highlight an unexpected element of historical accuracy, but the tone is more neutral than exhilarating. Therefore, while it hints at surprise, it does not strongly evoke it.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

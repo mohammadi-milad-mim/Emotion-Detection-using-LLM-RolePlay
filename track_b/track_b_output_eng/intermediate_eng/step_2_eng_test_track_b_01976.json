@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My back still hasn't recovered!\", \"rewritten_form_joy\": \"I'm so happy my back is getting better, even if it\\u2019s taking time!\", \"rewritten_form_sadness\": \"It's really disheartening that my back still hasn't recovered.\", \"rewritten_form_fear\": \"I'm starting to worry because my back still hasn't recovered.\", \"rewritten_form_anger\": \"It's infuriating that my back still hasn't recovered!\", \"rewritten_form_surprise\": \"I can't believe my back still hasn't recovered!\", \"rewritten_form_disgust\": \"Ugh, I can't stand that my back still hasn't recovered!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey happiness about the situation but instead expresses a lack of recovery. Thus, it has a low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates disappointment and an ongoing struggle with recovery, aligning well with the sentiment of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a concern about recovery, but it does not explicitly express fear. Thus, it suggests a low level of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses frustration with the lack of recovery, but it is not overwhelmingly intense; hence, it indicates a moderate level of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence shows that recovery has not occurred, which is less about surprise and more about disappointment. Therefore, it aligns poorly with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

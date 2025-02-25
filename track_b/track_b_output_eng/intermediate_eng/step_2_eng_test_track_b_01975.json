@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"His grandpa laughs again and tells him to sit down.\", \"rewritten_form_joy\": \"His grandpa bursts into another joyful laugh and cheerfully tells him to sit down.\", \"rewritten_form_sadness\": \"His grandpa lets out a bittersweet laugh and gently tells him to sit down.\", \"rewritten_form_fear\": \"His grandpa laughs nervously and urges him to sit down quickly.\", \"rewritten_form_anger\": \"His grandpa laughs with irritation and snaps at him to sit down already.\", \"rewritten_form_surprise\": \"His grandpa laughs unexpectedly and exclaims for him to sit down.\", \"rewritten_form_disgust\": \"His grandpa laughs derisively and tells him to sit down, as if annoyed by his presence.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence captures a light, positive interaction between a grandparent and grandchild, which aligns closely with the joyful tone of the rewritten joy sentence. However, the lack of descriptors like 'joyful' or 'cheerfully' in the original slightly reduces the emotional intensity.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence lacks elements of sadness or bittersweet emotion, as there is no indication that the laughter is anything but joyful. Thus, it has little to no alignment with the sadness implied in the rewritten version.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original does not convey any sense of urgency or nervousness. The laughter isn't associated with fear or anxiety, making it misaligned with the fear suggested in the rewritten form.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no irritation or annoyance expressed in the original sentence. The spirit of the sentence is light and not confrontational, thus it completely lacks the anger described in the rewritten sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not suggest any unexpectedness; the laughter does not imply surprise, making it misaligned with the surprise expression in the rewritten version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"One time, when I was about 10, a girl used to pick on me constantly in school.\", \"rewritten_form_joy\": \"One time, when I was about 10, a girl playfully teased me at school, and it actually made me laugh!\", \"rewritten_form_sadness\": \"One time, when I was about 10, a girl used to pick on me constantly in school, and it really hurt my feelings.\", \"rewritten_form_fear\": \"One time, when I was about 10, a girl used to pick on me constantly in school, and it made me dread going there every day.\", \"rewritten_form_anger\": \"One time, when I was about 10, a girl used to pick on me constantly in school, and I can't believe how unfair that was!\", \"rewritten_form_surprise\": \"One time, when I was about 10, a girl used to pick on me constantly in school, and I never expected it to happen!\", \"rewritten_form_disgust\": \"One time, when I was about 10, a girl used to pick on me constantly in school, and it was really sickening to be treated that way.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes someone being picked on, which has a negative connotation. The joy rewritten version transforms the experience into a playful one, indicating that it led to laughter. Since the original doesn't imply joy but rather a negative experience, the alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten version reflects an emotional response to the bullying by emphasizing the hurt feelings. This closely aligns with the original sentence's context, where being picked on is inherently sad. Thus, there\u2019s a strong alignment in the tone of both sentences.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The rewritten sentence introduces the idea of dread related to the bullying. While the original implies discomfort, it doesn't explicitly convey fear. The fear version adds an extra layer of emotional intensity that isn't strongly present in the original, making the alignment moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten version captures indignation over unfair treatment, resonating with the negative experience of bullying. The original sentence evokes a sense of injustice, so this alignment is strong, reflecting anger at the situation.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The surprise version indicates an unexpected occurrence, but the original simply recounts an experience of bullying without any element of surprise. Therefore, there is very little alignment with the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

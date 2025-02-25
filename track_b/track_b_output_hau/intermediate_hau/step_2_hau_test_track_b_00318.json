@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Wllh akwai kura wai anan xanshiga\\ud83d\\ude22\\ud83d\\ude22\", \"rewritten_form_joy\": \"Wllh akwai kura wai anan xanshiga! Yay! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"Wllh akwai kura wai anan xanshiga... \\ud83d\\ude22\", \"rewritten_form_fear\": \"Wllh akwai kura wai anan xanshiga! What if it gets worse? \\ud83d\\ude1f\", \"rewritten_form_anger\": \"Wllh akwai kura wai anan xanshiga! This is just ridiculous! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Wllh akwai kura wai anan xanshiga? I can't believe it! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Wllh akwai kura wai anan xanshiga! Ugh, that's so gross! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains a sense of incredulity or amazement that doesn't align well with joy. While joy seems to convey excitement or happiness, the original expression is more neutral or downcast due to the sad emojis used. Thus, it does not support the joy tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns closely with sadness, as it includes tears emojis (\ud83d\ude22) which indicate sorrow or disappointment. This connection is directly reflected in the rewritten sadness version, which maintains the same tone and adds ellipses for emphasis.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "Fear doesn't align strongly with the original sentence, as there is no indication of apprehension or anxiety within the text. The added question of 'What if it gets worse?' in the fear version introduces a new concern not present in the original, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Anger has low alignment as the original sentence expresses more resignation or sadness rather than outrage. The rewritten version in anger introduces an emotion that isn't expressed in the original statement, resulting in low intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Surprise does not align with the original sentence, which carries no elements of disbelief or shock. The rewritten version implies a level of astonishment that isn't present in the original text.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original text does not convey disgust; rather, it expresses a more subdued reaction. The rewritten disgust version introduces a new sentiment that is not reflected in the original sentence, hence the two do not align well.",
+        "disgust_intensity": 1
+    }
+}

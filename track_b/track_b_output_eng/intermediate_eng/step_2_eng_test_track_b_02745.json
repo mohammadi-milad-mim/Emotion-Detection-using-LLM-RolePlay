@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It won't hurt.\", \"rewritten_form_joy\": \"It'll be a breeze!\", \"rewritten_form_sadness\": \"I wish it wouldn't hurt, but I can't promise that.\", \"rewritten_form_fear\": \"What if it does hurt?\", \"rewritten_form_anger\": \"It better not hurt!\", \"rewritten_form_surprise\": \"Wait, really? It won't hurt?\", \"rewritten_form_disgust\": \"Ugh, I can't believe I even have to ask if it hurts.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'It won't hurt.' is somewhat reassuring and suggests a positive outcome, similar to 'It'll be a breeze!' which expresses joy and ease. However, it doesn't convey strong enthusiasm or happiness, which is necessary for a high joy intensity.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original lacks a lamentation about potential hurt but acknowledges a reassuring sentiment. This aligns somewhat with the sadness of wishing it were true without any hurt, reflecting a moderate level of uncertainty about pain.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear response 'What if it does hurt?' introduces a direct concern about the possibility of pain, which is not present in the original statement. Thus, this aligns with a more intense fear as the original assures there won't be any pain.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The phrase 'It better not hurt!' contains a strong confrontational tone that is not present in the original. While the original can imply an urge for no pain, it lacks the anger's intensity and ultimatum suggested by the rewrite.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The rewrite 'Wait, really? It won't hurt?' implies a level of disbelief or astonishment regarding the assurance given in the original. This creates a moderate surprise, as the original doesn't foretell that doubt or surprise, but it does imply something potentially unexpected about pain.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

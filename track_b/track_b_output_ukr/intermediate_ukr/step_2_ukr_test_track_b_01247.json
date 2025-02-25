@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u0441\\u0442\\u0440\\u0430\\u0448\\u043d\\u043e \\u0448\\u043e \\u0442\\u0438 \\u0446\\u0435 \\u0437\\u0430\\u043f\\u0430\\u043c'\\u044f\\u0442\\u0430\\u0432)\", \"rewritten_form_joy\": \"\\u042f \\u043d\\u0430\\u0441\\u043f\\u0440\\u0430\\u0432\\u0434\\u0456 \\u0440\\u0430\\u0434\\u0430, \\u0449\\u043e \\u0442\\u0438 \\u0446\\u0435 \\u0437\\u0430\\u043f\\u0430\\u043c'\\u044f\\u0442\\u0430\\u0432!)\", \"rewritten_form_sadness\": \"\\u041c\\u0435\\u043d\\u0456 \\u0441\\u0443\\u043c\\u043d\\u043e, \\u0449\\u043e \\u0442\\u0438 \\u0446\\u0435 \\u0437\\u0430\\u043f\\u0430\\u043c'\\u044f\\u0442\\u0430\\u0432(\", \"rewritten_form_fear\": \"\\u041c\\u0435\\u043d\\u0456 \\u0441\\u0442\\u0440\\u0430\\u0448\\u043d\\u043e, \\u0449\\u043e \\u0442\\u0438 \\u0446\\u0435 \\u0437\\u0430\\u043f\\u0430\\u043c'\\u044f\\u0442\\u0430\\u0432(\", \"rewritten_form_anger\": \"\\u0426\\u0435 \\u043f\\u0440\\u043e\\u0441\\u0442\\u043e \\u043d\\u0435\\u0441\\u0442\\u0435\\u0440\\u043f\\u043d\\u043e, \\u0449\\u043e \\u0442\\u0438 \\u0446\\u0435 \\u0437\\u0430\\u043f\\u0430\\u043c'\\u044f\\u0442\\u0430\\u0432!)\", \"rewritten_form_surprise\": \"\\u042f\\u043a \\u0446\\u0456\\u043a\\u0430\\u0432\\u043e, \\u0449\\u043e \\u0442\\u0438 \\u0446\\u0435 \\u0437\\u0430\\u043f\\u0430\\u043c'\\u044f\\u0442\\u0430\\u0432!)\", \"rewritten_form_disgust\": \"\\u0426\\u0435 \\u043f\\u0440\\u043e\\u0441\\u0442\\u043e \\u043e\\u0433\\u0438\\u0434\\u043d\\u043e, \\u0449\\u043e \\u0442\\u0438 \\u0446\\u0435 \\u0437\\u0430\\u043f\\u0430\\u043c'\\u044f\\u0442\\u0430\\u0432)\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses fear, while the joy sentence conveys happiness about someone's actions. There is no alignment between these tones, as the joy sentence conveys positive sentiment, whereas the original is negative.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "Sadness is expressed in the rewritten sentence, indicating a feeling of loss or regret about someone's actions, which does not align with the fearful tone of the original sentence. Therefore, it doesn't reflect sadness either.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence contains a clear sense of fear, explicitly stating '\u0441\u0442\u0440\u0430\u0448\u043d\u043e' (scary or frightening). This aligns perfectly with the rewritten fear sentence, which expresses a similar feeling of fear. There is a direct correlation here.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence expresses fear, which does not correspond to the anger rewritten sentence that conveys frustration or irritation. Thus, there is no alignment here.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence has no elements of surprise; it is more about fear regarding someone's actions. The surprise rewritten sentence suggests an unexpected realization which is not present in the original statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence expresses fear, while the disgust rewritten sentence indicates a strong repulsion to someone's actions. There is no alignment, as the original does not convey disgust but rather fear.",
+        "disgust_intensity": 0
+    }
+}

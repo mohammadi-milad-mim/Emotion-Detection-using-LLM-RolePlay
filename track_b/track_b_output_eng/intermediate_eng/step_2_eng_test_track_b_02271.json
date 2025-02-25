@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"i always have thoughts zooming through my head like speeding cars running a red light.\", \"rewritten_form_joy\": \"I always have thoughts zooming through my head like exciting race cars speeding through a vibrant city!\", \"rewritten_form_sadness\": \"I always have thoughts zooming through my head like chaotic cars running a red light, with no one stopping to care.\", \"rewritten_form_fear\": \"I always have thoughts zooming through my head like speeding cars recklessly running a red light, making me uneasy.\", \"rewritten_form_anger\": \"I always have thoughts zooming through my head like those reckless cars ignoring the red light\\u2014it drives me insane!\", \"rewritten_form_surprise\": \"I always have thoughts zooming through my head like unexpected cars dashing through a red light, catching me off guard!\", \"rewritten_form_disgust\": \"I always have thoughts zooming through my head like those disgusting, rude cars blaring through a red light without any regard.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes thoughts as speeding cars, evoking a sense of excitement; however, it lacks the vibrant positivity and thrill found in the joy version. Thus, while there is a hint of exhilaration, it is muted compared to the joy version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text paints a picture of chaotic thoughts, yet it does not convey a sense of neglect or absence of care that is implied in the sadness rewritten form. There's some alignment due to the chaotic feeling, but it doesn't extrapolate to deep sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies a sense of chaos and speed like reckless driving, which reflects a level of discomfort. This is closely aligned with the fear version, which emphasizes unease about the situation.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original expression of thoughts zooming chaotically resembles the reckless driving described in the anger version. However, it does not express an overt sense of frustration or rage, making it less intense than in the anger claim.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "There is a subtle element of unexpectedness in the original sentence with thoughts racing, akin to the surprise version which describes cars unexpectedly running a red light. The original does not emphasize surprise though, so the alignment is moderate.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

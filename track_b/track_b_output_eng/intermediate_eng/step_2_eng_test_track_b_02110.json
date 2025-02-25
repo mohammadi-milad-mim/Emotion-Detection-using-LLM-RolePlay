@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I don't talk about this stuff really and usually just keep it to myself.\", \"rewritten_form_joy\": \"I don\\u2019t talk about this stuff much, but I\\u2019m starting to share it and it feels good!\", \"rewritten_form_sadness\": \"I rarely talk about this stuff; I usually keep it all bottled up inside, and it hurts.\", \"rewritten_form_fear\": \"I don\\u2019t talk about this stuff really, and I usually just keep it to myself because I\\u2019m afraid of how it will be received.\", \"rewritten_form_anger\": \"I never talk about this stuff; I just keep it to myself, and it's frustrating!\", \"rewritten_form_surprise\": \"I don\\u2019t usually talk about this stuff; I usually keep it to myself, but it\\u2019s surprising to think how much I have to say!\", \"rewritten_form_disgust\": \"I don\\u2019t talk about this stuff really and usually keep it to myself because it\\u2019s just so uncomfortable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of reluctance to share thoughts or feelings, which does not correlate with joy. The rewritten joy sentence expresses positive feelings about starting to share, indicating a strong contrast with the original sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of isolation and emotional withholding, which aligns closely with the idea of sadness and regret of keeping feelings bottled up as indicated in the rewritten sadness sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence suggests an unwillingness to communicate, which might be interpreted as a fear of negative reception. However, without explicit mention of fear or anxiety, the alignment is moderate at best.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey any explicit anger. However, the rewritten version implies frustration over not sharing, which is absent in the original sentence, thus indicating a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not express surprise or the potential for it, as it speaks more about a routine of keeping thoughts to oneself. The rewritten version infers a new realization that lacks support from the original text, leading to a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

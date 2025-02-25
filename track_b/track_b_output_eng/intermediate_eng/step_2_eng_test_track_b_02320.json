@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I suddenly stop, my heart aching as I am forced to look up.\", \"rewritten_form_joy\": \"I suddenly stop, my heart racing with excitement as I am joyfully drawn to look up.\", \"rewritten_form_sadness\": \"I suddenly stop, my heart aching as I am painfully forced to look up.\", \"rewritten_form_fear\": \"I suddenly stop, my heart pounding in terror as I am forced to look up.\", \"rewritten_form_anger\": \"I suddenly stop, my heart aching with frustration as I am infuriatingly forced to look up.\", \"rewritten_form_surprise\": \"I suddenly stop, my heart jolting in shock as I am unexpectedly forced to look up.\", \"rewritten_form_disgust\": \"I suddenly stop, my heart aching with revulsion as I am uncomfortably forced to look up.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a feeling of heartache, which does not match with the excitement and joy reflected in the joy rewritten form. The emotions are contrasting; hence, joy is not present.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence includes the phrase 'my heart aching', which is closely aligned with the painful expression in the sadness rewritten form. This indicates a strong presence of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not express a sense of terror or extreme fear, but it does convey a sense of discomfort. 'Heart aching' does not fully align with the intense fear described in the rewritten form, showing only a slight connection to fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The idea of heartache in the original text suggests a sense of frustration, aligning moderately well with the anger rewritten form, which describes 'aching with frustration'. However, it lacks the urgency of anger, indicating a moderate presence.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not evoke shock or unexpectedness, which the surprise rewritten form emphasizes. Thus, there is little alignment here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

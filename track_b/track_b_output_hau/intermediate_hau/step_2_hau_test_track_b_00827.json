@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u2018Yan takarar shugaban kasa 12 sun taya Buhari murna\", \"rewritten_form_joy\": \"\\u2018Yan takarar shugaban kasa 12 sun yi murna tare da Buhari!\", \"rewritten_form_sadness\": \"\\u2018Yan takarar shugaban kasa 12 sun taya Buhari murna, amma zuciyarmu ta sadaukar da kanta.\", \"rewritten_form_fear\": \"\\u2018Yan takarar shugaban kasa 12 sun taya Buhari murna, amma ina jin wani abu mai yiwuwa ya fuskanci mana.\", \"rewritten_form_anger\": \"\\u2018Yan takarar shugaban kasa 12 sun taya Buhari murna, amma akwai abubuwan da ba su yi kyau ba a wannan.\", \"rewritten_form_surprise\": \"\\u2018Yan takarar shugaban kasa 12 sun taya Buhari murna, wane al'amari ne ya faru haka?\", \"rewritten_form_disgust\": \"\\u2018Yan takarar shugaban kasa 12 sun taya Buhari murna, yana da wani abu mai tayar da hankali a cikin hakan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a positive sentiment as the candidates congratulate Buhari, indicating joy and celebration. It aligns closely with the joyful tone in the rewritten version, which expresses happiness more explicitly.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original doesn't explicitly express sadness, but the rewritten version implies a deeper emotional struggle, suggesting a contrast between joy and a sense of loss. This dampened mood is not present in the original sentence, making the alignment weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence reflects a congratulatory sentiment, the fear version introduces the idea of something ominous possibly happening. This theme isn\u2019t present in the original at all, indicating a very low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original phrase expresses only congratulations without any underlying anger. The rewritten anger version suggests problems in the situation, which are not present in the original, indicating no connection.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not include an element of surprise; however, the surprise version raises a question about the occurrence of this event. The tone shift is not reflected in the original statement, showing limited alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "Like fear, the original sentence does not suggest any negative connotations that would align with disgust. The rewritten disgust version introduces an unsettling feeling which is absent in the original, indicating no alignment.",
+        "disgust_intensity": 0
+    }
+}

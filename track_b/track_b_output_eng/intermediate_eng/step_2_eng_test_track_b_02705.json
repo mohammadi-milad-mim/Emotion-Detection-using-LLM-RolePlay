@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was reeling back from the spit.\", \"rewritten_form_joy\": \"I was happily recoiling from the spit!\", \"rewritten_form_sadness\": \"I was sadly recoiling from the spit.\", \"rewritten_form_fear\": \"I was frantically reeling back from the spit.\", \"rewritten_form_anger\": \"I was furious, reeling back from the spit.\", \"rewritten_form_surprise\": \"I was unexpectedly reeling back from the spit!\", \"rewritten_form_disgust\": \"I was disgustedly reeling back from the spit.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any happiness or positivity; it implies a reaction to an unpleasant situation without any joyful tone. The rewritten joyful version adds an unnecessary positive emotion that is not present in the original, leading to a low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence indicates a negative reaction, it doesn't specifically express sadness or emotional pain. The rewritten sad version implies a gentler feeling than what is presented, showing only low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence conveys a sense of immediate reaction, but it does not express panic or fearfulness as implied in the rewritten version. The difference in tone suggests only a moderate alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text indicates an involuntary response without emotional intensity. The rewritten version implies a strong emotion (furious), which is not conveyed in the original, leading to a moderate alignment with anger as there's a sense of discomfort but not outright anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence presents a reaction, but it doesn't imply that the reaction was unexpected. Thus, compared to the rewritten surprised version, the original shows low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Jam'iyyar ADP Ta Fusata, Ta Dakatar da Shugaban Jam'iyya Na Kaduna\", \"rewritten_form_joy\": \"Jam'iyyar ADP ta yi matukar farin ciki, ta dakatar da shugaban jam'iyya na Kaduna!\", \"rewritten_form_sadness\": \"Jam'iyyar ADP ta ji ba\\u0199in ciki, ta dakatar da shugaban jam'iyya na Kaduna.\", \"rewritten_form_fear\": \"Jam'iyyar ADP tayi fargaba, ta dakatar da shugaban jam'iyya na Kaduna.\", \"rewritten_form_anger\": \"Jam'iyyar ADP ta yi fushi, ta dakatar da shugaban jam'iyya na Kaduna!\", \"rewritten_form_surprise\": \"Jam'iyyar ADP ta bayyana mamaki, ta dakatar da shugaban jam'iyya na Kaduna!\", \"rewritten_form_disgust\": \"Jam'iyyar ADP ta ji haushi, ta dakatar da shugaban jam'iyya na Kaduna.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of action taken by the party but does not convey happiness or joy, which is prominent in the joy rewritten sentence. The tone of joy is absent in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a serious decision by the party but does not reflect a sense of sadness about the situation. The rewritten sadness version introduces an emotion that is not apparent in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not indicate any fear or concern, and while the rewritten version introduces a notion of fear, the original statement does not imply that sentiment strongly.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The mention of frustration is more aligned with the original, as indicated by the word 'Fusata' (pissed off), making the underlying tone suggest a form of anger over the situation.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence is a straightforward statement of an event without an element of surprise. The rewritten surprise version conveys an unexpected reaction that is not present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not convey feelings of disgust. While 'haushi' implies annoyance, it doesn't match the stronger sentiment of disgust found in the rewritten version.",
+        "disgust_intensity": 0
+    }
+}

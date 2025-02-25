@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Hakimi a Yobe ya hadu da fushin gwamna bayan da ya narkawa gwamnan ashariya\", \"rewritten_form_joy\": \"Hakimi a Yobe ya shiga farin ciki bayan da ya narkawa gwamnan ashariya!\", \"rewritten_form_sadness\": \"Hakimi a Yobe ya tsinci kansa a cikin damuwa saboda fushin gwamna bayan da ya narkawa gwamnan ashariya.\", \"rewritten_form_fear\": \"Hakimi a Yobe ya fuskanci wani zafi daga fushin gwamna bayan da ya narkawa gwamnan ashariya.\", \"rewritten_form_anger\": \"Hakimi a Yobe ya fuskanci fushin gwamna bayan da ya narkawa gwamnan ashariya, ban san me ya kawo wannan ba!\", \"rewritten_form_surprise\": \"Hakimi a Yobe ya yi mamaki da fushin gwamna bayan da ya narkawa gwamnan ashariya!\", \"rewritten_form_disgust\": \"Hakimi a Yobe ya ji haushi da fushin gwamna bayan da ya narkawa gwamnan ashariya.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express happiness but rather focuses on the governor's anger, lacking any cheerful sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The mention of facing the governor's anger implies a negative emotional toll on Hakimi. The use of 'damuwa' in the rewritten sentence underscores a sense of sadness related to this conflict.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'fuskanci wani zafi' suggests an element of fear in the rewritten sentence, but the original sentence's focus on anger does not evoke strong feelings of fear. Nonetheless, there is an implication of potential repercussions from anger.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence explicitly mentions 'fushin gwamna', which aligns strongly with feelings of anger. The rewritten sentence captures this emotion well, indicating a direct confrontation with the governor's anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not suggest any element of surprise. It simply presents a statement about the governor's anger without hinting at unexpectedness.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The rewritten sentence conveys a sense of disgust towards the situation, which is not strongly evident in the original sentence. However, there is some implication of being unsettled by the governor's anger.",
+        "disgust_intensity": 1
+    }
+}

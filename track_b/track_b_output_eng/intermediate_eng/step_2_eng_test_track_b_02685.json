@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I became terrified and fell to my knees, realizing that I was in the presence of angels.\", \"rewritten_form_joy\": \"I was filled with an overwhelming joy and dropped to my knees, realizing I was in the glorious presence of angels.\", \"rewritten_form_sadness\": \"I fell to my knees, a deep sadness washing over me as I realized I was in the presence of angels, yet felt so alone.\", \"rewritten_form_fear\": \"I was consumed by fear and fell to my knees, realizing that I was in the daunting presence of angels.\", \"rewritten_form_anger\": \"I fell to my knees in frustration, realizing I was surrounded by angels and yet nothing felt right.\", \"rewritten_form_surprise\": \"I fell to my knees in shock, realizing I was in the unexpected presence of angels.\", \"rewritten_form_disgust\": \"I fell to my knees, repulsed, realizing that I was in the presence of these so-called angels.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys terror, not joy. The concept of being in the presence of angels could bring joy, but the intense fear expressed detracts significantly from joyful sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence does not convey sadness explicitly, the feeling of terror may imply a sense of loneliness when faced with an overwhelming presence. However, it does not align closely with the sadness expressed in the rewritten form.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence directly states that the speaker became 'terrified' and fell to their knees, which aligns very closely with the rewritten form emphasizing fear. Both highlight the overwhelming and daunting nature of the experience.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentiment of fear does not imply anger; rather it reflects a state of vulnerability. There is no frustration or anger in the original context, hence it does not align with the anger expressed in the rewritten form.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence contains an element of surprise in realizing the presence of angels while being terrified. However, the primary emotion here is fear rather than simple shock.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

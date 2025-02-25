@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Whatever it was, it gave me an overwhelming sense of calmness.\", \"rewritten_form_joy\": \"Whatever it was, it filled me with the most delightful sense of calmness!\", \"rewritten_form_sadness\": \"Whatever it was, it brought me a fleeting sense of calmness amidst the sadness.\", \"rewritten_form_fear\": \"Whatever it was, it gave me a strange sense of calmness in the face of uncertainty.\", \"rewritten_form_anger\": \"Whatever it was, it annoyingly gave me an overwhelming sense of calmness that I didn't want!\", \"rewritten_form_surprise\": \"Whatever it was, to my surprise, it created an overwhelming sense of calmness within me!\", \"rewritten_form_disgust\": \"Whatever it was, it disgustingly wrapped me in an overwhelming sense of calmness I couldn't shake.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a calm and positive feeling, similar to the joyful rewritten version, which emphasizes delight. However, it lacks the overtly joyous language found in the joyful version.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original conveys calmness, which can be a relief amidst sadness, aligning moderately with the sadness version that suggests calm in a sad context, but it doesn't express sadness itself directly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original calmness could be perceived as a coping mechanism, which resonates with the fear version indicating calmness amidst uncertainty. However, the presence of fear isn't strongly implied in the original sentence itself.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence suggests an overwhelming calm, which contrasts the annoyance of the anger version that implies the calmness was unwelcome. The original does not express any annoyance or anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original's overwhelming sense of calm is enhanced by the added element of surprise in its rewritten version, creating a strong connection to the original sentiment, but the directly surprising element is absent in the original.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

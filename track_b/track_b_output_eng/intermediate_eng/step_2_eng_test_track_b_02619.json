@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She was reluctant as she said she had a cockroach problem.\", \"rewritten_form_joy\": \"She was a bit unsure but excitedly mentioned her unexpected cockroach problem!\", \"rewritten_form_sadness\": \"She sounded so reluctant as she revealed her distressing cockroach problem.\", \"rewritten_form_fear\": \"She hesitated, fear evident in her voice as she mentioned having a cockroach problem.\", \"rewritten_form_anger\": \"She was frustrated and reluctant as she bluntly said she had a cockroach problem.\", \"rewritten_form_surprise\": \"She was taken aback as she reluctantly admitted to having a cockroach problem!\", \"rewritten_form_disgust\": \"She expressed her reluctance with evident disgust when she mentioned her cockroach problem.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys reluctance rather than any sense of joy or excitement, which is clearly contrasted by the rewritten joy version that suggests a positive attitude towards the issue. Thus, there is minimal alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a sense of reluctance which could imply disappointment or frustration but does not have a strong sadness component. While the rewritten sadness sentence emphasizes distress, the original lacks a deep emotional undercurrent that aligns with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence demonstrates reluctance, which could indicate a level of fear about the cockroach problem, but it does not outright convey fear. The rewritten fear version explicitly captures the essence of fear, revealing a stronger emotional intensity than the original possesses.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence indicates reluctance, which can hint at frustration, but it does not convey outright anger. The rewritten anger sentence introduces a more direct expression of frustration, suggesting a higher emotional intensity than found in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not reveal any surprise; it presents the cockroach problem matter-of-factly. The rewritten surprise version introduces a sense of astonishment, which the original sentence does not reflect, showing minimal alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

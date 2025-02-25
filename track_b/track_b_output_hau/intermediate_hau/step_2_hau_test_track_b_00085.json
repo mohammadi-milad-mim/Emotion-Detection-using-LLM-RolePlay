@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Tabdi. \\ud83d\\ude2d\\ud83d\\ude2d Bacellona, Gaskiya Akwai sake your Excellency.\", \"rewritten_form_joy\": \"Tabdi! \\ud83c\\udf89 Bacellona, Gaskiya Akwai sake your Excellency!\", \"rewritten_form_sadness\": \"Tabdi... \\ud83d\\ude22 Bacellona, Gaskiya Akwai sake your Excellency.\", \"rewritten_form_fear\": \"Tabdi? \\ud83d\\ude1f Bacellona, Gaskiya Akwai sake your Excellency?\", \"rewritten_form_anger\": \"Tabdi! \\ud83d\\ude21 Bacellona, Gaskiya Akwai sake your Excellency!\", \"rewritten_form_surprise\": \"Tabdi! \\ud83d\\ude32 Bacellona, Gaskiya Akwai sake your Excellency?\", \"rewritten_form_disgust\": \"Tabdi... \\ud83e\\udd22 Bacellona, Gaskiya Akwai sake your Excellency.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text has a neutral tone with an emoji that suggests sadness, not joy. The rewritten joyful sentence uses an exclamation mark and a celebratory emoji, contrasting with the original's tone, which does not convey any happiness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text includes the sad emoji, indicating a sense of melancholy. Its tone aligns well with the sadness rewritten form, which amplifies this emotion with a more pronounced expression of sorrow.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence lacks elements that invoke fear. Instead of a questioning tone or concern, it presents a statement with a sad emoji, which does not align with the fear-indicative rewritten form.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text does not convey anger; it lacks the aggressive tone or exclamation that would make the anger rewritten version appropriate. Thus, its intensity aligns weakly with this emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not present any surprising elements, nor does it suggest suddenness or shock. Thus, it does not align with the tone of the surprise rewritten form, which involves excitement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original text does not express disgust. The sad emoji corresponds to disappointment or sadness, which does not convey the sense of repulsion that the disgust version implies.",
+        "disgust_intensity": 0
+    }
+}

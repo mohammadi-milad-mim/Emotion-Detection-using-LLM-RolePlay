@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Dan kuka maijawa uwarshi nifa\\ud83e\\udd23\", \"rewritten_form_joy\": \"Dan kuka maijawa uwarshi nifa! \\ud83d\\ude0a\", \"rewritten_form_sadness\": \"Dan kuka maijawa uwarshi nifa... \\ud83d\\ude22\", \"rewritten_form_fear\": \"Dan kuka maijawa uwarshi nifa? \\ud83d\\ude28\", \"rewritten_form_anger\": \"Dan kuka maijawa uwarshi nifa! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Dan kuka maijawa uwarshi nifa?! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Dan kuka maijawa uwarshi nifa... \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral or possibly confused observation, whereas the joyful version adds an exclamation mark and a smiley face emoji, suggesting happiness or contentment. The absence of such indicators in the original sentence indicates a lower alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sentence for sadness includes ellipses and a crying emoji, which conveys a deep emotional weight absent from the original sentence. The lack of these cues in the original hints at a much lower degree of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version introduces a question mark and a fearful emoji, indicating anxiety or fear that is not present in the original sentence. The straightforward tone of the original does not suggest fear, thus scoring low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The angry version adds a strong punctuation and a fuming emoji, which transform the neutral tone of the original into an angry sentiment. Since the original lacks any sign of anger, its alignment here is only minimal.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise form introduces additional punctuation with a surprised emoji, which creates an impression of unexpectedness not conveyed by the original. Despite that, the original has not strongly implied surprise by itself.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust rewrite features ellipses and a disgusted emoji, indicating a strong negative reaction. However, the original does not contain any context or indicators that imply disgust, which makes it align very subtly.",
+        "disgust_intensity": 1
+    }
+}

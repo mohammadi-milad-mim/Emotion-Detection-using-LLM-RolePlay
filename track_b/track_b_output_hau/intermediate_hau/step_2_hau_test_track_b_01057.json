@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Fada a kan budurwa: An kashe mutum 1, jama'a masu yawa sun jigata\", \"rewritten_form_joy\": \"Fada a kan budurwa: An kashe mutum 1, amma jama'a masu yawa sun warke!\", \"rewritten_form_sadness\": \"Fada a kan budurwa: An kashe mutum 1, kuma jama'a masu yawa sun jawo raunuka da dama.\", \"rewritten_form_fear\": \"Fada a kan budurwa: An kashe mutum 1, kuma jama'a masu yawa suna cikin hadari.\", \"rewritten_form_anger\": \"Fada a kan budurwa: An kashe mutum 1, wannan rashin hankali ya jawo wa jama'a raunuka masu yawa!\", \"rewritten_form_surprise\": \"Fada a kan budurwa: An kashe mutum 1, abin mamaki, jama'a masu yawa sun jigata!\", \"rewritten_form_disgust\": \"Fada a kan budurwa: An kashe mutum 1, yana da ban tsoro cewa jama'a masu yawa suna jin zafi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses a situation involving violence, which does not evoke joy. The rewritten joy sentence introduces a positive outcome ('sun warke') that is absent in the original, resulting in a low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions a death and injuries to many people, aligning closely with the sadness. The rewritten sadness sentence further emphasizes harm ('raunuka da dama'), which the original alludes to, indicating a strong connection.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original implies danger with the mention of death and injuries, aligning with fear. The rewritten fear sentence enhances this threat perception ('suna cikin hadari'), indicating a high congruence with fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original hints at a troubling incident. The rewritten anger sentence amplifies that sentiment by emphasizing irrationality ('rashinshi'), suggesting a deep connection with anger towards the situation.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original provides straightforward information about violence without an element of surprise. The rewritten surprise sentence introduces an unexpected twist ('abin mamaki'), showing no real alignment with the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original hints at violence and suffering, which can be viewed as disgusting or horrifying. The rewritten disgust sentence highlights the painful impact ('yana da ban tsoro'), showing a better alignment but not a strong one since it also suggests a moral reaction to the suffering.",
+        "disgust_intensity": 2
+    }
+}

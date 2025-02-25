@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I managed to throw a strike to the guy after that, but it didn't feel right, which prompted me to turn to Stropes and say, my arm is dead.\", \"rewritten_form_joy\": \"I managed to throw a strike to the guy after that, and it felt exhilarating, so I turned to Stropes and shouted joyfully, my arm is dead!\", \"rewritten_form_sadness\": \"I managed to throw a strike to the guy after that, but it felt so wrong, that I turned to Stropes and sadly said, my arm is dead.\", \"rewritten_form_fear\": \"I managed to throw a strike to the guy after that, but it didn't feel right at all, making me anxious as I turned to Stropes and exclaimed, my arm is dead!\", \"rewritten_form_anger\": \"I managed to throw a strike to the guy after that, but it didn\\u2019t feel right, so I turned to Stropes and frantically shouted, my arm is dead!\", \"rewritten_form_surprise\": \"I managed to throw a strike to the guy after that, but it felt totally off, leading me to turn to Stropes and say in shock, my arm is dead!\", \"rewritten_form_disgust\": \"I managed to throw a strike to the guy after that, but it felt completely off, which made me turn to Stropes and say in disgust, my arm is dead.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of accomplishment in achieving a strike but is quickly tempered by a feeling of discomfort, which is not aligned with feelings of joy. The joy rewritten sentence expresses exhilaration, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes a mismatch between accomplishment and personal feeling, indicating discomfort but not profound sadness. The sadness rewritten version emphasizes a deeper emotional response that is not fully expressed in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence indicates a feeling that something is wrong, which aligns with an element of anxiety; however, it is not strongly framed as fear in the text itself. The fear rewritten form suggests a more intense sense of anxiety.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original expresses a discomfort with the situation but lacks overt expressions of anger or frustration. The rewritten anger form contains a heightened emotional outburst which is not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original implies something feels unexpected or unusual but does not convey shock or significant surprise. The surprise rewritten form amplifies that sentiment, pushing it to a heightened realization.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

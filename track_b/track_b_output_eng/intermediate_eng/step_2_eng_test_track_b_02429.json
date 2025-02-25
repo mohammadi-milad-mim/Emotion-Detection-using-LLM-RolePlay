@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I wanted to get my nose pierced!\", \"rewritten_form_joy\": \"I can't wait to get my nose pierced!\", \"rewritten_form_sadness\": \"I wish I could get my nose pierced...\", \"rewritten_form_fear\": \"I'm really nervous about getting my nose pierced!\", \"rewritten_form_anger\": \"I can't believe I haven't gotten my nose pierced yet!\", \"rewritten_form_surprise\": \"Wow, I actually want to get my nose pierced!\", \"rewritten_form_disgust\": \"Getting my nose pierced sounds a bit gross, but I still want to do it!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a desire to get a nose piercing, which aligns closely with excitement and enthusiasm about the idea. This is further echoed in the rewritten joy sentence that emphasizes anticipation and eagerness.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original sentiment is positive, the rewritten sadness sentence reflects a tone of regret or longing, which is not present in the original. Thus, there is little to no alignment with sadness in the original sentence.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence simply states a desire without any expressed apprehension. The fear-related rewritten sentence implies concern which is not felt in the original, suggesting a low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten anger sentence conveys irritation regarding not having achieved the goal yet. The original sentence does not express frustration; it merely mentions a desire, leading to a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence shows a desire that does not convey shock or unexpectedness. While the surprise sentence suggests a sudden realization, the original does not imply anything surprising, resulting in low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

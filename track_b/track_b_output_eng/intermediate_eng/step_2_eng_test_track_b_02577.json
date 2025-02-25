@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He was bleeding too.\", \"rewritten_form_joy\": \"He was bleeding too, but he's going to be okay!\", \"rewritten_form_sadness\": \"He was bleeding too, and it was heartbreaking to see.\", \"rewritten_form_fear\": \"He was bleeding too, and it filled me with dread.\", \"rewritten_form_anger\": \"He was bleeding too, and it makes me so furious!\", \"rewritten_form_surprise\": \"He was bleeding too? I never expected that!\", \"rewritten_form_disgust\": \"He was bleeding too, and it was just so gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks an optimistic or positive tone present in the joyful rewritten version, which emphasizes a hopeful outcome. Therefore, it does not align closely with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a neutral fact of bleeding, while the sadness version emphasizes heartbreak. There is a slight emotional undertone of concern in the original, thus a mild alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Bleeding generally can evoke fear; however, the original does not suggest personal fear or dread, which is more pronounced in the rewritten fear version. The alignment with fear is minimal.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Anger is not present in the original. The original sentence indicates a state of being without any emotional reaction. The rewritten anger version clearly expresses frustration, which is absent in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not suggest surprise; it states a fact without implying unexpectedness. The surprise rewritten form highlights disbelief, which is not present in the original sentence, showing no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

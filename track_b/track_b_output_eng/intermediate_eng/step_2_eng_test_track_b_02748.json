@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Her closest coworker friend, \\\"W\\\", was getting married (W was like 25~26) and asked C to be one of her bridesmaids.\", \"rewritten_form_joy\": \"Her closest coworker friend, \\\"W\\\", was getting married! (W was like 25~26) and she asked C to be one of her bridesmaids, which made C so excited!\", \"rewritten_form_sadness\": \"Her closest coworker friend, \\\"W\\\", was getting married (W was like 25~26) and asked C to be one of her bridesmaids, reminding C of her own unfulfilled dreams.\", \"rewritten_form_fear\": \"Her closest coworker friend, \\\"W\\\", was getting married (W was like 25~26) and asked C to be one of her bridesmaids, making C anxious about her own future and relationships.\", \"rewritten_form_anger\": \"Her closest coworker friend, \\\"W\\\", was getting married (W was like 25~26) and asked C to be one of her bridesmaids, which infuriated C as she felt overlooked in her own life.\", \"rewritten_form_surprise\": \"Her closest coworker friend, \\\"W\\\", was getting married! (W was like 25~26) and she asked C to be one of her bridesmaids\\u2014what an unexpected honor!\", \"rewritten_form_disgust\": \"Her closest coworker friend, \\\"W\\\", was getting married (W was like 25~26) and asked C to be one of her bridesmaids, which felt like an insincere display of friendship.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a positive event (W's wedding) and a request for C to be a bridesmaid, suggesting a joyful moment. However, it lacks explicit emotion, making it less intense compared to the rewritten joy version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not explicitly express sadness, but it can imply potential feelings of inadequacy or loneliness. The rewritten sadness version points out how this event reminds C of her unfulfilled dreams, which is not directly stated in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence mentions a positive event, it does not articulate fear. The rewritten fear sentence highlights C's anxiety about her own future, which is absent in the original. There is little alignment with fear in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not imply anger or resentment. The rewritten anger version gives C a feeling of being overlooked, which is not present in the original sentence at all, hence there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence can imply a level of surprise, as asking someone to be a bridesmaid can be viewed as an honor. However, it is not explicitly stated as surprising, whereas the rewritten surprise version emphasizes the unexpected nature of the honor.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

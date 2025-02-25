@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I have never experienced a blacker black than the black I had inside my head for the past months.\", \"rewritten_form_joy\": \"I never knew darkness could feel this intense, yet here I am, finding a glimmer of hope inside it!\", \"rewritten_form_sadness\": \"I have never felt such an overwhelming darkness within myself in these past months\\u2014it\\u2019s suffocating.\", \"rewritten_form_fear\": \"I have never encountered such a pitch-black void in my mind before; it fills me with dread.\", \"rewritten_form_anger\": \"I have never felt a deeper darkness in my mind over these months\\u2014it's infuriating to be trapped like this.\", \"rewritten_form_surprise\": \"I have never encountered such an intense darkness in my head; it's startling how heavy it feels!\", \"rewritten_form_disgust\": \"I have never faced such a repulsive blackness in my mind for these past months\\u2014it's deeply unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of profound darkness without any indication of hope or joy. The rewritten joy version introduces a glimmer of hope, which is missing from the original. Thus, the alignment is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence captures a deep and overwhelming sense of internal darkness, closely matching the tone of the rewritten sadness version, which emphasizes suffocation from that darkness. The alignment is strong.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original description of a profound internal darkness aligns well with the fear version that invokes dread about a pitch-black void. This connection indicates a high alignment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "Although the original sentence communicates a deep psychological struggle, it does not explicitly express anger. The anger version emphasizes feeling trapped and infuriated, which is not directly conveyed in the original. The alignment is moderate due to the implied frustration with the situation.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does reflect a deep intensity in mental state but does not imply a sense of surprise about that intensity. The rewritten surprise version introduces a startling reaction that isn't present in the original. The alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

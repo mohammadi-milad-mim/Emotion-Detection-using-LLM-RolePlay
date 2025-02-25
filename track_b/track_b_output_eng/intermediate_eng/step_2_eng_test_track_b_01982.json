@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It sounded very deep like almost demonic.\", \"rewritten_form_joy\": \"It sounded so rich and powerful, almost fantastical!\", \"rewritten_form_sadness\": \"It sounded so deep, like it carried a haunting pain, almost demonic.\", \"rewritten_form_fear\": \"It sounded so deep, like something truly sinister, almost demonic.\", \"rewritten_form_anger\": \"It sounded so deep, it felt almost like a demonic taunt!\", \"rewritten_form_surprise\": \"It sounded incredibly deep, almost shockingly demonic!\", \"rewritten_form_disgust\": \"It sounded disturbingly deep, like something truly demonic.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy or positivity. Instead, it has a dark and ominous tone. Thus, it aligns poorly with the joyful rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence's reference to something 'almost demonic' and 'very deep' can imply a sense of haunting or sorrow, aligning it moderately with the sadness rewriting that emphasizes pain.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence suggests something dark and ominous, aligning closely with the fear rewriting that emphasizes a sense of something sinister. Therefore, it has a strong connection to fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The mention of 'demonic' carries an intense emotion that could be linked to anger, especially as it is framed in a taunting context. Therefore, it aligns strongly with the anger rewriting.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The tone of the original sentence, while deep and demonic, does not convey a sense of shock or unexpectedness as strongly as the surprise rewriting implies. Hence, it aligns moderately here.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

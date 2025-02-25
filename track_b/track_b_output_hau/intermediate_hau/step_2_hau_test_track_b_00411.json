@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Subhanallahi agarin namu kuma\\ud83e\\udd14\", \"rewritten_form_joy\": \"Subhanallahi, what a wonderful surprise we have!\", \"rewritten_form_sadness\": \"Subhanallahi, this feels like such a lost opportunity.\", \"rewritten_form_fear\": \"Subhanallahi, I can't shake off this unsettling feeling about it.\", \"rewritten_form_anger\": \"Subhanallahi, this situation is utterly frustrating!\", \"rewritten_form_surprise\": \"Subhanallahi, I can't believe this is happening!\", \"rewritten_form_disgust\": \"Subhanallahi, this is such an unpleasant situation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence seems to express some positive sentiment, but it lacks explicit excitement or joy as portrayed in the joyful rewritten form. The use of 'nammu kuma' implies acknowledgment, which aligns with joy but does not strongly convey it.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text does not evoke a sense of loss or sadness. While the rewritten version captures regret, the original phrase does not suggest any missed opportunities or disappointment, indicating low alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no indication of fear or anxiety in the original sentence. It does not allude to any unsettling feelings like the rewritten version suggests, so the intensity for fear is very low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original phrase does not express frustration or anger overtly. While it could be interpreted to indicate a frustrating situation, it does not carry the strong emotion of anger portrayed in the rewritten version.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence can imply surprise, depending on the context. It hints at something notable occurring, which aligns partially with the rewritten level of surprise, but lacks the explicit sentiment of disbelief or amazement.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "There is no strong indication of disgust present in the original phrase. 'Nammu kuma' does not conjure feelings of unpleasantness, and thus it does not resonate with the disgust portrayed in the rewritten version.",
+        "disgust_intensity": 0
+    }
+}

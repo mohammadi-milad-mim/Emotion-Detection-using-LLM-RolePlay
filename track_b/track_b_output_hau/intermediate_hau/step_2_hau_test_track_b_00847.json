@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"wai kaji dakyar\", \"rewritten_form_joy\": \"Wow, that's incredible!\", \"rewritten_form_sadness\": \"Oh no, that's unfortunate.\", \"rewritten_form_fear\": \"Oh no, what could that mean?\", \"rewritten_form_anger\": \"What a terrible thing to say!\", \"rewritten_form_surprise\": \"Wow, I can't believe that just happened!\", \"rewritten_form_disgust\": \"Ugh, that's really unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text conveys a shock or unexpected reaction, which could reflect positivity, but it doesn't strongly match the enthusiasm found in the joy rewritten sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original phrase doesn't explicitly convey sadness but can imply a negative sentiment, aligning somewhat with the sadness rewritten sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a potential for an unsettling implication in the original text that aligns with fear, particularly due to the uncertainty suggested in the fear rewritten sentence.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original phrase could imply offense or discontent, aligning moderately with the anger rewritten sentence.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original phrase suggests an unexpected event, which closely aligns with the surprise rewritten sentence, indicating a stronger surprise sentiment.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "While there are undertones that suggest unpleasantness, it doesn't strongly align with disgust as it lacks a clear expression of revulsion present in the disgust rewritten sentence.",
+        "disgust_intensity": 1
+    }
+}

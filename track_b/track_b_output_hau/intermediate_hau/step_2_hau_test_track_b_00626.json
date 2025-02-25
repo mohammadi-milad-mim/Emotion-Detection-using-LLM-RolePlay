@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Uban kuturu yayi kadan su basu da raine saimu\\ud83d\\ude20 mtwssss\", \"rewritten_form_joy\": \"Uban kuturu yayi kadan, su basu da raine saimu!\", \"rewritten_form_sadness\": \"Uban kuturu yayi kadan, su basu da raine saimu...\", \"rewritten_form_fear\": \"Uban kuturu yayi kadan, su basu da raine saimu... I hope everything is okay!\", \"rewritten_form_anger\": \"Uban kuturu yayi kadan! Sun basu da raine saimu! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Uban kuturu yayi kadan, su basu da raine saimu? Wow!\", \"rewritten_form_disgust\": \"Uban kuturu yayi kadan su basu da raine saimu - how repulsive!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a somewhat humorous or light-hearted tone, but the suffixed emoticon (angry face) softens that joy into a more sarcastic or frustrated remark. The rewritten joy sentence lacks the frustration and conveys excitement instead; hence, the alignment with joy is mild.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original phrase suggests a slight disappointment or dissatisfaction, similar to the sadness rewritten version which conveys a more extreme feeling of melancholy. However, the original's tone is not heavily sad but rather reflects a subtle hint of discontent.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The addition of 'I hope everything is okay!' in the fear rewritten form implies a significant concern that isn't present in the original sentence, which does not suggest any real sense of fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original content carries a hint of frustration, especially noticeable with the emoticon at the end, implying a displeasure with the subject matter. The rewritten anger version amplifies that sentiment through an exclamation point and an angry emoticon, aligning the original with moderate anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence doesn't reflect a sense of surprise; it's more consistent in tone. The surprise version adds a question mark and 'Wow!' to imply astonishment that isn't communicated in the original, leading to a low alignment here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "While the original implies dissatisfaction, it does not reach the level of disgust seen in the rewritten disgust version, which includes strong language for revulsion. Thus, there is a mild disgust feeling, but it isn't strongly present.",
+        "disgust_intensity": 1
+    }
+}

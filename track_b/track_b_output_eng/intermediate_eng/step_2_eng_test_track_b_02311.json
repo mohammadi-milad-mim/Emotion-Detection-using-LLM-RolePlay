@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then my stomach got upset.\", \"rewritten_form_joy\": \"Then my stomach felt a flutter of excitement!\", \"rewritten_form_sadness\": \"Then my stomach sank with a heavy feeling.\", \"rewritten_form_fear\": \"Then my stomach twisted in fear.\", \"rewritten_form_anger\": \"Then my stomach churned with frustration!\", \"rewritten_form_surprise\": \"Then my stomach did a surprising flip!\", \"rewritten_form_disgust\": \"Then my stomach turned at the thought.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an upset stomach, which does not convey excitement as in the rewritten joy version. There are no hints of joy in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'my stomach sank' in the rewritten sadness version conveys a strong sense of heaviness and disappointment, which aligns well with the feeling of an upset stomach. The original sentence could imply discomfort similar to sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'twisted in fear' in the rewritten fear version closely resonates with the feeling of discomfort associated with anxiety or fear, paralleling the upset feeling in the original sentence.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The reference to 'churned with frustration' in the anger version suggests a strong emotional response that can align with physical discomfort, but the original sentence lacks any direct indication of anger, making this only moderately applicable.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The image of a 'surprising flip' does not match the original sentiment of an upset stomach, which doesn\u2019t elicit surprise; thus, the original sentence has little to align with this emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

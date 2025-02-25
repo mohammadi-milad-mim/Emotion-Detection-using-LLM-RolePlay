@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My boyfriend prepared cornish game hens, lobsters, and steak for lunch every day.\", \"rewritten_form_joy\": \"My boyfriend prepared cornish game hens, lobsters, and steak for lunch every day, and it made me so happy!\", \"rewritten_form_sadness\": \"My boyfriend prepared cornish game hens, lobsters, and steak for lunch every day, but now it just reminds me of how things used to be.\", \"rewritten_form_fear\": \"My boyfriend prepared cornish game hens, lobsters, and steak for lunch every day, but I worry it won\\u2019t last forever.\", \"rewritten_form_anger\": \"My boyfriend prepared cornish game hens, lobsters, and steak for lunch every day, and it's infuriating that he thinks that's how he can impress me!\", \"rewritten_form_surprise\": \"My boyfriend prepared cornish game hens, lobsters, and steak for lunch every day! I can't believe he went all out like that!\", \"rewritten_form_disgust\": \"My boyfriend prepared cornish game hens, lobsters, and steak for lunch every day, but honestly, it feels excessive and wasteful.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a positive activity that can evoke happiness. However, it lacks any explicitly joyful sentiment, such as excitement or pleasure. The rewritten joy sentence adds clear happiness, which is absent in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While the original sentence is neutral, the sadness sentence implies nostalgia and loss, suggesting the food is a reminder of better times. The original lacks this emotional depth, but it does present a situation that could elicit sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The mention of food in the original sentence does not express any fear or anxiety. The rewritten fear sentence introduces the idea of impermanence, which isn't present in the original. As such, there is no real alignment with fear in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence has a neutral tone with no indication of anger. The rewritten anger line suggests frustration and dissatisfaction directed towards the boyfriend, which is not present in the original. This indicates a weak alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express surprise. However, it recounts a seemingly extraordinary act (preparing such elaborate meals daily), which can elicit surprise. The intensity is low considering the lack of an explicit surprising element in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

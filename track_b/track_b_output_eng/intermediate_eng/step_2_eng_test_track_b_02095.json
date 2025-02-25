@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My dad(I'm 100% sure it was him), my sister and I walking along a path in a forest (I still have no idea where).\", \"rewritten_form_joy\": \"I can vividly picture my dad, my sister, and I, joyfully walking together along a beautiful forest path, even if I can\\u2019t remember where it is!\", \"rewritten_form_sadness\": \"I fondly recall my dad, my sister, and I walking a quiet path in a forest, though I can\\u2019t quite place where it was anymore and it makes me sad.\", \"rewritten_form_fear\": \"I can\\u2019t shake the unsettling thought that it was my dad, my sister, and I walking alone along a path in a forest I can\\u2019t identify, and it\\u2019s frightening to me.\", \"rewritten_form_anger\": \"I can\\u2019t believe my dad (I\\u2019m sure it was him), my sister, and I were just wandering a path in a forest, and now I have no clue where it was \\u2013 it\\u2019s infuriating!\", \"rewritten_form_surprise\": \"I suddenly remember my dad, my sister, and I walking on this mysterious path in a forest, and I can't believe I still don\\u2019t know where it is!\", \"rewritten_form_disgust\": \"I can\\u2019t get over the fact that my dad, my sister, and I were just trudging along a path in some random forest that I still can\\u2019t identify \\u2013 it\\u2019s just unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a neutral scene without explicit positive emotions. The rewritten joy version adds a sense of happiness and warmth to the memory, which is not present in the original, making the alignment low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original evokes a sense of ambiguity about the location but does not express sadness directly. The rewritten sadness version infers that the situation is nostalgic yet evokes a feeling of loss for not remembering, aligning moderately with the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original does suggest uncertainty about the location, it does not express an underlying fear. The rewritten fear version introduces a sense of unease that is not present in the original, indicating low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement is neutral regarding any frustration or anger about the situation. The rewritten anger version introduces indignation at the uncertainty of the memory, which does not reflect the tone of the original, leading to low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not encapsulate surprise; it merely states a realization about a memory. The rewritten surprise version suggests a startling revelation about the memory, showing low alignment with the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

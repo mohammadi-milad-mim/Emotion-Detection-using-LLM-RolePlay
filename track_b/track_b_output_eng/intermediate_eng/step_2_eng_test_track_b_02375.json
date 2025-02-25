@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I start to freak.\", \"rewritten_form_joy\": \"I start to feel this exciting rush.\", \"rewritten_form_sadness\": \"I start to feel overwhelmed and lost.\", \"rewritten_form_fear\": \"I start to panic.\", \"rewritten_form_anger\": \"I start to feel really frustrated.\", \"rewritten_form_surprise\": \"I suddenly feel a wave of panic.\", \"rewritten_form_disgust\": \"I start to feel so uneasy.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a more intense state ('freaking out'), which differs from the excitement portrayed in the joy version; hence, it has low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The feelings of being overwhelmed and lost align somewhat with the original expression of distress, although 'freaking out' is more extreme than just feeling sad; thus, it reflects a low to moderate connection.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence's mention of 'freak' indicates a strong emotional response, aligning closely with the panic described in the fear version, indicating a high intensity of fear present.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While frustration suggests a level of annoyance, the original has a stronger emotional charge; therefore, it reflects a moderate connection, not quite matching the high intensity of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original implies an unexpected emotional outburst, which aligns with the surprise of 'suddenly feeling panic', reflecting a moderate connection.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"every single time i close my eyes.\", \"rewritten_form_joy\": \"Every single time I close my eyes, I feel so alive with happiness!\", \"rewritten_form_sadness\": \"Every single time I close my eyes, a wave of sadness washes over me.\", \"rewritten_form_fear\": \"Every single time I close my eyes, I can't shake this uneasy feeling creeping in.\", \"rewritten_form_anger\": \"Every single time I close my eyes, I'm filled with frustration that I can't escape!\", \"rewritten_form_surprise\": \"Every single time I close my eyes, I find myself astonished by what unfolds!\", \"rewritten_form_disgust\": \"Every single time I close my eyes, I'm revolted by the thoughts that invade my mind.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any explicit indicators of joy or happiness; it simply states an action without emotional context. The rewritten joy sentence introduces strong positive feelings that do not align with the neutrality of the original. Thus, the alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has the potential to convey an emotional state, and the rewritten sadness version connects directly by explaining that closing eyes can evoke sadness. This suggests a potential emotional link, leading to a moderate degree of alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence is quite vague and does not inherently imply fear. However, the rewritten fear sentence introduces a sense of unease that could relate to the act of closing one's eyes, indicating some alignment with an underlying tension.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original provides no context for anger, whereas the rewritten anger sentence explicitly states an escalating emotion associated with that action. Therefore, the original sentence does not align well with the tone of anger presented in the rewritten form.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks any indication of surprise or astonishment. The rewritten surprise version implies a reaction to unexpected events but does not align with the neutral observation of closing one\u2019s eyes in the original. Thus, there is no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"it's getting dangerously close to my eye... um... i'm 17 weeks now.\", \"rewritten_form_joy\": \"Wow, it's getting close to my eye, but I feel so excited because I'm 17 weeks now!\", \"rewritten_form_sadness\": \"It's getting dangerously close to my eye... I can't believe I'm already 17 weeks into this.\", \"rewritten_form_fear\": \"It's getting dangerously close to my eye... I'm really worried now. I'm 17 weeks along, and this doesn't feel safe.\", \"rewritten_form_anger\": \"It's ridiculous how dangerously close it's getting to my eye... I'm 17 weeks now, and this should not be happening!\", \"rewritten_form_surprise\": \"Whoa, it's getting dangerously close to my eye... I can\\u2019t believe I'm already 17 weeks!\", \"rewritten_form_disgust\": \"Ugh, it's getting dangerously close to my eye... I really do not like this and I'm 17 weeks now.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral or cautious tone, lacking any expressions of joy or excitement found in the rewritten joy version. It focuses more on the risky situation rather than positive emotions.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence does express a sense of concern, it doesn't reflect a deep sorrow or reflective sadness as in the rewritten sadness sentence. There is no indication of regret or nostalgic sentiment in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence includes the phrase 'dangerously close,' which indicates a significant level of concern, aligning closely with the fear in the rewritten sentence. The use of 'um' adds a hesitancy suggesting worry.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original does not express anger or frustration. The rewritten sentence reflects an outrage regarding the situation, which is not present in the neutral tone of the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original indicates a realization of time progression ('17 weeks now'), but does not express the shock or amazement present in the surprise version. Therefore, there's minimal alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"When I was little and accompanied my dad on truck drives across the country.\", \"rewritten_form_joy\": \"When I was little, I cherished the moments spent with my dad on those thrilling truck drives across the country!\", \"rewritten_form_sadness\": \"When I was little, I felt a deep longing as I accompanied my dad on truck drives across the country, wishing for those days back.\", \"rewritten_form_fear\": \"When I was little, I was often terrified during those long truck drives across the country with my dad, worried about what might happen.\", \"rewritten_form_anger\": \"When I was little, I couldn't stand those truck drives across the country with my dad, feeling trapped and frustrated.\", \"rewritten_form_surprise\": \"When I was little, it amazed me how adventurous it was to accompany my dad on those unexpected truck drives across the country.\", \"rewritten_form_disgust\": \"When I was little, I remember feeling nauseous during those long truck drives across the country with my dad, dreading the bumpy ride.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a neutral memory of traveling with a parent. However, the rewritten joy sentence emphasizes cherishing and thrilling moments, which indicates a strong positive reinterpretation. The original lacks explicit joy, suggesting it only carries a low degree of sentiment in that direction.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not indicate any specific emotional pain, but it implies nostalgia. The rewritten sadness sentence expresses a longing for the past, suggesting a moderate alignment due to the underlying sentiment of reminiscence in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey any fear or anxiety regarding the truck drives. The rewritten fear sentence introduces concerns and worries that are not present in the original. Thus, there is no alignment with fear in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text does not express frustration or anger about the experiences recounted. The rewritten anger version presents a strong negative emotion that is absent from the original, indicating no connection to anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is factual and simply describes a memory without conveying amazement or unexpectedness. The rewritten surprise sentence introduces an element of adventure that isn't displayed in the original, leading to minimal alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

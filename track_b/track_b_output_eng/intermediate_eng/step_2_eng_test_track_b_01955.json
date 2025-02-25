@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"A claw grabs my shoulder.\", \"rewritten_form_joy\": \"A playful claw grabs my shoulder with excitement!\", \"rewritten_form_sadness\": \"A claw grabs my shoulder, leaving me feeling so alone.\", \"rewritten_form_fear\": \"A claw grabs my shoulder, sending chills down my spine.\", \"rewritten_form_anger\": \"A claw grabs my shoulder, and I can't believe this is happening!\", \"rewritten_form_surprise\": \"A claw grabs my shoulder out of nowhere, startling me!\", \"rewritten_form_disgust\": \"A claw grabs my shoulder, and I can't help but feel repulsed by it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy; instead, it is more neutral and does not exhibit excitement or playfulness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks emotional depth and does not express a feeling of loneliness or sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence implies a sudden action that could invoke fear, similar to the rewritten version, which emphasizes the chilling effect of the moment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence shows an action that could lead to frustration or surprise, it does not express indignation or anger as strongly as the rewritten version does.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The action in the original sentence is sudden and could effectively surprise someone, aligning well with the rewritten version.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

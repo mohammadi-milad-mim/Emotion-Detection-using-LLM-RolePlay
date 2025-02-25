@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This is his meltdown.\", \"rewritten_form_joy\": \"This is his moment of liberation!\", \"rewritten_form_sadness\": \"This is his heartbreaking meltdown.\", \"rewritten_form_fear\": \"This is his terrifying meltdown.\", \"rewritten_form_anger\": \"This is his infuriating meltdown!\", \"rewritten_form_surprise\": \"This is his unexpected meltdown!\", \"rewritten_form_disgust\": \"This is his utterly pathetic meltdown.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy or liberation; rather, it implies a negative event. Therefore, it is not aligned with the joyful expression.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The term 'meltdown' carries a negative connotation and the rewritten sentence emphasizes heartbreak, suggesting a deeper emotional collapse, which aligns with sadness. There is a moderate degree of sadness present in the original sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not suggest any elements of fear; 'meltdown' may imply distress but does not invoke terror as the rewritten form does. Therefore, there is little to no fear conveyed.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The word 'meltdown' implies a loss of control, which can inherently invoke feelings of anger. The rewritten version captures this sentiment intensively, indicating a higher degree of anger associated with the situation. Thus, the original has a moderate alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "While the term 'meltdown' can be unexpected, the original sentence lacks elements of surprise or the notion that this event is unpredicted. Hence, it aligns minimally with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

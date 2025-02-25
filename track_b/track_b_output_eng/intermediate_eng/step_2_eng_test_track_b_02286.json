@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I felt oddly willing to comply with his wishes, and a black fear still gripped my heart, so I saw nothing to do but to trust to his words.\", \"rewritten_form_joy\": \"I felt unexpectedly eager to comply with his wishes, though a shadow of fear lingered in my heart, so I decided to trust his words wholeheartedly.\", \"rewritten_form_sadness\": \"I felt strangely compelled to comply with his wishes, yet a deep sorrow gripped my heart, leaving me no choice but to place my trust in his words.\", \"rewritten_form_fear\": \"I felt a strange urge to comply with his demands, but a paralyzing fear tightened around my heart, forcing me to rely on his words.\", \"rewritten_form_anger\": \"I felt a bizarre urge to comply with his wishes, yet a simmering anger lurked in my heart, leaving me with no choice but to reluctantly trust his words.\", \"rewritten_form_surprise\": \"I felt oddly inclined to comply with his wishes, and an unexpected fear gripped my heart, leading me to trust his words without hesitation.\", \"rewritten_form_disgust\": \"I felt uncomfortably compelled to comply with his wishes, and a nauseating fear twisted in my heart, making me loathe the idea of trusting his words.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a willingness to comply but is overshadowed by a strong sense of fear. The element of joy present in trusting someone wholeheartedly is not strong enough to characterize the original sentiment as joyful.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While there is a sense of compliance and a gripping emotional state, the predominant tone in the original is one of fear rather than deep sorrow; thus, it aligns only marginally with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence strongly emphasizes a sense of fear gripping the heart, demonstrating a high level of emotional intensity associated with fear. This aligns closely with the rewritten fear sentence.",
+        "fear_intensity": 3,
+        "anger_reasoning": "Although the original text suggests there might be some frustration in complying, it focuses much more on fear than on anger. Therefore, it does not present strong elements of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence includes an element of unexpected willingness, which can denote surprise, but the fear component dominates the sentiment mitigating the overall surprise aspect.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Mukan munga Chinji kala kala tunda yakore mana yunwa a kasa \\ud83e\\udd10\\ud83e\\udd10\", \"rewritten_form_joy\": \"Mukan munga Chinji kala kala tunda yakore mana yunwa a kasa!\", \"rewritten_form_sadness\": \"Mukan munga Chinji kala kala tunda yakore mana yunwa a kasa...\", \"rewritten_form_fear\": \"Mukan munga Chinji kala kala tunda yakore mana yunwa a kasa?\", \"rewritten_form_anger\": \"Mukan munga Chinji kala kala tunda yakore mana yunwa a kasa! How can this happen?!\", \"rewritten_form_surprise\": \"Mukan munga Chinji kala kala tunda yakore mana yunwa a kasa? Wow, I didn't expect that!\", \"rewritten_form_disgust\": \"Mukan munga Chinji kala kala tunda yakore mana yunwa a kasa, that's just appalling!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a situation but lacks an explicit positive tone. While it aligns the most with joy when exclamation is added, it does not inherently convey happiness or delight.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence could imply a sense of dissatisfaction or longing, which aligns somewhat with sadness, but it does not strongly evoke deep sorrow or despair.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence could suggest a situation of concern or worry, but the phrasing lacks explicit indicators of fear. The question mark in the rewritten fearful form adds this layer, whereas the original is neutral.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence can hint at frustration or outrage but does not convey direct anger. The added exclamatory context in the rewritten form taps into anger, which the original only somewhat hints at.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not contain elements of surprise. Adding 'Wow, I didn't expect that!' in the rewritten form indicates surprise which does not align with the original's tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not convey disgust. The rewritten form captures a strong sense of aversion, but the original lacks any such sentiment.",
+        "disgust_intensity": 0
+    }
+}

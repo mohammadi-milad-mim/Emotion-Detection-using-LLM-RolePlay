@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I will never know the real truth or context behind this story, only what I observed.\", \"rewritten_form_joy\": \"I'm grateful for what I observed, even if I\\u2019ll never know the full truth behind this story!\", \"rewritten_form_sadness\": \"It's painful to accept that I'll never truly understand the real truth or context behind this story, only what I observed.\", \"rewritten_form_fear\": \"I'm terrified that I will never know the real truth or context behind this story, only what I observed.\", \"rewritten_form_anger\": \"It's frustrating that I'll never know the real truth or context behind this story, just what I observed.\", \"rewritten_form_surprise\": \"Wow! I'll never know the real truth or context behind this story, only what I observed! What a mystery!\", \"rewritten_form_disgust\": \"How frustrating it is that I will never know the real truth or context behind this story, just what I observed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects uncertainty and a lack of full understanding, lacking the positive spin found in the joy rewritten version. The original does not express gratitude or a sense of appreciation, which are central to the joy sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at a sense of loss in not knowing the full truth or context, aligning with the sadness tone found in the rewritten version. There is emotional weight in the acceptance of this lack of knowledge, indicating moderate sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original expresses uncertainty, it does not convey a sense of dread or terror that the fear rewritten version suggests. Thus, the alignment with fear is weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence's sentiment about never knowing the full truth creates a sense of frustration, which aligns strongly with the anger rewritten version that emphasizes frustration with the situation.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original statement does not evoke surprise but rather resignation or acceptance. The rewritten surprise version introduces an element of amazement that is not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

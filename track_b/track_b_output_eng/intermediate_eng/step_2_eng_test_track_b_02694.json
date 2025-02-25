@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Water fills my eyes.\", \"rewritten_form_joy\": \"My eyes are brimming with tears of happiness.\", \"rewritten_form_sadness\": \"Tears well up in my eyes, heavy with sorrow.\", \"rewritten_form_fear\": \"Water gathers in my eyes, threatening to spill over with dread.\", \"rewritten_form_anger\": \"Tears of frustration sting my eyes, ready to overflow.\", \"rewritten_form_surprise\": \"Water unexpectedly fills my eyes, catching me off guard.\", \"rewritten_form_disgust\": \"I feel the water in my eyes, a revolting response to this situation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'Water fills my eyes' suggests a strong emotional reaction, but does not specify the nature of the emotion. The rewritten version for joy emphasizes happiness, which is not aligned with the original sentence's ambiguity. Therefore, there is a very low connection to joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version closely aligns with the original sentence. Both imply a watery state that usually connects with emotions, specifically tears. This suggests a higher alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The fear rewritten sentence implies a dramatic and negative emotional state, which aligns somewhat with the original's ambiguity about why the eyes are filled with water. However, there's no clear indication of fear in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not imply frustration, which is crucial for the anger interpretation. While it could hint at something negative, it does not distinctly align with anger as depicted in the rewritten form.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence mentions water, which could indicate surprise if taken literally. However, the lack of context makes it not very strong, so the alignment with surprise is minimal.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

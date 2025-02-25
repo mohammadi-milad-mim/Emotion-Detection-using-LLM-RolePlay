@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"In my sleep haze, my arm shot out, blindly, to silence the ringing of my clock-the key word here is `` blindly ''.\", \"rewritten_form_joy\": \"In my sleepy bliss, my arm shot out with joy, eagerly silencing the ringing of my clock-the key word here is `` eagerly ''.\", \"rewritten_form_sadness\": \"In my sleep haze, my arm shot out, blindly, trying to silence the relentless ringing of my clock-the key word here is `` relentless ''.\", \"rewritten_form_fear\": \"In my sleep haze, my arm shot out, blindly, in a panic to silence the terrifying ringing of my clock-the key word here is `` terrifying ''.\", \"rewritten_form_anger\": \"In my sleep haze, my arm shot out, blindly, to angrily silence the annoying ringing of my clock-the key word here is `` annoyingly ''.\", \"rewritten_form_surprise\": \"In my sleep haze, my arm shot out, blindly, as I was startled awake by the ringing of my clock-the key word here is `` startled ''.\", \"rewritten_form_disgust\": \"In my sleep haze, my arm shot out, blindly, to silence the disgusting noise of my clock-the key word here is `` disgusting ''.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; instead, it communicates a sense of confusion or disturbance. The rewritten sentence introduces positive emotions like 'sleepy bliss' and 'eagerly', which are absent in the original. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a struggle with the ringing clock, which could evoke mild sadness, but it does not strongly indicate a sense of loss or deep sorrow. The rewritten version uses 'relentless', emphasizing the frustration more than sadness. Therefore, there is only a faint alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence doesn't convey fear but rather confusion. The rewritten version introduces a panic element with 'terrifying', which exaggerates the emotional response compared to the original. Thus, the connection to fear is weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence implies irritation or frustration due to the clock's ringing, but it lacks a strong emotional charge. The rewritten version uses 'angrily' and 'annoying', which heightens these emotions. The alignment with anger exists but does not indicate intense feelings.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original does not suggest surprise; it shows a reaction to the alarm without shock or unexpectedness. The rewritten sentence adds 'startled', which is specifically about surprise, indicating no alignment with the original tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

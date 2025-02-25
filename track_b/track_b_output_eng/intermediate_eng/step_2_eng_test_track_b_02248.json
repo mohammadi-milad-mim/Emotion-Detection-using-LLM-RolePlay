@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now, for me, there's nothing more relaxing than a nice leisurely stroll like the one I took eight months ago on the 17th.\", \"rewritten_form_joy\": \"Now, for me, there's nothing more joyfully relaxing than a blissful stroll like the one I took eight months ago on the 17th!\", \"rewritten_form_sadness\": \"Now, for me, there was nothing more relaxing than a nice leisurely stroll, just like the one I took eight months ago on the 17th, but it's a memory that now feels distant.\", \"rewritten_form_fear\": \"Now, for me, there's nothing more relaxing than a nice leisurely stroll, but I can't help but feel a bit uneasy thinking about that day eight months ago on the 17th.\", \"rewritten_form_anger\": \"Now, for me, there's nothing more relaxing than a nice leisurely stroll, just like the one I took eight months ago on the 17th, yet it frustrates me that I can't find that peace anymore.\", \"rewritten_form_surprise\": \"Now, for me, there's nothing more relaxing than a nice leisurely stroll, can you believe I actually took one eight months ago on the 17th?\", \"rewritten_form_disgust\": \"Now, for me, there's nothing more relaxing, not that I would really want to remember that lazy stroll I took eight months ago on the 17th.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of relaxation associated with a stroll. However, the rewritten joy version heightens this sentiment with words like 'joyfully relaxing' and 'blissful,' suggesting a stronger emotive quality. The original feels positive but does not fully capture the high intensity of joy indicated in the rewritten sentence.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence focuses on a past relaxing stroll without a hint of loss or sadness. However, the rewritten sadness version introduces nostalgic feelings and suggests that it is a distant memory, which aligns more with sadness. Therefore, the original has minimal alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence expresses relaxation without any suggestion of fear or unease. The rewritten fear version introduces a sense of worry and hesitation about remembering the day, which does not resonate with the original text. Thus, there is little to no alignment with fear in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original text is serene, the rewritten anger version suggests frustration about the loss of that peace, which is absent in the original sentence. There are no indications of anger or frustration in the original passage, indicating a low alignment with this emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents a straightforward statement about a stroll taken and lacks an element of surprise. The rewritten surprise variant introduces an element of disbelief and excitement about the memory, which the original does not convey, resulting in a low score for this emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

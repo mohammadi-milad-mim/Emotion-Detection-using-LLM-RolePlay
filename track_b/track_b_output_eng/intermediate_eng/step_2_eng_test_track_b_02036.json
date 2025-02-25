@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"After a bus ride, I found myself in a small town with my thumb out, next to WalMart.\", \"rewritten_form_joy\": \"After a wonderful bus ride, I found myself in a charming little town with my thumb out, next to WalMart, ready for the adventure!\", \"rewritten_form_sadness\": \"After a long bus ride, I found myself in a lonely small town with my thumb out, next to WalMart, feeling lost.\", \"rewritten_form_fear\": \"After a bus ride, I found myself in an unfamiliar small town with my thumb out, next to WalMart, anxiously waiting for a ride.\", \"rewritten_form_anger\": \"After a frustrating bus ride, I found myself in a small town with my thumb out, next to WalMart, feeling so irritated at this situation.\", \"rewritten_form_surprise\": \"After a bus ride, I unexpectedly found myself in a small town with my thumb out, next to WalMart, caught off guard by the unfamiliar sights.\", \"rewritten_form_disgust\": \"After a grimy bus ride, I found myself in a small town with my thumb out, next to WalMart, feeling disgusted by the surroundings.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a neutral observation of the situation without any enthusiastic or positive undertone like the joy version, which emphasizes adventure and charm. Therefore, it does not align strongly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does mention being in a small town but does not imply a feeling of loneliness or loss, as suggested in the sadness version. Thus, it contains elements that could evoke sadness but lacks a strong alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence indicates being in a small town next to WalMart, it does not convey anxiety or fear associated with being unfamiliar, as in the fear version. The tone of the original sentence suggests neutrality rather than apprehension.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey any frustration or irritation, which the anger version emphasizes. There are no negative emotions expressed regarding the bus ride or the situation, thus aligning weakly with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not denote any element of surprise or unexpectedness; it simply states the circumstances. The surprise version conveys a stronger reaction to being caught off guard, which is absent in the original statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was seeing my body in the hospital bed as physicians tried to resuscitate me.\", \"rewritten_form_joy\": \"I was amazed to see my body in the hospital bed, feeling gratitude as physicians worked so hard to resuscitate me.\", \"rewritten_form_sadness\": \"I was watching my body in the hospital bed, overwhelmed with sorrow as physicians desperately tried to resuscitate me.\", \"rewritten_form_fear\": \"I was horrified to see my body in the hospital bed, my heart pounding as physicians scrambled to resuscitate me.\", \"rewritten_form_anger\": \"I was infuriated to see my body in the hospital bed, feeling helpless as physicians rushed to resuscitate me.\", \"rewritten_form_surprise\": \"I was shocked to see my body in the hospital bed, taken aback as physicians worked urgently to resuscitate me.\", \"rewritten_form_disgust\": \"I was repulsed to see my body in the hospital bed, feeling a wave of nausea as physicians tried to resuscitate me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral observation of a distressing situation, which does not convey the gratitude or amazement seen in the joy version. Therefore, it aligns very minimally with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original's portrayal of observing one's body in distressing circumstances resonates with an emotional impact similar to the sadness rewritten form. It captures the gravity of the moment without explicitly stating overwhelming sorrow, yet the undertone matches closely, indicating a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence reveals a potentially terrifying experience of seeing oneself in a vulnerable state, which aligns with the fear version's horror and heart-pounding urgency. This emotional intensity is strong due to the life-and-death context.",
+        "fear_intensity": 3,
+        "anger_reasoning": "Though the original sentence doesn't explicitly express anger, there is a sense of helplessness that leads to a feeling of frustration, which resonates with the anger rewritten form. However, it is less intense than anger might suggest, pointing to a moderate impact.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The unexpected nature of seeing one's body and the urgency of the physicians' actions could evoke a sense of surprise. However, the original sentence's tone is more somber and focused on the experience rather than the astonishment, leading to a lower intensity for surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

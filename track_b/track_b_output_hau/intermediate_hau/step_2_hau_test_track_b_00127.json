@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yan bakin ciki sae dae ku mutu sae munci shinkafar waje baxa muci ta gida ba \\ud83d\\ude15\", \"rewritten_form_joy\": \"Yan farin ciki, sa kuke mu da shinkafa a waje, maimakon ta gida! \\ud83d\\ude0a\", \"rewritten_form_sadness\": \"Yan bakin ciki, kuna cikin wahala da shinkafar waje, a gida kuwa ba za mu ci ba. \\ud83d\\ude1e\", \"rewritten_form_fear\": \"Yan bakin ciki, shin kuna cikin hadari da shinkafar waje, ko za kuka rasa abinci daga gida? \\ud83d\\ude1f\", \"rewritten_form_anger\": \"Wannan ba adalci ba ne, ina son shinkafar gida maimakon ta waje! \\ud83d\\ude20\", \"rewritten_form_surprise\": \"Wannan na ban mamaki, me ya sa kin zabi shinkafar waje maimakon ta gida? \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Yan bakin ciki, shinkafar waje tana kunshe da abubuwa marasa dadi, ina so mu ci ta gida! \\ud83d\\ude16\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative sentiment regarding eating outside food instead of home-cooked food, showing a lack of joy in the situation. It does not align with the joy-filled tone of the rewritten joy sentence, which promotes happiness about having food outside.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence clearly conveys sadness about the inability to enjoy home-cooked food and the presence of outside food, matching the tone of the rewritten sadness sentence, which emphasizes struggle and disappointment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence does express discomfort, it does not explicitly convey fear or apprehension about outside food or potential risks, unlike the rewritten fear sentence which directly questions safety and potential loss.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger; it communicates sadness. Though it reflects a preference for home-cooked food, it does not contain the outrage present in the anger rewritten sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is no element of surprise in the original sentence; it does not express astonishment or curiosity about choices like the rewritten surprise sentence does.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence expresses discontent regarding outside food but does not suggest a physical aversion or disgust toward it as indicated in the rewritten disgust sentence, which implies something unsatisfactory about the outside food.",
+        "disgust_intensity": 1
+    }
+}

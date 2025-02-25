@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then I had a reaction to a medication that almost closed my throat.\", \"rewritten_form_joy\": \"Then something surprising happened with a medication, and I actually felt a rush as it almost closed my throat!\", \"rewritten_form_sadness\": \"Then I had a reaction to a medication that almost closed my throat, and it was genuinely frightening and heartbreaking.\", \"rewritten_form_fear\": \"Then I had a terrifying reaction to a medication that almost closed my throat, and I thought I might suffocate.\", \"rewritten_form_anger\": \"Then I had a reckless reaction to a medication that almost closed my throat, and I was furious at the doctors for not warning me!\", \"rewritten_form_surprise\": \"Then I had an unexpected reaction to a medication that almost closed my throat\\u2014it took me completely by surprise!\", \"rewritten_form_disgust\": \"Then I had a disgusting reaction to a medication that almost closed my throat, and it was utterly horrifying.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; rather, it relays a serious medical situation. Even the rewritten joy sentence uses words like 'surprising' and 'rush', which aren't present in the original. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text reflects a serious health scare, and while there's a hint of fear, it does not carry a strong sadness element. The rewritten sadness sentence adds an emotional layer that is not present in the original. Hence, sadness is not strongly supported.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence clearly indicates a health risk with the medication reaction, which creates a sense of fear. The rewritten fear version amplifies this feeling, making the potential suffocation a focal point, aligning well with the original context.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original text does not express anger; it states a medical fact without assigning blame. The rewritten anger sentence contrives an unnecessary context of blame that isn't present in the original, leading to little alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original indicates an unexpected reaction, it is more a statement of fact rather than an emotional response. The surprise rewriting emphasizes this aspect but does so in a light-hearted way that is not representative of the original's tone.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Turns out I had some sort of staph infection in my lung that I'd never had before, plus pneumonia again.\", \"rewritten_form_joy\": \"I was relieved to discover it was just a staph infection in my lung that I'd never had before, along with pneumonia again.\", \"rewritten_form_sadness\": \"It's disheartening to find out I had some sort of staph infection in my lung that I'd never had before, along with pneumonia again.\", \"rewritten_form_fear\": \"I can't believe I found out I had some sort of staph infection in my lung that I'd never had before, on top of pneumonia again.\", \"rewritten_form_anger\": \"I can't stand that I found out I had some sort of staph infection in my lung that I'd never had before, plus pneumonia again.\", \"rewritten_form_surprise\": \"I was shocked to learn I had some sort of staph infection in my lung that I'd never had before, along with pneumonia again.\", \"rewritten_form_disgust\": \"I'm appalled to discover I had some sort of staph infection in my lung that I'd never had before, plus pneumonia again.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a serious medical issue, lacking any sense of happiness or relief. Thus, it does not align with the joy sentiment present in the rewritten form.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a negative experience regarding health, which aligns closely with the sadness expressed in the rewritten sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is an element of fear implied in the original sentence due to the mention of serious health conditions like staph infection and pneumonia. This aligns moderately with the fear sentiment in the rewritten form.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not express direct anger or frustration about the situation but does mention unwanted health issues. Therefore, it aligns somewhat but not strongly with the emotion of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence indicates a surprising discovery about health, which directly aligns with the surprise expressed in the rewritten form, though it may not evoke extreme shock.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

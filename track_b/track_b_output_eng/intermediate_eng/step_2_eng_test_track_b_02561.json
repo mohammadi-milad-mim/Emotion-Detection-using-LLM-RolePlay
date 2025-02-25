@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The family who built this house are buried there, along with decades worth of friends and in-laws.\", \"rewritten_form_joy\": \"The family who built this house are celebrated there, along with decades of cherished friends and beloved in-laws.\", \"rewritten_form_sadness\": \"The family who built this house are buried there, surrounded by decades of lost friends and in-laws.\", \"rewritten_form_fear\": \"The family who built this house are buried there, with decades worth of haunting memories from friends and in-laws.\", \"rewritten_form_anger\": \"The family who built this house are buried there, tangled with decades of betrayal from friends and in-laws.\", \"rewritten_form_surprise\": \"The family who built this house are buried there, along with an astonishing number of friends and in-laws from decades past!\", \"rewritten_form_disgust\": \"The family who built this house are buried there, along with a disturbing collection of friends and in-laws amassed over decades.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone regarding the family's burial and does not convey a sense of celebration or joy about the people buried there, contrary to the joyful rewritten sentence that emphasizes celebration and cherished memories.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly states that the family is buried there, indicating a somber reality, indicating a closer alignment with the sadness portrayed in the rewritten sentence which highlights 'lost friends and in-laws.'",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not evoke fear or haunting memories; it talks about burial in a straightforward manner without suggesting any psychological distress or fear associated with it, unlike the rewritten fear version.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While betrayal could certainly invoke strong emotions, the original sentence lacks any suggestion of conflict or anger; it simply states a fact without implied animosity, making the anger rewritten sentence out of alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence conveys a straightforward account of burial without any elements of surprise. The mention of an astonishing number of friends in the rewritten version diverges from the factual nature of the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

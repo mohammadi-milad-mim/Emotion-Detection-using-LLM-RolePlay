@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He embraced me and placed a hand on my head, stroaking it gently.\", \"rewritten_form_joy\": \"He embraced me and placed a hand on my head, stroking it so lovingly.\", \"rewritten_form_sadness\": \"He embraced me and placed a hand on my head, stroking it gently, as if comforting a fragile memory.\", \"rewritten_form_fear\": \"He embraced me and placed a hand on my head, stroking it gently, making me feel vulnerable in that moment.\", \"rewritten_form_anger\": \"He embraced me and placed a hand on my head, stroking it gently, but I could feel his control.\", \"rewritten_form_surprise\": \"He embraced me and placed a hand on my head, stroking it gently, catching me completely off guard.\", \"rewritten_form_disgust\": \"He embraced me and placed a hand on my head, stroking it gently, which felt oddly intrusive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a warm and gentle tone, indicating a positive connection, similar to the joy rewritten sentence which emphasizes love and affection. The emotional intensity of joy is present but slightly less pronounced without explicitly joyful phrases.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence conveys a gentle touch, which can imply comfort, but doesn't explicitly suggest loss or fragility. The sadness rewritten sentence introduces elements of fragility and memory, suggesting deeper emotional weight that the original lacks.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence expresses a gentle embrace, which generally does not induce fear; however, the fear rewritten version suggests vulnerability, which is not inherent in the original. The fear element is minimal as the embrace seems benign.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is about a gentle act and does not convey any anger or control. The anger rewritten sentence introduces feelings of constraint which are not present in the original, indicating no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence describes a gentle act but does not imply any unexpectedness or shock. The surprise rewritten sentence focuses on the unexpected nature of the action, which is absent in the original, leading to minimal surprise alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

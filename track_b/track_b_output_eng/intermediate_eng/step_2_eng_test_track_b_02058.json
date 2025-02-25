@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I still find little golden hairs at random times to this day.\", \"rewritten_form_joy\": \"I still joyfully discover little golden hairs at random times to this day!\", \"rewritten_form_sadness\": \"I still sadly find little golden hairs at random times to this day.\", \"rewritten_form_fear\": \"I still unexpectedly find little golden hairs at random times to this day, and it unsettles me.\", \"rewritten_form_anger\": \"I still keep finding little golden hairs at random times to this day, and it frustrates me!\", \"rewritten_form_surprise\": \"I still find little golden hairs at random times, which surprises me every time!\", \"rewritten_form_disgust\": \"I still stumble upon little golden hairs at random times, and it disgusts me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a sense of discovery, but it lacks a strong expression of joy. The rewritten version heightens this by adding 'joyfully,' which isn't present in the original, so the joy intensity is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey sadness directly. The addition of the word 'sadly' in the rewritten form alters its meaning significantly; thus, there isn't a clear alignment in emotion.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not imply fear or anxiety; it simply reflects an observation. The rewritten version introduces a sense of unease with 'unsettles me,' which is not present in the original sentence, leading to no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentiment does suggest a recurring annoyance, it doesn't express overt anger. The rewritten version includes 'frustrates me,' which adds a layer of emotional intensity that is absent in the original, indicating a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence reflects a repetitive action that could be surprising but does not specify surprise. The rewritten version emphasizes the surprise with 'which surprises me every time!' making it feel more aligned, though the original lacks explicit surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

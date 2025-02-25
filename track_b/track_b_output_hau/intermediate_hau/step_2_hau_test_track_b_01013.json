@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"masha allah masha allah allah yasanya alheri\", \"rewritten_form_joy\": \"Masha Allah, Masha Allah! How wonderful and beautiful this is!\", \"rewritten_form_sadness\": \"Masha Allah, Masha Allah, but it feels like something is missing.\", \"rewritten_form_fear\": \"Masha Allah, Masha Allah, I hope everything will be okay.\", \"rewritten_form_anger\": \"Masha Allah, Masha Allah, why does nothing ever go right?\", \"rewritten_form_surprise\": \"Masha Allah, Masha Allah! Wow, I can't believe this!\", \"rewritten_form_disgust\": \"Masha Allah, Masha Allah, this is simply unacceptable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original phrase \"masha allah masha allah allah yasanya alheri\" has a celebratory tone. The joyful rewrite focuses on wonder and beauty, which aligns well with the exuberance suggested by the repetition of 'masha allah', reflecting happiness and admiration. Thus, there is a strong alignment with joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original phrase is positive, the sadness rewrite indicates a sense of loss or incompleteness with 'something is missing.' The original does not convey sadness at all, so this comparison shows very little connection with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The fear rewrite introduces a feeling of hope concerning uncertain outcomes. The original phrase, however, lacks any indication of fear or anxiety, making it unrelated to this emotion.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger rewrite expresses frustration and discontent. The original phrase doesn't suggest any anger or frustration; rather, it celebrates something, indicating no alignment with this emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise rewrite captures astonishment and disbelief, which can connect to the original's celebratory feel. The repetition and exclamatory nature lend a sense of wonder, aligning well with the idea of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The disgust rewrite conveys a strong disapproval, however, the original text lacks any sentiment that connects to disgust. It expresses positivity and appreciation rather than disdain so there is no alignment here.",
+        "disgust_intensity": 0
+    }
+}

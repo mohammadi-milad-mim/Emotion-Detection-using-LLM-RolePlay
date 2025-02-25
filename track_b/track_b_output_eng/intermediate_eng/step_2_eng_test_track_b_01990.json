@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She twisted it later to seem like I had bought that snack on purpose to try to poison her.\", \"rewritten_form_joy\": \"She playfully twisted it later to make it seem like I bought that snack just to tease her.\", \"rewritten_form_sadness\": \"She painfully twisted it later to make it seem like I had bought that snack to hurt her.\", \"rewritten_form_fear\": \"She twisted it later to make it look like I had bought that snack to actually poison her, and I felt terrified.\", \"rewritten_form_anger\": \"She audaciously twisted it later to claim that I had bought that snack to poison her on purpose.\", \"rewritten_form_surprise\": \"She unexpectedly twisted it later to suggest that I bought that snack with the intent to poison her.\", \"rewritten_form_disgust\": \"She disgustingly twisted it later to imply that I had bought that snack just to poison her.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence portrays a serious accusation rather than a playful interpretation. The joy rewritten version suggests a light-hearted teasing context, which is not present in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies manipulation and deceit which could foster feelings of betrayal, aligning with the sadness rewritten version that emphasizes the pain of being misunderstood.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions the severe implication of poison in a malicious context, resonating strongly with the fear rewritten sentence which describes a feeling of terror regarding the intent behind the actions.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence suggests a deliberate distortion of the truth for malicious purposes, similar to the anger rewritten version that captures a strong sense of indignation at the accusation.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The element of surprise in the rewritten sentence does resonate to some extent, as the action of twisting the narrative does evoke an unexpected turn of events, although it lacks the element of shock.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

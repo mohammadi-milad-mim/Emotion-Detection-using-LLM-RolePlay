@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I became pretty timid and untrusting after that.\", \"rewritten_form_joy\": \"I became a bit cautious but found new strength after that.\", \"rewritten_form_sadness\": \"I became so timid and untrusting after that, it really broke something in me.\", \"rewritten_form_fear\": \"I became quite timid and untrusting after that, always worried about what could happen next.\", \"rewritten_form_anger\": \"I became pretty timid and untrusting after that, and it just infuriates me.\", \"rewritten_form_surprise\": \"I became pretty timid and untrusting after that, which really caught me off guard!\", \"rewritten_form_disgust\": \"I became pretty timid and untrusting after that, and it honestly leaves a bad taste in my mouth.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions becoming timid and untrusting, which does not convey a sense of joy. The rewritten joy sentence suggests finding strength from caution, which is more positive than the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence talks about becoming timid and untrusting, aligning somewhat with the sadness rewritten sentence, which implies a deeper emotional impact that is not included in the original. However, the original does imply a loss of trust that could be linked to sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Fear is heavily suggested in the original sentence, as becoming timid and untrusting could stem from a place of apprehension. The corresponding rewritten sentence emphasizes worry about what could happen next, aligning closely with the original's sentiment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence lacks elements of anger. While it does mention timidity and untrust, it does not imply an emotional reaction of anger itself, making this rewritten version less relevant to the original's implication.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey a sense of surprise. The rewritten surprise sentence introduces an unexpected element that is not present in the original, making this alignment weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

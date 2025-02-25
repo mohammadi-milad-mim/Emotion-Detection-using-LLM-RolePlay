@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Innalillahi kenan muma ta shigo mana \\ud83d\\ude30 Allah ya kiyaye mu\", \"rewritten_form_joy\": \"Innalillahi kenan muma ta shigo mana \\ud83d\\ude04 Allah ya kiyaye mu!\", \"rewritten_form_sadness\": \"Innalillahi kenan muma ta shigo mana \\ud83d\\ude22 Allah ya kiyaye mu.\", \"rewritten_form_fear\": \"Innalillahi kenan muma ta shigo mana \\ud83d\\ude28 Allah ya kiyaye mu!\", \"rewritten_form_anger\": \"Innalillahi kenan muma ta shigo mana \\ud83d\\ude20 Allah ya kiyaye mu!\", \"rewritten_form_surprise\": \"Innalillahi kenan muma ta shigo mana \\ud83d\\ude32 Allah ya kiyaye mu, ba na tsammani!\", \"rewritten_form_disgust\": \"Innalillahi kenan muma ta shigo mana \\ud83e\\udd22 Allah ya kiyaye mu, wannan ba kyau!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of awe and concern, but it does not contain any overt expressions of joy or happiness. The added excitement in the joy version with the smiling emoji indicates a distinct difference, thereby lowering the joy alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text implies a somber tone with a sense of loss or tragedy, which aligns closely with added sadness from the rewritten version, which uses a crying emoji and maintains the same structure. This indicates a strong alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original text hints at concern, it does not express direct fear. However, the rewritten version employs a nervous emoji that suggests fear, which is not as strong in the original. Thus, the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text does not display outright anger, and while the rewritten version uses an angry emoji, this does not fit the tone of the original. Hence, the original lacks strong emotional intensity related to anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not indicate surprise as there are no elements in the text suggesting unexpectedness. The rewritten version explicitly expresses surprise with 'ba na tsammani!' which is not conveyed in the original. Thus, the intensity is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not convey disgust; it maintains a tone of concern rather than revulsion. The rewritten version presents a clear expression of disgust with an added comment about something being 'not good', which is absent in the original sentence. Therefore, there is low alignment.",
+        "disgust_intensity": 1
+    }
+}

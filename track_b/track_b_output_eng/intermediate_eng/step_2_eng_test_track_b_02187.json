@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Everything worked out okay.\", \"rewritten_form_joy\": \"Everything worked out wonderfully!\", \"rewritten_form_sadness\": \"Everything worked out, but I still feel empty inside.\", \"rewritten_form_fear\": \"Everything worked out okay, but I was so anxious about it.\", \"rewritten_form_anger\": \"It\\u2019s hard to believe that everything worked out when it shouldn't have been this way!\", \"rewritten_form_surprise\": \"I can\\u2019t believe everything actually worked out okay!\", \"rewritten_form_disgust\": \"Even though everything worked out okay, it was such a painful mess.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive outcome, which aligns with joy, but lacks the enthusiasm present in the rewritten joy version. However, it implies contentment, which contributes to a moderate level of joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not exhibit a sense of emptiness or sadness. While it\u2019s a positive statement, it doesn't convey the underlying sorrow indicated in the rewritten sadness sentence.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence lacks any indication of anxiety or fear associated with the outcome. The rewritten fear version suggests a significant level of concern that doesn\u2019t resonate with the original text.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Although the original suggests a resolution, it does not imply disbelief or frustration as conveyed in the anger version. The tone is neutral and lacks any sign of anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence doesn\u2019t convey an element of surprise; it presents a straightforward conclusion that does not evoke disbelief as in the rewritten surprise sentence, which is more expressive.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

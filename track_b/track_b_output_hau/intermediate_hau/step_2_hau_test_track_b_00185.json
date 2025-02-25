@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ban San Adadin Mutanen Da Na Kashe Ba, In Ji Aliyu, Dan Shekara 24 Da Ake Zargi Da Fashi\", \"rewritten_form_joy\": \"Ban san adadin mutanen da na kashe ba, amma ina jin dadin yawan bayani daga Aliyu, dan shekara 24 da ake zargi da fashi!\", \"rewritten_form_sadness\": \"Ban san adadin mutanen da na kashe ba, in ji Aliyu, dan shekara 24 da ake zargi da fashi, na jin hakan ya kawo mini bakin ciki.\", \"rewritten_form_fear\": \"Ban san adadin mutanen da na kashe ba, in ji Aliyu, dan shekara 24 da ake zargi da fashi, ina jin sabon tsoro daga wannan lamari.\", \"rewritten_form_anger\": \"Ban san adadin mutanen da na kashe ba, in ji Aliyu, dan shekara 24 da ake zargi da fashi, wannan cin amana ya wuce tunani!\", \"rewritten_form_surprise\": \"Ban san adadin mutanen da na kashe ba, in ji Aliyu, dan shekara 24 da ake zargi da fashi, wannan abin ya yi min mamaki!\", \"rewritten_form_disgust\": \"Ban san adadin mutanen da na kashe ba, in ji Aliyu, dan shekara 24 da ake zargi da fashi, wannan ba daidai ba ne kuma yana bata rai.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses a serious situation and lacks any positive connotation. The rewritten joyful form introduces a positive sentiment with phrases like 'ina jin dadin,' which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions a serious crime and the uncertainty of the number of victims, which can evoke sadness. The rewritten version expresses a reflective sadness ('na jin hakan ya kawo mini bakin ciki'). This aligns well, suggesting a moderate connection to sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence has an undercurrent of ominousness due to the mention of killing and allegations of robbery, which can generate fear. The rewritten version explicitly states it causes 'sabuwar tsoro,' amplifying this sentiment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original implies serious wrongdoing, the explicit expression of anger in the rewritten version ('wannan cin amana ya wuce tunani!') does not directly arise from the original message, which is more inquiry than outrage. Therefore, the alignment is moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The notion of unexpected outcomes in a serious situation could evoke surprise, but the original sentence is presented in a rather straightforward and factual manner, lacking a strong surprise element evident in the rewritten form.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not explicitly convey disgust; however, the mention of violence implies a negative sentiment, which the rewritten disgust form highlights. The connection is present but not strong enough for high intensity. ",
+        "disgust_intensity": 2
+    }
+}

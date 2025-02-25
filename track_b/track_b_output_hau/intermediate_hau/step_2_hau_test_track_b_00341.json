@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"An \\u0199ir\\u0199iri cutar korona saboda a haifar da tsoro da firgici a tsakanin mutane\", \"rewritten_form_joy\": \"An \\u0199ir\\u0199iri cutar korona don jawo hankali da damuwa ga mutane.\", \"rewritten_form_sadness\": \"An \\u0199ir\\u0199iri cutar korona, hakan ya jawo tsoro da firgici a tsakanin mutane.\", \"rewritten_form_fear\": \"An \\u0199ir\\u0199iri cutar korona saboda a haifar da tsoro da firgici a tsakanin mutane, wani abun damuwa ne.\", \"rewritten_form_anger\": \"An \\u0199ir\\u0199iri cutar korona, wannan doka ce ta rashin tausayi da zarar tausayi ga mutane.\", \"rewritten_form_surprise\": \"An \\u0199ir\\u0199iri cutar korona?! Abun mamaki ne, ya sanya tsoro da firgici a tsakanin mutane.\", \"rewritten_form_disgust\": \"An \\u0199ir\\u0199iri cutar korona don kawai a haifar da tsoro da firgici a tsakanin mutane - wannan abin kyama ne!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a negative situation where the spread of COVID-19 is intended to induce fear and panic, contrasting sharply with joy. Therefore, it aligns poorly with the joyful tone of the rewritten form.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence discusses the creation of fear and panic among people due to the COVID-19 virus, which evokes sadness. This alignment is strong as it reflects the emotional impact of the situation.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence is explicitly about creating fear and panic, which means it aligns very closely with the fear emotion. The mention of these feelings in the context of a dangerous virus enhances this correlation.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The mention of COVID-19 being manipulated to instill fear could evoke anger, especially in those who feel that this is callous or irresponsible. The rewritten version points to a lack of compassion, making the alignment significant.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not contain an element of shock or unexpectedness that typically accompanies surprise. While the situation may be shocking, it is presented straightforwardly in the original, reducing its surprise alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original implies a negative manipulation of a health crisis for fear, which can evoke feelings of disgust. The rewritten form emphasizes this disgust by stating it is shameful, but the original's tone is not as overtly condemnatory.",
+        "disgust_intensity": 2
+    }
+}

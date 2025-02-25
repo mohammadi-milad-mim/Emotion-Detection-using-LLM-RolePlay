@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We saw it hit the grass but never found it.\", \"rewritten_form_joy\": \"We saw it hit the grass, and I couldn't stop smiling, even though we never found it!\", \"rewritten_form_sadness\": \"We saw it hit the grass, and it hurts to know we never found it.\", \"rewritten_form_fear\": \"We saw it hit the grass, and I felt a chill; what if we never find it?\", \"rewritten_form_anger\": \"We saw it hit the grass, and I can\\u2019t believe we never found it!\", \"rewritten_form_surprise\": \"We saw it hit the grass, but I was shocked that we never found it!\", \"rewritten_form_disgust\": \"We saw it hit the grass, and it was so frustrating that we never found it!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of happiness or joy, contrasting sharply with the joy-infused rewritten form which emphasizes smiling despite the outcome. The original simply states a fact without any emotional uplift.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at a sense of loss or disappointment by stating that they never found it. This aligns well with the sadness version, which expresses hurt over the lost object, indicating a moderate connection.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not suggest any fear or anxiety; it merely describes an event. The rewritten fear form introduces a sense of dread about what might happen if the item is never found, which is absent in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original may imply some frustration about not finding it, it does not convey anger. The rewritten anger sentence expresses disbelief and stronger emotional engagement than the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not elicit surprise; it simply recounts what happened without additional emotional context. The surprise rewrite enhances the emotional effect of the unanticipated outcome, which isn't present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

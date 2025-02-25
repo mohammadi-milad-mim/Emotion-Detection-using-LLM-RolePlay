@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I am now living alone, thank god.\", \"rewritten_form_joy\": \"I am now living alone, and I couldn't be happier!\", \"rewritten_form_sadness\": \"I am now living alone, thank god, but it feels so lonely.\", \"rewritten_form_fear\": \"I am now living alone, thank god, but I can\\u2019t shake off this unsettling feeling.\", \"rewritten_form_anger\": \"I am now living alone, thank god, and it\\u2019s infuriating how people think this is what I wanted.\", \"rewritten_form_surprise\": \"I am now living alone, thank god, and honestly, I didn't see this coming!\", \"rewritten_form_disgust\": \"I am now living alone, thank god, but the thought of it makes me feel sick.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of relief or positivity about living alone, particularly with the phrase 'thank god.' However, it lacks the overt exuberance found in the rewritten joy sentence, which suggests a much stronger positive feeling.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence hints at a juxtaposition of relief and loneliness but doesn\u2019t explicitly mention sadness. The rewritten version makes loneliness much more pronounced, which is not captured in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a subtle undertone of potential unease in the original, but it does not explicitly evoke fear like the rewritten version, which directly mentions feeling unsettled about being alone.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger or frustration directly; it simply states the condition of living alone. By contrast, the rewritten version indicates that there is some resentment towards others\u2019 assumptions, which is absent in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not convey surprise. It implies acceptance or relief about the situation without the shock present in the rewritten surprise sentence. It seems like the shift to living alone was anticipated, not surprising.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

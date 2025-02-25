@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"sore my tongue pericing experince!\", \"rewritten_form_joy\": \"Wow, my tongue piercing experience was so exciting!\", \"rewritten_form_sadness\": \"It's just that my tongue piercing experience was really painful.\", \"rewritten_form_fear\": \"My tongue piercing experience was so intense, I'm scared about it hurting again.\", \"rewritten_form_anger\": \"I can't believe how painful my tongue piercing experience was!\", \"rewritten_form_surprise\": \"I didn't expect my tongue piercing experience to be so sore!\", \"rewritten_form_disgust\": \"What a dreadful experience, my tongue piercing was just so sore!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of sore discomfort rather than excitement, so it aligns very weakly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence mentions the soreness of the tongue, which implies pain, aligning it more closely with sadness than joy.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a hint of concern about the intensity of the experience, which connects with fear about pain in the future; however, it is not strongly evident.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The expression of pain in the original sentence can suggest frustration, thus aligning somewhat with anger, but it does not convey strong outrage.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The mention of soreness does seem to imply an unexpected twist in the experience, aligning it with surprise, albeit not strongly.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Indeed, it was chilly-I ended up doing 1 lap ( 1.2 miles ) and was surprised how numb my hands and feet were.\", \"rewritten_form_joy\": \"Indeed, it was chilly\\u2014but I had a blast doing 1 lap (1.2 miles), even if my hands and feet got a bit numb!\", \"rewritten_form_sadness\": \"Indeed, it was chilly\\u2014I managed to do 1 lap (1.2 miles), but my hands and feet felt so numb, it was disheartening.\", \"rewritten_form_fear\": \"Indeed, it was chilly, and after doing 1 lap (1.2 miles), I couldn't believe how numb my hands and feet had gotten; it was a bit frightening.\", \"rewritten_form_anger\": \"Indeed, it was chilly\\u2014I only managed to do 1 lap (1.2 miles), and I was furious at how numb my hands and feet felt!\", \"rewritten_form_surprise\": \"Indeed, it was chilly\\u2014I ended up doing 1 lap (1.2 miles) and was shocked at how numb my hands and feet were!\", \"rewritten_form_disgust\": \"Indeed, it was chilly\\u2014I forced myself to do 1 lap (1.2 miles), and it was gross how numb my hands and feet became.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a sense of accomplishment (doing a lap) but lacks the enthusiastic tone conveyed in the joy rewritten version. There's no indication of enjoyment despite the cold, so it aligns very weakly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original captures a neutral tone with a hint of discomfort regarding the numbness, but it lacks a clear sense of feeling disheartened; thus, it aligns more on the low end of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does mention the numbness of hands and feet, which could be interpreted as a mildly frightening scenario, but it does not strongly express fear or concern, so it only has a slight alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express any frustration or anger about the situation. The rewritten version implies a much stronger emotional response, while the original remains neutral about the numbness, thus aligning only slightly with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The use of 'surprised' in the original indicates a level of astonishment, aligning closely with the surprise tone. However, the intensity isn't strong, as it relates more to a factual recounting rather than shock or disbelief.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

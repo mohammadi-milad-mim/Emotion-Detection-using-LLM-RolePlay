@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u042f \\u043d\\u0456\\u044f\\u043a \\u0437\\u0430\\u0439\\u0442\\u0438 \\u043d\\u0435 \\u043c\\u043e\\u0436\\u0443\", \"rewritten_form_joy\": \"\\u042f \\u043f\\u0440\\u043e\\u0441\\u0442\\u043e \\u043d\\u0435 \\u043c\\u043e\\u0436\\u0443 \\u0434\\u043e\\u0447\\u0435\\u043a\\u0430\\u0442\\u0438\\u0441\\u044f, \\u043a\\u043e\\u043b\\u0438 \\u0437\\u043c\\u043e\\u0436\\u0443 \\u0437\\u0430\\u0439\\u0442\\u0438!\", \"rewritten_form_sadness\": \"\\u041c\\u0435\\u043d\\u0456 \\u0442\\u0430\\u043a \\u0448\\u043a\\u043e\\u0434\\u0430, \\u044f \\u043d\\u0456\\u044f\\u043a \\u043d\\u0435 \\u043c\\u043e\\u0436\\u0443 \\u0437\\u0430\\u0439\\u0442\\u0438...\", \"rewritten_form_fear\": \"\\u042f \\u043f\\u043e\\u0447\\u0438\\u043d\\u0430\\u044e \\u0445\\u0432\\u0438\\u043b\\u044e\\u0432\\u0430\\u0442\\u0438\\u0441\\u044f, \\u0449\\u043e \\u043d\\u0456\\u044f\\u043a \\u043d\\u0435 \\u043c\\u043e\\u0436\\u0443 \\u0437\\u0430\\u0439\\u0442\\u0438.\", \"rewritten_form_anger\": \"\\u0426\\u0435 \\u0442\\u0430\\u043a \\u0434\\u0440\\u0430\\u0442\\u0443\\u0454, \\u044f \\u043d\\u0456\\u044f\\u043a \\u043d\\u0435 \\u043c\\u043e\\u0436\\u0443 \\u0437\\u0430\\u0439\\u0442\\u0438!\", \"rewritten_form_surprise\": \"\\u042f \\u043f\\u0440\\u043e\\u0441\\u0442\\u043e \\u043d\\u0435 \\u043c\\u043e\\u0436\\u0443 \\u043f\\u043e\\u0432\\u0456\\u0440\\u0438\\u0442\\u0438, \\u0449\\u043e \\u044f \\u043d\\u0456\\u044f\\u043a \\u043d\\u0435 \\u043c\\u043e\\u0436\\u0443 \\u0437\\u0430\\u0439\\u0442\\u0438!\", \"rewritten_form_disgust\": \"\\u0426\\u0435 \\u0437\\u043e\\u0432\\u0441\\u0456\\u043c \\u043d\\u0435\\u043f\\u0440\\u0438\\u0454\\u043c\\u043d\\u043e, \\u044f \\u043d\\u0456\\u044f\\u043a \\u043d\\u0435 \\u043c\\u043e\\u0436\\u0443 \\u0437\\u0430\\u0439\\u0442\\u0438.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a lack of ability to achieve something, which contrasts markedly with the joy-filled rewrite that implies an upbeat attitude about not being able to act. Thus, there is no alignment with joy in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has a tone of resignation and inability, which aligns closely with the sadness rewrite that expresses regret and sorrow about not being able to do something. This reflects a moderate level of melancholy in the original statement.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence conveys a feeling of inability which can be interpreted as fear, similar to the fear rewrite that indicates anxiety about not being able to act. However, the lack of explicit threat or discomfort in the original limits the intensity.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While frustration is present in the rewritten form of anger, the original sentence does not indicate any strong feelings of anger or irritation; it simply states a fact without emotional charge. Hence, there is low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence doesn't convey any unexpected elements or astonishment, unlike the surprise rewrite. It plainly states a limitation without any sense of disbelief; therefore, it scores low on surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence reflects a neutral inability without expressing any sense of disgust or strong negative feeling. The disgust rewrite implies a strong aversion which is not evident in the original.",
+        "disgust_intensity": 0
+    }
+}

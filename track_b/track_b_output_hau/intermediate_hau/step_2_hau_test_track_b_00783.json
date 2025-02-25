@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"ashe duk yan kaduna ne suka zo suka cika mana gari daman\", \"rewritten_form_joy\": \"Ashe, duk \\u2018yan Kaduna ne suka zo, suka cika mana gari da farin ciki!\", \"rewritten_form_sadness\": \"Ashe, duk \\u2018yan Kaduna ne suka zo, sun cika mana gari, amma na ji zafi a zuciyata.\", \"rewritten_form_fear\": \"Ashe, duk \\u2018yan Kaduna ne suka zo, suna cika mana gari\\u2026 ko akwai wani abu da ba mu san shi ba?\", \"rewritten_form_anger\": \"Ashe, duk \\u2018yan Kaduna ne suka zo, suna cika mana gari, ina jin haushin haka!\", \"rewritten_form_surprise\": \"Ashe, duk \\u2018yan Kaduna ne suka zo, suna cika mana gari? Wannan ya yi ban mamaki!\", \"rewritten_form_disgust\": \"Ashe, duk \\u2018yan Kaduna ne suka zo, suna cika mana gari, nakan ji kyama da hakan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses the event of the people from Kaduna arriving and filling something, which doesn\u2019t explicitly convey joy. The rewritten joyful version emphasizes happiness with 'farin ciki' (joy). Therefore, the original doesn\u2019t strongly align with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence shows the arrival and filling without emotional nuance. The sadness version introduces emotional pain with 'na ji zafi a zuciyata' (I feel pain in my heart), which isn\u2019t reflected in the original. There is a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear. The fear version implies something ominous with 'ko akwai wani abu da ba mu san shi ba?' (is there something we don\u2019t know?). Thus, fear is present but not in a strong way in the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not imply any anger, while the rewritten anger version mentions feeling 'haushin' (anger). Therefore, the emotion of anger is not present in the original sentence, as it simply states a fact.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not express surprise, as it is a straightforward statement. The surprised version introduces an element of unexpectedness which isn\u2019t present in the original. Hence, there is very low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not hint at any disgust. The rewritten disgust sentence introduces a personal feeling of 'kyama' (disgust). Since the original is neutral in tone, disgust has no presence here.",
+        "disgust_intensity": 0
+    }
+}

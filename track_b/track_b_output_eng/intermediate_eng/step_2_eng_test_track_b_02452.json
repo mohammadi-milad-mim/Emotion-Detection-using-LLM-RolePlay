@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"(It was so awesome!\", \"rewritten_form_joy\": \"It was absolutely incredible!\", \"rewritten_form_sadness\": \"It was really something special, now it's just a memory...\", \"rewritten_form_fear\": \"It was so overwhelming!\", \"rewritten_form_anger\": \"It was infuriatingly awesome!\", \"rewritten_form_surprise\": \"It was unexpectedly amazing!\", \"rewritten_form_disgust\": \"It was grossly overhyped!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a high level of excitement and positivity, similar to 'absolutely incredible!' which embodies the same joy. The exclamation point indicates strong positive feelings aligned with joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not express loss or nostalgia, elements found in the rewritten version. Thus, while there may be a hint of reflection, sadness is not strongly present in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence expresses enthusiasm rather than fear. The rewritten version hints at being overwhelmed, which is not reflected in the original's tone. Therefore, fear is not applicable here.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original reflects positivity, the rewritten version introduces a negative twist ('infuriatingly awesome!') that indicates a mix of emotions. However, the original does not convey anger at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence captures a sense of amazement similar to 'unexpectedly amazing!', indicating that the original can lead to feelings of surprise. It conveys a strong and sudden positive impression.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

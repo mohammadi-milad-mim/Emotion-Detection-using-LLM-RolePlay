@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"i bundled up in four layers, wrapped a scarf around my head walked over 1 bridge and through the woods to set up my installation.\", \"rewritten_form_joy\": \"I bundled up in four layers, wrapped a scarf around my head, and joyfully walked over a bridge and through the woods to set up my installation!\", \"rewritten_form_sadness\": \"I bundled up in four layers, wrapped a scarf around my head, and trudged over a bridge and through the woods to set up my installation, feeling the weight of the cold around me.\", \"rewritten_form_fear\": \"I bundled up in four layers, wrapped a scarf tightly around my head, and cautiously walked over a bridge and through the woods, anxiously preparing to set up my installation.\", \"rewritten_form_anger\": \"I bundled up in four layers, wrapped a scarf around my head, and furiously marched over a bridge and through the woods to set up my installation, frustrated by the cold that refused to let up.\", \"rewritten_form_surprise\": \"I bundled up in four layers, wrapped a scarf around my head, and unexpectedly found myself walking over a bridge and through the woods to set up my installation!\", \"rewritten_form_disgust\": \"I bundled up in four layers, wrapped a disgusting scarf around my head, and reluctantly trudged over a bridge and through the woods to set up my installation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of action but lacks the exuberance and positivity conveyed in the joy rewritten version. It doesn't imply joy but simply states what was done.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "There's a moderate alignment with sadness here; the act of bundling up and the mention of the cold could imply discomfort and heaviness, similar to the weight of sadness. However, the original sentence doesn't express a strong emotional burden.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not suggest fear or anxiety. While it does mention bundling up, it lacks the urgency or cautiousness signified by 'cautiously' in the fear rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is little alignment with anger in the original sentence. While it mentions bundling up due to the cold, it does not convey any frustration or fury as expressed in the anger version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not imply surprise or unexpectedness. The mention of heading over a bridge and through the woods seems routine rather than surprising.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

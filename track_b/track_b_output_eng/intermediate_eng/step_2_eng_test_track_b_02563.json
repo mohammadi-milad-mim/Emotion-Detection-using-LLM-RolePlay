@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This chain was three links long.\", \"rewritten_form_joy\": \"This amazing chain was three links long!\", \"rewritten_form_sadness\": \"This chain was just three links long, nothing more.\", \"rewritten_form_fear\": \"This chain was only three links long, which feels dangerously short.\", \"rewritten_form_anger\": \"Can you believe this chain is only three links long?\", \"rewritten_form_surprise\": \"Wow, this chain is only three links long!\", \"rewritten_form_disgust\": \"Ugh, this chain is painfully just three links long.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a neutral fact, lacking any enthusiastic or positive language, while the joy version expresses excitement with the word 'amazing.' Therefore, the alignment with joy is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version emphasizes a lack of anything more exciting than the three links, adding a sense of loss or disappointment. The original sentence does not convey those feelings, so the alignment is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version implies a danger associated with the short length of the chain. The original does not suggest any danger, making the fear alignment weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger rewrite questions the length of the chain in an irritated manner. The original sentence states a fact and lacks any emotional intensity, resulting in low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version uses 'Wow' to express astonishment, while the original is neutral. This indicates a low alignment with surprise because the original does not evoke this emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So he knows when his equipment is faulty.\", \"rewritten_form_joy\": \"So he happily knows when his equipment is faulty, ensuring everything runs smoothly!\", \"rewritten_form_sadness\": \"So he sadly knows when his equipment is faulty, and it feels frustrating.\", \"rewritten_form_fear\": \"So he knows when his equipment is faulty, and that worries him about what could go wrong.\", \"rewritten_form_anger\": \"So he knows when his equipment is faulty, which really frustrates him to no end!\", \"rewritten_form_surprise\": \"So he knows when his equipment is faulty, which is a surprising level of awareness!\", \"rewritten_form_disgust\": \"So he knows when his equipment is faulty, which is just disgusting to deal with.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions awareness of faulty equipment without any positive or joyful connotation. It lacks the happiness or satisfaction implied in the joyful rewrite, which focuses on smooth operation and a cheerful demeanor related to the knowledge.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement has no inherent sadness. It simply states a fact about awareness of faults, whereas the sad rewrite adds an emotional weight that suggests frustration, which is not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies awareness, which can connote a sense of concern regarding the implications of having faulty equipment, but it does not explicitly convey worry or fear as the rewritten version does.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence focuses on awareness, it does not express any frustration or negative emotions, whereas the angry rewrite explicitly indicates a high level of frustration related to that awareness.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not contain any elements of surprise; it simply conveys a statement of fact. The surprising rewrite implies an unexpected level of awareness, which is not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

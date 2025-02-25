@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Seda ta gama Shan ruwan sannan taga tautau a ciki\", \"rewritten_form_joy\": \"Seda ta gama Shan ruwan sannan kuma taga tautau mai kyau a ciki!\", \"rewritten_form_sadness\": \"Seda ta gama Shan ruwan sannan taga tautau a ciki, amma ta ji zuciyarta na jin rauni.\", \"rewritten_form_fear\": \"Seda ta gama Shan ruwan sannan taga tautau a ciki, tana jin tsoro ko wani abu ba daidai ba yana faruwa.\", \"rewritten_form_anger\": \"Seda ta gama Shan ruwan sannan taga tautau a ciki, me ya sa akwai haka?\", \"rewritten_form_surprise\": \"Seda ta gama Shan ruwan sannan taga tautau a ciki, hakan ya yi muni!\", \"rewritten_form_disgust\": \"Seda ta gama Shan ruwan sannan taga tautau a ciki, ta kasance mai kaikayi da rashin jin da\\u0257i.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of completion and achievement ('Seda ta gama Shan ruwan'), but lacks the enthusiastic and positive intonation of excitement found in the joy rewritten version, which expresses a sense of pleasant surprise or delight at seeing something nice ('ta ga tautau mai kyau a ciki!'). Therefore, while there is a hint of positivity, it doesn't reach a joyful level.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not communicate any hint of sadness or emotional pain. The rewritten version's mention of feeling hurt is absent in the original. Thus, there is little alignment with sadness, leading to a low score.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original does not express any fear or concern about what could be wrong, which is prominent in the fear rewritten version. The absence of an emotional response linked to fear suggests a very low alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of frustration or anger in the original sentence. The rewritten version poses a rhetorical question implying irritation, which is not present in the original, yielding a low intensity score for anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is merely descriptive and does not indicate anything unexpected. The surprise version conveys a reaction to something surprising or unsettling, which the original sentence lacks. There is little to no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not contain any negativity or aversion. The rewritten disgust version clearly showcases strong feelings of distaste or revulsion, which are absent from the original sentence. Therefore, there is no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

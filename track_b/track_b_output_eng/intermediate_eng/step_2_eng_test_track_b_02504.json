@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I felt a heavy weight, as a cloak, lifted from my shoulders.\", \"rewritten_form_joy\": \"I felt an incredible relief, like a delightful cloak being lifted from my shoulders!\", \"rewritten_form_sadness\": \"I felt a heavy weight, like a suffocating cloak, finally lifted from my shoulders, but it left an emptiness behind.\", \"rewritten_form_fear\": \"I felt a heavy weight, like a threatening cloak, lifted from my shoulders, but I braced myself for what might come next.\", \"rewritten_form_anger\": \"I felt a heavy weight, as a burdensome cloak, forcefully lifted from my shoulders, and I was ready to fight back!\", \"rewritten_form_surprise\": \"I felt a heavy weight, like an unexpected cloak, suddenly lifted from my shoulders, and I couldn't believe how light I felt!\", \"rewritten_form_disgust\": \"I felt a heavy weight, like a filthy cloak, lifted from my shoulders, and I was relieved to be rid of it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence depicts an experience of relief, which aligns well with joy. However, it lacks the vibrant energy of joy present in the rewritten joy sentence, which emphasizes delight.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence can imply some sadness because it mentions a weight, suggesting struggle. The rewritten form expresses the potential emptiness left behind, which deepens that sentiment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original conveys a weight being lifted, it does not inherently express fear or anxiety about what might follow, as the rewritten form suggests. Thus, for fear, the alignment is weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not communicate anger; it focuses on the relief of burden rather than a forceful or combative response. The rewritten form expresses a readiness to fight which isn't present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The element of surprise in the original is not as pronounced; there is no sudden shock or unexpectedness conveyed. The rewritten surprise form emphasizes this aspect more strongly.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

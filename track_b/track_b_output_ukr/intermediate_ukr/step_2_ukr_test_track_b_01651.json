@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u0422\\u0456\\u043b\\u044c\\u043a\\u0438 \\u043f\\u043e\\u043d\\u0435\\u0434\\u0456\\u043b\\u043e\\u043a, \\u0430 \\u0432\\u0436\\u0435 \\u0442\\u0430\\u043a \\u0437\\u0434\\u043e\\u0445\\u043d\\u0443\\u0442\\u0438 \\u0445\\u043e\\u0447\\u0435\\u0442\\u044c\\u0441\\u044f\", \"rewritten_form_joy\": \"\\u0422\\u0456\\u043b\\u044c\\u043a\\u0438 \\u043f\\u043e\\u043d\\u0435\\u0434\\u0456\\u043b\\u043e\\u043a, \\u0430 \\u044f \\u0432\\u0436\\u0435 \\u0442\\u0430\\u043a \\u0447\\u0435\\u043a\\u0430\\u044e \\u043d\\u0430 \\u0443\\u0441\\u0435 \\u0446\\u0456\\u043a\\u0430\\u0432\\u0435 \\u0432\\u043f\\u0435\\u0440\\u0435\\u0434!\", \"rewritten_form_sadness\": \"\\u0422\\u0456\\u043b\\u044c\\u043a\\u0438 \\u043f\\u043e\\u043d\\u0435\\u0434\\u0456\\u043b\\u043e\\u043a, \\u0430 \\u0432\\u0436\\u0435 \\u0441\\u0443\\u043c\\u043d\\u043e, \\u044f\\u043a\\u043e\\u0441\\u044c \\u0432\\u0430\\u0436\\u043a\\u043e \\u0436\\u0438\\u0442\\u0438...\", \"rewritten_form_fear\": \"\\u0422\\u0456\\u043b\\u044c\\u043a\\u0438 \\u043f\\u043e\\u043d\\u0435\\u0434\\u0456\\u043b\\u043e\\u043a, \\u0430 \\u044f \\u0432\\u0436\\u0435 \\u0431\\u043e\\u044e\\u0441\\u044f, \\u0449\\u043e \\u0442\\u0430\\u043a \\u0431\\u0443\\u0434\\u0435 \\u0434\\u0430\\u043b\\u0456...\", \"rewritten_form_anger\": \"\\u0422\\u0456\\u043b\\u044c\\u043a\\u0438 \\u043f\\u043e\\u043d\\u0435\\u0434\\u0456\\u043b\\u043e\\u043a, \\u0430 \\u0432\\u0436\\u0435 \\u0442\\u0430\\u043a \\u0434\\u0456\\u0441\\u0442\\u0430\\u043b\\u043e, \\u0449\\u043e \\u0445\\u043e\\u0447\\u0435\\u0442\\u044c\\u0441\\u044f \\u043f\\u0440\\u043e\\u0441\\u0442\\u043e \\u0437\\u043d\\u0438\\u043a\\u043d\\u0443\\u0442\\u0438!\", \"rewritten_form_surprise\": \"\\u0422\\u0456\\u043b\\u044c\\u043a\\u0438 \\u043f\\u043e\\u043d\\u0435\\u0434\\u0456\\u043b\\u043e\\u043a, \\u0430 \\u044f\\u043a \\u0446\\u0435 \\u043c\\u043e\\u0436\\u043b\\u0438\\u0432\\u043e, \\u0449\\u043e \\u044f \\u0432\\u0436\\u0435 \\u0442\\u0430\\u043a \\u0432\\u0442\\u043e\\u043c\\u0438\\u0432\\u0441\\u044f?!\", \"rewritten_form_disgust\": \"\\u0422\\u0456\\u043b\\u044c\\u043a\\u0438 \\u043f\\u043e\\u043d\\u0435\\u0434\\u0456\\u043b\\u043e\\u043a, \\u0430 \\u0432\\u0436\\u0435 \\u0442\\u0430\\u043a \\u043d\\u0443\\u0434\\u043d\\u043e, \\u0449\\u043e \\u043f\\u0440\\u043e\\u0441\\u0442\\u043e \\u0436\\u0430\\u0445! \"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of negative anticipation or weariness about the day, unlike the joyful rewritten version, which conveys excitement and eagerness for the future. Therefore, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does suggest a low mood or fatigue concerning the day, which aligns with sadness as it hints at emotional heaviness. This connection gives it a moderate intensity of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not express a direct fear of what is to come; instead it showcases a sense of inevitability about feeling tired or drained. There is minimal alignment with fear, as it does not convey a sense of danger or apprehension.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original indicates frustration with the idea of feeling drained, but does not explicitly express anger. The rewritten form points directly to the feeling of having reached a breaking point, making the alignment weak.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is no surprise element in the original; it is more an acceptance of the day ahead than a realization of any unexpected aspect. Hence, the original sentence does not align with feelings of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original evokes a sense of distaste or discomfort with the repetition of feeling exhausted. This resonates somewhat with disgust as expressed in the rewritten version which emphasizes an overwhelming feeling of distaste.",
+        "disgust_intensity": 2
+    }
+}

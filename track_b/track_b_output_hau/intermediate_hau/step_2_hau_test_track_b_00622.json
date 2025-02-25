@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Saurayi ya sa riga da\\u0199a-da\\u0199a duk ta yi datti\", \"rewritten_form_joy\": \"Saurayi ya sa riga da\\u0199a-da\\u0199a, amma wannan ya sa ta zama dinki mai ban sha'awa!\", \"rewritten_form_sadness\": \"Saurayi ya sa riga da\\u0199a-da\\u0199a, duk ta yi datti, kuma ni na ji nauyin zuciya.\", \"rewritten_form_fear\": \"Saurayi ya sa riga da\\u0199a-da\\u0199a, duk ta yi datti, har na ji tsoro kar akwai abin da ya faru.\", \"rewritten_form_anger\": \"Saurayi ya sa riga da\\u0199a-da\\u0199a, duk ta yi datti, wannan ba ya kamata ya faru ba!\", \"rewritten_form_surprise\": \"Saurayi ya sa riga da\\u0199a-da\\u0199a, kuma duk ta yi datti! Ban ta\\u0253a ganin haka ba!\", \"rewritten_form_disgust\": \"Saurayi ya sa riga da\\u0199a-da\\u0199a, duk ta yi datti, yana da matu\\u0199ar rashin kyau.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a situation that can lead to a more negative outcome, and it does not convey joy or positivity. The rewritten joy sentence introduces an appreciation for the work done on the dress, contrasting with the original's tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a negative condition ('duk ta yi datti', meaning 'it has all become dirty'), which aligns well with the sadness in the rewritten form where the speaker expresses feeling heavy-hearted about the situation. This suggests a clear emotional connection.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not typically imply any danger, yet the fear rewritten introduces the idea that something terrible could happen, which could evoke fear in response to the stated conditions. However, the original lacks an explicit fear-inducing element.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original indicates a problem ('duk ta yi datti'), which does not generate an active feeling of anger, but the rewritten anger form asserts that this shouldn't have happened, indicating frustration. So while there is some connection, it's not strongly present in the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence clearly presents surprising information, suggesting that something unexpected has occurred ('duk ta yi datti'). The rewritten surprise amplifies this with an exclamation of disbelief, showing strong alignment with surprise as a reaction to the dirty dress.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "The original sentence directly mentions the dirtiness of the dress, which inherently implies something undesirable. The rewritten disgust sentence emphasizes the unpleasantness of the situation, making it clear that there is an intense feeling of disgust present in the context of the original sentence.",
+        "disgust_intensity": 3
+    }
+}

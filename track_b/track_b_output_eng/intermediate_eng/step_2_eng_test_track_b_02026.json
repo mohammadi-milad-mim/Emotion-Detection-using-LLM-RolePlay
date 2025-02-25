@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This story has a happy ending.\", \"rewritten_form_joy\": \"This story has such a wonderful happy ending!\", \"rewritten_form_sadness\": \"This story, despite everything, has a bittersweet happy ending.\", \"rewritten_form_fear\": \"I hope this story really has a happy ending...\", \"rewritten_form_anger\": \"I can\\u2019t believe this story claims to have a happy ending!\", \"rewritten_form_surprise\": \"Wow, this story actually has a happy ending!\", \"rewritten_form_disgust\": \"It\\u2019s hard to believe this story pretends to have a happy ending.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a straightforward positive sentiment with the phrase 'happy ending', which aligns closely with the rewritten joy version that emphasizes the happiness and wonder of that ending. The more enthusiastic language in the rewritten version intensifies the joy, but the original already conveys a clear sense of happiness.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not convey sadness since it portrays a definite happy ending. The rewritten sadness form introduces a contrast ('bittersweet') which is absent from the original, indicating that sadness is not present in the original at all.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence states a fact about the happiness of the ending, while the rewritten fear version introduces an element of doubt ('I hope'), implying uncertainty that isn't present in the original. Therefore, it doesn't align closely with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original denotes a positive conclusion, which doesn't warrant anger. The rewritten anger version expresses disbelief, which is completely absent in the original statement about the happy ending. Hence, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the rewritten surprise emphasizes astonishment, the original does not imply any unexpected element. It states that the story has a happy ending without introducing surprise factors.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

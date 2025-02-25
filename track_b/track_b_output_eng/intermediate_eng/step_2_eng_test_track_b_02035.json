@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I pulled it away, probably a bit too violently.\", \"rewritten_form_joy\": \"I pulled it away with such excitement, maybe a bit too passionately!\", \"rewritten_form_sadness\": \"I pulled it away, maybe more harshly than I intended, and it makes me feel bad.\", \"rewritten_form_fear\": \"I pulled it away, and I was really scared it might break because I did it too violently.\", \"rewritten_form_anger\": \"I yanked it away, and I realize now I probably did it way too violently out of frustration.\", \"rewritten_form_surprise\": \"I pulled it away, and wow, I must have done it a bit too violently!\", \"rewritten_form_disgust\": \"I pulled it away, and I can't believe I did it so violently; it's just revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of forcefulness and suggests a lack of positivity or excitement, which is contrasted with the joy-filled rewritten version that indicates excitement and passion. Hence, the original sentence does not align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies some level of regret but does not express sadness. The rewritten version explicitly states feeling bad about being harsh, which is not present in the original. Thus, it shows low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement hints at a forceful action, potentially leading to fear of damage; however, it does not explicitly express being scared. The fear version captures that fright, but it's a mild implication in the original, leading to a low association with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence indicates an action was done too violently, suggesting a potential underlying frustration or anger. The rewritten form emphasizes this anger more clearly, meaning the original aligns moderately with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence discusses a violent action but does not express any surprise. The rewritten version adds a sense of astonishment at the action. Therefore, there is minimal connection between the original and surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

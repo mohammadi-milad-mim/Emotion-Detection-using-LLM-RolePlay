@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And the happy ending?\", \"rewritten_form_joy\": \"And the wonderful happy ending?\", \"rewritten_form_sadness\": \"And the happy ending that never came?\", \"rewritten_form_fear\": \"And the happy ending that might never happen?\", \"rewritten_form_anger\": \"And the so-called happy ending?\", \"rewritten_form_surprise\": \"And the unexpected happy ending?\", \"rewritten_form_disgust\": \"And the happy ending that feels so forced?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses an inquiry about a happy ending, aligning well with the joy-filled sentiment in the rewritten joy form. The addition of 'wonderful' in that sentence enhances the positivity, indicating a strong pull towards joy as the focus is clearly on a positive conclusion.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The rewritten sadness form introduces the idea of a happy ending that never came, which creates a contrast with the original sentence's expectation of happiness. Thus, while the original conveys a neutral tone, the contrast with unfulfilled expectations suggests a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The aspect of uncertainty inferred in the fear construction ('might never happen') introduces a layer of apprehension. The original sentence, while generally curious about a happy ending, does not imply fear, hence the alignment with fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The phrase 'so-called happy ending' in the anger rewrite introduces skepticism and contempt. The original sentence does not carry any anger or skepticism, which makes the alignment weak.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The unexpected happy ending introduces an element of surprise that isn't present in the original inquiry. Thus, the original does not express any surprises nor is it aligned with the tone of astonishment reflected in the revised version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

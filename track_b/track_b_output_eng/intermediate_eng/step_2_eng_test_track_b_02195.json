@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then came the strange bumps-first on my stomach and then on my legs and now currently covering the majority of skin on my body; the hives that formed as the response to an allergic reaction to the antibiotics I was already talking for another current ailment.\", \"rewritten_form_joy\": \"Then came the strange bumps\\u2014first on my stomach, then on my legs, and now joyfully covering most of my skin; the hives that formed in response to the antibiotics I was taking for another current ailment.\", \"rewritten_form_sadness\": \"Then came the strange bumps\\u2014first on my stomach, then on my legs, and now sadly covering most of my skin; the hives formed as a tragic response to the antibiotics I was taking for another ailment.\", \"rewritten_form_fear\": \"Then came the strange bumps\\u2014first on my stomach, then on my legs, and now fearfully covering most of my skin; the hives formed as a dangerous response to the antibiotics I was already taking for another ailment.\", \"rewritten_form_anger\": \"Then came the strange bumps\\u2014first on my stomach, then on my legs, and now angrily covering most of my skin; the hives that erupted as a frustrating response to the antibiotics I was already taking for another ailment.\", \"rewritten_form_surprise\": \"Then came the strange bumps\\u2014first on my stomach, then on my legs, and now surprisingly covering most of my skin; the hives that appeared as an unexpected response to the antibiotics I was already taking for another ailment.\", \"rewritten_form_disgust\": \"Then came the strange bumps\\u2014first on my stomach, then on my legs, and now disgustingly covering most of my skin; the hives formed as a repulsive response to the antibiotics I was already taking for another ailment.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a medical condition without any positive sentiment. The joy-filled version suggests a playful acceptance of the hives, which is not present in the original. Thus, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of discomfort and concern about an allergic reaction, which aligns with sadness. The rewritten version enhances this by using words like 'sadly' and 'tragic', matching the tone of the original effectively.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original describes a medical reaction, which could imply a level of fear regarding the unknown aspects of an allergic reaction. However, it doesn't convey strong fear. The rewritten version adds a fear element, but the original doesn't reflect a high degree of this emotion.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original describes an uncomfortable situation, it does not indicate any feelings of anger. The rewritten anger version infers frustration that is not evident in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does imply an element of surprise at the unexpected nature of the allergic reaction. The use of 'strange bumps' suggests an unexpected occurrence that seems to resonate somewhat with surprise, though it is not a strong feeling.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

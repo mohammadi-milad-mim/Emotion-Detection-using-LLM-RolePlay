@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I stayed away from my room the rest of the day and it hasn't happened since.\", \"rewritten_form_joy\": \"I happily stayed away from my room the rest of the day, and it hasn't happened since!\", \"rewritten_form_sadness\": \"I stayed away from my room the rest of the day, and I just can't believe it hasn't happened since.\", \"rewritten_form_fear\": \"I stayed away from my room the rest of the day because I was terrified, and it hasn't happened since.\", \"rewritten_form_anger\": \"I stayed away from my room the rest of the day out of sheer frustration, and it hasn't happened since!\", \"rewritten_form_surprise\": \"I stayed away from my room the rest of the day\\u2014I was shocked that it hasn't happened since!\", \"rewritten_form_disgust\": \"I stayed away from my room the rest of the day because I felt disgusted, and it hasn't happened since.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not show any sense of happiness or cheerfulness, as it does not imply enjoyment or a positive outcome related to staying away from the room. Therefore, it aligns very weakly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates avoidance and could imply some distress about the situation. However, it does not express deep feelings of sadness or despair, which is somewhat captured in the rewritten form. Thus, it has a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'stayed away from my room' suggests a potential reason for fear but does not explicitly express that emotion. The rewritten version mentions being terrified, which is absent from the original. This leads to a very low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of frustration or anger in the original sentence, as it simply states an action taken without emotional undertones. Hence, it does not align with anger at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence states a fact about avoiding the room and makes no mention of feeling shocked or surprised, which is clearly articulated in the rewritten form. Therefore, there is no connection to surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

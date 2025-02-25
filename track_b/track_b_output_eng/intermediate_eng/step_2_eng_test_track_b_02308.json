@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The thrill of having this large, fat, fuzzy bee sitting calmly on my hand made me feel both honored and protective.\", \"rewritten_form_joy\": \"The joy of having this large, fat, fuzzy bee sitting calmly on my hand filled me with delight and a sense of care.\", \"rewritten_form_sadness\": \"The bittersweet feeling of having this large, fat, fuzzy bee sitting calmly on my hand made me feel a painful sense of loss and longing.\", \"rewritten_form_fear\": \"The unsettling feeling of having this large, fat, fuzzy bee sitting so close on my hand made me feel nervous and wary.\", \"rewritten_form_anger\": \"The frustrating situation of having this large, fat, fuzzy bee sitting on my hand made me feel irritated and defensive.\", \"rewritten_form_surprise\": \"The sudden thrill of having this large, fat, fuzzy bee sitting calmly on my hand took me completely off guard, filling me with awe.\", \"rewritten_form_disgust\": \"The unpleasant shock of having this large, fat, fuzzy bee sitting on my hand filled me with a strong sense of revulsion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a positive feeling of honor and protection, reflecting joy in the presence of the bee. The rewritten version captures a similar sentiment of delight and care, aligning closely with the original's enthusiastic tone.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not express any feelings of loss or longing, which is central to the sadness rewriting. There is no indication of sorrow or bittersweet emotions in the context provided.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While there is a hint of nervousness in having a bee on one's hand, the original text's focus is more on feeling honored and protective rather than nervous or wary, which is prominent in the fear rewriting.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not demonstrate irritation or defensiveness about the presence of the bee. It emphasizes a more protective and positive emotion than frustration, which is the focus of the anger rewriting.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence captures a thrill associated with the presence of the bee, which aligns with surprise. However, the sense of being 'off guard' is not strongly present, reducing the intensity of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"One time, he was hauling an entire fridge trailer FILLED with onions.\", \"rewritten_form_joy\": \"One time, he was hauling an entire fridge trailer absolutely PACKED with onions!\", \"rewritten_form_sadness\": \"One time, he was hauling an entire fridge trailer FILLED with onions, and it felt so heavy on his spirit.\", \"rewritten_form_fear\": \"One time, he was hauling an entire fridge trailer FILLED with onions, and I couldn't help but worry about it tipping over.\", \"rewritten_form_anger\": \"One time, he was hauling an entire fridge trailer FILLED with onions, and I couldn't believe he thought that was a good idea!\", \"rewritten_form_surprise\": \"One time, he was hauling an entire fridge trailer FILLED with onions! I couldn't believe my eyes!\", \"rewritten_form_disgust\": \"One time, he was hauling an entire fridge trailer FILLED with onions, and it was so gross to think about all that smell.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of activity and abundance with the phrase 'filled with onions', but it does not convey joy or excitement as strongly as the rewritten joy version, which emphasizes the word 'packed', suggesting an enthusiasm about the situation.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not indicate heaviness on the spirit or sadness. While it mentions a physical burden, it lacks a deeper emotional context to elicit sadness as the rewritten version does.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence describes a situation that could potentially be risky, but it does not evoke the concern or worry present in the rewritten fear version. The original is more factual and lacks any alarming tone.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is neutral and does not express any frustration or disapproval regarding the act of hauling the trailer, unlike the rewritten version which explicitly shows disbelief regarding the action.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original sentence has a hint of unusualness with the image of hauling a trailer of onions, it does not carry the same shock or astonishment implied in the rewritten surprise version, which adds the element of disbelief.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

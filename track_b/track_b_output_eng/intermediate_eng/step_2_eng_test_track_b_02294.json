@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was out walking again very quickly and in no time, I was back doing my 3 mile neighborhood loop, with M strapped to my chest at least once a day.\", \"rewritten_form_joy\": \"I was out walking again so joyfully, and before I knew it, I was back doing my 3-mile neighborhood loop, with M happily strapped to my chest at least once a day!\", \"rewritten_form_sadness\": \"I was out walking again, but it felt so empty, and before I knew it, I was back doing my 3-mile neighborhood loop, with M strapped to my chest at least once a day, alone.\", \"rewritten_form_fear\": \"I was out walking again, pushing myself quickly, and suddenly found myself back doing my 3-mile neighborhood loop, with M strapped to my chest at least once a day, hoping everything was okay.\", \"rewritten_form_anger\": \"I was out walking again, rushing through it, and in no time, I was back doing my annoying 3-mile neighborhood loop, with M strapped to my chest at least once a day!\", \"rewritten_form_surprise\": \"I was out walking again, and to my surprise, I found myself back doing my 3-mile neighborhood loop in no time, with M strapped to my chest at least once a day!\", \"rewritten_form_disgust\": \"I was out walking again, and it was such a tiresome chore, but somehow I was back doing my 3-mile neighborhood loop, with M strapped to my chest at least once a day.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a positive activity (walking quickly with M strapped to the chest), which resonates with the joyfulness in the rewritten version. However, it lacks explicit expressions of joy or happiness that are present in the rewritten form.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey any sense of emptiness or loneliness, which are key in the sadness rewritten version. The tone in the original suggests activity and purpose rather than sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original mentions walking quickly and the loop being done, it does not communicate a sense of anxiety or concern for safety, which indicates a very low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not express frustration or annoyance, contrary to the anger rewritten form which implies a negative sentiment about the activity. The original maintains a neutral tone without anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is no element of surprise in the original sentence, as it describes a routine activity without an unexpected twist, in contrast to the surprise rewritten form which emphasizes an element of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

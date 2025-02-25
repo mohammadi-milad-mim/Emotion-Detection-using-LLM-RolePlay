@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now, my \\\"food\\\" consisted mainly of sealed jars of pasta sauce and other similar such things.\", \"rewritten_form_joy\": \"Now, my \\\"food\\\" was a delightful array of sealed jars of pasta sauce and other exciting treats!\", \"rewritten_form_sadness\": \"Now, my \\\"food\\\" consisted mainly of sealed jars of pasta sauce and other similar things, a stark reminder of better times gone.\", \"rewritten_form_fear\": \"Now, my \\\"food\\\" consisted mainly of sealed jars of pasta sauce and other similar things, making me worry about what I\\u2019d do when they ran out.\", \"rewritten_form_anger\": \"Now, my \\\"food\\\" ridiculously consisted mainly of sealed jars of pasta sauce and other similar things, and it feels so inadequate!\", \"rewritten_form_surprise\": \"Now, my \\\"food\\\" strangely consisted mainly of sealed jars of pasta sauce and other similar things, which I didn't expect!\", \"rewritten_form_disgust\": \"Now, my \\\"food\\\" revoltingly consisted mainly of sealed jars of pasta sauce and other similar things, it\\u2019s just so unappetizing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any joy; it describes the food in a neutral manner. The rewritten form emphasizes delight and excitement, which is not present in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not directly imply sadness but hints at a lack of variety. The rewritten form highlights nostalgia and loss, which the original lacks, suggesting a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a slight implication of concern in the original about the limited food options, but it is not explicitly fearful. The rewritten form emphasizes worry about running out, indicating a low level of fear in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original describes the food category neutrally, which does not convey anger. The rewritten form uses 'ridiculously' and 'inadequate,' indicating frustration not present in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is matter-of-fact and does not express any sense of surprise about the limited food options. The rewritten version introduces an element of unexpectedness that the original does not imply.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

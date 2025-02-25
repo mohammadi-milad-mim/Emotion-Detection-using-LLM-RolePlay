@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That really scared me.\", \"rewritten_form_joy\": \"That absolutely thrilled me!\", \"rewritten_form_sadness\": \"That really upset me.\", \"rewritten_form_fear\": \"That truly terrified me.\", \"rewritten_form_anger\": \"That made me so furious!\", \"rewritten_form_surprise\": \"Wow, that completely caught me off guard!\", \"rewritten_form_disgust\": \"That grossed me out so much!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses fear, which is the opposite of joy. The joy rewritten version emphasizes excitement and thrill, which is not aligned with the emotion conveyed in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence does indicate a negative feeling, it specifically relates to fear rather than sadness. The sadness rewritten version expresses a sense of upset that is different from fear.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence is a direct expression of fear, stating that something scared the speaker. The rewritten version for fear retains this intensity and amplifies it, making it a strong match.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not express anger; rather, it conveys a feeling of fear. The anger rewritten version suggests a strong negative emotion that is unrelated to the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does express a reaction to a surprising event by indicating fear, but it does not convey surprise in a positive or neutral light. The surprise rewritten version conveys a positive shock that isn't present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

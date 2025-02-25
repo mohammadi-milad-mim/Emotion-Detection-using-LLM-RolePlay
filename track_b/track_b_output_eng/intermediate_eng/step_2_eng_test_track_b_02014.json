@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My eyes start to tear up.\", \"rewritten_form_joy\": \"My eyes start to sparkle with joy.\", \"rewritten_form_sadness\": \"My eyes start to fill with tears.\", \"rewritten_form_fear\": \"My eyes start to widen in fear, welling up with tears.\", \"rewritten_form_anger\": \"My eyes start to burn with rage, threatening to spill over with tears.\", \"rewritten_form_surprise\": \"My eyes start to grow wide with surprise, almost tearing up.\", \"rewritten_form_disgust\": \"My eyes start to narrow in disgust, almost welling up with tears.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a movement towards tears, which is more aligned with sadness rather than joy. The rewritten version indicates sparkle, which is a clear sign of happiness, creating a dissonance with the original tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly indicates tearing up, which is synonymous with crying and sadness. The rewritten form strongly captures this sentiment, confirming a high alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence conveys emotional intensity through tearing up, it does not explicitly suggest fear. The rewritten version emphasizes widening eyes due to fear, which doesn't directly correlate with the original emotional context.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any indication of rage or anger. Instead, it merely describes tearing up, making the rewritten version that describes burning with rage misaligned with the original sentiment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence focuses on tearing up without any implication of surprise or shock. The rewritten form suggests widening eyes with surprise, which does not resonate with the original\u2019s emotional cue.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

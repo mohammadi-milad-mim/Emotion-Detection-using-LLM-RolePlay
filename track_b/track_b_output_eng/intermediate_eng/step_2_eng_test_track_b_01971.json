@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My tongue had sucked it up and the hole was closed.\", \"rewritten_form_joy\": \"My tongue eagerly sucked it up, and the hole was joyfully closed!\", \"rewritten_form_sadness\": \"My tongue had reluctantly sucked it up, and the hole was sadly closed.\", \"rewritten_form_fear\": \"My tongue quickly sucked it up, and the hole was closed\\u2014what if it never opened again?\", \"rewritten_form_anger\": \"My tongue had forcefully sucked it up, and the hole was closed\\u2014why did it even happen?\", \"rewritten_form_surprise\": \"My tongue unexpectedly sucked it up, and, to my surprise, the hole was closed!\", \"rewritten_form_disgust\": \"My tongue disgustingly sucked it up, and the hole was closed\\u2014it was all so revolting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of happiness or eagerness. The use of the word 'sucked' does not suggest joyfulness. Although it mentions a closure, it lacks any positive emotional expression.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not express reluctance or sadness; it is more neutral. Words like 'reluctantly' and 'sadly' are missing, meaning it does not align closely with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the concern of the hole not opening again is present in the rewritten version, the original does not imply any fear or anxiety. The closure sounds definitive rather than alarming.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not display anger or frustration. The term 'forcefully' implies a strong emotion that is absent from the original sentence, which presents a neutral action rather than one filled with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is no element of unexpectedness or surprise in the original sentence. The finality of the closure does not suggest any shock or astonishment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

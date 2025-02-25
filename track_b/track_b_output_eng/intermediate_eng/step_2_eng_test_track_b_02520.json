@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Choir became my calling, I won awards, I put my heart and soul into it.\", \"rewritten_form_joy\": \"Choir became my calling, and winning awards filled my heart with joy; I truly poured my heart and soul into it!\", \"rewritten_form_sadness\": \"Choir became my calling, but even winning awards couldn't fill the emptiness; I put my heart and soul into it, longing for more.\", \"rewritten_form_fear\": \"Choir became my calling, and I feared losing the recognition when I won awards; I put my heart and soul into it, worried it wouldn't be enough.\", \"rewritten_form_anger\": \"Choir became my calling, and I won awards, but it angers me how hard I had to fight for this; I really put my heart and soul into it.\", \"rewritten_form_surprise\": \"Choir became my calling, and I was so surprised to win awards; I truly put my heart and soul into it!\", \"rewritten_form_disgust\": \"Choir became my calling, and winning awards feels so hollow; I put my heart and soul into it, but it all seems pointless.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a strong sense of fulfillment and pride in achievements, which closely aligns with the joy expressed in the rewritten joy version. The idea of 'putting heart and soul' suggests a positive emotional connection to choir and awards.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original sentence is devoid of sadness, the rewritten version introduces a note of emptiness that is not present in the original. Thus, there's little alignment since the original expresses a positive experience rather than longing.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no indication of fear in the original sentence. The rewritten version introduces stress related to recognition which doesn't reflect the original's contentment and passion for choir.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not suggest any struggle or anger; it simply reflects pride in achievements. The rewritten anger version introduces a conflict not present in the original, resulting in low alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not express surprise. The rewritten version introduces surprise at winning awards, which the original does not hint at. Therefore, the alignment is very low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

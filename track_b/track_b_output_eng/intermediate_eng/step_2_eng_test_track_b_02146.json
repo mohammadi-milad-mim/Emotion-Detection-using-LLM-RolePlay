@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Tears fall down my cheeks, fingers tugging desperately at the arm around my middle.\", \"rewritten_form_joy\": \"Tears of joy cascade down my cheeks, fingers playfully tugging at the arm around my middle.\", \"rewritten_form_sadness\": \"Tears fall down my cheeks, fingers tugging helplessly at the arm around my middle.\", \"rewritten_form_fear\": \"Tears fall down my cheeks, fingers frantically tugging at the arm around my middle as panic grips me.\", \"rewritten_form_anger\": \"Tears fall down my cheeks, fingers furiously tugging at the arm around my middle, demanding a response.\", \"rewritten_form_surprise\": \"Tears fall down my cheeks, fingers unexpectedly tugging at the arm around my middle, caught off guard by my emotions.\", \"rewritten_form_disgust\": \"Tears fall down my cheeks, fingers tugging in frustration at the arm around my middle as a wave of disgust washes over me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys sadness and desperation rather than joy. The phrase \"tears fall down my cheeks\" in the joyful version suggests a contrast to the original context of despair, indicating little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence closely matches the tone of the rewritten sadness sentence, featuring the same imagery of tears falling and helplessness, indicating a strong emotional alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence hints at desperation, it does not explicitly convey fear as described in the rewritten sentence where panic is a key element. Thus, the alignment with fear is moderate at best.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not convey anger; instead, it expresses a more vulnerable emotion. The tugging could imply frustration, but the overall tone does not match the fury described in the angry rewritten version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Surprise in the rewritten sentence implies an unexpected emotional reaction, while the original is more about expressing sadness than surprise. Therefore, there is minimal alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

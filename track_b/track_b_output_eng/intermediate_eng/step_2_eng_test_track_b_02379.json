@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Not a very spectacular story but true.\", \"rewritten_form_joy\": \"It's a simple yet beautiful story, and it's true!\", \"rewritten_form_sadness\": \"It's not a very spectacular story, but sadly, it is true.\", \"rewritten_form_fear\": \"It's not a very spectacular story, but truth can be unsettling.\", \"rewritten_form_anger\": \"It's not a very spectacular story, but can you believe it's true?\", \"rewritten_form_surprise\": \"It's not a very spectacular story, but unexpectedly, it's true!\", \"rewritten_form_disgust\": \"It's not a very spectacular story, and honestly, it's just true.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a lack of excitement or joy in the story, contrasting with the rewritten version which frames it as beautiful. Therefore, there is no strong alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original states that the story is not spectacular while affirming its truth. The rewritten version adds a tone of sadness. There is some alignment through the acknowledgment of the story's simplicity, but it's not particularly intense.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence doesn't imply fear; it simply notes the story's unspectacular nature. The fear version suggests that truth can be unsettling, which is a significant leap from the original's neutral stance. Therefore, this emotion feels disconnected.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not convey anger; it simply states a fact without emotional engagement. The rewritten version infers disbelief or indignation that a story can be true despite its dullness. However, the original lacks any intense emotion, making the alignment weak.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original piece lacks any element of surprise; it is straightforward. The rewritten form introduces an unexpected element about its truth, which does not align with the original sentiment; thus, this emotion is weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

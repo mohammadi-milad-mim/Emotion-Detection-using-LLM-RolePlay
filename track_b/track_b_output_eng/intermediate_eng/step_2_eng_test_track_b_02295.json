@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Much to my surprise, when i slid my hand into a buck of ice and drinks to retrieve a Pepsi, I had chosen the worst pepsi of the batch.\", \"rewritten_form_joy\": \"To my absolute delight, when I joyfully slid my hand into a bucket of ice and drinks to grab a Pepsi, I found the one Pepsi that was uniquely different from the rest!\", \"rewritten_form_sadness\": \"To my deep disappointment, when I reluctantly slid my hand into a bucket of ice and drinks to get a Pepsi, I ended up with the worst one in the batch.\", \"rewritten_form_fear\": \"To my horror, when I cautiously slid my hand into a bucket of ice and drinks to grab a Pepsi, I realized I had picked the worst Pepsi of all!\", \"rewritten_form_anger\": \"To my frustration, when I angrily slid my hand into a bucket of ice and drinks to grab a Pepsi, I ended up with the absolute worst one of the batch!\", \"rewritten_form_surprise\": \"To my utter shock, when I slid my hand into a bucket of ice and drinks to pull out a Pepsi, I grabbed the worst Pepsi of the entire bunch!\", \"rewritten_form_disgust\": \"With a feeling of revulsion, when I slid my hand into a bucket of ice and drinks to fetch a Pepsi, I picked the most disgusting Pepsi of the batch.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; rather, it highlights a negative outcome from an action that is not depicted joyfully. Therefore, it scores low for joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text implies a sense of disappointment from choosing the worst Pepsi, which aligns with the feelings expressed in the rewritten sadness sentence. There is moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not imply horror or fear, but rather a surprise at a negative outcome, so the connection is weak. As a result, it scores low for fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original expresses a negative outcome, it lacks the intensity of frustration or anger stated in the rewritten sentence. Thus, the alignment is low for anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text explicitly states surprise at the choice of Pepsi, making it strongly aligned with the rewritten surprise sentence. Therefore, it scores high for surprise.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

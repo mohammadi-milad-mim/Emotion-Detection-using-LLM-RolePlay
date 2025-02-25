@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Poptarts, fruit, nutella, clif bar...SPAM?\", \"rewritten_form_joy\": \"Poptarts, fruit, nutella, clif bar...and SPAM! How fun!\", \"rewritten_form_sadness\": \"Poptarts, fruit, nutella, clif bar...SPAM? It's such a disappointment.\", \"rewritten_form_fear\": \"Poptarts, fruit, nutella, clif bar...SPAM? What if it\\u2019s bad?\", \"rewritten_form_anger\": \"Poptarts, fruit, nutella, clif bar...SPAM? Seriously?\", \"rewritten_form_surprise\": \"Poptarts, fruit, nutella, clif bar...SPAM? Wow, I didn't see that coming!\", \"rewritten_form_disgust\": \"Poptarts, fruit, nutella, clif bar...SPAM? That\\u2019s just gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lists food items and ends with 'SPAM?', which creates curiosity rather than outright joy. So the alignment with joy is low despite the possibility of fun implied in the rewritten joy sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence shows a neutral or confused tone towards SPAM rather than expressing sadness about it, indicating only a slight alignment with the sentiment of disappointment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence's questioning of 'SPAM?' could imply a sense of uncertainty or concern about it being bad but doesn\u2019t strongly convey fear beyond that.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence's casual questioning does not convey strong anger. It expresses annoyance but does not explicitly show feelings of being seriously upset over SPAM.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The questioning of 'SPAM?' indeed suggests an element of surprise, but the level of surprise is moderate rather than intense. It implies unexpectedness while not conveying shock.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

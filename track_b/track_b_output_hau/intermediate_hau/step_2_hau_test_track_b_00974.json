@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Na kashe masoyiyata ne saboda ta hana ni saduwa da ita - Saurayi\", \"rewritten_form_joy\": \"Na kashe masoyiyata ne saboda ta hana ni saduwa da ita, amma na fahimci akwai sauran hanyoyin da za mu hadu - Saurayi.\", \"rewritten_form_sadness\": \"Na kashe masoyiyata ne saboda ta hana ni saduwa da ita, kuma zuciyata na cikin kuka - Saurayi.\", \"rewritten_form_fear\": \"Na kashe masoyiyata ne saboda ta hana ni saduwa da ita, kuma ina jin tsoro game da abin da zai biyo baya - Saurayi.\", \"rewritten_form_anger\": \"Na kashe masoyiyata ne saboda ta hana ni saduwa da ita, hakan ya sa na ji haushi - Saurayi.\", \"rewritten_form_surprise\": \"Na kashe masoyiyata ne saboda ta hana ni saduwa da ita, abinda na yi ba ni tsammani bane - Saurayi.\", \"rewritten_form_disgust\": \"Na kashe masoyiyata ne saboda ta hana ni saduwa da ita, wannan hali na ta yana bani jiya - Saurayi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a very serious and tragic action (killing someone) without any indication of optimism or understanding that contrasts with the joyful rewritten version, which suggests a more hopeful perspective. Therefore, it aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a deep emotional conflict stemming from a tragic act, which aligns closely with sadness as indicated in the rewritten version that expresses sorrow and crying. The alignment is strong.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence shows consequences of a violent act but does not explicitly express fear about the future consequences. The rewritten sentence conveys anxiety and anticipation of negative outcomes, suggesting that fear is present but not strongly in the original text.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence reflects a frustrating situation leading to a drastic action, which aligns somewhat with the anger expressed in the rewritten version. However, the original does not explicitly convey an emotion of anger itself.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not indicate any surprising elements; it presents an act as a result of a situation without expressing shock. Thus, the alignment with the surprise rewritten version is weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence indicates a strong action taken due to a conflict, but it does not convey the sense of disgust implied in the rewritten sentence. Therefore, the alignment is weak.",
+        "disgust_intensity": 1
+    }
+}

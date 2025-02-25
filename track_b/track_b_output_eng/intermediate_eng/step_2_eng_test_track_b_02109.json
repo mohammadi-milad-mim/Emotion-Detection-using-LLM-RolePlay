@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She was breaking up with her boyfriend due to his drug abuse issues.\", \"rewritten_form_joy\": \"She was finally breaking free from her boyfriend, hoping for a brighter future away from his drug abuse.\", \"rewritten_form_sadness\": \"She was heartbroken as she broke up with her boyfriend, overwhelmed by the weight of his drug abuse issues.\", \"rewritten_form_fear\": \"She was terrified as she broke up with her boyfriend, uncertain of what his reaction would be to her decision and his drug abuse.\", \"rewritten_form_anger\": \"She was fed up and breaking up with her boyfriend, enraged by his ongoing drug abuse and how it affected their lives.\", \"rewritten_form_surprise\": \"She was unexpectedly breaking up with her boyfriend, taken aback by how his drug abuse had spiraled out of control.\", \"rewritten_form_disgust\": \"She was disgusted as she broke up with her boyfriend, revolted by his relentless drug abuse and the chaos it brought.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy; instead, it states a situation of breaking up under difficult circumstances. The rewritten version implies freedom and a hopeful future that may not be present in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original clearly captures an emotional weight due to the breakup and drug abuse, aligning closely with the sadness expressed in the rewritten form. There is an element of heartbreak inherent in the context of ending a relationship due to serious issues.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original mentions a breakup that might evoke fear of consequences. However, it does not explicitly highlight any terror or uncertainty regarding the boyfriend's potential reaction, reducing its alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original discusses the breakup in a context of drug abuse, which might evoke anger. However, the stated emotions in the original do not strongly align with the fed-up sentiment conveyed in the rewritten anger version.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "While the original context could lead to a sense of surprise regarding the relationship dynamics, it does not explicitly highlight any suddenness or unexpectedness to the breakup. It appears more as a decision taken due to ongoing issues.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

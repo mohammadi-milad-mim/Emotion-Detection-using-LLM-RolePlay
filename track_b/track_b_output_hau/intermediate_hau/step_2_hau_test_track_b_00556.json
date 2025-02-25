@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"a wane jaha badai kano bah chab wallahi zai sha mamaki\", \"rewritten_form_joy\": \"A wane jaha badai kano bah chab wallahi, zai sha mamaki mai girma!\", \"rewritten_form_sadness\": \"A wane jaha badai kano bah chab wallahi, zai sha mamaki amma zuciyata ta yi nauyi.\", \"rewritten_form_fear\": \"A wane jaha badai kano bah chab wallahi za a sha mamaki, amma ina jin tsoro.\", \"rewritten_form_anger\": \"A wane jaha badai kano bah chab wallahi, zai sha mamaki da gaske!\", \"rewritten_form_surprise\": \"A wane jaha badai kano bah chab wallahi, abar yanayi ne mai mamaki!\", \"rewritten_form_disgust\": \"A wane jaha badai kano bah chab wallahi, zai sha mamaki amma wannan ba daidai bane!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests something positive or delightful, reflected in the joyful rewrite that emphasizes greatness ('mai girma'). The alignment is notable, but the intensity isn't as strong as a full expression of joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original sentence indicates surprise (which could imply negative feelings), there is no direct indication of sadness in the original text. The sadness rewrite introduces weight to the heart ('zuciyata ta yi nauyi') which is not present in the original, showing only a low connection.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The element of fear is introduced in the rewritten sentence but isn't present in the original. However, the phrase 'ina jin tsoro' suggests a potential for fear which is only a moderate link to the meaning of the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger rewrite intensifies the original sentiment but the original does not express anger. It indicates a strong assertion ('da gaske!') that goes beyond the original emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence implies a sense of wonder or surprise that aligns closely with the rewritten version emphasizing a surprising nature. This reflects a direct emotional connection.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "The original provides no basis for disgust, as it suggests a neutral or positive feeling toward an unexpected surprise. The disgust rewrite introduces a negative twist ('amma wannan ba daidai bane!') that is absent in the original, indicating very low alignment.",
+        "disgust_intensity": 0
+    }
+}

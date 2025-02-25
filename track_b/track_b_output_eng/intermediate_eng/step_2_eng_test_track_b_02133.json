@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was young and dumb and bored.\", \"rewritten_form_joy\": \"I was young and carefree, bursting with joy and ready to explore the world!\", \"rewritten_form_sadness\": \"I was young and lost, feeling dumb and painfully bored with nothing to hold my interest.\", \"rewritten_form_fear\": \"I was young and naive, feeling dumb and anxious about what to do with all that boredom.\", \"rewritten_form_anger\": \"I was young and reckless\\u2014so dumb, and so utterly bored, it made me furious!\", \"rewritten_form_surprise\": \"I was young and clueless, and wow, I had no idea how bored I would become!\", \"rewritten_form_disgust\": \"I was young and foolish, and honestly, being so bored was just sickening.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any particular joy or excitement. While it mentions being young and bored, it lacks the positive framing that the joy rewrite has, which emphasizes exploration and burst of joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original context of feeling 'dumb and bored' aligns well with the tone of the sadness rewrite, which conveys a sense of lostness and painful boredom, suggesting a deeper emotional struggle.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While there is an element of naivety in the original sentence, the accompanying feelings of anxiety regarding boredom don't strongly resonate with the tone of the original, which simply states boredom without indicating fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses boredom and a lack of awareness, but it does not convey the anger present in the rewrite, which brings a strong sense of fury that doesn't arise from simply being bored or dumb.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentiment reflects an uninformed state of youthful existence, but it does not suggest any unexpectedness or shock. There\u2019s no sense of surprise in simply feeling young and bored.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

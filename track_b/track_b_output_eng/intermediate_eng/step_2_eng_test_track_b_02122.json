@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It's late at night, I'm heading into what promises to be a hectic week, and my fingers are cold, which makes it just like old times.\", \"rewritten_form_joy\": \"It's late at night, and as I head into what promises to be a hectic week, my cold fingers remind me of those perfect old times!\", \"rewritten_form_sadness\": \"It's late at night, I'm heading into what promises to be a hectic week, and my cold fingers remind me how things used to be... just like old times.\", \"rewritten_form_fear\": \"It's late at night, and I'm heading into what promises to be a hectic week; my cold fingers send a chill down my spine, reminding me of the chaos to come, just like old times.\", \"rewritten_form_anger\": \"It's late at night, heading into a hectic week again, and my cold fingers are a bitter reminder of how it used to be, just like old times!\", \"rewritten_form_surprise\": \"It's late at night, and I'm heading into what promises to be a hectic week, and wow, my cold fingers take me back to those old times!\", \"rewritten_form_disgust\": \"It's late at night, and I'm heading into what promises to be a hectic week, and my cold fingers feel so unpleasant, just like those old times.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a sense of nostalgia associated with cold fingers and the anticipation of a hectic week. However, it does not explicitly express joy. The rewritten version emphasizes happiness when recalling 'perfect old times,' which is stronger than the original tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence carries an underlying tone of nostalgia that aligns with sadness, especially as it connects cold fingers with memories of the past. The rewritten sadness version captures this sentiment more directly with the phrase 'remind me how things used to be.'",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions a hectic week ahead, which could imply stress, but it doesn't convey a strong sense of fear. The rewritten sentence suggests a chill and chaos, which is more intense than the original's tone, indicating a lower alignment to fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text suggests a rough week ahead; however, it doesn't convey anger. The rewritten version introduces bitterness with 'bitter reminder,' which amplifies the negative sentiment and indicates a stronger alignment with anger than the original had.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original lacks an element of surprise or unexpectedness. The rewritten surprise sentence introduces an excitement that isn't present in the original, leading to a lower alignment with the emotion of surprise in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The hand rubbing my back eased the frantic pounding in my head, making me sigh after emptying everything in that toilet, stomach convulsing from the lack of content.\", \"rewritten_form_joy\": \"The gentle hand rubbing my back felt like a warm embrace, calming the frantic pounding in my head and making me sigh with relief after finally emptying everything in that toilet, my stomach finally settling down.\", \"rewritten_form_sadness\": \"The hand rubbing my back provided a faint comfort against the frantic pounding in my head, making me sigh in defeat after emptying everything in that toilet, my stomach aching emptily.\", \"rewritten_form_fear\": \"The hand rubbing my back felt like a slight assurance as the frantic pounding in my head grew louder, making me sigh after emptying everything in that toilet, uncertain of what had caused my stomach to convulse like that.\", \"rewritten_form_anger\": \"The hand rubbing my back did little to soothe the frantic pounding in my head, but I sighed deeply after emptying everything in that toilet, my stomach aching from this wretched feeling that wouldn\\u2019t go away.\", \"rewritten_form_surprise\": \"I felt a surprising sense of relief when the hand rubbing my back eased the frantic pounding in my head, making me sigh after unexpectedly emptying everything in that toilet, my stomach convulsing like never before.\", \"rewritten_form_disgust\": \"The hand rubbing my back was almost nauseating as it eased the frantic pounding in my head, making me sigh after emptying everything in that toilet, my stomach revolting from the lack of content.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions relief from the hand on the back but lacks a warm or positive tone associated with joy. The rewritten joy version injects a sense of comfort and warmth which is absent in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does have elements of discomfort and exhaustion, hinting at sadness, especially with phrases like 'stomach convulsing' and 'emptying everything', which aligns with the sadness tone in the rewritten version.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a subtle undercurrent of fear in the original sentence due to the mention of a pounding head and stomach convulsing, which aligns well with the fear version that emphasizes uncertainty.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While there is a sense of discomfort in the original, it doesn't convey outright anger. However, the mention of the hand providing insufficient relief could suggest an underlying frustration, but this is less prominent than in the rewritten anger version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not convey surprise. The rewritten version introduces elements that suggest an unexpected relief, which is not present in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She was conscious and in severe pain but we couldn't give pain medication due to her low blood pressure.\", \"rewritten_form_joy\": \"She was conscious and in severe pain, but it was a relief that we were monitoring her closely, even with her low blood pressure.\", \"rewritten_form_sadness\": \"She was conscious and in severe pain, and it hurt me deeply that we couldn't give her the medication she desperately needed because of her low blood pressure.\", \"rewritten_form_fear\": \"She was conscious and in severe pain, and I was terrified because we couldn't give her pain medication due to her dangerously low blood pressure.\", \"rewritten_form_anger\": \"She was conscious and in severe pain, and it infuriated me that we couldn't give her the pain medication she needed because of her low blood pressure.\", \"rewritten_form_surprise\": \"She was conscious and in severe pain, which was surprising since we couldn't give her pain medication due to her low blood pressure.\", \"rewritten_form_disgust\": \"She was conscious and in severe pain, and it was disgusting to know we couldn't administer pain medication because of her low blood pressure.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a scenario of pain and medical limitation, which does not convey joy. However, the rewritten version emphasizes relief in monitoring despite the circumstances, creating a positive angle that is absent in the original. Therefore, joy is minimally present.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original indicates a painful situation where pain relief is not achievable, leading to a sense of loss and helplessness. The rewritten form expresses deep emotional suffering about this situation. The sadness aligns closely with the original sentiment, justifying a moderate intensity score.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Fear is subtly implicated in the original due to the implications of severe pain and low blood pressure, which hints at the potential for dangerous outcomes. The rewritten version explicitly expresses terror, reinforcing this fear without significantly changing the context. Therefore, it is reasonably aligned with the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence highlights a frustrating situation where a necessary medical action cannot be taken, which can evoke anger. The rewritten form explicitly states infuriation over the inability to provide pain medication, strongly matching the sentiment in the original. This results in a significant alignment with the theme of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "Surprise is less evident in the context of the original sentence. While it mentions a surprising fact, the severity of the situation overshadows an actual element of surprise. This minimal connection to the original undermines the intensity of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

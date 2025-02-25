@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I ended up crying and pissing on myself.\", \"rewritten_form_joy\": \"I found myself laughing and so overwhelmed with happiness!\", \"rewritten_form_sadness\": \"I couldn't help but cry; it was just too much for me, and I lost my control.\", \"rewritten_form_fear\": \"I felt tears streaming down my face and was so scared I didn't even notice what else happened.\", \"rewritten_form_anger\": \"I was so furious that I ended up crying and lost control of myself completely.\", \"rewritten_form_surprise\": \"To my shock, I burst into tears and didn't realize what I had done until it was too late!\", \"rewritten_form_disgust\": \"I felt a wave of shame as I cried and, disgustingly enough, lost control of myself.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys distress and loss of control, which is entirely opposite to the joyous emotions expressed in the rewritten joy sentence. There is no indication of happiness or laughter in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence clearly indicates crying, hinting at deep sadness and a loss of control, which aligns closely with the rewritten sadness version that emphasizes overwhelming emotion and losing control. Thus, the alignment is strong.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original text implies a level of distress that could be associated with fear, especially with a loss of bodily control. However, the fear expressed in the rewritten form portrays a more acute sense of terror than what is present in the original. There is some alignment, but it is not the core emotion expressed.",
+        "fear_intensity": 2,
+        "anger_reasoning": "Anger is somewhat present in the original text through the element of crying and losing control, similar to the rewritten anger sentence. However, the focus is more on distress than outright anger, suggesting a moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise in the rewritten sentence is primarily tied to an unexpected emotional outburst, which aligns with the original situation of unexpectedly losing control. While the element of surprise is noted, the emotional nuance is primarily about distress.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

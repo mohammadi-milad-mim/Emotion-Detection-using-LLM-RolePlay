@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I think that I actually did too many different things today, my brain had a stack overflow and decided to dump core.After getting home I washed my face, which helped some.\", \"rewritten_form_joy\": \"I think that I actually did so many different things today, it felt like my brain was bursting with excitement! After getting home, washing my face was refreshing and made me feel so much better.\", \"rewritten_form_sadness\": \"I think that I actually did too many different things today, and it left my brain feeling completely overwhelmed and exhausted. After getting home, washing my face felt like a small relief, but I still felt worn out.\", \"rewritten_form_fear\": \"I think that I actually did too many different things today, and it felt like my brain was on the brink of a meltdown! After getting home, washing my face helped a bit, but I was still so anxious about how chaotic my day was.\", \"rewritten_form_anger\": \"I think that I actually did too many different things today, and my brain had a stack overflow that made me furious! After getting home, washing my face helped somewhat, but I was still frustrated with how the day went.\", \"rewritten_form_surprise\": \"I think that I actually did too many different things today\\u2014wow, my brain completely overloaded! After getting home, washing my face surprisingly really helped clear my head.\", \"rewritten_form_disgust\": \"I think that I actually did too many different things today; it felt utterly chaotic and disgusting how my brain just crashed. After getting home, washing my face was somewhat of a relief, but I was still left feeling off.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of being overwhelmed rather than excitement. It does mention relief after washing the face, but the overall tone lacks the light-heartedness and positivity found in the joyful rewrite.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence captures exhaustion and feeling overwhelmed, which aligns well with the sadness rewrite. It acknowledges a small relief but emphasizes weariness, indicating a strong connection to sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original suggests a chaotic day, but it doesn't inherently invoke fear or anxiety like the rewritten version. Although it mentions a 'stack overflow', it doesn\u2019t strongly imply impending doom or anxiety, suggesting a lower alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses frustration with a chaotic day but does not convey strong anger. The rewrite emphasizes outrage, which is not captured in the original text, leading to a lower intensity score.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Although the original expresses a chaotic experience, it doesn't contain an element of surprise. The rewrite implies a significant shift in mood which is absent in the original, suggesting little connection to surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

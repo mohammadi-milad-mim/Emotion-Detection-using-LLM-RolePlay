@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Suddenly everything goes dark.\", \"rewritten_form_joy\": \"Suddenly everything goes dark, and I can't help but feel a thrill of excitement!\", \"rewritten_form_sadness\": \"Suddenly everything goes dark, and a heavy sadness washes over me.\", \"rewritten_form_fear\": \"Suddenly everything goes dark, and an icy chill of fear grips my heart.\", \"rewritten_form_anger\": \"Suddenly everything goes dark, and I can't believe this is happening again!\", \"rewritten_form_surprise\": \"Suddenly everything goes dark, and I was completely caught off guard!\", \"rewritten_form_disgust\": \"Suddenly everything goes dark, and it feels so unsettling and repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sudden loss of light, which doesn't inherently evoke joy; in fact, it sounds more ominous. The rewritten joy version adds a thrill of excitement, which is a positive spin, but the original doesn't suggest any underlying joy, aligning minimally.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sadness sentence directly relates to the darkness causing a heavy sadness. While the original sentence implies a potentially negative situation, it doesn't strongly express sadness itself, resulting in a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The notion of everything going dark intensely aligns with the rewritten fear version, suggesting a strong emotional reaction. The darkness can easily evoke fear of the unknown, indicating a significant connection.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The rewritten anger form depicts frustration at a recurring event. The original could imply annoyance at an unexpected situation but does not convey a strong sense of anger on its own, suggesting a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence suggests an unexpected event, aligning well with surprise. The rewritten form emphasizes being caught off guard, indicating a strong connection between the two.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

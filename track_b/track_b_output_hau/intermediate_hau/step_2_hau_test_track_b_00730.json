@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"inaso inyi wata magana amma ina tsoron zuwa abuja lamme pass\", \"rewritten_form_joy\": \"Ina matukar son yin wata magana, ina jin dadin zuwa Abuja tare da lamme pass!\", \"rewritten_form_sadness\": \"Ina so inyi wata magana, amma naji zafi a zuciyata kan tsoron tafiya Abuja da lamme pass.\", \"rewritten_form_fear\": \"Ina so inyi wata magana, amma ina tsoron yunkurin zuwa Abuja da lamme pass.\", \"rewritten_form_anger\": \"Ina son inyi wata magana, amma yana daga cikin abubuwan da ke firgita ni na yi zaton tafiya Abuja da lamme pass!\", \"rewritten_form_surprise\": \"Ina so inyi wata magana, amma na yi mamakin tsoron tafiya Abuja da lamme pass!\", \"rewritten_form_disgust\": \"Ina so inyi wata magana, amma wannan tsoron tafiya Abuja da lamme pass yana sa ni jin juyayi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a desire to have a conversation but includes a notable fear about going to Abuja. This contrasts with the joy sentence that conveys excitement and happiness about traveling, indicating a low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys anxiety and fear about the trip, which aligns closely with feelings of sadness, particularly in the context of emotional pain around the fear of travel. Thus, it shows moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence directly expresses fear regarding the trip to Abuja, making it the most aligned with the fear sentence. The phrasing clearly indicates a strong emotional response to the anticipated action.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence hints at frustration, it isn't explicitly angry. Instead, it focuses more on fear, which dilutes its relevance to anger. Thus, the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The element of surprise is somewhat present since there is fear related to an unexpected situation. However, it lacks strong implications of astonishment, leading to a moderate alignment with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence does express a sense of discomfort regarding the fear of traveling, similar to feelings of disgust. However, it does not strongly imply a visceral reaction, indicating a low alignment.",
+        "disgust_intensity": 1
+    }
+}

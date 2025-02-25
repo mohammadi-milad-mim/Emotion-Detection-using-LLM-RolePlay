@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I just closed my eyes, swayed, and let the song envelop me.\", \"rewritten_form_joy\": \"I just closed my eyes, swayed joyfully, and let the song completely envelop me!\", \"rewritten_form_sadness\": \"I just closed my eyes, swayed sadly, and let the song try to envelop me.\", \"rewritten_form_fear\": \"I just closed my eyes, swayed nervously, and let the song envelop me like a shadow.\", \"rewritten_form_anger\": \"I just closed my eyes, swayed in frustration, and let the song try to overwhelm me.\", \"rewritten_form_surprise\": \"I just closed my eyes, swayed unexpectedly, and let the song envelop me in a delightful way!\", \"rewritten_form_disgust\": \"I just closed my eyes, swayed reluctantly, and let the awful song attempt to envelop me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of calm enjoyment as the speaker allows the music to surround them. However, it does not specify joy explicitly, so it closely aligns but is subtly underplayed compared to the joyful remix, which marks a clear increase in positive emotion.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original does not evoke sadness, as there is no indication of pain or longing. The rewritten version implies a struggle and does not fit the original's tone, which is more peaceful than sorrowful.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While there is an element of vulnerability in closing the eyes and swaying, the original does not invoke fear. The rewritten version introduces an element of anxiety that is not present in the original, making it a weak association.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any aggressive or frustrated language; it conveys a serene experience. The rewritten form introduces emotional turmoil not present in the original, indicating a significant deviation.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text implies a serene experience rather than surprise. The rewritten form adds an element of unexpected delight, which is not present in the original. Thus, the connection is weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

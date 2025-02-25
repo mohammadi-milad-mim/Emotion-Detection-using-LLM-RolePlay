@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She began screaming hysterically.\", \"rewritten_form_joy\": \"She started laughing and shouting with excitement!\", \"rewritten_form_sadness\": \"She began crying out in despair.\", \"rewritten_form_fear\": \"She started screaming in terror.\", \"rewritten_form_anger\": \"She began yelling furiously.\", \"rewritten_form_surprise\": \"She suddenly burst out screaming in shock!\", \"rewritten_form_disgust\": \"She screamed with utter revulsion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a state of hysteria, which is a strong and uncontrollable emotion. While joy might involve shouting, the tone is clearly not joyful in the original version; it lacks positivity or excitement. Therefore, it aligns minimally with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence can align with sadness, as screaming can be associated with despair or distress. The rewritten version reflects this connection well, creating a stronger association with sadness than joy.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The term 'screaming hysterically' suggests panic or overwhelming emotion, which can strongly align with fear. The rewritten fear sentence captures a similar intensity and context, showing a high alignment with fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original phrase indicates an intense experience; however, while it suggests a form of distress, it doesn't specifically indicate anger. The rewritten version focusing on anger expresses a distinctly aggressive emotion that is not present in the original sentence, leading to a moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence conveys an unexpected emotional outburst, which can be aligned with surprise. However, the specific nature of the scream leans more towards distress than surprise, so there is some alignment but not strongly.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

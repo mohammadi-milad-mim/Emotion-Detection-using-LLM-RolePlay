@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then one day recently it was like someone put some corrective lenses over my eyes.\", \"rewritten_form_joy\": \"Then one day recently, it felt like someone gifted me perfect vision!\", \"rewritten_form_sadness\": \"Then one day recently, it was like someone put some corrective lenses over my eyes, revealing all the things I\\u2019ve missed.\", \"rewritten_form_fear\": \"Then one day recently, it was as if someone put corrective lenses over my eyes, and everything I thought I knew began to unravel.\", \"rewritten_form_anger\": \"Then one day recently, it seemed like someone finally decided to put some corrective lenses over my eyes, as if I needed help seeing clearly!\", \"rewritten_form_surprise\": \"Then one day recently, it was as if someone unexpectedly put some corrective lenses over my eyes!\", \"rewritten_form_disgust\": \"Then one day recently, it was as if someone forced corrective lenses over my eyes, showing me the ugliness I never wanted to see.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of revelation but lacks overtly positive connotations, making joy only mildly present. The rewritten joy sentence emphasizes a gift of vision, which is not implied in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original implies a newfound clarity, which could suggest an awakening to unpleasant truths but doesn't strongly convey sadness themselves. The rewritten sadness sentence introduces a sense of loss over missed experiences, which amplifies this emotion greatly.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at a significant change in perception, which could evoke fear of the unknown. The fear rewrite captures that uncertainty with phrases like 'everything I thought I knew began to unravel', indicating something deeper at play, but a direct fear is not strongly present in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original's reference to 'corrective lenses' doesn\u2019t imply anger but could be seen as a critical commentary on needing clarity. The rewritten anger evokes a sense of frustration with the need for help, which is not strongly present in the original but can be inferred.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence indicates an unexpected shift in perception, aligning somewhat with the rewritten surprise sentence's emphasis on unpredictability. However, it doesn't emphasize surprise as the rewritten surprise does, making the emotion less intense in the original.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

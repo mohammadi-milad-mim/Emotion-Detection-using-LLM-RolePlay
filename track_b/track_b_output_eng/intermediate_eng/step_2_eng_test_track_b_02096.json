@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Except my skin.\", \"rewritten_form_joy\": \"Except my skin, which feels wonderful!\", \"rewritten_form_sadness\": \"Except my skin, which feels so rough and neglected.\", \"rewritten_form_fear\": \"Except my skin, what if something is wrong with it?\", \"rewritten_form_anger\": \"Except my skin, which is so infuriatingly sensitive!\", \"rewritten_form_surprise\": \"Except my skin... I didn't expect that to happen!\", \"rewritten_form_disgust\": \"Except my skin, it's just so utterly unpleasant!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original phrase \"Except my skin\" does not convey a sense of joy or positive sentiment. The rewritten version adds an exclamation about the skin feeling wonderful, which significantly contrasts with the original tone, suggesting no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence is neutral, but the rewritten version emphasizes a feeling of roughness and neglect, which indicates sadness. There is potential acknowledgment of discomfort related to the skin, suggesting a moderate alignment with this emotion.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original statement hints at some concern regarding the skin, and the rewritten version explicitly expresses a fear of something being wrong with it. This reflects a recognition of unease and suggests a moderate alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The phrase itself lacks anger, but the rewritten version expresses frustration over skin sensitivity. The emotional intensity here builds on the original context while emphasizing a negative feeling. This indicates some alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original text is quite straightforward and does not imply surprise. The rewritten version introduces an unexpected reaction regarding the skin, therefore creates a notable dissonance suggesting some alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

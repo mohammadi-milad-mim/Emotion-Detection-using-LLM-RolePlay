@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\ud83d\\ude32\\ud83d\\ude32 da gaske? yaushe?? a kusa da gidan zoo ne da zama\", \"rewritten_form_joy\": \"\\ud83d\\ude04 Yayi kyau! Yaushe ne? A kusa da gidan zoo ne da zama?\", \"rewritten_form_sadness\": \"\\ud83d\\ude22 Da gaske ne? Yaushe? a kusa da gidan zoo ne da zama?\", \"rewritten_form_fear\": \"\\ud83d\\ude28 Da gaske? Wanne lokaci? Ina jin rashin kwanciyar hankali a kusa da gidan zoo ne da zama.\", \"rewritten_form_anger\": \"\\ud83d\\ude21 Da gaske?! Yaushe?! A kusa da gidan zoo ne da zama, wannan ba daidai bane!\", \"rewritten_form_surprise\": \"\\ud83d\\ude32 Da gaske?! Yaushe? A kusa da gidan zoo ne da zama?\", \"rewritten_form_disgust\": \"\\ud83e\\udd22 Da gaske? Yaushe? A kusa da gidan zoo ne da zama, wannan shahararren wuri ne! \\ud83e\\uddd0\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of disbelief or curiosity, which does not strongly convey joy. The joy rewritten sentence uses a playful tone ('Yayi kyau!') that is significantly more positive and enthusiastic than the original. As such, the alignment with joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness rewritten version reflects a more sorrowful tone ('Da gaske ne?'), echoing the original's sense of disbelief but with added emotional weight. There is a connection through the realization that something is indeed wrong or sad about the situation referred to, making this a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at concern but does not express fear explicitly. The rewritten fear sentence introduces language about feeling 'rashin kwanciyar hankali', indicative of fear. The original lacks this clear fearful context, resulting in only low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence shows incredulity rather than outright anger. The rewritten anger sentence uses stronger language ('ba daidai bane!') which indicates frustration. This represents a high contrast to the original's tone, resulting in low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original could certainly evoke a sense of surprise ('Da gaske?') but does not illustrate the intensity of realization present in the surprise rewrite. The use of the surprise emoji aligns well but is not strong in the original. Thus, there is moderate alignment with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original does not show disgust while the rewritten disgust version includes language that suggests aversion ('wannan shahararren wuri ne!'). This creates a stark contrast with the original's lack of disgustful sentiment.",
+        "disgust_intensity": 0
+    }
+}

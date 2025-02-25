@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was a single, distorted sound consisting of speaking, whispering, screaming.\", \"rewritten_form_joy\": \"It was a wild, vibrant mix of laughter, chatter, and excitement!\", \"rewritten_form_sadness\": \"It was a haunting, distorted sound of quiet pleas, lonely whispers, and desperate cries.\", \"rewritten_form_fear\": \"It was a terrifying, distorted sound filled with frantic voices, unsettling whispers, and bloodcurdling screams.\", \"rewritten_form_anger\": \"It was an infuriating, distorted cacophony of shouting, accusing whispers, and enraged screams.\", \"rewritten_form_surprise\": \"It was an astonishingly distorted sound that blended unexpected voices, sudden whispers, and shocking screams!\", \"rewritten_form_disgust\": \"It was a grotesque, distorted sound made up of unsettling speech, nauseating whispers, and piercing screams.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a 'distorted sound' with negative implications, which contrasts sharply with the joyfully vibrant imagery of laughter and excitement in the rewritten joy version. There is no sense of joy present in the original text, making this alignment minimal.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original captures a disordered and possibly negative auditory experience, which closely mirrors the melancholic tone of 'haunting' and 'desperate cries' in the sadness version. This shows a more significant alignment with the sadness emotion due to the implication of distress.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text's description of 'screaming' and 'whispering' can evoke fear, especially when coupled with the term 'distorted', which suggests something unsettling. This aligns well with the fear version's emphasis on 'terrifying' and 'unsettling' aspects.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sound featuring 'screaming' could denote anger; however, it lacks the explicit implications of fury described in the anger version. While there is some connection due to the presence of 'shouting' and 'accusing whispers,' it is not as strong.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The element of distortion does hint at unexpectedness, but does not strongly align with the surprise version's theme of astonishment and unexpected occurrences. The idea of blending voices suggests variety, but lacks context for a high degree of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

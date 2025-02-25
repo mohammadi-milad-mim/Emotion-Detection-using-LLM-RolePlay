@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My ears bent back.\", \"rewritten_form_joy\": \"My ears bent back in delight!\", \"rewritten_form_sadness\": \"My ears bent back in sorrow.\", \"rewritten_form_fear\": \"My ears bent back, filled with dread.\", \"rewritten_form_anger\": \"My ears bent back, and I was furious!\", \"rewritten_form_surprise\": \"My ears bent back in shock!\", \"rewritten_form_disgust\": \"My ears bent back in disgust!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not inherently express joy; however, the rewritten sentence portrays joy through the added word 'delight.' The original's tone is neutral, lacking joyful connotations.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'bent back' could imply a sense of yielding or defeat, which can be associated with sadness. However, without further context or emotional vocabulary, this alignment remains weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The mention of 'dread' in the rewritten sentence suggests an intense feeling, which is not conveyed in the original sentence. The original remains neutral and does not evoke fear directly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not suggest anger; the phrase 'bent back' lacks any context that implies rage. Thus, the intensity for anger is minimal as well.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The word 'shock' in the rewritten version indicates surprise, but the original phrase does not suggest anything unexpected or surprising. Therefore, there is little alignment with this emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

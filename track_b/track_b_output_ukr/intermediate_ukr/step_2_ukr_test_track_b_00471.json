@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u0406 \\u044f\\u043a \\u0432 \\u043d\\u0435\\u0457 \\u0446\\u0435 \\u043f\\u043e\\u043b\\u0443\\u0447\\u0430\\u0454\\u0442\\u0446\\u044f???\", \"rewritten_form_joy\": \"\\u0406 \\u044f\\u043a \\u0432 \\u043d\\u0435\\u0457 \\u0446\\u0435 \\u0447\\u0443\\u0434\\u043e\\u0432\\u043e \\u0432\\u0438\\u0445\\u043e\\u0434\\u0438\\u0442\\u044c???\", \"rewritten_form_sadness\": \"\\u0406 \\u044f\\u043a \\u0432 \\u043d\\u0435\\u0457 \\u0446\\u0435 \\u0442\\u0430\\u043a \\u0441\\u0443\\u043c\\u043d\\u043e \\u0432\\u0438\\u0445\\u043e\\u0434\\u0438\\u0442\\u044c???\", \"rewritten_form_fear\": \"\\u0406 \\u044f\\u043a \\u0432 \\u043d\\u0435\\u0457 \\u0446\\u0435 \\u0432\\u0438\\u0439\\u0434\\u0435???\", \"rewritten_form_anger\": \"\\u0406 \\u044f\\u043a \\u0432 \\u043d\\u0435\\u0457 \\u0446\\u0435 \\u0432\\u0437\\u0430\\u0433\\u0430\\u043b\\u0456 \\u043c\\u043e\\u0436\\u0435 \\u0432\\u0438\\u0445\\u043e\\u0434\\u0438\\u0442\\u0438???\", \"rewritten_form_surprise\": \"\\u0406 \\u044f\\u043a \\u0432 \\u043d\\u0435\\u0457 \\u0446\\u0435 \\u0432\\u0438\\u0445\\u043e\\u0434\\u0438\\u0442\\u044c \\u0442\\u0430\\u043a \\u043d\\u0435\\u0441\\u043f\\u043e\\u0434\\u0456\\u0432\\u0430\\u043d\\u043e???\", \"rewritten_form_disgust\": \"\\u0406 \\u044f\\u043a \\u0432\\u0437\\u0430\\u0433\\u0430\\u043b\\u0456 \\u0432 \\u043d\\u0435\\u0457 \\u0446\\u0435 \\u0432\\u0438\\u0445\\u043e\\u0434\\u0438\\u0442\\u044c??? \"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a question about something that is happening, but does not have a joyful connotation. The rewritten joyful version uses '\u0447\u0443\u0434\u043e\u0432\u043e' (wonderful), indicating a positive interpretation. Since the original does not align with this positive sentiment, it scores low for joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sad version includes the word '\u0441\u0443\u043c\u043d\u043e' (sad), which presents a negative emotional context that the original does not express; hence the original does not show signs of sadness either.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The rewritten fearful sentence suggests anxiety or concern about an outcome. The original sentence's tone does not directly imply fear, but it can suggest uncertainty, allowing for a slight alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten angry version implies frustration or irritation about the situation. However, the original question lacks any explicit signs of anger, resulting in a low alignment with this emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The use of '\u043d\u0435\u0441\u043f\u043e\u0434\u0456\u0432\u0430\u043d\u043e' (unexpectedly) in the rewritten version suggests that something surprising is happening. The original sentence, while inquiring, does not convey the same level of surprise, resulting in a low level of alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The rewritten disgust formulation indicates a strong negative reaction ('\u0437\u0430\u0432\u0433\u0430\u043b\u0456' can imply something negative). The original does not suggest disgust, making this emotion as well not particularly aligned.",
+        "disgust_intensity": 0
+    }
+}

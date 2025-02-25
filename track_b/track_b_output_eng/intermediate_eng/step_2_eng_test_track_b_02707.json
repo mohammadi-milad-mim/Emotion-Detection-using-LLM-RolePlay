@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They were moving away to live with her aunt, somewhere far away.\", \"rewritten_form_joy\": \"They were moving away to start a new adventure with her aunt, somewhere exciting!\", \"rewritten_form_sadness\": \"They were moving away to live with her aunt, somewhere so far away that it felt like losing them.\", \"rewritten_form_fear\": \"They were moving away to live with her aunt, somewhere far away, and I worried about their safety.\", \"rewritten_form_anger\": \"They were moving away to live with her aunt, somewhere far away, and I couldn't believe they were leaving like this!\", \"rewritten_form_surprise\": \"They were moving away to live with her aunt, somewhere far away\\u2014I never saw that coming!\", \"rewritten_form_disgust\": \"They were moving away to live with her aunt, somewhere far away, and it just feels wrong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express a celebratory or positive sentiment associated with moving away. It lacks excitement or a sense of adventure, which the joy rewrite conveys. Thus, it does not align well with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a move that could imply loss and separation, similar to the sadness rewrite which emphasizes the emotional weight of losing someone close. This alignment indicates a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence mentions moving away but does not explicitly convey worry or concern for safety. The fear rewrite highlights anxiety that is not directly present in the original sentence, suggesting only a low degree of fear is implicated.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence indicates a move, it does not evoke the frustration or disbelief that the anger rewrite conveys. Thus, there is little alignment with feelings of anger in the original sentiment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence states a move happening without any anticipatory or unexpected descriptors. The surprise rewrite suggests an element of shock which is not inherent in the original; therefore, it does not strongly align with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

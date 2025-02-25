@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Oceanfront views and balcony, sand between my toes ( and everywhere else ), free goodies ( towels, chocolate covered strawberries, breakfast... ), and a very relaxing time.\", \"rewritten_form_joy\": \"Oceanfront views and a delightful balcony, sand playfully in between my toes ( and everywhere else!), free goodies like soft towels, chocolate-covered strawberries, and breakfast... I couldn't ask for a more relaxing time!\", \"rewritten_form_sadness\": \"Oceanfront views and a balcony, but the sand is stuck between my toes ( and everywhere else ), and while there are free goodies like towels, chocolate-covered strawberries, and breakfast... it feels a bit lonely here during this relaxing time.\", \"rewritten_form_fear\": \"With oceanfront views and a balcony, but I can\\u2019t shake the feeling of the sand creeping between my toes (and everywhere else), and while there are free goodies like towels, chocolate-covered strawberries, breakfast... I can\\u2019t help but worry about what\\u2019s lurking beneath the waves during this supposedly relaxing time.\", \"rewritten_form_anger\": \"Oceanfront views and a balcony, but the sand is everywhere, between my toes (and in all the wrong places!), and it\\u2019s infuriating that I can\\u2019t enjoy the free goodies\\u2014towels, chocolate-covered strawberries, breakfast\\u2014without it ruining my relaxing time!\", \"rewritten_form_surprise\": \"Oceanfront views and a balcony, and I can't believe there's sand between my toes ( and everywhere else!), plus all these unexpected free goodies\\u2014towels, chocolate-covered strawberries, breakfast... what an incredibly relaxing time!\", \"rewritten_form_disgust\": \"Oceanfront views and a balcony, but the sand is grossly stuck between my toes ( and everywhere else ), and all these so-called free goodies ( towels, chocolate-covered strawberries, breakfast... ) aren't enough to make up for the discomfort of this so-called relaxing time.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a joyful experience by highlighting pleasant aspects like oceanfront views, relaxation, and free goodies, aligning with the tone of the joy rewrite, which emphasizes delight and playfulness. However, it lacks the more enthusiastic and expressive elements in the rewritten version.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original mentions enjoyable experiences, it lacks the lonely undertone present in the sadness rewrite. Therefore, there's a slight contrast, suggesting that the original does not heavily convey sadness, but could imply some absence of deeper connection.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence points to a relaxing experience with no hint of unease or fear. The fear rewrite introduces an element of worry that isn\u2019t present in the original, making the alignment with fear low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Although the original mentions sand everywhere, it does not convey frustration or anger, which the anger rewrite expresses strongly. This shows minimal alignment to the emotion of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original captures a sense of unexpected relaxed enjoyment but does not convey astonishment as evident in the surprise rewrite. Thus, the original's alignment with surprise is limited.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"years ago my grandfather was dying of complications from alheimers.\", \"rewritten_form_joy\": \"Years ago, my grandfather was suffering, but we cherished every moment we had with him.\", \"rewritten_form_sadness\": \"Years ago, my grandfather was dying from complications of Alzheimer's, and it was heartbreaking to watch him fade away.\", \"rewritten_form_fear\": \"Years ago, my grandfather was dying of complications from Alzheimer's, and I feared losing him completely.\", \"rewritten_form_anger\": \"Years ago, my grandfather was dying from complications of Alzheimer's, and it infuriated me how ruthless the disease was.\", \"rewritten_form_surprise\": \"Years ago, I was shocked when my grandfather started dying from complications of Alzheimer's; it felt so sudden.\", \"rewritten_form_disgust\": \"Years ago, my grandfather was dying of complications from Alzheimer's, and it disgusted me how such a cruel illness could take him away.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of loss and suffering, which contrasts with the more positive tone in the joy rewriting that highlights cherishing moments. Therefore, the alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text aligns closely with the rewritten sadness sentence, as both emphasize the emotional pain of watching a loved one decline due to a devastating illness, making this a strong match.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does imply a sense of impending loss, which relates to fear of losing a loved one. However, it does not explicitly express fear, so the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The text mentions dying from Alzheimer's without mentioning anger explicitly. The rewritten anger sentence captures frustration towards the disease, which is a feeling that could be inferred but is not directly expressed in the original, leading to a moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "While the original mentions a gradual process (the grandfather dying), the surprise rewritten suggests suddenness that is not evident in the original. Thus, the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

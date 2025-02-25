@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Because it was fun.\", \"rewritten_form_joy\": \"Because it was so much fun!\", \"rewritten_form_sadness\": \"Because it used to be fun.\", \"rewritten_form_fear\": \"Because it felt fun, but what if it wasn't safe?\", \"rewritten_form_anger\": \"Because it was supposed to be fun, but it ended up being a disaster!\", \"rewritten_form_surprise\": \"Because it turned out to be fun!\", \"rewritten_form_disgust\": \"Because it was fun, but oddly, it left a bad taste.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of enjoyment with the phrase 'it was fun,' which aligns with the joy expressed in the rewritten sentence that adds emphasis by stating 'so much fun!' This indicates a strong sense of happiness. The original sentiment is positive, integrating well with the joy category.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original statement does not imply any sense of loss or regret, as the rewritten version portrays with 'used to be fun.' Therefore, the alignment with sadness is weak, as there is no indication in the original of anything being lost.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original sentence conveys fun, the rewritten version introduces concern about safety. The original lacks any mention of fear or safety concerns, leading to a weak alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey any feelings of anger or disappointment, unlike the rewritten version that highlights that the fun turned into a disaster. As such, there is no alignment with anger in the original text.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original suggests a straightforward expression of fun without any unexpected elements. The rewritten version reflects an element of surprise by suggesting the fun was unexpected. Therefore, the original does not align strongly with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

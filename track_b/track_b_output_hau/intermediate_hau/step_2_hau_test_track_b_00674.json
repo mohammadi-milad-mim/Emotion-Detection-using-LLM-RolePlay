@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Da sauran mu acikin Kashi Shida(6) a ce daya su ka warke Muna Ruwa\\ud83d\\ude31\\ud83d\\ude31\", \"rewritten_form_joy\": \"Da sauran mu acikin Kashi Shida (6), a ce daya su ka warke! Muna Ruwa! \\ud83d\\ude0a\\ud83d\\ude0a\", \"rewritten_form_sadness\": \"Da sauran mu acikin Kashi Shida (6), a ce daya su ka warke, Muna Ruwa... \\ud83d\\ude22\", \"rewritten_form_fear\": \"Da sauran mu acikin Kashi Shida (6), a ce daya su ka warke? Muna Ruwa...\\ud83d\\ude28\\ud83d\\ude28\", \"rewritten_form_anger\": \"Da sauran mu acikin Kashi Shida (6), a ce daya su ka warke! Muna Ruwa! Ugh! \\ud83d\\ude20\\ud83d\\ude20\", \"rewritten_form_surprise\": \"Da sauran mu acikin Kashi Shida (6), a ce daya su ka warke! Muna Ruwa?! \\ud83d\\ude32\\ud83d\\ude32\", \"rewritten_form_disgust\": \"Da sauran mu acikin Kashi Shida (6), a ce daya su ka warke? Muna Ruwa?! Yuck! \\ud83e\\udd22\\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral sentiment with a focus on an event or fact. The joyful rewrite uses exclamation points and smiley emojis, indicating happiness that is absent in the original. Thus, there is a very low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness rewrite incorporates ellipsis and a crying emoji, suggesting remorse or sadness regarding the situation. The original does not convey this emotion, so it's not aligned with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The fear rewrite includes questioning and frowning emojis that imply concern or anxiety. The original's straightforwardness lacks such implications, making it non-aligned with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger rewrite expresses frustration through exclamation and an angry emoji. While the original captures a tone of urgency, it does not convey the intensity of anger, so the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise rewrite adds exclamation marks and a shocked emoji, suggesting unexpectedness. Although the original sentence is declarative, it does not have surprising elements, resulting in low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust rewrite implies distaste through questioning and a 'yuck' reaction. The original sentence lacks any emotional indicators of disgust, leading to no alignment.",
+        "disgust_intensity": 0
+    }
+}

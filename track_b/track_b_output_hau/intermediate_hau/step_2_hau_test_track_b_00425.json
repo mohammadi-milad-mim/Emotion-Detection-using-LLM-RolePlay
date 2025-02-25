@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Katsina: 'Yan ta'adda sun halaka mataimakin kwamishinan 'yan sanda tare da jami'i 1\", \"rewritten_form_joy\": \"Katsina: 'Yan ta'adda sun yi ta'aziyya ga mataimakin kwamishinan 'yan sanda tare da jami'i 1!\", \"rewritten_form_sadness\": \"Katsina: Abin tausayi, 'yan ta'adda sun halaka mataimakin kwamishinan 'yan sanda tare da jami'i 1.\", \"rewritten_form_fear\": \"Katsina: Wani zargi ne, 'yan ta'adda sun halaka mataimakin kwamishinan 'yan sanda tare da jami'i 1!\", \"rewritten_form_anger\": \"Katsina: 'Yan ta'adda sun halaka mataimakin kwamishinan 'yan sanda tare da jami'i 1, wannan abun ba zai yuwu ba!\", \"rewritten_form_surprise\": \"Katsina: Ban yi tunanin haka ba, 'yan ta'adda sun halaka mataimakin kwamishinan 'yan sanda tare da jami'i 1!\", \"rewritten_form_disgust\": \"Katsina: Abin kyama ne, 'yan ta'adda sun halaka mataimakin kwamishinan 'yan sanda tare da jami'i 1!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is a factual statement about a violent act, which does not convey any sense of joy or positivity. The rewritten joyful version suggests a comfort or consolation that is absent in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes a tragic event where individuals have been killed. The rewritten sadness version explicitly uses 'abin tausayi' (it is sad), which aligns well with the gravity of the event, emphasizing the sorrow and loss involved.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The phrasing 'Wani zargi ne' (it is a suspicion) in the rewritten fear version hints at uncertainty and threat surrounding the violent act. The original sentence, while serious, does not express fear directly, resulting in a more moderate connection to fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten anger version states 'wannan abun ba zai yuwu ba' (this should not happen), indicating strong outrage against the violent act. The original statement is factual, missing the emotional charge that would suggest anger, thus low alignment with this emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement is direct and lacks any surprise element, while the rewritten surprise version indicates disbelief and shock about the act. This strong contrast results in minimal alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The rewritten disgust version uses 'Abin kyama ne' (it is disgusting), which attaches a moral judgment to the violent act. The original sentence does not convey disgust, as it is a straightforward report of events, resulting in low alignment.",
+        "disgust_intensity": 1
+    }
+}

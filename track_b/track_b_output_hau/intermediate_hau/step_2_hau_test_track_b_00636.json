@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kace baka da niyya dai\\ud83d\\ude44\\ud83d\\ude44\", \"rewritten_form_joy\": \"Kace baka da niyya! That's so funny! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"Kace baka da niyya, it makes me feel down. \\ud83d\\ude14\", \"rewritten_form_fear\": \"Kace baka da niyya, what if it's true? \\ud83d\\ude28\", \"rewritten_form_anger\": \"Kace baka da niyya! That's just wrong! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Kace baka da niyya, I can't believe you said that! \\ud83d\\ude2e\", \"rewritten_form_disgust\": \"Kace baka da niyya, that's just gross! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence, though laced with expressions of frustration, does not directly convey humor or joy as implied by the joyful rewrite; it does not express anything amusing or elated either. Therefore, alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence shows an element of disappointment or frustration, which can be tied to sadness, but it does not explicitly express deep sorrow. Thus, while there is some alignment, it is not strong.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not invoke any fear or anxiety and instead expresses a frustration, so it does not align well with the fearful rewrite.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original phrase suggests frustration, which aligns closely with anger. The intensity of the feelings expressed can be considered strong due to the use of an annoyed expression (the face emoji suggests irritation), so this is the strongest alignment.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "While there is a slight level of disbelief possible in the original expression, it does not strongly convey surprise as it is more focused on frustration. Thus, the alignment with surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original phrase doesn't suggest any bodily aversion or disgust; it expresses annoyance instead. So, while the concept may be distracting, the disgust doesn't align well with the original text.",
+        "disgust_intensity": 0
+    }
+}

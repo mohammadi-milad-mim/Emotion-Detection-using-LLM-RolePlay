@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I could not summon up the courage to get up.\", \"rewritten_form_joy\": \"I felt so happy and motivated, but still couldn't bring myself to get up.\", \"rewritten_form_sadness\": \"I wished I could find the courage to get up, but it just felt impossible.\", \"rewritten_form_fear\": \"I was terrified, unable to summon even a bit of courage to get up.\", \"rewritten_form_anger\": \"It infuriated me that I couldn't summon the courage to get up when I needed to.\", \"rewritten_form_surprise\": \"To my surprise, I found myself unable to summon the courage to get up.\", \"rewritten_form_disgust\": \"I was disgusted with myself for being unable to summon the courage to get up.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a lack of courage, whereas the joyful example suggests happiness and motivation, which does not align well with the original sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of struggle and difficulty, aligning well with the rewritten version that emphasizes wishing to find courage but feeling that it's impossible.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a significant level of anxiety about not being able to act, which aligns closely with the fearful context of being terrified about summoning courage.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence might hint at frustration, it does not explicitly include anger; therefore, it only lightly aligns with the anger example that emphasizes being infuriated.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey an element of surprise; both sentences focus on the inability to act without the emotional twist of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

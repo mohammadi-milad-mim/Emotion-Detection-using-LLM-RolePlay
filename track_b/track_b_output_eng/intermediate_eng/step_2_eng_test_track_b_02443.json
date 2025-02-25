@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\\" This was 2 weeks before Christmas, the best business of the year.\", \"rewritten_form_joy\": \"This was just 2 weeks before Christmas, the most exciting time for business of the year!\", \"rewritten_form_sadness\": \"This was 2 weeks before Christmas, the best business of the year, a reminder of what we\\u2019ve lost. \", \"rewritten_form_fear\": \"This was 2 weeks before Christmas, the best business of the year, but what if things go wrong?\", \"rewritten_form_anger\": \"This was 2 weeks before Christmas, the best business of the year, and it\\u2019s so frustrating that we\\u2019re still struggling!\", \"rewritten_form_surprise\": \"This was 2 weeks before Christmas, the best business of the year, and I can hardly believe how fast it\\u2019s coming!\", \"rewritten_form_disgust\": \"This was 2 weeks before Christmas, the best business of the year, and it\\u2019s sickening how commercialized it has become.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral positive sentiment regarding a profitable time of the year. However, the rewritten joy version emphasizes excitement more strongly, suggesting a sense of elation that is not as prominently present in the original sentence. Thus, the alignment is moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original does not express sadness, but the rewritten form introduces a contrast that evokes loss and nostalgia. While the original mentions the best business time, it lacks emotional depth to suggest sadness; therefore, the alignment is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The rewritten fear sentence introduces doubt and anxiety about potential problems during a busy time, which contrasts with the original's straightforward positivity. The original does not invoke fear, resulting in a low intensity score.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Similar to fear, the rewritten anger sentence adds a layer of frustration regarding ongoing challenges. The original does not express any frustration, aligning poorly with angry sentiment, so this will also be a low score.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence conveys a straightforward business context without emphasizing the temporal aspect of Christmas. The rewritten surprise version injects an element of astonishment at the fast approaching holiday, which the original does not capture, leading to low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The measly firing ensued.\", \"rewritten_form_joy\": \"The thrilling firing ensued!\", \"rewritten_form_sadness\": \"The disappointing firing ensued.\", \"rewritten_form_fear\": \"The alarming firing ensued.\", \"rewritten_form_anger\": \"The infuriating firing ensued!\", \"rewritten_form_surprise\": \"The unexpected firing ensued!\", \"rewritten_form_disgust\": \"The revolting firing ensued.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a negative tone ('measly'), which contrasts sharply with the positive excitement implied in the joy version ('thrilling'). Therefore, it aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The word 'measly' reflects an inadequate or disappointing situation, creating a moderate sense of sadness when compared to 'disappointing.'",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text does not evoke a sense of alarm or distress, unlike the fear version, which emphasizes worry with 'alarming.' The alignment with fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence's tone of disappointment does not convey a strong sense of anger, while the rewritten version uses 'infuriating,' which suggests a high level of frustration and anger that is not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Although there is an unexpected element in 'ensued,' the original sentence does not create a strong sense of surprise as implied by the rewritten version, which indicates an unexpected occurrence. Thus, the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

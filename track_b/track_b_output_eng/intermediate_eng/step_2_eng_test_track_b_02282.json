@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They called to her to leave her vehicle slowly, without panicking, and walk towards them.\", \"rewritten_form_joy\": \"They called to her to leave her vehicle slowly, calmly, and joyfully walk towards them!\", \"rewritten_form_sadness\": \"They called to her to leave her vehicle slowly, trying not to panic, and walk towards them with a heavy heart.\", \"rewritten_form_fear\": \"They called to her to leave her vehicle slowly, desperately urging her to stay calm, and walk towards them safely.\", \"rewritten_form_anger\": \"They called to her to leave her vehicle slowly, frustrated that she might be panicking, and walk towards them already!\", \"rewritten_form_surprise\": \"They called to her to leave her vehicle slowly, in disbelief at the situation, and walk towards them as if it was a dream.\", \"rewritten_form_disgust\": \"They called to her to leave her vehicle slowly, almost annoyed at the situation, and just walk towards them already.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a directive to the person without any emotional uplift or positive connotation. While the joy rewritten version is uplifting and encourages a joyful demeanor, the original lacks any hint of joy, so there is little alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original does not suggest sadness; it simply states a factual direction. The sadness version adds a heavy heart, which is not present in the original. Therefore, it does not align with sadness either.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence suggests a calm approach to a potentially serious situation which is a signal of fear. However, it doesn\u2019t show any strong emotional response to danger. The rewritten version emphasizes desperation and urgency over fear which is not apparent in the original. Thus, there is a minor alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is straightforward and lacks any indication of anger or frustration as it is a calm and controlled directive. The rewritten version conveys frustration not suggested in the original. Therefore, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original does suggest an unusual situation that could evoke surprise, it does not express disbelief or a dream-like quality as indicated in the surprise version. Therefore, there is some alignment, but it is not strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As I jumped to the sidewalk, I moved my hand up and down and hollered '' slow down! ''\", \"rewritten_form_joy\": \"As I jumped to the sidewalk, I waved my hand excitedly and yelled, \\\"Slow down!\\\"\", \"rewritten_form_sadness\": \"As I jumped to the sidewalk, I raised my hand slowly and shouted, \\\"Slow down!\\\"\", \"rewritten_form_fear\": \"As I jumped to the sidewalk, I frantically waved my hand and yelled, \\\"Slow down!\\\"\", \"rewritten_form_anger\": \"As I jumped to the sidewalk, I furiously waved my hand and shouted, \\\"Slow down!\\\"\", \"rewritten_form_surprise\": \"As I jumped to the sidewalk, I quickly waved my hand and shouted, \\\"Slow down!\\\"\", \"rewritten_form_disgust\": \"As I jumped to the sidewalk, I waved my hand dismissively and yelled, \\\"Slow down!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence exhibits a sense of excitement as the action of jumping and hollering suggests a lively, joyful tone. The rewritten joy sentence matches this tone well. However, the hollering doesn't clearly express joy, and thus the intensity is moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence's action doesn't convey sadness, as it reflects an urgency and alertness rather than a slow, heavy movement or tone. The sadness rewrite adds a slow element, which contrasts sharply with the original's energy. Therefore, the alignment is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a sense of urgency in the original that aligns well with fear, particularly in the frantic waving. The rewrite for fear amplifies this urgency, indicating a reaction to impending danger. Thus, the fear intensity is moderate to high.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The tone of the original conveys urgency and a strong need for the other party to heed the warning. The rewritten anger sentence heightens this sense of intensity with the word 'furiously', indicating strong emotion. The alignment with anger is high due to the urgent and somewhat assertive nature of the command 'slow down'.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence suggests a sudden reaction by jumping, but the hollering does not inherently express surprise. The rewritten surprise sentence introduces a quick element, aligning somewhat, but it lacks a strong surprise element. Thus, the intensity remains low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ill be honest, I was deathly afraid.\", \"rewritten_form_joy\": \"I'll be honest, I was incredibly excited!\", \"rewritten_form_sadness\": \"I'll be honest, I felt utterly terrified.\", \"rewritten_form_fear\": \"I'll be honest, I was completely consumed by fear.\", \"rewritten_form_anger\": \"I'll be honest, I was furious and terrified!\", \"rewritten_form_surprise\": \"I'll be honest, I was shocked and afraid!\", \"rewritten_form_disgust\": \"I'll be honest, I was disgusted and terrified.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses fear, which is the opposite of joy. There is no excitement or positive sentiment in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a level of fear rather than sadness; while it is intense, it doesn't align closely with feeling sad. The intensity of terror does not equate to sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'deathly afraid' directly reflects a strong sense of fear. This aligns very closely with the rewritten sentence that emphasizes being consumed by fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While there is an element of fear present, the mention of being furious in the rewritten sentence adds an anger element that is not present in the original. The original focuses solely on fear without inferencing anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The presence of the word 'afraid' in the surprise rewritten sentence resonates slightly with the original phrase. However, it does not capture the deep emotional impact of being deathly afraid, resulting in a low connection.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

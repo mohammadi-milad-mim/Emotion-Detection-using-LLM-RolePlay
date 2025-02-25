@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Obviously, she's pissed.\", \"rewritten_form_joy\": \"It's clear she's really excited!\", \"rewritten_form_sadness\": \"It's apparent she's deeply hurt.\", \"rewritten_form_fear\": \"It's obvious she's really angry, and that makes me uneasy.\", \"rewritten_form_anger\": \"Clearly, she's absolutely furious!\", \"rewritten_form_surprise\": \"I can't believe she's so upset!\", \"rewritten_form_disgust\": \"It's obvious she\\u2019s extremely fed up.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses anger rather than joy, making it fundamentally misaligned with the tone of excitement depicted in the joy rewritten form.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence hints at negative emotions, it specifically conveys anger rather than sadness, leading to a low alignment with deep hurt.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence conveys anger, which can evoke feelings of fear or unease; however, it does not directly express fear, resulting in a very mild connection.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence strongly reflects anger, using the word 'pissed', which closely aligns with the rewritten anger sentence that emphasizes the intensity of her emotion. This indicates a high degree of alignment with anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not evoke surprise but rather states a fact about her anger. There is no element of disbelief or unexpectedness present, resulting in a low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

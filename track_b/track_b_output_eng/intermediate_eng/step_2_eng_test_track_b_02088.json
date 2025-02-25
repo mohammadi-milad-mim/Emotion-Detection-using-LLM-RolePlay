@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She was strange, but I had to put up with her due to paperwork related to the mix-up.\", \"rewritten_form_joy\": \"She was so delightfully strange, and I happily put up with her because of the paperwork from the mix-up!\", \"rewritten_form_sadness\": \"She was strange, and it hurt to think I had to put up with her because of the paperwork from the mix-up.\", \"rewritten_form_fear\": \"She was strange, and I was terrified that I had to put up with her because of the paperwork from the mix-up.\", \"rewritten_form_anger\": \"She was strange, and I couldn't believe I had to put up with her because of that careless paperwork from the mix-up!\", \"rewritten_form_surprise\": \"She was strangely charming, and I didn\\u2019t expect to have to put up with her due to the paperwork from the mix-up!\", \"rewritten_form_disgust\": \"She was strange, and I really disliked having to put up with her because of the tedious paperwork from the mix-up.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states 'She was strange, but I had to put up with her,' which is neutral rather than joyful. The rewritten joy sentence expresses delight and happiness, reflecting a more positive sentiment than the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a sense of obligation rather than deep emotional pain, so the sadness is not strongly present. The rewritten sadness version implies a deeper emotional hurt that is not as prevalent in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original doesn\u2019t express any fear or trepidation; it simply states a fact about putting up with someone. The rewritten fear conveys a sense of terror, which contrasts with the original's neutral tone.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While there may be an undercurrent of annoyance in the phrase 'had to put up with her,' it's not deeply rooted in anger. The rewritten anger conveys a strong sense of disbelief and irritation that isn't reflected in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey unexpectedness or charm, focusing simply on the strangeness and the obligation to handle paperwork. The rewritten surprise adds an unexpected charm that isn't implied or present in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

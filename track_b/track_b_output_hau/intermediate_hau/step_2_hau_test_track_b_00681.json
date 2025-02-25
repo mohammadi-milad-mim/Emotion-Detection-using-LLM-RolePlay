@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ta lashi ruwan qurjin ta\", \"rewritten_form_joy\": \"Ta lashi ruwan qurjin ta, yana da kyau sosai!\", \"rewritten_form_sadness\": \"Ta lashi ruwan qurjin ta, abin ba\\u0199in ciki ne.\", \"rewritten_form_fear\": \"Ta lashi ruwan qurjin ta, na damu da abin da zai faru.\", \"rewritten_form_anger\": \"Ta lashi ruwan qurjin ta, me ya sa hakan ya faru?\", \"rewritten_form_surprise\": \"Ta lashi ruwan qurjin ta, hakan ya yi mini mamaki!\", \"rewritten_form_disgust\": \"Ta lashi ruwan qurjin ta, really? Wannan ba mai kyau bane!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy, as it lacks any positive reinforcement or exclamatory sentiments found in the happy version. The joyful rewritten sentence adds enthusiasm with 'yana da kyau sosai!' which isn't present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence can imply conflict or a problem (since it relates to an event), but it does not directly convey sadness. The rewritten form emphasizes a negative sentiment ('abin ba'in ciki ne'), which is not reflected in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original statement might suggest a negative outcome, which could tie into fear, but there is no explicit indication of worry or concern. The fear version highlights anxiety, which is absent in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Though the original could be related to an angry context, it does not directly express frustration or rage. The anger rewrite reflects indignation that is simply not present in the original text.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not evoke any element of surprise; it states something without context or emotional reaction. The surprise version implies an unexpected outcome, which the original does not.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence is neutral and lacks any elements that would evoke disgust. The disgust rewrite introduces a strong negative reaction, contrasting with the original's neutrality.",
+        "disgust_intensity": 0
+    }
+}

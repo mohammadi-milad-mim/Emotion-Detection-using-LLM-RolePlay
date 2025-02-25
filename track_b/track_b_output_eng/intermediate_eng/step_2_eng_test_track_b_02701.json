@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She got pissed and told the vice principle.\", \"rewritten_form_joy\": \"She was so thrilled that she couldn't wait to tell the vice principal!\", \"rewritten_form_sadness\": \"She felt so upset and confided in the vice principal.\", \"rewritten_form_fear\": \"She was really scared and decided to inform the vice principal.\", \"rewritten_form_anger\": \"She was furious and reported it to the vice principal.\", \"rewritten_form_surprise\": \"She was taken aback and immediately told the vice principal.\", \"rewritten_form_disgust\": \"She was repulsed and had to inform the vice principal.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects anger rather than joy, indicating a strong negative emotion. There is no aspect of excitement or thrill present, which would be necessary for a joyful interpretation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a hint of emotional distress in the original sentence, but it focuses primarily on anger rather than sadness. While the character might feel upset, the tone doesn\u2019t strongly convey sadness as a primary emotion.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Fear is not present in the original sentence. The expression of being 'pissed' does not suggest that she is scared, thus the intensity for fear is low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence clearly communicates anger (using 'pissed'), suggesting a high intensity of this emotion, as it involves a strong reaction and action taken against someone.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "While there is some level of unexpectedness in being upset, the focus of the original sentence does not indicate surprise; therefore, the alignment with surprise is weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

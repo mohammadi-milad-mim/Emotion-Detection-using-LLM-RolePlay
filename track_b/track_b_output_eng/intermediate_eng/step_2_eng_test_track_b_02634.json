@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I rolled my eyes laughing.\", \"rewritten_form_joy\": \"I rolled my eyes with joy, laughing so hard!\", \"rewritten_form_sadness\": \"I rolled my eyes, but it felt more like a laugh hiding my sadness.\", \"rewritten_form_fear\": \"I rolled my eyes, my laughter shaky with fear.\", \"rewritten_form_anger\": \"I rolled my eyes in frustration, laughing spitefully.\", \"rewritten_form_surprise\": \"I rolled my eyes, caught off guard by how funny it was!\", \"rewritten_form_disgust\": \"I rolled my eyes, disgusted yet somehow laughing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of amusement, aligning strongly with joy, especially as laughter is an expression of happiness. It does not, however, explicitly highlight overwhelming joy as seen in the rewritten version.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence lacks any nod towards sadness, focusing instead on laughter as a positive act. The sadness version implies a conflict between laughter and hidden emotions, which is absent in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no indication of fear in the original sentence. The laughter described does not come off as shaky or fearful as suggested in the rewritten version.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original does not convey frustration or anger, the rewritten sentence introduces a negative twist to laughter. There\u2019s no sense of anger in the original context of laughing.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not indicate any feeling of being taken off guard. The laughter seems to be a steady reaction rather than one elicited by surprise, as shown in the rewrite.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

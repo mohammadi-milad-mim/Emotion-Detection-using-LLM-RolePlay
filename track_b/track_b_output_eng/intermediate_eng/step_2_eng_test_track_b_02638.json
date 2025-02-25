@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"At the time it didn't seem to bother me.\", \"rewritten_form_joy\": \"At the time, I felt so carefree\\u2014it didn\\u2019t bother me at all!\", \"rewritten_form_sadness\": \"At the time, I guess I didn't realize how much it truly bothered me.\", \"rewritten_form_fear\": \"At the time, I tried to convince myself it didn't bother me, but deep down, I was scared.\", \"rewritten_form_anger\": \"At the time, I thought it didn\\u2019t bother me, but looking back, it infuriates me!\", \"rewritten_form_surprise\": \"At the time, I was surprised that it didn\\u2019t seem to bother me at all!\", \"rewritten_form_disgust\": \"At the time, I couldn't believe I let it slide\\u2014it should have bothered me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a sense of calmness and lack of concern, which aligns somewhat with the joy rewritten form. However, it lacks the enthusiasm and positivity present in the joy context, making the alignment weaker.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests a possible underlying concern that wasn't recognized at the time, which resonates with the sadness version's implication of a deeper realization of hurt. This alignment gives it a more moderate intensity.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a certain denial regarding feelings, which aligns with the fear version\u2019s notion of a hidden fear. However, the fear is not strongly expressed and is more subtle in the original, leading to a low intensity score.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a disconnect between the absence of concern in the original and the hindsight anger expressed in the rewritten version, which suggests a stronger, more intense emotion than what is present in the original. Thus, there is minimal alignment here.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original implies a lack of awareness, which relates to surprise; however, the element of surprise is not significantly evident in the original statement, resulting in a low alignment score.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But heat zone were at my heel!\", \"rewritten_form_joy\": \"But the heat zone was right behind me, and it felt exhilarating!\", \"rewritten_form_sadness\": \"But the heat zone was at my heel, reminding me of my struggles.\", \"rewritten_form_fear\": \"But the heat zone was right at my heel, and I felt terrified!\", \"rewritten_form_anger\": \"But the heat zone was at my heel, and it made me so furious!\", \"rewritten_form_surprise\": \"But the heat zone was suddenly at my heel, and I couldn't believe it!\", \"rewritten_form_disgust\": \"But the heat zone was crawling at my heel, and it was absolutely grotesque!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of proximity of the heat zone without any indicator of positive emotion, unlike the rewritten joy sentence which focuses on exhilaration; thus, it shows little alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not explicitly convey sorrow or reflection on struggles; it only states a fact about the heat zone, making it minimally aligned with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original mentions the heat zone being at the heel, which could imply a sense of pressure, but it lacks the direct expression of fear found in the rewritten version. However, it still suggests a level of anxiety, leading to a moderate alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original indicates a situation where the heat zone is close, but it does not express any feelings of anger. The rewritten anger form directly connects that proximity with a feeling of fury, which is not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original makes a statement about the location of the heat zone but lacks any element of surprise, unlike the rewritten form which emphasizes disbelief. Therefore, the alignment with surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

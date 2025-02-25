@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That's an awesome story.\", \"rewritten_form_joy\": \"That's such an amazing story!\", \"rewritten_form_sadness\": \"That's a really touching story.\", \"rewritten_form_fear\": \"That's a scary story, I can't believe it!\", \"rewritten_form_anger\": \"That's an infuriating story!\", \"rewritten_form_surprise\": \"Wow, that's a surprising story!\", \"rewritten_form_disgust\": \"That's a repulsive story.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses enthusiasm with the word 'awesome,' which closely aligns with the joy captured in the rewritten joy sentence that uses 'amazing.' Both convey a positive feeling about the story.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence is positive and does not imply sadness. The rewritten sadness sentence expresses a deeper emotional connection with the story, which is absent in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no fear present in the original sentence, which is purely positive. The rewritten fear sentence introduces a negative and alarming tone that is not reflected in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey any anger; it is explicitly positive. The rewritten anger sentence has a distinctly negative tone that does not resonate with the original's sentiment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks an element of surprise; it is straightforward. The rewritten surprise sentence suggests an element of unexpectedness that the original does not imply.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

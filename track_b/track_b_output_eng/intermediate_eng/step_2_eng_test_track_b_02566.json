@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It took a while, but I got my zen thing going and tapped to a song in my head.\", \"rewritten_form_joy\": \"It took some time, but I finally found my zen and couldn't help but tap along to the joyful song in my head!\", \"rewritten_form_sadness\": \"It took a while, but I found my zen again, tapping to a song in my head that reminded me of better days.\", \"rewritten_form_fear\": \"It took a while, but I managed to find my zen, tapping to a song in my head, though I still felt a nagging unease.\", \"rewritten_form_anger\": \"It took forever, but I finally got my zen thing going and tapped to a song in my head, despite my frustration with the delay.\", \"rewritten_form_surprise\": \"It took a while, but unexpectedly, I found my zen and started tapping to a song in my head! How surprising!\", \"rewritten_form_disgust\": \"It took a while, but I reluctantly got my zen thing going and tapped to a song in my head\\u2014it felt so forced.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of personal achievement and tranquility with the phrase 'got my zen thing going' and 'tapped to a song in my head.' While it does not express overt joy, it hints at a positive shift from a longer process. The rewritten version captures this joy more fully with joyful imagery and excitement.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey clear sadness, although it hints at a journey towards finding peace. The rewritten version brings a nostalgic tone, suggesting a connection to better times. The link to 'better days' is not present in the original, making the sadness alignment low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original offers a sense of contemplation and eventual peace, with no explicit fear. The rewritten sentence introduces a sense of unease, which is not present in the original. Therefore, there is minimal alignment with fear, as the concept of nagging unease is absent.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Anger seems distant in the original since it focuses on the culmination of a personal journey. The rewritten version introduces frustration about delays, which is not implied in the original text without overtly expressing wrath. Thus, alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not show an element of surprise; rather, it seems more like a state of reflective achievement. The rewritten version emphasizes the unexpected nature of finding zen, which the original lacks. Hence, surprise is minimally aligned.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

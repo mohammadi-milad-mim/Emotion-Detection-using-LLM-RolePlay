@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Allah ya baka lafiya \\u2013 Zahra Buhari ga dan uwanta\", \"rewritten_form_joy\": \"Allah ya baka lafiya, dan uwana! \\u2013 Zahra Buhari\", \"rewritten_form_sadness\": \"Allah ya baka lafiya, dan uwana... \\u2013 Zahra Buhari\", \"rewritten_form_fear\": \"Allah ya baka lafiya, dan uwana, da fatan ba wani abu ya faru da kai! \\u2013 Zahra Buhari\", \"rewritten_form_anger\": \"Allah ya baka lafiya, dan uwana! \\u2013 Zahra Buhari! Ina fushi da abin da ya faru!\", \"rewritten_form_surprise\": \"Allah ya baka lafiya! Mai haka ya faru? \\u2013 Zahra Buhari ga dan uwanta\", \"rewritten_form_disgust\": \"Allah ya baka lafiya, dan uwana\\u2026 \\u2013 Zahra Buhari, amma ina jin tsoron me ke faruwa a yanzu!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive sentiment of well-wishing (\"Allah ya baka lafiya\" translates to \"May God grant you health\"), which aligns closely with the joyful tone of the rewritten joyful form. However, it lacks the enthusiastic exclamation point present in the joyful version, indicating a slightly lower intensity of joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey sadness in a direct manner, but the inclusion of an ellipsis in the rewritten sadness version suggests a reflective or heavy-hearted tone that is lacking in the original. Therefore, it has a very low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not directly indicate fear; however, the fear version implies concern with an added warning phrase. The absence of such concern in the original leads to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no expression of anger in the original text. The rewritten anger version effectively introduces frustration that is not present in the original, indicating no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence conveys a standard greeting and does not imply any unexpected event, unlike the surprise version which includes an expression of astonishment. Thus, the alignment with surprise is minimal.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "While the original does convey well-wishing, it does not reflect any feelings of disgust or negativity. The rewritten disgust version implies trepidation that is fundamentally absent in the original, leading to very low alignment.",
+        "disgust_intensity": 0
+    }
+}

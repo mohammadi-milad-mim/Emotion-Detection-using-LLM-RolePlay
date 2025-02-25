@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\\"____ Hospital *killed my husband!\", \"rewritten_form_joy\": \"____ Hospital *made my husband stronger!\", \"rewritten_form_sadness\": \"____ Hospital *took my husband away!\", \"rewritten_form_fear\": \"____ Hospital *might have harmed my husband!\", \"rewritten_form_anger\": \"____ Hospital *was responsible for my husband's death!\", \"rewritten_form_surprise\": \"____ Hospital *actually cost me my husband!\", \"rewritten_form_disgust\": \"____ Hospital *was absolutely negligent with my husband!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of loss and blame, which contrasts sharply with the tone of the joy sentence that implies improvement and strength. Thus, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects deep sorrow over the loss of a loved one, aligning closely with the sadness version, which also indicates a painful absence. This suggests a high intensity of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence expresses certainty about death, while the fear version introduces uncertainty and potential harm, which isn't present in the original. The alignment is low, as there's no fear implied.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence clearly indicates anger and blame towards the hospital for the death of the speaker's husband, closely matching the anger version that expresses direct responsibility. This alignment points to high intensity of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The surprise sentence highlights an unexpected consequence (the hospital's role in the death), whereas the original sentence states it as a fact. There's some alignment due to the unexpectedness of the situation, leading to moderate intensity of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

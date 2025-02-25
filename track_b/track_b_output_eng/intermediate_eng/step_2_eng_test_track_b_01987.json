@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Could only lie down in one certain position, which caused my back to spasm, so there was more pain.\", \"rewritten_form_joy\": \"I found a position to lie down in, but my back still spasm, which made me feel some pain.\", \"rewritten_form_sadness\": \"I could only lie down in one certain position, leading to my back spasming and causing even more pain.\", \"rewritten_form_fear\": \"I could only lie down in one certain position, and it made my back spasm, which terrified me because the pain was so intense.\", \"rewritten_form_anger\": \"I was forced to lie down in just one position, which made my back spasm with pain and it was so frustrating!\", \"rewritten_form_surprise\": \"I could only lie down in this one position, and to my shock, my back spasmed, causing even more pain.\", \"rewritten_form_disgust\": \"I could only lie down in one position, which made my back spasm and that pain was just so unbearable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text conveys discomfort rather than happiness or joy. While there is some acknowledgment of a position that could potentially be better, pain is significantly highlighted, which does not align with pure joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text reflects a sense of sadness or distress due to the inability to find comfort and the resulting pain from spasms, aligning closely with the sadness indicated in the rewritten sentence.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not clearly express fear, though there may be an implication of concern due to pain. However, it does not convey a strong sense of terror as noted in the fear rewritten sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a mild sense of frustration in the original sentence as it discusses the limitation of being forced into one position leading to pain, aligning somewhat with the frustration expressed in anger. However, it lacks a strong emotional charge related to anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original text does not contain any elements of surprise. It describes a situation that seems anticipated rather than unexpected, leading to a score of zero for this emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

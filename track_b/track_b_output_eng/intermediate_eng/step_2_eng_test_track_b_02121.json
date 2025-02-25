@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I hurried over to my desk, sure that I had left the pen there, and sure enough, there it was.\", \"rewritten_form_joy\": \"I hurried over to my desk, thrilled that I had left the pen there, and sure enough, there it was!\", \"rewritten_form_sadness\": \"I hurried over to my desk, hoping I had left the pen there, and sadly, there it was, but it didn't cheer me up.\", \"rewritten_form_fear\": \"I hurried over to my desk, anxious that I had left the pen there, and sure enough, there it was, but what if it wasn\\u2019t?\", \"rewritten_form_anger\": \"I hurried over to my desk, frustrated that I left the pen there, and sure enough, there it was, just like I thought!\", \"rewritten_form_surprise\": \"I hurried over to my desk, convinced I had left the pen there, and wow, sure enough, there it was!\", \"rewritten_form_disgust\": \"I hurried over to my desk, doubting I had left the pen there, and ugh, sure enough, there it was, but why did it have to be?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of confidence in finding the pen, which aligns with the joy expressed in the rewritten form. However, it does not express the thrill or excitement that the joyful version emphasizes.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not express any sadness or disappointment about the discovery of the pen. The rewritten version introduces a feeling of melancholy that is not present in the original, resulting in a low alignment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence lacks any anxious or fearful tone. While the rewritten form introduces an element of anxiety about whether the pen was actually there or not, this feeling is not present in the original sentence. Therefore, the intensity is low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence expresses confidence in finding the pen, lacking any frustration. The rewritten version introduces frustration, which is absent in the original. Hence, their alignment is weak.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does suggest a small element of surprise in the finding of the pen, as it confirms the expectation. However, it does not convey the excitement found in the rewritten version, which uses 'wow.' This shows a moderate alignment, as there is an element of surprise, just less intense.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

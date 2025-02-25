@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Aku kuma bakin ku a bude.\\ud83d\\ude02\", \"rewritten_form_joy\": \"Aku kuma bakin ku a bude, ini sangat senang!\", \"rewritten_form_sadness\": \"Aku kuma bakin ku a buka, tapi hatiku terasa hampa.\", \"rewritten_form_fear\": \"Aku kuma bakin ku a buka, dan aku tidak tahu apa yang akan terjadi selanjutnya.\", \"rewritten_form_anger\": \"Aku kuma bakin ku a buka dan itu membuatku sangat marah!\", \"rewritten_form_surprise\": \"Aku kuma bakin ku a buka, ini sangat mengejutkan!\", \"rewritten_form_disgust\": \"Aku kuma bakin ku a buka, dan itu sangat menjijikkan!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of openness and readiness to engage with others, which aligns with feelings of happiness and positivity as expressed in the joy rewritten sentence. However, it lacks explicit expressions of joy, so the alignment is moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original does not suggest any feelings of sadness or emptiness, which are present in the rewritten sadness sentence. Therefore, there is no alignment in this case.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original sentence can imply uncertainty about the future (as in being open to something), it does not directly express fear. The fear rewritten sentence introduces a clear apprehension that is not present in the original, resulting in no alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of anger in the original sentence; it conveys a neutral or positive sentiment, making it very different from the rewritten anger sentence, which expresses strong feelings of frustration.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence could suggest some element of surprise or unpredictability, but it is not as pronounced as in the rewritten surprise sentence. Therefore, there is a slight alignment due to the element of unexpectedness in being 'open'.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not convey any feelings of disgust. The rewritten disgust sentence implies a very negative reaction that is not found in the original at all, leading to no alignment.",
+        "disgust_intensity": 0
+    }
+}

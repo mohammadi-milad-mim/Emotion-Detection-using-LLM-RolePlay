@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My legs are still sore.\", \"rewritten_form_joy\": \"I'm so glad I pushed myself, but wow, my legs are still sore!\", \"rewritten_form_sadness\": \"It\\u2019s hard to admit it, but my legs are still sore and it feels disheartening.\", \"rewritten_form_fear\": \"I'm really worried because my legs are still so sore, what if it means something worse?\", \"rewritten_form_anger\": \"Ugh, my legs are still sore and it's so frustrating!\", \"rewritten_form_surprise\": \"I can't believe it, my legs are still sore after all that!\", \"rewritten_form_disgust\": \"Honestly, it's just gross that my legs are still sore from that effort.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral observation about soreness without any positive sentiment or enthusiasm, which is a key feature of joy. The rewritten joy sentence shows excitement and a positive reflection about the soreness, indicating a joy that is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original does not convey a sense of loss or disappointment, which are attributes of sadness. The rewritten sadness sentence indicates a struggle with admitting the discomfort, suggesting a deeper emotional response to the soreness that is not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no indication of concern or worry in the original sentence. The rewritten fear sentence demonstrates apprehension about the soreness indicating a potential underlying issue, which is not reflected in the original text.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence captures discomfort, it lacks any explicit frustration or irritation. The rewritten anger sentence explicitly expresses frustration, which is missing in the calm observation of soreness in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is a direct and factual statement regarding soreness without any element of surprise. The rewritten surprise sentence reflects astonishment, which does not align with the original's straightforward remark.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

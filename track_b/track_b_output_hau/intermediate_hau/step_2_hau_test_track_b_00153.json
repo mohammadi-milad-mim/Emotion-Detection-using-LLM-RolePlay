@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"bashi da lapiya ne\", \"rewritten_form_joy\": \"bashi da lapiya ne, how wonderful!\", \"rewritten_form_sadness\": \"bashi da lapiya ne, it's really unfortunate.\", \"rewritten_form_fear\": \"bashi da lapiya ne, this is quite concerning.\", \"rewritten_form_anger\": \"bashi da lapiya ne, it's infuriating!\", \"rewritten_form_surprise\": \"bashi da lapiya ne, I can't believe it!\", \"rewritten_form_disgust\": \"bashi da lapiya ne, that's absolutely revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'bashi da lapiya ne' conveys a neutral statement, which aligns with the revised joyful version due to the positive exclamation, but it doesn't inherently express joy on its own. Thus, the alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The tone of the original sentence does not imply sadness directly, but the revised version suggests an unfortunate context, making the alignment moderate since the original can be interpreted in a negative light.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original phrase does not express any direct fear, but the associated context in the rewritten form discusses concern, which slightly aligns with the potential for fear regarding the situation described.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks aggressive language or any overt expression of anger, thus there is a weak connection to the rewritten angry version. The anger intensity is therefore low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not present any indication of surprise, and while the rewritten version introduces an element of disbelief, the original lacks elements that would evoke surprise, indicating a very low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "There is no evidence in the original sentence's tone or content that would correlate with disgust found in the rewritten version. Therefore, the alignment with disgust is nonexistent.",
+        "disgust_intensity": 0
+    }
+}

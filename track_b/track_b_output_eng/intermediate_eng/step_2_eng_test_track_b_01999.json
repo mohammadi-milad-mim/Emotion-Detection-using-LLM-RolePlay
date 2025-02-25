@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I don't, and he was awake the entire time.\", \"rewritten_form_joy\": \"I can't believe it, and he was awake the whole time!\", \"rewritten_form_sadness\": \"I don\\u2019t, and he was awake the entire time, which makes it even harder.\", \"rewritten_form_fear\": \"I don\\u2019t, and he was awake the entire time, that really scares me.\", \"rewritten_form_anger\": \"I don't, and he was awake the entire time. How infuriating is that?\", \"rewritten_form_surprise\": \"I don\\u2019t, and he was awake the entire time! Wow, really?\", \"rewritten_form_disgust\": \"I don't, and he was awake the entire time. Ugh, what a nightmare.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a matter-of-fact tone about someone being awake, lacking excitement or happiness. The joy rewritten sentence expresses disbelief and excitement, suggesting a tone vastly different from the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence states a fact without emotional weight, while the sadness rewritten version adds a sense of difficulty due to the awareness of the other person being awake, highlighting emotional pain that isn't reflected in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence reflects a neutral observation, while the fear version introduces a sense of anxiety about the implications of the person being awake. There is a slight alignment, but not strong enough to convey fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original lacks any emotional charge; however, the anger version emphasizes frustration with the situation, suggesting indignation that is not present in the original. The alignment is low as there is no indication of anger in the original text.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence expresses a simple statement without surprise or exclamation, while the surprise rewritten version adds enthusiasm and incredulity. This introduces a level of excitement that is absent from the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

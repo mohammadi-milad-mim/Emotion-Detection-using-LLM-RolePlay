@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"What matters is comfort.\", \"rewritten_form_joy\": \"What really matters is the joy of comfort!\", \"rewritten_form_sadness\": \"What matters is the fleeting comfort we once had.\", \"rewritten_form_fear\": \"What matters is the comfort we desperately seek in a world full of uncertainty.\", \"rewritten_form_anger\": \"What matters is the comfort that feels so unjustly denied to so many!\", \"rewritten_form_surprise\": \"What matters is, surprisingly, just how vital comfort really is!\", \"rewritten_form_disgust\": \"What matters is the shallow comfort we often settle for.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence emphasizes comfort, but lacks an expressive element of joy. The rewritten version highlights joy explicitly, which is a stronger, more positive sentiment than the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original mentions comfort as a significant aspect, but does not convey a sense of loss. The sadness version implies that comfort was previously experienced and is now gone, which aligns less closely with the neutral tone of the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express fear; it simply states comfort as a significant value. The fear version introduces a sense of desperation which is absent in the original. Therefore, it does not align closely with the original's tone.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text does not express any feelings of injustice or frustration, whereas the anger version strongly implies that comfort is being unjustly denied. The emotional intensity of anger is not present in the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While there is a level of importance given to comfort in the original sentence, the surprise version adds an unexpected twist that elevates the significance. However, it doesn\u2019t sufficiently align with the tone of the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

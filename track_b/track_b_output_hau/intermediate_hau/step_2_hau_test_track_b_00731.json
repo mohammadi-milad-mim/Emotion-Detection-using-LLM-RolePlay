@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"ajabba allah gamu garekah\", \"rewritten_form_joy\": \"ajabba! Allah truly has blessed you!\", \"rewritten_form_sadness\": \"ajabba, but it feels like Allah has turned away from us.\", \"rewritten_form_fear\": \"ajabba, what if Allah is angry with us?\", \"rewritten_form_anger\": \"ajabba! How can you doubt Allah's goodness?!\", \"rewritten_form_surprise\": \"ajabba! Can you believe how Allah has favored you?\", \"rewritten_form_disgust\": \"ajabba, it's hard to accept how some people twist Allah's blessings.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'ajabba allah gamu garekah' expresses a sentiment that could be associated with joy, as it acknowledges a positive aspect of Allah's blessings. The rewritten joy version explicitly celebrates Allah's blessings, indicating a strong alignment with the joyful sentiment present in the original.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not convey a sense of sadness directly, but the rewritten sadness version introduces a contrasting sentiment that suggests feeling abandoned by Allah, which is not present in the original. Thus, the alignment with sadness is minimal.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not demonstrate fear; however, the rewritten fear version implies concern over Allah's discontent. This suggests a conflict that is absent in the original, leading to a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence seems to express a sense of challenge or affirmation regarding faith, which aligns moderately with the rewritten anger version's emphasis on doubt about Allah's goodness. This suggests a potential frustration or intensity in belief, allowing for a moderate intensity of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence positions Allah positively, which can lead to a feeling of surprise at the level of favor being highlighted. The rewritten surprise version captures this sentiment well; therefore, the original aligns closely with the surprise emotion, reflecting an enthusiastic acknowledgment of blessings.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "While the original text is neutral, the rewritten disgust version comments on the manipulation of religious sentiments, which doesn't have a corresponding tone in the original. The mismatch indicates that disgust is not a relevant emotional response here.",
+        "disgust_intensity": 0
+    }
+}

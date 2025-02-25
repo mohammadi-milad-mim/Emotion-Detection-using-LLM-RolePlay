@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The first semester I did just fine.\", \"rewritten_form_joy\": \"The first semester was absolutely fantastic for me!\", \"rewritten_form_sadness\": \"The first semester was okay, I guess, but it could have been better.\", \"rewritten_form_fear\": \"I managed to get through the first semester, but I was really worried at times.\", \"rewritten_form_anger\": \"I can't believe I only did just fine in the first semester, I expected so much more!\", \"rewritten_form_surprise\": \"Surprisingly, I did just fine in the first semester!\", \"rewritten_form_disgust\": \"It's frustrating to admit, but I just did fine in the first semester.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of mild satisfaction with 'just fine,' but it does not convey the enthusiasm or happiness present in the rewritten joy version which suggests a much more positive experience.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence lacks the implied disappointment present in the rewritten sadness version, which highlights a longing for something better. 'Just fine' indicates neutrality rather than sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original sentence does not express any explicit fear, the rewritten version indicates a significant level of worry about the semester, suggesting it does not align closely with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The expectation of more in the rewritten anger version is not present in the original sentence. The original maintains a neutral tone rather than expressing frustration or disappointment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The element of surprise in the rewritten version suggests an unexpected outcome; however, the original does not convey that same element of unforeseen results, thus it does not suggest surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

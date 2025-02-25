@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"her insides are disgusting.\", \"rewritten_form_joy\": \"her insides are fascinating!\", \"rewritten_form_sadness\": \"her insides are so troubling.\", \"rewritten_form_fear\": \"her insides are terrifying.\", \"rewritten_form_anger\": \"her insides are absolutely revolting!\", \"rewritten_form_surprise\": \"her insides are shockingly grotesque!\", \"rewritten_form_disgust\": \"her insides are revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative sentiment towards 'her insides' as being 'disgusting,' contrasting significantly with the joy-filled sentiment of fascination. Hence, it aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original phrase contains a strong negative judgment, which can be interpreted as troubling, aligning with the sadness expressed in the rewritten sentence. Thus, there is a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Fear is indicated through terms displaying horror or terror regarding 'her insides,' creating a slightly intense alignment with the notion of fear in the rewritten version\u2014but 'disgusting' does not entirely encapsulate that fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The expression of 'disgusting' directly conveys strong negative emotions, aligning very well with the intensity of anger reflected in 'absolutely revolting.' There is a strong alignment of sentiments here.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original phrase does not imply anything particularly surprising; it lacks the shock or unexpectedness that would be associated with a strong surprise sentiment. Therefore, it aligns poorly with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

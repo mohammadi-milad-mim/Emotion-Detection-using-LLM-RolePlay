@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I grabbed some and a muffin to calm the beast in my stomach.\", \"rewritten_form_joy\": \"I happily grabbed some and a muffin to satisfy the happy rumble in my stomach.\", \"rewritten_form_sadness\": \"I sadly grabbed some and a muffin, hoping to quiet the gnawing beast in my stomach.\", \"rewritten_form_fear\": \"I cautiously grabbed some and a muffin, fearing that the beast in my stomach would only grow hungrier.\", \"rewritten_form_anger\": \"I angrily grabbed some and a muffin, wanting to shut up the beast in my stomach once and for all.\", \"rewritten_form_surprise\": \"I was surprised to find myself grabbing some and a muffin to calm the unexpected beast in my stomach.\", \"rewritten_form_disgust\": \"I reluctantly grabbed some and a muffin, trying to suppress the unpleasant beast in my stomach.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates an action taken to calm a feeling but does not convey a sense of happiness. The rewritten joy version adds a positive sentiment ('happily') that is absent in the original, suggesting only a mild contentment rather than joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests a struggle with discomfort but does not imply overt sadness. The rewritten version introduces a more poignant sentiment ('sadly'), which is not reflected in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original implies a sense of urgency to address discomfort, it does not explicitly denote fear. The rewritten fear version emphasizes apprehension ('fearing'), which is not present in the original, indicating a low connection to this emotion.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses a simple action without anger. The rewritten version introduces a definitive emotional intensity with 'angrily,' yet the original tone remains neutral without any signs of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks an element of surprise; instead, it simply describes the action of grabbing food. The surprise version adds an unexpected element that does not resonate with the straightforward tone of the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

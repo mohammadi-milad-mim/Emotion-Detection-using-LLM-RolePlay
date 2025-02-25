@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But not even the entire content of my stomach.\", \"rewritten_form_joy\": \"But it's not even the entire content of my stomach!\", \"rewritten_form_sadness\": \"But not even the entire content of my stomach...\", \"rewritten_form_fear\": \"But what if it's not even the entire content of my stomach?\", \"rewritten_form_anger\": \"But not even the entire content of my stomach, can you believe that?\", \"rewritten_form_surprise\": \"But not even the entire content of my stomach? That's shocking!\", \"rewritten_form_disgust\": \"But not even the entire content of my stomach, how revolting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any indication of joy or positivity. The rewritten joyful sentence emphasizes excitement with an exclamation mark, which is not present in the original. Therefore, there is a very low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a feeling of disappointment or a negative state, which aligns with the tone of the rewritten sad sentence that includes an ellipsis to indicate trailing off or sadness. There is a moderate alignment with sadness because it conveys a sense of incompleteness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not express fear, but the fear version adds a speculative 'what if,' suggesting concern. However, the original does not imply any anxiety or danger, leading to a low level of alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original phrase indicates a level of disbelief or incredulity without expressing outright anger. The rewritten anger sentence, however, suggests frustration with the addition of 'can you believe that?' This indicates a stronger sentiment than what is present in the original, thus leading to a moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence is neutral and does not convey surprise. The rewritten surprise sentence emphasizes shock, which is not reflected in the original. Therefore, there is a very low alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

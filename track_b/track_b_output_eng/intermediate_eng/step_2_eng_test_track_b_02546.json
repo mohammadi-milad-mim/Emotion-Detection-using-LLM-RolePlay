@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Went to emergency doctor at one hospital, he was happy to send me home after listening to my chest and sent me to Chester Hospital for X-rays etc..\", \"rewritten_form_joy\": \"I went to the emergency doctor at one hospital, and he was so cheerful to send me home after listening to my chest, then referred me to Chester Hospital for X-rays and everything!\", \"rewritten_form_sadness\": \"I went to the emergency doctor at one hospital, but even though he sent me home after listening to my chest, I felt a lingering worry as he referred me to Chester Hospital for X-rays.\", \"rewritten_form_fear\": \"I went to the emergency doctor at one hospital, and while he seemed relieved to send me home after listening to my chest, I couldn\\u2019t shake off the fear of what the X-rays at Chester Hospital might reveal.\", \"rewritten_form_anger\": \"I went to the emergency doctor at one hospital, and even though he seemed content to send me home after listening to my chest, I was frustrated he didn\\u2019t do more and just referred me to Chester Hospital for X-rays.\", \"rewritten_form_surprise\": \"I went to the emergency doctor at one hospital, and I was surprised he was so quick to send me home after listening to my chest, only to refer me to Chester Hospital for X-rays!\", \"rewritten_form_disgust\": \"I went to the emergency doctor at one hospital, and it was repulsive how casually he sent me home after listening to my chest, just handing me off to Chester Hospital for X-rays without a second thought.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a positive outcome (being sent home) and suggests a somewhat positive interaction with the doctor, aligning with the joy rewritten version that emphasizes cheerfulness.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original mentions being sent home, but there's an underlying worry about further testing, which is captured in the sadness rewritten version, although the original doesn't strongly evoke sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does imply a sense of concern for the X-rays, but it doesn't express a high degree of fear. The fear rewritten version captures this apprehension better than the original shows.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While there is some frustration implied in the rewritten anger version, the original sentence does not strongly express anger; it presents a more neutral reaction to the doctor's actions.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence doesn't emphasize surprise nor does it suggest an unexpected turn of events strongly enough to connect it to surprise; the rewritten surprise version leans more into a tone not fully mirrored in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

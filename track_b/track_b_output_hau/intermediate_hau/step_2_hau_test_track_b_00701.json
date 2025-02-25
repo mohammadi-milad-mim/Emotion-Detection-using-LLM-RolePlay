@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"har ma ji kamshin soyensa\", \"rewritten_form_joy\": \"Har ma ji kamshin soyensa!\", \"rewritten_form_sadness\": \"Har ma ji kamshin soyensa...\", \"rewritten_form_fear\": \"Har ma ji kamshin soyensa?\", \"rewritten_form_anger\": \"Har ma ji kamshin soyensa?!\", \"rewritten_form_surprise\": \"Har ma ji kamshin soyensa?!\", \"rewritten_form_disgust\": \"Har ma ji kamshin soyensa, ugh!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral phrase, which could be interpreted as happy in the joyful rewritten version with an exclamation. However, there is no strong indication of celebration or happiness in the original itself.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence closely aligns with the sad rewritten version that uses an ellipsis, suggesting something weighty or heavy-heart at the end. This increases the impact of sadness slightly.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not express any explicit elements of fear, nor does it suggest uncertainty or danger but the rewritten version uses a question mark, adding a hint of trepidation. There isn\u2019t a strong connection overall.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Though the original is neutral, the anger version adds incredulous punctuation and tone. However, without any inherent emotion in the original, this doesn't resonate strongly with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The rewritten surprise version uses a question mark, which infers unexpectedness, but the original does not contain any inherently surprising elements.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not evoke disgust, but the rewritten version with 'ugh' suggests distaste. This strong emotion isn't present in the original statement.",
+        "disgust_intensity": 0
+    }
+}

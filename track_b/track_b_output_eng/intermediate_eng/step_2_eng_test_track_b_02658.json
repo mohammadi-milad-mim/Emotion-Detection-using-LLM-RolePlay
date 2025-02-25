@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I have in my hands two boxes, Which God gave me to hold.\", \"rewritten_form_joy\": \"I have in my hands two beautiful boxes, which God joyfully entrusted to me!\", \"rewritten_form_sadness\": \"I have in my hands two boxes, which God left me to carry alone.\", \"rewritten_form_fear\": \"I hold two boxes in my trembling hands, which God has given me to guard with caution.\", \"rewritten_form_anger\": \"I have in my hands two boxes that God gave me to hold, and it feels so unfair!\", \"rewritten_form_surprise\": \"I have in my hands two unexpected boxes, which God surprisingly entrusted to me!\", \"rewritten_form_disgust\": \"I have in my hands two boxes, which God carelessly gave me to hold.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a neutral trust in a divine gift. The rewritten version adds excitement and emphasis on beauty, which enhances the emotional tone, suggesting a joyful experience that is not fully captured in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sentence evokes a sense of loneliness and burden with the phrase 'to carry alone,' which is a strong sentiment absent in the original. The original does not express loneliness, so the alignment is low.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not imply any fear or caution, whereas the rewritten version introduces trembling hands and the need to guard the boxes, which suggests high fear. The original contains no elements of fear, leading to a low alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral and does not express anger, while the rewritten version introduces feelings of unfairness and frustration. There is a notable dissonance between the two, so the alignment is low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence makes no indication of surprise; it presents holding the boxes as a given. The rewritten version clearly implies that receiving the boxes was unexpected, which creates a moderate dissonance between the two sentiments.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

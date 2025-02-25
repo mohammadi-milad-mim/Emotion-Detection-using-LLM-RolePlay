@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I could feel my throat starting to well with sobs.\", \"rewritten_form_joy\": \"I could feel a warmth in my throat, almost like a joyful laugh bubbling up.\", \"rewritten_form_sadness\": \"I could feel my throat starting to choke with sobs.\", \"rewritten_form_fear\": \"I could feel my throat tightening, a wave of panic rising with each sob.\", \"rewritten_form_anger\": \"I could feel my throat burning with rage, ready to burst with sobs of frustration.\", \"rewritten_form_surprise\": \"I could feel my throat unexpectedly tightening, caught off guard by the tears welling up.\", \"rewritten_form_disgust\": \"I could feel my throat getting constricted, repulsed by the thought of sobbing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses sadness with sobs and emotional pain, contrasting sharply with the joyful sentiment of laughter and warmth in the rewritten joy sentence. There is no alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence effectively captures the essence of sadness, with the throat welling up with sobs indicating a clear emotional state of grief or sorrow, mirroring the sadness in the rewritten version.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a hint of fear in the original sentence, given the physical response of throat tightening associated with intense emotions. However, it does not strongly emphasize panic as the rewritten fear sentence does. The alignment is moderate but not overpowering.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence conveys a sense of emotional struggle, it lacks the intense feeling of anger depicted in the rewritten anger version. The focus is on sadness rather than rage, limiting alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence implies a sudden emotional response, which could suggest surprise, yet it is primarily focused on grief. The mention of a tightening throat is more related to the sadness than an unexpected reaction of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

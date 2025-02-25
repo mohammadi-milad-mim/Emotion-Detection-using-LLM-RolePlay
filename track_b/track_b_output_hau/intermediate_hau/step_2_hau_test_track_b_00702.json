@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yadda nake kuka a fim- Nafisa Abdullahi\", \"rewritten_form_joy\": \"Yadda nake kuka a fim, da farin ciki- Nafisa Abdullahi\", \"rewritten_form_sadness\": \"Yadda nake kuka a fim, da zafin zuciya- Nafisa Abdullahi\", \"rewritten_form_fear\": \"Yadda nake kuka a fim, da tsoro- Nafisa Abdullahi\", \"rewritten_form_anger\": \"Yadda nake kuka a fim, da ba\\u0199in ciki- Nafisa Abdullahi\", \"rewritten_form_surprise\": \"Yadda nake kuka a fim, da mamaki- Nafisa Abdullahi\", \"rewritten_form_disgust\": \"Yadda nake kuka a fim, da rashin jin da\\u0257i- Nafisa Abdullahi\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses the act of crying during a film, which generally suggests an emotional response. However, without explicit mention of joy or happiness, it does not align closely with the joy version, which specifically mentions 'farin ciki' (happiness). Thus, the score is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies an emotional and possibly sad reaction (crying), which aligns closely with the rewritten version that mentions 'zafin zuciya' (pain in the heart), indicating deep sadness. Thus, the alignment is strong, resulting in a moderate score.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not imply any element of fear or anxiety, as it simply states crying in a film without conveying a fearful context. The fear rewritten version introduces 'tsoro' (fear), which is absent from the original. Therefore, the alignment is weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not inherently convey anger; it merely states an emotional response of crying without suggesting frustration or dissatisfaction. The rewritten angry version mentions 'ba\u0199in ciki' (discontent), which does not resonate with the original. Thus, it has little alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is no indication of surprise in the original sentence. It focuses on the act of crying without any unexpected or astonished elements, making the alignment with the surprise rewritten version weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "Similarly, the original sentence does not express any feelings of disgust. It simply discusses crying during a film, lacking any context of unpleasantness. Therefore, it aligns poorly with the disgust rewritten version.",
+        "disgust_intensity": 0
+    }
+}

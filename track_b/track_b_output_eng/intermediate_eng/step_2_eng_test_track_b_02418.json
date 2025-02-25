@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I let my hands fall slowly, looking at her face.\", \"rewritten_form_joy\": \"I let my hands fall slowly, looking at her face with delight.\", \"rewritten_form_sadness\": \"I let my hands fall slowly, looking at her face, feeling a heavy sadness wash over me.\", \"rewritten_form_fear\": \"I let my hands fall slowly, looking at her face with a shiver of fear creeping in.\", \"rewritten_form_anger\": \"I let my hands fall slowly, looking at her face, frustration bubbling inside me.\", \"rewritten_form_surprise\": \"I let my hands fall slowly, looking at her face, unable to hide my surprise.\", \"rewritten_form_disgust\": \"I let my hands fall slowly, looking at her face, my distaste evident.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; it shows an observation without any indication of delight or positive feeling. Therefore, it aligns poorly with the happy tone of the rewritten joyful sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of calm observation but lacks any explicit indication of sadness. However, it can be interpreted as reflecting an underlying heaviness if the context implied it. Thus, the alignment is low but present.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence has a neutral tone and does not imply fear. The rewritten sentence indicates a creeping fear, which is not reflected in the original. This leads to a very low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of frustration or anger in the original sentence; it presents a gentle action of letting hands fall. The rewritten anger sentence has a direct confrontation with emotion which is absent in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text does not express surprise; it merely describes an action. The rewritten surprise form indicates a strong reaction which is not present in the original, leading to a low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

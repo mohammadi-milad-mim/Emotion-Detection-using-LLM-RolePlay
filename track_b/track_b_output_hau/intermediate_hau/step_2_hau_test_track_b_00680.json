@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"ba doleba tunda ba akashe danka ko matarkava da ananne xaaga tashin hankalinka kakasa komai kagaxa kare rayukan alumna tir\", \"rewritten_form_joy\": \"Ba doleba tunda ba akashe danka ko matarkava da ananne xaaga tashin hankalinka kakasa komai kagaxa kare rayukan alumna tir!\", \"rewritten_form_sadness\": \"Ba doleba tunda ba akashe danka ko matarkava da ananne xaaga tashin hankalinka kakasa komai kagaxa kare rayukan alumna tir...\", \"rewritten_form_fear\": \"Ba doleba tunda ba akashe danka ko matarkava da ananne xaaga tashin hankalinka kakasa komai kagaxa kare rayukan alumna tir?\", \"rewritten_form_anger\": \"Ba doleba tunda ba akashe danka ko matarkava da ananne xaaga tashin hankalinka kakasa komai kagaxa kare rayukan alumna tir! It's frustrating!\", \"rewritten_form_surprise\": \"Ba doleba tunda ba akashe danka ko matarkava da ananne xaaga tashin hankalinka kakasa komai kagaxa kare rayukan alumna tir? Wow, that's unexpected!\", \"rewritten_form_disgust\": \"Ba doleba tunda ba akashe danka ko matarkava da ananne xaaga tashin hankalinka kakasa komai kagaxa kare rayukan alumna tir... What a horrible thought!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey overt joy, but the exclamation mark in the joyful rewritten sentence suggests a celebratory or uplifting tone. However, the original lacks any specific elements that elicit joy, thereby lowering the intensity score.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The use of ellipsis in the sadness version implies a lingering, heavy tone, suggesting sadness. The original sentence conveys a serious tone but does not explicitly express any sense of loss or sorrow, limiting its alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear-based version poses a question, indicating an element of uncertainty or concern. The original, while serious in tone, does not imply alarm or anxiety, leading to a lower alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version suggests frustration, which is more explicitly emotive than the original. While the original sentence may hint at frustration, it does not convey anger directly, resulting in a moderate but not high intensity score.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise version implies an unexpected event or realization, but the original sentence lacks an element of astonishment or novelty. Therefore, it aligns only slightly with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version contains a clear negative sentiment expressed through the phrase 'horrible thought'. The original does not inherently suggest any disgust, limiting the alignment to a low intensity.",
+        "disgust_intensity": 0
+    }
+}

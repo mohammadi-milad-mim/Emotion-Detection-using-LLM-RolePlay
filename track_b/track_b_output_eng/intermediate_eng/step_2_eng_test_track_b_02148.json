@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She was the Maid of Honor at my wedding, was in the family pictures, and will be aunt to my kids.\", \"rewritten_form_joy\": \"She was the Maid of Honor at my wedding, took part in the family pictures, and will be such a wonderful aunt to my kids!\", \"rewritten_form_sadness\": \"She was the Maid of Honor at my wedding, was in the family pictures, and will forever be an absent aunt to my kids.\", \"rewritten_form_fear\": \"She was the Maid of Honor at my wedding, was in the family pictures, and I'm scared she'll never be able to be aunt to my kids.\", \"rewritten_form_anger\": \"She was the Maid of Honor at my wedding, was in the family pictures, and now it feels like she won't even be aunt to my kids!\", \"rewritten_form_surprise\": \"She was the Maid of Honor at my wedding, appeared in the family pictures, and to think she will be aunt to my kids is just surprising!\", \"rewritten_form_disgust\": \"She was the Maid of Honor at my wedding, was in the family pictures, and now she expects to be aunt to my kids?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of connection and positivity about the relationship with the Maid of Honor, which aligns well with the joyful tone of the rewritten sentence that emphasizes her future role as a wonderful aunt. However, it lacks overt expressions of joy found in the rewritten version.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence hints at finality regarding the role of the Maid of Honor and her relationship to the future kids, which can be interpreted as sorrowful. The rewritten sadness version amplifies this with the word 'forever' and 'absent', suggesting a stronger emotional loss than is present in the original, but there's no explicit mention of loss in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence implies a continuing relationship, it doesn't express any fear. The rewritten fear version introduces a concern about her future role, which is not present in the original. Therefore, while there might be some undertone of uncertainty, it's not enough to strongly associate with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of anger in the original sentence; it is factual and neutral. The rewritten anger version implies frustration with changes in the relationship, which isn't echoed in the original statement. Thus, the original does not align with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not convey any element of surprise. The rewritten surprise version introduces an element of unexpectedness regarding her future role, which is absent in the original sentence. Therefore, the original does not align with the surprise emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

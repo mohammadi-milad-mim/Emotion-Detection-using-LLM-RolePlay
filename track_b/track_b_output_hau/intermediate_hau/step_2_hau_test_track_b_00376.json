@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ka Zo Ka Kula Da Danka\\u201d: Matashiya Fashe Da Kuka Bayan Tsohon Saurayinta Ya Rabu Da Ita Da Ciki\", \"rewritten_form_joy\": \"\\\"Ka Zo Ka Kula Da Danka\\u201d: Matashiya Ta Fashe Da Murna Bayan Tsohon Saurayinta Ya Rabu Da Ita Da Ciki!\", \"rewritten_form_sadness\": \"\\\"Ka Zo Ka Kula Da Danka\\u201d: Matashiya Ta Fashe Da Kuka Bayan Tsohon Saurayinta Ya Rabu Da Ita Da Ciki.\", \"rewritten_form_fear\": \"\\\"Ka Zo Ka Kula Da Danka\\u201d: Matashiya Ta Fashe Da Kuka, Jin Tsoro Bayan Tsohon Saurayinta Ya Rabu Da Ita Da Ciki.\", \"rewritten_form_anger\": \"\\\"Ka Zo Ka Kula Da Danka\\u201d: Matashiya Ta Fashe Da Kuka Hana Ameen, Tsohon Saurayinta Ya Rabu Da Ita Da Ciki.\", \"rewritten_form_surprise\": \"\\\"Ka Zo Ka Kula Da Danka\\u201d: Matashiya Ta Fashe Da Kuka, Saboda Tsohon Saurayinta Ya Rabu Da Ita Da Ciki, abin mamaki!\", \"rewritten_form_disgust\": \"\\\"Ka Zo Ka Kula Da Danka\\u201d: Matashiya Ta Fashe Da Kuka, Tsohon Saurayinta Ya Rabu Da Ita Da Ciki, abin takaici!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; rather, it describes a situation filled with sorrow. The rewritten version for joy uses the word 'murna' (happiness), indicating a positive twist that is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly discusses Matashiya crying after her breakup, which indicates a high level of sadness. The rewritten sadness version maintains this tone with the word 'kuka' (crying), representing strong emotional pain.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original text does not exhibit fear; it focuses on sadness related to a breakup. Although the fear version introduces the word 'tsoro' (fear), it is not conveyed in the original sentence, thus the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Although there is emotional intensity connected to the breakup, the original sentence does not express anger, which is reflected in the anger rewriting that suggests a rejection (hanna ameen) to the ex-partner. This is absent from the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text does not contain an element of surprise. The rewritten version introduces an element of shock by stating 'abin mamaki' (surprising), which does not align with the sadness depicted in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not express disgust. The rewritten disgust sentence introduces 'abin takaici' (disgusting), which is not present in the original. This creates a low alignment.",
+        "disgust_intensity": 1
+    }
+}

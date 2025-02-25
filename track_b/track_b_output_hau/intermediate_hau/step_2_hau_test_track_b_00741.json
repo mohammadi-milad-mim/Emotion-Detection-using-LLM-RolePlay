@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yaro na amai akan rigar sa\", \"rewritten_form_joy\": \"Yaro na amai akan rigar sa, ina son wannan sosai!\", \"rewritten_form_sadness\": \"Yaro na amai akan rigar sa, amma zuciyata na jin zafi.\", \"rewritten_form_fear\": \"Yaro na amai akan rigar sa, ina jin tsoro kada ya ji rauni.\", \"rewritten_form_anger\": \"Yaro na amai akan rigar sa, wannan ba daidai ba ne!\", \"rewritten_form_surprise\": \"Yaro na amai akan rigar sa, lallai wannan ya yi min mamaki!\", \"rewritten_form_disgust\": \"Yaro na amai akan rigar sa, hakan abu ne mai ban tausayi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral sentiment about a boy in a shirt. The rewritten joy sentence includes a strong expression of love or happiness for the situation, which is not present in the original. Thus, the alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not express any sadness, but the rewritten sadness sentence adds a feeling of pain, which is a direct shift in sentiment. This indicates that while there is no sadness in the original, the rewritten sentence introduces it, resulting in a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey any sense of fear or anxiety. The rewritten fear sentence introduces an external threat with a concern for safety that is lacking in the original. As such, the original does not present a fear aspect.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral and does not express any anger or frustration. The rewritten anger sentence introduces a confrontation that is not present in the original, indicating no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence conveys a straightforward statement without any element of surprise. The rewritten surprise sentence indicates that something unexpected has happened, which is not reflected in the original. Thus, there is no sense of surprise in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not evoke feelings of disgust. The rewritten disgust sentence introduces a perception of pity, which diverges from the neutral tone of the original. Hence, there is a lack of alignment.",
+        "disgust_intensity": 0
+    }
+}

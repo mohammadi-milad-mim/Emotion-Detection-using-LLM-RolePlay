@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"god i cant even see straight cuz i have so many tears in my eyes.\", \"rewritten_form_joy\": \"I\\u2019m overwhelmed with happiness, it\\u2019s like tears of joy are filling my eyes!\", \"rewritten_form_sadness\": \"I can barely see straight through all the tears streaming down my face.\", \"rewritten_form_fear\": \"I\\u2019m so shaken up that my vision is blurred with tears, and I can\\u2019t even see straight.\", \"rewritten_form_anger\": \"I can\\u2019t believe this! I have tears in my eyes and can\\u2019t see straight because of it!\", \"rewritten_form_surprise\": \"I can\\u2019t see straight, my eyes are filled with unexpected tears!\", \"rewritten_form_disgust\": \"It\\u2019s unbelievable, I\\u2019m in such a state that I can\\u2019t see straight with all these disgusting tears in my eyes.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses sorrow through tears, which contrasts with joy. The rewritten sentence about happiness conveys an entirely different feeling, making the alignment with joy very weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence clearly expresses an emotional struggle characterized by tears, which is directly aligned with the rewritten sentence about sadness. The tone and content both reflect a deep sense of sorrow.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence has elements of being overwhelmed and blurred vision, which could allude to fear. However, the fear is not the focus but rather sadness, making it a weaker alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is an expression of frustration in the original sentence related to being unable to see clearly because of tears, which could hint at anger. However, it does not strongly convey anger as the dominant emotion; therefore, the alignment is moderate but not strong.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The idea of tears causing blurred vision could lead to a sense of surprise, but it feels more like an expected outcome of crying rather than a surprising event. Thus, the alignment with surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This is both really gross and creepy:\", \"rewritten_form_joy\": \"This is unexpectedly amusing and intriguing!\", \"rewritten_form_sadness\": \"This is genuinely upsetting and disturbing.\", \"rewritten_form_fear\": \"This feels incredibly unsettling and terrifying.\", \"rewritten_form_anger\": \"This is absolutely revolting and infuriating!\", \"rewritten_form_surprise\": \"This is surprisingly gross and kind of eerie!\", \"rewritten_form_disgust\": \"This is utterly disgusting and profoundly creepy!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not carry any positive sentiment; instead, it expresses negative feelings of disgust and creepiness. The tone of the joy version emphasizes amusement and intrigue, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of grossness and creepiness, which does not imply deep emotional sadness but can evoke discomfort. The sadness version uses stronger emotive language (genuinely upsetting), which is slightly aligned, but not strongly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does express feelings of grossness and creepiness, which can indeed provoke a sense of unsettling fear. However, it does not reach the level of terror suggested in the fear version, which indicates a higher emotional intensity.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence describes something as gross and creepy, which could align with feelings of anger towards the situation or object. The anger version intensifies this reaction with words like 'absolutely revolting,' aligning it more closely with anger than the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does feature an element of surprise in the context of expressing disgust but does not convey positive surprise. The surprise version leans toward a more humorous tone, which is not reflected in the original sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

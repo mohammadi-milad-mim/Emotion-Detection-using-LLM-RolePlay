@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I get there and I burst into tears.\", \"rewritten_form_joy\": \"I get there and I burst into happy tears!\", \"rewritten_form_sadness\": \"I get there and I can't help but burst into tears.\", \"rewritten_form_fear\": \"I get there and I feel so overwhelmed that I burst into tears.\", \"rewritten_form_anger\": \"I get there and, in a fit of rage, I burst into tears.\", \"rewritten_form_surprise\": \"I get there and suddenly, out of nowhere, I burst into tears!\", \"rewritten_form_disgust\": \"I get there and, disgusted with everything, I burst into tears.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a moment of vulnerability through tears, which does not confirm happiness but rather emotional distress. The joy version suggests happy tears, which is somewhat contrary to the sadness implied in the original sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence directly indicates a moment of distress by stating that the speaker bursts into tears, aligning closely with the rewritten sadness form and demonstrating a clear expression of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence does convey a strong emotional reaction, it lacks the explicit indication of fear or feeling overwhelmed that is presented in the fear rewritten form. It doesn't strongly imply fear but rather sadness.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement does not express any anger or rage; it simply indicates that the speaker is crying. The anger rewritten version emphasizes a fit of rage, which contrasts with the tone of the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is no indication in the original sentence of suddenness or surprise; the act of crying seems to reflect an emotional release rather than a surprising event. Therefore, it doesn't align with the surprise rewritten form.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

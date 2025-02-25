@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My hearts just been through a lot lately, and it was something I needed to write about.\", \"rewritten_form_joy\": \"My heart has burst with so much lately, and I felt the urge to write about it!\", \"rewritten_form_sadness\": \"My heart has endured so much recently, and I really needed to write about it.\", \"rewritten_form_fear\": \"My heart has faced a lot of turmoil lately, and I had to write about it\\u2014I'm scared of what it could mean.\", \"rewritten_form_anger\": \"My heart has been through so much lately, and I couldn't hold back\\u2014I needed to write about it.\", \"rewritten_form_surprise\": \"My heart has gone through so much lately, and I was honestly surprised by how much I needed to write about it.\", \"rewritten_form_disgust\": \"My heart has been through a lot of unpleasantness lately, and I just had to write about it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a need to write due to emotional experiences, but it lacks the exuberance and positivity that would indicate joy. The rewritten joyful form emphasizes a burst of positive feelings, which is not present in the original, leading to a lower alignment score.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original clearly conveys that the heart has endured challenges, suggesting a sense of sorrow or distress. The rewritten sad form resonates closely with the notion of enduring and needing to express that sadness, indicating a high alignment with the emotion.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While there is an element of turmoil mentioned, fear is not explicitly present in the original sentence. The rewritten fear version introduces a sense of dread and uncertainty that is not reflected in the original, which leads to a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence discusses having been through a lot, but it does not explicitly convey anger or a sense of needing to express that with intensity. The rewritten angry form does imply a stronger emotional outpouring, creating a moderate (but not high) alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original text does not convey any surprise, as it expresses a reflective state rather than one of unexpected realization. The rewritten surprised version introduces an element of shock, making the alignment with the original very low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

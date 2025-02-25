@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She texted me three days before the wedding basically calling me a liar because my dad outlived the doctor's expectations.\", \"rewritten_form_joy\": \"She texted me three days before the wedding, and I couldn't believe it\\u2014my dad outlived the doctor's expectations!\", \"rewritten_form_sadness\": \"She texted me three days before the wedding, accusing me of lying, just because my dad outlived the doctor's bleak predictions.\", \"rewritten_form_fear\": \"She texted me three days before the wedding, calling me a liar, and I couldn't shake the fear of what this might mean for us.\", \"rewritten_form_anger\": \"She had the nerve to text me three days before the wedding, calling me a liar over my dad's surprising recovery from the doctors' grim prognosis!\", \"rewritten_form_surprise\": \"She texted me three days before the wedding, and I was shocked to see her accusing me of lying because my dad outlived what the doctors thought.\", \"rewritten_form_disgust\": \"She texted me three days before the wedding, implying I was a liar just because my dad stubbornly outlived the doctor's expectations\\u2014how distasteful!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any joy; rather, it reflects a tension-filled situation. Joy is absent as the focus is on conflict and accusations rather than a happy event or outcome.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence captures a sense of disappointment and hurt due to the accusation against the speaker. It shows a recognition of a sad situation involving familial expectations, aligning well with the rewritten version.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies anxiety about interpersonal consequences due to the accusation. While there's a hint of concern, it does not fully articulate fear about future actions or outcomes, making it a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses frustration and anger over the text received just before a significant event, coupled with the unfairness of being called a liar. This aligns strongly with the rewritten angry version.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence involves an unexpected accusation, but the surprise element is secondary to the emotions of anger and sadness. It hints towards a lack of foresight regarding the text's contents, but doesn't evoke a strong sense of astonishment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

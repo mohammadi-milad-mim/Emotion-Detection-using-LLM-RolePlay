@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was an very selfish move.\", \"rewritten_form_joy\": \"I can't believe how selfish that move was, but it's just so typical!\", \"rewritten_form_sadness\": \"It was such a very selfish move, and it really hurt the team.\", \"rewritten_form_fear\": \"That was an incredibly selfish move, and it might lead to serious consequences.\", \"rewritten_form_anger\": \"That was an extremely selfish move, and it infuriates me!\", \"rewritten_form_surprise\": \"Wow, that was a really selfish move! I didn't see that coming!\", \"rewritten_form_disgust\": \"What a disgustingly selfish move that was.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative judgment about a move being selfish, which doesn't align with joy. The rewritten joy sentence includes a hint of humor but still revolves around the selfish nature of the action, implying a lack of true positivity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "Sadness is present in the context of how the selfish move affected the team negatively. However, the original sentence does not convey any deeper emotional impact or reflection on hurt, so the connection is weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Fear might be evoked by the implication of future consequences from the selfish move, but this is not evident in the original sentence. The original lacks any reference to potential threats or negative outcomes as a result of the action.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text conveys criticism of the move, which aligns closely with anger. While it does not express strong emotional outrage like the rewritten form, the use of 'selfish' can still suggest frustration.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "There is no element of surprise in the original statement. The shock or unexpectedness present in the rewritten surprise sentence is absent in the original text, which presents the selfishness as a straightforward observation.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

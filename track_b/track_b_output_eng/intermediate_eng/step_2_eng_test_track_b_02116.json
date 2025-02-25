@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Her face was horrifying and mangled and she was screaming, \\\"GET IN THERE AND CHANGE THOSE FUCKING DIAPERS!\\\".\", \"rewritten_form_joy\": \"Her face was wild with intense energy as she joyfully yelled, \\\"GET IN THERE AND CHANGE THOSE FUN DIAPERS!\\\"\", \"rewritten_form_sadness\": \"Her face was haunting and distorted, filled with despair as she screamed, \\\"GET IN THERE AND CHANGE THOSE POOR BABY DIAPERS!\\\"\", \"rewritten_form_fear\": \"Her face was twisted in horror, and she was screaming, \\\"GET IN THERE AND CHANGE THOSE SCARY DIAPERS!\\\"\", \"rewritten_form_anger\": \"Her face was a mask of rage and her voice thundered, \\\"GET IN THERE AND CHANGE THOSE DAMN DIAPERS!\\\"\", \"rewritten_form_surprise\": \"Her face was shockingly mangled, and she screamed out unexpectedly, \\\"GET IN THERE AND CHANGE THOSE DIAPERS NOW!\\\"\", \"rewritten_form_disgust\": \"Her face was grotesque and contorted, and she screamed, \\\"GET IN THERE AND CHANGE THOSE DISGUSTING DIAPERS!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys horror and distress, contrasting sharply with the joyful tone of the rewritten joy sentence. There is no element of joy present in the depiction of her face or the urgent scream.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence highlights horror and mangled features rather than despair. While the sadness version uses similar language to imply distress, the intensity of sadness is not a core element of the original. It fits but does not dominate.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original's description of a horrifying face and a screaming tone indeed evokes fear, making the rewritten fear sentence quite aligned with the original in essence.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The tone of the original is aggressive, with the screaming highlighting frustration and anger, precisely matching the intense anger portrayed in the rewritten sentence.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original's depiction doesn't focus on surprise; instead, it leans on horror. The rewritten surprise sentence implies unexpectedness, which is not clearly present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

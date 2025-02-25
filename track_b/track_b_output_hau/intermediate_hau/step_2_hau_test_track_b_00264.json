@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"JAMB: Akwai yiwuwar sauya lokacin jarabawar UTME\", \"rewritten_form_joy\": \"JAMB: Yana yiwuwa a sauya lokacin jarabawar UTME, wannan yana da kyau!\", \"rewritten_form_sadness\": \"JAMB: Akwai yiwuwar sauya lokacin jarabawar UTME, wanda zai iya zama mai wahala.\", \"rewritten_form_fear\": \"JAMB: Ina jin damuwa game da yiwuwar sauya lokacin jarabawar UTME.\", \"rewritten_form_anger\": \"JAMB: Hakika, akwai yiwuwar sauya lokacin jarabawar UTME, wannan abu ne mai ban haushi.\", \"rewritten_form_surprise\": \"JAMB: Ban tsammanin za a iya sauya lokacin jarabawar UTME!\", \"rewritten_form_disgust\": \"JAMB: Na ji wannan labarin game da yiwuwar sauya lokacin jarabawar UTME, yana janyo wahala.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states a possibility (yiwuwar sauya) but lacks any positive or joyful connotation that would suggest a reason to be happy about it.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The tone of the original conveys uncertainty and potential disruption, which aligns with feelings of sadness due to the implied difficulties that could arise from a schedule change.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text presents a scenario where a change is possible, but it does not explicitly convey fear or anxiety related to that possibility.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks an explicit expression of frustration or anger over the potential change, making alignment with anger low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not suggest any unexpected changes; the possibility of rescheduling is presented as neutral rather than surprising.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "While the original mentions a potential change, it does not convey a strong negative reaction or disgust towards this situation.",
+        "disgust_intensity": 1
+    }
+}

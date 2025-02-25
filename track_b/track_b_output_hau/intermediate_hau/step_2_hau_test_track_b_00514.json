@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Wai tsit kakeji uwar gulma tayi ciki\\ud83d\\ude00 up England\", \"rewritten_form_joy\": \"Wai tsit kakeji uwar gulma tayi ciki! I'm so excited about what's happening in England!\", \"rewritten_form_sadness\": \"Wai tsit kakeji uwar gulma tayi ciki... it's hard to believe what's happening in England.\", \"rewritten_form_fear\": \"Wai tsit kakeji uwar gulma tayi ciki... what if things go wrong in England?\", \"rewritten_form_anger\": \"Wai tsit kakeji uwar gulma tayi ciki! I can't believe what's happening in England!\", \"rewritten_form_surprise\": \"Wai tsit kakeji uwar gulma tayi ciki! Can you believe what's going on in England?\", \"rewritten_form_disgust\": \"Wai tsit kakeji uwar gulma tayi ciki, how could this happen in England?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses excitement, similar to the joy rewritten sentence which emphasizes excitement about events in England. The use of an emoji also conveys happiness, suggesting a strong alignment with joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "Though there is no direct indication of sadness in the original statement, the rewritten version suggests a feeling of disbelief and sadness regarding events in England. This doesn't reflect the original's excitement, so the alignment is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not imply fear; rather, it implies excitement. The fear rewritten version introduces worries about potential negative outcomes, which is not present in the original. Therefore, there's minimal alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Although the original shows excitement, the rewritten anger sentence implies frustration or disbelief about events in England, which is somewhat aligned with the original's tone but leans more toward anger than the excitement present in the original. Thus, alignment is moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original has a surprising element, as it conveys a sense of amazement or excitement, aligning well with the rewritten surprise version which questions the situation in England. There's a strong connection to surprise in both.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "The original does not express disgust; it carries positive excitement instead. The disgust version implies a strong negative reaction, which does not align with the original sentiment, resulting in minimal connection.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yet, in the middle of math I wanted to put my head down and just fall asleep.\", \"rewritten_form_joy\": \"Yet, in the middle of math, I felt so relaxed that I just wanted to put my head down and blissfully drift off.\", \"rewritten_form_sadness\": \"Yet, in the middle of math, I felt so overwhelmed that I just wanted to put my head down and fall asleep to escape it all.\", \"rewritten_form_fear\": \"Yet, in the middle of math, I couldn't shake the feeling that I just wanted to put my head down and fall asleep, hoping nothing terrible would happen.\", \"rewritten_form_anger\": \"Yet, in the middle of math, I was so frustrated that I wanted to slam my head down and just fall asleep in protest.\", \"rewritten_form_surprise\": \"Yet, in the middle of math, to my shock, I found myself wanting to put my head down and just fall asleep!\", \"rewritten_form_disgust\": \"Yet, in the middle of math, I was so fed up that I just wanted to put my head down and fall asleep, completely disgusted.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a desire to sleep, but it does not convey relaxation or joy; rather, it suggests fatigue or disengagement. The rewritten joy sentence introduces a sense of relaxation and bliss that is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of weariness, which could imply a level of overwhelm, aligning moderately with sadness. The rewritten sadness sentence emphasizes an escape from feelings of being overwhelmed, which resonates with the original sentiment more closely than joy.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a slight possibility of fear if the context suggests stress or anxiety, but the original focus is more on fatigue than on fear of consequences. The rewritten fear sentence introduces a clear anxiety regarding potential outcomes, which is not implied by the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey any explicit anger or frustration; it simply states a wish to sleep. The rewritten anger sentence explicitly introduces frustration that is not present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not express shock or surprise. The rewritten surprise sentence implies an unexpected desire, which is not reflected in the original expression of wanting to sleep, hence there is minimal alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

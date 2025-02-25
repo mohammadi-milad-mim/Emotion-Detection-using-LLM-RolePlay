@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bandagin mutumin yana warin ruwan kurji.\", \"rewritten_form_joy\": \"Bandagin mutumin yana da kamshin ruwan kurji mai dadi!\", \"rewritten_form_sadness\": \"Bandagin mutumin yana warin ruwan kurji, abin tausayi ne.\", \"rewritten_form_fear\": \"Bandagin mutumin yana warin ruwan kurji, yana sanya gwiwata ta daka!\", \"rewritten_form_anger\": \"Bandagin mutumin yana warin ruwan kurji, me yasa hakan ke faruwa?\", \"rewritten_form_surprise\": \"Ban yi tsammani bandagin mutumin zai yi warin ruwan kurji ba!\", \"rewritten_form_disgust\": \"Bandagin mutumin yana warin ruwan kurji, hakan yana sa ni jin zafi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a neutral observation of an unpleasant smell, while the joyful rewritten version adds a positive connotation with 'mai dadi' (pleasant). Thus, the original doesn't express joy, aligning poorly with the joyful tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original carries a neutral reporting tone about the unpleasant smell. The sadness version adds a layer of compassion with the phrase 'abin tausayi ne,' which frames the situation in a more sympathetic light. There's a slight alignment, as the unpleasant smell can invoke some sadness, but it's not deeply felt.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence makes an objective statement about the smell. The fear version triggers a visceral response ('yana sanya gwiwata ta daka!') that implies a sense of fear or discomfort regarding the smell. However, since the original does not convey any feelings of danger or fear, the alignment is very low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original merely states a fact about the unpleasant smell without conveying any anger. The anger rewrite expresses a clear frustration at the situation ('me yasa hakan ke faruwa?'), making a stark contrast to the original's neutrality. Therefore, there\u2019s no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not imply any expectation or unexpectedness. The surprise version introduces an element of surprise that does not exist in the original. Thus, there's a complete misalignment; the original sentence does not invoke a surprising response.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence captures a description of a distasteful smell, which aligns well with the disgust rewritten version that expresses a visceral reaction ('hakan yana sa ni jin zafi'). Therefore, this is where the original resonates most, indicating a clear alignment towards disgust.",
+        "disgust_intensity": 3
+    }
+}

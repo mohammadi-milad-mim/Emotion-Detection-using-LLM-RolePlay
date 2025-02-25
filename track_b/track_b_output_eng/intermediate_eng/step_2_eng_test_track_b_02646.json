@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I found out six weeks before the wedding that my dad had only six weeks to live (he had cancer for two years...a fact she was fully aware of).\", \"rewritten_form_joy\": \"I discovered just six weeks before the wedding that my dad, despite his long struggle with cancer, only had six weeks left to live; it's such a bittersweet moment that really puts things into perspective.\", \"rewritten_form_sadness\": \"I found out just six weeks before the wedding that my dad had only six weeks to live, after battling cancer for two years, and I'm heartbroken that she knew all along.\", \"rewritten_form_fear\": \"I learned six weeks before the wedding that my dad had only six weeks to live due to his cancer\\u2014all while feeling a rising dread about what that meant for our future.\", \"rewritten_form_anger\": \"I found out six weeks before the wedding that my dad had only six weeks to live, and I can't believe she was aware he had cancer for two years but chose not to tell me!\", \"rewritten_form_surprise\": \"I was shocked to find out just six weeks before the wedding that my dad only had six weeks left to live; I had no idea that his cancer had progressed so severely after two years.\", \"rewritten_form_disgust\": \"I found out six weeks before the wedding that my dad had only six weeks to live after battling cancer for two years, and it's gross how she acted as if everything was normal knowing such grave news.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; rather, it discusses a tragic situation. The rewritten version describes a bittersweet moment but does so in a way that does not align with the gravity of the original situation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence clearly reflects sadness about the impending loss of the speaker's father. The corresponding rewritten sentence captures this sentiment poignantly, emphasizing heartbreak and awareness, aligning perfectly with the original text.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a sense of fear implied in the original as the speaker grapples with the implications of their father's imminent death. The fear version captures this dread about the future, reinforcing that connection.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original implies a sense of betrayal regarding the father's diagnosis and the mother\u2019s knowledge. The rewritten anger sentence directly confronts this betrayal, strongly connecting with the original emotion of anger in the context of the information withheld.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence has an element of surprise regarding the timing of the revelation. The rewritten surprise sentence emphasizes shock, mirroring the unexpected nature of the news about the father's condition and aligns closely.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

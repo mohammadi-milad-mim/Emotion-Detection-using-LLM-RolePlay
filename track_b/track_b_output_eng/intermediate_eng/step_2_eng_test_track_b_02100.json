@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Since i waited for so long for it to arrive in my arms.\", \"rewritten_form_joy\": \"Since I waited so long for it to finally arrive in my arms, my heart is bursting with happiness!\", \"rewritten_form_sadness\": \"Since I waited for so long for it to arrive in my arms, it feels like an endless wait that only brings me sorrow.\", \"rewritten_form_fear\": \"Since I waited for so long for it to arrive in my arms, I can't shake the fear that it might never come.\", \"rewritten_form_anger\": \"Since I waited for so long for it to arrive in my arms, this is absolutely infuriating!\", \"rewritten_form_surprise\": \"Since I waited for so long for it to arrive in my arms, I can't believe it's finally here!\", \"rewritten_form_disgust\": \"Since I waited for so long for it to arrive in my arms, this whole situation just makes me feel sick.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys anticipation but lacks the overt expressiveness of joy. The rewritten version captures an intense happiness that is not present in the original, which merely states a long wait without joyful connotations.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original hints at a lengthy wait, which can evoke feelings of disappointment or sadness. The rewritten sentence amplifies this sentiment significantly, portraying it as sorrowful. The connection is moderate, as the original implies some sense of sadness without fully embracing it.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not indicate fear; rather, it focuses on the waiting period. The rewritten form introduces a notion of fear that is absent in the original. Thus, there's little alignment between the two, leading to a low intensity.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger; it merely states a fact about waiting. The rewritten sentence heightens frustration and anger. Therefore, the original's tone and content do not resonate with this emotion, resulting in a low score.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not suggest surprise or expectation of a twist in the narrative. The rewritten form strongly evokes surprise by emphasizing the arrival after a wait, which aligns weakly with the expectation implied in the original. Hence, the intensity is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

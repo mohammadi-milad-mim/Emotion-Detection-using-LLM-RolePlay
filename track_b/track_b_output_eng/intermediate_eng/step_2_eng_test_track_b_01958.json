@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My friend, thinking this means go, swings forward, sending me into the air.\", \"rewritten_form_joy\": \"My friend, excitedly thinking this means go, swings forward, sending me soaring into the air!\", \"rewritten_form_sadness\": \"My friend, mistakenly thinking this means go, swings forward, and I feel myself helplessly being sent into the air.\", \"rewritten_form_fear\": \"My friend, thinking this means go, swings forward, and I panic as I'm sent into the air.\", \"rewritten_form_anger\": \"My friend, totally misjudging this as go, swings forward and recklessly sends me flying into the air!\", \"rewritten_form_surprise\": \"My friend, thinking this means go, swings forward, and suddenly I find myself unexpectedly soaring into the air!\", \"rewritten_form_disgust\": \"My friend, thinking this means go, swings forward, and I feel a wave of nausea as I'm sent into the air.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey excitement or happiness, while the joy rewritten sentence includes a sense of excitement and soaring, which is not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies an action where the person is sent into the air without a sense of helplessness, unlike the sadness rewritten sentence, which expresses a deeper feeling of loss of control.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text implies a surprising action, but it lacks an immediate sense of panic. The fear rewritten version conveys a clear sense of alarm that is not strong in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes a neutral action rather than one that is reckless or misjudged. The anger rewritten sentence reflects frustration towards the friend's action, which is absent in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence implies a surprising situation, as being sent into the air can evoke surprise, aligning well with the surprise rewritten sentence that emphasizes unexpectedness.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

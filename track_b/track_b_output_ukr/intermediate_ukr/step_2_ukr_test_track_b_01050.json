@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u043e\\u0442  \\u043d\\u0430\\u043a\\u0430\\u0440\\u043a\\u0430\\u0432, \\u043f'\\u044e \\u043a\\u0430\\u0432\\u0443, \\u0437\\u043e\\u0432\\u0441\\u0456\\u043c \\u0440\\u043e\\u0437\\u0431\\u0438\\u0442\\u0430 :/\", \"rewritten_form_joy\": \"\\u043e\\u0442 \\u043d\\u0430\\u043a\\u0430\\u0440\\u043a\\u0430\\u0432, \\u043f'\\u044e \\u043a\\u0430\\u0432\\u0443, \\u0456 \\u043f\\u043e\\u0447\\u0443\\u0432\\u0430\\u044e\\u0441\\u044f \\u0447\\u0443\\u0434\\u043e\\u0432\\u043e!\", \"rewritten_form_sadness\": \"\\u043e\\u0442 \\u043d\\u0430\\u043a\\u0430\\u0440\\u043a\\u0430\\u0432, \\u043f'\\u044e \\u043a\\u0430\\u0432\\u0443, \\u0456 \\u043f\\u043e\\u0447\\u0443\\u0432\\u0430\\u044e \\u0441\\u0435\\u0431\\u0435 \\u0437\\u043e\\u0432\\u0441\\u0456\\u043c \\u0440\\u043e\\u0437\\u0431\\u0438\\u0442\\u043e\\u044e... :/\", \"rewritten_form_fear\": \"\\u043e\\u0442 \\u043d\\u0430\\u043a\\u0430\\u0440\\u043a\\u0430\\u0432, \\u043f'\\u044e \\u043a\\u0430\\u0432\\u0443, \\u0456 \\u043c\\u0435\\u043d\\u0456 \\u0441\\u0442\\u0440\\u0430\\u0448\\u043d\\u043e \\u0432\\u0456\\u0434 \\u0442\\u043e\\u0433\\u043e, \\u044f\\u043a \\u044f \\u0432\\u0438\\u0433\\u043b\\u044f\\u0434\\u0430\\u044e :/\", \"rewritten_form_anger\": \"\\u043e\\u0442 \\u043d\\u0430\\u043a\\u0430\\u0440\\u043a\\u0430\\u0432, \\u043f'\\u044e \\u043a\\u0430\\u0432\\u0443, \\u0456 \\u044f \\u0442\\u0430\\u043a \\u0437\\u043b\\u0430, \\u0431\\u043e \\u0437\\u043e\\u0432\\u0441\\u0456\\u043c \\u0440\\u043e\\u0437\\u0431\\u0438\\u0442\\u0430! :/\", \"rewritten_form_surprise\": \"\\u043e\\u0442 \\u043d\\u0430\\u043a\\u0430\\u0440\\u043a\\u0430\\u0432, \\u043f'\\u044e \\u043a\\u0430\\u0432\\u0443, \\u0456 \\u043d\\u0435 \\u043c\\u043e\\u0436\\u0443 \\u043f\\u043e\\u0432\\u0456\\u0440\\u0438\\u0442\\u0438, \\u044f\\u043a \\u044f \\u0440\\u043e\\u0437\\u0431\\u0438\\u0442\\u0430! :/\", \"rewritten_form_disgust\": \"\\u043e\\u0442 \\u043d\\u0430\\u043a\\u0430\\u0440\\u043a\\u0430\\u0432, \\u043f'\\u044e \\u043a\\u0430\\u0432\\u0443, \\u0456 \\u0446\\u0435 \\u0432\\u0441\\u0435 \\u0434\\u0440\\u0430\\u0442\\u0443\\u0454, \\u044f \\u0437\\u043e\\u0432\\u0441\\u0456\\u043c \\u0440\\u043e\\u0437\\u0431\\u0438\\u0442\\u0430! :/\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of enjoyment while drinking coffee, but it finishes on a somewhat sad note of feeling \"all broken\". The joy version, however, emphasizes the positive feeling further with the phrase \"I feel wonderful\", which is not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness rewritten version closely mirrors the original by maintaining the phrase \"I feel all broken... :/\" indicating a strong sentiment of sadness. The original sentence captures this sentiment directly, leading to a high alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The fear variant introduces the idea of being scared of how one looks, which is not explicitly communicated in the original. While the original does imply discomfort, it doesn\u2019t convey outright fear. The alignment is therefore low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence presents a feeling of rage, indicated by the phrase \"all broken\" as a possible reaction to frustration, but it is not as explicit as in the anger rewrite where the rage is openly declared. There\u2019s a moderate alignment with anger due to the tone.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise form suggests an inability to believe one\u2019s looks after drinking coffee, which isn't an element in the original. This results in a low alignment since the original doesn\u2019t convey surprise but rather a more despairing acknowledgment of feeling broken.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust version explicitly mentions that the whole situation is repulsive, which is not reflected in the original's wording. The original shows discomfort but does not convey disgust strongly, leading to a low alignment.",
+        "disgust_intensity": 1
+    }
+}

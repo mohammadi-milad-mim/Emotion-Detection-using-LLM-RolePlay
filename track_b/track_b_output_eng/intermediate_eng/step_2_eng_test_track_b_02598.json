@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Sorry about the length.\", \"rewritten_form_joy\": \"I'm really glad you took the time, even if it's a bit long!\", \"rewritten_form_sadness\": \"I wish it weren't so long; I hope it doesn't burden you.\", \"rewritten_form_fear\": \"I'm worried the length might overwhelm you, and I'm sorry for that.\", \"rewritten_form_anger\": \"I can't believe it's this long; I didn\\u2019t mean for it to be a hassle!\", \"rewritten_form_surprise\": \"Wow, I didn't expect it to be this long\\u2014sorry about that!\", \"rewritten_form_disgust\": \"Ugh, I realize this is way too long\\u2014I'm really sorry about that.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is apologetic but lacks any positive sentiment or gladness. It doesn't express joy or appreciation for the time spent, so the alignment is very low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys a sense of regret about the length but does not express a deep emotional burden or sadness. It reflects some concern but not explicitly sadness, resulting in a low score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a hint of worry in the original text about the length impacting someone, aligning well with the concern expressed in the rewritten fear sentence. However, the original lacks explicit fear, so it's assessed moderately.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original does not convey any anger or frustration. It is simply an apology without indignation or annoyance, so there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text does not express shock or surprise. It is straightforward and does not convey an unexpected quality, leading to a low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

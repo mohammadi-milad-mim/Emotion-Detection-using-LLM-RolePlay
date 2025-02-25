@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\ud83d\\ude2d\\ud83d\\ude2d\\ud83d\\ude2d\\ud83d\\ude22allah ya kautarmana da wannan annoba \\ud83e\\udd26\\u200d\\u2642\\ufe0f\", \"rewritten_form_joy\": \"Allah, what a blessing it is that we can come together even in times like this!\", \"rewritten_form_sadness\": \"Oh Allah, please help us through this difficult plague.\", \"rewritten_form_fear\": \"Oh Allah, I'm so scared of the consequences of this plague.\", \"rewritten_form_anger\": \"Oh Allah, why must we endure such a devastating plague?\", \"rewritten_form_surprise\": \"Oh Allah, I never expected to face such a plague!\", \"rewritten_form_disgust\": \"Oh Allah, this plague is absolutely horrifying!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text expresses a deep sense of distress over a plague, which contrasts sharply with the joyfulness of the rewritten joyful sentence. There is no sense of celebration or positive uplift in the original text, making it misaligned with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text is heavily laden with emotional expressions like crying emojis and a plea for divine assistance, which aligns perfectly with the sadness expressed in the rewritten sentence. The intensity of sadness is strong due to the context of grappling with a plague.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original text conveys a sense of distress and implies fear regarding the plague, which aligns with the fear in the rewritten sentence. However, while fear is present, it is slightly less intense than the sadness expressed.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence reflects a degree of frustration with the situation, although it is less overtly angry than the rewritten form. It suggests a plight rather than direct anger towards a specific cause, leading to a lower intensity of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original text may convey a sense of surprise at the situation, it is more focused on grief and seeking help. The surprise element isn\u2019t emphasized, thus leading to a low alignment with the surprise emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original text shows emotional distress but does not explicitly convey disgust. While the situation is indeed tragic, it does not describe the plague as horrifying, thus making it misaligned with disgust.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart is racing, I get dizzy, my vision gets blurry, I can't communicate my thoughts right I panic, I can't breathe properly.\", \"rewritten_form_joy\": \"I feel so alive, my heart is racing with excitement, my mind is buzzing, and even though I can't find the right words, it feels thrilling!\", \"rewritten_form_sadness\": \"It's overwhelming; my heart races with sadness, I feel dizzy and lost, my thoughts jumble together, and I grasp for breath amid this emotional weight.\", \"rewritten_form_fear\": \"My heart is pounding in my chest, I'm dizzy and my vision is blurring, I can't express my thoughts clearly, panic is setting in, and I'm struggling to breathe.\", \"rewritten_form_anger\": \"My heart races furiously, I'm so dizzy from this frustration, my vision blurs with rage, and I can't get my thoughts out clearly\\u2014it's infuriating, and I feel suffocated!\", \"rewritten_form_surprise\": \"Wow, my heart is racing, I feel dizzy and my vision is a bit foggy\\u2014it's so unexpected that I can't quite gather my thoughts, and I\\u2019m gasping for air!\", \"rewritten_form_disgust\": \"Ugh, my heart is racing uncomfortably, I feel dizzy and my vision is all wrong, it's like my thoughts are jumbled, and I can barely breathe, it\\u2019s just awful!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses anxiety and panic, which contradicts the positive excitement described in the joy version. There is no alignment with joy in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original text does convey a heavy emotional state, it lacks the specific references to sadness found in the sadness version. The sentiment leans more towards anxiety than sorrow.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence describes physical symptoms related to panic and difficulty in breathing, making it align closely with the tension and anxiety described in the fear version. The intensity of fear is high due to the panic described.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original text does not explicitly express feelings of anger, though it does reflect frustration and anxiety. However, it lacks the strong emotional expressions of rage present in the anger version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not carry an element of surprise; instead, it conveys distress and panic. There is no alignment with the lighter tone of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

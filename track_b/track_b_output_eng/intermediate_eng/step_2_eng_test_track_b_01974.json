@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And like the little traitors they are, tears were on my face.\", \"rewritten_form_joy\": \"And like the little traitors they are, joyful tears of happiness sparkled on my face.\", \"rewritten_form_sadness\": \"And like the little traitors they are, tears of sorrow fell down my face.\", \"rewritten_form_fear\": \"And like the little traitors they are, tears filled my eyes in fear.\", \"rewritten_form_anger\": \"And like the little traitors they are, angry tears streamed down my face.\", \"rewritten_form_surprise\": \"And like the little traitors they are, unexpected tears caught me by surprise on my face.\", \"rewritten_form_disgust\": \"And like the little traitors they are, disgusting tears poured down my face.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has context about tears, but does not imply a positive or joyful sentiment. The rewritten joy version adds a positive spin by calling the tears 'joyful,' which contrasts sharply with the original's sense of betrayal.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions tears, which strongly aligns with sadness. The addition of 'sorrow' in the rewritten version directly connects with the emotional tone of the original sentence, making this the strongest alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original conveys a sense of emotional distress, it does not explicitly indicate fear. The rewritten version introduces fear through 'tears filled my eyes in fear,' which is absent in the original, leading to a lower alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original's mention of 'traitors' and 'tears' carries a potential angry sentiment. The rewritten version specifies 'angry tears,' which suggests a strong emotional response to betrayal, showing a moderate alignment with the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "Surprise is suggested in the rewritten sentence by introducing 'unexpected tears,' which is not present in the original. The tone seems more neutral, so there is low alignment with the original's emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

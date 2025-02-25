@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Either way, the event surprised me.\", \"rewritten_form_joy\": \"Either way, the event brought me such delightful surprise!\", \"rewritten_form_sadness\": \"Either way, the event left me feeling unexpectedly let down.\", \"rewritten_form_fear\": \"Either way, the event startled me and made my heart race with anxiety.\", \"rewritten_form_anger\": \"Either way, the event infuriated me with how unexpected it was.\", \"rewritten_form_surprise\": \"Either way, I was genuinely taken aback by the event!\", \"rewritten_form_disgust\": \"Either way, the event disgusted me with its unexpected turn.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence communicates surprise but does not express joy or delight. While joy is present in the rewritten version, the original lacks the exuberance and happiness implied by 'delightful surprise'.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence describes surprise without a sense of disappointment. The rewritten version conveys feeling let down, which is not reflected in the original's neutral tone.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original mentions surprise, which could imply a mild fear reaction, but does not mention anxiety or racing heart, which are stronger signals of fear. Thus, it aligns only loosely with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement has a neutral tone regarding the surprise. The rewritten version implies significant frustration and anger that is not present in the original sentence, making the alignment weak.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence directly states that the event surprised the speaker, which aligns perfectly with the rewritten surprise version that emphasizes being taken aback. Thus, it shows strong alignment with this emotion.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

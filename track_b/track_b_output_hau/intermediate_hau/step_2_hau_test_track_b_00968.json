@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Karyan banza kawaii \\ud83d\\ude05\", \"rewritten_form_joy\": \"Karyan banza kawaii! I'm so happy! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"Karyan banza kawaii... I guess that's nice, but it feels bittersweet. \\ud83d\\ude22\", \"rewritten_form_fear\": \"Karyan banza kawaii... what if something goes wrong? \\ud83d\\ude28\", \"rewritten_form_anger\": \"Karyan banza kawaii! Seriously, this is getting frustrating! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Karyan banza kawaii! I didn't expect that at all! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Karyan banza kawaii, but honestly, that sounds kind of gross. \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'Karyan banza kawaii' contains a playful or cheerful sentiment, which aligns well with the joy rewriting that expresses happiness. However, the original lacks explicit excitement that would strongly indicate joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not inherently convey sadness, but the idea of bittersweet in the rewritten form implies a sense of loss or longing that contrasts with joy. The alignment here is moderate, as the original does not contain any sadness directly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no suggestion of fear in the original sentence; it remains light-hearted and cute. The rewritten version introduces a concern about potential negative outcomes, which is entirely different from the original's sentiment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text does not express frustration or anger. The rewritten version adds a layer of irritation that is completely absent from the light-hearted original, showing no alignment in this regard.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not contain an explicit element of surprise, yet the playful tone allows for the possibility of unexpectedness. Still, it does not strongly connect with the rewritten version that emphasizes surprise in a clear manner.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "There are no elements of disgust in the original sentence, which simply expresses something cute. The rewritten version introduces a negative reaction that does not align with the original's tone, making this connection weak.",
+        "disgust_intensity": 0
+    }
+}

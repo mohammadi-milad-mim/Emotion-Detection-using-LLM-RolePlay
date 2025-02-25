@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My brain knows that now it is time to get girly up off the couch and into bed before she freezes to death.\", \"rewritten_form_joy\": \"I'm so excited that it's time to get girly off the couch and cozy into bed before she gets too cold!\", \"rewritten_form_sadness\": \"I realize it's time to get girly up off the couch and into bed before she gets too cold and uncomfortable.\", \"rewritten_form_fear\": \"My mind is racing, knowing it\\u2019s crucial to get girly off the couch and into bed before she freezes to death.\", \"rewritten_form_anger\": \"It frustrates me that I have to get girly off the couch and into bed before she suffers from the cold!\", \"rewritten_form_surprise\": \"I can't believe it's already time to get girly off the couch and into bed before she freezes to death!\", \"rewritten_form_disgust\": \"It's appalling that I have to drag girly off the couch and into bed before she freezes to death.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of duty rather than excitement, making it less aligned with joy. The rewritten form conveys excitement, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys a sense of urgency due to the cold, which aligns moderately with the discomfort indicated in the rewritten form but lacks a deep emotional resonance of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original implies a strong concern for safety, which aligns closely with fear in the rewritten version. The phrase 'freezes to death' illustrates a compelling sense of urgency and fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original text reflects a proactive stance, it does not convey frustration or anger. The rewritten form explicitly expresses aggravation, which is not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express any surprise; it is straightforward about the need to act. The rewritten sentence emphasizes unexpectedness, resulting in a lack of alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

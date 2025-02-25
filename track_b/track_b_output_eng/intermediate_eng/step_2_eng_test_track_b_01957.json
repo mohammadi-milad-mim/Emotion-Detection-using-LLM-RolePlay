@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And don't lie in your pics.\", \"rewritten_form_joy\": \"And please, let's be honest in your pics\\u2014it's so much more fun!\", \"rewritten_form_sadness\": \"And please, don\\u2019t misrepresent yourself in your pics; it\\u2019s just disheartening.\", \"rewritten_form_fear\": \"And please, don\\u2019t lie in your pics; you never know who might see them.\", \"rewritten_form_anger\": \"And seriously, don't lie in your pics; it's so frustrating!\", \"rewritten_form_surprise\": \"And wait, don\\u2019t lie in your pics? That's unexpected!\", \"rewritten_form_disgust\": \"And honestly, don\\u2019t lie in your pics; it\\u2019s just so off-putting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a straightforward request to not lie in pictures, lacking any upbeat or positive context that would evoke joy. The rewritten version with joy emphasizes fun and honesty, creating a more light-hearted request. Therefore, the alignment here is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original does suggest a concern about misrepresentation, it doesn't convey deep sadness or emotion. The rewritten version reflects a sense of disheartenment that the original lacks, indicating limited connection with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence is a cautionary remark, but it does not convey a strong sense of fear. The rewritten sentence with fear adds an element of concern regarding who might see the pictures, which isn't as strongly present in the original. Thus, the alignment is moderate, as there is a hint of caution.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original phrase is direct and carries a degree of frustration but does not explicitly convey anger. The rewritten version adds an intensifier (\u2018seriously\u2019), which amplifies the sentiment, aligning well with anger but still feeling somewhat less intense than the expression of anger typically conveys. Thus, I assess a moderate connection.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original does not have an element of surprise; it is a straightforward statement. The surprise version indicates an unexpected aspect, which doesn't correlate with the original tone. Thus, there is a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

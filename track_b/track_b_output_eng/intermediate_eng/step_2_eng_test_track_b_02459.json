@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Long story short, during the interview I started speaking a mile a minute ( WAY TOO FAST ) and sometimes I lost my train of thought ( due to the fact I was blitzed out of my skull, lol ).\", \"rewritten_form_joy\": \"Long story short, during the interview I was so excited that I started speaking a mile a minute (WAY TOO FAST!) and occasionally lost my train of thought (because I was just buzzing with energy, lol)!\", \"rewritten_form_sadness\": \"Long story short, during the interview I ended up speaking a mile a minute (WAY TOO FAST) and sometimes lost my train of thought (probably because I was so overwhelmed, lol).\", \"rewritten_form_fear\": \"Long story short, during the interview I got really nervous and started speaking a mile a minute (WAY TOO FAST), and I even lost my train of thought (because I was a bit out of it, lol).\", \"rewritten_form_anger\": \"Long story short, during the interview I was so stressed that I started speaking a mile a minute (WAY TOO FAST), and I lost my train of thought (clearly because I was completely out of it, ugh!).\", \"rewritten_form_surprise\": \"Long story short, during the interview I started speaking a mile a minute (WAY TOO FAST), and I lost my train of thought at times (it was so unexpected, lol)!\", \"rewritten_form_disgust\": \"Long story short, during the interview I ended up rambling a mile a minute (WAY TOO FAST) and even lost my train of thought (because I was completely out of my mind, gross).\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence captures a sense of excitement and humor about the interview experience, particularly with the phrase 'blitzed out of my skull, lol,' which suggests a light-heartedness that aligns well with joy. However, the emotional tone is not wholly positive; thus, it lacks the full intensity of joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original expresses a mix of feelings, including stress and possibly regret, about the fast-paced speech and losing focus. The rewritten sadness version emphasizes feeling overwhelmed which resonates with the original's context of pressure during the interview. Therefore, there's a moderate connection with sadness present.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'lost my train of thought' combined with the fast speech suggests an underlying nervousness, which could relate to fear. However, the overall tone of the original is more humorous than fearful. There is some connection to anxiety during the interview, warranting a low to moderate score for fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original mentions 'WAY TOO FAST' and losing track of thoughts, which can indicate frustration. However, the tone is primarily light-hearted rather than angry. While there may be some implicit frustration, it's not strongly expressed in the original, justifying a low intensity for anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The element of losing track and speaking quickly indeed has an aspect of surprise, especially considering the humorous tone of 'blitzed out of my skull.' However, it's not the primary emotion expressed, thus resulting in a lower intensity score.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

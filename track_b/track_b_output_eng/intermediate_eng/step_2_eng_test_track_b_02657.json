@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my palms clam up, my heart beats steadily and rapidly.\", \"rewritten_form_joy\": \"I can feel the excitement bubbling inside me, my palms sweaty and my heart racing with joy!\", \"rewritten_form_sadness\": \"My palms clam up, and my heart beats steadily yet heavily, feeling the weight of my sorrow.\", \"rewritten_form_fear\": \"My palms clam up, and my heart races wildly in a panic, gripped by fear.\", \"rewritten_form_anger\": \"My palms clench up, and my heart pounds furiously, filled with anger.\", \"rewritten_form_surprise\": \"My palms suddenly clam up, and my heart starts beating quickly in shock!\", \"rewritten_form_disgust\": \"My palms recoil at the thought, and my heart beats rapidly in disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys physical tension and a racing heart, which is a more neutral experience. The rewritten joy version shows clear excitement, with joyful anticipation, which isn't quite captured in the original sentence. Hence, joy is not strongly present.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests tension (clamming up) but does not express heaviness or a sense of loss clearly associated with sadness. The rewriting indicates deep sorrow, whereas the original is more ambivalent; sadness seems low to moderate.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence indicates physical symptoms (clammy palms and rapid heartbeat) that could suggest anxiety or fear, especially the term 'clam up' which aligns closely with fear. This connection is strong enough to give a moderate alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence indicates tension and a racing heart, but does not express anger directly. The rewritten version conveys a fury that isn't present in the original, giving anger a low across the board.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original mentions clammy palms and a rapid heartbeat, but does not indicate surprise. However, rapid heart rates can be associated with shock, so there's a possibility of mild connection, but the alignment isn't particularly strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

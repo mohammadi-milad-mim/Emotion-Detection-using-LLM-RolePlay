@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"`` Bella my head is fine.\", \"rewritten_form_joy\": \"Bella, I'm so happy to tell you that my head is just fine!\", \"rewritten_form_sadness\": \"Bella, I wish I could say my head is fine, but it's not great.\", \"rewritten_form_fear\": \"Bella, I hope you understand, my head feels fine, but I'm a bit worried...\", \"rewritten_form_anger\": \"Bella, my head is fine, so stop pestering me about it!\", \"rewritten_form_surprise\": \"Bella, you'd be surprised to hear that my head is actually fine!\", \"rewritten_form_disgust\": \"Bella, ugh, my head is fine, why do you keep asking?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and does not convey happiness; it simply states a fact about the speaker's head. The rewritten version expresses joy, but since the original lacks any positive sentiment, it does not align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence contains no expression of sorrow or anything that indicates sadness. The rewritten version reflects a sense of disappointment and emotional weight, which is absent in the original. Thus, it does not align with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence lacks any indication of worry or fear. The rewritten version suggests an underlying concern, which the original does not express, resulting in no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence states a fact with a neutral tone, while the rewritten version conveys irritation and frustration. There is no alignment with anger in the original since it does not express any negative sentiment towards Bella or anyone else.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not convey any remarkable revelation or unexpected news; it is a simple declaration. The rewritten version indicates that the information may be surprising, which is not present in the original sentence, leading to no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The symbol has now been engraved into the flesh of my arm.\", \"rewritten_form_joy\": \"The symbol has now been beautifully engraved into the flesh of my arm!\", \"rewritten_form_sadness\": \"The symbol has now been painfully engraved into the flesh of my arm.\", \"rewritten_form_fear\": \"The symbol has now been ominously engraved into the flesh of my arm.\", \"rewritten_form_anger\": \"The symbol has now been forcefully engraved into the flesh of my arm!\", \"rewritten_form_surprise\": \"The symbol has now been unexpectedly engraved into the flesh of my arm!\", \"rewritten_form_disgust\": \"The symbol has now been grotesquely engraved into the flesh of my arm.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks a positive connotation, as it does not indicate any joy associated with the engraving. The rewritten version emphasizes beauty, which is absent in the original, indicating low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys a level of pain or discomfort with the phrase 'engraved into the flesh,' suggesting sadness through physical or emotional hurt. The rewritten version emphasizes this pain, aligning with the sadness emotion well.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence doesn't indicate fear; it merely states a fact about the engraving. The added word 'ominously' in the rewritten version suggests a threatening feeling that is not present in the original, indicating low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While there is a sense of intensity in the original, it does not convey explicit anger; the rewritten version's use of 'forcefully' suggests an aggressive or unwanted action that is not implied in the original. This indicates low to moderate alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original captures the act of engraving, but does not imply any unexpectedness. The rewritten version suggests an element of surprise, which the original lacks entirely, indicating low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

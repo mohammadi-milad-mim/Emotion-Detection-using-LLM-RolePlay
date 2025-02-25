@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Abun babu dadi , ya Allah ka kawo mana agaji \\ud83d\\ude37\", \"rewritten_form_joy\": \"Abun babu dadi, ya Allah ka kawo mana agaji, ina jin dadin wannan! \\ud83d\\ude0a\", \"rewritten_form_sadness\": \"Abun babu dadi, ya Allah ka kawo mana agaji, naji ba dadi. \\ud83d\\ude22\", \"rewritten_form_fear\": \"Abun babu dadi, ya Allah ka kawo mana agaji, ina jin fargaba. \\ud83d\\ude30\", \"rewritten_form_anger\": \"Abun babu dadi, ya Allah ka kawo mana agaji, me ya sa wannan yake faruwa? \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Abun babu dadi, ya Allah ka kawo mana agaji, ba na sa ran wannan! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Abun babu dadi, ya Allah ka kawo mana agaji, wannan yana da tsauri! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a plea for help but lacks any indication of joy. The rewritten joy version introduces a sense of happiness with the phrase 'ina jin dadin wannan,' which is not present in the original, indicating a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence expresses a plea for assistance, which could imply distress. The corresponding sadness version reinforces this sentiment with 'naji ba dadi,' suggesting a stronger emotional connection, indicating moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text does not explicitly convey fear. However, the word 'agaji' (help) suggests a situation that may need addressing. The fear variant introduces 'ina jin fargaba,' indicating concern. This connection is weak, suggesting low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger, but the rewritten form's question, 'me ya sa wannan yake faruwa?', suggests frustration or resentment. This introduces a feeling of anger not inherently present in the original, indicating low to moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not imply surprise. The surprise version expresses a disbelief with 'ba na sa ran wannan!', which is not reflected in the original text, indicating low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original statement does not express disgust. The related disgust version indicates a strong negative reaction, 'wannan yana da tsauri!', which is not implied in the original. This suggests a low alignment with disgust.",
+        "disgust_intensity": 1
+    }
+}

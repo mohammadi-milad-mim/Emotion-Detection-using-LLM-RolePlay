@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"idan kuma ka sauka fa\", \"rewritten_form_joy\": \"idan kuma ka sauka fa, wannan mai dadi ne!\", \"rewritten_form_sadness\": \"idan kuma ka sauka fa, ina jin zafi a zuciyata.\", \"rewritten_form_fear\": \"idan kuma ka sauka fa, na ji tsoro da abin da zai faru.\", \"rewritten_form_anger\": \"idan kuma ka sauka fa, me yasa ka yi hakan?\", \"rewritten_form_surprise\": \"idan kuma ka sauka fa, wannan ba na yi tsammani ba!\", \"rewritten_form_disgust\": \"idan kuma ka sauka fa, abin nan yana sauri jiki! \"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence \"idan kuma ka sauka fa\" does not express any joy directly. The joy version adds a positive statement, which contrasts with the original's neutrality.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version expresses emotional pain which the original lacks. The original simply states a condition without showing any emotional weight.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version introduces apprehension about future events which is not present in the original. However, the neutral tone of the original does not show strong fear either.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the anger version questions the actions of another, the original does not convey any frustration or negativity towards anyone or anything, making it a low-level match.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not exhibit any elements of surprise, while the surprise version indicates an unexpected reaction. This represents a significant disconnect.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust version encapsulates a reaction of aversion that is distinctly absent from the original sentence, leading to a clear mismatch.",
+        "disgust_intensity": 0
+    }
+}

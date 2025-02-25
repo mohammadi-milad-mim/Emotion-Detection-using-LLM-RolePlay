@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now this is especially important.\", \"rewritten_form_joy\": \"Oh, this is incredibly important!\", \"rewritten_form_sadness\": \"Sadly, this is especially important.\", \"rewritten_form_fear\": \"I can't help but feel that this is especially important.\", \"rewritten_form_anger\": \"This is so infuriatingly important!\", \"rewritten_form_surprise\": \"Wow, this is especially important!\", \"rewritten_form_disgust\": \"Ugh, this is especially important.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states the importance of something but does not carry an overtly positive tone. The rewritten joy sentence introduces a strong positive exclamation that does not resonate well with the original, leading to a low alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sadness sentence adds a negative connotation that is absent in the original. The original focuses on importance, which does not suggest sadness, resulting in a low degree of emotional alignment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The fear version indicates apprehension, which is not implied in the original sentence. The original is simply stating importance, showing a slight reference to need without fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text does not suggest anger or frustration, while the rewritten anger sentence clearly conveys strong negative feelings. Thus, the connection is weak.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise rewritten statement expresses a sense of astonishment that is not present in the original statement. Therefore, it has only a minimal alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

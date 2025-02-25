@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Pale, and sweaty, he was wearing only a pair of shorts and a backpack.\", \"rewritten_form_joy\": \"Beaming despite being pale and sweaty, he wore just a pair of shorts and a backpack, ready for an adventure!\", \"rewritten_form_sadness\": \"Pale and sweaty, he stood there in just a pair of shorts and a backpack, looking lost and alone.\", \"rewritten_form_fear\": \"With a pale face and sweaty skin, he was wearing just a pair of shorts and a backpack, and something felt very wrong.\", \"rewritten_form_anger\": \"Pale and sweaty, he stood there in nothing but a pair of shorts and a backpack, and it was infuriating how unprepared he seemed!\", \"rewritten_form_surprise\": \"Pale and sweaty, he was unexpectedly wearing only a pair of shorts and a backpack\\u2014it caught me off guard!\", \"rewritten_form_disgust\": \"Pale and sweaty, he was wearing just a pair of shorts and a backpack, and it was frankly a repulsive sight.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any joy; rather, it describes a state of discomfort and lack of preparedness. The rewritten joy sentence introduces an adventurous tone that is absent from the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does imply a level of discomfort and vulnerability, which aligns with sadness. The rewritten sad sentence emphasizes a sense of being lost and alone, connecting well with the emotional undertone of the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a subtle implication of something feeling 'off' in the original; however, it does not explicitly convey fear. The rewritten fear sentence heightens this implication, making it resonate more strongly than the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence mentions a lack of proper clothing which could evoke a sense of frustration, but it does not indicate anger directly. The rewritten anger sentence emphasizes frustration explicitly, making the alignment stronger than in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not invoke surprise; it presents a calm observation of a person's appearance. The rewritten surprise sentence suggests someone being caught off guard, which is not present in the original context.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

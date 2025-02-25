@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Adaeyi mugani idan tusa zata hura wuta \\ud83d\\ude44\\ud83d\\ude44\", \"rewritten_form_joy\": \"Adaeyi mugani idan tusa zata hura wuta! \\ud83d\\ude0a\", \"rewritten_form_sadness\": \"Adaeyi mugani idan tusa zata hura wuta... \\ud83d\\ude22\", \"rewritten_form_fear\": \"Adaeyi mugani idan tusa zata hura wuta! \\ud83d\\ude28\", \"rewritten_form_anger\": \"Adaeyi mugani idan tusa zata hura wuta! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Adaeyi mugani idan tusa zata hura wuta? Wow! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Adaeyi mugani idan tusa zata hura wuta... ugh! \\ud83d\\ude12\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral or slightly negative tone, as indicated by the angry emojis, while the rewritten joy version expresses a sense of happiness and positivity with a smiley emoji, which is not present in the original. Therefore, joy does not align well with the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence carries a tone that could suggest distress (due to the angry emojis), and the rewritten sadness sentence explicitly uses ellipses and a crying emoji to emphasize sorrow. The lack of an explicit sad tone in the original lowers its alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence includes emojis that evoke anger. Its tone does not express fear or concern. In contrast, the rewritten fear version presents an exclamatory context indicating alarm. Since the original does not contain fear, the alignment is weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence includes angry emojis, which directly correspond to the rewritten anger form. The sentiment of the original aligns well with anger as it appears to communicate frustration or outrage.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence lacks a tone that suggests surprise. The rewritten surprise sentence indicates a questioning attitude and astonishment, which the original does not convey. Thus, there is little alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does contain negative sentiment which could lead to feelings that may invoke disgust, but it does not explicitly express that response as the rewritten disgust sentence does. Therefore, the alignment is low, but not absent.",
+        "disgust_intensity": 1
+    }
+}

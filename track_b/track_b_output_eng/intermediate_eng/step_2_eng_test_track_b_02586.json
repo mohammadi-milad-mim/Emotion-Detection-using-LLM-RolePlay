@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Took a girl out to a nice expensive dinner and we had a great time.\", \"rewritten_form_joy\": \"I took a girl out to a lovely fancy dinner, and we had the most amazing time together!\", \"rewritten_form_sadness\": \"I took a girl out to a nice expensive dinner, and it felt nice, but something's just missing.\", \"rewritten_form_fear\": \"I took a girl out to a nice expensive dinner, and I hoped everything would go well, but I was so anxious about the whole thing.\", \"rewritten_form_anger\": \"I took a girl out to a nice expensive dinner, and it was infuriating how it didn't go as planned at all!\", \"rewritten_form_surprise\": \"I took a girl out to a nice expensive dinner, and I was totally shocked by how much fun we had!\", \"rewritten_form_disgust\": \"I took a girl out to a nice expensive dinner, but honestly, it was just so pretentious and over-the-top.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive experience of enjoying dinner with a girl, aligning closely with the joy-filled tone of the rewritten sentence that emphasizes an amazing time together. Both convey happiness and satisfaction with the outing.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not convey any feelings of sadness, as it mentions having a great time. The rewritten sadness version hints at a lack of fulfillment, which is not present in the original. Thus, there is little alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not express any fear or anxiety. It describes a positive event without concerns about how it would go. The rewritten fear version introduces significant anxiety that is not present in the original, resulting in no alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence reflects a pleasant experience, while the rewritten anger version focuses on frustration with something going wrong. There is no hint of anger in the original, showing a strong <0> alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not contain an element of surprise, as it simply states that the dinner was enjoyable, whereas the rewritten surprise version indicates an unexpected level of enjoyment. There is minimal alignment here as well.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

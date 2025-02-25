@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I exclaimed loudly, \\\"look at that crazy thing!\", \"rewritten_form_joy\": \"I joyfully exclaimed, \\\"Look at that amazing thing!\\\"\", \"rewritten_form_sadness\": \"I sadly exclaimed, \\\"Look at that strange thing...\\\"\", \"rewritten_form_fear\": \"I exclaimed nervously, \\\"Look at that frightening thing!\\\"\", \"rewritten_form_anger\": \"I shouted angrily, \\\"Look at that ridiculous thing!\\\"\", \"rewritten_form_surprise\": \"I exclaimed in astonishment, \\\"Wow, look at that crazy thing!\\\"\", \"rewritten_form_disgust\": \"I exclaimed in disgust, \\\"Ugh, look at that gross thing!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses excitement through the exclamation, which aligns well with the joy of noticing something amazing, though the term 'crazy' has a more neutral connotation than 'amazing'.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not reflect sadness. The use of 'crazy' implies a more positive or neutral reaction rather than a sad one.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no indication of fear in the original sentence. The term 'crazy' does not evoke fear, unlike the rewritten sentence that specifically mentions a frightening aspect.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While 'crazy' could provoke some level of frustration, the tone of the original is more astonished than angry, making the connection to anger weak.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is a clear link to surprise in both the original and the rewritten sentence. The exclamation reflects astonishment and matches well with the use of 'crazy'\u2014an unexpected reaction.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

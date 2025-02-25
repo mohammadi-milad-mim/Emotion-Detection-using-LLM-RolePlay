@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I used this primarily to keep in touch with my siblings.\", \"rewritten_form_joy\": \"I loved using this primarily to connect joyfully with my siblings!\", \"rewritten_form_sadness\": \"I used this primarily to keep in touch with my siblings, but it just reminds me how far apart we are now.\", \"rewritten_form_fear\": \"I used this primarily to keep in touch with my siblings, worried that I might lose them if I don't.\", \"rewritten_form_anger\": \"I used this primarily to keep in touch with my siblings, but it\\u2019s frustrating when they don\\u2019t respond!\", \"rewritten_form_surprise\": \"I used this primarily to keep in touch with my siblings, and I was surprised by how much we needed it!\", \"rewritten_form_disgust\": \"I used this primarily to keep in touch with my siblings, but it feels so pointless sometimes.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a practical purpose without emotional attachment. In contrast, the joyful rewritten version expresses love and a heartfelt connection, suggesting a much more positive and emotional engagement.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original indicates a neutral intent to stay connected, while the sad version reflects a painful realization of distance, introducing a layer of sadness that isn't present in the original text, resulting in a stronger emotional undertone.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence simply states a function without any ominous implications. The fearful version introduces anxiety about losing connections, which is absent in the original. Hence, this emotion is implied but not directly stated.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original is devoid of frustration or anger, while the angry rewritten form conveys a strong emotion regarding lack of responses from siblings. This presents a level of disappointment that the original doesn't capture.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not indicate any unexpected outcomes or revelations. The surprise version shows an element of realization that is not present in the original statement, which remains very straightforward and expected.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

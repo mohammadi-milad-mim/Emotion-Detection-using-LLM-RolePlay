@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ci da buguzum: An kama su yayin da suke tsaka da yiwa jama\\u2019a fashi da bindigar bogi\", \"rewritten_form_joy\": \"An kama su lokacin da suke yiwa jama\\u2019a fashi da bindigar bogi!\", \"rewritten_form_sadness\": \"An kama su yayin da suke jefa jama\\u2019a cikin fargaba da bindigar bogi.\", \"rewritten_form_fear\": \"An kama su yayin da suke yiwa jama\\u2019a fashi da bindigar bogi, a zahiri suna da makirci mai tsanani.\", \"rewritten_form_anger\": \"An kama su yayin da suke yiwa jama\\u2019a fashi da bindigar bogi, wannan ba daidai bane!\", \"rewritten_form_surprise\": \"An kama su yayin da suke yiwa jama\\u2019a fashi da bindigar bogi, ban gaskata ba!\", \"rewritten_form_disgust\": \"An kama su yayin da suke yiwa jama\\u2019a fashi da bindigar bogi, abin kyama ne.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a scenario where individuals are arrested for robbing people violently. This context is inherently negative and serious, lacking celebration or happiness, thus not aligning with the joy emotion.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original mentions robbery, it implies a harmful act causing distress to the victims. Although sadness can be inferred from the situation, it is not the primary emotion being expressed, aligning with a low degree of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The mention of armed robbery suggests a serious threat to people's safety, implying a considerable concern for danger and anxiety among victims, which strongly aligns with the fear emotion.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The action of robbing with a weapon is morally wrong, and the tone can evoke feelings of outrage against such behavior. This suggests a firm alignment with anger as a response to the act.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The unexpected nature of being caught in the act of robbery could evoke surprise. However, the context doesn't strongly indicate shock as a primary emotional response, leading to a lower intensity.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "Describing the act of robbery with a weapon may evoke strong feelings of disgust from a moral standpoint when considering the impact on victims. Thus, it aligns well with disgust, reflecting the nature of the crime.",
+        "disgust_intensity": 3
+    }
+}

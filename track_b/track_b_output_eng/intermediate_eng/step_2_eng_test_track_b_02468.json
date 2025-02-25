@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So yeah, creepy stuff.\", \"rewritten_form_joy\": \"So yeah, it's kind of funny stuff!\", \"rewritten_form_sadness\": \"So yeah, it's just sad, creepy stuff.\", \"rewritten_form_fear\": \"So yeah, it's really unsettling, creepy stuff.\", \"rewritten_form_anger\": \"So yeah, it's downright infuriating, creepy stuff.\", \"rewritten_form_surprise\": \"So yeah, surprisingly creepy stuff!\", \"rewritten_form_disgust\": \"So yeah, it's just gross, creepy stuff.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral or mildly negative view on the 'creepy stuff', while the joy version reframes it to suggest a humorous perspective that isn\u2019t present in the original. Therefore, there's a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sadness sentence builds upon the creepy aspects of the original and explicitly labels them as sad, which aligns well with the original sentiment of discomfort. This indicates a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version emphasizes a strong sense of unease by using 'really unsettling', which correlates closely with the original's tone of referring to 'creepy stuff'. This indicates a high alignment with fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The anger version intensifies the negativity of 'creepy stuff' to 'downright infuriating', which is not conveyed in the original sentence. This suggests low alignment with anger since the original lacks this intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version introduces an element of unexpectedness ('surprisingly creepy'), which is not indicated in the original. Although the term 'creepy' is maintained, the notion of surprise does not align closely with the original's tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

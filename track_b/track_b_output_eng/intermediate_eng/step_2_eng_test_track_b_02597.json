@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The soft cool wind feels like silk against my skin, as the sun's heat makes it glow.\", \"rewritten_form_joy\": \"The soft, cool wind dances like silk on my skin, while the sun's warm embrace makes everything shine!\", \"rewritten_form_sadness\": \"The soft, cool wind brushes against my skin like a forgotten touch, made bittersweet by the sun's relentless heat.\", \"rewritten_form_fear\": \"The soft cool wind feels like silk against my skin, but the sun's heat makes me anxious, as if it hides something menacing.\", \"rewritten_form_anger\": \"The soft cool wind feels like silk against my skin, yet the sun's heat is an unbearable reminder of its harshness!\", \"rewritten_form_surprise\": \"The soft cool wind feels like silk against my skin, and I\\u2019m taken aback by how the sun's heat makes everything sparkle!\", \"rewritten_form_disgust\": \"The soft cool wind feels irritating against my skin, and the sun\\u2019s heat just makes it all feel sticky and uncomfortable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a serene and positive imagery associated with a soft wind and the warmth of the sun, which aligns closely with the joyful tone of dancing and shining in the rewritten version.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original text does not convey a sense of loss or regret, which is present in the sad version's mention of a 'forgotten touch'. However, the reference to the sun's heat may evoke some bittersweet feelings, though not strongly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence has a peaceful nature, lacking elements of anxiety or menace suggested in the fearful version due to the sun's heat, making it less aligned with the fear emotion.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey irritation or hardship linked to the heat of the sun, which is present in the angry version. The tone remains calm and positive rather than confrontational, so it is not aligned with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While there is a sense of wonder in the original sentence, it does not contain an element of unexpectedness or being taken aback that is highlighted in the rewritten surprise version, thus it lacks alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

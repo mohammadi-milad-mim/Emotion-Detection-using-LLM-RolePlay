@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They start falling back.\", \"rewritten_form_joy\": \"They start joyfully falling back!\", \"rewritten_form_sadness\": \"They start falling back, and it feels so heavy inside.\", \"rewritten_form_fear\": \"They start falling back, and I can't shake this awful feeling.\", \"rewritten_form_anger\": \"They start falling back, and it infuriates me!\", \"rewritten_form_surprise\": \"They just start falling back out of nowhere!\", \"rewritten_form_disgust\": \"They start falling back, and it's utterly repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys an action ('They start falling back') without any elaboration on emotion. The joy rewritten version implies a positive emotional state through the use of 'joyfully,' which is absent in the original sentence, making the alignment low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness rewritten version introduces an emotional weight ('feels so heavy inside') that is not present in the original, which is neutral. Thus, while there is a connection due to the shared action, the emotional intensity is not strongly reflected in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version introduces a strong emotional component with 'awful feeling,' suggesting anxiety or distress that is not implied in the original statement. As such, there is a low alignment with original content, just a slight connection through the action of falling back.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger rewritten sentence uses 'infuriates,' suggesting a strong negative emotion that is not indicated in the original. The action of falling back does not imply anger, leading to a low intensity in this emotional context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version introduces a sudden element with 'out of nowhere,' which creates a sharp contrast to the neutral tone of the original. There\u2019s no element of surprise in the original, resulting in a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

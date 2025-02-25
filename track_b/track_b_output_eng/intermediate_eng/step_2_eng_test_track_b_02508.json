@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I am stressed out.\", \"rewritten_form_joy\": \"I am feeling a bit overwhelmed right now!\", \"rewritten_form_sadness\": \"I am really feeling stressed out today.\", \"rewritten_form_fear\": \"I am so stressed out, I don't know what will happen next.\", \"rewritten_form_anger\": \"I can't believe how stressed out I am right now!\", \"rewritten_form_surprise\": \"Wow, I didn\\u2019t expect to feel this stressed out!\", \"rewritten_form_disgust\": \"I can\\u2019t stand being this stressed out.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'I am stressed out.' expresses a feeling of stress and does not convey any positive sentiment, which is essential for a joyful interpretation. The rewritten sentence captures a sense of being overwhelmed but attempts to maintain a light-hearted tone, suggesting possible discomfort rather than joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly communicates stress, which can imply sadness. The rewritten version's use of 'really feeling' emphasizes this stress as a negative emotion, aligning closely with the tone of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a sense of anxiety associated with stress. The rewritten sentence emphasizes apprehension about the unknown future due to stress, which strongly aligns with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence suggests a level of frustration that can be connected to anger. The rewritten version uses stronger language ('can't believe'), indicating a higher level of emotional intensity related to anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence expresses stress but does not convey surprise. The rewritten version highlights an unexpected feeling of stress, which is not aligned with the original sentiment, suggesting a low connection.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

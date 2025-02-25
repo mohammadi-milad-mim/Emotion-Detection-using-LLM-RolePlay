@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I never saw that shirt after then either.\", \"rewritten_form_joy\": \"I was thrilled to have that shirt, but I never saw it again after that!\", \"rewritten_form_sadness\": \"It's heartbreaking; I never saw that shirt again after that.\", \"rewritten_form_fear\": \"I worried I would never see that shirt again after that moment.\", \"rewritten_form_anger\": \"It infuriates me that I never saw that shirt again after then!\", \"rewritten_form_surprise\": \"I can\\u2019t believe I never saw that shirt again after that!\", \"rewritten_form_disgust\": \"It's just so frustrating that I never saw that shirt again after then.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any expression of joy or excitement about the shirt; it simply states a fact. The rewritten joy sentence conveys strong happiness which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of loss but does not explicitly express sadness. However, the rewritten version emphasizes heartbreak, making the original align slightly with this emotion.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no indication of fear in the original sentence; it merely states that the shirt was never seen again, without any worry attached. The rewritten fear version introduces a sense of concern that is not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger; it is a neutral statement. The rewritten version explicitly conveys frustration, which is absent in the original context.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is flat and simply states something that happened without any surprise implied. The rewritten surprise sentence expresses disbelief that contrasts sharply with the original's tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

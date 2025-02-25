@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He says, (speaking clearly for the first time) \\\"I apologize, sir!\", \"rewritten_form_joy\": \"He says, (speaking clearly for the first time) \\\"I'm delighted to apologize, sir!\\\"\", \"rewritten_form_sadness\": \"He says, (speaking clearly for the first time) \\\"I regret to say I'm sorry, sir...\\\"\", \"rewritten_form_fear\": \"He says, (speaking clearly for the first time) \\\"I apologize, sir! Please don\\u2019t be upset!\\\"\", \"rewritten_form_anger\": \"He says, (speaking clearly for the first time) \\\"I apologize, sir! I didn\\u2019t mean to offend you!\\\"\", \"rewritten_form_surprise\": \"He says, (speaking clearly for the first time) \\\"Wow, I actually apologize, sir!\\\"\", \"rewritten_form_disgust\": \"He says, (speaking clearly for the first time) \\\"I apologize, sir, though I really don\\u2019t see why I should!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses an apology without any indication of joy or delight. The rewritten version adds an element of happiness with 'I'm delighted to apologize,' which contrasts with the original's neutral tone of apology. Thus, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence's tone is straightforward and does not evoke sadness. The rewritten version implies regret and sorrow with 'I regret to say I'm sorry,' which does not reflect the tone of the original. Therefore, it does not align with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "In the original sentence, the speaker is apologizing without showing fear. The rewritten version introduces fear with 'Please don\u2019t be upset,' which is an emotional response absent in the original. This indicates no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence delivers an apology clearly and respectfully. The rewritten version shows anger by implying the speaker feels wronged with 'I didn\u2019t mean to offend you.' This defensive tone is not present in the original, resulting in no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is straightforward and does not express surprise. The rewritten version, 'Wow, I actually apologize,' suggests a sense of astonishment that is absent in the original. Hence, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

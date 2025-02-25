@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ku kirashi a waya mana. \\ud83e\\udd14\", \"rewritten_form_joy\": \"Ku kirashi a waya mana! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"Ku kirashi a waya mana... \\ud83d\\ude22\", \"rewritten_form_fear\": \"Ku kirashi a waya mana?! \\ud83d\\ude28\", \"rewritten_form_anger\": \"Ku kirashi a waya, mana! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Ku kirashi a waya mana?! Wow! \\ud83e\\udd2f\", \"rewritten_form_disgust\": \"Ku kirashi a waya mana, yuck! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence, while it expresses a sentiment, lacks the enthusiasm and excitement characterized by the joyful rewritten form. There is no exclamation or overt display of happiness evident, so it does not match joy strongly.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does convey a sense of resignation or melancholy, but it doesn't end with ellipsis to indicate deep sadness akin to the rewritten version. The emotional weight is somewhat present but not fully in line with deep sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is no indication of fear in the original sentence. The absence of a heightened emotional cue like a question mark or an exclamation of concern in the original means it doesn't align with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Anger typically involves more intensity and directness. While the original phrase can imply some frustration, it does not carry the same level of assertiveness or exclamation found in the angry rewritten version. The tone appears more neutral.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express any unexpected element or shock. It's straightforward and lacks the astonishment reflected in the surprise rewritten form, which includes an exclamation and an expression of wow.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence lacks any indication of disgust or aversion; it does not convey the negative reaction that would be necessary to align with the disgust sentiment as presented in the rewritten example.",
+        "disgust_intensity": 0
+    }
+}

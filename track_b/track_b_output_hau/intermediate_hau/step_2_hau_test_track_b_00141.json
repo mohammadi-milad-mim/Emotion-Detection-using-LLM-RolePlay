@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Haaaa\\ud83e\\udd23 yau ga iskanci... Ai ba kashe gaban ya ke ba... Kara Mar karfi kawai yake\", \"rewritten_form_joy\": \"Haaaa\\ud83e\\udd23 yau ga iskanci... Ai ba kashe gaban ya ke ba... Kara Mar karfi kawai yake!\", \"rewritten_form_sadness\": \"Haaaa\\ud83e\\udd23 yau ga iskanci... Ai ba kashe gaban ya ke ba... Kara Mar karfi kawai yake...\", \"rewritten_form_fear\": \"Haaaa\\ud83e\\udd23 yau ga iskanci... Ai ba kashe gaban ya ke ba... Kara Mar karfi kawai yake?\", \"rewritten_form_anger\": \"Haaaa\\ud83e\\udd23 yau ga iskanci... Ai ba kashe gaban ya ke ba... Kuma kara Mar karfi kawai yake?\", \"rewritten_form_surprise\": \"Haaaa\\ud83e\\udd23 yau ga iskanci... Ai ba kashe gaban ya ke ba! Kara Mar karfi kawai yake?\", \"rewritten_form_disgust\": \"Haaaa\\ud83e\\udd23 yau ga iskanci... Ai ba kashe gaban ya ke ba... Kara Mar karfi kawai yake, wannan abu na ba kyau!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of frustration or dissatisfaction, but the rewritten joyful form adds an exclamation mark that indicates enthusiasm, contrasting with the original lack of excitement. Therefore, the original text does not closely align with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sad form maintains the same tone with a trailing ellipsis, which indicates a feeling of gloom or resignation. The original's tone does not suggest deep sadness but rather frustration, so it aligns weakly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The rewritten fearful version introduces a question mark, implying uncertainty or worry. The original does not convey a sense of fear or apprehension, so it aligns more distantly.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The addition of 'kuma' (but) in the rewritten angry form suggests a shift to a more aggressive stance. The original conveys frustration, which can hint at anger but does not explicitly express it strongly, so it aligns moderately.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The exclamation mark in the surprise form indicates astonishment or unexpectedness. The original does not express surprise and aligns only marginally with the emotion of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The rewritten disgust form introduces an explicit statement of negativity ('wannan abu na ba kyau!'), which is absent in the original. The original does not imply disgust directly, so it shows no alignment with this emotion.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"harda wanda yayi wanan sanarwa koh\", \"rewritten_form_joy\": \"Harda wanda yayi wannan sanarwa, koh?!\", \"rewritten_form_sadness\": \"Harda wanda yayi wannan sanarwa, koh...\", \"rewritten_form_fear\": \"Harda wanda yayi wannan sanarwa, koh?!\", \"rewritten_form_anger\": \"Harda wanda yayi wannan sanarwa?!\", \"rewritten_form_surprise\": \"Harda wanda yayi wannan sanarwa, koh?!\", \"rewritten_form_disgust\": \"Harda wanda yayi wannan sanarwa, koh? Yaya zasu ji dadin hakan?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not contain joyful elements. The rewritten joyful version adds enthusiasm with a questioning tone ('koh?!'), which suggests surprise and happiness, but it is not strongly present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version implies a sense of melancholy or regret with the ellipsis, suggesting that something is amiss. The original lacks this emotional depth, showing no signs of sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The fear version mirrors the surprise and questioning nature of the original with 'koh?!', but it lacks any context or language that evokes fear. Therefore, it does not align with fear strongly.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger rewritten form changes the tone to a more direct assertion, suggesting frustration or annoyance. The original phrase does not imply anger and remains neutral.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version reflects an unexpected tone with the question mark, which corresponds to the original's questioning nature. However, without any context for surprise, it remains neutral as well.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version suggests strong feelings about the response to the announcement, which is not hinted at in the original version. While there is a question, there is no implication of discomfort or strong repulsion in the original.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"What he saw was a hotel bedroom, like his, and in the corner was a woman whose skin was completely white.\", \"rewritten_form_joy\": \"What he saw was a hotel bedroom, just like his, and in the corner was a woman with stunningly white skin!\", \"rewritten_form_sadness\": \"What he saw was a hotel bedroom, much like his, and in the corner stood a woman with pale white skin, evoking a deep sense of longing.\", \"rewritten_form_fear\": \"What he saw was a hotel bedroom, similar to his, and lurking in the corner was a woman whose skin was eerily completely white.\", \"rewritten_form_anger\": \"What he saw was a hotel bedroom, just like his, and in the corner was a woman with skin that was completely white, as if mocking him.\", \"rewritten_form_surprise\": \"What he saw was a hotel bedroom, like his, and in the corner, unexpectedly, was a woman whose skin was completely white!\", \"rewritten_form_disgust\": \"What he saw was a hotel bedroom, resembling his own, and in the corner was a woman with skin that was disturbingly completely white.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a scene without any joyful context or sentiment. The rewritten joyful version adds excitement and admiration with the word 'stunningly', which the original does not have.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence mentions a woman with white skin but does not evoke longing or sadness. The rewritten sad version introduces a deep sense of longing that is absent in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original mentions a woman with completely white skin in a somewhat neutral context, while the fear version uses 'lurking' and 'eerie', which implies a sense of danger that is not present in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The sentiment in the rewritten angry version implies that the woman is 'mocking him', which is a strong emotional reaction not indicated in the original sentence, making it feel less aligned.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original has a surprising element with the unexpected presence of a woman with completely white skin. The surprise version accentuates this surprise effectively. Thus, this aligns well with the original.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

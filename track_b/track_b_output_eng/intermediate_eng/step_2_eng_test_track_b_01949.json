@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"apparently my jaw totally hit the floor when i walked in.\", \"rewritten_form_joy\": \"You won't believe it, but my jaw just dropped in pure amazement when I walked in!\", \"rewritten_form_sadness\": \"It's honestly kind of heartbreaking to think that my jaw just hit the floor when I walked in.\", \"rewritten_form_fear\": \"I seriously was so shocked that my jaw hit the floor when I walked in\\u2014what was I even expecting?\", \"rewritten_form_anger\": \"I can't believe it\\u2014my jaw hit the floor when I walked in, and it's just infuriating!\", \"rewritten_form_surprise\": \"Wow, my jaw literally hit the floor when I walked in\\u2014it was such a shock!\", \"rewritten_form_disgust\": \"Ugh, my jaw completely hit the floor when I walked in\\u2014what a gross scene!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of astonishment, similar to the feeling of joy expressed in the joy rewritten sentence. However, it doesn't carry the positivity suggested by the rewritten form, which emphasizes amazement. The intensity is therefore moderate rather than high.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence doesn't imply any deep emotional reflection or heartbreak; it's more about surprise than sadness. The sadness rewritten form suggests emotional pain that isn't present in the original. Hence, sadness is not strongly present.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While there is an element of shock in the original sentence implying some element of unexpectedness, it lacks the deeper sense of fear expressed in the rewritten sentence which associates the physical reaction with an unexpected danger or anxiety. Thus, the fear is minimal.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey any elements of frustration or anger. The rewritten anger form implies outrage about the situation, which is not present in the original. Thus, anger is not reflected in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence directly implies a surprising reaction (jaw hitting the floor). This aligns closely with the surprise rewritten form, which explicitly focuses on the shock of the situation. Hence, this emotion is very strongly present.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

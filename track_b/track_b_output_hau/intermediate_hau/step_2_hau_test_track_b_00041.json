@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Auren Sirri? kuna nufin Auren mutu'a kenan \\ud83d\\ude33\", \"rewritten_form_joy\": \"Auren Sirri? Lallai kuwa, na yi farin cikin jin hakan! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"Auren Sirri? Wannan yana tunatar da ni da yadda rayuwa ta canza... \\ud83d\\ude14\", \"rewritten_form_fear\": \"Auren Sirri? Kuna nufin Auren mutu'a? Na ji tsoro... \\ud83d\\ude1f\", \"rewritten_form_anger\": \"Auren Sirri? Kuna nufin Auren mutu'a? Wannan ba abinda ya kamata a yi ba! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Auren Sirri? Kuna nufin Auren mutu'a?! Wannan ya ba ni mamaki! \\ud83d\\ude2e\", \"rewritten_form_disgust\": \"Auren Sirri? Kuna nufin Auren mutu'a? Wannan yana da matukar gajiyawa! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a curious tone about something potentially negative (marriage as death), while the rewritten joyful version expresses happiness about the topic. The original does not convey joy, thus the alignment is very low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence can imply sadness as it expresses a form of concern about marriage relating to death. The rewritten sentence echoes this sentiment with a reflection on change in life, showing a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Both the original and the fear version express concern over the subject. The original includes an element of questioning that indicates trepidation regarding marriage, aligning well with fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original does not express anger directly; it questions a serious topic. However, the rewritten anger version indicates a dismissive reaction towards the concept of a death-related marriage, which does not align significantly with the original tone.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence questions the idea of 'Auren mutu'a' (marriage as death), and the surprise version reacts strongly to this notion, aligning well since both express astonishment at the idea.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "The original sentence does not convey disgust, whereas the rewritten disgust version implies a strong negative emotional response to the idea being discussed. Thus, there is weak alignment with disgust.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Cant really forget the taste in my mouth!\", \"rewritten_form_joy\": \"I can still savor the delightful taste in my mouth!\", \"rewritten_form_sadness\": \"I can't shake the bitter taste lingering in my mouth.\", \"rewritten_form_fear\": \"I can't seem to forget the unsettling taste in my mouth!\", \"rewritten_form_anger\": \"I can't believe I still have that awful taste in my mouth!\", \"rewritten_form_surprise\": \"I can't believe that taste still lingers in my mouth!\", \"rewritten_form_disgust\": \"I can't stand that repulsive taste stuck in my mouth!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects an inability to forget a taste, which does not convey joy, particularly compared to the rewritten joyful sentence that emphasizes savoring. There is no positive sentiment or pleasure indicated in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original's acknowledgment of a lingering taste aligns closely with the sadness implied in the rewritten sentence about a bitter taste that cannot be shaken. The underlying sentiment of being unable to forget suggests a sense of loss or regret.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The term 'forget' combined with a specific tast in the original hints at an unsettling or negative experience, which aligns with the fear in the rewritten form. However, the original doesn't strongly evoke fear, rather a sense of discomfort.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence implies frustration about not being able to forget a taste, which loosely connects to the anger in the rewritten sentence about being unable to believe the awful taste persists. Still, it lacks the intensity and outright anger seen in the rewritten version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original's expression of struggle to forget does not clearly convey surprise. The rewritten version suggests shock or disbelief about the lingering taste which is not strongly present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

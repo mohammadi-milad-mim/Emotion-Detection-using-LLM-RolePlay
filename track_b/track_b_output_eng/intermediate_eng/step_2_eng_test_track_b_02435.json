@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But one, one took my heart away and broke me free from my past.\", \"rewritten_form_joy\": \"But one, one took my heart away and set me free from my past!\", \"rewritten_form_sadness\": \"But one, one took my heart away and left me shattered by my past.\", \"rewritten_form_fear\": \"But one, one took my heart away and tore me from my past, leaving me scared of what lies ahead.\", \"rewritten_form_anger\": \"But one, one took my heart away and forcefully ripped me free from my past!\", \"rewritten_form_surprise\": \"But one, one took my heart away and unexpectedly broke me free from my past!\", \"rewritten_form_disgust\": \"But one, one took my heart away and made me sick at how I had to break free from my past.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of liberation from the past, which aligns positively with the tone of joy in the rewritten sentence. However, there's a lack of celebratory punctuation in the original, indicating a less intense joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence implies a deep emotional impact or loss which resonates with sadness; however, it doesn\u2019t emphasize being shattered, as in the rewritten sentence, suggesting a moderate level of sadness but not total despair.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at a significant change (breaking free), but it doesn't explicitly convey fear of the future, making it less aligned with the fearful tone of the rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence reflects a sense of being broken free, which lacks the aggression found in the rewritten sentence that depicts a forceful ripping away. Thus, it does not convey a sense of anger strongly.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise element in the rewritten sentence is stronger than in the original, as the original lacks an element of unexpectedness. Therefore, it does not align well with a sense of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

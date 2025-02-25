@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ya yi yunkurin lalata da kanwar matarsa\", \"rewritten_form_joy\": \"Ya yi yunkurin jin dadin kanwar matarsa!\", \"rewritten_form_sadness\": \"Ya yi yunkurin lalata da kanwar matarsa, hakan yana da matukar jefa zuciyata cikin kunci.\", \"rewritten_form_fear\": \"Ya yi yunkurin lalata da kanwar matarsa, ina ji na firgita da sakamakon haka.\", \"rewritten_form_anger\": \"Ya yi yunkurin lalata da kanwar matarsa, wannan ba zai yiwu ba!\", \"rewritten_form_surprise\": \"Ya yi yunkurin lalata da kanwar matarsa? Wannan ba abun da na zata ba ne!\", \"rewritten_form_disgust\": \"Ya yi yunkurin lalata da kanwar matarsa, wannan yun\\u0199urin ya bambanta da abun da ya kamata.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an action that does not imply joy or positivity, contrasting with the joyful rewritten sentence that expresses enjoyment. Thus, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a harmful intention towards someone's sister-in-law, aligning with the sadness of feeling distress over such intentions, so there is some connection to sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version of the sentence expresses personal fear about the implications of the act, which aligns with the original's reference to a harmful action, so there is a moderate connection to fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence reflects an intention that is inherently wrong, leading to a strong alignment with the anger expressed in the rewritten version which decries the act as unacceptable.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence would likely elicit surprise in context, although it is not overtly surprising in its own right. The connection to a surprising response is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The disgust version expresses a strong reaction to the proposed action, which aligns well with the negative connotation of the original action described, indicating a strong feeling of disgust.",
+        "disgust_intensity": 3
+    }
+}

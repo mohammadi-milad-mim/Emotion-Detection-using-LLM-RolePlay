@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"By mile 11, my face was numb and my mouth felt like I had just come from the dentist's office.\", \"rewritten_form_joy\": \"By mile 11, I felt a thrilling rush, even though my face was numb and my mouth felt like I had just come from the dentist's office!\", \"rewritten_form_sadness\": \"By mile 11, my face was numb and my mouth felt eerily like I had just left the dentist's office, reminding me of the struggle I was facing.\", \"rewritten_form_fear\": \"By mile 11, my face was numb, and my mouth felt like I had just walked out of the dentist's office\\u2014what was happening to me?\", \"rewritten_form_anger\": \"By mile 11, my face was numb, and my mouth felt like I had just come from the dentist's office, and I was so upset about how this was going!\", \"rewritten_form_surprise\": \"By mile 11, my face was numb, and I was shocked to realize my mouth felt just like after a visit to the dentist's office!\", \"rewritten_form_disgust\": \"By mile 11, my face was numb and my mouth felt disgusting, like I had just left the dentist's office.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy. It describes discomfort rather than excitement or thrill, which is necessary for aligning with joy. The rewritten joy sentence introduces excitement that is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence shares a sense of discomfort akin to sadness, particularly in how it suggests struggle through the reference to the dentist's office. The rewritten sadness sentence incorporates a reflective tone about struggle, which closely aligns with the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies discomfort without expressing fear, even though it does raise questions about what might be happening. The rewritten fear sentence distinctly emphasizes a concern for well-being, which isn't present in the original text.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence contains a sense of discomfort but not explicit anger. The rewritten anger sentence suggests frustration, which is absent in the original context. However, there is a potential for underlying frustration within the discomfort described.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original description doesn\u2019t evoke surprise; instead, it conveys numbness and familiarity with discomfort. The rewritten surprise sentence indicates an unexpected realization that doesn't reflect the sentiment of the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The man has a reputation for being a hardass and tough guy.\", \"rewritten_form_joy\": \"The man is celebrated for being a strong and tough guy!\", \"rewritten_form_sadness\": \"The man is known for being a hardass and tough guy, which is a bit unfortunate.\", \"rewritten_form_fear\": \"The man has a frightening reputation as a hardass and tough guy.\", \"rewritten_form_anger\": \"It's infuriating how the man has a reputation for being such a hardass and tough guy.\", \"rewritten_form_surprise\": \"You wouldn't believe it, but the man has quite the reputation for being a hardass and tough guy!\", \"rewritten_form_disgust\": \"Honestly, it's disgusting how the man has a reputation for being such a hardass and tough guy.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents the man in a neutral light regarding his toughness, while the joyful version celebrates him. There is no positive connotation in the original, so it doesn\u2019t align strongly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence acknowledges the man\u2019s reputation without showing any emotion. The sad version introduces a sense of regret, which the original lacks. Thus, it has low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version emphasizes a frightening aspect of the man's reputation that isn't present in the original text. The original does not imply fear, making the connection weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten angry version adds a strong emotional response towards the man's reputation, which the original sentence does not suggest. Thus, there is low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original sentence states the man's reputation, it does not provide a sense of disbelief or astonishment. Therefore, the alignment with surprise is minimal.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

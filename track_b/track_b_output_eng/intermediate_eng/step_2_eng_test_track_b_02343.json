@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This isn't scary.. Just weird.\", \"rewritten_form_joy\": \"This is just delightfully weird!\", \"rewritten_form_sadness\": \"It's not scary... just kind of sad and weird.\", \"rewritten_form_fear\": \"This feels unsettling... it's really weird and eerie.\", \"rewritten_form_anger\": \"This isn't scary at all; it's just infuriatingly weird!\", \"rewritten_form_surprise\": \"Wow, this isn't scary... it's just shockingly weird!\", \"rewritten_form_disgust\": \"Ugh, this is not scary... just grossly weird.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence downplays fear with a humorous tone, but it does not express delight or happiness, which are key to joy. It simply describes something as 'weird,' lacking the positivity associated with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sadness. It mentions that something is not scary but weird, which lacks the emotional weight to evoke sadness. Instead, it maintains a neutral observation.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence clearly distances itself from fear, stating that something is 'just weird' rather than frightening. This minimizes any connotation of fear, contrasting with the more intense wording in the fear rewrite.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original phrase mentions that something isn't scary, it doesn't convey any frustration or anger. The phrase does not express annoyance, which the rewritten anger form does, thus indicating a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence's use of the phrase 'isn't scary' contrasts with what might typically be expected, leaving room for surprise. However, the lack of stronger wording limits the emotional intensity related to surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

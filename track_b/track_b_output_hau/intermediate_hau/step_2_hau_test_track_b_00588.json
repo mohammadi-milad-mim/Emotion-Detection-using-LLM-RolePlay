@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"ashe yasan muna jin yunwa iskancine daman hmm su buhari kenan\", \"rewritten_form_joy\": \"ashe yasan muna jin yunwa iskancine daman hmm su buhari kenan!\", \"rewritten_form_sadness\": \"ashe yasan muna jin yunwa iskancine daman hmm su buhari kenan...\", \"rewritten_form_fear\": \"ashe yasan muna jin yunwa iskancine daman hmm su buhari kenan?\", \"rewritten_form_anger\": \"ashe yasan muna jin yunwa iskancine daman hmm su buhari kenan!!\", \"rewritten_form_surprise\": \"ashe yasan muna jin yunwa iskancine daman hmm su buhari kenan? Really?\", \"rewritten_form_disgust\": \"ashe yasan muna jin yunwa iskancine daman hmm su buhari kenan, how unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not have an exclamation point and conveys a more neutral tone, indicating less joy than the rewritten form which ends with an exclamation, suggesting enthusiasm or happiness.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey strong sadness but could suggest a hint of somberness or melancholy. However, it lacks the trailing ellipsis that implies a deeper sadness or lack of hope.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not suggest fear, as it is more neutral in tone. The rewritten form implies a questioning or anxious mindset which is not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks the strong emotion that comes from the extra exclamation marks in the rewritten form. It does not express frustration or anger explicitly.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not imply strong surprise nor does it ask for clarification, as indicated by the '?' in the rewritten version. It has a neutral expression instead.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence doesn\u2019t express disgust clearly. The rewritten form indicates a strong negative reaction, which is missing in the original.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The city lights glowing, I leaned up against the ledge and felt the cold red wood on my skin: moist from the air of the night.\", \"rewritten_form_joy\": \"The city lights glowing, I leaned up against the ledge and felt the refreshing cold red wood on my skin, pleasantly moist from the night air.\", \"rewritten_form_sadness\": \"The city lights glowing, I leaned up against the ledge, the cold red wood on my skin feeling damp and heavy from the night's air.\", \"rewritten_form_fear\": \"The city lights glowing, I leaned up against the ledge, the cold red wood on my skin sending a chill of unease through me as the moist night air closed in.\", \"rewritten_form_anger\": \"The city lights glowing, I leaned up against the ledge, that cold red wood digging into my skin, moist with the angry dampness of the night air.\", \"rewritten_form_surprise\": \"The city lights glowing, I leaned up against the ledge and was taken aback by the cold red wood on my skin, unexpectedly moist from the night air.\", \"rewritten_form_disgust\": \"The city lights glowing, I leaned up against the ledge and recoiled at the cold red wood on my skin, unpleasantly moist from the humid air of the night.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes the sensation of cold red wood on the skin, which is neutral rather than positive. The rewritten version expresses a pleasant and refreshing feeling, which the original doesn't convey as strongly. Thus, there is a minimal alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original implies a dampness from the air but does not directly suggest heaviness or feeling burdened. The rewritten sentence communicates a more somber tone, emphasizing the weight of the experience. Therefore, there is a low to moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not show any overt uneasiness or fear; it describes a physical sensation in a neutral way. The rewritten version conveys a feeling of unease that is not reflected in the original. Hence, there is little to no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original mentions a cold sensation on the skin, it doesn\u2019t express any irritation or anger. The rewritten version connects the cold wood with an aggravating sensation, which is entirely absent in the original. Thus, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence portrays a consistent experience without any elements of being surprised or taken aback. The rewritten form introduces an unexpected element which is not present in the original. This leads to little to no alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Every time I swiped for it it would disappear and reappear further in the woods.\", \"rewritten_form_joy\": \"Every time I swiped for it, it would magically disappear and then pop up playfully deeper in the woods!\", \"rewritten_form_sadness\": \"Every time I swiped for it, it would vanish, leaving me yearning as it reappeared far deeper in the woods.\", \"rewritten_form_fear\": \"Every time I swiped for it, it would vanish into thin air, reappearing in the dark, foreboding woods.\", \"rewritten_form_anger\": \"Every time I swiped for it, it just vanished, only to mock me by showing up further in the woods!\", \"rewritten_form_surprise\": \"Every time I swiped for it, it would suddenly disappear, then shockingly reappear further in the woods!\", \"rewritten_form_disgust\": \"Every time I swiped for it, it would grossly vanish, only to reappear in the murky parts of the woods.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an action that is playful but lacks the explicit joy present in the rewritten joy version, which includes words like 'magically' and 'playfully.' Thus, the alignment is moderate rather than high.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests a sense of loss and longing, similar to the rewritten sadness version, especially with the concept of yearning. This indicates a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original conveys a sense of something disappearing and reappearing without placing the focus on fear or darkness, but the fear rewritten version heightens this aspect considerably, suggesting a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not convey personal frustration or mockery, unlike the anger rewritten version, which expresses contempt and irritation at the vanishing. Thus, the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence has a surprising element of disappearance and reappearance, indicating a moderate alignment with the tone of suddenness in the rewritten surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

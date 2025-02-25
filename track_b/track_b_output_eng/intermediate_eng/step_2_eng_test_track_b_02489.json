@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"There was a rabbit's blood on my hands-there was nothing funny about it.\", \"rewritten_form_joy\": \"There was a rabbit's blood on my hands, and I couldn't help but feel this strange thrill about it!\", \"rewritten_form_sadness\": \"There was a rabbit's blood on my hands\\u2014how heavy it felt, like a sorrow carried deep within me.\", \"rewritten_form_fear\": \"There was a rabbit's blood on my hands, and it sent a chill down my spine; I couldn't shake the dread that came with it.\", \"rewritten_form_anger\": \"There was a rabbit's blood on my hands\\u2014my frustration boiled over; it was an injustice like no other!\", \"rewritten_form_surprise\": \"There was a rabbit's blood on my hands, and I never expected to find myself in such a shocking situation.\", \"rewritten_form_disgust\": \"There was a rabbit's blood on my hands, and it was absolutely revolting; I couldn't stand the sight of it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a serious tone, emphasizing that nothing funny is present in the situation. The rewritten joy version introduces an element of thrill that is completely absent in the original. Hence, joy does not resonate with the original's severity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence talks about a grim circumstance ('rabbit's blood on my hands') but does not evoke an inner sorrow, rather it indicates a lack of humor. The sadness version aligns closely with the potential feelings of heaviness and sorrow with the imagery but isn't directly present in the original sentiment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does present a disturbing image, creating a slight sense of foreboding. The rewritten fear version emphasizes dread and chills, which aligns somewhat, as the original could hint at personal culpability or horror in the situation. However, there's no explicit fear conveyed in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original's straightforwardness dismisses any sense of injustice or frustration; it indicates a stark realization devoid of anger. The rewritten anger version presents a strong emotional response that does not correlate with the more neutral tone of the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence states a shocking fact but expresses no personal reaction or disbelief. The rewritten surprise version captures an unexpected element which is not present in the original, meaning they do not align closely.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

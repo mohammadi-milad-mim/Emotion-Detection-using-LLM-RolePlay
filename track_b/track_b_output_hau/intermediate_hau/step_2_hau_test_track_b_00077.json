@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ta tofa yawu a ruwan shan sa\", \"rewritten_form_joy\": \"Ta tofa yawu a ruwan shan sa, ya sa ni farin ciki!\", \"rewritten_form_sadness\": \"Ta tofa yawu a ruwan shan sa, ina jin wani zafi.\", \"rewritten_form_fear\": \"Ta tofa yawu a ruwan shan sa, abin da ke faruwa yana bani tsoro!\", \"rewritten_form_anger\": \"Ta tofa yawu a ruwan shan sa, wannan ba abu ne da ya kamata ya faru ba!\", \"rewritten_form_surprise\": \"Ta tofa yawu a ruwan shan sa? Wahala ce ta fi karfina!\", \"rewritten_form_disgust\": \"Ta tofa yawu a ruwan shan sa, wannan yana da ban tsoro!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any specific positive emotion or joy on its own; it simply states a fact. The rewritten version adds an element of happiness with the phrase 'ya sa ni farin ciki!', which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence implies an action or situation, it does not show any inherent sadness. The rewritten sadness version introduces a clear feeling of pain or emotional hurt ('ina jin wani zafi.'), which is not reflected in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not inherently convey fear; it simply states something that has happened. The rewritten fear version emphasizes a feeling of fear ('abin da ke faruwa yana bani tsoro!'), which changes the context significantly beyond the original intent.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any indication of anger. The rewritten version, however, expresses anger and frustration ('wannan ba abu ne da ya kamata ya faru ba!'), introducing a sense of injustice or annoyance that is not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement does not surprise or shock; it merely reports an event. The rewritten version adds a surprised reaction ('Wahala ce ta fi karfina!') that implies a sense of unexpected difficulty, which is not found in the original sentence.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original statement does not evoke disgust. The rewritten disgust version states that the situation is unpleasant ('wannan yana da ban tsoro!'), but this sentiment is not present in the original sentence, making it difficult to assign a strong alignment.",
+        "disgust_intensity": 1
+    }
+}

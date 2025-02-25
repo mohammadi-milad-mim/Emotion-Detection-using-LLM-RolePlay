@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"A very close family friend passed away from a terminal illness.\", \"rewritten_form_joy\": \"It's bittersweet to remember a very close family friend who brought so much joy to our lives, even as they've left us due to a terminal illness.\", \"rewritten_form_sadness\": \"A very close family friend has sadly passed away from a terminal illness, leaving a deep void in our hearts.\", \"rewritten_form_fear\": \"It's terrifying to think that a very close family friend succumbed to a terminal illness, reminding us of our fragility.\", \"rewritten_form_anger\": \"I can't believe that a very close family friend had to suffer and ultimately pass away from a terminal illness\\u2014it's so unjust!\", \"rewritten_form_surprise\": \"I was shocked to learn that a very close family friend passed away from a terminal illness; it feels unreal.\", \"rewritten_form_disgust\": \"It's unsettling to think that a very close family friend had to endure such a painful journey with a terminal illness before passing away.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses the sadness of losing a loved one, but it does not emphasize joy or positive memories prominently. While the rewritten joy sentence includes joy in remembering the friend, the original does not share this sentiment strongly.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence strongly aligns with sadness, as it directly states that a family friend has passed away, which naturally evokes feelings of loss and sorrow.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a faint undertone of fear in the original sentence, as the mention of a terminal illness suggests mortality. However, the primary focus is on loss rather than fear itself.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence discusses the sadness of loss, it doesn't convey anger directly. The rewritten version highlights feelings of injustice which are not present in the original. Thus, there is minimal alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The element of surprise is somewhat present in the original sentence because passing away unexpectedly can be shocking, yet the original lacks any explicit expression of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

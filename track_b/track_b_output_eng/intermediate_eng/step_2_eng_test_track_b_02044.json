@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As he stumbled I ran off, afraid it might somehow affect my job security.\", \"rewritten_form_joy\": \"As he stumbled, I giggled and ran off, excited about what would happen next!\", \"rewritten_form_sadness\": \"As he stumbled, I ran off, feeling heavy-hearted about leaving him behind.\", \"rewritten_form_fear\": \"As he stumbled, I panicked and ran off, terrified it might jeopardize my job security.\", \"rewritten_form_anger\": \"As he stumbled, I ran off, furious that his mistake could put my job at risk.\", \"rewritten_form_surprise\": \"As he stumbled, I was taken aback and ran off, shocked at the sudden turn of events!\", \"rewritten_form_disgust\": \"As he stumbled, I ran off, repulsed by the thought that his mishap might threaten my job.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects fear and concern rather than joy. The rewritten joy version uses excited language that contradicts the original's tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a slight resemblance in that both sentences convey a sense of leaving someone behind, but the original focuses more on self-preservation. Therefore, the alignment is weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original strongly aligns with fear, as it expresses a direct concern about job security due to someone else's stumble. The rewritten version also conveys a sense of panic in a similar context.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence does not explicitly express anger, it implies a frustration regarding job security. The rewritten sentence uses stronger language about being 'furious', suggesting a moderate connection but not a direct match in tone.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The element of surprise is present in the original, but it's focused more on the fear of consequences than the actual surprise of the event. Therefore, there's a weak connection to the surprise tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

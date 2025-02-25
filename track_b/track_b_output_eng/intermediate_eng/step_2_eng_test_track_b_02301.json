@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"When I came back around, I was holding a full glass *and* a full plastic cup.\", \"rewritten_form_joy\": \"When I came back around, I was excitedly holding a full glass *and* a full plastic cup!\", \"rewritten_form_sadness\": \"When I came back around, I was just holding a full glass *and* a full plastic cup, feeling a bit empty inside.\", \"rewritten_form_fear\": \"When I came back around, I was nervously holding a full glass *and* a full plastic cup, worried I might drop them.\", \"rewritten_form_anger\": \"When I came back around, I was angrily holding a full glass *and* a full plastic cup, frustrated with the mess around me.\", \"rewritten_form_surprise\": \"When I came back around, I was shocked to find myself holding a full glass *and* a full plastic cup!\", \"rewritten_form_disgust\": \"When I came back around, I was reluctantly holding a full glass *and* a full plastic cup, feeling turned off by the idea.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a neutral scenario without explicit excitement or happiness. The joy rewritten form expresses enthusiasm that is not present in the original, suggesting a lack of alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey a sense of emptiness or sadness, yet the rewritten form introduces a feeling that is absent in the original. There is minimal alignment with sadness, mainly due to the neutral tone of the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no indication of nervousness or fear in the original sentence, which is neutral. The fear rewrite introduces worry, which the original does not imply, resulting in very low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any expression of frustration or anger. The rewrite only implies strong emotions that are not present in the original context, indicating no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence depicts a simple action without an element of surprise. The surprise rewrite indicates shock that is not reflected in the original, leading to a lack of alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

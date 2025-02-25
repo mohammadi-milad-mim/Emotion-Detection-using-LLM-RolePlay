@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The great insect disappeared into the wall and I brushed my teeth in my room instead.\", \"rewritten_form_joy\": \"The great insect vanished into the wall, and I happily brushed my teeth in my cozy room instead!\", \"rewritten_form_sadness\": \"The great insect disappeared into the wall, and I brushed my teeth in my lonely room instead.\", \"rewritten_form_fear\": \"The great insect vanished into the wall, and I quickly brushed my teeth in my room, feeling uneasy.\", \"rewritten_form_anger\": \"The great insect disappeared into the wall, and I angrily brushed my teeth in my room instead.\", \"rewritten_form_surprise\": \"The great insect just disappeared into the wall, so I brushed my teeth in my room instead, completely taken aback!\", \"rewritten_form_disgust\": \"The great insect crawled into the wall, and I disgustedly brushed my teeth in my room instead.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey happiness; while the rewritten version adds joyfulness ('happily brushed my teeth' and 'cozy room'), the original lacks any positive sentiment or warmth.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence includes a sense of loneliness with the phrase 'in my room instead.' The rewritten version amplifies this feeling with 'lonely room,' aligning closely with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence lacks any direct suggestion of fear; the rewritten version adds an element of urgency ('quickly brushed' and 'feeling uneasy'), which is not present in the original, indicating a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence presents a neutral feeling about brushing teeth after an insect disappears. The rewritten version, with 'angrily,' suggests a strong emotion that is not evident in the original, indicating a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence reflects a neutral and mundane activity. The rewritten phrase indicates surprise ('completely taken aback'), which is an emotional reaction that does not appear in the original, suggesting low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

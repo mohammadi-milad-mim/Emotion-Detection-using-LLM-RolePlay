@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"At about 1PM, I felt a burning sensation in the center of my chest.\", \"rewritten_form_joy\": \"At about 1PM, I felt an exhilarating warmth in the center of my chest.\", \"rewritten_form_sadness\": \"At about 1PM, I felt a heavy, burning sensation in the center of my chest.\", \"rewritten_form_fear\": \"At about 1PM, I felt a terrifying burning sensation in the center of my chest.\", \"rewritten_form_anger\": \"At about 1PM, I felt an infuriating burning sensation in the center of my chest.\", \"rewritten_form_surprise\": \"At about 1PM, I suddenly felt an intense burning sensation in the center of my chest.\", \"rewritten_form_disgust\": \"At about 1PM, I felt an unpleasant, burning sensation in the center of my chest.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy or happiness. The use of 'burning sensation' suggests discomfort rather than joy. The rewritten sentence enhances the emotional tone to imply pleasure, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence mentions a 'burning sensation' which could imply discomfort, but it does not necessarily convey sadness. The rewritten version enhances this feeling to a 'heavy' sensation that clearly indicates sadness, aligning closely with the emotional expression being assessed.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence describes a burning sensation, which could evoke concern, but it lacks the strong emotional connotation present in the rewritten fear version, which emphasizes terror. Therefore, the alignment with fear is moderate, but not a strong hit.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original phrase implies discomfort, it does not directly suggest anger. The rewritten version amplifies the discomfort into an 'infuriating' sensation. Thus, the original does not align strongly with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text describes a burning sensation without indicating an element of surprise. In contrast, the rewritten version incorporates 'suddenly', which adds an unexpected aspect that is absent in the original. The alignment with surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She fucking won, and wore him down.\", \"rewritten_form_joy\": \"She absolutely triumphed and wore him down beautifully!\", \"rewritten_form_sadness\": \"She sadly won, and it crushed him slowly over time.\", \"rewritten_form_fear\": \"She won, and it felt like she wore him down terrifyingly.\", \"rewritten_form_anger\": \"She damn well won, and wore him down mercilessly!\", \"rewritten_form_surprise\": \"She actually won, and managed to wear him down!\", \"rewritten_form_disgust\": \"She won, and it sickeningly wore him down completely.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of triumph but with a coarse tone ('fucking'), which contrasts with the more positive framing of joy in the rewritten sentence. The intensity of achievement is present, but the joy is less pronounced.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original implies a negative effect on the other person ('wore him down'), but it does not convey a clear sense of sadness; rather, it suggests triumph. The rewritten version leans more heavily into sadness, so the alignment is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not convey any fear; it simply states a fact about a victory. The tone does not suggest any terrifying implications, making it an inappropriate comparison.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The use of the phrase 'fucking won' suggests a strong sense of defiance and aggression. This aligns closely with anger, especially with the rewritten version stressing a merciless attitude. Thus, the intensity is high.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "While there is an element of surprise in winning, the straightforward nature of the original sentence doesn't align strongly with the sense of surprise that the rewritten version implies. The reaction is more neutral than shocking, resulting in a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

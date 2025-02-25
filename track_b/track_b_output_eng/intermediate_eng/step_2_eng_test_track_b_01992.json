@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I'll never forget it.\", \"rewritten_form_joy\": \"I'll always treasure that moment!\", \"rewritten_form_sadness\": \"I'll constantly remember it with a heavy heart.\", \"rewritten_form_fear\": \"I'll always dread that memory haunting me.\", \"rewritten_form_anger\": \"I'll never let go of how it made me feel!\", \"rewritten_form_surprise\": \"I'll never believe that actually happened!\", \"rewritten_form_disgust\": \"I'll never erase that vile memory.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong sentiment of remembrance, which can be seen as positive, thus aligning it moderately with joy. However, it lacks the explicit sense of positivity and gratitude present in the joy rewrite.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence indicates a lasting memory, which resonates strongly with sadness, especially when considering the phrase 'heavy heart' in the rewrite. It implies that the memory may carry a heavy or painful sentiment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original has a sense of permanence, it doesn't imply dread or fear; thus, the alignment with fear is weak. It's more about remembrance than worry about the past haunting someone.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not convey anger directly but indicates a strong memorable feeling. The rewrite implies a negative emotional response, which is stronger than what is suggested by the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original's phrase 'never forget' aligns with the intensity of surprise from the rewrite, but it does not imply disbelief or astonishment, making the connection less strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He married young, almost straight out college.\", \"rewritten_form_joy\": \"He married young, so excitedly right out of college!\", \"rewritten_form_sadness\": \"He married young, almost too soon after college; I wonder what he gave up.\", \"rewritten_form_fear\": \"He married young, right out of college; I hope he knows what he's doing.\", \"rewritten_form_anger\": \"He married young, almost straight out of college; what a reckless decision!\", \"rewritten_form_surprise\": \"Can you believe he married young, almost immediately after college?\", \"rewritten_form_disgust\": \"He married young, almost straight out of college; it just seems so naive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a neutral fact about marriage right after college. The joy rewritten sentence adds excitement, which isn't present in the original, resulting in a weak alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests a prompt marriage but does not imply regret or loss, which limits its alignment with sadness. However, the rewritten sentence suggests something was sacrificed, hinting at a moderate sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original sentence conveys a straightforward statement, the fear rewritten version adds a layer of concern about knowing what he's doing. The absence of fear in the original makes this alignment weak but not entirely absent.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is factual and neutral, lacking any judgment or emotion. The anger version expresses a critical viewpoint of the decision to marry young, which is not present in the original sentence, resulting in a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence provides a simple fact without any sense of the unexpected. The surprise rewritten form indicates disbelief, which the original lacks entirely, suggesting a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

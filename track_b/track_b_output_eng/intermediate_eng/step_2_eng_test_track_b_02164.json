@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As the words were leaving my mouth, it slowly dawned on me how infinitely stupid this was.\", \"rewritten_form_joy\": \"As the words were leaving my mouth, I couldn't help but laugh at how wonderfully silly this was!\", \"rewritten_form_sadness\": \"As the words were leaving my mouth, it painfully dawned on me how utterly foolish this was.\", \"rewritten_form_fear\": \"As the words were leaving my mouth, a chilling realization crept in about how dangerously stupid this was.\", \"rewritten_form_anger\": \"As the words were leaving my mouth, it infuriated me how remarkably stupid this was.\", \"rewritten_form_surprise\": \"As the words were leaving my mouth, I was taken aback by how shockingly stupid this was!\", \"rewritten_form_disgust\": \"As the words were leaving my mouth, I felt a wave of disgust at how absolutely ridiculous this was.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a realization of stupidity but lacks a humorous tone, which is central to the rewritten joy version. While there is a hint of self-reflection, it doesn't convey joy or silliness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns somewhat with the sadness rewrite, as it contains a sense of regret or embarrassment about saying something stupid. The use of 'infinitely stupid' suggests a negative self-assessment that connects with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not imply a sense of danger or fear that is present in the fear rewrite. The concept of danger is absent from the realization of stupidity in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence expresses frustration with oneself, it does not convey a strong feeling of anger, which is emphasized in the rewritten anger version. The tone is more disbelief than fury, lowering the alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence has an element of realization that parallels the surprise rewrite, but it is more about a self-reproachful recognition rather than genuine astonishment. This results in a lower alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

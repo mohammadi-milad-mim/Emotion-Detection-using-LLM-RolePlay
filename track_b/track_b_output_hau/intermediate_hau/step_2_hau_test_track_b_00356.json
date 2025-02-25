@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"me ya sa da kano za su fara\", \"rewritten_form_joy\": \"Na ji dadin wannan, me ya sa da kano za su fara!\", \"rewritten_form_sadness\": \"Wannan yana da damuwa, me ya sa da kano za su fara?\", \"rewritten_form_fear\": \"Me ya sa da kano za su fara? Ina tsoron abin da zai faru!\", \"rewritten_form_anger\": \"Me ya sa da kano za su fara? Wannan ba daidai ba ne!\", \"rewritten_form_surprise\": \"Me ya sa da kano za su fara? Wannan abu ne mai ban mamaki!\", \"rewritten_form_disgust\": \"Me ya sa da kano za su fara? Wannan yana da ban takaici!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is more neutral and lacks an expression of happiness or enjoyment, which is strongly implied in the joy rewritten form. Hence, it does not resonate closely with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence doesn't convey distress or sadness, while the rewritten sadness version explicitly expresses concern. Thus, there is weak alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence doesn't suggest fear or apprehension; it merely poses a question without indicating worry about future outcomes, so it ranks low on fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence is neutral, the rewritten form expresses anger about something perceived as unjust, which is absent in the original. Therefore, it does not strongly indicate anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not indicate a reaction of surprise; it simply asks a question, failing to evoke astonishment found in the surprise version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not carry any emotions of distaste or negativity; the disgust version implies strong negative feelings that are not evident in the original.",
+        "disgust_intensity": 0
+    }
+}

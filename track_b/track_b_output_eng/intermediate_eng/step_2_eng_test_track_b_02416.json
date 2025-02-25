@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My arms feeling a little sore and cramped still in the bracelets.\", \"rewritten_form_joy\": \"I'm so excited to wear these bracelets, but my arms are feeling a bit sore and cramped from them.\", \"rewritten_form_sadness\": \"I can't help but feel a bit down; my arms are still sore and cramped in those bracelets.\", \"rewritten_form_fear\": \"I'm worried because my arms are still feeling sore and cramped in these bracelets.\", \"rewritten_form_anger\": \"It's so frustrating that my arms are still sore and cramped from those bracelets!\", \"rewritten_form_surprise\": \"Wow, I didn't expect my arms to feel so sore and cramped in these bracelets!\", \"rewritten_form_disgust\": \"Ugh, I can't stand how sore and cramped my arms feel from these bracelets.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects discomfort without excitement. The joyful rewrite introduces a positive attitude towards wearing the bracelets, which is not present in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys soreness but lacks a deep emotional context. The sadness rewrite emphasizes feeling down, which aligns better with contexts of deeper emotional distress not inherently present in the original sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original implies discomfort, but it does not convey direct worries or fears. The fear rewrite introduces an element of concern that is absent in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text has a neutral tone without expressing frustration. The anger rewrite emphasizes frustration which is stronger than the feelings expressed in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not express any sense of surprise, whereas the surprise rewrite introduces an unexpected element that is not reflected in the neutral tone of the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

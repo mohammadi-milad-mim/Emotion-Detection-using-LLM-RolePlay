@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ashe kuwa akwai wahala ga wasu mutanen. \\ud83d\\ude14\", \"rewritten_form_joy\": \"Ashe kuwa akwai wahala ga wasu mutanen, amma akwai kuma kyawawan alamu! \\ud83d\\ude0a\", \"rewritten_form_sadness\": \"Ashe kuwa akwai wahala ga wasu mutanen, abin tausayi ne. \\ud83d\\ude14\", \"rewritten_form_fear\": \"Ashe kuwa akwai wahala ga wasu mutanen, ina jin tsoro kan abin da zai faru. \\ud83d\\ude1f\", \"rewritten_form_anger\": \"Ashe kuwa akwai wahala ga wasu mutanen, hakan ba daidai bane! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Ashe kuwa akwai wahala ga wasu mutanen? Ban yi tsammani ba! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Ashe kuwa akwai wahala ga wasu mutanen, wannan abin kyama ne! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of difficulty for some people, lacking an uplifting or positive tone. The rewritten joy sentence introduces a hopeful note about beautiful signs, which is not present in the original. Therefore, the original aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a recognition of hardship, similar to the rewritten sadness sentence that explicitly states it's a sad situation. This connection indicates that the original sentiment resonates well with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Although the original mentions hardship, it does not explicitly convey fear or anxiety about future events like the rewritten fear sentence. Thus, the original sentence has a weak alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original discusses the presence of hardship but lacks strong emotionality or outrage as seen in the anger sentence. There is no evident frustration or injustice expressed in the original, leading to a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original reflects a basic awareness of hardship but does not express astonishment or disbelief, as seen in the rewritten surprise sentence. Thus, the original aligns very little with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence talks about hardship without invoking feelings of disgust or revulsion, which is a strong sentiment in the rewritten disgust sentence. Therefore, the original sentence shows no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

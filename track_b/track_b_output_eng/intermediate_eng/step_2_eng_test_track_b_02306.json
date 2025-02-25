@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The instant answer that fell out my mouth was a happy YES!\", \"rewritten_form_joy\": \"The instant answer that burst out of my mouth was a joyful YES!\", \"rewritten_form_sadness\": \"The instant answer that painfully slipped from my mouth was a reluctant YES.\", \"rewritten_form_fear\": \"The instant answer that escaped my mouth was a hesitant YES!\", \"rewritten_form_anger\": \"The instant answer that shot out of my mouth was a frustrated YES!\", \"rewritten_form_surprise\": \"The instant answer that surprised me as it fell out was an enthusiastic YES!\", \"rewritten_form_disgust\": \"The instant answer that disgustingly tumbled out of my mouth was a begrudging YES!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses direct happiness with a positive response, aligning closely with the rewritten joy version that emphasizes joyful excitement.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The emotional tone of the original sentence is strictly positive, making it hard to align with the sadness tone of reluctance, indicating minimal relation.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original's confident affirmation contrasts sharply with the hesitant tone of fear in the rewritten version, suggesting no fear is present.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The expression of happiness in the original is at odds with frustration in the anger version, showing that anger does not align at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The element of surprise is evident in both sentences but the enthusiasm in the original suggests a lower level of surprise compared to the rewriting.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

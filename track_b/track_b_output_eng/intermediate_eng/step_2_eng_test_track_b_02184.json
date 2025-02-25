@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart is like the river my strength you can't foretell.\", \"rewritten_form_joy\": \"My heart flows like a cheerful river; my strength is an exciting surprise!\", \"rewritten_form_sadness\": \"My heart is like a dark river, and my strength feels so uncertain.\", \"rewritten_form_fear\": \"My heart is like a stormy river, and my strength is hauntingly unpredictable.\", \"rewritten_form_anger\": \"My heart roars like a turbulent river, and how dare you underestimate my strength!\", \"rewritten_form_surprise\": \"My heart is like a mysterious river, where my strength always surprises you!\", \"rewritten_form_disgust\": \"My heart is like a murky river, and my unpredictable strength is just frustrating.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of flow and strength, akin to joy, but lacks the cheerful and exciting aspect present in the rewritten joy sentence. Thus, while there is a hint of positive emotion, it is not strong.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The comparison of the heart to a river suggests depth and possibly melancholy, especially with the uncertainty of strength. This aligns well with the sadness rewrite, which explicitly mentions a 'dark river', indicating a stronger connection to sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The uncertainty of strength and the analogy of the heart to a river does not evoke the kind of intense fear present in the rewritten fear sentence, which describes a 'stormy river' and emphasizes unpredictability more vividly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses a challenge about the unreliability of strength but doesn't convey anger in the same powerful manner as the rewritten anger sentence, which combines the heart with roaring and a confrontation aspect.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The idea of a river conveys mystery but does not align strongly with surprise, which is more dynamically expressed in the surprise rewrite. Hence, the connection is weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

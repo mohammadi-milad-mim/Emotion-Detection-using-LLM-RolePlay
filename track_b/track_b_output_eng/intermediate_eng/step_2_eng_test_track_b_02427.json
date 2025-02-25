@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my hands lock up and I stare at the page I did that for almost an hour one day before giving up.\", \"rewritten_form_joy\": \"My hands freeze, and I gaze at the page, feeling illuminated as I pursue my thoughts for almost an hour before taking a joyful break.\", \"rewritten_form_sadness\": \"My hands tense up, and I helplessly stare at the page; I spent almost an hour one day before surrendering to the sadness of giving up.\", \"rewritten_form_fear\": \"My hands involuntarily lock up, and I anxiously stare at the page, feeling dread as I struggled for almost an hour one day before giving in to fear.\", \"rewritten_form_anger\": \"My hands clench in frustration, staring furiously at the page, battling with it for almost an hour one day before I finally gave up.\", \"rewritten_form_surprise\": \"My hands suddenly lock up, and I stare at the page in shock, spending almost an hour one day before I realized I was just stuck.\", \"rewritten_form_disgust\": \"My hands awkwardly lock up, and I grimace as I stare at the page, wasting almost an hour one day before I couldn't take it any longer.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of struggle and eventual giving up, which is quite the opposite of joy. The rewritten joy sentence depicts a positive experience of pursuing thoughts and taking a joyful break, highlighting a sense of achievement and pleasure. Since the original lacks any joyful sentiment, it does not align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text describes a feeling of being stuck and surrendering after a prolonged struggle, which aligns closely with feelings of sadness. The rewritten sadness sentence emphasizes helplessness and surrender to sadness, paralleling the original's sentiment of giving up after a long fight. Thus, the original has a strong connection to sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence talks about hands locking up and staring at the page, which can imply a sense of anxiety or fear. The rewritten fear description talks about feeling dread and anxiety during the struggle, suggesting a strong connection to fear. However, it might lack a heightened sense of terror or fear-induced urgency that can be present in some interpretations of fear. Therefore, the intensity is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original does include a sense of frustration hinted at by the locking up of hands and staring at the page, which can suggest anger, but it does not explicitly express it. The rewritten anger sentence describes a more intense and frustrated state, suggesting a battle. Therefore, while there is an element of frustration in the original, there's not a strong indication of anger, leading to a lower intensity score.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original talks about locking up and staring at the page without directly conveying surprise, whereas the rewritten surprise version mentions realizing the state of being stuck. Therefore, there is little to no alignment between the original and surprise, which indicates a moment of sudden realization not found in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

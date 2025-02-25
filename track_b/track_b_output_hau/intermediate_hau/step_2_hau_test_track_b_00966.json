@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"a matsayinshi na me digiri ya rasa darasin da zai nunawa matasa sai na tuyar kosai. kodai kodai \\ud83d\\ude02\", \"rewritten_form_joy\": \"A matsayinshi na me digiri, ya rasa darasin da zai nunawa matasa, sai na tuyar kosai, wanda ya kasance abin dariya! Kodai kodai! \\ud83d\\ude02\", \"rewritten_form_sadness\": \"Duk da matsayinshi na me digiri, ya rasa darasin da zai nunawa matasa, sai na tuyar kosai, wanda ya sa zuciyata ta yi wuya. Kodai kodai...\", \"rewritten_form_fear\": \"A matsayinshi na me digiri, ya rasa darasin da zai nunawa matasa, sai na tuyar kosai, wanda hakan ya sa na ji tsoro ko fa? Kodai kodai...\", \"rewritten_form_anger\": \"A matsayinshi na me digiri, ya rasa darasin da zai nunawa matasa, sai na tuyar kosai. Wannan yana da ban haushi! Kodai kodai!\", \"rewritten_form_surprise\": \"A matsayinshi na me digiri, ya rasa darasin da zai nunawa matasa, sai na tuyar kosai! Ban yi tunanin hakan zai faru ba! Kodai kodai!\", \"rewritten_form_disgust\": \"A matsayinshi na me digiri, ya rasa darasin da zai nunawa matasa, sai na tuyar kosai, abin kyama ne! Kodai kodai!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a lighthearted tone with humor due to the use of 'kodai kodai' and the context of flipping a snack, suggesting a playful attitude. This aligns closely with the happy tone of the rewritten joy sentence.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original text does not convey deep sadness, but there is an implication of loss (missing the opportunity to teach) which resonates slightly with the sadness rewritten form, hence a lower intensity score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While there is a mention of feeling uneasy in the fear version, the original does not suggest any direct fear or anxiety, making the alignment to this emotion very weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not imply anger; rather, it retains a humorous angle about a missed opportunity, so it does not connect well with the anger rewritten form.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence maintains an expectation of humor but does not imply any shock or surprise concerning the situation. Thus, it only loosely connects with the surprise emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original lacks any language or sentiment that suggests disgust, so there is minimal alignment with the disgust rewritten form.",
+        "disgust_intensity": 0
+    }
+}

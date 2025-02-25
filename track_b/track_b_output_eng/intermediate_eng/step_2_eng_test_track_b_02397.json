@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"plus ( wah wah wah ) my feet hurt.\", \"rewritten_form_joy\": \"plus ( wah wah wah ) I'm so happy to be active, even if my feet are a little sore!\", \"rewritten_form_sadness\": \"plus ( wah wah wah ) my feet hurt so much, it really gets me down.\", \"rewritten_form_fear\": \"plus ( wah wah wah ) my feet hurt, I hope this doesn't mean something serious is wrong.\", \"rewritten_form_anger\": \"plus ( wah wah wah ) my feet hurt, and it\\u2019s infuriating that I can\\u2019t catch a break!\", \"rewritten_form_surprise\": \"plus ( wah wah wah ) wow, my feet hurt more than I expected!\", \"rewritten_form_disgust\": \"plus ( wah wah wah ) my feet hurt, and it\\u2019s just disgusting how uncomfortable this is.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks a joyful sentiment; it expresses discomfort without any positive spin or indication of happiness. The rewritten joy sentence portrays an active and positive perspective, which is not reflected in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a hint of sadness due to the mention of hurting feet. The original implies discomfort but stops short of expressing deep emotional distress, making it somewhat in alignment with the sadness tone.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests concern about the pain but does not strongly indicate fear or worry about serious issues, which makes it only lightly connected with a fear response.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original shows some frustration through the expression of pain, but it lacks the explicit anger presented in the rewritten anger sentence. Thus, the connection is weak.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text does not explicitly convey any surprise about the pain in the feet; the reaction seems more common than unexpected. Thus, it connects only lightly with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

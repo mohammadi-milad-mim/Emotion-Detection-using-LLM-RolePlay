@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As soon as she openend the door, the police officer immediately became alarmed, drawing his gun and yelling at her to get out of the way.\", \"rewritten_form_joy\": \"As soon as she opened the door, the police officer became startled but quickly smiled, reassuring her to step back for a surprise announcement.\", \"rewritten_form_sadness\": \"As soon as she opened the door, the police officer seemed distressed, drawing his gun and pleading with her to get out of the way.\", \"rewritten_form_fear\": \"As soon as she opened the door, the police officer's eyes widened in fear, drawing his gun and urgently yelling at her to get out of the way.\", \"rewritten_form_anger\": \"As soon as she opened the door, the police officer was furious, drawing his gun and shouting at her to get out of the way now!\", \"rewritten_form_surprise\": \"As soon as she opened the door, the police officer was taken aback, drawing his gun and exclaiming for her to step aside immediately!\", \"rewritten_form_disgust\": \"As soon as she opened the door, the police officer recoiled in disgust, drawing his gun and harshly demanding she get out of the way.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of alarm and urgency rather than joy. The rewritten version for joy implies a positive surprise, which is absent in the original statement, leading to a low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sentence for sadness describes a police officer who is distressed, which captures a potential negative emotional response similar to the alarm in the original. However, the original does not explicitly convey sadness, making the alignment moderate but not strong.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original explicitly states that the police officer became alarmed and drew his gun, which aligns closely with the fear expressed in the rewritten sentence. This suggests a high degree of fear in both texts.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The rewritten sentence for anger describes the officer as furious and shouting, which is a stronger emotion than the original's tone of alarm. Although there is some sense of anger conveyed, it's not as intense as the rewritten version suggests, leading to moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The rewritten surprise sentence indicates the officer was taken aback, which does not align with the original description of alarm and urgency. The tone of surprise is notably different, leading to a low evaluation for surprise in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

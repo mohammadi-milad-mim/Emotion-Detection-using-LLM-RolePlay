@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Have you just tried talking to the ghost?\", \"rewritten_form_joy\": \"Have you really tried talking to the ghost? It could be so much fun!\", \"rewritten_form_sadness\": \"Have you thought about talking to the ghost? It might be lonely.\", \"rewritten_form_fear\": \"Have you honestly considered talking to the ghost? What if it reacts unexpectedly?\", \"rewritten_form_anger\": \"Have you seriously just tried talking to that ghost? That's just reckless!\", \"rewritten_form_surprise\": \"Wait, did you actually just try talking to the ghost? That's unexpected!\", \"rewritten_form_disgust\": \"Did you really just try talking to the ghost? That's so creepy!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a light-hearted inquiry about talking to a ghost. However, it lacks a strong emphasis on fun or enjoyment that would be present in the joyful rewrite. Thus, while there is a hint of positivity, it doesn't strongly convey joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence hints at loneliness, as it questions if talking to the ghost has been considered. This aligns moderately with the sadness rewrite, which focuses on the ghost's possible loneliness, but the original doesn\u2019t strongly emphasize despair or sorrow.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original question introduces an element of uncertainty about the ghost's reaction, aligning well with the fear aspect of the rewrite, which explicitly expresses concern about unexpected reactions. This indicates a significant degree of anxiety or worry associated with the inquiry.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original is more neutral and doesn't suggest recklessness. The anger rewrite indicates frustration and implies a judgment about the actions being taken, which isn't strongly present in the original, leading to low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does introduce an unexpected concept (talking to a ghost), but it doesn\u2019t convey shock or astonishment as strongly as the surprise rewrite does. This suggests a moderate alignment with the sense of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

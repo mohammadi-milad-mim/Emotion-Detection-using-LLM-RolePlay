@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Suma sunsan ba'ayimusu adalci Kamar lokacin M.Gaddafi\\ud83d\\ude25\", \"rewritten_form_joy\": \"Suma sunsan ba'ayimusu adalci kamar lokacin M.Gaddafi, abin da ya sa na ji da\\u0257i!\", \"rewritten_form_sadness\": \"Suma sunsan ba'ayimusu adalci kamar lokacin M.Gaddafi, wanda ya yi yawa a zuciyata.\", \"rewritten_form_fear\": \"Suma sunsan ba'ayimusu adalci kamar lokacin M.Gaddafi, yana sa ni jin tsoro sosai.\", \"rewritten_form_anger\": \"Suma sunsan ba'ayimusu adalci kamar lokacin M.Gaddafi, abin takaici ne!\", \"rewritten_form_surprise\": \"Suma sunsan ba'ayimusu adalci kamar lokacin M.Gaddafi? Na ji wannan ba zata iya zama gaskiya ba!\", \"rewritten_form_disgust\": \"Suma sunsan ba'ayimusu adalci kamar lokacin M.Gaddafi? Hakan na sa ni ji haushi!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of happiness or joy. It lacks affirmative or uplifting language that would signal a joyful sentiment, whereas the rewritten joy version explicitly expresses joy by saying ' abin da ya sa na ji da\u0257i!' which indicates a positive feeling. Hence, the alignment is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence carries a sense of heaviness related to justice during a troubling time, similar to the sadness expressed in the rewritten form that mentions a deep emotional impact ('wanda ya yi yawa a zuciyata'). This connection suggests a moderate understanding of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not distinctly reflect fear. While it discusses a serious issue, it does not imply any immediate threat or dread, which the rewritten fear version emphasizes ('yana sa ni jin tsoro sosai'). Therefore, the alignment with fear is minimal.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence implies a negative sentiment about justice during Gaddafi's time but does not explicitly express anger. The rewritten anger sentence uses an emphatic expression ('abin takaici ne!') that conveys strong displeasure, which is not as apparent in the original. Thus, the connection to anger is present but low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express surprise. The rewritten surprise sentence suggests shock or disbelief with phrases like ('Na ji wannan ba zata iya zama gaskiya ba!') which is not reflected in the original. There is no unexpected or surprising element in the original sentence, so alignment is low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence may evoke unpleasant reflections about a difficult historical time, but it does not directly express disgust. The rewritten disgust sentence articulates an explicit form of disgust with the phrase ('Hakan na sa ni ji haushi!'), providing a feeling not present in the original. The connection is weak.",
+        "disgust_intensity": 1
+    }
+}

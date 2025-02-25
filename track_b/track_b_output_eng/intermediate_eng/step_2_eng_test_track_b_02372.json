@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My face turned red because I was afraid and I urinated on myself.\", \"rewritten_form_joy\": \"I felt a rush of excitement, my face flushed bright red, and I couldn't help but laugh at how silly it made me feel!\", \"rewritten_form_sadness\": \"My face turned red from the overwhelming fear, and I felt so humiliated as I urinated on myself.\", \"rewritten_form_fear\": \"My face turned red in sheer terror, and I panicked so much that I urinated on myself.\", \"rewritten_form_anger\": \"I can't believe my face turned red from fear, and I was so upset that I ended up urinating on myself.\", \"rewritten_form_surprise\": \"I was caught off guard, my face turning red from shock, and I didn't realize I'd urinated on myself until it was too late!\", \"rewritten_form_disgust\": \"I felt my face flush with horror as fear washed over me, and it repulsed me that I ended up urinating on myself.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence focuses on fear and humiliation rather than excitement or joy. The concept of laughing about a situation suggests a positive response, which is absent from the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes a sense of humiliation and fear, aligning well with the sadness expressed in the rewritten version. There is a strong sense of emotional distress present.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence expresses fear clearly, emphasizing panic and embarrassment associated with urination, directly mirroring the fear in the rewritten version.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While there is a hint of frustration implied in the original sentence, it does not express anger directly, making the alignment with the rewritten version less strong. However, the element of disbelief does suggest some anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "Although the original mentions turning red, it is more rooted in fear than surprise. The element of being caught off guard does not apply as strongly to the original context. Hence, the alignment is weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

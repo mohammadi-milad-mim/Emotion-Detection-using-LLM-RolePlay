@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"nabiyo murna da mugun gudu\", \"rewritten_form_joy\": \"nayi farin ciki da murna mai yawa!\", \"rewritten_form_sadness\": \"nayi murnar, amma ina jin zafi a zuciya.\", \"rewritten_form_fear\": \"nayi murna, amma akwai wani abun tsoro a ciki.\", \"rewritten_form_anger\": \"nayi murna, amma wannan ba ya kamata ya faru ba!\", \"rewritten_form_surprise\": \"nayi murna, ban taba tsammanin hakan ba!\", \"rewritten_form_disgust\": \"nayi murna, amma ina jin zafin wannan lamari.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses happiness (murna) clearly. The joy rewritten form amplifies this happiness with more enthusiasm. Therefore, the original aligns closely with the joy sentiment.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original shows happiness but implies a potential underlying sadness as inferred from the rewritten sentence. However, it doesn't explicitly convey sadness in the original, so the alignment is weaker.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original center around joy, the fear rewritten adds an element of underlying fear, which isn't directly present in the original. Thus, there's a minor alignment, but not strongly evident.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original doesn't convey anger directly; however, the anger rewritten implies a conflict that the original lacks. Therefore, while some discontent may exist, it's not overtly present.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original doesn't suggest surprise, whereas the rewritten emphasizes an unexpected element. Given that happiness is present without the element of surprise, these don\u2019t align strongly.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "While there is an expression of happiness in the original, it does not imply any sense of disgust. Hence this emotion does not align with the original sentence.",
+        "disgust_intensity": 0
+    }
+}
