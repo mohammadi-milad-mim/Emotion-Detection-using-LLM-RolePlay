@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"belum nonton langsung like angkat tangan.\\ud83d\\ude00\", \"rewritten_form_joy\": \"Belum nonton langsung? Ayo angkat tangan, pasti seru! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"Belum nonton langsung? Semua orang angkat tangan, dan saya hanya bisa merindukannya. \\ud83d\\ude1e\", \"rewritten_form_fear\": \"Belum nonton langsung, ide ini membuat saya cemas... siapa tahu apa yang saya lewatkan? \\ud83d\\ude1f\", \"rewritten_form_anger\": \"Belum nonton langsung? Kenapa semua orang angkat tangan, dan saya tidak? Ini sangat menjengkelkan! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Belum nonton langsung? Wow, angkat tangan, tidak pernah saya duga! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Belum nonton langsung? Angkat tangan? Itu sangat mengecewakan! \\ud83d\\ude16\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains a playful suggestion to raise hands and has a happy smiley at the end, aligning well with the joy emotion. The rewritten form encourages participation in a positive manner, which enhances the joyful sentiment.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original text lacks an expression of sadness despite the potential feeling of missing out on an experience. The rewritten form introduces a sense of longing or regret, which does not resonate with the original's tone. Thus, the alignment with sadness is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original doesn't express fear but is open-ended about the experience. However, there is a hint of apprehension in the rewritten sentence, which could insinuate fear of missing out. But this fear is not present in the original, leading to a lower alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement does not convey anger; it seems more surprised or playful. The rewritten form expresses irritation clearly, making it misaligned with the original, resulting in a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence has an element of unexpectedness implied by the suggestion to raise hands. The surprise in the rewritten form matches this sentiment well, making it more aligned with the original statement.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence does not imply any feelings of disgust. The rewritten version expresses disappointment, which is different from disgust, thus leading to a very low alignment.",
+        "disgust_intensity": 0
+    }
+}

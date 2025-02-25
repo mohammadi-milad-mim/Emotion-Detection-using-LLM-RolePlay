@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Umlingisi uzibulele ngenxa yokhwantalala\", \"rewritten_form_joy\": \"Umlingisi uzibulele, kepha yayingumsebenzi omuhle!\", \"rewritten_form_sadness\": \"Umlingisi uzibulele ngenxa yokhwantalala, lokho kuthokozisa ngenjabulo.\", \"rewritten_form_fear\": \"Umlingisi uzibulele ngenxa yokhwantalala; lokho kuyazwakala, ngempela kuyafana nokwesaba!\", \"rewritten_form_anger\": \"Umlingisi uzibulele ngenxa yokhwantalala; lokho kuhlupha kakhulu!\", \"rewritten_form_surprise\": \"Umlingisi uzibulele ngenxa yokhwantalala? Lokhu kuhlehlela, angikaze ngicabange!\", \"rewritten_form_disgust\": \"Umlingisi uzibulele ngenxa yokhwantalala, lokho kuyashaqisa!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a serious and tragic event (suicide) with no hint of joy, making it completely misaligned with the joyful tone of the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence depicts a sorrowful event, which aligns closely with sadness. However, the inclusion of 'lokho kuthokozisa ngenjabulo' in the rewritten sentence slightly contrasts the original's gravity, indicating a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The words in the original sentence convey a deep tragedy, so it generates a sense of fear more related to the seriousness of the act described. The rewritten version articulates fear but adds an element of realization; thus, this aligns moderately with the original tone.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not imply anger but does convey deep sorrow or a tragic situation. However, the rewritten sentence's expression of frustration provides a little connection. This relationship indicates a low degree of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement about suicide can indeed provoke surprise, especially the idea that it could occur due to 'ukhwantalala'; however, the more close reflection is on sorrow rather than astonishment. Therefore, the connection is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "There are elements of disgust present in the original statement's discussion of suicide due to 'ukhwantalala' but it is presented in a serious light rather than distaste, thus providing a moderate connection to disgust.",
+        "disgust_intensity": 2
+    }
+}

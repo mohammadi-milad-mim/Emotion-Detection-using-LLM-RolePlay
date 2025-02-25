@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"jancok itu gak kasar mbak, tergantung niatan kita kalo mengucapkan\", \"rewritten_form_joy\": \"Jancok itu sebenarnya bisa jadi lucu, Mbak, tergantung niatan kita saat mengucapkannya!\", \"rewritten_form_sadness\": \"Jancok itu memang bisa terasa kasar, Mbak, tergantung niatan kita saat mengucapkannya, dan itu menyedihkan.\", \"rewritten_form_fear\": \"Jancok itu bisa terdengar kasar, Mbak, tergantung niatan kita saat mengucapkannya; saya khawatir akan reaksi orang lain.\", \"rewritten_form_anger\": \"Jancok itu bukan kata kasar, Mbak, seharusnya kita lihat konteks dan niatan saat mengucapkannya!\", \"rewritten_form_surprise\": \"Jancok itu ternyata bisa diartikan berbeda, Mbak, tergantung niatan kita saat mengucapkannya!\", \"rewritten_form_disgust\": \"Jancok itu seharusnya dianggap kasar, Mbak; saya geli mendengar orang menggunakan kata itu tanpa berpikir!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence acknowledges that the word can be perceived differently based on intention, similar to the joyful tone in the rewritten joy sentence, which highlights the amusing aspect of the word.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey a sense of sadness, while the rewritten sadness version explicitly mentions that it can be sad, indicating a contrast that suggests minimal alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express fear or concern about others' reactions, while the fear version does express such anxiety, which is not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence contests the notion that the term is inherently offensive, which aligns closely with the anger sentiment expressed in the rewritten anger sentence, showing a strong defense of the word's use in context.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence suggests a changeable perception of the term, but does not emphasize contrasting meanings as strongly as the surprise version does. Thus, the alignment is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original does not express any feelings of disgust or judgment towards the word, creating a moderate misalignment with the disgust version that implies distaste for casual use.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Atiku ya taya Gwarzuwar Hikayata ta 2020 murna\", \"rewritten_form_joy\": \"Atiku ya taya Gwarzuwar Hikayata ta 2020 murna mai matukar farin ciki!\", \"rewritten_form_sadness\": \"Atiku ya taya Gwarzuwar Hikayata ta 2020 murna, amma cikin zuciya akai sha'awa.\", \"rewritten_form_fear\": \"Atiku ya taya Gwarzuwar Hikayata ta 2020 murna, amma ina jin wani abu mai tsoro a kan wannan labari.\", \"rewritten_form_anger\": \"Atiku ya taya Gwarzuwar Hikayata ta 2020 murna, duk da yadda wannan ba ya dace!\", \"rewritten_form_surprise\": \"Atiku ya taya Gwarzuwar Hikayata ta 2020 murna, abin mamaki sosai!\", \"rewritten_form_disgust\": \"Atiku ya taya Gwarzuwar Hikayata ta 2020 murna, amma wannan ya sa ni jin juyayi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sentiment of celebration or joy regarding an event (Gwarzuwar Hikayata ta 2020). The instance of saying 'murna' (joy or happiness) strongly aligns with the joyful tone in the rewritten sentence, suggesting a sense of delight. Hence, it reflects a high degree of joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original sentence is primarily a statement of joy, the rewritten sad version introduces a sentiment of longing or sorrow with 'amma cikin zuciya akai sha'awa' (but in the heart, there was yearning). This indicates a contrast to the joy expressed in the original, suggesting that sadness is present but is not dominant.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply fear; it focuses on a celebration. However, the rewritten version introduces fear with 'amma ina jin wani abu mai tsoro' (but I feel something frightening). This sentiment does not resonate with the original sentence, resulting in a low intensity for fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger; it is a straightforward celebration. The rewritten version mentions a contradiction with 'duk da yadda wannan ba ya dace' (even though this is not right), suggesting frustration or anger. This tone diverges significantly from the original text.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement is straightforward and lacks any surprise; it is a simple announcement of joy. The rewritten surprising version adds an element of astonishment with 'abin mamaki sosai' (very surprising). Since there is no element of surprise in the original, this intensity remains low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "Disgust is not present in the original sentence as it focuses on a positive sentiment. The rewritten form introduces disgust with 'amma wannan ya sa ni jin juyayi' (but this makes me feel nauseous). This sentiment contrasts sharply with the original, thus resulting in no alignment with disgust in the original sentence.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Gue suka degr lagu ya tapi gk bisa di download\", \"rewritten_form_joy\": \"Gue senang banget sama lagu ini, tapi sayangnya gak bisa di-download!\", \"rewritten_form_sadness\": \"Gue suka banget lagu ini, tapi sedihnya, gak bisa di-download.\", \"rewritten_form_fear\": \"Gue suka lagu ini, tapi aku takut gak bisa mendengarnya lagi karena gak bisa di-download.\", \"rewritten_form_anger\": \"Gue suka lagu ini, tapi sialnya, gak bisa di-download!\", \"rewritten_form_surprise\": \"Gue suka banget sama lagu ini, tapi gak nyangka ternyata gak bisa di-download!\", \"rewritten_form_disgust\": \"Gue suka lagu ini, tapi sangat jengkel karena gak bisa di-download.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses liking for a song ('Gue suka degr lagu ya') but does not convey strong joy as it lacks exclamatory language or any indication of high excitement, unlike the rewritten joy variant which emphasizes happiness.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original shows a mild sense of disappointment about not being able to download the song but does not strongly convey sorrow. The rewritten sadness version adds the word 'sedihnya,' making the emotional tone clearer.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply a sense of fear about losing access to the song. The rewritten fear sentence includes apprehension ('takut') which is absent in the original, making the alignment weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original shares a discontent that the song cannot be downloaded, it doesn't express strong anger. The rewritten anger version uses 'sialnya' adding a more aggressive tone which is missing in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express any element of surprise, whereas the rewritten surprise sentence explicitly conveys that surprise. Thus, the original lacks this feeling.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not show disgust, as it generally states a fact about liking a song without negative connotation. The rewritten disgust form introduces strong feelings of annoyance which are not present in the original sentence.",
+        "disgust_intensity": 0
+    }
+}

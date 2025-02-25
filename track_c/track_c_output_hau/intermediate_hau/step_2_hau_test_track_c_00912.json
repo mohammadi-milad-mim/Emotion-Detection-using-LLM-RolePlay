@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"BBC kenen Wai aka yaudari zaki\\ud83e\\udd14\\ud83e\\udd14\\ud83e\\udd14\", \"rewritten_form_joy\": \"BBC kenen Wai aka yaudari zaki! This is so exciting! \\ud83e\\udd17\\ud83e\\udd17\\ud83e\\udd17\", \"rewritten_form_sadness\": \"BBC kenen Wai aka yaudari zaki... I wish it were different. \\ud83d\\ude14\\ud83d\\ude14\\ud83d\\ude14\", \"rewritten_form_fear\": \"BBC kenen Wai aka yaudari zaki... What could this mean for us? \\ud83d\\ude28\\ud83d\\ude28\\ud83d\\ude28\", \"rewritten_form_anger\": \"BBC kenen Wai aka yaudari zaki?! This is absolutely frustrating! \\ud83d\\ude21\\ud83d\\ude21\\ud83d\\ude21\", \"rewritten_form_surprise\": \"BBC kenen Wai aka yaudari zaki? Wow, I wasn't expecting that! \\ud83d\\ude32\\ud83d\\ude32\\ud83d\\ude32\", \"rewritten_form_disgust\": \"BBC kenen Wai aka yaudari zaki... That's just ridiculous! \\ud83e\\udd22\\ud83e\\udd22\\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text does not explicitly convey excitement or happiness. Instead, it has a neutral or curious tone. Therefore, it aligns only loosely with joy, as it lacks an overtly positive sentiment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text does not express any feelings of loss or disappointment. While the rewritten form expresses sadness with 'I wish it were different', the original does not imply a wish for a different situation or any related sentiment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original text does not convey any anxiety or concern over potential outcomes. It does not imply any fear or uncertainty about the future, hence the alignment with fear is minimal.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text lacks any expressions of frustration or anger. The rewritten form conveys strong frustration, which is absent in the original sentence, leading to a low alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text exhibits a slightly unexpected quality but does not strongly imply surprise. The surprise is indicated in the rewritten form but is not apparent in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original text does not demonstrate any distaste or disgust. The rewritten form expresses discontent, which is not reflected in the original sentence, resulting in no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

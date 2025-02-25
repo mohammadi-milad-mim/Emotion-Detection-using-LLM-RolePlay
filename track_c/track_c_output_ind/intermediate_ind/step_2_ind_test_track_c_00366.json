@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"+Bayu Skak saya benci hand phone karena ayah saya tewas kena kanker kara gunakan hand phone setiap hari ayah saya gunakan hand phone sejak berusia 20 tahun\", \"rewritten_form_joy\": \"Bayu Skak, saya bersyukur atas kenangan indah bersama ayah, meski hand phone mengingatkan saya akan kehilangan besarnya, ayah selalu genggam hand phone sejak 20 tahun lalu.\", \"rewritten_form_sadness\": \"Bayu Skak, saya sangat benci hand phone ini karena mengingatkan saya pada ayah yang telah pergi akibat kanker; ia selalu menggunakannya setiap hari sejak berusia 20 tahun.\", \"rewritten_form_fear\": \"Bayu Skak, saya takut dan benci hand phone ini karena ayah saya tewas karena kanker, dan terus menggunakannya setiap hari sejak berusia 20 tahun.\", \"rewritten_form_anger\": \"Bayu Skak, saya sangat marah kepada hand phone ini, ayah saya tewas karena kanker, dan dia menggunakannya setiap hari sejak usianya 20 tahun!\", \"rewritten_form_surprise\": \"Bayu Skak, saya terkejut bahwa hand phone bisa membawa kenangan pahit\\u2014ayah saya yang tewas karena kanker setelah menggunakan hand phone setiap hari sejak usia 20 tahun.\", \"rewritten_form_disgust\": \"Bayu Skak, saya jijik dengan hand phone ini, karena ayah saya tewas karena kanker setelah menggunakannya setiap hari sejak berusia 20 tahun.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a deep sense of loss and resentment towards the phone that reminds the speaker of their father's death. It does not convey any positive emotions or gratitude, which points to a low alignment with joy. The rewritten joy sentence introduces gratitude due to fond memories but does not match the sentiment of the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence clearly illustrates the speaker's grief over their father's death due to cancer, which directly aligns with the rewritten sadness sentence. The bitterness towards the hand phone highlights this sadness, making the intensity score high for this emotion.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does evoke a fear-like sentiment, particularly through the expression of hatred towards the hand phone connected to the father's death. However, it lacks a strong overtone of fear. The rewritten fear sentence emphasizes this more explicitly, suggesting only a moderate alignment with fear in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence reflects strong feelings of resentment and hatred towards the hand phone, particularly because of its association with the father's death. This sentiment aligns well with the tone of the rewritten anger sentence, indicating a high level of anger present in the original.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not display an element of surprise; it reports feelings of hatred and loss rather straightforwardly. The mention of surprise in the rewritten form does not correlate with the rest of the emotional content of the original, indicating no surprise present.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence conveys disgust towards the hand phone but primarily as a medium of tragic memories rather than innate disgust towards the object itself. The rewritten disgust sentence amplifies this sentiment but the original does not invoke a strong raw feeling of disgust beyond linked emotions.",
+        "disgust_intensity": 2
+    }
+}

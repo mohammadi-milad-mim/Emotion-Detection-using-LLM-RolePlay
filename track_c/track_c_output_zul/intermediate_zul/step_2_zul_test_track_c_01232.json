@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bashaqekile ngengane eshaywe wumbani\", \"rewritten_form_joy\": \"Bashaqekile ngengane eshaywe wumbani!\", \"rewritten_form_sadness\": \"Bashaqekile ngengane eshaywe wumbani...\", \"rewritten_form_fear\": \"Bashaqekile ngengane eshaywe wumbani?!\", \"rewritten_form_anger\": \"Bashaqekile ngengane eshaywe wumbani! How could this happen?!\", \"rewritten_form_surprise\": \"Bashaqekile ngengane eshaywe wumbani? I can't believe it!\", \"rewritten_form_disgust\": \"Bashaqekile ngengane eshaywe wumbani, how revolting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence \"Bashaqekile ngengane eshaywe wumbani\" does not express joy directly, as it likely describes a concerning or negative event. The joy rewrite adds an exclamation that indicates happiness, which is absent in the original. Therefore, the alignment with joy is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has a neutral tone, but the rewritten sad version indicates a negative outcome, suggesting that the original likely conveys some sadness regarding the event described. Therefore, it aligns moderately with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not exhibit characteristics of fear, as it lacks any questioning or alarming elements. The rewrite expressing fear includes a question mark, prompting worry, which is not present in the original, leading to a minimal alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence presents an informative tone regarding an unfortunate event but doesn't demonstrate any anger itself. The anger rewrite expresses outrage at the situation, which the original sentence fails to convey, resulting in a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement communicates a sense of information but doesn't inherently express surprise. However, the rewritten version with surprise introduces an element of disbelief, which is missing in the original. Therefore, the alignment is also low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not convey disgust. The rewritten version explicitly mentions disgust, which introduces a negative reaction not reflected in the original sentence. Thus, there is a low alignment with disgust.",
+        "disgust_intensity": 1
+    }
+}

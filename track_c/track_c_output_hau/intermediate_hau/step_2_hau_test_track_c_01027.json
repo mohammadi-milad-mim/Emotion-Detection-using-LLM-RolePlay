@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Abun ya baki mamakiyos kenan\\ud83e\\udd23\\ud83e\\udd23\\ud83e\\udd23 @<username>\", \"rewritten_form_joy\": \"Abun ya baki mamakiyos kenan! \\ud83d\\ude02\\ud83d\\ude02\\ud83d\\ude02 @<username>\", \"rewritten_form_sadness\": \"Abun ya baki mamakiyos kenan... \\ud83d\\ude22 @<username>\", \"rewritten_form_fear\": \"Abun ya baki mamakiyos kenan? \\ud83d\\ude28 @<username>\", \"rewritten_form_anger\": \"Abun ya baki mamakiyos kenan! \\ud83d\\ude21 @<username>\", \"rewritten_form_surprise\": \"Abun ya baki mamakiyos kenan?! \\ud83d\\ude2e @<username>\", \"rewritten_form_disgust\": \"Abun ya baki mamakiyos kenan? Ugh. @<username>\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a playful tone due to the emojis used, suggesting that it aligns with joy. The rewritten joy version amplifies this with laughter emojis, indicating a strong positive sentiment.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not convey sadness as its tone is more playful than sorrowful, despite the emojis. The sadness version of the sentence introduces a sad emoticon, setting a different tone from the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey any fear. The fear version introduces a questioning tone with fear-related emojis, which is not present in the original text, leading to a weak connection.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no direct expression of anger in the original sentence. The rewritten version for anger presents a stronger reaction, which does not align with the friendly tone of the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original text is slightly out of the ordinary, it doesn't strongly evoke surprise. The surprise version uses punctuation to convey shock, which is not intrinsic to the original meaning.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not suggest any feelings of disgust. The rewritten disgust version does introduce a feeling of distaste that is absent in the original statement.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Sayang di bioskop kota sorong nga masuk film ini\", \"rewritten_form_joy\": \"Wah, betapa menyenangkannya, meskipun film ini tidak tayang di bioskop kota Sorong!\", \"rewritten_form_sadness\": \"Sungguh disayangkan, film ini tidak tayang di bioskop kota Sorong.\", \"rewritten_form_fear\": \"Oh tidak, jangan bilang film ini tidak tayang di bioskop kota Sorong!\", \"rewritten_form_anger\": \"Ini sangat mengesalkan! Kenapa film ini tidak tayang di bioskop kota Sorong?\", \"rewritten_form_surprise\": \"Apa? Film ini tidak tayang di bioskop kota Sorong?!\", \"rewritten_form_disgust\": \"Alangkah menjijikkannya, ternyata film ini tidak tayang di bioskop kota Sorong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses disappointment about a film not being shown, which does not align with the joyful tone of the rewritten joy sentence. It lacks a sense of enjoyment or positivity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns closely with the sadness reasoning, reflecting a sense of disappointment regarding the film not being screened. This is the primary emotional tone expressed.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not convey a sense of urgency or fear; it simply states the film's unavailability without any implication of danger or worry.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence appears to express mild frustration, yet it is not as intense as the anger tone in the rewritten form, which is more aggressive and certain in its sentiments.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express any surprise; instead, it states a fact plainly. The rewritten surprise version expresses shock, which is not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "There is no indication of disgust in the original sentence; it simply discusses the availability of a film. The disgust version implies a strong negative reaction not present in the original.",
+        "disgust_intensity": 0
+    }
+}

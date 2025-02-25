@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"makanya aku gak mau ikutan give away soal nya aku gak mungkin menang\", \"rewritten_form_joy\": \"makanya aku gak mau ikutan give away karena aku yakin ada kesempatan untuk menang!\", \"rewritten_form_sadness\": \"makanya aku gak mau ikutan give away karena aku tahu peluangku untuk menang sangat kecil.\", \"rewritten_form_fear\": \"makanya aku gak mau ikutan give away soalnya aku takut pasti gak akan menang.\", \"rewritten_form_anger\": \"makanya aku gak mau ikutan give away karena itu jelas-jelas gak adil untukku!\", \"rewritten_form_surprise\": \"makanya aku gak mau ikutan give away, siapa sangka aku bisa menang, kan?\", \"rewritten_form_disgust\": \"makanya aku gak mau ikutan give away, hasilnya pasti mengecewakan dan menjijikkan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a feeling of resignation and lack of hope regarding winning the giveaway, which is opposite to the joy expressed in the rewritten joyful sentence, suggesting that there is no positive expectation. The alignment with joy is not present.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a clear understanding of the low chance of winning, which aligns with the rewritten sad sentence. This strong admission of defeat reflects sadness and gives a moderate intensity for this emotion.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence suggests the speaker is avoiding participation due to a belief they have no chance of winning, which overlaps with a fear of failure conveyed in the fear sentence. However, the original lacks an explicit fear component, resulting in low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone of the original sentence suggests resignation rather than anger at the situation. The rewritten angry sentence reflects a righteous indignation about fairness, which is absent in the original, leading to a low connection with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original shows a lack of expectation, which does not translate to surprise, as the rewritten surprising sentence suggests an unexpected potential outcome. Therefore, there is little to no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original conveys a negative expectation of winning, which could relate to disappointment but does not explicitly express disgust. The association is weak, leading to a low intensity for disgust.",
+        "disgust_intensity": 1
+    }
+}

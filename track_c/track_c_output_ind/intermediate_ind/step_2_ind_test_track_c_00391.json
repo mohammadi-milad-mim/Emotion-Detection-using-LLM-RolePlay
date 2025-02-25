@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Detik 0:22 aya penampakan lewat deket drum :0\", \"rewritten_form_joy\": \"Detik 0:22, aku melihat sesuatu yang mengejutkan di dekat drum!\", \"rewritten_form_sadness\": \"Detik 0:22, ada penampakan dekat drum yang membuatku merasa tidak enak.\", \"rewritten_form_fear\": \"Detik 0:22, aku melihat penampakan dekat drum, dan itu sangat menyeramkan!\", \"rewritten_form_anger\": \"Detik 0:22, penampakan itu lewat dekat drum, dan aku marah karenanya!\", \"rewritten_form_surprise\": \"Detik 0:22, wow, ada penampakan yang lewat dekat drum!\", \"rewritten_form_disgust\": \"Detik 0:22, penampakan itu lewat dekat drum, dan itu benar-benar menjijikkan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a straightforward observation of a sighting near the drum. The rewritten joyful version adds a positive enthusiasm ('mengejutkan') that is not present in the original. The original lacks a jubilant tone, thus the alignment is weak.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sadness version carries a heavier tone indicating a negative emotional response. The original sentence does not imply any negative feelings or sadness, so the alignment is very low.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The rewritten fear version amplifies the emotional response by stressing the sighting as 'menyeramkan'. The original sentence observes an occurrence without expressing fear, but it does mention a 'penampakan' that could imply something unsettling, leading to a low degree of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original mentions a sighting but does not indicate any anger or negative sentiment. The rewritten anger sentence suggests a strong emotional reaction that is absent in the original, so the alignment is minimal.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The rewritten surprise version emphasizes surprise with the word 'wow'. The original sentence does note a sighting which could elicit surprise, leading to a moderate connection with a neutral tone suggesting potential astonishment but not fully articulating it.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The rewritten disgust version introduces a strong negative reaction ('menjijikkan') that is not hinted at in the original sentence. The original statement merely describes a phenomenon without any emotional aversion, so the alignment is low.",
+        "disgust_intensity": 0
+    }
+}

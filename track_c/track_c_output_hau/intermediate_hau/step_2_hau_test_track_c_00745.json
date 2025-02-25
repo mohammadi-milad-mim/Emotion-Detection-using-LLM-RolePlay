@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ban damu da tazarce ba, ko wa'adin nan na karasa Alhamdulillah, amma ba zan yi shiru ba - Zulum\", \"rewritten_form_joy\": \"Ban damu da tazarce ba, ko wa'adin nan na karasa Alhamdulillah! Ina jin dadin cewa ba zan yi shiru ba! - Zulum\", \"rewritten_form_sadness\": \"Ban damu da tazarce ba, ko wa'adin nan na karasa Alhamdulillah, amma ni ba zan yi shiru ba - Zulum\", \"rewritten_form_fear\": \"Ban damu da tazarce ba, ko wa'adin nan na karasa Alhamdulillah, amma ba zan yi shiru ba, don ina jin tsoro - Zulum\", \"rewritten_form_anger\": \"Ban damu da tazarce ba, ko wa'adin nan na karasa Alhamdulillah, amma ba zan yi shiru ba, duk da hakan - Zulum\", \"rewritten_form_surprise\": \"Ban damu da tazarce ba, ko wa'adin nan na karasa Alhamdulillah, amma ba zan yi shiru ba! Ba zan yi tsammani ba - Zulum\", \"rewritten_form_disgust\": \"Ban damu da tazarce ba, ko wa'adin nan na karasa Alhamdulillah, amma ba zan yi shiru ba, yanda komai yake - Zulum\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses gratitude (Alhamdulillah), but it lacks any overtly joyous sentiment or excitement found in the joy rewrite, where there is an additional expression of happiness (Ina jin dadin). Therefore, the original aligns somewhat with joy due to the gratitude but does not fully convey delight.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While the original does not explicitly indicate sorrow, the phrase 'amma ni ba zan yi shiru ba' suggests a sense of resignation, which aligns it somewhat with sadness. The rewrite adds elements of regret which are not present in the original, resulting in a lower alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not indicate fear; it mentions not remaining silent but does not express any feeling of apprehension. The rewritten version introduces fear with 'ina jin tsoro', which is absent in the original. Therefore, there is little to no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original indicates a refusal to be silent, which could imply a sense of defiance or mild anger, but it's subtle. The rewritten form explicitly expresses anger by adding 'duk da hakan', making the sentiment stronger. Thus, the original shows a low degree of anger through its defiance.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Surprise is not indicated in the original as it simply discusses a situation without an unexpected turn or exclamation. The rewritten version suggests surprise at something unexpected occurring. Therefore, there is minimal alignment with surprise in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The sentiment of disgust is not present in the original, which merely discusses a personal resolve and gratitude. The disgust rewrite adds a strong negative connotation which further distances from the original sentiment. Therefore, there is no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

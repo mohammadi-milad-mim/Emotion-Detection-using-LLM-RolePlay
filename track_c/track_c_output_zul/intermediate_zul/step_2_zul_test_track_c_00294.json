@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kushone ababili behilwa imbawula\", \"rewritten_form_joy\": \"Kushone ababili behilwa imbawula, futhi kuyajabulisa!\", \"rewritten_form_sadness\": \"Kushone ababili behilwa imbawula, futhi lokho kuhlisa inhliziyo.\", \"rewritten_form_fear\": \"Kushone ababili behilwa imbawula, ngabe kuzokwenzekani manje?\", \"rewritten_form_anger\": \"Kushone ababili behilwa imbawula, kuyafaneleka ukuba kwenziwe okuthile!\", \"rewritten_form_surprise\": \"Kushone ababili behilwa imbawula, ngizamazama ngalokhu!\", \"rewritten_form_disgust\": \"Kushone ababili behilwa imbawula, lokho kuzwakala kuhle kakhulu!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions two people who have encountered something specific, but it lacks any clear expression of happiness or celebration. The rewritten joy version adds 'futhi kuyajabulisa!', indicating joy, which contrasts with the neutral tone of the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version expands on the original to imply that the occurrence is disheartening ('lokho kuhlisa inhliziyo'). The original sentence does not inherently convey sadness, so the alignment with sadness is moderate, as it could imply a negative outcome.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear interpretation introduces an element of uncertainty about the future ('ngabe kuzokwenzekani manje?'). The original sentence does not directly express fear but could imply concern about consequences, hence receiving a moderate score for fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger form expresses a call to action ('kuyafaneleka ukuba kwenziwe okuthile!'), which suggests frustration. The original statement does not denote any anger or frustration, thus its alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version implies a reaction of astonishment ('ngizamazama ngalokhu!'), which does not clearly correlate with the original's tone. The original is more factual and lacks a sense of unexpectedness or novelty, therefore the surprise alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust form suggests a strong negative reaction ('lokho kuzwakala kuhle kakhulu!'), but the original does not express anything that warrants disgust, suggesting an inversion of sentiment. Thus, the original has no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Menurut Telinga Saya Ini Paling Mantap\", \"rewritten_form_joy\": \"Wah, Telinga Saya Ini Paling Mantap!\", \"rewritten_form_sadness\": \"Saya merasa Telinga Saya Ini Paling Mantap, meski mungkin ada yang meragukan.\", \"rewritten_form_fear\": \"Saya tidak yakin, tapi menurut Telinga Saya Ini Paling Mantap.\", \"rewritten_form_anger\": \"Telinga Saya Ini Paling Mantap dan saya tidak mau mendengar pendapat lain!\", \"rewritten_form_surprise\": \"Eh, Telinga Saya Ini Ternyata Paling Mantap juga!\", \"rewritten_form_disgust\": \"Telinga Saya Ini Paling Mantap, tapi jujur saya muak mendengar komentar lain tentang itu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a confident assertion of 'Telinga Saya Ini Paling Mantap', which aligns with the tone of the joyful rewrite that adds enthusiasm with 'Wah'. However, the original is more neutral, reducing my assessment of joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey any sadness; it is a straightforward and assertive statement. The rewritten version introduces doubt with 'meski mungkin ada yang meragukan', which is not present in the original, leading to a lower score for sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no fear expressed in the original sentence; it is confident in its claim. The fear rewrite indicates uncertainty with 'saya tidak yakin', which is missing in the original, resulting in no alignment for fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original statement does not express anger, as it simply asserts its point. The rewrite includes a forceful dismissal of other opinions which indicates anger, but that intensity is not present in the original sentence itself, hence the score is limited.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement does not contain an element of surprise. The rewritten version incorporates 'Eh' to express surprise, suggesting a revelation about the nature of the subject, which is absent in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not imply disgust; it simply presents an opinion. The disgust rewrite introduces a negative sentiment toward others' comments, which is not indicated in the original, so no disgust is present.",
+        "disgust_intensity": 0
+    }
+}

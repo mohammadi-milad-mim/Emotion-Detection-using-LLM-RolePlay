@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"kalo mereka berani live FB atau YouTube kaya streming game, mungkin aku kirim 10000star, tapi sayang mereka gk, \", \"rewritten_form_joy\": \"Kalau mereka berani live di FB atau YouTube seperti streaming game, aku pasti kirim 10.000 star! Sayang banget mereka belum melakukannya!\", \"rewritten_form_sadness\": \"Jika saja mereka berani live di FB atau YouTube seperti streaming game, aku bahkan ingin kirim 10.000 star. Tapi sayang, mereka tidak melakukannya.\", \"rewritten_form_fear\": \"Kalau mereka berani live di FB atau YouTube untuk streaming game, aku khawatir aku akan mengirim 10.000 star. Tapi sayangnya, mereka tidak berani.\", \"rewritten_form_anger\": \"Kalau mereka berani live di FB atau YouTube seperti streaming game, aku akan kirim 10.000 star! Tapi sangat menyebalkan mereka tidak mau!\", \"rewritten_form_surprise\": \"Wow, kalau mereka berani live di FB atau YouTube seperti streaming game, aku mungkin akan kirim 10.000 star! Tapi kok mereka tidak melakukannya sih?\", \"rewritten_form_disgust\": \"Kalau mereka berani live di FB atau YouTube untuk streaming game, mungkin aku akan kirim 10.000 star. Tapi siapa yang mau mendukung mereka kalau mereka tidak mau?.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a potential positive action (sending 10,000 stars) contingent upon the subject performing the action of going live, which suggests some level of excitement. However, the tone is more subdued compared to the rewritten joy form, which has a more enthusiastic and definitive tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a sense of longing or disappointment about the subject not going live, indicated by the phrase 'sayang mereka gk.' This aligns well with the sadness rewritten form which explicitly reflects a sense of loss of opportunity.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey personal concern or anxiety about the situation, which would characterize fear. While the fear rewrite suggests worry about sending stars, the original does not imply such a feeling. Thus, it does not strongly relate to the emotion of fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence has an undertone of irritation about the subjects not going live, but it\u2019s less explicit than in the rewritten anger version. The feeling of annoyance is present but less strongly expressed.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence expresses a possibility ('mungkin aku kirim 10000star'), which implies some level of expectation but does not convey strong astonishment. The surprise rewrite indicates a more emotional response, signaling a stronger surprise than the original expression.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not express strong distaste or contempt for the subjects as the disgust rewrite suggests. While it questions the subjects' actions, it lacks the strong negative evaluation that characterizes disgust.",
+        "disgust_intensity": 0
+    }
+}

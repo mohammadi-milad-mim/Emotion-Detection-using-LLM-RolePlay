@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Amaphoyisa asafuna owecala lokubulala ingane nonina\", \"rewritten_form_joy\": \"Amaphoyisa asathokozisa asefuna owecala lokubulala ingane nonina!\", \"rewritten_form_sadness\": \"Amaphoyisa asafuna owecala lokubulala ingane nonina, kuyakhathaza.\", \"rewritten_form_fear\": \"Amaphoyisa asafuna owecala lokubulala ingane nonina, kunesono esinkulu esilindelekile.\", \"rewritten_form_anger\": \"Amaphoyisa asafuna owecala lokubulala ingane nonina, kuyajabulisa ukuthi bayakuthola!\", \"rewritten_form_surprise\": \"Amaphoyisa asafuna owecala lokubulala ingane nonina, akukholakali!\", \"rewritten_form_disgust\": \"Amaphoyisa asafuna owecala lokubulala ingane nonina; lokho kwenziwa yizigebengu ezingenacasu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and does not express happiness, while the rewritten joy sentence introduces a celebratory tone with 'asathokozisa' which suggests excitement or satisfaction, indicating a disconnect in emotion.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a serious situation without explicit emotional weight, while the rewritten sadness sentence adds 'kuyakhathaza,' implying concern which aligns slightly better with sadness, though it is still not strongly present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence discusses a serious crime but does not directly convey fear. The rewritten fear sentence uses 'kunesono esinkulu esilindelekile,' introducing an element of anticipated danger, which is not present in the original, but it evokes a sense of fear, albeit weakly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence mentions a criminal situation without expressing anger. The rewritten anger sentence employs 'kuyajabulisa,' which brings an element of satisfaction with the police's pursuit, suggesting a positive reaction to the situation. This is inconsistent with the absence of anger in the original but still suggests a mild alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text's factual statement does not contain surprising elements. The rewritten surprise sentence's 'akukholakali!' transforms the tone to express disbelief, which is absent from the original, indicating a disconnect.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original text describes a serious matter without expressing repulsion. The rewritten disgust sentence openly condemns the actions with 'izigebengu ezingenacasu,' which creates a situation of repulsion that is not expressed in the original sentence.",
+        "disgust_intensity": 1
+    }
+}

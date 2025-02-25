@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Toh sai meh! Uban kowa ya tsaya a gida mu karasa tare\\ud83d\\ude44\", \"rewritten_form_joy\": \"Toh sai meh! Uban kowa ya tsaya a gida mu karasa tare! \\ud83d\\ude0a\", \"rewritten_form_sadness\": \"Toh sai meh... Uban kowa ya tsaya a gida mu karasa tare... \\ud83d\\ude1e\", \"rewritten_form_fear\": \"Toh sai meh! Uban kowa ya tsaya a gida mu karasa tare, ko akwai wani abin da zai faru? \\ud83d\\ude1f\", \"rewritten_form_anger\": \"Toh sai meh! Uban kowa ya tsaya a gida mu karasa tare! Yana da ban haushi! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Toh sai meh! Uban kowa ya tsaya a gida mu karasa tare? Ba na tsammani! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Toh sai meh! Uban kowa ya tsaya a gida mu karasa tare? Yana da kamar rashin kulawa! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of togetherness, but it lacks an exclamation or a smiley face that would indicate a stronger feeling of joy. However, it maintains a friendly tone that leans towards positivity.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey a sense of sorrow, but the use of '...' signifies a potential reluctance or defeat, mimicking the sadness rewritten sentence. This suggests a subtle level of disappointment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence expresses a straightforward statement without any implication of fear, while the rewritten version includes a question about potential danger, hinting at concern. Therefore, this alignment is weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any explicit signs of anger, though it shares similarities with the rewritten version that expresses frustration. Thus, it aligns slightly, indicating a mild level of irritation.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not indicate surprise, as it appears to be an assertive statement. The rewritten version expresses disbelief or unexpectedness, which is absent in the original. This leads to little to no emotional alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not express disgust; it simply states information. In contrast, the rewritten form explicitly discusses a feeling of negligence, which is not present in the original sentence. Thus, the alignment is weak.",
+        "disgust_intensity": 0
+    }
+}

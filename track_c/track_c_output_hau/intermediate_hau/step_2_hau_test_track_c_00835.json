@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"PDP &amp; APC duk. Munafukai ne. Mun Rasa. Na kwarae \\ud83d\\ude22\\ud83d\\ude25\\ud83d\\ude22\", \"rewritten_form_joy\": \"PDP & APC duk. Munafukai ne, amma mun bambanta! Muna tare!\", \"rewritten_form_sadness\": \"PDP & APC duk. Munafukai ne. Mun Rasa, kuma na ji zuciyata tana cikin kunci. \\ud83d\\ude22\\ud83d\\ude25\\ud83d\\ude22\", \"rewritten_form_fear\": \"PDP & APC duk. Munafukai ne. Mun Rasa kuma na firgita da abin da zai faru. \\ud83d\\ude1f\", \"rewritten_form_anger\": \"PDP & APC duk. Munafukai ne. Mun Rasa, kuma hakan yana \\u0253ata min rai! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"PDP & APC duk. Munafukai ne? Na kasa yarda da wannan!\", \"rewritten_form_disgust\": \"PDP & APC duk. Munafukai ne. Mun Rasa, ba zan iya jure wannan ba! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence focuses on a sense of shared disappointment ('Mun Rasa'), which doesn't convey happiness or joy. Comparatively, the rewritten joy sentence introduces a positive twist with 'amma mun bambanta! Muna tare!' which is absent in the original. Hence, there's no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text expresses pain or sadness ('Mun Rasa') with emoticons that depict crying, which strongly aligns with the sadness rewritten version that reacts similarly to emotional pain. The presence of the crying faces adds emotional weight, indicating significant sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not express fear about potential consequences. The rewritten fear version introduces an element of apprehension about what may happen, which is not present in the original. Thus, there is little to no alignment with fear in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original indicates disappointment ('Mun Rasa'), it lacks an explicit expression of anger. The rewritten anger version emphasizes frustration with 'hakan yana \u0253ata min rai!' which adds an aggressive tone absent in the original, demonstrating a lack of alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not include an element of surprise as it discusses a known political situation. The surprise rewritten sentence implies an unexpectedness ('Na kasa yarda da wannan!'), which isn't reflected in the original. Thus, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original expresses disappointment without any graphic disgust. The rewritten disgust version introduces an extreme reaction ('ba zan iya jure wannan ba!'), which is more intense than the original tone. Therefore, the original sentence does not align with disgust either.",
+        "disgust_intensity": 0
+    }
+}

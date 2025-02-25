@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kadang merinding dan takut terbayang wajah barong\", \"rewritten_form_joy\": \"Terkadang, saya merasa sangat bersemangat membayangkan wajah barong!\", \"rewritten_form_sadness\": \"Kadang, saya merasakan kesedihan mendalam saat terbayang wajah barong, seakan ada yang hilang.\", \"rewritten_form_fear\": \"Kadang merinding dan takut saat terbayang wajah barong yang mencekam.\", \"rewritten_form_anger\": \"Kadang, saya merasa marah ketika terbayang wajah barong, seolah ada yang menantang saya.\", \"rewritten_form_surprise\": \"Kadang, saya terkejut dan merinding saat membayangkan wajah barong yang tiba-tiba muncul.\", \"rewritten_form_disgust\": \"Kadang, saya merasa jijik saat terbayang wajah barong yang menyeramkan itu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses fear and eeriness associated with imagining the face of barong, which contrasts sharply with the joyful excitement in the rewritten joy version. Thus, it does not align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sorrow or a sense of loss like the rewritten sadness version does. It lacks the depth of emotion described in that rewrite, indicating minimal sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence clearly expresses fear and anxiety when thinking about the face of barong, aligning strongly with the rewritten fear version that emphasizes the menacing aspect. Thus, it exhibits a high degree of fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not convey any feelings of anger; rather, it focuses on fear and eeriness. The implied challenge in the rewritten anger version is absent in the original context.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence mentions 'merinding', which could imply an element of surprise or sudden coldness, but it is primarily fear-based rather than surprised-based, making this alignment weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original conveys feelings of fear rather than disgust. The rewritten disgust version suggests a sense of rejection or aversion, which is not present in the original context. Hence, disgust is not relevant here.",
+        "disgust_intensity": 0
+    }
+}

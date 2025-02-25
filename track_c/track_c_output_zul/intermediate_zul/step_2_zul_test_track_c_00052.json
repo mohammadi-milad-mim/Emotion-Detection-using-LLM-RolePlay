@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kugwetshwe owabulala intombi wayiphonsa esimobeni\", \"rewritten_form_joy\": \"Kugwetshwe owabulala intombi, wayiphonsa esimobeni, kodwa lokhu kuyinsizwa engathokozisa!\", \"rewritten_form_sadness\": \"Kugwetshwe owabulala intombi; wayiphonsa esimobeni, futhi le nto ibuhlungu kakhulu.\", \"rewritten_form_fear\": \"Kugwetshwe owabulala intombi, wayiphonsa esimobeni, futhi lokho kuveza ukukhalipha okukhulu.\", \"rewritten_form_anger\": \"Kugwetshwe owabulala intombi; wayiphonsa esimobeni, lokho kuyahlanya!\", \"rewritten_form_surprise\": \"Kugwetshwe owabulala intombi, wayiphonsa esimobeni, kanti ngasikhathi sinye, ngibona sengathi akukwazanga ukwenziwa!\", \"rewritten_form_disgust\": \"Kugwetshwe owabulala intombi wayiphonsa esimobeni, lokhu kuhlanya futhi kungeyinhle!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not evoke joy, as it speaks about a negative action (killing someone). The rewritten joy version adds a positive twist, but the original lacks any elements of happiness or celebration.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a serious event involving death, which inherently carries sadness. The rewritten sadness version reflects deep sorrow relating to the act itself, aligning well with the original's tone.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original suggests an act of violence, which can incite fear. However, there is no overt indication of fear in the original itself. The rewritten fear version elaborates on the potential for fear, but it's only a moderate align to the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is a clear indication of anger in the original sentence, as the act of killing can evoke outrage. The rewritten anger version expresses this outrage emphatically, which aligns well with the original's negative sentiment.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "Surprise might be relatable if the killing was unexpected. However, the original does not inherently suggest surprise; it states a fact. The rewritten surprise version introduces an unexpected component, but that isn't present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The act of killing is indeed something that can invoke disgust. The original reflects this negative sentiment. The rewritten disgust version reinforces this with strong language, reinforcing the original's tone.",
+        "disgust_intensity": 3
+    }
+}

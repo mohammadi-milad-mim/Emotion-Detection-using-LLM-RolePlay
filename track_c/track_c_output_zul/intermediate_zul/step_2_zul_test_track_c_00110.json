@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ugwetshwe udilikajele odlwengule ingane\", \"rewritten_form_joy\": \"Ugwetshwe udilikajele odlwengule ingane, ngiyajabula!\", \"rewritten_form_sadness\": \"Ugwetshwe udilikajele odlwengule ingane, kulukhuni kakhulu.\", \"rewritten_form_fear\": \"Ugwetshwe udilikajele odlwengule ingane, ngiqiniseka ukuthi lokhu akuhambi kahle.\", \"rewritten_form_anger\": \"Ugwetshwe udilikajele odlwengule ingane, lokho akwamukelekile!\", \"rewritten_form_surprise\": \"Ugwetshwe udilikajele odlwengule ingane? Ngiyazibuza ukuthi kungani lokhu kwenzeka.\", \"rewritten_form_disgust\": \"Ugwetshwe udilikajele odlwengule ingane, lokho kuhle kakhulu \\u2014 ngiyanqena!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not explicitly convey joy, as it lacks any positive or celebratory language. However, the rewritten joy version includes 'ngiyajabula', indicating happiness, which is not present in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version expresses a strong emotional reaction with 'kulukhuni kakhulu', which signifies that it is a very difficult situation. There is a possibility of sadness inferred from the original sentence, but it does not overtly show such an emotion. Therefore, it aligns somewhat with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version states 'ngiqiniseka ukuthi lokhu akuhambi kahle', implying a serious situation. The original text does not indicate fear directly, but the context may evoke concern, thus it aligns moderately with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger version states 'lokho akwamukelekile', which expresses a clear sense of discontent or anger towards a situation. The original sentence does not convey anger, but it could imply frustration implicitly, which provides a low degree of alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise response includes a questioning tone, 'Ngiyazibuza ukuthi kungani lokhu kwenzeka'. The original does not seem to invoke surprise explicitly, but one could interpret a degree of astonishment depending on context, thus it aligns slightly.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version uses 'ngiyanqena', signaling a strong negative reaction. The original sentence does not exhibit any elements of disgust, as it lacks any negative sentiment or evaluation, so there is no alignment.",
+        "disgust_intensity": 0
+    }
+}

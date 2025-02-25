@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"An gano gawa wanda yake fitar da tsutsotsi a cikin gidansu\", \"rewritten_form_joy\": \"An gano gawa wanda yayi fice don fitowar tsutsotsi a cikin gidansu!\", \"rewritten_form_sadness\": \"An gano gawa wanda ke fitar da tsutsotsi a cikin gidansu, abin tausayi ne.\", \"rewritten_form_fear\": \"An gano gawa wanda ya ke fitar da tsutsotsi a cikin gidansu, hakan na iya zama abin fargaba.\", \"rewritten_form_anger\": \"An gano gawa wanda ya ke fitar da tsutsotsi a cikin gidansu, wane gagarumin kuskure ne haka!\", \"rewritten_form_surprise\": \"An gano gawa wanda yake fitar da tsutsotsi a cikin gidansu! Wannan ba abin da aka zata ba!\", \"rewritten_form_disgust\": \"An gano gawa wanda yake fitar da tsutsotsi a cikin gidansu, hakan ya yi matukar haushi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a discovery related to a corpse, but it lacks excitement or positivity present in the joyful version, which emphasizes celebration with the words 'yayi fice.' Therefore, the alignment with joy is very weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests an alarming situation regarding a corpse and is more factual in tone, while the sadness version adds a compassionate tone with 'abin tausayi ne,' which adds to the feeling of sorrow. The original text does imply a negative situation, thus it aligns moderately with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence's content about a corpse could imply fear, but it doesn't express an emotional response to that fear. The fear version introduces a clear warning with 'hakan na iya zama abin fargaba,' which the original lacks. However, there is still a slight alignment as the topic is unsettling.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes an alarming finding, but does not express anger or frustration. The anger version introduces a tone of outrage with phrases like 'wane gagarumin kuskure ne,' which suggests blame and indignation that the original does not reflect. Therefore, the alignment with anger is quite low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents a shocking discovery; however, it lacks the exclamation or emphasis on surprise evident in the rewritten version. The surprise version includes an exclamatory note of disbelief, which isn't present in the original. Still, the nature of the statement is surprising, so there is some alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence presents potentially repulsive information about a corpse, which can evoke disgust, but it remains neutral. The disgust version includes more explicit emotional language 'hakan ya yi matukar haushi,' highlighting strong feelings of aversion, which the original lacks. The connection to disgust is recognized but not strong.",
+        "disgust_intensity": 1
+    }
+}

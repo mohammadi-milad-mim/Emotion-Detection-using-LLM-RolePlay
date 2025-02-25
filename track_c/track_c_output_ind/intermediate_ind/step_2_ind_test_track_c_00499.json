@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Sa dari Papua. Mau tanya Jkt bukan Jawa kh?\", \"rewritten_form_joy\": \"Sa dari Papua! Mau tanya, Jkt itu bukan Jawa, kan?\", \"rewritten_form_sadness\": \"Sa dari Papua. Mau tanya, Jkt bukan Jawa, ya?\", \"rewritten_form_fear\": \"Sa dari Papua. Mau tanya, Jkt itu bukan Jawa, kh?\", \"rewritten_form_anger\": \"Sa dari Papua. Mau tanya, Jkt bukan Jawa, kan?!\", \"rewritten_form_surprise\": \"Sa dari Papua! Mau tanya, Jkt bukan Jawa, benar, kan?\", \"rewritten_form_disgust\": \"Sa dari Papua. Mau tanya, Jkt bukan Jawa, kan? Ugh.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express excitement or happiness, but rather presents a straightforward question. The rewritten joyful version adds an exclamatory tone which is absent from the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sadness, only a simple query. The rewritten version implies an underlying concern or melancholy 'ya', which adds a touch of sadness not present in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence is neutral and does not contain elements of concern or anxiety. The rewritten fearful version introduces a slight uncertainty with 'kh', indicating worry, which is not evident in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence poses a question, it lacks any tone of frustration or aggression. The rewritten angry version uses an exclamation mark, suggesting a strong emotion that the original does not reflect.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence presents a straightforward inquiry without any hint of astonishment. The rewritten surprise version emphasizes an unexpected confirmation with extra enthusiasm that the original lacks.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence has a neutral tone and does not convey displeasure. The rewritten disgust version adds 'Ugh' indicating distaste, which is not present in the original.",
+        "disgust_intensity": 0
+    }
+}

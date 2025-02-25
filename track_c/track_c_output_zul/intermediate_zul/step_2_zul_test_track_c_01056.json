@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"UHunt ufe olwembiza kufa umdlali engozini\", \"rewritten_form_joy\": \"UHunt ufe olwembiza kufa umdlali engozini, uyezhiqile!\", \"rewritten_form_sadness\": \"UHunt ufe olwembiza kufa umdlali engozini, lokhu kubuhlungu kakhulu.\", \"rewritten_form_fear\": \"UHunt ufe olwembiza kufa umdlali engozini, lesi simo sithandeka.\", \"rewritten_form_anger\": \"UHunt ufe olwembiza kufa umdlali engozini, lokho akukuhle nhlobo!\", \"rewritten_form_surprise\": \"UHunt ufe olwembiza kufa umdlali engozini! Angikholwa ukuthi lokhu kwenzekile!\", \"rewritten_form_disgust\": \"UHunt ufe olwembiza kufa umdlali engozini, ngiyangabaza lokho, kuyakhungathekisa.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any elements of joy or celebration. The addition of 'uyezhiqile!' in the joy version implies excitement or happiness which is not present in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version explicitly expresses pain or sorrow with 'lokhu kubuhlungu kakhulu', which aligns with the seriousness of the original sentence. The original statement also suggests a tragic event, making it resonate with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The fear interpretation is inconsistent with the original, which does not suggest anything that would normally invoke fear. The rewritten form's use of 'lesi simo sithandeka' introduces a fear context not evident in the original statement.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger version criticizes the situation, but the original does not show overt anger. It simply states an event, lacking emotional emphasis on being upset.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version expresses disbelief about the event, which could be relatable given the tragic nature of the original sentence. However, the original doesn't directly imply an unexpected turn of events.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The disgust version includes personal judgment ('ngiyangabaza lokho, kuyakhungathekisa'), which is not present in the original. While the original infers a negative scenario, it does not explicitly invoke disgust.",
+        "disgust_intensity": 1
+    }
+}

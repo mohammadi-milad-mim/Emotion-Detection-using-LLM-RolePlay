@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kamu jangan naek tinggi2 bisik jatoh.\", \"rewritten_form_joy\": \"Ayo, jangan naek tinggi-tinggi, kami bisa seru-seruan di sini!\", \"rewritten_form_sadness\": \"Kamu, jangan naek tinggi-tinggi, takutnya jatuh dan kita jadi sedih.\", \"rewritten_form_fear\": \"Hati-hati, jangan naek tinggi-tinggi, bisa jatuh dan celaka!\", \"rewritten_form_anger\": \"Jangan sekali lagi naek tinggi-tinggi, kalau jatuh siapa yang akan disalahkan?\", \"rewritten_form_surprise\": \"Wow, hati-hati, jangan naek tinggi-tinggi, aku gak mau lihat kamu jatuh!\", \"rewritten_form_disgust\": \"Ugh, jangan naek tinggi-tinggi, itu sangat bodoh, bisa jatuh!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey excitement or happiness; instead, it carries a cautionary tone. It does not align with the joyful tone of group fun in the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence shows concern over falling, it lacks the explicit emotional weight of sadness expressed in the rewritten version. It focuses on a potential negative outcome but is not framed in a way that evokes sorrow.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The caution against climbing too high resonates strongly with the fear expressed in the rewritten version, which emphasizes the dangers of falling. There is a direct alignment in the tone of being cautious.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does imply a level of frustration or admonishment for climbing too high, but it does not exhibit the clear anger or blame present in the rewritten version. The tone is more about caution than anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not convey any sense of astonishment or unexpectedness, unlike the rewritten version, which implies a sudden realization of risk. The tone of caution does not align with a sense of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "There is a hint of disdain for the action (climbing too high) in the original but not as explicitly as in the rewritten version, which describes the action as 'very stupid.' It aligns somewhat but lacks intensity.",
+        "disgust_intensity": 1
+    }
+}

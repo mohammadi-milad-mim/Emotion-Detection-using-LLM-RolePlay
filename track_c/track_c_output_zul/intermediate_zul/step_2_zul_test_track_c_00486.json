@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"@BonieMntambo \\ud83d\\ude0fngeke ungbone ngitapuna into epetulelwa umhlaba wonke weee\", \"rewritten_form_joy\": \"@BonieMntambo \\ud83d\\ude0fngeke ungbone ngitapuna into epetulelwa umhlaba wonke, okwakudala kuhle kakhulu weee!\", \"rewritten_form_sadness\": \"@BonieMntambo \\ud83d\\ude0fngeke ungbone ngitapuna into epetulelwa umhlaba wonke, kepha ngiyazisa noma ngikhathele weee.\", \"rewritten_form_fear\": \"@BonieMntambo \\ud83d\\ude0fngeke ungbone ngitapuna into epetulelwa umhlaba wonke, osimweni esiyingozi weee!\", \"rewritten_form_anger\": \"@BonieMntambo \\ud83d\\ude0fngeke ungbone ngitapuna into epetulelwa umhlaba wonke, akufanele kube njalo weee!\", \"rewritten_form_surprise\": \"@BonieMntambo \\ud83d\\ude0fngeke ungbone ngitapuna into epetulelwa umhlaba wonke, ungakaze ucabange ukuthi lokho kuzokwenzeka weee!\", \"rewritten_form_disgust\": \"@BonieMntambo \\ud83d\\ude0fngeke ungbone ngitapuna into epetulelwa umhlaba wonke, lokho kuyaxaka kakhulu weee!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses anticipation or excitement for something that is widely discussed ('umhlaba wonke'). However, it does not contain any overtly joyful expressions or celebratory language, making it less aligned with a high joy intensity than the rewritten joy form, which explicitly states 'okwakudala kuhle kakhulu'.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original doesn't suggest any feelings of exhaustion or sadness, which are implicit in the rewritten sadness form mentioning feeling tired. The original is more neutral and does not convey a sense of loss or regret, resulting in a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not convey any element of danger or fear, making it not very aligned with the fear emotion. The fear rewritten sentence implies a dangerous situation, which is not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While there is an element of frustration in the expectation of something being different, the original does not convey outright anger or indignation as strongly as the rewritten anger form. Therefore, it has a low degree of anger compared to the rewritten version that clearly states 'akufanele kube njalo'.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does have a slight element of surprise or novelty ('ngitapuna into epetulelwa umhlaba'), but it lacks the stronger expression of astonishment that is present in the surprise rewrite. Thus, the surprise is moderately present but not strongly expressed.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "There are no elements of disgust or aversion in the original sentence. The rewritten disgust form emphasizes a strong reaction to something considered unpleasant, which is not reflected in the original. Hence, the disgust is absent.",
+        "disgust_intensity": 0
+    }
+}

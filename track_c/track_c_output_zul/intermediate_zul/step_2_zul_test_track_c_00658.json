@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"@ThembaKaula Ngimzondukufa uyise kaBule ngomastende nje sengathi akukhahlelwe ingane ilahlwe phansi?, yey ngoba legenger yenu iyahlukumeza\\ud83d\\ude29\\ud83d\\ude29\\ud83d\\ude29\\ud83d\\ude29\", \"rewritten_form_joy\": \"@ThembaKaula Ngimzondukufa uyise kaBule ngomastende nje sengathi akukhahlelwe ingane ilahlwe phansi?, yey ngoba legenger yenu iyahlukumeza! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"@ThembaKaula Ngimzondukufa uyise kaBule ngomastende nje sengathi akukhahlelwe ingane ilahlwe phansi?, yey ngoba legenger yenu iyahlukumeza \\ud83d\\ude22\", \"rewritten_form_fear\": \"@ThembaKaula Ngimzondukufa uyise kaBule ngomastende nje sengathi akukhahlelwe ingane ilahlwe phansi?, yey ngoba legenger yenu iyahlukumeza... I feel so scared! \\ud83d\\ude28\", \"rewritten_form_anger\": \"@ThembaKaula Ngimzondukufa uyise kaBule ngomastende nje sengathi akukhahlelwe ingane ilahlwe phansi?, yey ngoba legenger yenu iyahlukumeza! This is infuriating! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"@ThembaKaula Ngimzondukufa uyise kaBule ngomastende nje sengathi akukhahlelwe ingane ilahlwe phansi?, yey ngoba legenger yenu iyahlukumeza? Wow, I didn't expect that! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"@ThembaKaula Ngimzondukufa uyise kaBule ngomastende nje sengathi akukhahlelwe ingane ilahlwe phansi?, yey ngoba legenger yenu iyahlukumeza, that's so disgraceful! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses frustration and sadness, which doesn't align well with joy. The rewritten joy sentence adds an exclamation that implies happiness, contrasting significantly with the original tone. Therefore, joy is not present.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects feelings of helplessness and concern, similar to what is expressed in the rewritten sadness sentence. The inclusion of the crying emoji further indicates alignment with sadness, making it moderate in intensity.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence conveys a level of distress but does not expressly indicate fear. The fear rewritten sentence introduces an explicit feeling of being scared, which is not strongly represented in the original. Therefore, fear is present but mild.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a clear expression of frustration in the original sentence that aligns with anger. The rewritten anger version exclaims infuriation, which closely aligns with the original tone of outrage towards the situation, leading to a high degree.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original message does not show any elements of surprise; it sounds more resigned and frustrated. The rewritten version implies surprise with a positive tone, which contradicts the original, resulting in a low intensity of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence conveys a sense of displeasure towards the situation, which aligns with disgust as seen in the rewritten version that explicitly states the situation is disgraceful. Therefore, the alignment is moderate.",
+        "disgust_intensity": 2
+    }
+}

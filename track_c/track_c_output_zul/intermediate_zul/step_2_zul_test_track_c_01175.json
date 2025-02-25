@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"UBrickz uvele wakhala ebuyiselwa esitokisini\", \"rewritten_form_joy\": \"UBrickz uvele wahlekela ebuyiselwa esitokisini!\", \"rewritten_form_sadness\": \"UBrickz uvele wakhala ebuyiselwa esitokisini...\", \"rewritten_form_fear\": \"UBrickz uvele wakhala ebuyiselwa esitokisini, futhi ngiyesaba!\", \"rewritten_form_anger\": \"UBrickz uvele wakhala ebuyiselwa esitokisini, cha! Ngiyafuna ukudlala!\", \"rewritten_form_surprise\": \"UBrickz uvele wakhala ebuyiselwa esitokisini, angikholwa!\", \"rewritten_form_disgust\": \"UBrickz uvele wakhala ebuyiselwa esitokisini, kuyabheda!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral emotion, lacking enthusiasm or happiness. The joyful version adds an exclamation mark and a lighthearted tone, suggesting laughter, which the original doesn't convey.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence depicts a sense of distress, indicated by the word 'wakhala' (to cry), closely matching the sadness version, which emphasizes sorrow with an ellipsis. This alignment suggests a strong connection.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence hints at discomfort due to the word 'wakhala', it does not evoke direct fear. The fear version introduces explicit fear ('ngiyesaba!'), which the original lacks, indicating only a mild relation.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger or frustration. The anger version suggests a reaction to the situation by wanting to play ('ngiyafuna ukudlala!'), which is not present in the original sentence, indicating only a minimal link to anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not express surprise; it is rather a statement of fact. The surprise version shows disbelief ('angikholwa!'), which diverges from the neutral tone of the original, thus establishing a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original lacks a sense of disgust, as it merely states an event. The disgust version uses 'kuyabheda!' (it's annoying or bad), suggesting a strong dislike or distaste, which is not implied in the original sentence, therefore showing minimal alignment.",
+        "disgust_intensity": 1
+    }
+}

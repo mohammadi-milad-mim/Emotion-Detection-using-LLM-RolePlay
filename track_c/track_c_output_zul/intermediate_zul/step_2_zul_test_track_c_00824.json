@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kufe oyedwa kusha amadokodo eBuhleni\", \"rewritten_form_joy\": \"Kufa okuhle kokuqhubeka kumadokodo eBuhleni!\", \"rewritten_form_sadness\": \"Kufe oyedwa, kuhluphile amadokodo eBuhleni.\", \"rewritten_form_fear\": \"Kufe oyedwa, okubangela inselelo kumadokodo eBuhleni!\", \"rewritten_form_anger\": \"Kufe oyedwa, yimfucuza ukubamba amadokodo eBuhleni!\", \"rewritten_form_surprise\": \"Kufe oyedwa, angikaze ngicabange ukuthi amadokodo eBuhleni angaba nalesi simo!\", \"rewritten_form_disgust\": \"Kufe oyedwa, indlela amahloni ahlupheka ngayo madokodo eBuhleni ayigculisi! \"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not carry a joyful connotation, rather it presents a somber statement about loss. The rewritten joyful version implies a positive continuation, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of loss directly, aligning closely with the sadness rewritten version. The wording in both conveys tragedy and misfortune, supporting the sadness sentiment strongly.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence acknowledges a loss, but it does not directly express fear about the implications. While the rewritten version highlights challenges, the original does not evoke anticipation of danger or distress.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Though the original mentions a single loss, the tone does not suggest anger. The rewritten anger version uses strong negative language that isn't present in the original text, which leads to a lack of alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement is straightforward about the loss without expressing unexpectedness or shock. The rewritten surprise emphasizes a level of astonishment that does not resonate with the original tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "While the original conveys a challenging situation, it does not explicitly indicate feelings of disgust. The rewritten disgust version highlights a moral reaction that is not articulated in the original text.",
+        "disgust_intensity": 1
+    }
+}

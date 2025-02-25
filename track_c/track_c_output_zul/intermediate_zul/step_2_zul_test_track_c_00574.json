@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"U-Ayanda ugajwe wusizi wahlulwa wukuya kokaSfiso\", \"rewritten_form_joy\": \"U-Ayanda ugajwe wusizi, kodwa wahlulwa wukuya kokaSfiso, ngaphezu kokwenza konke okuhle!\", \"rewritten_form_sadness\": \"U-Ayanda ugajwe wusizi, wahlulwa wukuya kokaSfiso, futhi lokho kungiphatha kabi.\", \"rewritten_form_fear\": \"U-Ayanda ugajwe wusizi, wahlulwa wukuya kokaSfiso, ngikhathazekile ngaleso sikhathi.\", \"rewritten_form_anger\": \"U-Ayanda ugajwe wusizi, wahlulwa wukuya kokaSfiso, futhi lokhu kuchaza ukungahambi kahle!\", \"rewritten_form_surprise\": \"U-Ayanda ugajwe wusizi, wahlulwa wukuya kokaSfiso\\u2014angikholwa lokho!\", \"rewritten_form_disgust\": \"U-Ayanda ugajwe wusizi, wahlulwa wukuya kokaSfiso\\u2014lokhu kuyashisha! \"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a situation of struggle and loss, which doesn't correlate with joy. The joy rewritten sentence introduces positive elements that are absent in the original, indicating a clear divergence from joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does convey a sense of struggle and defeat which closely aligns with sadness. The rewritten sadness sentence reinforces this with expressions of distress and poor feelings, confirming a strong connection between the two.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence does talk about a struggle, it does not convey immediate fear or anxiety, as noted in the fear rewritten sentence. There is a minimal implication of concern, but not strong enough to be rated higher than a low degree.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original implies defeat which could be frustrating, but it doesn't explicitly express anger. The rewritten anger sentence expresses a more intense reaction than what is found in the original, leading to a lower rating on the anger scale.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise rewritten sentence suggests disbelief regarding the situation. While the original can evoke some sense of surprise or unexpectedness due to the defeat, it does not strongly emphasize this feeling, hence a low rating.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original doesn\u2019t contain elements that directly invoke disgust. The rewritten disgust sentence expresses strong emotional revulsion, which isn't reflected in the original. Thus, there is no basis for scoring.",
+        "disgust_intensity": 0
+    }
+}

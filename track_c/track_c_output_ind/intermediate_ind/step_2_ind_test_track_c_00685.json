@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"pas bagian hese pohonya agak kurang masuk\", \"rewritten_form_joy\": \"pas bagian hese pohonya terasa seru meski agak kurang masuk!\", \"rewritten_form_sadness\": \"pas bagian hese pohonya membuatku merasa ada yang kurang, seolah tak sepenuhnya sempurna.\", \"rewritten_form_fear\": \"pas bagian hese pohonya agak kurang masuk dan itu membuatku khawatir ada yang salah.\", \"rewritten_form_anger\": \"pas bagian hese pohonya jelas-jelas kurang masuk, kenapa tidak diatur dengan baik?\", \"rewritten_form_surprise\": \"pas bagian hese pohonya agak kurang masuk, sungguh, aku tidak menyangka itu terjadi!\", \"rewritten_form_disgust\": \"pas bagian hese pohonya benar-benar kurang masuk, sangat mengecewakan!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not communicate any excitement or positivity, whereas the joy version implies a sense of fun despite the imperfection. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The mention of something being 'agak kurang masuk' suggests a disconnect or imperfection, which resonates with the emotion of sadness related to feelings of inadequacy. There is some alignment here.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase hints at a concern about something being 'kurang masuk,' which implies a potential problem. This aligns moderately with fear as it indicates worry about further consequences. There's a notable sense of concern.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence's implication of something being poorly executed aligns well with anger, especially as it suggests frustration over mismanagement. However, the intensity is moderate as it doesn't express outright rage.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence lacks elements of unexpectedness. The rewritten form of surprise suggests a reaction that is not present in the original, leading to a low alignment here.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original implies dissatisfaction but does not convey strong levels of disdain or disgust, which is more expressive in the rewritten form. Thus, the alignment with disgust is low but present.",
+        "disgust_intensity": 1
+    }
+}

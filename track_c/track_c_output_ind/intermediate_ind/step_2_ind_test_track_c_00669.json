@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Mantap ilmunya awalnya agak bosen ini orang ngomong opo , tapi setelah Toton beberapa menit baru menikmati dan gak sadar Sampai habis , \", \"rewritten_form_joy\": \"Wah, ilmunya luar biasa! Awalnya aku pikir ini membosankan, tapi setelah beberapa menit Toton berbicara, aku jadi sangat menikmati dan tidak sadar sudah sampai akhir!\", \"rewritten_form_sadness\": \"Ilmunya sebenarnya bagus, tapi aku merasa sedikit bosan di awal saat dia berbicara, baru setelah beberapa menit aku mulai menikmati, sayangnya rasanya tidak cukup.\", \"rewritten_form_fear\": \"Ini ilmu yang menarik, tetapi di awal aku merasa cemas karena sedikit membosankan, untungnya, setelah beberapa menit Toton berbicara, aku akhirnya mulai menikmatinya.\", \"rewritten_form_anger\": \"Ilmunya jelas, tapi serius, kenapa dia harus berbicara begitu membosankan! Setelah beberapa menit, baru aku mulai menikmatinya, butuh waktu lama sekali!\", \"rewritten_form_surprise\": \"Wow, ilmunya ternyata menarik! Awalnya aku kira ini bakal membosankan, tapi setelah beberapa menit Toton mulai berbicara, aku terkejut karena aku jadi tidak sadar sampai selesai!\", \"rewritten_form_disgust\": \"Ilmunya mungkin bermanfaat, tapi awalnya sangat membosankan saat dia berbicara, aku tidak bisa mengerti sampai beberapa menit kemudian baru sedikit menikmatinya.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a gradual transformation from boredom to enjoyment, which aligns with joy. While it may not express pure elation, the sense of enjoyment at the end suggests a positive experience, similar to the tone of the rewritten joy version.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence acknowledges initial boredom and implies a slight disappointment or regret about the experience. The rewritten sadness version captures this tone well, indicating that there was a good aspect to the content but a feeling of it being insufficient or overly dull for some time.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text reflects a sense of unease at the beginning due to boredom, which aligns somewhat with fear. However, it lacks a strong sense of anxiety or concern, making the connection weaker. Thus, the intensity is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is an expression of frustration in the way the initial boredom is perceived, which aligns with the anger rewritten version that communicates irritation about the speaker's delivery. However, the original sentence doesn't escalate to strong anger, leading to a lower score.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text denotes a transition from an expected dullness to an unexpected enjoyment, aligning well with surprise. The rewritten surprise version also highlights this shift effectively, indicating a strong degree of surprise at the change in perception.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence expresses mild distaste at the boredom, which resonates with the disgust rewritten version. However, it doesn't strongly invoke disgust, therefore the intensity remains on the lower side.",
+        "disgust_intensity": 1
+    }
+}

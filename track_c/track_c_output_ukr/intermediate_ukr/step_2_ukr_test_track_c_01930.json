@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u0417\\u0415\\u0412\\u0421 \\u041c\\u041e\\u042f \\u041c\\u0410\\u0422\\u0418, \\u0427\\u0415\\u041a\\u0410\\u0419, \\u0422\\u0418 15?\", \"rewritten_form_joy\": \"\\u0417\\u0415\\u0412\\u0421 \\u041c\\u041e\\u042f \\u041c\\u0410\\u0422\\u0418, \\u0412\\u0410\\u0423, \\u0422\\u0418 15?\", \"rewritten_form_sadness\": \"\\u0417\\u0415\\u0412\\u0421 \\u041c\\u041e\\u042f \\u041c\\u0410\\u0422\\u0418, \\u041d\\u0435\\u0432\\u0436\\u0435 \\u0442\\u043e\\u0431\\u0456 \\u0432\\u0436\\u0435 15?\", \"rewritten_form_fear\": \"\\u0417\\u0415\\u0412\\u0421 \\u041c\\u041e\\u042f \\u041c\\u0410\\u0422\\u0418, \\u0427\\u0435\\u043a\\u0430\\u0439, \\u0442\\u0438 \\u0432\\u0436\\u0435 15?\", \"rewritten_form_anger\": \"\\u0417\\u0415\\u0412\\u0421 \\u041c\\u041e\\u042f \\u041c\\u0410\\u0422\\u0418, \\u0422\\u0438 \\u0441\\u0435\\u0440\\u0439\\u043e\\u0437\\u043d\\u043e, \\u0442\\u043e\\u0431\\u0456 \\u0432\\u0436\\u0435 15?!\", \"rewritten_form_surprise\": \"\\u0417\\u0415\\u0412\\u0421 \\u041c\\u041e\\u042f \\u041c\\u0410\\u0422\\u0418, \\u0427\\u0415\\u041a\\u0410\\u0419, \\u0422\\u0418 \\u041d\\u0410\\u0421\\u041f\\u0420\\u0410\\u0412\\u0414\\u0406 15?\", \"rewritten_form_disgust\": \"\\u0417\\u0415\\u0412\\u0421 \\u041c\\u041e\\u042f \\u041c\\u0410\\u0422\\u0418, \\u0427\\u0435\\u043a\\u0430\\u0439, \\u0422\\u0438 \\u043d\\u0435 \\u0441\\u0435\\u0440\\u0439\\u043e\\u0437\\u043d\\u043e, \\u0442\\u0438 15?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks an exclamation or sign of excitement compared to the joyful rewritten form which expresses excitement with the word '\u0412\u0410\u0423'. There is a neutral tone in the original sentence, suggesting a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not imply sadness, while the rewritten form indicates a sense of melancholy with the use of '\u043d\u0435\u0432\u0430\u0436\u0447\u0435' (meaning 'not easy'). This suggests that the original is not closely aligned with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original statement has a somewhat neutral tone, while the rewritten version expresses a sense of urgency or fear with the phrase '\u0442\u0438 \u0432\u0436e 15?' (are you already 15?). This implies that the original does not evoke fear very strongly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence doesn\u2019t convey any anger. The angry rewritten form contains a strong expression of disbelief with '\u0441\u0435\u0440\u044c\u0435\u0437\u043d\u043e' (seriously), which is completely absent in the original. Thus, there\u2019s little alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not include any element of surprise; it\u2019s delivered in a straightforward manner. The surprise rewritten form emphasizes an unexpected situation. Thus, the alignment with surprise is minimal.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence conveys a neutral tone, while the rewritten version expresses disgust over a serious matter. Since the original does not share any of this sentiment, there is a lack of alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

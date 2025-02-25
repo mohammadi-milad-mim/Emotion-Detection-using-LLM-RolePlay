@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yang nonton lagi di tahun 2023 ?\", \"rewritten_form_joy\": \"Siapa yang sudah kembali nonton di tahun 2023? Yay!\", \"rewritten_form_sadness\": \"Siapa ya yang masih nonton di tahun 2023? Rasanya sepi...\", \"rewritten_form_fear\": \"Siapa yang berani nonton lagi di tahun 2023? Aku takut!\", \"rewritten_form_anger\": \"Kenapa ada yang nonton lagi di tahun 2023? Sangat menjengkelkan!\", \"rewritten_form_surprise\": \"Wow, siapa yang nonton lagi di tahun 2023? Itu mengejutkan!\", \"rewritten_form_disgust\": \"Yakin ada yang masih nonton di tahun 2023? Itu sangat menjijikkan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is a simple question about who is watching something again in 2023. The rewritten joy version adds excitement with 'Yay!', indicating positive energy, which is not reflected in the original. Therefore, there\u2019s a low alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original question does imply a sense of continuity in watching into 2023, which could suggest a monotony or a lack of freshness. The rewritten sadness version explicitly expresses loneliness and the phrase 'Rasanya sepi...' adds a stronger somber tone, showing more sadness than the original implies.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey fear directly. However, the rewritten fear version expresses a challenge and fearfulness with 'Aku takut!', which is not inherent in the original question. The original lacks any indication or context of fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence asks a neutral question without showing any anger. The anger version, with 'Sangat menjengkelkan!', conveys strong irritation and dissatisfaction, which is not reflective in the original. Therefore, the original does not align with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original doesn't elicit surprise; it's a straightforward inquiry. The rewritten surprise version 'Wow' expresses astonishment, indicating a strong difference. Thus, there's a disconnect between the tone of the original and the surprise sentiment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original question does not indicate disgust. The rewritten disgust version has a strong negative connotation with 'Itu sangat menjijikkan.', which the original question does not support. Therefore, this sentiment does not align with the original.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Wah wah, kasusnya tiga pemuda dalam bahaya \\ud83d\\ude02\", \"rewritten_form_joy\": \"Wah wah, ini seru sekali! Tiga pemuda dalam bahaya! \\ud83d\\ude02\", \"rewritten_form_sadness\": \"Wah wah, kasihan sekali, tiga pemuda dalam bahaya. \\ud83d\\ude22\", \"rewritten_form_fear\": \"Wah wah, ini mengerikan! Tiga pemuda benar-benar dalam bahaya! \\ud83d\\ude31\", \"rewritten_form_anger\": \"Wah wah, ini sangat mengecewakan! Tiga pemuda dalam bahaya! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Wah wah, tidak nyana! Tiga pemuda dalam bahaya! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Wah wah, menjijikan sekali! Bagaimana bisa tiga pemuda berada dalam bahaya ini? \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of excitement through the phrase 'Wah wah', but it doesn't portray joy directly. It indicates a situation of intrigue rather than outright happiness or excitement as seen in the joy version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original mentions that the 'three youths are in danger,' which carries a sense of worry. This aligns more with sadness as seen in the rewritten sentence that expresses sorrow about their situation. However, it does not heavily focus on emotional pain, suggesting modest alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'dalam bahaya' (in danger) conveys a serious tone that aligns closely with fear, especially as it implies potential harm to the youths. Thus, while the original has a degree of concern, it isn't as intense as seen in the fear rewriting, but there is still a strong link.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original mentions the situation, it doesn't convey any explicit frustration or disappointment like the rewritten anger sentence does. The original has a lighter tone without any strong sense of anger or betrayal, leading to a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence, by stating that the youths are in danger, carries an element of surprise, closely aligning with the surprise rewriting. The tone suggests unexpectedness but lacks a strong emphasis on the shocking nature, thus moderate alignment is observed.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original lacks a sense of disgust present in the rewritten sentence. There is no element suggesting revulsion or extreme disapproval, so the original does not align with this emotion at all.",
+        "disgust_intensity": 0
+    }
+}

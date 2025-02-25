@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u2018Yakowa ya hango mutuwarsa\\u2019\", \"rewritten_form_joy\": \"Yakowa is overjoyed to see his loved one again!\", \"rewritten_form_sadness\": \"Yakowa mourns the loss of his beloved deeply.\", \"rewritten_form_fear\": \"Yakowa feels a chilling fear as he confronts death looming close.\", \"rewritten_form_anger\": \"Yakowa is furious at the thought of losing his partner to fate.\", \"rewritten_form_surprise\": \"Yakowa is taken aback by the suddenness of his beloved's death.\", \"rewritten_form_disgust\": \"Yakowa is repulsed by the cruel hand of fate that snatched away his love.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; rather, it implies a critical or serious situation related to loss, which contradicts the joy expressed in the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a mourning scenario, aligning closely with the rewritten version that depicts Yakowa mourning the loss of a loved one.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original may hint at a grim situation, it does not explicitly express fear, making this alignment low despite the rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original suggests a heartfelt loss, which does not imply a sense of anger, contrasting with the intensity of anger in the rewritten version.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is no indication of surprise in the original sentence; it feels more somber and does not reflect shock as seen in the rewritten version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not suggest a feeling of disgust; it is more focused on loss rather than a repulsion towards fate, as expressed in the rewritten form.",
+        "disgust_intensity": 0
+    }
+}

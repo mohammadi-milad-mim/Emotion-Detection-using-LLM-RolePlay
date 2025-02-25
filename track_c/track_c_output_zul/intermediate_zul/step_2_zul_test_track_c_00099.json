@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"IPirates isayinise umgadli waseZambia\", \"rewritten_form_joy\": \"IPirates isayinise umgadli waseZambia! Yikhamela leli khashana!\", \"rewritten_form_sadness\": \"IPirates isayinise umgadli waseZambia, kodwa ngiyathokoza, asihambanga kahle.\", \"rewritten_form_fear\": \"IPirates isayinise umgadli waseZambia, ngiyakhathazeka ngalezi zimpawu ezimbi.\", \"rewritten_form_anger\": \"IPirates has signed a player from Zambia. Why can\\u2019t we stick with our own talent?\", \"rewritten_form_surprise\": \"Wow, IPirates has signed a player from Zambia! I didn't see that coming!\", \"rewritten_form_disgust\": \"IPirates isayinise umgadli waseZambia? Ngicela, ungadlalisa imidlalo ebibuhlungu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence communicates a straightforward fact without any apparent enthusiasm or joy. The rewritten version for joy adds an exclamatory tone and celebratory language that is not present in the original, indicating a significant difference in the emotional intensity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence states the action of signing a player, the rewritten version expresses a sense of disappointment by mentioning that things are not going well. The original lacks this sense of sadness, thus showing low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence simply states a fact without any indication of fear. The rewritten version portrays concern about negative implications, which is not reflected in the original. This results in a very low alignment with the fear emotion.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten version for anger expresses frustration about not using local talent, which could imply dissatisfaction with the action described in the original sentence. However, the original sentence does not express any of that frustration, leading to a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence states a surprising fact (the signing of a player from Zambia), but without the element of surprise found in the rewritten version, which explicitly expresses astonishment. As such, the original does not convey this level of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence is neutral and does not imply any negative feelings toward the signing. The rewritten disgust version includes a strong negative reaction that is entirely absent from the original, leading us to conclude that there is no alignment with disgust in the original statement.",
+        "disgust_intensity": 0
+    }
+}

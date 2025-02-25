@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"OwoSuthu ubona kusazoshuba kwiligi\", \"rewritten_form_joy\": \"OwoSuthu, ubona kahle ukufudumala kwiligi!\", \"rewritten_form_sadness\": \"OwoSuthu, ubona ukuthi kwiligi sekushuba kakhulu...\", \"rewritten_form_fear\": \"OwoSuthu, uyabona ukuthi kwiligi kusekhona okwenzekayo...\", \"rewritten_form_anger\": \"OwoSuthu, ubona kanjani ukuthi kwiligi isikhubekela phansi!\", \"rewritten_form_surprise\": \"OwoSuthu, wazi kanjani ukuthi kwiligi kuzoshuba kangaka?!\", \"rewritten_form_disgust\": \"OwoSuthu, ubona ukuthi kwiligi kudinga ukulungiswa! Iphuthumayo!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests an observation about a situation that might become worse, lacking any joyful sentiment. The rewritten joyful version adds a positive tone by emphasizing warmth, indicating a stark contrast with the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text expresses concern about the worsening of a situation, aligning closely with the sadness interpretation which reflects on the seriousness of the matter.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence implies a concern for the state of things and a potential threat in the future, it does not emphasize fear as strongly as the rewritten fear version, which implies ongoing troubling situations.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is a level of frustration implied in the original regarding the worsening condition; however, it's not as strong or explicit as the direct anger expressed in the rewritten version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not indicate any unexpectedness or shock, making it less aligned with the surprised tone of the rewritten sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original mentions that something is getting worse but does not express disdain or a strong feeling of revulsion, which is more explicitly conveyed in the rewritten disgust sentence.",
+        "disgust_intensity": 1
+    }
+}

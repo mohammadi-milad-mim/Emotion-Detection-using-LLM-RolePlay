@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"kak mana video di skyroom nya??\", \"rewritten_form_joy\": \"Kak, bagaimana serunya video di skyroom-nya??\", \"rewritten_form_sadness\": \"Kak, bagaimana ya video di skyroom-nya??\", \"rewritten_form_fear\": \"Kak, bagaimana kalau video di skyroom itu ternyata tidak bagus??\", \"rewritten_form_anger\": \"Kak, mana video di skyroom-nya?? Kenapa belum ada??\", \"rewritten_form_surprise\": \"Kak, ada video di skyroom-nya? Bagaimana itu bisa terjadi??\", \"rewritten_form_disgust\": \"Kak, bagaimana sih video di skyroom-nya yang tidak menarik itu??\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a curiosity about the video in a neutral tone, without any excitement or positive connotation. The rewritten joy form introduces an element of fun and excitement that is not present in the original, indicating a low alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original expresses a simple inquiry, which aligns moderately with sadness as it suggests a sense of longing or dissatisfaction. The rewritten sadness form retains the inquiry tone while adding a more somber element, reflecting a slightly higher emotional pull.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version suggests a potential negative outcome regarding the video, which is a departure from the original's neutral inquiry. The original does not convey fear, making this alignment weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any sign of frustration or anger. The rewritten anger form explicitly expresses irritation and impatience about the absence of the video, indicating a stark contrast with the original sentiment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original question does not indicate any unexpected element or surprise, while the rewritten surprise form introduces an element of astonishment about the existence of the video, which the original does not reflect. Hence, there is minimal alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version reflects a strong negative opinion about the video, which does not align with the neutral inquiry of the original. Thus, there is little-to-no alignment with the emotion of disgust.",
+        "disgust_intensity": 0
+    }
+}

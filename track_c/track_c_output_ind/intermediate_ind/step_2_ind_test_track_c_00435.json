@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ini bukan seniman yang bisa njiplak karya orang, \", \"rewritten_form_joy\": \"Ini adalah seniman yang penuh orisinalitas dan kreativitas,\", \"rewritten_form_sadness\": \"Sayangnya, ini bukan seniman yang mampu menghargai karya orang lain,\", \"rewritten_form_fear\": \"Ini bukan seniman yang bisa njiplak karya orang, dan itu bikin saya khawatir akan integritasnya,\", \"rewritten_form_anger\": \"Saya sangat marah, ini jelas bukan seniman yang patut dihormati karena meniru karya orang lain!\", \"rewritten_form_surprise\": \"Wow, tidak bisa dipercaya, ini bukan seniman yang bisa njiplak karya orang!\", \"rewritten_form_disgust\": \"Sungguh menjijikkan, ini bukan seniman yang hanya menyalin karya orang lain.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative sentiment about an artist's lack of originality, which contrasts sharply with the joy of creativity described in the joyful rewritten sentence. Therefore, there is very little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a lack of appreciation for others' work, which is reflected in the sadness rewritten sentence. This suggests a moderate alignment with sadness, as it acknowledges a missed opportunity for respect and value.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at concern regarding the artist's integrity, which aligns well with the fear in the rewritten sentence. However, it does not explicitly indicate fear, so the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence communicates a clear disapproval of the artist's actions, aligning closely with the anger in the rewritten sentence that expresses strong feelings of indignation. This suggests a high degree of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence points out a negative aspect of the artist's approach, which is not particularly surprising. The surprise element in the rewritten sentence does not find strong alignment with the original, thus indicating low surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence's assertion that an artist cannot copy others' work can evoke feelings of disgust towards those actions. The rewritten sentence mirrors this sentiment effectively, suggesting a moderate degree of disgust.",
+        "disgust_intensity": 2
+    }
+}

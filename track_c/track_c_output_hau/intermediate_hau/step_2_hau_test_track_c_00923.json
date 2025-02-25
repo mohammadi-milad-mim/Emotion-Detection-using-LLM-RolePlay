@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yanaga duk basa fara'a ne saikace ba ranar farin ciki ba a gare su\\ud83d\\ude02\", \"rewritten_form_joy\": \"Yanaga duk suna farin ciki sosai, ba ranar farin ciki ba a gare su! \\ud83d\\ude02\", \"rewritten_form_sadness\": \"Yanaga duk suna cikin damuwa, ba ranar farin ciki ba a gare su. \\ud83d\\ude14\", \"rewritten_form_fear\": \"Yanaga duk suna jin tsoro, ba ranar farin ciki ba a gare su... \\ud83d\\ude28\", \"rewritten_form_anger\": \"Yanaga duk suna fushi, ba ranar farin ciki ba a gare su! \\ud83d\\ude20\", \"rewritten_form_surprise\": \"Yanaga duk suna mamaki, ba ranar farin ciki ba a gare su! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Yanaga duk suna jin kauna, amma ba ranar farin ciki ba a gare su, yana da ban tsoro! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of discontent or sadness, explicitly stating that it is not a day of joy for them. This contrasts greatly with the rewritten joy sentence, which expresses extreme happiness. Therefore, the original sentence does not align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates that it is not a day of happiness for them, implying feelings of sadness or disappointment. This sentiment closely matches the rewritten sadness sentence, which also emphasizes that they are in distress, hence a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Although there is an emotional depth in the original sentence, it does not specifically convey fear as indicated in the rewritten version. The original does not suggest that they are feeling scared or anxious, so there is little alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger but implies a lack of joy. The rewritten anger sentence explicitly communicates frustration, which is not captured in the original. Thus, there is no significant alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence contains no elements of surprise. The rewritten surprise sentence suggests an unexpected reaction that isn't reflected in the original's tone. Therefore, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not suggest feelings of disgust, nor does it imply complex emotions that can lead to disgust. The rewritten disgust sentence implies a conflicting emotion and a more intense sentiment than what is present in the original. Therefore, there is no alignment.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kushone ona-13 izingane zishayiswa amaginsa\", \"rewritten_form_joy\": \"Kushone ona-13 izingane, kodwa bakhombise amandla amangalisayo!\", \"rewritten_form_sadness\": \"Kushone ona-13 izingane, futhi lokhu kuhluphe kakhulu.\", \"rewritten_form_fear\": \"Kushone ona-13 izingane, futhi ngiyakhathazeka ngalokho okwenzeka.\", \"rewritten_form_anger\": \"Kushone ona-13 izingane, futhi lokhu kungenza ngizwe usizungu.\", \"rewritten_form_surprise\": \"Kushone ona-13 izingane? Ngempela? Lokhu kuhle kakhulu!\", \"rewritten_form_disgust\": \"Kushone ona-13 izingane, futhi ngiyakwazi lokhu akuvamile.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses the loss of children, which conveys a sense of tragedy and does not correlate with joy. The rewritten sentence introduces a positive aspect, suggesting the children showed amazing strength, which is at odds with the sadness of the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses the tragic loss of 13 children, clearly aligning with deep sadness. The rewritten sentence emphasizes how distressing this situation is, thus reflecting a strong sense of sorrow.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original text hints at a concerning event involving children, which can naturally elicit fear. The rewritten form highlights worry about the situation, indicating a significant level of concern and thus aligns reasonably well with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence states a loss, it does not explicitly convey anger. The rewritten form reflects feelings of frustration and sadness, suggesting that the narrator feels wronged by the event, hence evoking moderate anger too.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence, while tragic, does not include an element of surprise. However, the rewritten form questions the situation with the word \"Ngempela?\", which suggests disbelief or astonishment, but it feels out of context with the tragedy of the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original text focuses on a grave loss which does not involve disgust. The rewritten version's commentary on this being unusual does not strongly resonate with a feeling of disgust, making a very minimal connection.",
+        "disgust_intensity": 0
+    }
+}

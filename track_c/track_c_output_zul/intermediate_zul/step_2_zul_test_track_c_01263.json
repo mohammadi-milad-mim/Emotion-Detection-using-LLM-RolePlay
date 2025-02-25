@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Isikhwele isosha 'libulala' umlamu\", \"rewritten_form_joy\": \"Isikhwele isosha 'libulala' umlamu!\", \"rewritten_form_sadness\": \"Isikhwele isosha 'libulala' umlamu... it's so tragic.\", \"rewritten_form_fear\": \"Isikhwele isosha 'libulala' umlamu! What if it gets worse?\", \"rewritten_form_anger\": \"Isikhwele isosha 'libulala' umlamu! How could this happen?\", \"rewritten_form_surprise\": \"Isikhwele isosha 'libulala' umlamu? I can't believe it!\", \"rewritten_form_disgust\": \"Ugh, isikhwele isosha 'libulala' umlamu, that's so repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone, while the joyful version adds an exclamatory note indicating excitement or happiness. Thus, the original sentence does not convey a sense of joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not express any explicit sense of loss or tragedy, which is emphasized in the sad version by the addition of 'it's so tragic.' Therefore, it shows minimal alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not imply a sense of impending doom or anxiety about worsening situations, as seen in the fearful version. It lacks elements that evoke fear, showing weak alignment with this emotion.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original does present a concerning situation, it lacks an explicit expression of outrage or frustration present in the angry version. Therefore, the alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents an assertion without the surprise element expressed in the rewritten form. It does not indicate disbelief or shock, leading to weak alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "There is no direct disgusting element in the original sentence, unlike the disgust version which explicitly states that the situation is repulsive. Hence, the alignment with disgust is low.",
+        "disgust_intensity": 1
+    }
+}

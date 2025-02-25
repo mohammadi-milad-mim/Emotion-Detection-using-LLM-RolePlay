@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"sayangnya saya baru lihat videonya sekarang\", \"rewritten_form_joy\": \"Saya baru saja melihat videonya sekarang, dan itu begitu menyenangkan!\", \"rewritten_form_sadness\": \"Sangat disayangkan, saya baru melihat videonya sekarang.\", \"rewritten_form_fear\": \"Sayangnya, saya baru melihat videonya sekarang, dan saya khawatir tentang apa yang mungkin saya temukan.\", \"rewritten_form_anger\": \"Sungguh mengecewakan, saya baru lihat videonya sekarang!\", \"rewritten_form_surprise\": \"Wow, saya baru saja melihat videonya sekarang, itu sangat mengejutkan!\", \"rewritten_form_disgust\": \"Sayangnya, saya baru lihat videonya sekarang, dan itu sangat menjijikkan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sentiment of regret about timing, which doesn't align with the joyful tone of the rewritten joy sentence that emphasizes pleasure in the experience. Therefore, there's little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence and the rewritten sadness sentence both express a sense of regret. The use of 'sayangnya' (unfortunately) in the original text conveys a similar feeling of disappointment as seen in the rewritten form. Thus, there is a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not express concern or fear about what is seen in the video. The fear sentence introduces a notion of worry that is absent in the original. Hence, there is minimal to no connection to fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence implies a sense of disappointment like the rewritten anger sentence, it lacks the stronger emotional intensity associated with anger. Thus, it shows some alignment but remains a step lower.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks any sense of astonishment or novelty that the surprise sentence conveys. Thus, these do not align, as the original does not express a surprising element about the video.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence doesn't suggest any feelings of disgust, as there is no negative connotation associated with what was seen in the video. Therefore, it strongly diverges from the rewritten disgust sentence.",
+        "disgust_intensity": 0
+    }
+}

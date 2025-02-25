@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"dama ba musulmi bane\", \"rewritten_form_joy\": \"dama ba musulmi bane, meherbani za ghwarem!\", \"rewritten_form_sadness\": \"dama ba musulmi bane, zindagi sa ghamzade de.\", \"rewritten_form_fear\": \"dama ba musulmi bane, khatar ma peke de ke?\", \"rewritten_form_anger\": \"dama ba musulmi bane, naway khwaq na de!\", \"rewritten_form_surprise\": \"dama ba musulmi bane, woah, za na mawinem!\", \"rewritten_form_disgust\": \"dama ba musulmi bane, za da khapal gham khushal na yam!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence, 'dama ba musulmi bane,' does not contain any expression of happiness or positivity. The rewritten joyful version adds an exclamation of kindness, which is missing in the original. Therefore, it has a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey sorrow directly. However, the rewritten version suggests life is burdened with sadness, which indicates deeper emotional weight. The original lacks this depth, aligning it moderately with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not express fear directly, but the rewritten fear sentence implies a sense of danger associated with becoming Muslim. There is no clear fearfulness in the original statement; thus, it is only weakly related to fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten anger sentence shows outright frustration or rejection which is starkly different from the neutral original. The original does not express frustration or anger, suggesting a very low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The rewritten surprise sentence indicates a sense of astonishment that isn't present in the original phrase. Hence, they are not closely related, suggesting minimal alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust level in the rewritten sentence conveys a rejection of personal happiness and self-acceptance which isn't present in the original phrase. As such, there is a weak connection to disgust in the original sentence compared to the packed emotional content of the rewritten version.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Isililo kuyise ogaye ingane yakhe ngeloli\", \"rewritten_form_joy\": \"U-mama umnene, uphakamisa uthando lwakhe, nakuba ingane yakhe igaye inganeni ngeloli.\", \"rewritten_form_sadness\": \"Isililo sika-baba ku-ozile, njengoba ingane yakhe ibanjwa ngeloli.\", \"rewritten_form_fear\": \"U-baba udidekile, efuna ukuyivikela ingane yakhe ethukile ngeloli.\", \"rewritten_form_anger\": \"U-baba uhlasela, akasakwazi ukumkhumbula ingane yakhe eyingozi ngeloli.\", \"rewritten_form_surprise\": \"U-baba uyamangalala, ingane yakhe igaye ngeloli!\", \"rewritten_form_disgust\": \"U-baba uhlezi edumazekile, njengokudlula ngebhuku ingane yakhe ngeloli.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of loss and suffering without elements of joy or positivity. The rewritten joy sentence emphasizes love and upliftment, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly expresses grief and pain, especially in the context of a child being run over. This aligns closely with the rewritten sadness sentence, which also highlights the sorrow of a father.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a tragic event involving a child, potentially evoking fear from the situation. However, it does not explicitly convey the father's feeling of fear. The rewritten fear sentence introduces a sense of his fear for his child, but the alignment isn't strong. A degree of fear is present, but not emphasized.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence centers on loss, there is a passive tone rather than an active one of anger or aggression. The rewritten anger sentence significantly departs from the original sentiment, introducing a proactive response that isn't reflected in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not elicit surprise; instead, it communicates tragedy. The rewritten surprise sentence could imply shock, but it does not resonate with the tone of the original, which is somber and serious.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not convey disgust. The rewriting introduces a concept of being appalled, which is not present in the original text. Thus, there is no real connection.",
+        "disgust_intensity": 0
+    }
+}

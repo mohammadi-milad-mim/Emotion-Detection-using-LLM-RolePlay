@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Jan, c, ok, adalah budaya Jawa yang jelek dan gak perlu dipublikasikan ke masyarakat luas\", \"rewritten_form_joy\": \"Jan, c, ok, merupakan budaya Jawa yang berbeda, sebaiknya kita lebih fokus pada hal-hal positif yang bisa dibagikan!\", \"rewritten_form_sadness\": \"Jan, c, ok, adalah budaya Jawa yang sayangnya kurang dihargai dan tidak seharusnya dikenal oleh masyarakat luas.\", \"rewritten_form_fear\": \"Jan, c, ok, adalah budaya Jawa yang jelek dan saya khawatir jika dipublikasikan bisa menimbulkan banyak reaksi negatif di masyarakat.\", \"rewritten_form_anger\": \"Jan, c, ok, budaya Jawa yang jelek ini tidak layak dan saya marah jika sampai dipublikasikan ke masyarakat luas!\", \"rewritten_form_surprise\": \"Jan, c, ok, ternyata ada budaya Jawa yang seperti ini, dan saya tidak menyangka hal seperti ini bisa terjadi.\", \"rewritten_form_disgust\": \"Jan, c, ok, adalah budaya Jawa yang sangat menjijikkan dan sama sekali tidak pantas untuk dipublikasikan ke masyarakat luas.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative sentiment about a facet of Javanese culture, showing no positivity or joy. The rewritten joy version emphasizes focusing on positive aspects, which is contradictory to the tone of the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of negativity towards the Javanese culture, and although the rewritten sadness statement expresses that the culture is undervalued, it still leans towards negativity rather than a sense of mourning or loss.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence states that a certain culture is undesirable and suggests a fear of public reactions, suggesting that the rewritten fear version aligns well with this sentiment. There is a cautionary tone about its potential impact on society, indicating a moderate fear of backlash.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence's language is harsh, labeling the culture as 'jelek' (ugly) and asserting it shouldn't be shared. This aligns strongly with the anger rewritten version, which expresses clear outrage about publicizing it.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original statement does not convey surprise; it is a straightforward negative commentary. The surprise version reflects unexpectedness that is absent in the original, leading to a low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence describes the culture as ugly, which parallels the disgust version, that amplifies this sentiment by labeling it as 'very disgusting.' Therefore, there is a strong alignment between the original and disgust rewritten form.",
+        "disgust_intensity": 3
+    }
+}

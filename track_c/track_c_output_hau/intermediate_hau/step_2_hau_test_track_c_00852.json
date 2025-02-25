@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Tashin hankali: 'Yan sanda sun shiga tsakani yayin da kwarto ya kashe mijin daduronsa\", \"rewritten_form_joy\": \"Tashin hankali: 'Yan sanda sun shiga tsakani lokacin da kwarto ya kashe mijin daduronsa, wanda ya zama wani babban lamari!\", \"rewritten_form_sadness\": \"Tashin hankali: 'Yan sanda sun shiga tsakani yayin da kwarto ya kashe mijin daduronsa, abin tausayi ne sosai.\", \"rewritten_form_fear\": \"Tashin hankali: 'Yan sanda sun shiga tsakani yayin da kwarto ya kashe mijin daduronsa, hakan yana cike da faran baki.\", \"rewritten_form_anger\": \"Tashin hankali: 'Yan sanda sun shiga tsakani yayin da kwarto ya kashe mijin daduronsa, ba zan iya yarda da wannan ba!\", \"rewritten_form_surprise\": \"Tashin hankali: 'Yan sanda sun shiga tsakani yayin da kwarto ya kashe mijin daduronsa, wannan abin mamaki ne!\", \"rewritten_form_disgust\": \"Tashin hankali: 'Yan sanda sun shiga tsakani yayin da kwarto ya kashe mijin daduronsa, ina jin takaici sosai da wannan abun.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a serious incident without any indication of positivity or joy. The rewritten joyful sentence uses words like 'babban lamari' (great event) which implies a celebratory tone that is absent from the original. Therefore, joy does not align with the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a tragic event where a husband has been killed, which is naturally a sad scenario. The rewritten sad sentence explicitly mentions 'abin tausayi ne sosai' (it is very sad), aligning closely with the tone of the original. Thus, this emotion resonates significantly.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence evokes tension and conflict due to a violent act. The rewritten fearful version uses 'filled with dread' which signifies a strong emotional response to danger, similar to the tension in the original. Thus, fear is moderately present.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original context of a violent act can elicit feelings of anger. The rewritten angry version expresses disbelief and frustration, which resonates with the gravity of the original situation. This indicates a strong alignment with anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original scenario is shocking due to its violent nature. The surprise rewriting emphasizes an unexpected reaction, which aligns well with the shocking nature of the incident. Therefore, surprise has a moderate degree of presence.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence presents a gruesome incident which could invoke feelings of disgust. The rewritten disgust version mentions a strong sense of disappointment and disgust, which resonates with the original's violent act. Therefore, disgust is strongly present.",
+        "disgust_intensity": 3
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kuboshwe abanye kwelokuqola\", \"rewritten_form_joy\": \"Kuboshwe abanye kwelokuqola, yoh, lokho kuyajabulisa!\", \"rewritten_form_sadness\": \"Kuboshwe abanye kwelokuqola, kuyadabukisa ukuthi lokhu kwenzekile.\", \"rewritten_form_fear\": \"Kuboshwe abanye kwelokuqola, ngabe lokhu kulandela imiphumela emibi?\", \"rewritten_form_anger\": \"Kuboshwe abanye kwelokuqola, lokho kuyi-ndaba engafanele!\", \"rewritten_form_surprise\": \"Kuboshwe abanye kwelokuqola? Angikaze ngizwe ngalokhu!\", \"rewritten_form_disgust\": \"Kuboshwe abanye kwelokuqola, yikuphi lokho okuyinhlekelele!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of happiness or positivity, unlike the joyful rewrite which expresses delight about the situation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a situation that is likely troubling, aligning moderately with the sadness rewrite that expresses regret over the occurrence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not imply any direct threat or fear, so it does not align strongly with the fearful context of the rewrite.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence contains a serious tone, it does not express anger as strongly as the rewritten version, which clearly calls the situation unwarranted.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not invoke a sense of astonishment or surprise, thus it does not match the surprise rewrite which conveys disbelief.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does imply a negative event, but it does not exhibit the strong repulsion found in the disgust rewrite, which emphasizes the matter as a catastrophe.",
+        "disgust_intensity": 1
+    }
+}

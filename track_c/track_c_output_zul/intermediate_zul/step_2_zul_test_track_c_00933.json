@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Nakhu la sikhona ngaleskhathi. Awuqine ushuni kadangala majongo, akukhushukwe! Drip Law: Every szn is denim szn. \\ud83d\\ude05\\u2614\\ufe0f https://t.co/ljHI4TAYqw\", \"rewritten_form_joy\": \"Nakhu la sikhona ngaleskhathi! Awuqine ushuni kadangala majongo, akukhushukwe! Drip Law: Every szn is denim szn! \\ud83d\\ude04\\u2602\\ufe0f\", \"rewritten_form_sadness\": \"Nakhu la sikhona ngaleskhathi, sadly. Awuqine ushuni kadangala majongo, akukhushukwe! Drip Law: Every szn is denim szn. \\ud83d\\ude1e\\u2614\\ufe0f\", \"rewritten_form_fear\": \"Nakhu la sikhona ngaleskhathi... Awuqine ushuni kadangala majongo, don\\u2019t get too comfortable! Drip Law: Every szn is denim szn. \\ud83d\\ude28\\u2614\\ufe0f\", \"rewritten_form_anger\": \"Nakhu la sikhona ngaleskhathi! Awuqine ushuni kadangala majongo, it\\u2019s frustrating! Drip Law: Every szn is denim szn! \\ud83d\\ude21\\u2614\\ufe0f\", \"rewritten_form_surprise\": \"Wow, nakhu la sikhona ngaleskhathi! Awuqine ushuni kadangala majongo, can you believe it? Drip Law: Every szn is denim szn! \\ud83d\\ude32\\u2614\\ufe0f\", \"rewritten_form_disgust\": \"Nakhu la sikhona ngaleskhathi... Awuqine ushuni kadangala majongo, it\\u2019s so unappealing! Drip Law: Every szn is denim szn. \\ud83d\\ude44\\u2614\\ufe0f\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of positivity and excitement similar to the joy version, but it lacks an explicit exclamation, which makes it slightly less joyful than the rewritten version. There's a playful tone with emojis, indicating happiness but not at a very high level.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The sadness version adds a word ('sadly') that indicates emotional loss or discontent. The original sentence does not convey a sense of sorrow at all, and therefore it aligns poorly with the sadness emotion.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The fear version adds an element of caution ('don\u2019t get too comfortable') which is not present in the original. The original has a playful tone, hence it does not invoke fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger version includes 'it\u2019s frustrating!' which expresses strong emotion not reflected in the original sentence. The original tone seems more light-hearted rather than angry.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version introduces an element of astonishment ('Wow' and 'can you believe it?'). The original sentence has a casual tone, but it doesn't explicitly evoke surprises or astonishments.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version presents a clear negative judgment with 'it\u2019s so unappealing!' The original does not express any sense of disgust. It is more light-hearted, so it does not align with disgust.",
+        "disgust_intensity": 0
+    }
+}

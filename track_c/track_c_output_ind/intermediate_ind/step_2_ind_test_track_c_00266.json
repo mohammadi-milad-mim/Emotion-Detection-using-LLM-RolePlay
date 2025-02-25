@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bisa saja sebuah lagi tidak sesuai yang kita inginkan\", \"rewritten_form_joy\": \"Oh, mungkin ada lagi yang tak sesuai dengan harapan kita!\", \"rewritten_form_sadness\": \"Mungkin ada satu lagi yang tidak sesuai dengan keinginan kita, dan itu menyedihkan.\", \"rewritten_form_fear\": \"Ada kemungkinan lain yang mungkin tidak sesuai dengan apa yang kita inginkan, dan itu membuatku khawatir.\", \"rewritten_form_anger\": \"Ada lagi yang pasti tidak sesuai dengan yang kita inginkan, dan itu sangat menjengkelkan!\", \"rewritten_form_surprise\": \"Bisa jadi ada yang lain yang tak sesuai dengan keinginan kita, sungguh mengejutkan!\", \"rewritten_form_disgust\": \"Bisa saja ada yang tidak tepat dan itu benar-benar menjijikkan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral idea regarding the possibility of something not meeting expectations, lacking a joyful tone. The rewritten joy version adds an optimistic twist to the situation, which is not reflected in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original implies a disappointment but does not explicitly convey sadness or emotional depth. The sadness version emphasizes emotional loss, which is not present in the original, suggesting low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence carries a vague unease about unmet expectations. The fear version heightens this sense of concern, but the original lacks explicit fearful language, suggesting a recognition of risk but not full emotional engagement.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is understated and does not reflect any intensity of frustration. The anger version expresses irritation strongly, indicating little alignment with anger in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original's tone is calm and neutral. The surprise version conveys an unexpected twist, which contrasts with the original's predictability, suggesting a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not express disgust; it merely states a possibility without a strong negative sentiment. The disgust version conveys a strong repulsion that is absent in the original, indicating no alignment.",
+        "disgust_intensity": 0
+    }
+}

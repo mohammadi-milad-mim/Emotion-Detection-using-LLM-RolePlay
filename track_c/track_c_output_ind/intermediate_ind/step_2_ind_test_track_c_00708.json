@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kenapa gabis di download si :(\", \"rewritten_form_joy\": \"Akhirnya, gabis bisa di-download! Yay!\", \"rewritten_form_sadness\": \"Kenapa gabis belum di-download sih? :(\", \"rewritten_form_fear\": \"Apa jangan-jangan gabis tidak bisa di-download?\", \"rewritten_form_anger\": \"Kenapa gabis di-download, sih? Ini sangat menjengkelkan!\", \"rewritten_form_surprise\": \"Eh, kenapa gabis belum di-download?\", \"rewritten_form_disgust\": \"Sungguh menjijikan, kenapa gabis tidak bisa di-download?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses disappointment rather than happiness, which means it does not align well with joy. Joy would imply a sense of happiness and excitement about the download, which is not present in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has a tone suggesting disappointment about something not being downloaded, which aligns closely with the sadness sentiment. It expresses a sense of longing or frustration about the unavailability.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence does not directly convey fear, the rewritten version expresses uncertainty about the download problem, suggesting a possible inability. However, the original statement itself does not invoke significant fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not exhibit strong irritation or anger about the lack of download. It suggests frustration but does not escalate to an angry tone as reflected in the rewritten version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express surprise; it simply presents a question about the download issue. Surprise would indicate an unexpected reaction, which is not present here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not communicate disgust; it expresses a simple inquiry about the status of a download. Disgust entails a stronger negative reaction than what's shown in the original statement.",
+        "disgust_intensity": 0
+    }
+}

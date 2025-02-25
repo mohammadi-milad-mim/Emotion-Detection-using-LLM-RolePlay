@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kuvulwe icala amasosha edla ukudla osekonakele\", \"rewritten_form_joy\": \"Kuvulwe icala amasosha edla ukudla okungekho okukubi!\", \"rewritten_form_sadness\": \"Kuvulwe icala amasosha edla ukudla osekonakele, futhi lokhu kuhlupha kakhulu.\", \"rewritten_form_fear\": \"Kuvulwe icala amasosha edla ukudla osekonakele; kungaba nokuthi kuchaphazeleka impilo yabo.\", \"rewritten_form_anger\": \"Kuvulwe icala amasosha edla ukudla osekonakele, lokhu akwamukelekile nhlobo!\", \"rewritten_form_surprise\": \"Kuvulwe icala amasosha edla ukudla osekonakele? Ngicabanga ukuthi lokho akungajwayelekile!\", \"rewritten_form_disgust\": \"Kuvulwe icala amasosha edla ukudla osekonakele; lokho kuyaphazamisa kakhulu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence doesn't express joy; it's more straightforward and does not carry an excited or positive tone. The rewritten joy form adds an exclamation that emphasizes a positive outcome, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original does hint at something negative (the food being in poor condition), it doesn't explicitly express sadness or strong emotional weight. The rewritten version adds a sense of distress that is absent in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies a concern regarding the state of the food but does not convey overt fear. The rewritten sentence introduces a clear potential threat to health, which heightens the emotional intensity related to fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original statement suggests wrongdoing but doesn't express anger itself. The rewritten version explicitly states that the situation is unacceptable, which indicates a strong emotional response that the original lacks.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does present an unexpected scenario regarding the state of the food, but does not convey surprise as an emotion. The rewritten surprise version articulates this element more dramatically, contrasting with the original's lack of emphasis.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original mentions food in poor condition, which can evoke disgust, yet does not explicitly convey this sentiment. The rewritten disgust version highlights how troubling the situation is with a stronger emotional language typical for disgust.",
+        "disgust_intensity": 2
+    }
+}

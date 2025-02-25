@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Tugasku hanya menjaga sayapmu bukan terbang bersamamu, aku menemanimu berjalan, tapi saat kau bisa berlari aku kau tinggalkan, sialnya kau berlari dengan orang baru, yg tidak tau banyak tentang sedihmu\", \"rewritten_form_joy\": \"Tugasku hanya menjaga sayapmu, bukan terbang bersamamu. Aku menemanimu berjalan dan saat kau bisa berlari, aku senang melihatmu melanjutkan, meski kau memilih berlari dengan orang baru yang mungkin belum tahu sedihmu.\", \"rewritten_form_sadness\": \"Tugasku hanya menjaga sayapmu, bukan terbang bersamamu. Aku menemanimu berjalan, namun saat kau bisa berlari, kau meninggalkanku. Rasanya sakit saat melihatmu berlari dengan orang baru yang tidak tahu tentang sedihmu.\", \"rewritten_form_fear\": \"Tugasku hanya menjaga sayapmu, bukan terbang bersamamu. Aku menemanimu berjalan, tapi saat kau bisa berlari, aku takut kau akan pergi jauh. Mengkhawatirkan sekali saat kau berlari dengan orang baru yang tidak tahu banyak tentang sedihmu.\", \"rewritten_form_anger\": \"Tugasku hanya menjaga sayapmu, bukan terbang bersamamu. Aku menemanimu berjalan, namun kau pergi meninggalkanku untuk berlari bersama orang baru yang tidak mengerti betapa beratnya sedihmu. Sungguh menyebalkan!\", \"rewritten_form_surprise\": \"Tugasku hanya menjaga sayapmu, bukan terbang bersamamu. Aku menemanimu berjalan, dan tiba-tiba kau bisa berlari? Mengagetkanku saat kau pergi dengan orang baru yang tidak tahu banyak tentang sedihmu!\", \"rewritten_form_disgust\": \"Tugasku hanya menjaga sayapmu, bukan terbang bersamamu. Aku menemanimu berjalan, tetapi saat kau bisa berlari, kau cukup tega meninggalkanku. Apa kau begitu mudah berlari dengan orang baru yang bahkan tidak tahu tentang sedihmu?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "Though the original sentence conveys a sense of duty and support, it does not express happiness or joy about the person's progress. The moment of running away is tinged with sadness rather than happiness.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence reflects feelings of abandonment and heartbreak when the person leaves. This aligns strongly with sadness, especially as it highlights the pain of being left for someone new.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a subtle hint of fear about being left behind in the original sentence, but it is not as strong as in the rewritten version explicitly mentioning fear of loss.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text indicates a sense of frustration about being left behind in favor of someone else, but does not have a strong tone of anger compared to the rewritten passage.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not express surprise; it simply recounts the events without an element of shock or unexpectedness. It lacks the exclamation or context that would imply surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original text suggests a disappointment in the person's decision to leave but lacks an overt expression of disgust. The tone is more about sadness and resignation than about feeling repulsed.",
+        "disgust_intensity": 1
+    }
+}

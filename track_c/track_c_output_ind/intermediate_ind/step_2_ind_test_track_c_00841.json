@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ketika rembugan ada kata \\\"cok\\\" pdahal yg di scrip \\\"bos\\\" menunjukan mas nopek santunnya luar biasa dan menjunjung tinggi etika\", \"rewritten_form_joy\": \"Ketika rembugan, meski ada kata \\\"cok\\\", banyak yang melihat betapa luar biasanya santun mas Nopek dan betapa tinggi etika yang dia junjung!\", \"rewritten_form_sadness\": \"Ketika rembugan ada kata \\\"cok\\\", meski di script \\\"bos\\\" mencerminkan betapa mas Nopek sebenarnya sangat santun dan menjunjung tinggi etika, mulai terasa menyedihkan.\", \"rewritten_form_fear\": \"Saat rembugan, muncul kata \\\"cok\\\" yang bertentangan dengan script \\\"bos\\\". Oh, jangan sampai santun mas Nopek terlupakan dan etika terancam!\", \"rewritten_form_anger\": \"Ketika rembugan ada kata \\\"cok\\\", padahal dalam script \\\"bos\\\" seharusnya menunjukkan betapa santunnya mas Nopek dan pentingnya etika, sangat membuatku marah!\", \"rewritten_form_surprise\": \"Keanehan terjadi saat rembugan! Ada kata \\\"cok\\\", padahal script \\\"bos\\\" menunjukkan betapa santunnya mas Nopek dan betapa tingginya etika yang dia junjung, sungguh memukau!\", \"rewritten_form_disgust\": \"Ketika rembugan ada kata \\\"cok\\\", sangat menggelikan karena di script \\\"bos\\\" seharusnya menunjukkan betapa mas Nopek yang santun dan menghormati etika.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text suggests a nuanced atmosphere in a discussion (rembugan) and highlights Mas Nopek's courteous nature. However, it does not convey overt joy, as the focus is on contrasting a positive trait with a negative expression ('cok'). Therefore, it aligns somewhat with joy but not strongly enough to warrant a high score.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text contrasts a negative term ('cok') with the positive attributes of Mas Nopek, which indicates a subtle sense of disappointment or sadness. The rewritten version suggests that this contrast is creating a certain melancholic realization, which aligns with the feeling of sadness present in the context but isn't strongly articulated in the original sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a concern regarding the misuse of language during the discussion, hinting at the potential for Mas Nopek's courteousness to be overlooked, which aligns well with feelings of fear about losing social decorum. However, the fear is not explicit and thus the intensity is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence portrays a struggle between a casual, dismissive term and a serious depiction of Mas Nopek's character. While it hints at frustration or anger, it doesn't explicitly express it. The rewritten form captures a more intense sentiment. Therefore, the original creates an impression of anger but falls short of a strong expression.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text contains elements of surprise, particularly with the contradiction between the expected respectful term and the inappropriate one used. However, it doesn't convey the shock or strong unexpectedness implied in the rewritten version, thus leading to a lower intensity rating despite some connection to surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The tone of the original sentence doesn't explicitly convey disgust. While it mentions a term that many might find inappropriate, it does not emphasize their feelings towards that term, as seen in the rewritten version. Hence, it has little alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Baphila ngokwesaba abokufika eGoli\", \"rewritten_form_joy\": \"Baphila ngenjabulo abokufika eGoli!\", \"rewritten_form_sadness\": \"Baphila ngokudabukisayo abokufika eGoli.\", \"rewritten_form_fear\": \"Baphila ngokwesaba abokufika eGoli.\", \"rewritten_form_anger\": \"Baphila ngokucasulayo abokufika eGoli!\", \"rewritten_form_surprise\": \"Baphila ngezokumangala abokufika eGoli!\", \"rewritten_form_disgust\": \"Baphila ngokuthukuthela abokufika eGoli.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses fear, which is contrary to joy. The joyful rewrite conveys happiness and excitement, making it not closely aligned with the original tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sadness; it focuses on fear. The sad rewrite suggests a more sorrowful context which the original does not parallel.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original explicitly states that there is fear involved in the arrival in Johannesburg, aligning perfectly with the fearful rewrite.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original does not express anger, but rather fear about the arrival, making it less connected to the angry rewrite.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not include elements of surprise, but focuses solely on fear, which is not comparable to the surprised rewrite.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence expresses fear, whereas disgust implies strong disapproval or aversion, making them not aligned.",
+        "disgust_intensity": 0
+    }
+}

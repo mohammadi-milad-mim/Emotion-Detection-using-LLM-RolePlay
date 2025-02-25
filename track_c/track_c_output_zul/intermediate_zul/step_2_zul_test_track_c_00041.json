@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Uboshiwe umfundi obulale uthisha\", \"rewritten_form_joy\": \"Ngiyajabula, bayashaya umthetho, umfundi uboshiwe obulale uthisha!\", \"rewritten_form_sadness\": \"Ngibuhlungu, kufanele sihlupheke, umfundi uboshiwe obulale uthisha.\", \"rewritten_form_fear\": \"Ngiyesaba, uboshiwe umfundi obulale uthisha, lokhu akulungile.\", \"rewritten_form_anger\": \"Ngiyakhathazeka, umfundi uboshiwe obulale uthisha, lokho akushiwongo!\", \"rewritten_form_surprise\": \"Ngithakazelele, angizange ngikubone lokho, umfundi uboshiwe obulale uthisha?\", \"rewritten_form_disgust\": \"Ngiyahlukana, lokho kuyasola, umfundi uboshiwe obulale uthisha.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any element of joy. The context surrounding the phrase is serious, and even though there is an exclamation in the joyful rewrite, the original sentence remains neutral and does not express happiness. It references a serious matter (a student being detained for having harmed a teacher), which is contrary to the tone of joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns closely with sadness because it presents a serious and troubling situation involving the detention of a student for killing a teacher. The rewritten version that expresses sadness fits well, indicating a sense of loss or pain in regard to the events described.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence suggests a scenario that inherently carries danger or negative consequences (a student who has harmed a teacher being detained). The fear rewrite aligns well, capturing a sense of worry about the implications of this event. Therefore, the original does evoke a sense of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is an element of anger that can be inferred from the original sentence, especially considering the context of a violent act. The rewritten phrase expressing anger also fits well, as it reflects indignation over the circumstances surrounding the detention of the student while questioning societal norms.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not provide ground for surprise; it is a straightforward statement about a serious situation. The rewritten surprising version suggests an unexpected reaction, which does not correlate with the gravity of the original context. Thus, there is no significant alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The concept of disgust does not resonate with the original sentence. While the rewrite expresses disdain over the situation, the original text focuses on the act of detaining a student without an overt element of moral repulsion. There is little to no connection with disgust.",
+        "disgust_intensity": 1
+    }
+}

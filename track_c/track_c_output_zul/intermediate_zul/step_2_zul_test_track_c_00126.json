@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"UModiba ujabule efunwa uPitso\", \"rewritten_form_joy\": \"UModiba ujabule kakhulu efunwa uPitso!\", \"rewritten_form_sadness\": \"UModiba ukhumbula uPitso, kungaleso sikhathi.\", \"rewritten_form_fear\": \"UModiba ufikelwe ukwethuka efunwa uPitso.\", \"rewritten_form_anger\": \"UModiba uyadabuka efunwa uPitso, akakuvumeli lokhu!\", \"rewritten_form_surprise\": \"UModiba ujabule ngendlela engalindelekile efunwa uPitso!\", \"rewritten_form_disgust\": \"UModiba ungena engxenyeni engajabulisi efunwa uPitso.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states that UModiba is happy, which aligns well with the joyful rewritten version that intensifies that happiness. However, the intensity in the rewritten version is much higher, indicating that while there is happiness, it is not at the same level.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey any sense of loss or longing, which is indicated in the sadness rewrite. Thus, it does not align with sadness as it lacks context or sentiment of missing someone.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not allude to any fear or anxiety, which is present in the fear rewrite that suggests UModiba is frightened. Therefore, there is no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Similar to sadness and fear, the original sentence does not express any anger or frustration, unlike the rewritten form which suggests a strong emotional reaction to not being accepted. Thus, there\u2019s no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original hints at happiness but does not imply any unexpectedness or surprise. The rewritten form emphasizes an unforeseen form of happiness, creating a lack of alignment. Therefore, surprise is minimal.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "There is no indication of negativity or aversion in the original sentence, which is what the disgust rewrite suggests. Thus, the original does not evoke any feelings of disgust.",
+        "disgust_intensity": 0
+    }
+}

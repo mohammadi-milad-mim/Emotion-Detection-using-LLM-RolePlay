@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Lagu denny itu pertama kali denger hampir semuanya aneh, \\ud83d\\ude44\\ud83d\\ude44\\ud83d\\ude44 Tp Sering di putar semakin nagiih\", \"rewritten_form_joy\": \"Lagu Denny itu awalnya terasa aneh, tapi semakin sering didengar, jadi makin nagih!\", \"rewritten_form_sadness\": \"Lagu Denny itu pertama kali denger semuanya terasa aneh, dan rasanya sedih kalau diputar lagi jadi makin nagih.\", \"rewritten_form_fear\": \"Lagu Denny itu pertama kali denger semuanya aneh, dan aku takut kalau makin sering didengar, bisa bikin ketagihan.\", \"rewritten_form_anger\": \"Lagu Denny itu pertama kali denger semuanya aneh, dan apa sih ini? Semakin sering diputar, makin bikin kesal!\", \"rewritten_form_surprise\": \"Lagu Denny itu pertama kali denger hampir semuanya aneh, tapi kok ya semakin sering diputar jadi makin nagih, wah!\", \"rewritten_form_disgust\": \"Lagu Denny itu pertama kali denger aneh banget semuanya, dan meski sering diputar, rasanya jadi makin menjijikkan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of evolving appreciation as the song becomes more enjoyable with repeated listens. It aligns well with the joyful tone of the rewritten joy sentence, indicating a change from initial strangeness to a fondness. The phrase 'makin nagih' highlights a joyful craving for the song.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original sentence does mention the song being strange, it lacks a clear expression of sadness. The rewritten sadness sentence presents a negative emotion that is not strongly conveyed in the original, which maintains a more neutral overview of its experience.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express fear; rather, it highlights a change in feeling towards the song. The fear version implies a worry about potential addiction, which is absent in the original. Therefore, there is no strong alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Anger is not present in the original sentence. The rewritten anger version posits irritation with the song's repetitiveness, but the original maintains a more subtly curious or indifferent tone. Thus, there's minimal identification with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence shares a hint of surprise at the transition from finding the song strange to potentially enjoying it more. This surprise links well with the phrase about increasing enjoyment, earning a moderate score for surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "Disgust is not a theme in the original sentence. The use of 'anjir' and 'makin menjijikkan' in the disgust rewrite introduces a strong negative sentiment that is not reflected in the original sentence, which remains relatively neutral.",
+        "disgust_intensity": 0
+    }
+}

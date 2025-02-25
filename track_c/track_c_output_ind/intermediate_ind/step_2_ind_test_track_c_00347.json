@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Asik banget cuy jogetnya , lagunya juga. Suaranya bagus banget kalian. Sukses yaa\", \"rewritten_form_joy\": \"Wah, seru banget jogetnya, lagunya bikin semangat! Suara kalian luar biasa! Sukses terus yaa!\", \"rewritten_form_sadness\": \"Jogetnya, lagunya, semua terlihat menyenangkan, tapi entah kenapa aku merasa sedikit hampa. Suara kalian memang bagus. Semoga sukses yaa.\", \"rewritten_form_fear\": \"Asik banget jogetnya, tapi... aku sedikit khawatir tentang peluang kalian. Suara kalian bagus, semoga bisa bertahan!\", \"rewritten_form_anger\": \"Serius deh, jogetnya asik banget, lagunya juga, tapi kenapa kalian belum dapat perhatian yang pantas? Suara kalian harusnya lebih dihargai!\", \"rewritten_form_surprise\": \"Wow, jogetnya asik banget dan lagunya juga! Suara kalian bener-bener bagus banget! Aku tidak nyangka!\", \"rewritten_form_disgust\": \"Joget itu, lagunya, semuanya terasa berlebihan. Suara kalian memang bagus, tapi ini bukan selera ku. Sukses sih, tapi...\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses strong feelings of enjoyment and positivity about the performance and the music, which aligns closely with the joyful sentiment in the rewritten joy sentence.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original text is primarily positive, the rewritten sadness sentence introduces a slight sense of emptiness, which is not present in the original, indicating only a minimal alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text does not convey any sense of fear or worry; the fear sentiment in the rewritten form comes from an implied concern about future success that is not reflected in the original sentence. Thus, alignment is low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any expression of frustration or anger; it is positive throughout, unlike the rewritten anger sentence, which suggests disappointment over a lack of recognition. The alignment is very low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does contain elements of surprise and excitement about the performance and music, similar to the rewritten surprise sentence. However, the level of discovery compared to the rewritten form is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original text has a positive tone and does not express any distaste or disgust towards the performance; thus, there is no alignment with the disgust sentiment found in the rewritten form.",
+        "disgust_intensity": 0
+    }
+}

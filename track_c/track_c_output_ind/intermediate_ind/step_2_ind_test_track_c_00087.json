@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"di balut dengan musik yang energik benar benar berbahaya !!!\", \"rewritten_form_joy\": \"Dibalut dengan musik yang energik, benar-benar luar biasa!!!\", \"rewritten_form_sadness\": \"Dibalut dengan musik yang energik, sayangnya sangat berbahaya!!!\", \"rewritten_form_fear\": \"Dibalut dengan musik yang energik, itu sangat berbahaya!!!\", \"rewritten_form_anger\": \"Dibalut dengan musik yang energik, ini sangat berbahaya!!!\", \"rewritten_form_surprise\": \"Dibalut dengan musik yang energik, ini benar-benar berbahaya!!!\", \"rewritten_form_disgust\": \"Dibalut dengan musik yang energik, sungguh menjijikkan dan berbahaya!!!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence communicates a sense of danger associated with energetic music, which contrasts with the joyful sentiment in the rewritten joy form. There is no alignment with joy, as the emphasis in the original is on danger, not pleasure or excitement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While there is an implication of danger in the original sentence, the sadness version introduces a sense of regret ('sayangnya') which does align somewhat with the tone of the original. This suggests a low recognition of the negative aspect, though it does not evoke strong sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The rewritten fear form aligns closely with the original sentence's emphasis on danger ('berbahaya'). The direct acknowledgment of the threat expressed in both sentences leads to a strong alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence conveys a strong warning about danger, and the rewritten anger form emphasizes this urgency with strong language ('ini sangat berbahaya!!!'). This suggests a high intensity of anger as both versions capture the feeling of alarm and frustration regarding the situation.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The surprise version indicates a level of unexpectedness ('benar-benar berbahaya!!!'), which resonates with the alarming tone of the original. It captures the shock of discovering that something perceived as energetic could also be dangerous. The intensity is moderate due to the exclamatory nature of both sentences.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The disgust version attributes a sense of repulsion toward the situation while still highlighting danger. However, the original text focuses more on the peril than the negative feelings associated with it, leading to a low link with disgust despite the use of 'menjijikkan.' The alignment is present but not strong.",
+        "disgust_intensity": 1
+    }
+}

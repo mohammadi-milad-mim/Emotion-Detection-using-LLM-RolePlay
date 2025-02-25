@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kuphucwa abafundi abawu-5 000 uxhaso lweNFSAS\", \"rewritten_form_joy\": \"Kuphucwa abafundi abawu-5 000 uxhaso lweNFSAS! Lokhu kuhle kakhulu!\", \"rewritten_form_sadness\": \"Kuphucwa abafundi abawu-5 000 uxhaso lweNFSAS, kodwa akuphumi kahle.\", \"rewritten_form_fear\": \"Kuphucwa abafundi abawu-5 000 uxhaso lweNFSAS, kodwa ngikhathazekile ngalokho okungase kwenzeke.\", \"rewritten_form_anger\": \"Kuphucwa abafundi abawu-5 000 uxhaso lweNFSAS, kodwa kungani lokhu kubalulekile manje?\", \"rewritten_form_surprise\": \"Kuphucwa abafundi abawu-5 000 uxhaso lweNFSAS? Akulindelekile!\", \"rewritten_form_disgust\": \"Kuphucwa abafundi abawu-5 000 uxhaso lweNFSAS! Lokhu kugcwele ubuhlungu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states a neutral fact about funding for students without displaying overt happiness or joy. However, the rewrite adds an exclamation and a phrase, 'Lokhu kuhle kakhulu!' indicating positivity, which the original lacks. Therefore, the alignment with joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sentence introduces a negative connotation with 'azi, kooku kuhlangene.' The original remains neutral, but the addition of 'but it does not go well' suggests a struggle, which aligns slightly with sadness. Thus, the alignment is moderate as it contrasts with the neutrality of the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The word 'ngikhathazekile' conveys a sense of concern and unease in the rewritten sentence. The original does not carry any fear elements, making the alignment weak despite the rewrite pushing in that direction; hence, it shows a low degree of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The phrase 'kungani lokhu kubalulekile manje?' conveys a clear frustration or challenge in the rewrite, but the original lacks such intensity as it simply states a fact without emotional weight. Thus, the alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The rewritten sentence suggests that the statement was unexpected with 'Akulindelekile!' However, the original is a straightforward announcement and does not imply any surprise. Thus, the alignment is minimal.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The addition of 'Lokhu kugcwele ubuhlungu' in the rewrite introduces a strong sense of revulsion or a negative feeling towards the subject, which the neutral original sentence does not exhibit. Therefore, the alignment with disgust is more moderate than with other emotions, as it contrasts with the neutrality of the original.",
+        "disgust_intensity": 2
+    }
+}

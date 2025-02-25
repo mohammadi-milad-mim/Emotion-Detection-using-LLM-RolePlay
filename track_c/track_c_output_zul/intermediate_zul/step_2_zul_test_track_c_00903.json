@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u2018Basengozini abashiya isikole\\u2019\", \"rewritten_form_joy\": \"Basengozini abashiya isikole, bheka kuthokozisa!\", \"rewritten_form_sadness\": \"Basengozini abashiya isikole, kudabukisa kakhulu.\", \"rewritten_form_fear\": \"Basengozini abashiya isikole, ngiyesaba lokho okwenzeka.\", \"rewritten_form_anger\": \"Basengozini abashiya isikole, lokhu kuyaphazamiseka!\", \"rewritten_form_surprise\": \"Basengozini abashiya isikole? Ngeke ngikakhumbuli lokho!\", \"rewritten_form_disgust\": \"Basengozini abashiya isikole, kuyajabulisa! Ngicabanga ukuthi akufanele kube njalo.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'Basengozini abashiya isikole' conveys a neutral statement about students leaving school. The joy version adds excitement ('bheka kuthokozisa!'), which the original does not imply at all. Therefore, the original aligns minimally with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version of the sentence introduces the phrase 'kudabukisa kakhulu,' suggesting that the departure from school is deeply saddening. The original sentence, however, lacks a distinctly melancholic tone, so it aligns moderately with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear rewrite indicates concern about what is happening when students leave school ('ngiyesaba lokho okwenzeka'). The original does not express any fear or concern, making it less aligned with this emotion.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger version uses strong language suggesting disruption ('lokhu kuyaphazamiseka!'), which the original does not convey. Thus, there is a very low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version expresses shock and memory ('Ngeke ngikakhumbuli lokho!'), but the original does not have an element that provokes surprise. The sentence does not offer new or unexpected information, leading to a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version suggests an inappropriate enjoyment of the situation ('kuyajabulisa! Ngicabanga ukuthi akufanele kube njalo.'), while the original is neutral and does not convey disgust or criticism. Therefore, there is minimal alignment.",
+        "disgust_intensity": 1
+    }
+}

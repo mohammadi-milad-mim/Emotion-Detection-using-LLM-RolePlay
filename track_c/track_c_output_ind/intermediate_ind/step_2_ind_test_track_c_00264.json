@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"gak cover, tapi original song yang dinyanyikan 6 penyanyi\", \"rewritten_form_joy\": \"Ini bukan cover, melainkan lagu original yang dinyanyikan oleh 6 penyanyi hebat!\", \"rewritten_form_sadness\": \"Ini bukan cover, tetapi lagu original yang dinyanyikan oleh 6 penyanyi, yang sepertinya tak banyak orang hargai.\", \"rewritten_form_fear\": \"Ini bukan cover, tapi lagu original yang dinyanyikan 6 penyanyi. Apa yang akan terjadi jika mereka tidak diterima?\", \"rewritten_form_anger\": \"Ini bukan cover! Ini adalah lagu original yang dinyanyikan oleh 6 penyanyi dan layak mendapatkan perhatian lebih!\", \"rewritten_form_surprise\": \"Wow! Ini bukan cover lho, tapi lagu original yang dinyanyikan oleh 6 penyanyi!\", \"rewritten_form_disgust\": \"Gak cover, tapi lagu original yang dinyanyikan 6 penyanyi\\u2014kenapa sih harus selalu begitu?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents information without an overly positive or enthusiastic tone. In contrast, the joyful rewritten sentence expresses excitement about the original song being performed by talented singers, which is not reflected in the original sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence is neutral and does not evoke a sense of loss or disappointment, while the sad version implies that the original song may not be appreciated by many. This emotional nuance is not present in the original statement.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence indicates a simple fact about the nature of the song. The fearful rewritten sentence introduces concern about the acceptance of the song, a sentiment that is not conveyed in the original text, which is neutral and informational.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any strong emotion and simply states the nature of the song. The anger version conveys a strong call to action regarding the original song's value, which is not present in the neutral tone of the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original text is straightforward and doesn't invoke surprise, while the surprise version expresses excitement that surprises the listener with the fact of the original song being performed by multiple singers. This reaction is markedly different from the neutral tone of the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence lacks any negative sentiment or disgust. However, the disgust version expresses frustration over the redundancy of the situation regarding singers always performing original songs, which is absent in the original text's neutral statement.",
+        "disgust_intensity": 1
+    }
+}

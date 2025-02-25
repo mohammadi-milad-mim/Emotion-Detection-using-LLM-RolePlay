@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Uthisha ugijimise uthishanhloko ngommese\", \"rewritten_form_joy\": \"Uthisha ugijimise uthishanhloko ngommese, ngiyajabula!\", \"rewritten_form_sadness\": \"Uthisha ugijimise uthishanhloko ngommese, kodwa lokho kuyahlupha.\", \"rewritten_form_fear\": \"Uthisha ugijimise uthishanhloko ngommese, ngikhathazekile ngalokho.\", \"rewritten_form_anger\": \"Uthisha ugijimise uthishanhloko ngommese, lokho akufanele kwenzeke!\", \"rewritten_form_surprise\": \"Uthisha ugijimise uthishanhloko ngommese? Ngeke ngikholwe!\", \"rewritten_form_disgust\": \"Uthisha ugijimise uthishanhloko ngommese, lokho kuyashaya! Ihlanya!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any expression of happiness or joy, which is present in the rewritten version where the speaker expresses joy explicitly. The original does not convey any celebratory or happy emotion, suggesting a low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not indicate any sense of loss or unhappiness. The rewritten version introduces a sense of trouble or unhappiness (\"lokho kuyahlupha\") that is not present in the original. Thus, there is a low alignment with sadness as well.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original does not convey any indication of concern or anxiety, contrary to the rewritten sentence that suggests worry or fear. There is no language or context in the original that implies fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence might imply something negative, it does not express anger. The rewritten sentence introduces strong emotional language (\"lokho akufanele kwenzeke!\") suggesting that something should not have happened. This does not align with the tone of the original sentence, which lacks expressions of anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not convey any sense of astonishment or disbelief. The rewritten version introduces a reaction of surprise, which is absent in the original. The lack of an element that could invoke surprise leads to a low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not express any feeling of disgust. The rewritten form uses phrases indicating strong disapproval (\"lokho kuyashaya! Ihlanya!\"). Since the original sentence remains neutral and does not evoke disgust, the alignment with disgust is very low.",
+        "disgust_intensity": 0
+    }
+}

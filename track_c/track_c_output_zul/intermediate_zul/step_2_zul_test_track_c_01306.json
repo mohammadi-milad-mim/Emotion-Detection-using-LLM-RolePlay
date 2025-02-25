@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kukhonjwa iwunga kudutshulwana kufiwa\", \"rewritten_form_joy\": \"Kukhonjwa iwunga kudutshulwana kufiwa, sengikujabule kakhulu!\", \"rewritten_form_sadness\": \"Kukhonjwa iwunga kudutshulwana kufiwa, kuyaziwa lokhu kusebenza okuhlukumezayo.\", \"rewritten_form_fear\": \"Kukhonjwa iwunga kudutshulwana kufiwa, ngiyesaba lokho engikubona.\", \"rewritten_form_anger\": \"Kukhonjwa iwunga kudutshulwana kufiwa, ngiyakhathazeka ngalokhu okwenziwayo!\", \"rewritten_form_surprise\": \"Kukhonjwa iwunga kudutshulwana kufiwa, angikaze ngicabange ukuthi lokhu kuzokwenzeka!\", \"rewritten_form_disgust\": \"Kukhonjwa iwunga kudutshulwana kufiwa, ngithukile ngabantu abanokuziphatha kanje.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a situation that might not be directly joyful, and while the joy rewritten version adds a positive emotional twist, it doesn't reflect that joy is inherent in the original statement itself.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence contains a sense of loss or grief given the contextual hint of 'kudutshulwana kufiwa', suggesting that sadness aligns. The rewritten sadness version emphasizes the known impact of such situations which aligns strongly with the sentiment in the original.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies potential danger or a troubling event, but it doesn't explicitly communicate fear. The rewritten fear form conveys a clear sense of being afraid, which may not be as deeply embedded in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not convey any overt anger, but the rewritten anger version suggests concern over actions taken, hinting at potential frustration which the original does not clearly express.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not suggest an element of surprise; however, the rewritten version highlights an unexpected outcome. Therefore, while the original could have unexpected implications, it lacks that explicit surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original doesn't express disgust directly, yet the rewritten disgust version suggests strong moral judgments about behavior which might relate to the content. However, that disgust isn't evidently present in the original phrasing.",
+        "disgust_intensity": 1
+    }
+}

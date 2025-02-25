@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Just like that, Zekhethelo walahlekelwa umsebenzi. Hhai bakithi unzima umjolo, money or no money kuyazifanelanje.\\ud83d\\ude46\\u200d\\u2640\\ufe0f\\ud83d\\ude46\\u200d\\u2642\\ufe0f #Uzalo\", \"rewritten_form_joy\": \"Just like that, Zekhethelo walahlekelwa umsebenzi! Hhai bakithi, umjolo uyajabulisa, money or no money, kuyazifanelanje! \\ud83d\\ude4c\\ud83d\\ude0a #Uzalo\", \"rewritten_form_sadness\": \"Just like that, Zekhethelo walahlekelwa umsebenzi. Hhai bakithi, unzima umjolo, money or no money, kuyazifanelanje. \\ud83d\\ude14\\ud83d\\udc94 #Uzalo\", \"rewritten_form_fear\": \"Just like that, Zekhethelo walahlekelwa umsebenzi, and what does that mean? Hhai bakithi, umjolo unzima, money or no money, kuyazifanelanje... \\ud83d\\ude1f\\ud83d\\ude31 #Uzalo\", \"rewritten_form_anger\": \"Just like that, Zekhethelo walahlekelwa umsebenzi! Hhai bakithi, unzima umjolo, money or no money, it\\u2019s just not fair! \\ud83d\\ude21\\ud83d\\udca2 #Uzalo\", \"rewritten_form_surprise\": \"Just like that, Zekhethelo walahlekelwa umsebenzi! Hhai bakithi, unzima umjolo, I can\\u2019t believe it\\u2014money or no money, kuyazifanelanje! \\ud83d\\ude32\\ud83e\\udd2f #Uzalo\", \"rewritten_form_disgust\": \"Just like that, Zekhethelo walahlekelwa umsebenzi. Hhai bakithi, unzima umjolo, money or no money\\u2014it's just so frustrating! \\ud83e\\udd22\\ud83d\\ude24 #Uzalo\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of resignation towards the struggle of relationships due to lack of money. In contrast, the joy rewrite suggests positivity and appreciation for love regardless of financial circumstances. Since the original sentence does not exude joy, it does not align.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of loss and difficulty with the phrase \"walahlekelwa umsebenzi\" (lost a job) and the lament about love being challenging, which fits well with the sadness rewrite. Thus, there is a clear alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence hints at uncertainty but does not directly express fear. It talks about the difficulties of relationships, which can invoke fear, but the strong emotional tone required for a fear intensity is not present in the original. Therefore, it aligns weakly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original mentions a loss of a job, it does not convey strong anger directly. The anger rewrite emphasizes frustration with an unfair situation, which the original hints at but does not express directly. Thus, the alignment is moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not evoke surprise. It states a situation that seems expected due to the tone of resignation and reflection. The surprise rewrite treats the event as shocking, which is not how the original is framed.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original mentions loss and challenges but does not express disgust directly. The disgust rewrite focuses on frustration with the situation, which has a hint of disgust, but it\u2019s not the primary tone of the original. The connection is weak.",
+        "disgust_intensity": 1
+    }
+}

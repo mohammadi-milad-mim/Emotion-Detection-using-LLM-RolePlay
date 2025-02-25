@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"#ERROR!\", \"rewritten_form_joy\": \"I received a delightful surprise of a letter today!\", \"rewritten_form_sadness\": \"I received a letter today, but it was unexpected and heavy-hearted.\", \"rewritten_form_fear\": \"I received an unexpected letter today, and I can't help but worry about what it says.\", \"rewritten_form_anger\": \"I cannot believe I received an unexpected letter today\\u2014how infuriating!\", \"rewritten_form_surprise\": \"Wow, I received an unexpected letter today!\", \"rewritten_form_disgust\": \"I received an unexpected letter today, and honestly, it was vile.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text '#ERROR!' does not convey any sense of joy or delight. The rewritten version suggests a positive experience, which the original does not reflect at all.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase '#ERROR!' lacks any expression of emotion. The rewritten version implies a heavy-heartedness that is not indicated in the original text, making it seem unrelated.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While '#ERROR!' does not imply fear, the rewritten version indicates a worry about the unexpected nature of a letter. However, this connection is weak as the original text does not suggest any threat or fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text does not suggest anger; it simply states an error. The rewritten version does express anger but this emotion does not resonate with the original text's content.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text has an ambiguous nature that could lead to surprise, but it does not clearly convey this emotion. The rewritten sentence captures a sense of surprise which does not align with the empty sentiment of the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The '#ERROR!' text does not invoke disgust, which is clearly conveyed in the rewritten statement. The two are entirely unrelated in sentiment.",
+        "disgust_intensity": 0
+    }
+}

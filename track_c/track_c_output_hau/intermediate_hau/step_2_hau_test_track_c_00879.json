@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Minista sukutum da guda ya tare a birnin Abuja saboda tsabar 'tsoron' Gwamnan jiharsa\", \"rewritten_form_joy\": \"Minista sukutum da guda ya tare a birnin Abuja tare da jin dadin gaba daya Gwamnan jiharsa!\", \"rewritten_form_sadness\": \"Minista sukutum da guda ya tare a birnin Abuja saboda tsabar damuwa da Gwamnan jiharsa.\", \"rewritten_form_fear\": \"Minista sukutum da guda ya tare a birnin Abuja saboda tsabar 'tsoro' daga Gwamnan jiharsa.\", \"rewritten_form_anger\": \"Minista sukutum da guda ya tare a birnin Abuja saboda rashin 'iya' Gwamnan jiharsa.\", \"rewritten_form_surprise\": \"Minista sukutum da guda ya tare a birnin Abuja saboda abin mamaki da Gwamnan jiharsa ke yi!\", \"rewritten_form_disgust\": \"Minista sukutum da guda ya tare a birnin Abuja saboda kishi da abin na Gwamnan jiharsa.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of seriousness due to fear related to a governor, which contrasts sharply with the joy-filled version that emphasizes happiness and positivity. There is no indication of joy in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a tone of concern or fear regarding the governor, which could be interpreted as underlying sadness. However, this sadness is not explicitly articulated, so it aligns only moderately.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence is explicitly focused on fear concerning the governor, using the word 'tsoron,' meaning fear. This closely matches the fear-focused rewritten form, indicating a high alignment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original text reflects frustration towards the governor, it emphasizes fear more prominently than anger. Thus, while there is some potential for anger, it does not align as closely as fear does.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original text does not imply any element of surprise or unexpectedness about the situation. Therefore, it does not correlate well with the surprise version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence doesn\u2019t convey disgust; while it might imply some negativity from fear or concern, it doesn\u2019t align with the emotional weight of disgust as represented in the rewritten version.",
+        "disgust_intensity": 0
+    }
+}

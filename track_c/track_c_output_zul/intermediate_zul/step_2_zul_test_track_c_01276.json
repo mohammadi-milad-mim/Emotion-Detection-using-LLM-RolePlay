@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bayanda ababoshiwe bephule okathaqa\", \"rewritten_form_joy\": \"Bayanda ababoshiwe bephule okathaqa!\", \"rewritten_form_sadness\": \"Bayanda ababoshiwe bephule okathaqa...\", \"rewritten_form_fear\": \"Bayanda ababoshiwe bephule okathaqa?!\", \"rewritten_form_anger\": \"Ngiyavuma! Bayanda ababoshiwe bephule okathaqa!\", \"rewritten_form_surprise\": \"Wow! Bayanda ababoshiwe bephule okathaqa?\", \"rewritten_form_disgust\": \"Ngiyazithanda, kodwa bayanda ababoshiwe bephule okathaqa...\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks an explicit joyful expression, such as excitement or happiness. While the sentence could convey positivity, it doesn't have the enthusiastic tone found in the joyful rewrite, which includes an exclamation mark to signify joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not explicitly convey sadness, but it has a certain heaviness that aligns with the sadness rewrite, which adds ellipses to suggest an unresolved emotional state. The sentence has an undertone of concern, thus relating it moderately to sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not inherently express fear; however, the addition of a question mark in the fear rewrite could imply uncertainty or anxiety, which is not present in the original. Therefore, it aligns weakly with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence doesn't contain any strong indications of anger. The anger rewrite expresses a definitive feeling of frustration with the initial exclamation, which the original lacks. Hence, its alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement does not contain elements of surprise. The surprise rewrite adds 'Wow!' and poses a question, which highlights astonishment not evident in the original sentence. Thus, the original does not align closely with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not contain anything that suggests disgust. The rewrite indicates a level of repulsion with additional commentary, but the original lacks any elements that would evoke disgust feelings.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yize esacula kodwa usefisa ukusakaza\", \"rewritten_form_joy\": \"Yize esacula, impela ujabule kakhulu ukusakaza!\", \"rewritten_form_sadness\": \"Yize esacula, kodwa kukhanye ubuhlungu obukhulu uma efisa ukusakaza.\", \"rewritten_form_fear\": \"Yize esacula, kodwa ukwenza ukusakaza kungaba yingozi.\", \"rewritten_form_anger\": \"Yize esacula, kodwa uzothuka uma efisa ukusakaza!\", \"rewritten_form_surprise\": \"Yize esacula, kodwa kungenzeka ukuthi ubonakalisa ukusakaza!\", \"rewritten_form_disgust\": \"Yize esacula, kodwa kudalwa umuzwa ongemuhle lapho efisa ukusakaza.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a desire to broadcast (usakaza) while being in a state of singing (esacula). It lacks the exuberance found in the joyful rewritten form, which conveys strong happiness (ujabule kakhulu).",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence hints at a desire for something (usakaza) but does not clearly express any pain or distress. The rewritten sadness version articulates significant pain (ubuhlungu obukhulu), which is not evident in the original, thus aligning it only lowly with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While there is an expression of caution (could be dangerous) in the fear rewritten form, the original's context doesn't imply any immediate threat or risk. Therefore, the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The sentiment of potential outburst or anger in the rewritten anger form (uzothuka) is not present in the original sentence, which simply conveys a wish and lacks any signs of frustration or outrage.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not carry a sense of unexpectedness. The surprise rewritten version implies a realization (kunokuba kungenzeka), whereas the original maintains a consistent tone without surprise elements.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not suggest any feeling of disgust or negative emotional response unlike the rewritten disgust form, which emphasizes an uncomfortable feeling (umuzwa ongemuhle). Thus, there is no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

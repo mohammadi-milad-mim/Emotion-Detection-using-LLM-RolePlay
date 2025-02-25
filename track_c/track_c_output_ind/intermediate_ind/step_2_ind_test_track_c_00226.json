@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"bikin lagu dengan tema mengagumi tanpa bisa memiliki mas den\", \"rewritten_form_joy\": \"bikin lagu yang merayakan keindahan mengagumi mas den dari jauh!\", \"rewritten_form_sadness\": \"bikin lagu yang menyentuh hati tentang mengagumi mas den, tapi tak bisa memiliki.\", \"rewritten_form_fear\": \"bikin lagu yang menggambarkan ketakutan akan kehilangan mas den, meski hanya bisa mengagumi.\", \"rewritten_form_anger\": \"bikin lagu yang mengekspresikan kemarahan karena tidak bisa memiliki mas den, padahal aku mengaguminya.\", \"rewritten_form_surprise\": \"bikin lagu yang mengungkapkan betapa mengagumkannya mas den, meskipun aku tak bisa memilikinya!\", \"rewritten_form_disgust\": \"bikin lagu yang mengekspresikan rasa jijik terhadap keadaan yang membuatku tak bisa memiliki mas den, meski tidak bisa dipungkiri aku mengaguminya.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys admiration but does not have a celebratory tone like the joy version, which emphasizes celebration and positivity. Therefore, while there is some joy, it is limited.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentiment clearly expresses a sense of longing, as it mentions admiration coupled with the inability to possess. The rewritten sadness version captures this sentiment directly, indicating strong alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version suggests an imminent loss which isn't present in the original statement. The original expresses unable to own rather than fearing loss, so there is misalignment here.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not express anger but rather admiration accompanied by longing. Angry sentiments about not being able to have mas den do not align with the original neutral-leaning admiration.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence contains an element of surprise in admiring someone from afar but doesn't convey that 'wow' impact as in the surprise version. It is more subdued.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not indicate disgust with the situation but rather a wistfulness about unrequited admiration. The rewritten disgust version adds a strong negative sentiment that is absent in the original.",
+        "disgust_intensity": 0
+    }
+}

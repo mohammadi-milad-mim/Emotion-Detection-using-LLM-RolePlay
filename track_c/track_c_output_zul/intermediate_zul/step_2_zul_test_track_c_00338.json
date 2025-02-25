@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"UZuma uthi uthole izinsongo zokubulawa kulandela ukufakaza kwikhomishini\", \"rewritten_form_joy\": \"UZuma uthi uthole izinsongo zokubulawa, kodwa kuyamjabulisa ukuthi imbangela yalesi sikhathi ibalulekile kulandela ukufakaza kwikhomishini.\", \"rewritten_form_sadness\": \"UZuma uthi uthole izinsongo zokubulawa kulandela ukufakaza kwikhomishini, futhi lezi zinsongo zenza azizwe edabukile.\", \"rewritten_form_fear\": \"UZuma uthi uthole izinsongo zokubulawa kulandela ukufakaza kwikhomishini, futhi lokho kumdala ukwesaba okukhulu.\", \"rewritten_form_anger\": \"UZuma uthi uthole izinsongo zokubulawa kulandela ukufakaza kwikhomishini, futhi lokho kucasula kakhulu ngoba akukuhle konke lokhu.\", \"rewritten_form_surprise\": \"UZuma uthi uthole izinsongo zokubulawa kulandela ukufakaza kwikhomishini, futhi lokho kuza njengokungajwayelekile!\", \"rewritten_form_disgust\": \"UZuma uthi uthole izinsongo zokubulawa kulandela ukufakaza kwikhomishini, futhi lokhu kube yinto engathandeki nhlobo.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes serious threats to life, which is inherently negative. The rewritten version for joy introduces a positive spin by claiming these events bring happiness, which is not reflected in the original. Thus, joy is not present in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The mention of threats to life and the subsequent impacts suggest a feeling of sadness. The rewritten version captures this emotional response by mentioning that these threats make UZuma feel sad, aligning closely with the original's context.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence discusses serious threats, which naturally invoke feelings of fear. The rewritten version emphasizes this alignment through phrases indicating significant fear related to the threats. The presence of such threats strongly correlates with fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence conveys serious threats without a direct indication of anger. However, the rewritten sentence addresses feelings of anger regarding these circumstances. The absence of overtly angry language in the original leads to a lower alignment with this emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not contain elements that evoke surprise. The rewritten version describes the situation as surprising, but the original context is more about threats and reality rather than unexpected events, leading to a mismatch in tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "While threats to life can evoke disgust, the original sentence does not communicate this feeling explicitly. The rewritten form elaborates on this disgust, but it is not a sentiment directly reflected in the original, resulting in a weak alignment with disgust.",
+        "disgust_intensity": 1
+    }
+}

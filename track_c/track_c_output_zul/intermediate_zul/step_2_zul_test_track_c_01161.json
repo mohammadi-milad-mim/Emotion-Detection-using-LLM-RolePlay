@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kulimale abangu-10 engozini yetekisi\", \"rewritten_form_joy\": \"Kulimale abangu-10 engozini yetekisi, kubonisa ukuthi impilo iyajabula!\", \"rewritten_form_sadness\": \"Kulimale abangu-10 engozini yetekisi, kusho ukubuhlungu okukhulu.\", \"rewritten_form_fear\": \"Kulimale abangu-10 engozini yetekisi, lokho kuphakamisa ukuthukuthela kakhulu!\", \"rewritten_form_anger\": \"Kulimale abangu-10 engozini yetekisi, lokho akufanele kwenzeke!\", \"rewritten_form_surprise\": \"Kulimale abangu-10 engozini yetekisi? Angikholwa lokho!\", \"rewritten_form_disgust\": \"Kulimale abangu-10 engozini yetekisi, lokho kuyinto encane engamukeleki!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates that there were 10 injuries in a taxi accident, which does not imply any joy or positivity. The rewritten version emphasizes joy with phrases like \"impilo iyajabula!\" (life is joyful), which is not supported by the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence details injuries from an accident, which naturally conveys a sense of sadness and distress. The rewritten version enhances this feeling by explicitly stating that it signifies \"ubuhlungu okukhulu\" (great pain), closely aligning with the original content.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "Although the situation describes injuries, it does not directly imply fear. The rewritten version suggests fear with phrases like \"lokho kuphakamisa ukuthukuthela kakhulu!\" (that raises a lot of anger), which is not a direct reflection of fear but rather anger instead. The original lacks a significant element of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original describes a serious situation involving injuries. The rewritten anger version stating \"lokho akufanele kwenzeke!\" (that should not have happened!) captures the outrage that can arise from such incidents. This aligns well with the serious nature of the circumstances.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence, while detailing an accident, does not inherently possess a sense of surprise. The rewritten surprise phrase \"Angikholwa lokho!\" (I can't believe that!) creates an emotional reaction that isn't present in the original context, resulting in low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not convey anything disgusting, and while the rewritten form implies a judgment against the event, the original context is more about the factual reporting of incidents rather than expressing disgust. Thus, there is minimal alignment.",
+        "disgust_intensity": 0
+    }
+}

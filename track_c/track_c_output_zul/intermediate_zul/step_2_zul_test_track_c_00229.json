@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Iyashuba eyobukhosi bakwaMaphumulo\", \"rewritten_form_joy\": \"Iyashuba eyobukhosi bakwaMaphumulo, kumnandi!\", \"rewritten_form_sadness\": \"Iyashuba eyobukhosi bakwaMaphumulo, kodwa kube sobala ukuthi imizwa yethu ayisasebenzi kahle.\", \"rewritten_form_fear\": \"Iyashuba eyobukhosi bakwaMaphumulo, ngifuna ukuhlala ngiqaphele!\", \"rewritten_form_anger\": \"Iyashuba eyobukhosi bakwaMaphumulo, angizweli ukuthi izinto ziqhubeka kanje!\", \"rewritten_form_surprise\": \"Iyashuba eyobukhosi bakwaMaphumulo? Angikaze ngimbone!\", \"rewritten_form_disgust\": \"Iyashuba eyobukhosi bakwaMaphumulo, ngiyakhala ngokungabazeki!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive sentiment similar to the joyful rewritten form, which adds an exclamatory expression that suggests happiness. However, the original sentence does not explicitly convey joy, hence the score reflects a moderate rather than high degree of emotion.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not indicate sadness directly. However, the rewritten form alludes to a sense of emotional struggle or sorrow. The original is neutral in tone and lacks the elements of sadness present in the rewritten sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply fear; it is assertive and neutral. The rewritten form introduces an element of caution, indicating that the speaker is aware of their surroundings. There is no direct alignment with fear in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of anger in the original sentence; it holds a neutral tone. The rewritten sentence, however, conveys frustration with the current situation. Therefore, while the original does not express anger, the intensity score reflects a slight correlation due to the theme of dissatisfaction.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express surprise. The rewritten version implies a sudden realization or encounter. There is no contextual ground in the original for this emotion, indicating low to no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not convey disgust. The rewritten form insinuates strong negative feelings or revulsion towards a topic. The neutrality of the original does not display any negative sentiment, leading to no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

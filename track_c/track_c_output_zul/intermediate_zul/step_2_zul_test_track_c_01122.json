@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Sehlile isibalo sabafe ezingozini zomgwaqo eKZN\", \"rewritten_form_joy\": \"Sehlile isibalo sabafe ezingozini zomgwaqo eKZN, okuhlekisayo!\\n\", \"rewritten_form_sadness\": \"Sehlile isibalo sabafe ezingozini zomgwaqo eKZN, indlela obuhlungu ngayo.\\n\", \"rewritten_form_fear\": \"Sehlile isibalo sabafe ezingozini zomgwaqo eKZN, futhi lokhu kudala ukwesaba.\\n\", \"rewritten_form_anger\": \"Sehlile isibalo sabafe ezingozini zomgwaqo eKZN, lokho kuyahlazisa!\\n\", \"rewritten_form_surprise\": \"Sehlile isibalo sabafe ezingozini zomgwaqo eKZN, angikaze ngikubonile lokho!\\n\", \"rewritten_form_disgust\": \"Sehlile isibalo sabafe ezingozini zomgwaqo eKZN, okuyinto eyenzeka njalo, ngiyazizwa ngivungazela.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence, which discusses a number of casualties from road accidents, carries a serious and somber tone. The rewritten joy sentence adds humor ('oku hlekisayo!'), which is a stark contrast to the gravity of the original, suggesting that there's no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sadness sentence ('indle obuhlungu ngayo') effectively accentuates the tragedy discussed in the original sentence. The reference to pain conveys a clear emotional alignment with sadness, signifying a moderate to high degree of emotional intensity.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The fear rewritten sentence indicates that the statistics could provoke fear ('lokhu kudala ukwesaba'). This aligns with the serious nature of the original context but does not strongly invoke a fear reaction directly within the original, showing only a moderate level of alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten anger sentence expresses indignation ('lokho kuyahlazisa!'), suggesting a strong emotional response to the casualties reported. Although the original statement may imply frustration regarding the situation, it's not outrightly conveyed, thus placing this at a moderate level of intensity.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise rewrite ('angikaze ngikubonile lokho!') indicates a reaction of shock which is appropriate for unexpected data; however, the original does not elicit an element of surprise, showing a low connection to this emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust rewrite highlights a habitual negative response to such data ('ngiyazizwa ngivungazela'), implying a lack of tolerance for the events mentioned. The original may not inherently provoke disgust, resulting in low alignment with this emotion.",
+        "disgust_intensity": 1
+    }
+}

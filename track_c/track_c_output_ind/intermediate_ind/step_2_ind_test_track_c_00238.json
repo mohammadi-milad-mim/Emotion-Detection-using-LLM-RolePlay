@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Jadi keinget pas magang mesti putar lagu ini\", \"rewritten_form_joy\": \"Aku jadi ingat betapa senangnya waktu magang sambil putar lagu ini!\", \"rewritten_form_sadness\": \"Aku teringat bagaimana saat magang dahulu, mendengarkan lagu ini membuatku merasa kehilangan.\", \"rewritten_form_fear\": \"Aku jadi ingat saat magang, dan lagu ini datang kembali ke pikiranku, membuatku cemas.\", \"rewritten_form_anger\": \"Jadi teringat waktu magang, waktu itu aku harus putar lagu ini dan itu sangat menjengkelkan!\", \"rewritten_form_surprise\": \"Eh, jadi keinget pas magang, dan aku terkejut harus putar lagu ini lagi!\", \"rewritten_form_disgust\": \"Jadi keinget pas magang, dan aku merasa jijik setiap kali harus putar lagu ini.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a nostalgic memory associated with a specific song from an internship, which hints at a positive emotional experience, similar to the rewritten joyful version that emphasizes happiness during the internship.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original evokes nostalgia, the rewritten sadness version adds a layer of loss when relating to the song, which is not strongly present in the original. Thus, the sadness expectation isn't fully met.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not indicate any anxiety or concern related to the song or internship, which is present in the fear version that mentions feeling uneasy. Therefore, fear isn't conveyed in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express irritation or annoyance as indicated by the anger version, which implies frustration with having to listen to the song. The original's tone is more neutral about the experience.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not evoke a sense of sudden realization or unexpectedness found in the surprise version, suggesting a mere recollection rather than shock or surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "While the original doesn't express any negative feelings about the song or the memory, the disgust version portrays a strong aversion, making it challenging to align with the neutral tone of the original.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kusuke esinamathambo kubangwa umzila\", \"rewritten_form_joy\": \"Kusuke esinamathambo, umhlaba uyahleka!\", \"rewritten_form_sadness\": \"Kusuke esinamathambo, kodwa umzila ubuhlungu.\", \"rewritten_form_fear\": \"Kusuke esinamathambo, uzithola uzibamba kancane.\", \"rewritten_form_anger\": \"Kusuke esinamathambo, ngiyavuma umzila ubhujiswa!\", \"rewritten_form_surprise\": \"Kusuke esinamathambo? Ngiyamangala nakuvezwa umzila!\", \"rewritten_form_disgust\": \"Kusuke esinamathambo, umzila ubukeka kabi!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence doesn't convey happiness or joy, as it lacks any context or wording that suggests a positive or uplifting sentiment. The rewritten joyful version infers a lighthearted and cheerful context that isn't present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence may imply a struggle or difficulty, as seen in the rewritten sad version which mentions pain or hardship (ubuhlungu). However, the level of sadness is not strongly articulated since the original lacks explicit indicators of sorrow or distress.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence does not inherently express fear, the rewritten version suggests a sense of caution or tentativeness (uzibamba kancane). The lack of explicit fear in the treatment of the original results in a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger directly but implies frustration when interpreted in the context of the rewritten version that talks about destruction (ubhujiswa). Despite this, it doesn't evoke strong feelings of anger on its own.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original seems neutral and does not elicit surprise or astonishment directly. The surprise element in the rewritten sentence indicates an unexpected revelation, which is not implied in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original lacks any language or context that would express or indicate disgust. The rewritten sentence describes something as unpleasant (ubukeka kabi), but this sentiment does not correlate with the original statement.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Saya merasa tambah gendut dan perut buncit\", \"rewritten_form_joy\": \"Saya merasa bahagia, meski tubuhku sedikit bertambah gemuk dan perutku buncit!\", \"rewritten_form_sadness\": \"Saya merasa sangat sedih melihat diriku yang semakin gendut dan perut buncit.\", \"rewritten_form_fear\": \"Saya merasa cemas karena tubuhku semakin gendut dan perutku buncit.\", \"rewritten_form_anger\": \"Saya merasa marah karena tubuhku semakin gendut dan perut buncit ini membuatku tidak nyaman.\", \"rewritten_form_surprise\": \"Saya terkejut melihat perubahanku, seakan-akan tiba-tiba perutku jadi buncit dan aku tambah gendut!\", \"rewritten_form_disgust\": \"Saya merasa jijik dengan diri sendiri, semakin gendut dan perut buncit ini membuatku benar-benar tidak suka.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling of being overweight without any indication of happiness. The rewritten joy version has a positive tone, which is not present in the original. Thus, there is low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence alludes to feeling overweight, which can evoke negative feelings, matching the sadness context strongly. It directly hints at dissatisfaction with body image, making this a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The notion of discomfort with one's body can induce fear about health or future consequences. The original shows a mild sense of unease, making it moderately aligned with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text reflects frustration about one's body condition. The rewritten anger form expresses a clear discomfort that can resonate with the original sentiment. Hence, there is a solid alignment with anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original does not capture any sense of surprise about the changes in body size; it merely states the change. Therefore, the alignment with surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence hints at self-dislike concerning body image but does not explicitly label it as disgust. It is a considerable yet less intense feeling compared to outright disgust expressed in the rewritten form.",
+        "disgust_intensity": 2
+    }
+}

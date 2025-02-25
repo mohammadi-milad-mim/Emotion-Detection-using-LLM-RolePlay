@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Saya hanya nostalgia di univers 2021\", \"rewritten_form_joy\": \"Saya sangat bahagia mengenang univers 2021!\", \"rewritten_form_sadness\": \"Saya merasa sedih mengenang univers 2021.\", \"rewritten_form_fear\": \"Saya merasa cemas mengingat univers 2021.\", \"rewritten_form_anger\": \"Saya marah saat mengenang univers 2021!\", \"rewritten_form_surprise\": \"Saya terkejut dengan ingatan tentang univers 2021!\", \"rewritten_form_disgust\": \"Saya merasa muak mengingat univers 2021.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses nostalgia, which can include happy memories, but it lacks overtly joyful language that would clearly align it with joy. The rewritten sentence suggests a strong feeling of happiness that isn't strongly reflected in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "Nostalgia can have a bittersweet quality, and while the original does not explicitly express sadness, it does imply a longing which could be nuanced with sadness. The rewritten sentence captures this sentiment of sadness directly and more strongly.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is no indication of fear in the original sentence about nostalgia; rather it's a reflective sentiment. The rewritten sentence implies anxiety that does not correspond to the tone of the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Anger is not conveyed in the original sentence. The sense of nostalgia doesn't correlate with feelings of anger, which the rewritten sentence suggests with more intensity.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The sentiment of surprise is not present in the original text. While nostalgia can come with surprises, the original does not suggest unexpected feelings or realizations, making it misaligned with the rewritten version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "Feelings of disgust are completely absent from the original sentence. Nostalgia is generally a positive or neutral reflection and does not invoke feelings of revulsion, which is what the rewritten form suggests.",
+        "disgust_intensity": 0
+    }
+}

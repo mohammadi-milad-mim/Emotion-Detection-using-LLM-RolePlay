@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kushayisa amakhala ukuthunjwa kowasePrasa\", \"rewritten_form_joy\": \"Kushayisa amakhala kuthokoziswa kowasePrasa!\", \"rewritten_form_sadness\": \"Kushayisa amakhala kuthunjwa kowasePrasa, ngiyazisola.\", \"rewritten_form_fear\": \"Kushayisa amakhala ukuthunjwa kowasePrasa; ngiyesaba okungase kwenzeke.\", \"rewritten_form_anger\": \"Kushayisa amakhala kuthunjwa kowasePrasa, lokhu akuphumelelanga!\", \"rewritten_form_surprise\": \"Kushayisa amakhala kuthunjwa kowasePrasa? Mmm, lokhu kuyiqiniso!\", \"rewritten_form_disgust\": \"Kushayisa amakhala kuthunjwa kowasePrasa, lokho kuhlanya!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an act that could imply joy or positive engagement, but it lacks the explicit positive tone that the rewritten joyful sentence has. Thus, while there may be a slight alignment with joy, it is not strong.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not imply regret or sorrow; however, the rewritten sentence introduces feelings of remorse that aren't present in the original. Therefore, there is no alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence itself does not convey a sense of fear, yet the rewritten sentence adds an aspect of fear concerning possible outcomes. There is no connection between the original and a fear sentiment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any expression of anger or frustration. The rewritten version points to a failure or an issue, which is not reflected in the original. Thus, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original gives no hint of surprise, whereas the rewritten version expresses a sense of disbelief or surprise. Therefore, there is a lack of alignment with surprise as well.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence doesn't portray any sense of disgust, and the rewritten version introduces a strong negative reaction that contrasts with the original tone. This indicates no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

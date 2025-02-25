@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Imeya nekhwelo lokunikela ngezingane\", \"rewritten_form_joy\": \"Imeya nekhwelo! Lokunikela ngezingane kugcwele injabulo!\", \"rewritten_form_sadness\": \"Imeya nekhwelo lokunikela ngezingane, kodwa ngiyazizwa ngicindezelwe.\", \"rewritten_form_fear\": \"Imeya nekhwelo lokunikela ngezingane, kodwa ngiyesaba ukuthi kuzokwenzekani.\", \"rewritten_form_anger\": \"Imeya nekhwelo! Kanjani lingakunika izinga elingcono ngezingane?\", \"rewritten_form_surprise\": \"Imeya nekhwelo! Angikaze ngibone lokunikela ngezingane!\", \"rewritten_form_disgust\": \"Imeya nekhwelo lokunikela ngezingane? Lokho akukhuthazi neze!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive sentiment about giving or offering something, but it lacks the exuberance and enthusiasm found in the joyful rewritten version, which emphasizes happiness and fulfillment. Therefore, there is a connection to joy, but not strongly enough to score higher.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not explicitly convey sadness but is more neutral. However, the rewritten version introduces a sense of heaviness or burden. Since the original does not reflect a feeling of sadness or depression, the alignment is minimal.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not imply fear; it simply states a fact about giving. The rewritten version introduces apprehension about future consequences, which is not present in the original. Thus, the connection to fear is weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original is neutral and does not express frustration or anger, while the rewritten version is clearly confrontational. There is no alignment with anger in the original text, leading to a score of zero.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not evoke surprise, unlike the rewritten version that expresses astonishment at the act of giving. Since the original lacks any surprising element, it gets no score for this emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original has a neutral tone, while the rewritten version expresses disgust towards the act in question. There is no indication of repulsion in the original sentence, making the connection nonexistent.",
+        "disgust_intensity": 0
+    }
+}

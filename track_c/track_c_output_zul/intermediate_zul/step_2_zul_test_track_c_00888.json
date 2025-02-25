@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"UNombe unesifiso sokufukula iSwallows\", \"rewritten_form_joy\": \"UNombe unethemba elikhulu lokufukula iSwallows!\", \"rewritten_form_sadness\": \"UNombe unesihe ngokungakwazi ukufukula iSwallows.\", \"rewritten_form_fear\": \"UNombe unokukhathazeka ngalesi sifiso sokufukula iSwallows.\", \"rewritten_form_anger\": \"UNombe ufisa ukufukula iSwallows, kodwa imizamo yakhe ibonakala engakabi namphumela!\", \"rewritten_form_surprise\": \"UNombe unesifiso sokufukula iSwallows, okuwukuthi angifuni ukukholwa!\", \"rewritten_form_disgust\": \"UNombe unesifiso sokufukula iSwallows, kodwa lokhu kukhathaza kakhulu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions a desire ('unesifiso') which does not express a high level of joy or optimism like the rewritten version that suggests great hope ('unethemba elikhulu'). This suggests a lower joy alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not indicate any inability or sorrow as in the rewritten version that expresses pity about not being able to achieve the desire. Thus, its alignment with sadness is minimal.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence simply states the desire without expressing any worry. The rewritten sentence introduces a theme of anxiety about the desire, indicating that the original sentence does not closely align with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence contains a desire without any expression of frustration or unmet expectations. The rewritten version, however, conveys anger towards futility, which the original does not reflect.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is no element of shock or disbelief in the original sentence like there is in the rewritten version. Therefore, the alignment with surprise is low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not express any negativity or aversion that would suggest disgust, as seen in the rewritten version that indicates strong discomfort. Thus, it's not aligned with disgust.",
+        "disgust_intensity": 0
+    }
+}

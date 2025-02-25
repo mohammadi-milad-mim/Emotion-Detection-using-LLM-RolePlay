@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Owe-ANC uphucwe imoto okuthiwa eyokwebiwa\", \"rewritten_form_joy\": \"Owe-ANC ubamba imoto okuthiwa eyokwebiwa, kuyajabulisa!\", \"rewritten_form_sadness\": \"Owe-ANC uphucwe imoto okuthiwa eyokwebiwa, lokho kuhlanga phezu. \", \"rewritten_form_fear\": \"Owe-ANC uphucwe imoto okuthiwa eyokwebiwa; akukhathazeki kahle!\", \"rewritten_form_anger\": \"Owe-ANC uphucwe imoto okuthiwa eyokwebiwa, kungaba namahloni!\", \"rewritten_form_surprise\": \"Owe-ANC uphucwe imoto okuthiwa eyokwebiwa? Lokhu kuyamangalisa!\", \"rewritten_form_disgust\": \"Owe-ANC uphucwe imoto okuthiwa eyokwebiwa, nakhu kuyahlupha.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any joyful elements or positive sentiment, whereas the rewritten joy sentence expresses happiness, suggesting that the act of taking the car is seen positively. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a loss or misappropriation of something (the car), which closely aligns with the sadness feeling expressed in the rewritten version. Both express a sense of negative outcome, indicating a higher alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions 'uphucwe' which translates to 'was stolen,' and this is concerning, and the fear sentiment in the rewritten version captures a sense of worry. However, the original doesn't imply the threat of further harm, resulting in a moderate alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a potential anger over the act of theft in the original sentence; however, the rewritten anger version evokes a stronger sentiment of shaming or outrage which is not strongly present in the original. The alignment is low as the original does not express anger directly.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not inherently denote any surprising elements or unexpected outcomes, while the surprise version expresses astonishment. Therefore, there is little to no relation, resulting in a low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The rewritten disgust sentence implies that the act of theft is bothersome or distasteful, which might align with a negative feeling implied in the original. There is an acknowledgment of something unpleasant in both, but the original is more neutral regarding disgust.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kapan konser di gresik kak \\ud83e\\udd17 di tunggu , Salam dari GRESIK \\ud83e\\udd73\", \"rewritten_form_joy\": \"Kapan konser di Gresik, kak? Aku nggak sabar banget! Salam hangat dari GRESIK! \\ud83e\\udd73\", \"rewritten_form_sadness\": \"Kapan konser di Gresik, kak? Aku benar-benar merindukannya. Salam dari GRESIK, semoga ada kabar baik. \\ud83d\\ude22\", \"rewritten_form_fear\": \"Kapan konser di Gresik, kak? Aku harap bisa ikut, jangan sampai ada yang menyebalkan yang menghalangi! Salam dari GRESIK. \\ud83d\\ude1f\", \"rewritten_form_anger\": \"Kapan konser di Gresik, kak? Kenapa belum ada info! Ini sangat mengganggu! Salam dari GRESIK! \\ud83d\\ude20\", \"rewritten_form_surprise\": \"Wow, kapan konser di Gresik, kak? Aku benar-benar terkejut dan ingin tahu! Salam dari GRESIK! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Kapan konser di Gresik, kak? Semoga itu bukan rencana yang mengecewakan seperti terakhir! Salam dari GRESIK. \\ud83e\\udd28\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses anticipation for a concert, which is a joyful sentiment, as indicated by the presence of a joyful emoji and the casual, friendly tone. However, it lacks the enthusiastic emphasis seen in the joy rewritten version, which amplifies the excitement with phrases like 'Aku nggak sabar banget!'. This leads to a moderate alignment with joy rather than a high one.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "Though the original sentence shows a hopeful sentiment, it doesn't express the longing or sadness that is present in the sadness rewritten sentence, where they explicitly mention missing the concert. The absence of regret or sadness in the original makes this emotion less applicable.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey any elements of fear or worry, as it simply inquires about the concert date without any hint of concern that something might go wrong. Thus, it scores a low intensity for fear since it's missing entirely from the tone.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger or frustration. While the anger rewritten sentence emphasizes annoyance at the lack of information with strong wording, the original remains neutral, making anger absent here.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original has a sense of curiosity since it asks about the concert date, but it does not express surprise or astonishment like the surprise rewritten sentence does, which indicates shock or excitement. Therefore, it aligns with surprise in a very minimal way.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original doesn't show disgust, as it simply expresses anticipation for an event. The disgust rewritten version articulates disappointment from past experiences, which is absent in the original's tone. Thus, disgust is not present here.",
+        "disgust_intensity": 0
+    }
+}

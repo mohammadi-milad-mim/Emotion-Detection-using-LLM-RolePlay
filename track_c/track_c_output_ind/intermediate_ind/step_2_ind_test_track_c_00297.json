@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Wah channel ini makin berkembang \\ud83d\\udc4d, saya pertama nonton 6 tahun yang lalu \\ud83d\\ude2d\", \"rewritten_form_joy\": \"Wow, this channel has grown so much! I first watched it 6 years ago and I\\u2019m thrilled! \\ud83c\\udf89\", \"rewritten_form_sadness\": \"Wow, this channel has grown so much... I first watched it 6 years ago and I miss the old days. \\ud83d\\ude22\", \"rewritten_form_fear\": \"Wow, this channel has grown so much... I can't believe how quickly time has passed since I first watched it 6 years ago. What if it changes?\", \"rewritten_form_anger\": \"Wow, this channel has grown so much and yet I can't help but feel frustrated that I\\u2019ve been watching for 6 years with no recognition. \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Wow, this channel has grown so much! I can\\u2019t believe I\\u2019ve been watching it for 6 years! What a journey!\", \"rewritten_form_disgust\": \"Wow, this channel has grown... but honestly, I can\\u2019t believe I stuck around for 6 years just to see it change like this.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of excitement acknowledging the development of the channel, but it does not convey the same level of thrill and celebration as the rewritten joy version. Therefore, it aligns moderately with joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence has an element of nostalgia with an emoji that suggests a sense of emotion, similar to the rewritten sadness version. However, it doesn't directly express missing the old days, which indicates a lower intensity than the rewritten sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not imply any threat or anxiety about change, so it aligns minimally with fear, which involves concern about the future and change. The rewritten fear version focuses heavily on that aspect.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While there is a subtle hint of frustration in the original due to mention of a long time spent watching, it does not communicate the anger clearly like the rewritten anger version does. Thus, it aligns with anger only to a low degree.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original communicates an element of surprise about the channel's growth; however, it does not capture the disbelief and excitement present in the rewritten surprise version, suggesting a moderate alignment with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original does not express any feelings of disgust or significant negativity towards the channel, unlike the rewritten disgust version which emphasizes disappointment in changes. Thus, it aligns minimally with disgust.",
+        "disgust_intensity": 0
+    }
+}

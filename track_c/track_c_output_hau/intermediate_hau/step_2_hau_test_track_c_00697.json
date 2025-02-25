@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Shegiya kin shuka tsiya\\ud83d\\ude02\\ud83d\\ude02\\ud83d\\ude02\", \"rewritten_form_joy\": \"Shegiya kin shuka tsiya! I'm so happy! \\ud83d\\ude02\\ud83d\\ude02\\ud83d\\ude02\", \"rewritten_form_sadness\": \"Shegiya kin shuka tsiya... I really miss those times... \\ud83d\\ude02\", \"rewritten_form_fear\": \"Shegiya kin shuka tsiya? What if something goes wrong? \\ud83d\\ude28\", \"rewritten_form_anger\": \"Shegiya kin shuka tsiya! I can\\u2019t believe this happened! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Shegiya kin shuka tsiya? I wasn\\u2019t expecting that! \\ud83d\\ude2e\", \"rewritten_form_disgust\": \"Shegiya kin shuka tsiya... that's just gross! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original phrase, \"Shegiya kin shuka tsiya\", when compared with the joy version reinforces a positive emotion with the addition of \"I'm so happy!\" This suggests a strong alignment with joy due to the usage of exclamation marks and emojis, indicating excitement.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "Comparing the original with the sadness version, the sentiment shifts to a more nostalgic and melancholic tone with phrases like \"I really miss those times...\". This indicates a notable level of sadness, though not overwhelming, as the original phrase retains some positivity.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "In the fear rewritten sentence, the addition of \"What if something goes wrong?\" introduces a sense of concern that is absent in the original. The original does not imply fear, thus suggesting a low alignment with this emotion.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger version introduces the line \"I can\u2019t believe this happened!\" which conveys disappointment or frustration, qualities not reflected in the original statement. The original does not invoke anger, leading to a low intensity for this emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version includes the sentiment \"I wasn\u2019t expecting that!\", which introduces a reaction that aligns with an unexpected element. The original, however, does not strongly imply surprise, therefore the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version introduces strong negative language with \"that's just gross!\", suggesting a strong dissatisfaction that does not resonate with the original phrase, which seems light-hearted. Thus, there is a very low alignment.",
+        "disgust_intensity": 0
+    }
+}

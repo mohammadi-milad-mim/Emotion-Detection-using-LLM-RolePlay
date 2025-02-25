@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Menangis pahlawan yg sudah berjuang mengorbankan jiwa dan raganya. Mendengar lagu ini. Knp g lagu maju tak gentar aja!\", \"rewritten_form_joy\": \"Pahlawan yang berjuang dan mengorbankan jiwa dan raganya menangis bahagia mendengar lagu ini! Kenapa bukan 'Maju Tak Gentar' saja yang dinyanyikan?!\", \"rewritten_form_sadness\": \"Pahlawan yang telah berjuang dan mengorbankan jiwa serta raganya menangis mendengar lagu ini. Kenapa bukan 'Maju Tak Gentar' yang diputar?\", \"rewritten_form_fear\": \"Pahlawan yang sudah berjuang dan mengorbankan jiwa serta raganya menangis saat mendengar lagu ini. Apa ini tanda buruk? Kenapa bukan 'Maju Tak Gentar' yang dinyanyikan?\", \"rewritten_form_anger\": \"Pahlawan yang sudah berjuang, mengorbankan jiwa dan raganya, sampai menangis mendengar lagu ini. Kenapa tidak lagu 'Maju Tak Gentar' yang lebih layak?!\", \"rewritten_form_surprise\": \"Wow, pahlawan yang telah berjuang dan mengorbankan jiwa serta raganya bahkan sampai menangis saat mendengar lagu ini! Kenapa bukan 'Maju Tak Gentar' yang dipilih?\", \"rewritten_form_disgust\": \"Pahlawan yang berjuang, mengorbankan jiwa dan raganya sampai menangis saat mendengar lagu ini. Kenapa harus lagu itu? 'Maju Tak Gentar' jauh lebih layak!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of sadness and dissatisfaction rather than joy. The rewritten version introduces an element of happiness, suggesting the hero's tears are joyful but this is not reflected in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence strongly aligns with sadness as it depicts a hero crying after sacrificing much. This directly correlates with the rewritten version focused on sadness, making a significant match.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original does not express fear but does convey concern about the song choice as inappropriate. The rewritten sentence implies fear but does not match the original's tone closely enough.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses frustration about the song choice which aligns well with the anger rewritten version. The context suggests a strong discontent with the situation, thus aligning with anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original does not invoke a sense of surprise; it presents a more somber sentiment, while the corresponding rewrite introduces a shocking realization. The original does not exhibit this element.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence contains a critical tone about song selection, which aligns moderately with the disgust rewrite that questions the choice of song. Yet, the disgust is not as pronounced in the original.",
+        "disgust_intensity": 2
+    }
+}

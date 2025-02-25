@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"@Enza_Mags -I was very mad \\ud83d\\ude02\\ud83e\\udd1e\\ud83c\\udffe ukuthi aibo uwena lo\\ud83d\\ude21\", \"rewritten_form_joy\": \"I was really excited! \\ud83d\\ude02\\ud83e\\udd1e\\ud83c\\udffe Like, wow, you! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"I felt so hurt. \\ud83d\\ude02\\ud83e\\udd1e\\ud83c\\udffe Honestly, you really let me down. \\ud83d\\ude22\", \"rewritten_form_fear\": \"I was really anxious! \\ud83d\\ude02\\ud83e\\udd1e\\ud83c\\udffe Like, are you serious right now? \\ud83d\\ude28\", \"rewritten_form_anger\": \"I was furious! \\ud83d\\ude02\\ud83e\\udd1e\\ud83c\\udffe How could you do this?! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"I was so shocked! \\ud83d\\ude02\\ud83e\\udd1e\\ud83c\\udffe Can you believe you did that? \\ud83d\\ude32\", \"rewritten_form_disgust\": \"I was absolutely disgusted! \\ud83d\\ude02\\ud83e\\udd1e\\ud83c\\udffe Seriously, how could you? \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses anger, which contrasts with the joy-filled sentiment in the rewritten joy sentence. There's no basis for feelings of joy here, so the alignment is very low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests frustration and anger rather than sadness. While sadness could be present in some contexts, it doesn't align closely with the intensity of the original expression of anger.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Fear is unrelated to the original message's context of anger and frustration. The message doesn't convey anxiety or concern about a situation, so the fear alignment is minimal.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence directly expresses being 'very mad' and has a clear tone of anger, making this emotion the strongest alignment.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "Surprise is not indicated in the original sentence which focuses on anger, making the surprise alignment very low as well.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "Although disgust could be a related emotion when witnessing someone do something upsetting, the original sentence focuses solely on anger rather than disgust, making this alignment limited.",
+        "disgust_intensity": 1
+    }
+}

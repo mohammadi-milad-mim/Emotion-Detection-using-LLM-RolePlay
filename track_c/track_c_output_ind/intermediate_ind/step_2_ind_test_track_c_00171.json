@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Sungguh disayangkan kok ga dipertahankan bukane cak yo ra buru2 nikah\", \"rewritten_form_joy\": \"Sungguh disayangkan kok ga dipertahankan, padahal kita masih bisa menikmati waktu ini!\", \"rewritten_form_sadness\": \"Sungguh disayangkan kok ga dipertahankan, rasanya sangat menyedihkan.\", \"rewritten_form_fear\": \"Sungguh disayangkan kok ga dipertahankan, aku takut kehilangan semuanya demikian cepat.\", \"rewritten_form_anger\": \"Sungguh disayangkan kok ga dipertahankan! Kenapa harus terburu-buru menikah?\", \"rewritten_form_surprise\": \"Sungguh disayangkan kok ga dipertahankan! Benarkah kita tidak memberi waktu lebih?\", \"rewritten_form_disgust\": \"Sungguh disayangkan kok ga dipertahankan, itu sangat tidak masuk akal untuk buru-buru menikah.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses regret but does not carry a joyful sentiment. The rewritten joy sentence introduces an idea of enjoying time, which is missing in the original, making it only tangentially related.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentiment reflects a sense of regret, which aligns closely with sadness. The rewritten sadness sentence clearly states the feeling of being sad, reinforcing the melancholy of the original statement.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence does imply a sense of regret and urgency, it does not convey a direct fear of loss or missing out. The fear sentence emphasizes a strong sense of risk that is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence hints at frustration with the situation being rushed, similar to the anger rewritten version. Both express a level of frustration about the decision-making process surrounding marriage.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original statement expresses regret but does not denote shock or surprise. However, the surprise rewritten sentence emphasizes a realization that there wasn't enough time, which is not in the original, showing limited alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original expresses disappointment but does not imply a strong feeling of disgust towards the situation. The rewritten disgust form emphasizes irrationality, which the original does not express.",
+        "disgust_intensity": 0
+    }
+}

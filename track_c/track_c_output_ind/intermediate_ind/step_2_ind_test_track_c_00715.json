@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"req ,PADI Sesuatu Yang Indah bang\", \"rewritten_form_joy\": \"PADI itu sungguh luar biasa, bang!\", \"rewritten_form_sadness\": \"PADI itu seharusnya indah, bang, tapi rasanya menyedihkan.\", \"rewritten_form_fear\": \"PADI itu bisa jadi sesuatu yang berbahaya, bang.\", \"rewritten_form_anger\": \"PADI itu seharusnya indah, bang, kenapa jadi tidak?\", \"rewritten_form_surprise\": \"Wah, PADI itu ternyata sesuatu yang indah, bang!\", \"rewritten_form_disgust\": \"PADI itu, seharusnya indah, bang, tetapi rasanya menjijikkan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence refers to PADI as 'sesuatu yang indah' (something beautiful), which suggests a positive sentiment but lacks the enthusiasm found in the joy rewritten sentence. However, the tone is affirmative, indicating some level of joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sadness version introduces a contrast by implying that PADI should be beautiful but feels sad, which is a strong emotional pivot from the original phrase. Given that the original does not convey sadness, it still suggests a loss of expected beauty.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express fear, while the rewritten version introduces a concern about PADI being dangerous. This suggests a disconnect, resulting in a low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten anger version expresses frustration about PADI not being beautiful as it should be, which aligns somewhat with the expectation of beauty from the original sentence. However, it lacks the explicit anger present in the rewrite.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original mentions PADI as something beautiful, while the surprise version creates a sense of unexpected revelation about PADI being wonderful, which is not inherent in the original. Thus, there is a slight alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not imply any negative feelings toward PADI being beautiful, while the disgust version indicates a stark discrepancy with an unexpected, unpleasant emotion. This results in a complete lack of alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

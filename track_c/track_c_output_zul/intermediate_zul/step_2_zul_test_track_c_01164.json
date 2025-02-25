@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"@KabeloMohlohlo Ngiyageza phela mina - ngobisi \\ud83e\\udd23\", \"rewritten_form_joy\": \"@KabeloMohlohlo Ngiyageza phela mina - ngobisi! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"@KabeloMohlohlo Ngiyageza phela mina - ngobisi... \\ud83d\\ude22\", \"rewritten_form_fear\": \"@KabeloMohlohlo Ngiyageza phela mina - ngobisi? \\ud83d\\ude28\", \"rewritten_form_anger\": \"@KabeloMohlohlo Ngiyageza phela mina - ngobisi! \\ud83d\\ude02\", \"rewritten_form_surprise\": \"@KabeloMohlohlo Ngiyageza phela mina - ngobisi? Wow! \\ud83e\\udd2f\", \"rewritten_form_disgust\": \"@KabeloMohlohlo Ngiyageza phela mina - ngobisi. Ugh! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a casual enjoyment of something (greeting someone with a playful context about 'ngobisi'). However, it lacks the exuberance found in the joy version which uses an exclamation mark and a happier emoji.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence doesn't convey sadness on its own, but the ellipsis and sad emoji in the rewritten version indicate a feeling of loss or disappointment that is not present in the original text.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not have any elements of fear, unlike the fear version which introduces uncertainty with a question mark and an anxious emoji \u2014 this is not reflected in the original text.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does contain a hint of frustration or playfulness that could be interpreted as anger, but it is much softer compared to the rewritten version which uses exclamations and a laughing emoji.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents a straightforward statement without any elements of surprise. The surprise version adds a question and an enthusiastic emoji, which are absent in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not indicate disgust. The rewritten version uses an exclamatory phrase and a disgusted emoji, which clearly conveys an aversion that is not present in the original statement.",
+        "disgust_intensity": 0
+    }
+}

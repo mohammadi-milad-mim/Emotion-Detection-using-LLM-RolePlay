@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"to allah yakawo mana daukinsa amin\", \"rewritten_form_joy\": \"To Allah, please bring us Your mercy, Amin!\", \"rewritten_form_sadness\": \"To Allah, we long for Your mercy, Amin.\", \"rewritten_form_fear\": \"To Allah, we seek Your mercy, Amin, for we are afraid of what lies ahead.\", \"rewritten_form_anger\": \"To Allah, we demand Your mercy, Amin, for we have suffered so much!\", \"rewritten_form_surprise\": \"To Allah, we ask for Your unexpected mercy, Amin!\", \"rewritten_form_disgust\": \"To Allah, we need Your mercy away from this filth, Amin.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a request for mercy from Allah; however, it lacks the exuberance and positivity associated with joy. The rewritten joy sentence implies a positive and hopeful tone, which is not strongly reflected in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original expression implies a sense of longing or need for Allah's mercy. This aligns well with the sadness rewritten form, making it reasonable to assess a moderate degree of sadness in the original sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text, while seeking mercy, does not explicitly convey fear or apprehension about the future. The fear rewritten form introduces a sense of worrying about what is to come, which is not present in the original; hence, fear is less relevant.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger or a demand for mercy due to suffering. While there is a plea for mercy, it is presented in a humble way rather than an accusatory or aggressive manner, leading to a low correlation with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence expresses a straightforward plea for mercy without an element of surprise. The surprise rewritten form would imply an unexpected plea, which is not reflected in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not communicate any feelings of disgust or a desire to be removed from something unpleasant. The disgust rewritten form suggests a strong negative sentiment that is absent in the original plea.",
+        "disgust_intensity": 0
+    }
+}

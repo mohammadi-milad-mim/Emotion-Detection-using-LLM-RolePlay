@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"'Ngimbuleke amehlo ngijoyina iDA'\", \"rewritten_form_joy\": \"Ngimbuleke amehlo ngijoyina iDA, nginothando!\", \"rewritten_form_sadness\": \"Ngimbuleke amehlo ngijoyina iDA, kodwa ngizwa uhuhlu lwesizungu.\", \"rewritten_form_fear\": \"Ngimbuleke amehlo ngijoyina iDA, kodwa ngikhathele ukuthi kuzokwenzekani.\", \"rewritten_form_anger\": \"Ngimbuleke amehlo ngijoyina iDA, kodwa kuyasaphaza!\", \"rewritten_form_surprise\": \"Ngimbuleke amehlo ngijoyina iDA, ngempela angikakulindele!\", \"rewritten_form_disgust\": \"Ngimbuleke amehlo ngijoyina iDA, kodwa lokho akukhululekile!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of pleasure in doing something, which aligns well with joy. However, the rewritten joy sentence adds a stronger emotional element with 'nginothando', which increases the joy intensity.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original does not contain any elements of sadness. The rewritten sadness sentence introduces a conflicting feeling ('ngizwa uhuhlu lwesizungu'), which the original does not reflect.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not contain expressions of fear or concern. The rewritten fear sentence implies anxiety about the future, which is absent in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence has a neutral tone, the rewritten anger sentence suggests frustration, which does not align with the original sentiment, leading to a low intensity for anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not denote surprise, while the rewritten surprise sentence clearly expresses an unexpected feeling. The original lacks any elements that would indicate surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The sense of discomfort implied in the rewritten disgust sentence is not represented in the original, which does not express any negative sentiment.",
+        "disgust_intensity": 0
+    }
+}

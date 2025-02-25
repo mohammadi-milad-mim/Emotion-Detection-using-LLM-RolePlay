@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Umbiko ucacisa ngamaphepha kamatric aputshuka\", \"rewritten_form_joy\": \"Umbiko ucacisa ngamaphepha kamatric aputshuka, futhi inelezeleka!\", \"rewritten_form_sadness\": \"Umbiko ucacisa ngamaphepha kamatric aputshuka, kodwa kunesizotha esithile kuphumelela kwethu.\", \"rewritten_form_fear\": \"Umbiko ucacisa ngamaphepha kamatric aputshuka, futhi angazi ukuthi sizokwazi ukuhlela kahle lokhu.\", \"rewritten_form_anger\": \"Umbiko ucacisa ngamaphepha kamatric aputshuka, futhi lokhu kuphakamisa izinkathazo eziningi!\", \"rewritten_form_surprise\": \"Umbiko ucacisa ngamaphepha kamatric aputshuka? Angikaze ngizwe ngalokhu ngaphambili!\", \"rewritten_form_disgust\": \"Umbiko ucacisa ngamaphepha kamatric aputshuka, futhi lokho kudida impela!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states a fact without any joyful expression. The rewritten joyful version adds a positive adjective, 'inlezeleka' (pleasant), indicating a significant increase in happiness not present in the original sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey sadness directly but implies a neutral tone. The rewritten version introduces a sense of weightiness ('kunesisizotha esithile'), suggesting regret or disappointment, which the original lacks, yet there's still a hint of sadness present in context.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence is straightforward and does not convey any fear. The rewritten version introduces uncertainty with 'angazi' (I don't know), indicating a fear of not being able to handle a situation, making it clear the original lacks this emotional depth.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is neutral, while the rewritten version introduces frustration ('lokhu kuphakamisa izinkathazo' - this raises many issues). The original thus does not align with anger at all, but the emotion is recognized in the version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement is a routine report and does not hint at surprise. The rewritten form expresses astonishment (angikaze ngizwe ngalokhu ngaphambili - I\u2019ve never heard this before), indicating a strong divergence from the original when it comes to surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original text presents information in a factual manner without any indication of disgust. The rewritten sentence expresses discontent and distaste ('lokho kudida impela' - that is truly confusing), which is absent in the original, aligning more with disgust clearly.",
+        "disgust_intensity": 1
+    }
+}

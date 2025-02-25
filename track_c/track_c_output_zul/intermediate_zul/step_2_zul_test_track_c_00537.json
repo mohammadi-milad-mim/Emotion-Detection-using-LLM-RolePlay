@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kusolwa isoka ngesitshudeni esinyamalele\", \"rewritten_form_joy\": \"Kusolwa isoka ngesitshudeni esinyamalele!\", \"rewritten_form_sadness\": \"Kusolwa isoka ngesitshudeni esinyamalele...\", \"rewritten_form_fear\": \"Kusolwa isoka ngesitshudeni esinyamalele! What if it doesn't work out?\", \"rewritten_form_anger\": \"Kusolwa isoka ngesitshudeni esinyamalele! This is so frustrating!\", \"rewritten_form_surprise\": \"Kusolwa isoka ngesitshudeni esinyamalele? I didn't see that coming!\", \"rewritten_form_disgust\": \"Kusolwa isoka ngesitshudeni esinyamalele... that sounds really off.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is a straightforward statement with no exclamations or positive connotations, making it less joyful compared to the rewritten joyful version which exclaims the statement, giving it an uplifting tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies a neutral situation, but the ellipsis in the rewritten sadness version suggests a sense of lingering sadness or disappointment that the original does not convey.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement lacks any indication of fear. The rewritten version introduces a concern for the future which is absent in the original, making it score low on fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of anger in the original sentence, while the rewritten version explicitly expresses frustration. Therefore, the alignment with anger is minimal.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version introduces an unexpected element that isn't present in the original sentence, which feels rather neutral, thus leading to a low intensity of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "There is no suggestion of disgust in the original text, and the rewritten version introduces that feeling through the phrase 'sounds really off'.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"@Sethamdluli Lol ngyajabula Homeline uma sibona ngokfana \\ud83d\\ude01\", \"rewritten_form_joy\": \"Lol ngyajabula Homeline uma sibona ngokfana! \\ud83d\\ude01\", \"rewritten_form_sadness\": \"Lol ngiyajabula Homeline, kodwa kubuhlungu uma sibona ngokfana.\", \"rewritten_form_fear\": \"Lol ngyajabula Homeline, kodwa ngiyesaba uma sibona ngokfana.\", \"rewritten_form_anger\": \"Lol ngyajabula Homeline, kodwa ngiyakhathazeka uma sibona ngokfana!\", \"rewritten_form_surprise\": \"Wow, ngyajabula Homeline uma sibona ngokfana! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Lol ngyajabula Homeline, kodwa angithandi uma sibona ngokfana.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys joy with the phrase 'ngyajabula', which means 'I am happy' in Zulu. The use of 'Lol' also suggests a light-hearted context. The rewritten version for joy matches this cheerful tone, reinforcing that the original sentence expresses happiness.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The sadness version introduces the idea of pain with 'kubuhlungu', meaning 'it hurts', which changes the tone from purely joyful to one that acknowledges sadness. This is somewhat distant from the original sentence, which does not imply sadness, hence, the alignment is weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version introduces apprehension with 'ngiyesaba', meaning 'I am afraid'. The original sentence does not indicate fear, focusing more on joy. Thus, the alignment with fear is also weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version adds a note of concern with 'ngiyakhathazeka', meaning 'I am worried', which is a shift from joy to frustration. While the original is joyful, it does not convey any anger or frustration, leading to a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version, starting with 'Wow', emphasizes an element of shock or unexpectedness. The original is joyful but doesn't directly express surprise. While there can be a hint of surprise in joy, it's not strongly aligned with the tone.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "In the disgust version, the phrase 'angithandi', meaning 'I do not like', detracts from the joyful emotion present in the original. It introduces a negative sentiment that contrasts sharply with the original's joyful tone, resulting in low alignment.",
+        "disgust_intensity": 1
+    }
+}

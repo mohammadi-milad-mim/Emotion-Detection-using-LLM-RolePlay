@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I think kunesteleka la ekhaya, akusaphekwa \\ud83d\\ude0f I wonder who the shop steward is.\", \"rewritten_form_joy\": \"I think kunesteleka la ekhaya, akusaphekwa! \\ud83d\\ude0a I can't wait to find out who the shop steward is!\", \"rewritten_form_sadness\": \"I think kunesteleka la ekhaya, akusaphekwa... \\ud83d\\ude1e I really wish I knew who the shop steward is.\", \"rewritten_form_fear\": \"I think kunesteleka la ekhaya, akusaphekwa... \\ud83d\\ude1f I wonder who the shop steward is and if we'll be okay.\", \"rewritten_form_anger\": \"I think kunesteleka la ekhaya, akusaphekwa! \\ud83d\\ude20 I can't believe we don\\u2019t know who the shop steward is!\", \"rewritten_form_surprise\": \"I think kunesteleka la ekhaya, akusaphekwa? \\ud83d\\ude32 I wonder who the shop steward is!\", \"rewritten_form_disgust\": \"I think kunesteleka la ekhaya, akusaphekwa... \\ud83d\\ude12 Who even is the shop steward?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral tone about the uncertainty surrounding the shop steward, but the rewritten joyful version adds enthusiasm with an exclamation and excitement about finding out more, indicating a strong shift towards joy. However, the original lacks this intensity.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original has a waning urgency with an undefined tone, while the sadness version indicates a deeper longing and wishful thinking to know who the steward is. This aligns somewhat with the original's sentiments, making it a moderate connection.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version introduces concern about safety with the implication that not knowing the shop steward could lead to an unsafe scenario. The original sentence doesn't express this fear directly, leading to a lower intensity of fear in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey anger, but the rewritten version presents it forcefully with an exclamation about the disbelief of not knowing. This capsulates stronger emotions than the original manages, hence the connection is weak.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version uses a question mark to indicate unexpectedness regarding the steward, which isn't present in the original. The original is less about surprise and more about contemplation, leading to a low surprise intensity in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version communicates disdain or frustration and uses a questioning tone that is not apparent in the original. The original's tone does not evoke disgust, resulting in a very low intensity for disgust.",
+        "disgust_intensity": 0
+    }
+}

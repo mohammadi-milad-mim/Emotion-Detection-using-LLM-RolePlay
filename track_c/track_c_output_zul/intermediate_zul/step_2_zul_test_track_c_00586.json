@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ugcwele izinkalo 'obulale' umzala wakhe\", \"rewritten_form_joy\": \"Ugcwele izinkalo 'obulale' umzala wakhe, kubonisa injabulo enkulu.\", \"rewritten_form_sadness\": \"Ugcwele izinkalo 'obulale' umzala wakhe; kuhle kakhulu.\", \"rewritten_form_fear\": \"Ugcwele izinkalo 'obulale' umzala wakhe; ngenzeni manje?\", \"rewritten_form_anger\": \"Ugcwele izinkalo 'obulale' umzala wakhe; akukuhle nhlobo!\", \"rewritten_form_surprise\": \"Ugcwele izinkalo 'obulale' umzala wakhe; angizange ngilindele lokhu!\", \"rewritten_form_disgust\": \"Ugcwele izinkalo 'obulale' umzala wakhe; lokho kuyinsakavukela!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any elements of joy; instead, it appears to discuss a serious or tragic situation. The rewritten version that expresses joy suggests a positive outcome or happiness, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at a grave situation while the rewritten sadness version comments positively about it, which does not resonate with the grave implication that 'obulale' (which means 'killed') brings in the original. Thus, there is a slight alignment but it's very low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence evokes a sense of fear and concern regarding the consequences of the situation described. The fear rewritten version's questioning reflects this anxiety about potential aftermath, creating a strong connection.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence's content about 'obulale' also aligns with anger; it implies wrongdoing or injustice. The rewritten anger version captures a similar sentiment of strong discontent, thus aligning well with the original.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original statement does not include an element of surprise. The surprise rewritten sentence implies something unexpected, which is not conveyed in the original. Therefore, there is no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence implies a situation which could evoke disgust, especially given the context of violence indicated by 'obulale'. The rewritten disgust version reflects a negative reaction, which aligns somewhat with the underlying sentiment of the original.",
+        "disgust_intensity": 2
+    }
+}

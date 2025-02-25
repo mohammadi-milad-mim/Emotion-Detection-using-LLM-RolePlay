@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kushone abantu abangu-9 kwalimala-11 engozini yetekisi\", \"rewritten_form_joy\": \"Yay! Kushone abantu abangu-9, kodwa kulungile ukuthi kwalimala-11 kuphela engozini yetekisi!\", \"rewritten_form_sadness\": \"Kushone abantu abangu-9, futhi kwalimala-11 engozini yetekisi, kwenzekeni kuyasizwela.\", \"rewritten_form_fear\": \"Kushone abantu abangu-9, kwalimala-11 engozini yetekisi, kuyashesha futhi kuyad frightening.\", \"rewritten_form_anger\": \"Kushone abantu abangu-9, kwalimala-11 engozini yetekisi, lokhu akuvumelekile!\", \"rewritten_form_surprise\": \"Kushone abantu abangu-9? Noma kwalimala-11 engozini yetekisi, ngiyamangala!\", \"rewritten_form_disgust\": \"Kushone abantu abangu-9, kwalimala-11 engozini yetekisi, lokho kuhlanya kakhulu!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it states facts about a tragic accident. The joy version adds an element of relief, which is missing from the original. Therefore, the alignment with joy is very low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement reflects a tragic event involving loss and injury, aligning closely with the sadness sentiment. The rewritten sadness sentence emphasizes empathy for the situation, which aligns well with the original.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence details a serious incident that could invoke fear due to its nature. However, it does not explicitly communicate fear in the same way that the rewritten version does, which implies a more intense emotional reaction.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence presents a tragic event, it lacks an overt expression of anger. The rewritten anger sentence introduces an emotional condemnation not evident in the original, indicating a low alignment with anger in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence states a fact without any element of surprise. The rewritten version creates an element of shock by questioning the event, which cannot be derived from the original. Therefore, there is no alignment here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence simply reports the incident without any feelings of disgust. The rewritten disgust sentence expresses strong disdain, which is absent in the original text; thus, it does not align with disgust emotions.",
+        "disgust_intensity": 0
+    }
+}

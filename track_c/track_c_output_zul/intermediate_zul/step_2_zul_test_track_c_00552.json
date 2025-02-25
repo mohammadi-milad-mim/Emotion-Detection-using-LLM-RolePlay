@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ugu lulindele izinkulungwane koweJazz\", \"rewritten_form_joy\": \"Ugu lunokubhekana nezinkulungwane ezithokozisayo koweJazz!\", \"rewritten_form_sadness\": \"Ugu lulindele izinkulungwane, kodwa kunokukhathazeka ngekhamphani yeJazz.\", \"rewritten_form_fear\": \"Ugu lulindele izinkulungwane, kodwa ngiyakhathazeka ngokuthi kungaba kusemandleni kaJazz.\", \"rewritten_form_anger\": \"Ugu lulindele izinkulungwane, kuhleli kungenzeka ngesikhathi seJazz!\", \"rewritten_form_surprise\": \"Ugu lulindele izinkulungwane, ngempela ngeke ngiwakholwe ngesikhathi seJazz!\", \"rewritten_form_disgust\": \"Ugu lulindele izinkulungwane, ngabe konke lokhu kungenzeka koweJazz?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses anticipation but lacks an explicit joyful element. The rewritten version introduces excitement around the event by using positive language, which does not fully reflect in the original's neutral tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version adds a sense of worry regarding the situation surrounding the event. While the original sentence hints at waiting, it does not explicitly convey sadness or concern that is present in the rewritten version.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear tone implies worry about potential worries associated with the event, which the original does not express. The original sentence does not convey apprehension, so there's minimal alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger rewrite suggests frustration about the potential timing or circumstances. The original is neutral and does not relate to any anger, therefore it does not reflect this emotion well.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version indicates disbelief or astonishment, which is not present in the original sentence that simply states anticipation. This discrepancy leads to a low alignment of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version suggests skepticism about the authenticity of the expectations. The original does not have any negative sentiment or skepticism, resulting in no connection to this emotion.",
+        "disgust_intensity": 0
+    }
+}

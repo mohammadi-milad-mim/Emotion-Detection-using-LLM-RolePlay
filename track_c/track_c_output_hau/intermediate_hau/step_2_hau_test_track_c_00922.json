@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Mutanen Sanga sun taya \\u2019yarsu murnar takarar Mataimakiyar dan takarar Gwamna\", \"rewritten_form_joy\": \"Mutanen Sanga sun taya \\u2019yarsu murnar mai girma takarar Mataimakiyar dan takarar Gwamna da farin ciki!\", \"rewritten_form_sadness\": \"Mutanen Sanga sun taya \\u2019yarsu murnar takarar Mataimakiyar dan takarar Gwamna, amma zuciyarsu tana da nauyi.\", \"rewritten_form_fear\": \"Mutanen Sanga sun taya \\u2019yarsu murnar takarar Mataimakiyar dan takarar Gwamna, suna fargaba game da abin da ke gabansu.\", \"rewritten_form_anger\": \"Mutanen Sanga sun taya \\u2019yarsu murnar takarar Mataimakiyar dan takarar Gwamna, suna jin haushin abin da ke faruwa a siyasar.\", \"rewritten_form_surprise\": \"Mutanen Sanga sun taya \\u2019yarsu murnar takarar Mataimakiyar dan takarar Gwamna, ba su zata wannan komawa ba!\", \"rewritten_form_disgust\": \"Mutanen Sanga sun taya \\u2019yarsu murnar takarar Mataimakiyar dan takarar Gwamna, amma suna ji da gaske a kan wannan lamari.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses support for a candidate, which can be inferred as a joyful occasion. However, it lacks the explicit emotional emphasis of the rewritten joy version, which includes words like 'da farin ciki' (with happiness).",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The rewritten version introduces a contrast with 'amma zuciyarsu tana da nauyi' (but their hearts are heavy), signaling a deep emotional struggle. The original does not convey this heaviness, so the alignment is moderate.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not indicate any concern or apprehension. The fear rewritten version suggests worry about the future, which is not present in the original context.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten version reflects frustration about the political situation. The original contains no expression of anger; it is purely neutral in tone.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The rewritten surprise version reveals an element of unexpectedness. While the original mentions support, it lacks any indication of surprise about the event. Thus, the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "Disgust in the rewritten version implies a strong negative sentiment about the situation, which is not conveyed by the original sentence. Therefore, lack of any disgust signals a very low alignment.",
+        "disgust_intensity": 0
+    }
+}

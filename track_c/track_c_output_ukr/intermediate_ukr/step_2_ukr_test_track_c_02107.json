@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u0410 \\u0442\\u0438 \\u0431\\u0443\\u0432 \\u0447\\u0435\\u043c\\u043d\\u0438\\u043c \\u0446\\u044c\\u043e\\u0433\\u043e \\u0440\\u043e\\u043a\\u0443!?\", \"rewritten_form_joy\": \"\\u0410 \\u0442\\u0438 \\u0431\\u0443\\u0432 \\u0442\\u0430\\u043a\\u0438\\u043c \\u0447\\u0435\\u043c\\u043d\\u0438\\u043c \\u0446\\u044c\\u043e\\u0433\\u043e \\u0440\\u043e\\u043a\\u0443!?\", \"rewritten_form_sadness\": \"\\u0410 \\u0442\\u0438 \\u0431\\u0443\\u0432\\u0430\\u0432 \\u0445\\u043e\\u0447 \\u0442\\u0440\\u0456\\u0448\\u043a\\u0438 \\u0447\\u0435\\u043c\\u043d\\u0438\\u043c \\u0446\\u044c\\u043e\\u0433\\u043e \\u0440\\u043e\\u043a\\u0443!?\", \"rewritten_form_fear\": \"\\u0422\\u0438 \\u043d\\u0435 \\u0431\\u0443\\u0432 \\u043d\\u0435\\u0447\\u0435\\u043c\\u043d\\u0438\\u043c \\u0446\\u044c\\u043e\\u0433\\u043e \\u0440\\u043e\\u043a\\u0443, \\u043f\\u0440\\u0430\\u0432\\u0434\\u0430!?\", \"rewritten_form_anger\": \"\\u0422\\u0438 \\u0449\\u043e, \\u043d\\u0435 \\u0431\\u0443\\u0432 \\u0447\\u0435\\u043c\\u043d\\u0438\\u043c \\u0446\\u044c\\u043e\\u0433\\u043e \\u0440\\u043e\\u043a\\u0443!?\", \"rewritten_form_surprise\": \"\\u0421\\u043f\\u0440\\u0430\\u0432\\u0434\\u0456, \\u0442\\u0438 \\u0431\\u0443\\u0432 \\u0447\\u0435\\u043c\\u043d\\u0438\\u043c \\u0446\\u044c\\u043e\\u0433\\u043e \\u0440\\u043e\\u043a\\u0443!?\", \"rewritten_form_disgust\": \"\\u0427\\u0438 \\u0442\\u0438 \\u0432\\u0437\\u0430\\u0433\\u0430\\u043b\\u0456 \\u0431\\u0443\\u0432 \\u0447\\u0435\\u043c\\u043d\\u0438\\u043c \\u0446\\u044c\\u043e\\u0433\\u043e \\u0440\\u043e\\u043a\\u0443!?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence seems to convey a sense of incredulity, as in 'you were that [thing]?' aligning more closely with surprise than pure joy. Hence, it aligns somewhat with the joy version but less strongly.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version suggests a scenario where the person 'wished to be that [thing]', which is a sentiment not notably present in the original sentence, indicating a very low alignment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The fear version implies a significant worry, asking 'you weren't [that thing], right?', which is more direct and alarming, while the original mostly expresses disbelief.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original expresses frustration more than anger, but matches the anger version quite reasonably. However, the tone is not aggressive enough to score higher.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original shows surprise in regards to someone's identity by asking if they were that thing. This aligns closely with the surprise version which affirms it as a fact.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "The disgust version questions someone being 'that thing,' which could imply a sense of aversion. However, the original does not carry that revulsion, suggesting a very low alignment.",
+        "disgust_intensity": 0
+    }
+}

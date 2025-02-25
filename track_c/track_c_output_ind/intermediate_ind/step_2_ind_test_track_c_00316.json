@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Om, handuk birunya, berasa di bis antar kota deh, Jangan gitu dong :(\", \"rewritten_form_joy\": \"Om, handuk birunya! Rasanya seperti di bis antar kota yang seru! Jangan gitu dong! :D\", \"rewritten_form_sadness\": \"Om, handuk birunya, aku merasa seperti di bis antar kota sendirian. Jangan gitu dong :( \", \"rewritten_form_fear\": \"Om, handuk birunya, rasanya seperti di bis antar kota yang bikin takut. Jangan gitu dong! :(\", \"rewritten_form_anger\": \"Om, handuk birunya, rasanya seperti di bis antar kota dan ini sangat mengganggu! Jangan gitu dong! >:(\", \"rewritten_form_surprise\": \"Om, handuk birunya? Rasanya seperti di bis antar kota yang tidak terduga! Jangan gitu dong?\", \"rewritten_form_disgust\": \"Om, handuk birunya, itu bikin aku merasa seperti di bis antar kota yang kotor! Jangan gitu dong! Yuk! :/\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a lighthearted complaint about a blue towel while suggesting a fun experience on a bus. However, it does not convey strong joy or excitement as seen in the joy rewritten version, which emphasizes a fun experience.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness rewritten sentence aligns closely with the original, as it captures a feeling of loneliness or disappointment. The original mentions a plea ('Jangan gitu dong') which suggests a desire for better circumstances, similar to the sadness sentiment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not depict a sense of fear. The rewritten version emphasizes a frightening experience which is not present in the original context, making the fear intensity low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original expresses mild frustration with 'Jangan gitu dong', it does not reflect strong anger compared to the rewritten version that uses more forceful language. The alignment is low as there is not a significant emotional buildup.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise alignment is moderate as the original does hint at an unusual experience ('berasa di bis antar kota'). However, it lacks the strong emphasis of unexpectedness shown in the rewritten surprise sentence.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence does not imply disgust. The rewritten version specifies a negative feeling associated with cleanliness, which is not reflected in the original context, leading to a low resemblance.",
+        "disgust_intensity": 0
+    }
+}

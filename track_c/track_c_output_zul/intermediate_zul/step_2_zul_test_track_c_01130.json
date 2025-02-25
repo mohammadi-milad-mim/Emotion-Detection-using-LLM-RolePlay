@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Umsindo ngesikhundla sikathishanhloko\", \"rewritten_form_joy\": \"Umsindo omuhle ngesikhundla sikathishanhloko!\", \"rewritten_form_sadness\": \"Umsindo ophusile ngesikhundla sikathishanhloko.\", \"rewritten_form_fear\": \"Umsindo omubi ngesikhundla sikathishanhloko!\", \"rewritten_form_anger\": \"Umsindo onenhliziyo ngesikhundla sikathishanhloko!\", \"rewritten_form_surprise\": \"Umsindo ophawulekayo ngesikhundla sikathishanhloko!\", \"rewritten_form_disgust\": \"Umsindo ongenakubekezelelwa ngesikhundla sikathishanhloko.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral tone regarding noise ('umsindo') related to a specific position ('sikathishanhloko'). The joy rewritten version uses the word 'omuhle' (beautiful) which suggests a positive connotation not present in the original. Therefore, the alignment is weak.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten version for sadness uses 'ophusile' (quiet), implying a sense of tranquility or a subdued nature. The original sentence does not convey this muted emotional state, leading to a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version introduces 'omubi' (bad), which infers a sense of danger or negative context associated with the noise. The original does not express fear or danger, so the match is minimal.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger rewritten form presents 'onenhliziyo' (with heart), which could suggest intense passion or aggression not directly present in the original phrase. The tone remains largely neutral in the original, leading to a low connection.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "In the surprise context, 'ophawulekayo' (notable) indicates an unexpectedness that isn't evident in the original sentence. The original has no element of surprise, hence the alignment is weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust version refers to 'ongenakubekezelelwa' (intolerable), indicating a strong negative feeling not present in the original. Thus, there is a low alignment as the original does not indicate disgust.",
+        "disgust_intensity": 0
+    }
+}

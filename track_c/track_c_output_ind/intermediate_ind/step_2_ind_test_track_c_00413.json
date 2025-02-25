@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Gendangnya gak enak banget, enaknya as pakai drum.\", \"rewritten_form_joy\": \"Gendangnya bikin seneng banget, asiknya pakai drum!\", \"rewritten_form_sadness\": \"Gendangnya rasanya kurang enak, jadi pengen pakai drum saja.\", \"rewritten_form_fear\": \"Gendangnya gak enak banget, aku takut kalau pakai drum malah makin berisik.\", \"rewritten_form_anger\": \"Gendangnya jelek banget, seharusnya pakai drum yang lebih baik!\", \"rewritten_form_surprise\": \"Gendangnya kok gak enak banget ya, padahal aku pikir pasti pakai drum!\", \"rewritten_form_disgust\": \"Gendangnya jelek banget, jujur, lebih baik pakai drum yang layak!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative opinion about the drum sound, indicating dissatisfaction rather than joy. The rewritten joyful form emphasizes fun and positive feelings about the drum, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement expresses dissatisfaction, which aligns with the sense of wanting something better (like using a drum). The rewritten sadness form captures this feeling of longing for a better experience, indicating some alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original does express dissatisfaction, it doesn't imply fear about using the drums. The fear rewriting introduces a concern about the noise getting worse, which is not present in the original's context.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original is negative but lacks the strong emotional intensity found in the rewritten anger form. It does indicate a preference but does not directly express anger towards the situation or the instrument itself.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not evoke surprise, as it is an expression of dissatisfaction rather than an unexpected outcome. The surprise rewriting implies a contrast that is not present in the original context.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original's strong negative sentiment about the drum aligns closely with disgust, as it suggests a clear rejection of the drum's quality. The disgust rewriting is similarly degrading regarding the drum's quality, indicating a strong alignment.",
+        "disgust_intensity": 3
+    }
+}

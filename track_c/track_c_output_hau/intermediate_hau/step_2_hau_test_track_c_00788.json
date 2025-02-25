@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Se an hada da aljanu ko? \\ud83d\\ude33\", \"rewritten_form_joy\": \"Se an hada da aljanu, ko? Haha! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"Se an hada da aljanu, ko? \\ud83d\\ude14\", \"rewritten_form_fear\": \"Se an hada da aljanu, ko? I'm really worried... \\ud83d\\ude28\", \"rewritten_form_anger\": \"Se an hada da aljanu, ko? That's just ridiculous! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Se an hada da aljanu, ko? Wait, what?! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Se an hada da aljanu, ko? Ugh, that's disgusting! \\ud83d\\ude37\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a question without any evident joy or humor, contrasting with the rewritten form that exudes joy through the exclamation 'Haha!' and a happy emoji.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey any feelings of sadness. The rewritten version expresses sadness with a sad emoji, which is absent in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original sentence poses a question that could evoke fear, it lacks direct expression of worry or anxiety seen in the rewritten version, which explicitly states 'I'm really worried...'.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any hint of anger, while the rewritten version uses 'That's just ridiculous!' which clearly expresses frustration. Hence, the alignment is low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not convey surprise, in contrast to the rewritten version that uses 'Wait, what?!' which indicates surprise or shock.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original question does not suggest any disgust. The rewritten form explicitly states 'Ugh, that's disgusting!' which conveys a strong sense of disgust, making it unaligned with the original.",
+        "disgust_intensity": 0
+    }
+}

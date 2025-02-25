@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Baru nonton tahun ini tapi sdh tak terhitung nonton ke berapa puluh kali\", \"rewritten_form_joy\": \"Aku baru nonton tahun ini tapi aku sudah melihatnya puluhan kali, dan itu sangat menyenangkan!\", \"rewritten_form_sadness\": \"Baru nonton tahun ini, tapi sudah tak terhitung berapa puluh kali, terasa seolah tak ada lagi yang bisa dinikmati.\", \"rewritten_form_fear\": \"Baru nonton tahun ini, tapi aku sudah melihatnya puluhan kali, dan sekarang aku khawatir jika akan kehabisan hal menarik untuk ditonton.\", \"rewritten_form_anger\": \"Baru nonton tahun ini, tapi sudah tak terhitung berapa puluh kali! Ini sangat menjengkelkan!\", \"rewritten_form_surprise\": \"Baru nonton tahun ini, tapi wow, sudah tak terhitung nonton ke berapa puluh kali!\", \"rewritten_form_disgust\": \"Baru nonton tahun ini, tapi sudah tak terhitung nonton ke berapa puluh kali, itu sangat menjijikkan untuk dipikirkan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses anticipation and enthusiasm about watching something many times. The joy rewritten version amplifies this by explicitly stating it is enjoyable, closely relating to the original sentiment.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The sadness version focuses on the notion of lacking novelty and enjoyment, which isn't present in the original. There is no indication of sadness in the original text, making this alignment less strong.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The fear version introduces a concern about not finding anything interesting in the future. This fear element is not implied in the original statement, leading to minimal alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger version interprets the statement with frustration over watching something so many times. The original does not convey frustration or anger; rather, it comes across as neutral, making this score low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version conveys amazement at having watched something so many times. The original does not express surprise itself, implying that it is more of a statement of fact than an emotional reaction.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version suggests a negative emotion toward the repetition, which is not present in the original. The original expresses no disgust; rather, it seems neutral or positive.",
+        "disgust_intensity": 0
+    }
+}

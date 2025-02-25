@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kushiswe amabhasi kamasipala eMlaza\", \"rewritten_form_joy\": \"Kushiswe amabhasi kamasipala eMlaza, lokhu kuhle kakhulu!\", \"rewritten_form_sadness\": \"Kushiswe amabhasi kamasipala eMlaza, kodwa lokhu kuyaphoxa.\", \"rewritten_form_fear\": \"Kushiswe amabhasi kamasipala eMlaza, ngiyazizwa ngingaphelele.\", \"rewritten_form_anger\": \"Kushiswe amabhasi kamasipala eMlaza, lokhu kuyashesha futhi kuhluphi!\", \"rewritten_form_surprise\": \"Kushiswe amabhasi kamasipala eMlaza? Ngempela?\", \"rewritten_form_disgust\": \"Kushiswe amabhasi kamasipala eMlaza, kodwa kubuhlungu ukuyicabanga.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence simply states that the buses of the municipality of eMlaza have been stolen. It lacks any positive sentiment that aligns with joy. The rewritten joyful sentence expresses happiness about the situation, which is not present in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sentence for sadness highlights disappointment with the phrase 'lokhu kuyaphoxa' (this is disappointing). The original does not convey any inherent sadness, as it only reports a fact without emotion. Thus, there is a slight indirect alignment through the potential for sadness in the context of theft, but not definitively.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewritten reference indicates insecurity with ''ngiyazizwa ngingaphelele'' (I feel incomplete). The original sentence mentions the theft but does not express fear or insecurity about it, although theft could evoke such feelings if taken personally. However, fear is not explicitly stated.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten sentence for anger characterizes the situation with negative, emotive wording like 'kuyashesha futhi kuhluphi!' (it is fast and troubling). The original sentence does lack direct anger but could imply it given the context of theft. However, it is not emotionally charged enough to reach a high level of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The rewritten sentence expressing surprise uses an inquisitive tone with the phrase 'Ngempela?' (Really?). The original sentence does not provoke any surprise, as it presents a straightforward fact without evoking any reaction or unexpectedness. Hence, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust version highlights pain associated with the action with 'kubuhlungu ukuyicabanga' (it's painful to think about). The original sentence does not inherently convey disgust but like with sadness and fear, it could lead to feelings of disgust in response to the situation, despite not stating this emotion directly.",
+        "disgust_intensity": 1
+    }
+}

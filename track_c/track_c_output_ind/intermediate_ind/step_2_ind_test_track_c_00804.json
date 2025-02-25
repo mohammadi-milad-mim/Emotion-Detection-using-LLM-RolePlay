@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Studio apa ini, takut kotor, pakelah sepatu\", \"rewritten_form_joy\": \"Studio ini sangat menarik! Ayo kita pakai sepatu supaya tetap bersih!\", \"rewritten_form_sadness\": \"Studio ini bikin saya merasa tidak nyaman, mungkin lebih baik pakai sepatu biar tidak kotor.\", \"rewritten_form_fear\": \"Studio ini terlihat kotor, tolong pakai sepatu supaya kita tidak terpapar kuman!\", \"rewritten_form_anger\": \"Studio ini sangat jorok! Kenapa tidak ada yang minta kita pakai sepatu?!\", \"rewritten_form_surprise\": \"Wow, studio ini tampak berbeda! Baiknya sih pakai sepatu agar tidak kotor.\", \"rewritten_form_disgust\": \"Studio ini terlihat sangat kotor, sebaiknya kita pakai sepatu agar tidak terkena kotoran.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests caution about dirtiness but lacks the enthusiasm or positivity needed to align with joy. The joy variant is more upbeat and invites action with excitement, which is not present in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original expresses discomfort with the studio and emphasizes wearing shoes to avoid dirt, suggesting a degree of discomfort or discontent which aligns with sadness but is still more about caution than emotional distress.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence conveys a sense of apprehension regarding cleanliness and suggests wearing shoes to avoid dirt, which connects closely to the fear of germs or dirt, aligning well with the fear variant.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original conveys a mild concern about cleanliness, but does not express outright frustration or anger; the anger variant exaggerates this sentiment significantly, making it a poor fit with the original tone.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not evoke a strong sense of surprise, as it reflects a straightforward concern about cleanliness without invoking unexpectedness. The surprise variant's excitement also does not resonate with the original tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original statement reflects a concern about dirtiness and the need for cleanliness which aligns closely with the disgust variant about the grossness of the environment. However, it is less explicit than the disgust rewritten form.",
+        "disgust_intensity": 2
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Allah Ya yi wa matar Farfesa Yadudu rasuwa\", \"rewritten_form_joy\": \"Allah ya yi wa matar Farfesa Yadudu rasuwa, amma ina jin dadin lokutan da suka yi tare!\", \"rewritten_form_sadness\": \"Allah ya yi wa matar Farfesa Yadudu rasuwa, wannan lamari ya yi zafi a zuciyata.\", \"rewritten_form_fear\": \"Allah ya yi wa matar Farfesa Yadudu rasuwa, ina fargabar abin da zai biyo baya.\", \"rewritten_form_anger\": \"Allah ya yi wa matar Farfesa Yadudu rasuwa, wannan ba ya kamata ya faru ba!\", \"rewritten_form_surprise\": \"Allah ya yi wa matar Farfesa Yadudu rasuwa? Wannan ya zo mini da mamaki!\", \"rewritten_form_disgust\": \"Allah ya yi wa matar Farfesa Yadudu rasuwa, wannan abu yana ba ni babban gara.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a somber event (the passing of Professor Yadudu's wife) without any joyful undertone. The rewritten joyful version includes a reflection on happy memories, which the original lacks, indicating no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys the sadness of loss directly, which aligns closely with the rewritten version that emphasizes the emotional pain of the event. Thus, it has a strong element of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence states a fact about a loss but does not imply any immediate fear. The rewritten version expresses concern about what may follow, which is not present in the original, indicating low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement does not touch on any feelings of anger; it simply states a fact about death. The rewritten form expresses anger about the event, suggesting no significant alignment with anger in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is a statement of fact without any element of surprise. The rewritten surprise sentence questions the event, indicating that the original does not align with any surprising implications.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not evoke disgust; it simply states a loss. The rewritten version brings in a sense of disgust towards the situation, which is not present in the original, indicating low alignment with disgust.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ruwan da aka wanke safar yayi tamkar kwata saboda dauda\", \"rewritten_form_joy\": \"Ruwan da aka wanke safar yayi kamshi sosai saboda dauda!\", \"rewritten_form_sadness\": \"Ruwan da aka wanke safar yayi tamkar kwata saboda dauda, yana bata rai.\", \"rewritten_form_fear\": \"Ruwan da aka wanke safar yayi tamkar kwata saboda dauda, yana yi min fargaba.\", \"rewritten_form_anger\": \"Ruwan da aka wanke safar yayi tamkar kwata saboda dauda, wannan ya sa ni jin haushi!\", \"rewritten_form_surprise\": \"Ruwan da aka wanke safar yayi tamkar kwata saboda dauda, abin mamaki ne!\", \"rewritten_form_disgust\": \"Ruwan da aka wanke safar yayi tamkar kwata saboda dauda, yana sanya zazza\\u0253i.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and describes a state without expressive language. It does not convey joy, as it lacks any positive sentiment or enthusiasm found in the joyful version, which emphasizes pleasantness and positivity with the description of the water's smell as 'kamshi sosai.'",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has a neutral tone but suggests dissatisfaction or disappointment by describing the water as being like mud. The sadness version explicitly states that it causes sadness, adding emotional depth the original lacks. Therefore, there's a mild alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear, as it depicts a neutral state about the water. The fearful version introduces feelings of fear, which aren't present in the original, making it misaligned in terms of fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence captures a negative outcome, it does not explicitly represent anger or irritation. The angry version shows frustration in response to the situation, which the original does not, resulting in a lack of intensity in anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not include any element of surprise; it simply presents a fact. The surprised version adds an element of unexpectedness or revelation that is absent in the original, indicating no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence describes water negatively but doesn\u2019t express disgust. The disgust version emphasizes a visceral reaction which is more intense than what is captured in the original. There is some mild agreement in the negative description, but no strong sentiment of disgust is conveyed.",
+        "disgust_intensity": 1
+    }
+}

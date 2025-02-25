@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kaji mugu wato yinwa ta kashemu koh \\ud83d\\ude0e\", \"rewritten_form_joy\": \"Kaji mugu wato yinwa ta kashemu koh! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"Kaji mugu wato yinwa ta kashemu koh... \\ud83d\\ude1e\", \"rewritten_form_fear\": \"Kaji mugu wato yinwa ta kashemu koh?! \\ud83d\\ude30\", \"rewritten_form_anger\": \"Kaji mugu wato yinwa ta kashemu koh! This is infuriating! \\ud83d\\ude20\", \"rewritten_form_surprise\": \"Kaji mugu wato yinwa ta kashemu koh?! Wow! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Kaji mugu wato yinwa ta kashemu koh... Ugh, that's unpleasant! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sentiment that is enthusiastic but lacks the direct positive exclamation found in the joy rewritten form. While there's a potential for happiness, it doesn't imply strong joy on its own.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The use of ellipsis in both the original and rewritten sadness form suggests a feeling of lack or resignation, but the original does not carry the same weight or explicit sadness as the rewritten form.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply fear directly, and while the rewritten fear form adds an element of surprise and concern with a question mark, the original stays neutral without strong fearful language.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text does not convey anger, and the addition of phrases in the anger rewritten form adds a level of irritability that isn't present in the original. It remains neutral without the explicit frustration expressed in the rewritten version.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence carries a hint of surprise but lacks the definitive exclamatory punctuation in the rewritten surprise version that intensifies the reaction. As such, it shows slight alignment with potential surprise, but not strongly.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "There is no apparent feeling of disgust in the original sentence. The rewritten disgust form explicitly expresses unpleasantness that is not implied in the original text, indicating no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

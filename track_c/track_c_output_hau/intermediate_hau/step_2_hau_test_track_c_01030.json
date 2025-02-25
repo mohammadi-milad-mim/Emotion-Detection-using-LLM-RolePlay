@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"An kashe mutane 3 a sabon hari da aka kai kauyen Katsina\", \"rewritten_form_joy\": \"An kashe mutane 3 a sabon hari da aka kai kauyen Katsina, abin mamaki ne!\", \"rewritten_form_sadness\": \"An kashe mutane 3 a sabon hari da aka kai kauyen Katsina, yana da matukar bakin ciki.\", \"rewritten_form_fear\": \"An kashe mutane 3 a sabon hari da aka kai kauyen Katsina, wannan yana jawo tsoro sosai.\", \"rewritten_form_anger\": \"An kashe mutane 3 a sabon hari da aka kai kauyen Katsina, wannan abu ne mai ban takaici!\", \"rewritten_form_surprise\": \"An kashe mutane 3 a sabon hari da aka kai kauyen Katsina, na yi mamakin hakan!\", \"rewritten_form_disgust\": \"An kashe mutane 3 a sabon hari da aka kai kauyen Katsina, wannan abin kyama ne.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses a tragic event, which does not evoke joy. The rewritten joy sentence adds an element of surprise, but it doesn't change the nature of the original statement, which focuses on a death toll. Therefore, it strongly conflicts with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence communicates a tragic occurrence\u2014the death of three people\u2014which aligns closely with the sentiment of sadness expressed in the rewritten sentence. This emotion is very much present.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence could elicit a sense of fear regarding violence or safety in the community. The fear rewritten sentence emphasizes this reaction, suggesting a high alignment with fear, though it is less direct than sadness.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence might provoke anger about violence and loss of life, but it does not explicitly express anger. The rewritten anger sentence frames the event as frustrating, showing moderate alignment with the original, but not strongly.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "While the event described is shocking, the original sentence does not express surprise itself. The rewritten surprise sentence implies an unexpectedness which could align with the nature of the event, but does not feel strongly connected to the information presented. Therefore, it earns a low score.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original reports a violent act, which may evoke disgust, but does not explicitly convey this emotion. The rewritten disgust sentence frames the act in a contemptible light, aligning to a certain degree with the original but lacking a stronger connection.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Indida ngokubulawa kobethanda imicimbi\", \"rewritten_form_joy\": \"Ngiyajabula ngokubulawa kobebehamba imicimbi!\", \"rewritten_form_sadness\": \"Ngiyakhala ngenxa yokubulawa kobebehamba imicimbi.\", \"rewritten_form_fear\": \"Ngiyesaba ngokubulawa kobebehamba imicimbi.\", \"rewritten_form_anger\": \"Ngiyavutha ngofuzo lokubulawa kobebehamba imicimbi.\", \"rewritten_form_surprise\": \"Ngiyamangala ngokubulawa kobebehamba imicimbi!\", \"rewritten_form_disgust\": \"Ngiyakuluma ngaphakathi ngobubhulqondo bokubulawa kobebehamba imicimbi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any happiness or joyful sentiment, suggesting the situation is serious or concerning. The rewritten version for joy is much more positive, expressing happiness which is lacking in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a negative event (death) which aligns closely with sadness. The rewritten version for sadness expresses crying out of grief, indicating a strong emotional connection to loss.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence might hint at fear regarding the situation, but it does not explicitly express fear. The rewritten version clearly states fear of the situation, which is stronger than what the original conveys.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not express anger, it simply states a fact about death. The rewritten version expresses a strong emotional response of anger which is not reflected in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is no indication of surprise in the original sentence, which simply states the consequence of an event. The rewritten version indicates shock or surprise, which is absent in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not indicate disgust directly, but the rewritten version reacts to the situation with horror, which contrasts the original's neutral tone. However, there is an implication of negative sentiment which is somewhat aligned.",
+        "disgust_intensity": 1
+    }
+}

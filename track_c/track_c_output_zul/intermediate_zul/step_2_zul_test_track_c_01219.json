@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Been invited for lunch, lapho ngyafa ibhabhalazi \\ud83d\\ude2d\\ud83d\\ude2d\\ud83d\\ude2d https://t.co/9FAh2AavaL\", \"rewritten_form_joy\": \"I've been invited for lunch, and I'm so excited! \\ud83d\\ude04\\ud83d\\ude04\\ud83d\\ude04 https://t.co/9FAh2AavaL\", \"rewritten_form_sadness\": \"I've been invited for lunch, but I feel so down about it. \\ud83d\\ude22\\ud83d\\ude22\\ud83d\\ude22 https://t.co/9FAh2AavaL\", \"rewritten_form_fear\": \"I've been invited for lunch, but I'm really nervous about it. \\ud83d\\ude28\\ud83d\\ude28\\ud83d\\ude28 https://t.co/9FAh2AavaL\", \"rewritten_form_anger\": \"I've been invited for lunch, and it's so frustrating! \\ud83d\\ude20\\ud83d\\ude20\\ud83d\\ude20 https://t.co/9FAh2AavaL\", \"rewritten_form_surprise\": \"I've been invited for lunch! Wow, I didn't see that coming! \\ud83d\\ude32\\ud83d\\ude32\\ud83d\\ude32 https://t.co/9FAh2AavaL\", \"rewritten_form_disgust\": \"I've been invited for lunch, and honestly, that sounds awful. \\ud83e\\udd22\\ud83e\\udd22\\ud83e\\udd22 https://t.co/9FAh2AavaL\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains an implicit sense of joy through the invitation for lunch, but the accompanying expression of 'ngyafa ibhabhalazi' with crying emojis suggests a mix of humor and annoyance rather than pure joy. Thus, it does not convey the high excitement indicated in the joy rewrite.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a sense of sadness or frustration hinted at by the crying emojis, suggesting that despite the invitation, there is disappointment or emotional turmoil. This aligns closely with the sadness rewrite, indicating a moderate sadness that is present.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There are no clear indications of fear in the original text. Rather, the expression seems more focused on a humorous or sarcastic take on the situation. Therefore, it doesn't align with the fear rewritten sentence at all.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence expresses a certain level of annoyance or frustration, it is not overtly angry. The crying emojis indicate distress but not necessarily anger. It doesn't equate to the high frustration suggested in the anger rewrite.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does express a sense of unexpectedness with the invitation, but rather than being purely surprised, it conveys mixed emotions. Thus, it does not capture the level of surprise found in the rewritten surprise response.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence reflects a form of playful disgust or reluctance regarding the lunch invitation through cultural nuances, but it lacks the strong negative sentiment present in the disgust rewrite. Therefore, it shows some disgust but not intensely.",
+        "disgust_intensity": 1
+    }
+}

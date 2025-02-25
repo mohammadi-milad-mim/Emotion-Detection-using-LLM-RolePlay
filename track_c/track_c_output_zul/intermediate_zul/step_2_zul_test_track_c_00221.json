@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"UDelazy uyintandokazi kumaMetro\", \"rewritten_form_joy\": \"UDelazy uyintandokazi kumaMetro, ngempela!\", \"rewritten_form_sadness\": \"UDelazy uyintandokazi kumaMetro, kodwa ngiyakukhumbula.\", \"rewritten_form_fear\": \"UDelazy uyintandokazi kumaMetro, kodwa kukhona okungangithokozisi.\", \"rewritten_form_anger\": \"UDelazy uyintandokazi kumaMetro, kodwa lokhu akukulungile!\", \"rewritten_form_surprise\": \"Wow! UDelazy uyintandokazi kumaMetro? Angikaze ngizwe ngalokhu!\", \"rewritten_form_disgust\": \"UDelazy uyintandokazi kumaMetro, kodwa lokho akuhambisani kahle!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses admiration or appreciation, similar to the joyful rewriting which adds enthusiasm with 'ngempela!', indicating a strong positive sentiment.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not convey sadness directly, but the rewritten version introduces a sense of longing with 'kodwa ngiyakukhumbula', which is more qualitative than what the original offers.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original phrase doesn't signal fear; rather, the rewritten version adds a sense of uncertainty with 'kukhona okungangithokozisi', which is not reflected in the original statement.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten sentence's expression of outrage ('lokhu akukulungile!') does not align with the original, which lacks any aggressive tone or implication of wrongdoing.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not convey surprise, while the rewritten version shows shock and excitement ('Angikaze ngizwe ngalokhu!'), suggesting a response to unexpected information.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "Although the rewritten form expresses disagreement ('lokho akuhambisani kahle!'), the original sentence does not convey any disgust or aversion, keeping it neutral.",
+        "disgust_intensity": 0
+    }
+}

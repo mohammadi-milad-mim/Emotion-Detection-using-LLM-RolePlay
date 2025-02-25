@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Liyabuya futhi namuhla elosolwa ngokubulala isitshudeni saseMUT\", \"rewritten_form_joy\": \"Liyabuya futhi namuhla elosolwa ngokubulala isitshudeni saseMUT, kuyajabulisa!\", \"rewritten_form_sadness\": \"Liyabuya futhi namuhla elosolwa ngokubulala isitshudeni saseMUT, lokho kuhlangene nosizi olukhulu.\", \"rewritten_form_fear\": \"Liyabuya futhi namuhla elosolwa ngokubulala isitshudeni saseMUT, kwenza kube nokwesaba okukhulu.\", \"rewritten_form_anger\": \"Liyabuya futhi namuhla elosolwa ngokubulala isitshudeni saseMUT, lokho kugBangele anger!\", \"rewritten_form_surprise\": \"Liyabuya futhi namuhla elosolwa ngokubulala isitshudeni saseMUT, ngempela?\", \"rewritten_form_disgust\": \"Liyabuya futhi namuhla elosolwa ngokubulala isitshudeni saseMUT, lokho kuyadabukisa kakhulu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses a serious incident (the death of a student), which does not align with the tone of joy present in the rewritten sentence that suggests happiness; thus, there's little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes a tragic event involving a student's murder, which aligns closely with the tone of sadness in the rewritten version that emphasizes great sorrow resulting from the situation.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the context involves a serious incident that could evoke fear, the original sentence does not directly express fear or an alarming perception. Therefore, it reflects more of a neutral observation rather than a fearful sentiment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement reports a serious crime and could provoke anger in many. However, it does not explicitly express anger in its tone or language, so the alignment with the anger emotion is moderate but not high.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence states a fact about an event but does not convey any element of surprise, as it presents straightforward information without shock or unexpectedness.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "Although the incident is disturbing, the original text presents the information in a factual manner without an emotional response of disgust. Thus, it has minimal connection to the tone of disgust seen in the rewritten sentence.",
+        "disgust_intensity": 0
+    }
+}

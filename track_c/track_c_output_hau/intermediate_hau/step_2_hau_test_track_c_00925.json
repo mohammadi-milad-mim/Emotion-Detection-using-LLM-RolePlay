@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Tabar BBC da bashi \\ud83d\\ude03\\ud83d\\ude03\\ud83d\\ude03\", \"rewritten_form_joy\": \"Tabar BBC da bashi! I can't believe it! \\ud83d\\ude03\\ud83d\\ude03\\ud83d\\ude03\", \"rewritten_form_sadness\": \"Tabar BBC da bashi... I wish things were different. \\ud83d\\ude22\", \"rewritten_form_fear\": \"Tabar BBC da bashi?! What if something goes wrong? \\ud83d\\ude28\", \"rewritten_form_anger\": \"Tabar BBC da bashi?! This is infuriating! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Tabar BBC da bashi? Wow, I didn\\u2019t see that coming! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Tabar BBC da bashi? That\\u2019s just gross! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The phrase 'Tabar BBC da bashi' paired with the multiple smiley emojis indicates a joyful sentiment. The alignment with the rewritten joy version, which expresses disbelief in a positive way, supports a high joy intensity.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not convey any signs of sadness; it feels more celebratory and joyful. Thus, it significantly diverges from the sadness rewritten version, which reflects wishful thinking and a sense of loss.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence lacks any indication of fear, as it expresses joy with smiley emojis. The fear rewritten version introduces anxiety about potential negative outcomes, which is absent in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of anger in the original text; instead, it expresses happiness. The anger rewritten version explicitly expresses frustration, which is not present in the joyful connotation of the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original has an element of enthusiasm that might lend itself to surprise, the primary tone is joyful rather than astonished. The rewritten surprise version captures a sense of unexpectedness that isn't fully aligned with the original joyful exclamation.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not imply any feelings of disgust. The rewritten disgust phrase introduces a negative reaction that is completely absent in the original, which is cheerful.",
+        "disgust_intensity": 0
+    }
+}

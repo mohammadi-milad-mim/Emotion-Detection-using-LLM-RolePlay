@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Babuyela enkantolo abakwaBushiri\", \"rewritten_form_joy\": \"Babuyela enkantolo abakwaBushiri!\", \"rewritten_form_sadness\": \"Babuyela enkantolo abakwaBushiri...\", \"rewritten_form_fear\": \"Babuyela enkantolo abakwaBushiri?\", \"rewritten_form_anger\": \"Babuyela enkantolo abakwaBushiri! It's infuriating!\", \"rewritten_form_surprise\": \"Babuyela enkantolo abakwaBushiri? Wow, I can't believe it!\", \"rewritten_form_disgust\": \"Babuyela enkantolo abakwaBushiri... What a revolting situation!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy. It is a straightforward statement without any exclamation or positive energy. The rewritten joyful form adds excitement with an exclamation mark, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The addition of ellipses in the sad rewritten form suggests a feeling of loss or resignation that is not present in the original sentence. The original maintains a neutral tone.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewritten form introduces a question mark, implying uncertainty and apprehension. The original lacks this sense of fear or doubt, maintaining a statement rather than a question.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten version expressing anger includes a statement about it being infuriating, which is significantly stronger than the original which is neutral. There\u2019s no expression of anger in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise form introduces disbelief with an exclamatory tone, which indicates astonishment not present in the original. The original sentence is simply a declaration.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version implies a strong negative reaction with words like 'revolting,' which is not reflected in the neutral original. The original does not contain any sense of disgust.",
+        "disgust_intensity": 1
+    }
+}

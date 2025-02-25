@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Video sangat bermanfaat untuk generasi muda kedepannya.\", \"rewritten_form_joy\": \"Video ini benar-benar luar biasa dan sangat bermanfaat untuk generasi muda kedepannya!\", \"rewritten_form_sadness\": \"Sayangnya, video ini sangat bermanfaat untuk generasi muda kedepannya, tetapi tidak semua orang menyadarinya.\", \"rewritten_form_fear\": \"Ada kekhawatiran bahwa video ini, meskipun bermanfaat, tidak akan cukup untuk generasi muda kedepannya.\", \"rewritten_form_anger\": \"Sungguh menjengkelkan bahwa video ini kadang-kadang diabaikan padahal sangat bermanfaat untuk generasi muda kedepannya!\", \"rewritten_form_surprise\": \"Wow, video ini ternyata sangat bermanfaat untuk generasi muda kedepannya!\", \"rewritten_form_disgust\": \"Saya merasa geli mendengar bahwa video yang seperti ini dianggap sebagai satu-satunya cara yang bermanfaat bagi generasi muda kedepannya.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence acknowledges the usefulness of the video, but it lacks the enthusiastic language present in the joyful rewrite, which emphasizes excitement and positivity. It indicates a moderate alignment with joy due to its positive message.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not express any sadness or lost potential directly; however, the rewritten version implies that not everyone is aware of the video's benefits, hinting at missed opportunities. This connection is somewhat tenuous and leads to a low intensity score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not convey any direct fear. The rewritten version raises concerns about the video not being enough, which is not present in the original. This results in a low alignment and intensity for fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence is neutral and positive about the video, the anger rewrite suggests frustration at people ignoring its value. The discrepancy indicates low alignment with anger due to the absence of negative sentiment in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks an element of surprise; it states a fact without any exclamatory language or astonishment that would align it with the surprise rewrite. Hence, there is no surprise present.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not express any sense of disgust. The rewritten version introduces a negative feeling about the implications of valuing such a video. Thus, there is no disgust present in the original.",
+        "disgust_intensity": 0
+    }
+}

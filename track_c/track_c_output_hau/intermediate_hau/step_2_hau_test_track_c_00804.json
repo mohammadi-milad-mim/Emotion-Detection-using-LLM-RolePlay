@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Abun babu dadi , ya Allah ka kawo mana agaji \\ud83d\\ude37\", \"rewritten_form_joy\": \"Abun babu dadi! Ya Allah, ka kawo mana agaji na musamman! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"Abun babu dadi, ya Allah, ina tuntube ka don ka kawo mana agaji... \\ud83d\\ude22\", \"rewritten_form_fear\": \"Abun babu dadi, ya Allah, don Allah ka kawo mana agaji, in da zan tafi? \\ud83d\\ude28\", \"rewritten_form_anger\": \"Abun babu dadi! Ya Allah, ya kamata ka kawo mana agaji yanzu! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Abun babu dadi! Ya Allah, ko yanzu ka kawo mana agaji? \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Abun babu dadi, ya Allah, wannan ba daidai bane, ka kawo mana agaji na gaggawa! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a plea for help (\"ka kawo mana agaji\") but lacks the enthusiastic tone present in the joyful version. The joyful rewritten version expresses excitement and positivity, which is not reflective of the original plea's tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence can be interpreted as one of despair, where the speaker is lamenting their situation and seeking help. The rewritten sadness version builds upon this by adding emotion explicitly related to feeling sad, presenting a greater sense of hopelessness than the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence expresses distress and a need for assistance, which aligns with fear when considering uncertainty about the situation. However, the original lacks the heightened anxiety present in the fear version, which expresses a more immediate and intense fear about outcomes.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not convey any anger, as it is a humble plea. The anger reflection adds a sense of urgency and frustration that is absent in the original. The original sentiment does not indicate any anger at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original includes an expression of a need but doesn't hint at surprise. The surprise version suggests an unexpected situation, which is not implied in the original. Therefore, the two do not align.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original plea does not contain any elements of disgust. The disgust version implies a negative response to a situation that is considered unjust, which is not reflected in the original sentiment. It is purely a request for help without any negative judgment.",
+        "disgust_intensity": 0
+    }
+}

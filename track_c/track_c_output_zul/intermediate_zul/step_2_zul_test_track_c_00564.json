@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Isoka lisongele intombi yalo kwasha izakhiwo\", \"rewritten_form_joy\": \"Isoka lisongele intombi yalo, kwasha izakhiwo, kuyajabulisa!\", \"rewritten_form_sadness\": \"Isoka lisongele intombi yalo, kwasha izakhiwo, okukhathazayo kakhulu.\", \"rewritten_form_fear\": \"Isoka lisongele intombi yalo, kwasha izakhiwo, ngicabanga ukuthi kunokwehlisayo okuthile okwenzeka.\", \"rewritten_form_anger\": \"Isoka lisongele intombi yalo, kwasha izakhiwo, futhi lokho akwamukelekile!\", \"rewritten_form_surprise\": \"Isoka lisongele intombi yalo, kwasha izakhiwo, angicabangelanga ukuthi lokhu kuzokwenzeka!\", \"rewritten_form_disgust\": \"Isoka lisongele intombi yalo, kwasha izakhiwo, lokhu kukhubazekile ngokweqile.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not explicitly express joy; it states a situation without a positive exclamation or assessment. The joy version adds a joyful sentiment that doesn't exist in the original, suggesting a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence indicates a situation that could imply a problem but does not express sorrow or concern directly. The sad version emphasizes a stressful or troubling emotion more explicitly. This suggests a moderate alignment with sadness due to the potential seriousness of the situation implied.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey fear or anxiety. The fearful version introduces a speculative thought about something dangerous happening, which is not reflected in the original. Thus, there is a lower alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence inherently does not express anger; it states a fact without emotions. The anger version includes a comment about something being unacceptable, which adds an intensity that is absent in the original. This indicates a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence simply presents an action; there is no element of unexpectedness or astonishment present. The surprise version indicates that something unexpected occurred, showing that there is low alignment with surprise as well.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence conveys a factual situation without disgust. The disgust version includes a strong negative assessment of the situation, signaling a major emotional divergence. Thus, there is little to no alignment at all for disgust.",
+        "disgust_intensity": 0
+    }
+}

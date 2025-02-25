@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kaya marasa wanki, sun ha\\u0257u sai warin rima suke\", \"rewritten_form_joy\": \"Kaya marasa wanki, sun ha\\u0257u suna da dadin rima!\", \"rewritten_form_sadness\": \"Kaya marasa wanki, sun ha\\u0257u sai warin rima suke, abun yana ba ni tausayi.\", \"rewritten_form_fear\": \"Kaya marasa wanki, sun ha\\u0257u sai warin rima suke, abin na iya zama ha\\u0257ari.\", \"rewritten_form_anger\": \"Kaya marasa wanki, sun ha\\u0257u sai warin rima suna zubar da \\u0199azanta!\", \"rewritten_form_surprise\": \"Kaya marasa wanki, sun ha\\u0257u sai warin rima, hakan ya yi kama da abubuwan da ba a zata ba!\", \"rewritten_form_disgust\": \"Kaya marasa wanki, sun ha\\u0257u sai warin rima, wannan yana yi mini juyayi!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any joy; it simply states a condition without any positive sentiment. The rewritten version introduces enjoyment with 'suna da dadin rima', which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies an absence resulting in a neutral observation, while the rewritten one introduces the idea of pity, suggesting a stronger emotional tone not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not evoke fear. The rewritten version introduces potential danger with 'abin na iya zama ha\u0307dari', introducing an element of fear not suggested in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence implies a neutral situation; however, the rewritten version indicates an emotional reaction of anger with 'suna zubar da \u1e33azanta', which is lacking in the original context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is straightforward and does not hint at anything unexpected, while the rephrased version implies an element of surprise; hence, the alignment is minimal.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original text does not convey disgust; only the rewritten version articulates a personal feeling of disgust with 'wannan yana yi mini juyayi'. There is no expression of such a feeling in the original sentence.",
+        "disgust_intensity": 1
+    }
+}

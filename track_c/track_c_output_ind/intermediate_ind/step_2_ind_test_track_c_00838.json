@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Dan akhirnya pas dicover via Vallen malah trending\\ud83d\\ude2d\", \"rewritten_form_joy\": \"Dan akhirnya, saat dicover oleh Vallen, itu menjadi trending!\", \"rewritten_form_sadness\": \"Dan akhirnya, saat dicover oleh Vallen, entah kenapa malah trending, dan rasanya sedih...\", \"rewritten_form_fear\": \"Dan akhirnya, saat dicover oleh Vallen, itu malah trending dan aku takut dengan responsnya.\", \"rewritten_form_anger\": \"Dan akhirnya, saat dicover oleh Vallen, itu malah trending, sungguh menyebalkan!\", \"rewritten_form_surprise\": \"Dan akhirnya, saat dicover oleh Vallen, tiba-tiba malah trending, tak terduga!\", \"rewritten_form_disgust\": \"Dan akhirnya, saat dicover oleh Vallen, itu malah trending, sangat menjijikkan!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a mix of emotions; however, the use of 'trending' can imply a positive reaction due to the popularity. Yet, the sad face emoji indicates deeper feelings which may contradict pure joy. Hence, the alignment is not strong enough for high joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence includes a sad face emoji which directly correlates with feelings of sadness. The mention of being discovered and trending seems to evoke a conflicting emotion of sadness, making this a stronger alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original text does not imply fear directly but could suggest anxiety about the consequences of trending. However, the fear aspect is not strongly present, leading to a low intensity.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone in the original reflects frustration about the situation. Although there is no explicit anger expressed, the phrase 'malah trending' has an undertone of irritation, but not strongly enough to warrant a high score.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The idea of something becoming trending unexpectedly can evoke surprise, but the context provided in the original does not strongly emphasize this reaction, leading to a moderate consideration.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "There is no strong evidence in the original sentence to align with disgust, despite the mention of trending, which is more a matter of perception than an emotional response.",
+        "disgust_intensity": 0
+    }
+}

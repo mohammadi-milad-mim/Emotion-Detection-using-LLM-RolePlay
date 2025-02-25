@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Amaphoyisa adudulwe ngenganono emngcwabeni\", \"rewritten_form_joy\": \"Amaphoyisa adudulwe ngenjabulo emngcwabeni!\", \"rewritten_form_sadness\": \"Amaphoyisa adudulwe ngenganono emngcwabeni, ngempela kudabukile.\", \"rewritten_form_fear\": \"Amaphoyisa adudulwe ngenganono emngcwabeni, sengikhathazekile kakhulu.\", \"rewritten_form_anger\": \"Amaphoyisa adudulwe ngenganono emngcwabeni, lokho akuyikufaneleka!\", \"rewritten_form_surprise\": \"Amaphoyisa adudulwe ngenganono emngcwabeni? Ngempela?\", \"rewritten_form_disgust\": \"Amaphoyisa adudulwe ngenganono emngcwabeni\\u2014lokhu kuyacasula!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes police being triggered by something sad ('ngenganono emngcwabeni'), while the joy rewritten version flips the sentiment to a positive emotion ('ngenjabulo'). There is no happiness implied in the original statement, leading to a low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has a tone that matches the sadness rewritten version, indicating that there is a somber or negative context to the situation being described ('ngenganono emngcwabeni'). Thus, it reflects the sadness emotion strongly.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence lacks any sense of apprehension or fear, only indicating a response from the police without indicating any distress or concern. Hence, it aligns poorly with the fear rewritten sentence, leading to a low score.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no overt sense of anger in the original sentence; it describes a situation rather than expressing outrage. The rewritten sentence indicates anger very clearly, creating a disconnection with the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not provide any element of surprise. It merely states a fact about the police being triggered. The rewritten version expresses astonishment which isn't present in the original, resulting in a low alignment for surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not convey any feelings of disgust, while the rewritten version implies annoyance or irritation. The original description is more neutral, suggesting a slight disconnect.",
+        "disgust_intensity": 1
+    }
+}

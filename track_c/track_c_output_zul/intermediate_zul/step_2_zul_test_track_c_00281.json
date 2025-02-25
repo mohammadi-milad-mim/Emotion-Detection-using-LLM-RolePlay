@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Uginqe ibhasi wazibulala umshayeli kushona abangu-9\", \"rewritten_form_joy\": \"Uginqe ibhasi, umshayeli wakhe akaphumuli, kodwa kunokuthakazelelwa, umphakathi uhamba phambili!\", \"rewritten_form_sadness\": \"Uginqe ibhasi, umshayeli wayeshonile, kube nezinsolo ezilukhuni zaba ngu-9 abashonile.\", \"rewritten_form_fear\": \"Uginqe ibhasi, umshayeli ubenesibindi, kodwa lesi simo sizwakalisa ukwesaba okubuhlungu, abangu-9 bahlaselwe!\", \"rewritten_form_anger\": \"Uginqe ibhasi, umshayeli ubengazifezi, waholela emhlabeni abangu-9 ababulala, lokhu akukwazeki!\", \"rewritten_form_surprise\": \"Uginqe ibhasi, umshayeli ubhukuda, kanti abangu-9 bahlupheke ngendlela engalindelekile!\", \"rewritten_form_disgust\": \"Uginqe ibhasi, umshayeli uzibulala enqamula, abhujiswe ngendlela eyawugwazela abangu-9!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a tragic event, where the driver caused the death of nine people. This aligns poorly with joy, as there is no indication of positivity or celebration present, unlike the joyful rewritten sentence which talks about the community moving forward.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence mentions the driver and indicates that nine people died, which directly relates to the feelings of sorrow and loss expressed in the rewritten sentence about the driver being dead and the hardship surrounding the nine who died. Thus, sadness aligns closely.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is an element of fear regarding the serious situation of the bus driver causing deaths, but the focus is more on the outcome rather than the anxiety about it. While the fear rewritten sentence highlights terror and consequences, the original doesn't evoke the same intense feeling, resulting in moderate fear intensity.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence describes a tragic outcome caused by the driver, which suggests negligence or fault. The rewritten anger statement clearly states that the driver's actions are unacceptable, which resonates with the sentiment of the original regarding responsibility. Thus, anger is present at a high level.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence straightforwardly recounts an incident without unexpected elements. However, the rewritten surprise sentence frames the event in an unforeseen light, suggesting that the circumstances of the tragedy were unexpected. This does not significantly align with the original, leading to a low level of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original conveys a tragedy, which can evoke a sense of disgust particularly in how the situation unfolded. The rewritten disgust sentence emphasizes a horrific action (the driver crossing lives) that implies a strong aversion to the manner in which the events transpired. Thus, there is a moderate alignment with disgust.",
+        "disgust_intensity": 2
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u0423\\u0431\\u0440\\u0430\\u043b\\u0438, \\u0442\\u0443\\u043f\\u043e \\u0432\\u0441\\u0456 \\u043a\\u0456\\u043e\\u0441\\u043a\\u0438 \\u043f\\u0440\\u0438\\u0431\\u0440\\u0430\\u043b\\u0438)\", \"rewritten_form_joy\": \"\\u0423\\u0440\\u0430, \\u043d\\u0430\\u0440\\u0435\\u0448\\u0442\\u0456 \\u0432\\u0441\\u0456 \\u043a\\u0456\\u043e\\u0441\\u043a\\u0438 \\u043f\\u0440\\u0438\\u0431\\u0440\\u0430\\u043b\\u0438!\", \"rewritten_form_sadness\": \"\\u0422\\u0430\\u043a \\u0441\\u0443\\u043c\\u043d\\u043e, \\u0432\\u0441\\u0456 \\u043a\\u0456\\u043e\\u0441\\u043a\\u0438 \\u043f\\u0440\\u0438\\u0431\\u0440\\u0430\\u043b\\u0438...\", \"rewritten_form_fear\": \"\\u041e \\u043d\\u0456, \\u0432\\u0441\\u0456 \\u043a\\u0456\\u043e\\u0441\\u043a\\u0438 \\u043f\\u0440\\u0438\\u0431\\u0440\\u0430\\u043b\\u0438, \\u0449\\u043e \\u0442\\u0435\\u043f\\u0435\\u0440 \\u0440\\u043e\\u0431\\u0438\\u0442\\u0438?\", \"rewritten_form_anger\": \"\\u0426\\u0435 \\u0436\\u0430\\u0445\\u043b\\u0438\\u0432\\u043e, \\u0432\\u0441\\u0456 \\u043a\\u0456\\u043e\\u0441\\u043a\\u0438 \\u043f\\u0440\\u0438\\u0431\\u0440\\u0430\\u043b\\u0438!\", \"rewritten_form_surprise\": \"\\u0412\\u0430\\u0443, \\u0432\\u043e\\u043d\\u0438 \\u0434\\u0456\\u0439\\u0441\\u043d\\u043e \\u043f\\u0440\\u0438\\u0431\\u0440\\u0430\\u043b\\u0438 \\u0432\\u0441\\u0456 \\u043a\\u0456\\u043e\\u0441\\u043a\\u0438!\", \"rewritten_form_disgust\": \"\\u042f\\u043a\\u0456 \\u0436\\u0430\\u0445\\u043b\\u0438\\u0432\\u0456 \\u043d\\u043e\\u0432\\u0438\\u043d\\u0438, \\u043f\\u0440\\u0438\\u0431\\u0440\\u0430\\u043b\\u0438 \\u0432\\u0441\\u0456 \\u0446\\u0456 \\u043d\\u0435\\u0449\\u0430\\u0441\\u043d\\u0456 \\u043a\\u0456\\u043e\\u0441\\u043a\\u0438!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sentiment of loss with the phrase '\u0432\u0441\u0456 \u043a\u0456\u043e\u0441\u043a\u0438 \u043f\u0440\u0438\u0431\u0440\u0430\u043b\u0438', which suggests frustration rather than joy. The joy rewritten version captures an excited reaction about the kiosks, which contrasts with the original's tone of disappointment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence inherently conveys sadness due to the use of '\u043f\u0440\u0438\u0431\u0440\u0430\u043b\u0438', indicating that something has been taken away. This aligns closely with the sadness rewritten version which emphasizes feeling down about the same topic.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not explicitly express fear; however, the sense of loss could evoke a mild fear of uncertainty, but it is not a central theme. The fear rewritten version emphasizes concern about a loss leading to confusion about what to do next, which isn't strongly present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence shows signs of frustration, which can align with anger, especially in the context of feeling let down by the removal of kiosks. The anger rewritten version reflects stronger emotions of outrage, which could resonate, but the original does not express a deep sense of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original statement does not convey surprise; it is instead a statement of action. The surprise rewritten version conveys astonishment about the kiosks being taken, which isn\u2019t applicable to the original, making it misaligned.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence expresses disdain about the removal of kiosks but does not evoke strong feelings of disgust. The disgust rewritten version uses strong language that does not match the subtler tone of the original, showing an inappropriate level of revulsion.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Enakkan dulu musiknya waktu belum di revamp\", \"rewritten_form_joy\": \"Aku masih ingat betapa asyiknya musik sebelum di revamp!\", \"rewritten_form_sadness\": \"Aku merindukan masa-masa saat musiknya belum di revamp.\", \"rewritten_form_fear\": \"Aku khawatir musiknya tidak akan sebaik yang dulu, sebelum di revamp.\", \"rewritten_form_anger\": \"Kenapa harus di revamp? Musiknya yang sebelumnya sudah sempurna!\", \"rewritten_form_surprise\": \"Wow, aku serasa kembali ke masa lalu ketika musiknya belum di revamp!\", \"rewritten_form_disgust\": \"Jujur, musik sebelum di revamp terasa jauh lebih baik dan tidak menjijikkan seperti sekarang.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of nostalgia for music before it was revamped, but it does not convey joy explicitly. The rewritten form that focuses on joy evokes fond memories, which are present in the original sentiment but not emphasized strongly enough to be classified as joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence shows an underlying sense of loss regarding the changes made to the music, which aligns with the sadness of missing something that was once cherished. The rewritten sad form captures this sentiment directly.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a hint of concern in the original sentence about the changes made to the music, which aligns moderately well with the fear of it not being as good as before. The fear expressed in the rewritten sentence is related and appropriate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence indicates dissatisfaction with the changes made, which corresponds with anger about those changes. However, it is not explicitly angry, making it less intense than the rewritten form which directly questions the reason for the revamp.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence implies a reflection on the past, but does not strongly evoke surprise. The rewritten version captures a sense of wonder by bringing back memories, making it feel somewhat surprising, but the original does not match that intensity.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not express disgust; it mentions a preference for the previous form of the music without negative connotations. The rewritten disgust version is stronger than what is contained in the original, leading to a low alignment.",
+        "disgust_intensity": 0
+    }
+}

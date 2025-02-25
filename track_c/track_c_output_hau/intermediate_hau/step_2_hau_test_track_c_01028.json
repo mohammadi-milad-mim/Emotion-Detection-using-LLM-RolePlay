@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"inaso inyi wata magana amma ina tsoron zuwa abuja lamme pass\", \"rewritten_form_joy\": \"Ina son in yi wata magana, ina jin da\\u0257in tunanin tafiya Abuja, lamme pass!\", \"rewritten_form_sadness\": \"Ina so in yi wata magana, amma ina jin haushi da tsoro idan na tafi Abuja, lamme pass.\", \"rewritten_form_fear\": \"Ina so in yi wata magana, amma tsoron tafiye-tafiye na zuwa Abuja yana damuna, lamme pass.\", \"rewritten_form_anger\": \"Ina so in yi wata magana, amma na gaji da wannan tsoron zuwa Abuja, lamme pass!\", \"rewritten_form_surprise\": \"Ina so in yi wata magana, amma ban yi tsammanin tsoron zuwa Abuja zai zama haka ba, lamme pass!\", \"rewritten_form_disgust\": \"Ina so in yi wata magana, amma wannan tsoron zuwa Abuja yana da ban tsoro da ban haushi, lamme pass.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a desire to speak but follows it with a statement about fear, which detracts from a joyful tone. It does not align closely with the tone of the rewritten joy sentence, where the comfort of a positive sentiment is emphasized.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence mentions wanting to talk but highlights fear when considering going to Abuja. This aligns moderately with the sadness expressed in the rewritten sentence, which captures a sense of distress and hesitation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original expression of wanting to talk is immediately connected to a fear of traveling to Abuja, making it closely aligned with the rewritten fear sentence that also conveys a sense of dread.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While there is a sense of frustration in the original sentence regarding the fear of traveling, overall, it does not convey the strong sense of anger depicted in the rewritten version where exhaustion from fear is emphasized.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is not much surprise in the original sentence; it is more focused on fear and a desire to speak. The rewritten sentence suggests a change of expectations about fear, which is less relevant to the original context.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not express disgust directly; it talks about fear without implying distaste. Thus, it does not align well with the disgust tone of the rewritten version.",
+        "disgust_intensity": 0
+    }
+}

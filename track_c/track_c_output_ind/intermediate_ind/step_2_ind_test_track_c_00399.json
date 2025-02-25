@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Itu sweater nya beli di mana bang?\", \"rewritten_form_joy\": \"Wah, sweater itu keren banget! Beli di mana, ya?\", \"rewritten_form_sadness\": \"Sweater itu bagus, tapi sayangnya saya tidak bisa membelinya. Beli di mana, bang?\", \"rewritten_form_fear\": \"Itu sweaternya bagus, tapi jangan-jangan harganya mahal, ya? Beli di mana, bang?\", \"rewritten_form_anger\": \"Awalnya aku suka sweater itu, tapi kenapa kamu tidak bilang beli di mana, sih?\", \"rewritten_form_surprise\": \"Wow, sweater itu terlihat luar biasa! Beli di mana, bang?\", \"rewritten_form_disgust\": \"Sweater itu memang terlihat aneh. Beli di mana, bang?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence asks about where to buy a sweater without any particularly positive or excited tone. The rewritten joy version expresses excitement and positivity about the sweater, which is not reflected in the original. Therefore, the alignment is weak.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence has a neutral inquiry about the sweater's purchase location, lacking expressions of sadness. The rewritten sad version discusses regret about not being able to buy the sweater, which the original does not convey. The alignment is very low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not express any fear or concern about the price of the sweater, while the rewritten fearful version implies anxiety about the sweater being expensive. The alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text simply asks a question and does not convey anger or frustration. The rewritten angry version includes a tone of irritation for not being informed, which is absent in the original. Thus, there is a weak alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original sentence is an inquiry, it does not express true surprise or astonishment. The rewritten surprise version highlights a strong reaction to the sweater's appearance, which is not reflected in the original sentence. Therefore, the alignment is weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not convey any repulsion towards the sweater, while the rewritten disgust version explicitly criticizes its appearance. Therefore, the alignment is low.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Waze wangcupha umuntu kodwa ngizothula \\ud83d\\udc80\\ud83d\\ude2a\", \"rewritten_form_joy\": \"Uphume kahle umphakathi wonke, ngiyajabula ukuthi sengithule! \\ud83c\\udf89\\ud83d\\ude01\", \"rewritten_form_sadness\": \"Waze wangcupha umuntu, futhi lokho kungikhathazile, kodwa ngizothula. \\ud83d\\udc94\\ud83d\\ude22\", \"rewritten_form_fear\": \"Waze wangcupha umuntu, ngikhathazekile, kodwa ngizothula. \\ud83d\\ude28\\ud83d\\udc80\", \"rewritten_form_anger\": \"Waze wangcupha umuntu, ngizothula, kodwa ngikhumbula lokho ngokucophelela! \\ud83d\\ude21\\ud83d\\udc80\", \"rewritten_form_surprise\": \"Waze wangcupha umuntu! Ngiyavuma, kodwa ngizothula! \\ud83d\\ude32\\ud83d\\udc80\", \"rewritten_form_disgust\": \"Waze wangcupha umuntu, kanti ngizothula kodwa ukuze ngikhombise ukuzithoba! \\ud83e\\udd2e\\ud83d\\udc80\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of resignation or calmness after an upsetting event, which contrasts with pure joy. The joy sentence implies happiness and communal celebration, which is not reflected in the original. Thus, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a sadness due to loss ('wangu cupha umuntu') and a feeling of being affected emotionally, which aligns well with the sadness rewritten sentence. The acknowledgment of pain but choosing to be calm directly parallels the sadness expressed.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "Fear is present in the original as indicated by the 'ngikhathazekile' tone implied in the rewritten version, though it's more subdued. The original doesn't emphasize fear as strongly as the rewritten form, leading to a lower alignment on fear intensity.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original reflects restraint and a desire to maintain calm, the angry form incorporates a sense of retained anger and memory of the incident. The original lacks a clear expression of anger, resulting in minimal alignment, as it focuses on tranquility instead.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does present an element of surprise with the phrase 'waze wangcupha umuntu', suggesting an unexpected event. However, the tone remains resolute rather than astonished. Therefore, while there is some surprise element, it is not strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence conveys a feeling of resignation rather than disgust. The disgust rewritten form suggests a deeper emotional reaction that is not present in the original, leading to a lack of alignment. The original maintains a calmer tone without disgust.",
+        "disgust_intensity": 0
+    }
+}

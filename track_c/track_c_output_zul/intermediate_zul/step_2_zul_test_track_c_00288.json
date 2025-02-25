@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kusaphenywa obulele indodana yemeya eMnambithi\", \"rewritten_form_joy\": \"Kusaphenywa obulele indodana yemeya eMnambithi!\", \"rewritten_form_sadness\": \"Kusaphenywa obulele indodana yemeya eMnambithi... it's just so tragic.\", \"rewritten_form_fear\": \"Kusaphenywa obulele indodana yemeya eMnambithi! What if this violence continues?\", \"rewritten_form_anger\": \"Kusaphenywa obulele indodana yemeya eMnambithi! This is outrageous!\", \"rewritten_form_surprise\": \"Kusaphenywa obulele indodana yemeya eMnambithi? I can't believe it!\", \"rewritten_form_disgust\": \"Kusaphenywa obulele indodana yemeya eMnambithi... how gruesome!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a serious tone: it reports a tragic event without any joyous elements. Therefore, it does not align with the joyful rewriting.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence discusses the murder of a mayor's son, which is inherently tragic, thus aligning strongly with sadness as implied in the rewriting.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original statement implies a violent event, which could evoke a sense of fear about the potential for ongoing violence. However, it lacks explicit expression of this fear, so the intensity is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text references a serious crime, which could reasonably evoke anger. Yet, it does not explicitly express outrage or anger itself, leading to a lower intensity.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does present a shocking event; however, it does not convey disbelief or shock as strongly as the rewritten form suggests. The surprising element is present but not emphasized.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The reference to murder could evoke disgust, but the phrasing of the original is more neutral and lacks vivid or gruesome descriptions found in the disgust rewriting.",
+        "disgust_intensity": 1
+    }
+}

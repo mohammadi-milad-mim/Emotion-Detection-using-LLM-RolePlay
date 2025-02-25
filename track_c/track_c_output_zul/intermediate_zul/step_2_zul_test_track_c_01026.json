@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kubulawe usomabhizinisi ehlaselwa kwakhe\", \"rewritten_form_joy\": \"Kubulawe usomabhizinisi, kodwa lokhu kuveza amandla akhe ngokumangalisayo!\", \"rewritten_form_sadness\": \"Kubulawe usomabhizinisi, ehlaselwa kwakhe, inhlekelele kakhulu.\", \"rewritten_form_fear\": \"Kubulawe usomabhizinisi, ehlaselwa kwakhe\\u2014ngabe kulokho okukhathazayo?\", \"rewritten_form_anger\": \"Kubulawe usomabhizinisi, ehlaselwa kwakhe; lokhu akwamukelekile!\", \"rewritten_form_surprise\": \"Kubulawe usomabhizinisi, ehlaselwa kwakhe\\u2014lokhu kuwumbukiso ongemlnandi!\", \"rewritten_form_disgust\": \"Kubulawe usomabhizinisi ehlaselwa kwakhe, lokhu kuphumelela kakhulu kubi!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a serious scenario without any positive connotation or uplifting aspects, contrasting sharply with the rewritten form that highlights amazing strength and positivity. Therefore, there is minimal alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a clear association between the original sentence and the sadness implied in the rewritten form, as it acknowledges the misfortunes and distress involved, leading to a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence evokes a situation that can naturally induce concern or worry. The rewritten form that raises the question of whether it is troubling emphasizes this feeling. Therefore, this aligns with a moderate degree of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence can also be interpreted as an outrage due to the violent imagery, similar to the anger expressed in the rewritten form which calls out the situation as unacceptable. Thus, there is moderate alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original does not hint at any element of surprise, as it is straightforward and serious. The rewritten form indicates an unexpected situation which is not reflected in the original, thus showing very low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence reveals a negative scenario, though not directly expressing disgust. The rewritten form shows aversion clearly, while the original lacks this connotation. Hence, there is only a low alignment with disgust.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Usomatekisi ushaywe wazingcolisa efunwa isibhamu\", \"rewritten_form_joy\": \"Usomatekisi ushaywe wazingcolisa efunwa isibhamu, ngithokozile!\", \"rewritten_form_sadness\": \"Usomatekisi ushaywe wazingcolisa efunwa isibhamu, lokho kwangithokozisa kodwa ke ngiyazisola.\", \"rewritten_form_fear\": \"Usomatekisi ushaywe wazingcolisa efunwa isibhamu, ngiyesaba ukuthi lokhu kungaholela kuphithizela.\", \"rewritten_form_anger\": \"Usomatekisi ushaywe wazingcolisa efunwa isibhamu, lokho kuyaphoxa!\", \"rewritten_form_surprise\": \"Usomatekisi ushaywe wazingcolisa efunwa isibhamu? Angikholwa!\", \"rewritten_form_disgust\": \"Usomatekisi ushaywe wazingcolisa efunwa isibhamu, lokho kuhlanya!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains a factual statement and lacks an element of joy or celebration. The rewritten sentence for joy includes an expression of happiness ('ngithokozile'), which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "Although the original may imply a lost opportunity or regret, it does not convey a sense of sadness directly. The rewritten sentence indicates feelings of regret ('ngiyazisola'), which are not present in the original sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement does not suggest any sense of threat or danger. The rewritten version for fear suggests concern about potential consequences ('ngiyesaba'), which goes beyond the original's neutral tone.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original statement describes an action, it does not express anger. The rewritten sentence for anger reflects frustration ('lokho kuyaphoxa!'), which is lacking in the original text.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not create a sense of disbelief or astonishment. The rewritten form for surprise captures a reaction of disbelief ('Angikholwa!'), which is not echoed in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original statement carries no negative sentiment typically associated with disgust. The rewritten form for disgust expresses strong dislike or rejection ('lokho kuhlanya!'), which is absent from the original content.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Tolong mas mletre iklannya di stop dulu, udah sering muncul mulu dan gak bisa di skip pula.\", \"rewritten_form_joy\": \"Tolong mas, bisa gak iklannya dihentikan sejenak? Sudah sering banget muncul, dan saya sangat berharap bisa melewatkannya!\", \"rewritten_form_sadness\": \"Tolong mas, saya mohon iklannya dihentikan sebentar. Sudah begitu sering muncul, dan rasanya sulit sekali untuk menghindarinya.\", \"rewritten_form_fear\": \"Tolong mas, bisa tolong berhenti iklannya? Selalu muncul terus dan saya tidak bisa melewatinya, ini membuat saya khawatir.\", \"rewritten_form_anger\": \"Tolong mas, iklannya tolong dihentikan! Sudah terlalu sering muncul dan saya tidak bisa melewatinya, sangat menjengkelkan!\", \"rewritten_form_surprise\": \"Tolong mas, bisa berhenti sebentar untuk iklannya? Kok bisa muncul terus menerus dan tidak bisa dilewati seperti ini?\", \"rewritten_form_disgust\": \"Tolong mas, sebaiknya iklannya dihentikan. Sudah terlalu sering muncul dan sangat mengganggu, rasanya menjengkelkan sekali.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses annoyance regarding the continuous and unskippable ads but does not convey any joy or happiness. The rewritten version expresses a hopeful and positive tone which is absent in the original. Therefore, there is low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does express a sense of frustration about the ads, but it does not exhibit significant sadness. The rewritten form implies feeling overwhelmed and sad, which is not fully captured in the original. Thus, there is a slight alignment, but not strong enough to score higher than a low intensity.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does indicate a level of concern about the repetitive ads, but it's primarily about annoyance rather than fear. The rewritten version highlights anxiety and concern, which are not strongly present in the original. This leads to a very low degree of alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence clearly conveys frustration about the incessant and unskippable ads. It expresses a strong desire for the ads to stop, thus aligning closely with the emotion of anger. The rewritten version amplifies this frustration, confirming a high degree of alignment with anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence reflects annoyance but does not convey any sense of surprise. The rewritten version suggests astonishment at the ad's persistence, which is not present in the original. Therefore, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence expresses annoyance towards the continuous ads, which can associate with feelings of disgust. The rewritten form describes the ads as \"very annoying,\" aligning somewhat, indicating a moderate level of disgust, suggesting the ads are bothersome.",
+        "disgust_intensity": 2
+    }
+}

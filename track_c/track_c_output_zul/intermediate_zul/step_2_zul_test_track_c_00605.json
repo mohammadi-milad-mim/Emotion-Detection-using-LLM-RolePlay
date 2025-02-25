@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bevile ku-800 ababhubhe ezingozini\", \"rewritten_form_joy\": \"Bevile ku-800, ababhubhe ezingozini\\u2014kukhona okuthokozisayo lokho!\", \"rewritten_form_sadness\": \"Bevile ku-800 ababhubhe ezingozini, futhi lokho kudabukisa kakhulu.\", \"rewritten_form_fear\": \"Bevile ku-800 ababhubhe ezingozini\\u2014lokhu kuyaphawuleka ukuthi kunengozi enkulu.\", \"rewritten_form_anger\": \"Bevile ku-800 ababhubhe ezingozini, futhi ngiyacasuka ngalokhu!\", \"rewritten_form_surprise\": \"Bevile ku-800 ababhubhe ezingozini? Angikaze ngizwe ngalokho!\", \"rewritten_form_disgust\": \"Bevile ku-800 ababhubhe ezingozini\\u2014lokhu kubuhlungu futhi kudinga ukugwema.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a tragic event (people dying in accidents), which does not convey joy. The rewritten version includes a humorous or happy sentiment, contrasting with the somber tone of the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly conveys a sad event, as it refers to deaths in accidents. The rewritten version also emphasizes the sadness with 'lokho kudabukisa kakhulu,' indicating a high alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The rewritten version suggests a recognition of danger, which aligns with the potential fear of accidents. However, the original sentence does not explicitly convey fear; thus, the connection is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten sentence expresses clear anger regarding the situation, which could be inferred to some extent from the original, but the original text does not explicitly express anger. Hence, the alignment is low but still present.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The rewritten version expresses shock or surprise, indicating that the event might be unexpected. However, the original sentence does not give a sense of surprise, making the alignment weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The rewritten form suggests disgust towards the situation, which is not present in the original sentence. While it discusses the horrible nature of deaths, it is not inherently disgusting\u2014it merely presents a fact.",
+        "disgust_intensity": 1
+    }
+}

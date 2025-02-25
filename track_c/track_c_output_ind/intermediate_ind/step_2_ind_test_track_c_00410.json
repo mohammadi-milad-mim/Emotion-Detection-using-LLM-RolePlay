@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kurang cocok untuk didengar anak dibawah umur\", \"rewritten_form_joy\": \"Tidak sepertinya ini cocok untuk anak-anak, tapi kita bisa menemukan yang lebih menyenangkan!\", \"rewritten_form_sadness\": \"Sayangnya, ini bukanlah yang terbaik untuk anak-anak yang masih kecil.\", \"rewritten_form_fear\": \"Ini bisa menjadi tidak aman bagi anak-anak yang mendengarnya.\", \"rewritten_form_anger\": \"Sangat tidak pantas untuk anak-anak, kenapa ada yang membuat hal seperti ini?!\", \"rewritten_form_surprise\": \"Wow, ini sama sekali tidak cocok untuk anak-anak, sungguh mengejutkan!\", \"rewritten_form_disgust\": \"Sungguh menjijikkan, tidak seharusnya anak-anak mendengar ini!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative sentiment about something being unsuitable for children, which contrasts with the joyful tone of the rewritten joy sentence that suggests finding something more pleasing for kids. There is no alignment between the two.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates that something is not the best for young children, which aligns closely with the rewritten sadness sentence that mentions it's not the best option. This reflects a moderate level of sadness regarding the situation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence warns against suitability for minors, though it does not explicitly convey fear. The fear rewritten sentence suggests danger, which exceeds what the original conveys. Therefore, the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence suggests inappropriateness for children, while the anger version vividly expresses outrage over the content's creation. This reflects a stronger sentiment of anger in the rewritten sentence compared to the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original provides a straightforward statement about content unsuitability, lacking the element of surprise. The rewritten surprise sentence highlights unexpectedness, which does not align with the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original indicates that the content is inappropriate for children, which does not convey disgust. The disgust rewritten form is much stronger in its negative emotional appeal, indicating a low alignment.",
+        "disgust_intensity": 1
+    }
+}

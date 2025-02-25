@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ada gak nih yg Nonton dari Kediri jatim, \", \"rewritten_form_joy\": \"Ada yang nonton dari Kediri Jatim? Seru banget ya!\", \"rewritten_form_sadness\": \"Ada gak sih yang nonton dari Kediri Jatim? Sepertinya sepi...\", \"rewritten_form_fear\": \"Ada gak ya yang nonton dari Kediri Jatim? Aku harap ada yang melihat!\", \"rewritten_form_anger\": \"Ada gak nih yang nonton dari Kediri Jatim? Kenapa sepertinya gak ada yang peduli?!\", \"rewritten_form_surprise\": \"Eh, ada yang nonton dari Kediri Jatim? Itu luar biasa!\", \"rewritten_form_disgust\": \"Ada gak yang nonton dari Kediri Jatim? Rasanya aneh kalau gak ada yang tertarik.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a casual inquiry about viewers from Kediri. The tone does not convey strong joy, but the rewritten joyful version includes excitement and positivity, suggesting a higher intensity of joy. The original is more neutral, which doesn't align closely with the joyful tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does imply a sense of emptiness by questioning the presence of viewers. The rewritten sentence reflects this with a more somber phrase about the lack of engagement. There's a low degree of sadness present due to the implication of solitude.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies uncertainty about the audience's presence, which relates to fear of isolation. The rewritten fear version emphasizes a hope for viewers, aligning somewhat with the original, but the fear is not prominently expressed in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence has an undertone of concern about a lack of viewers. The rewritten anger version intensifies this concern into frustration. The original does not strongly convey anger but hints at a mild dissatisfaction. Overall, it aligns moderately but not strongly.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original asks a question, which could imply curiosity, but it does not evoke strong surprise. The rewritten surprise version expresses a sense of wonder and excitement about the potential viewership, which is not strongly reflected in the original. Thus, it scores low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not convey any disgust. The rewritten disgust version suggests an aversion to a scenario where no one is watching. The original query is neutral regarding any feelings of disgust, thus aligning poorly with this emotion.",
+        "disgust_intensity": 0
+    }
+}

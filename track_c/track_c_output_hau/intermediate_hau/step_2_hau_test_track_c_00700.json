@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Allah ya jikanta\\u2639\\ufe0f\\ud83d\\ude22\", \"rewritten_form_joy\": \"Allah ya jikanta! \\ud83d\\ude0a\\ud83c\\udf89\", \"rewritten_form_sadness\": \"Allah ya jikanta...\\ud83d\\ude22\\ud83d\\udc94\", \"rewritten_form_fear\": \"Allah ya jikanta! What if something happens? \\ud83d\\ude30\", \"rewritten_form_anger\": \"Allah ya jikanta! This shouldn't have happened! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Allah ya jikanta?! I can't believe it! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Allah ya jikanta, how could this happen? \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sentiment of prayer or goodwill, but it doesn't exude joy or happiness. The accompanying emojis indicate a sense of sadness rather than celebration, which is more aligned with the expression of joy in the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly corresponds to the tone of sadness expressed in the rewritten sadness version, including the emoji which conveys crying. There is a clear emotional alignment here, suggesting high intensity of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence lacks elements that evoke fear. While it expresses a sense of concern for someone's well-being, it does not contain a sense of danger or worry, as in the fear rewrite. Therefore, there is little alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text does not express anger or frustration. While it may imply concern, it does not share elements in common with the anger rewrite, which suggests indignation about an event. Therefore, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not display any surprise. It is more a straightforward expression of sentiment than an exclamatory phrase that conveys disbelief or astonishment as in the surprise rewrite. Thus, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not evoke disgust. It conveys a sentiment of wanting well for someone rather than indicating a negative reaction to a situation. Hence, there is no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

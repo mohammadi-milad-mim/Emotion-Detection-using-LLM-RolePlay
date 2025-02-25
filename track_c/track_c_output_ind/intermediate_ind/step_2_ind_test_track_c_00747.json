@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Itu yg lagi saya takutkan sekarang\\ud83d\\ude2d\\ud83d\\ude2d\", \"rewritten_form_joy\": \"Saya begitu bersemangat sekarang!\", \"rewritten_form_sadness\": \"Itu yang membuat saya sangat sedih sekarang.\", \"rewritten_form_fear\": \"Itu yang paling menakutkan saya saat ini.\", \"rewritten_form_anger\": \"Itu hal yang membuat saya sangat marah sekarang!\", \"rewritten_form_surprise\": \"Wah, itu yang tidak saya duga sebelumnya!\", \"rewritten_form_disgust\": \"Itu sangat menjijikkan bagi saya saat ini.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses fear rather than happiness or excitement, which the rewritten joy sentence implies. Therefore, there is little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a slight alignment with sadness in the original sentence because it conveys a negative emotion, but the primary feeling is fear rather than sorrow, thus it is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence clearly expresses fear with the phrase 'saya takutkan', which aligns perfectly with the rewritten fear sentence indicating it is the most intense emotion present.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not express anger; instead, it focuses on fear. Even though fear and anger can coexist, this particular sentence does not indicate any anger. Therefore, the alignment is very low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not include any elements of surprise; it is based on an expression of fear. Therefore, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "There is no indication of disgust in the original sentence, which is solely focused on fear rather than feelings of revulsion. Hence, there is no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

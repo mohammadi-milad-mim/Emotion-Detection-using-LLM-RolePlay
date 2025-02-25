@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kusolwa inkinga yezimali owesifazane 'eqotha' umndeni\", \"rewritten_form_joy\": \"Kusolwa ukuthi owesifazane 'eqotha' umndeni bayaphumelela ngemali!\", \"rewritten_form_sadness\": \"Kusolwa inkinga yezimali owesifazane 'eqotha' umndeni, futhi kungathi uhleka ngaphakathi.\", \"rewritten_form_fear\": \"Kusolwa inkinga yezimali owesifazane 'eqotha' umndeni, okuphazamisa impilo yabo.\", \"rewritten_form_anger\": \"Kusolwa inkinga yezimali owesifazane 'eqotha' umndeni, lokhu akwamukelekile!\", \"rewritten_form_surprise\": \"Kusolwa inkinga yezimali owesifazane 'eqotha' umndeni? Lokhu kuyiqiniso?\", \"rewritten_form_disgust\": \"Kusolwa inkinga yezimali owesifazane 'eqotha' umndeni, lokho kungadala ukungcoliswa kokuphila kwethu!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses a financial issue involving a woman and her family, which doesn't convey any sense of success or happiness. The rewritten joyful sentence highlights success with money, indicating a positive outcome, which is quite opposite. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a problem regarding finances, suggesting a negative situation for the woman and her family. The rewritten sad sentence adds a layer of internal struggle, which slightly aligns with the emotional weight of the original. However, the joy implied in the rewritten form does not exist in the original, thus only a moderate alignment can be assessed.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions a financial issue, which can imply uncertainty or fear about the future, particularly regarding stability. The rewritten fear sentence emphasizes disruption in life, which resonates closely with the context of financial problems leading to fear for the family. There is a strong alignment here.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original may imply unfairness or trouble but does not directly invoke anger. The rewritten angry sentence conveys strong disapproval of the situation, which could be inferred but is not explicitly present in the original. There is a moderate alignment since financial issues can invoke frustration.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence presents a financial issue but does so in a straightforward manner that lacks surprise. The rewritten surprise sentence indicates disbelief about the situation, which is not implied in the original. Therefore, there's low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original mentions a financial problem which may have negative implications, hinting at potential moral or existential dilemmas. The rewritten disgusted sentence implies a broader impact on quality of life, which is a step beyond what is strictly stated in the original. There is a slight alignment due to the negativity of the financial issue.",
+        "disgust_intensity": 2
+    }
+}

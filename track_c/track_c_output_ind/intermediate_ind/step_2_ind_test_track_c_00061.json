@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Gak akan ada yg bisa mengalahkan lagu ini\\u2026\", \"rewritten_form_joy\": \"Tak ada yang bisa menandingi betapa bahagianya aku saat mendengar lagu ini!\", \"rewritten_form_sadness\": \"Tidak ada yang bisa mengalahkan lagu ini, dan itu membuatku terasa begitu kehilangan\\u2026\", \"rewritten_form_fear\": \"Tidak ada yang bisa mengalahkan lagu ini, dan aku khawatir tidak akan pernah menemukan yang sebanding lagi.\", \"rewritten_form_anger\": \"Tidak ada yang bisa mengalahkan lagu ini, dan itu membuatku marah karena tak ada yang selevel!\", \"rewritten_form_surprise\": \"Tidak akan ada yang bisa mengalahkan lagu ini\\u2026 benar-benar tak terduga!\", \"rewritten_form_disgust\": \"Tak ada yang bisa mengalahkan lagu ini, dan itu sangat menjijikkan, seolah tak ada yang lebih baik.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong confidence in the superiority of the song, which aligns well with the happiness conveyed in the joy rewritten sentence, where the happiness is directly linked to the experience of hearing the song.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not suggest any loss or sorrow, which makes it less aligned with the sadness rewritten sentence that implies a sense of loss associated with the song's uniqueness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original indicates that nothing can surpass the song, it lacks the element of concern or worry about not finding something comparable again, which is present in the fear rewritten sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original asserts that nothing can beat the song, which could evoke some frustration if interpreted as competitive. However, it lacks overt hostility or anger as expressed in the anger rewritten sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence's assertion of the song's unmatched quality can imply an element of surprise, yet it does not directly convey the unexpectedness depicted in the surprise rewritten sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not express any feelings of disgust; instead, it focuses solely on the song's superiority. The disgust rewritten sentence introduces a sentiment of revulsion that is not present in the original.",
+        "disgust_intensity": 0
+    }
+}

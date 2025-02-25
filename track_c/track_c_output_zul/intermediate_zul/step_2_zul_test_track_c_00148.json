@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kubulawe ngesihluku uthisha obesemncane\", \"rewritten_form_joy\": \"Kuyajabulisa ukubona uthisha obhujiswe kahle!\", \"rewritten_form_sadness\": \"Ngiyafisa ukuthi angiboni uthisha obaziyo ngokushintsha kwesimo.\", \"rewritten_form_fear\": \"Ngiyakukhathazeka ngokuthi uthisha osesesikhathini esinzima angazithola engozini.\", \"rewritten_form_anger\": \"Ngithukile ngokwenzeka - uthisha ukuthi angabhekana kanjani nalesi sifo esinjalo?\", \"rewritten_form_surprise\": \"Ngamazwi aqondile! Ngabe uthisha angathola kanjani lokhu?\", \"rewritten_form_disgust\": \"Kukhathaza ukubona isimo esinjalo senziwa uthisha, lokhu akusiyo into efanele.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a negative action ('kubulawe ngesihluku') towards a teacher, which is not aligned with joy. The rewritten joy sentence expresses delight in seeing a well-preserved teacher, which feels completely opposite to the original sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence evokes a sense of violence and harm, suggesting that something unfortunate has happened to the teacher. This aligns with sadness as the emotional tone reflects concern for the teacher's wellbeing, making the connection moderate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Given the context of violence ('kubulawe ngesihluku'), the original sentence could naturally evoke fear regarding safety, especially if it implies ongoing risks for the teacher. The rewritten sentence refers to potential danger for the teacher, aligning the sentiments strongly.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The mention of violence contributes significantly to feelings of anger towards the situation. The rewritten anger sentence expresses indignation at the circumstances surrounding the teacher, reinforcing a strong alignment with the sentiment of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not contain elements of unexpectedness or shock that would evoke strong surprise, contrasting with the rewritten sentence that indicates a surprising situation regarding the teacher. This disconnect means minimal alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The negative actions described in the original sentence about the teacher can evoke feelings of disgust. The rewritten disgust sentence also highlights a moral judgment about the situation, suggesting that it is unacceptable, which aligns with the original sentiment moderately.",
+        "disgust_intensity": 2
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"ane sakit perut liat video yang ini\", \"rewritten_form_joy\": \"Ane tertawa hingga sakit perut lihat video ini!\", \"rewritten_form_sadness\": \"Ane merasa sakit perut melihat video ini, rasanya tidak enak.\", \"rewritten_form_fear\": \"Ane merasa sakit perut, video ini bikin saya takut!\", \"rewritten_form_anger\": \"Ane sakit perut karena video ini, sangat menjengkelkan!\", \"rewritten_form_surprise\": \"Ane kaget dan jadi sakit perut setelah nonton video ini!\", \"rewritten_form_disgust\": \"Ane merasa mual dan sakit perut lihat video yang begitu menjijikkan ini.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests discomfort related to watching the video, but does not imply any joy or laughter. The joy rewritten version emphasizes laughter to the point of pain, which is a humorous take, whereas the original statement lacks that positive sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence indicates a negative physical reaction, it doesn't strongly convey sadness; it simply states discomfort rather than emotional distress. The sadness version presents a more explicit emotional response to the video, which is not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewritten form implies a strong emotional reaction to the video that is not evident in the original sentence. The original talks about physical discomfort without a clear indication of fear; therefore, the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence indicates discomfort but not necessarily anger. The anger version explicitly states that the video is irritating, which goes beyond mere discomfort. There's no explicit indication of anger in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence states a reaction to a video but does not show surprise. The surprise version indicates a reaction of shock, which is not conveyed in the original. Thus, the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence mentions physical discomfort, while the disgust version emphasizes intense feelings of nausea toward the video. There is not an explicit mention of disgust in the original, so the alignment is minimal.",
+        "disgust_intensity": 1
+    }
+}

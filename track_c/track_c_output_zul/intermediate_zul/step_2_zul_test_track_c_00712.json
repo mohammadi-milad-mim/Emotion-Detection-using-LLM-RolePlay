@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kusho labafana abayelo abisamadafakha ocathizintombi ziyaziwela likhale\\ud83d\\ude2diqhawe selibgrethe\\ud83e\\udec0lithi mjolo yanyisa\\ud83d\\ude02\", \"rewritten_form_joy\": \"Kusho labafana abayelo abisamadafakha ocathizintombi ziyaziwela likhale! \\ud83e\\udd17 Iqhawe selibgrethe! \\ud83d\\udc96 Lithi mjolo yanyisa! \\ud83d\\ude02\", \"rewritten_form_sadness\": \"Kusho labafana abayelo abisamadafakha ocathizintombi ziyaziwela likhale... \\ud83d\\ude22 Iqhawe selibgrethe... \\ud83d\\udc94 Lithi mjolo yanyisa...\", \"rewritten_form_fear\": \"Kusho labafana abayelo abisamadafakha ocathizintombi ziyaziwela likhale... \\ud83d\\ude28 Iqhawe selibgrethe... Lithi mjolo yanyisa?\", \"rewritten_form_anger\": \"Kusho labafana abayelo abisamadafakha ocathizintombi ziyaziwela likhale! \\ud83d\\ude21 Iqhawe selibgrethe! Lithi mjolo yanyisa!\", \"rewritten_form_surprise\": \"Kusho labafana abayelo abisamadafakha ocathizintombi ziyaziwela likhale? Wow! \\ud83d\\ude2e Iqhawe selibgrethe! Lithi mjolo yanyisa?\", \"rewritten_form_disgust\": \"Kusho labafana abayelo abisamadafakha ocathizintombi ziyaziwela likhale... Ugh... \\ud83d\\ude12 Iqhawe selibgrethe... Lithi mjolo yanyisa...\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains a playful and excited tone, indicated by the emojis used, suggesting a sense of positivity and happiness. The absence of exclamatory expressions compared to the joy version means the intensity is lower but still evident.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence, while not explicitly sad, does imply some underlying sentiment that could be interpreted as wistful or melancholic, similar to the sadness version which includes ellipses and frowning emojis without fully establishing a strong sadness theme.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear; the rewritten form contains elements that imply concern, but the original lacks hints about danger or worry, resulting in no significant alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original lacks a strong indication of anger, the rewritten anger sentence contains exclamations that are absent from the original. The use of an angry emoji signifies frustration, which is not clearly present in the original, leading to a lower intensity for anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey any sense of surprise. There is no indication of unexpectedness or shock, making the original misaligned with the surprise rewritten version. Thus, the intensity for surprise is very low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original text lacks any descriptive language or nuances associated with disgust. The rewritten disgust sentence introduces elements of distaste that are not indicated in the original, so there is no alignment.",
+        "disgust_intensity": 0
+    }
+}

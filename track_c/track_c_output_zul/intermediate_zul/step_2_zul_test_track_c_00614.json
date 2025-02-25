@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kungenzeka ugqunywe ejele ngokungasifaki isifonyo\", \"rewritten_form_joy\": \"Kungenzeka ugqunywe ejele njengoba singasifaki isifonyo, futhi lokho kuhle!\", \"rewritten_form_sadness\": \"Kungenzeka ugqunywe ejele,, njengoba singasifaki isifonyo, futhi lokho kubuhlungu.\", \"rewritten_form_fear\": \"Kungenzeka ugqunywe ejele ngokungasifaki isifonyo, futhi lokho kusikhathaza kakhulu.\", \"rewritten_form_anger\": \"Kungenzeka ugqunywe ejele ngokungasifaki isifonyo, futhi lokho akukuhle!\", \"rewritten_form_surprise\": \"Kungenzeka ugqunywe ejele ngokungasifaki isifonyo? Lokhu kuyakhathaza!\", \"rewritten_form_disgust\": \"Kungenzeka ugqunywe ejele ngokungasifaki isifonyo! Lokhu kuhlanya!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and does not express anything necessarily positive or joyful, while the joy version introduces a positive perspective with 'futhi lokho kuhle', which is absent in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewritten sentence adds a heavy emotional weight by stating that the situation is 'kubuhlungu'. The original does not convey a sense of loss or sorrow, leading to a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version emphasizes concern by adding 'lokho kusikhathaza kakhulu', which suggests strong anxiety. The original sentence has a tone that could imply a concern, thus showing a moderate connection to fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger form introduces a negative judgment by stating 'lokho akukuhle', which implies frustration or irritation. The original does not express anger but could be interpreted as unjust conditions, giving it a moderate relationship with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise version poses a question and expresses concern, indicating something unexpected. While the original has an element of concern, it lacks the surprising tone found in the rewritten surprise sentence, resulting in a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version expresses a strong negative reaction with 'lokhu kuhlanya', intensifying the emotional response. The original sentence does not express revulsion, making this connection weak despite the similar context.",
+        "disgust_intensity": 1
+    }
+}

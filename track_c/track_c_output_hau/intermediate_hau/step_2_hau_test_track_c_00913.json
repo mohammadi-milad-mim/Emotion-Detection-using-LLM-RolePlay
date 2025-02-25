@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Toh fah\\ud83d\\ude02\\ud83d\\ude02 Adei sake dubawa kila kuskure ne.\", \"rewritten_form_joy\": \"Toh fah! \\ud83d\\ude02\\ud83d\\ude02 Adei sake dubawa kila kuskure ne, it's so fun!\", \"rewritten_form_sadness\": \"Toh fah...\\ud83d\\ude02\\ud83d\\ude02 Adei sake dubawa kila kuskure ne, it hurts a bit.\", \"rewritten_form_fear\": \"Toh fah! \\ud83d\\ude02\\ud83d\\ude02 Adei sake dubawa kila kuskure ne, what if they never change?\", \"rewritten_form_anger\": \"Toh fah! \\ud83d\\ude02\\ud83d\\ude02 Adei sake dubawa kila kuskure ne, this is so frustrating!\", \"rewritten_form_surprise\": \"Toh fah! \\ud83d\\ude02\\ud83d\\ude02 I can't believe I have to dubawa kila kuskure ne!\", \"rewritten_form_disgust\": \"Toh fah! \\ud83d\\ude02\\ud83d\\ude02 Adei sake dubawa kila kuskure ne, that's just disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a level of lightheartedness through the use of laughter emojis, which suggests a degree of joy. However, it lacks the more enthusiastic tone and explicit mention of fun in the rewritten joyful form, leading to a lower intensity score.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not explicitly hint at sadness, but the repetition of laughter emojis could mask some underlying disappointment. The rewritten sadness interpretation brings out a noted hurt that isn't conveyed strongly in the original, so the alignment is weak.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no indication of fear within the original sentence. The rewritten form introduces a concern about change, which isn't present in the original at all, making this alignment very weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original doesn't show anger, and while the rewritten anger form emphasizes frustration, this sentiment is not reflected in the original itself. Thus, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original doesn't imply surprise but does have a hint of astonishment that could align with surprise. The rewritten sentence heightens this aspect but since it\u2019s subtle in the original, the intensity remains low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "There\u2019s no trace of disgust in the original sentence. The rewritten disgust form uses strong language that does not correspond with anything in the original, leading to complete misalignment.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Spiderman pindah ke indonesia kerja disini jadi kecris \\ud83e\\udd72\\ud83d\\ude2d\\ud83d\\ude02\", \"rewritten_form_joy\": \"Spiderman pindah ke Indonesia dan kerja disini jadi kecris, ini luar biasa! \\ud83d\\ude02\", \"rewritten_form_sadness\": \"Spiderman pindah ke Indonesia dan kerja disini jadi kecris, rasanya bikin sedih... \\ud83e\\udd72\\ud83d\\ude2d\", \"rewritten_form_fear\": \"Spiderman pindah ke Indonesia dan kerja disini jadi kecris, aku khawatir dia akan menghadapi banyak bahaya! \\ud83d\\ude1f\", \"rewritten_form_anger\": \"Spiderman pindah ke Indonesia kerja disini jadi kecris? Kenapa harus seperti ini?! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Spiderman pindah ke Indonesia kerja disini jadi kecris, aku tidak menyangka ini bisa terjadi! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Spiderman pindah ke Indonesia jadi kecris? Ugh, itu sangat mengecewakan! \\ud83d\\ude24\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a somewhat positive sentiment with a hint of humor, especially with the laughing emoji, indicating a level of joy. However, it lacks the stronger enthusiastic expression found in the rewritten joy sentence which includes 'ini luar biasa!'",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The mention of sadness in the rewritten sadness sentence uses words like 'rasanya bikin sedih...' to indicate a clear feeling of sorrow. The original sentence does not convey such a strong sense of sadness, hence aligning with a lower scale of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original doesn't directly indicate fear, the mention of possible dangers in the rewritten fear sentence indicates a strong emotional concern which isn\u2019t reflected in the original. Thus, there is little alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten anger version expresses frustration with the question tone and exclamation marks, which is not present in the original sentence. The original demonstrates curiosity more than anger, leading to a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents a surprising situation, but does not explicitly capture the shock or unexpectedness expressed in the rewritten surprise sentence. Thus, while there's an element of surprise, it is not as pronounced.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence does not carry any signs of disgust; rather, it presents a straightforward statement without negative sentiment. Therefore, it does not align with the disgust expressed in the rewritten form.",
+        "disgust_intensity": 0
+    }
+}

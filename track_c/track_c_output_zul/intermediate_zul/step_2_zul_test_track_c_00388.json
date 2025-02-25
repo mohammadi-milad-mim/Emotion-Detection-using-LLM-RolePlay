@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kubalawe amantombazane, kwaboshwa umfundisi nonina wengane eNkandla\", \"rewritten_form_joy\": \"Kwazalwa amantombazane, umfundisi nonina wengane eNkandla bayaphumelela.\", \"rewritten_form_sadness\": \"Kubalawe amantombazane, umfundisi nonina wengane eNkandla baye baphansi kwesisindo esikhulu.\", \"rewritten_form_fear\": \"Kubalawe amantombazane, kwenzeka okuthile kungenzeka umfundisi nonina wengane eNkandla aboshwe.\", \"rewritten_form_anger\": \"Kubalawe amantombazane, akusavumelekile ukuvulwa umfundisi nonina wengane eNkandla aboshwe!\", \"rewritten_form_surprise\": \"Kubalawe amantombazane, kuyamangaza ukuthi umfundisi nonina wengane eNkandla babezoboshwa!\", \"rewritten_form_disgust\": \"Kubalawe amantombazane, umfundisi nonina wengane eNkandla bahlala bephazamisekile!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a situation where people are being detained, which is generally negative; thus, it does not align with a joyful tone. The rewritten joyful sentence suggests a positive outcome, which is absent from the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a context of restraint involving a teacher and a child's mother, suggesting a negative scenario. This aligns well with the sadness narrative of suffering under a great weight, indicating a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence conveys a serious situation involving arrest, which could evoke fear. The rewritten version hints at the potential for something happening that could lead to an arrest, mirroring the original's tone of something ominous.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence implies a troubling situation involving authority figures potentially acting unjustly. The rewritten angry sentence expresses a strong objection to the arrest, aligning moderately with the original's hint of distress.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The unexpected nature of an arrest is somewhat surprising, and the rewritten sentence alludes to this shock. However, the original sentence maintains a serious tone rather than an astonished one, suggesting a low degree of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not evoke disgust but rather concern and unrest. The rewritten disgust sentence suggests ongoing chaos, which is not reflected in the original, indicating no alignment.",
+        "disgust_intensity": 0
+    }
+}

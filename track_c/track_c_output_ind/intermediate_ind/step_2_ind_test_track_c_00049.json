@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Menurut ku durasi nya terlalu panjang disaat cuma ngomong sendiri, dari video sebelumnya yang ini udh lebih baik. Cuma biar gak terlalu membosankan durasi bisa sedikit di pendekan^^\", \"rewritten_form_joy\": \"Aku senang bahwa durasinya sudah lebih baik dari video sebelumnya, tapi sedikit pengurangan durasi bisa bikin lebih seru!^^\", \"rewritten_form_sadness\": \"Aku merasa durasinya masih terlalu panjang saat hanya ngomong sendiri, meski video ini sudah lebih baik dari sebelumnya. Sedikit pengurangan durasi mungkin bisa mengurangi kebosanan.\", \"rewritten_form_fear\": \"Aku khawatir durasinya terlalu panjang saat hanya ngomong sendiri, meski video ini lebih baik dari sebelumnya. Jika durasinya terlalu lama, mungkin orang-orang akan kehilangan minat.\", \"rewritten_form_anger\": \"Sekali lagi, durasinya terlalu panjang saat hanya ngomong sendiri! Video yang ini memang lebih baik dari sebelumnya, tapi kenapa tidak sekalian saja dipendekkan?\", \"rewritten_form_surprise\": \"Wow, durasinya terasa panjang banget saat cuma ngomong sendiri! Tapi aku terkejut video ini lebih baik dari sebelumnya, mungkin sedikit dipendekkan bisa bikin lebih menarik!^^\", \"rewritten_form_disgust\": \"Menurutku durasinya sudah kebangetan panjang saat cuma ngomong sendiri. Video sebelumnya lebih bisa ditolerir, tapi serius, durasinya harus benar-benar dipendekkan agar tidak membosankan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive note by acknowledging that the current video is an improvement, indicating a sense of happiness. However, it lacks strong enthusiasm or excitement, which is present in the joy rewritten version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence reflects a sense of disappointment regarding the length of the video when speaking alone, but it also acknowledges improvements, suggesting a moderate level of sadness about the overall viewer experience.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a slight concern expressed in the original sentence about the video's length leading to boredom, showing moderate apprehension about viewer engagement. However, it does not contain strong fearful language.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence may imply a level of frustration with the duration, it is not articulated as strong anger like in the rewritten version. The expression is more constructive than confrontational, suggesting low intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text does not convey true surprise. It discusses the video being better without a strong element of astonishment, unlike the surprise rewritten version which expresses more astonishment and exclamation.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does display some negativity toward the duration but does not express strong disgust, as it remains quite constructive. It does not convey the depth of distaste shown in the disgust rewritten version.",
+        "disgust_intensity": 1
+    }
+}

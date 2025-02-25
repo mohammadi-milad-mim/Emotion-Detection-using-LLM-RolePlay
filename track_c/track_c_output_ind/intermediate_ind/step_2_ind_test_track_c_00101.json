@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Aku mencoba , Tak mikirkan luka, Karena semua itu berat\\ud83e\\udd70\", \"rewritten_form_joy\": \"Aku mencoba dan tak memikirkan luka, karena semua itu terasa ringan!\", \"rewritten_form_sadness\": \"Aku mencoba, meski tak ingin memikirkan luka yang begitu berat ini...\", \"rewritten_form_fear\": \"Aku mencoba, namun berusaha tak memikirkan luka, karena semua itu terasa menakutkan...\", \"rewritten_form_anger\": \"Aku mencoba, tidak mau memikirkan luka, meskipun semua ini menyakitkan sekali!\", \"rewritten_form_surprise\": \"Aku mencoba, tak mikirkan luka, dan rasanya sungguh tak terduga beratnya!\", \"rewritten_form_disgust\": \"Aku mencoba, berusaha mengabaikan luka, meski semua ini terasa menjijikkan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses an effort to move beyond pain but indicates a struggle, suggesting that the feeling of joy is not present. In the rewritten joy sentence, the emphasis is on feeling light, which contradicts the heaviness implied in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a burden of pain, aligning closely with the rewritten sadness sentence which discusses the heaviness of the wound. This similarity suggests a strong presence of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies some form of emotional struggle. The rewritten fear sentence introduces a level of discomfort and fear about the pain, but the alignment is not as strong as with sadness.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence hints at emotional pain, and the rewritten anger sentence emphasizes this pain more directly. However, it lacks the clear expression of anger, suggesting mild intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey an element of surprise; it is more about ongoing emotional struggle. The rewritten surprise sentence implies an unexpected heaviness, which does not align well with the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not directly express feelings of disgust. The rewritten disgust sentence introduces this emotion by suggesting attempts to ignore the pain, which is not strongly present in the original's tone.",
+        "disgust_intensity": 1
+    }
+}

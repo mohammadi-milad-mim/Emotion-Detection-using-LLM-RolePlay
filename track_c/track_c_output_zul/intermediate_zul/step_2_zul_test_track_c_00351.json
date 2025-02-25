@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Acele empunzini amaphoyisa kubhikishwa\", \"rewritten_form_joy\": \"Amazingly, I quickly called the police for help!\", \"rewritten_form_sadness\": \"I helplessly called the police, feeling like nothing would change.\", \"rewritten_form_fear\": \"I urgently called the police, worried about what might happen next.\", \"rewritten_form_anger\": \"I angrily called the police, demanding they take action now!\", \"rewritten_form_surprise\": \"I surprisingly found myself calling the police for help!\", \"rewritten_form_disgust\": \"I called the police in disgust at the situation unfolding.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a quick action without explicitly expressing joy. The rewritten joy sentence emphasizes a positive tone and excitement that isn't present in the original sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence can imply a degree of helplessness, but it doesn\u2019t fully convey sadness. The rewritten sadness sentence captures a deeper emotional struggle that isn\u2019t fully reflected in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The urgency in the original sentence suggests a concern for safety, aligning it with fear. This is somewhat reflected in the fear rewritten sentence, which emphasizes worry about the future.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not convey anger; it shows urgency instead. The rewritten anger sentence expresses a strong demand which is not present in the original context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The act of calling the police could be seen as surprising, but the original does not convey this feeling explicitly. The rewritten surprise sentence indicates unexpectedness that the original does not necessarily communicate.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not express disgust; it merely states action taken without a moral reaction. The disgust rewritten sentence implies a strong negative reaction to the situation, which doesn't align with the original's tone.",
+        "disgust_intensity": 0
+    }
+}

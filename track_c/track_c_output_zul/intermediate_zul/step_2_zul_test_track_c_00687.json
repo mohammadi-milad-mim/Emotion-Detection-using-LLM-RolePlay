@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"UCele uncome amaphoyisa abulale abayisikhombisa\", \"rewritten_form_joy\": \"UCele uncome amaphoyisa abulale abayisikhombisa, ngiyajabula kakhulu!\", \"rewritten_form_sadness\": \"UCele uncome amaphoyisa abulale abayisikhombisa, ngicabanga kakhulu ngalokhu okudabukisayo.\", \"rewritten_form_fear\": \"UCele uncome amaphoyisa abulale abayisikhombisa, angizange ngicabange ukuthi sizokwazi ukukwenza lokhu.\", \"rewritten_form_anger\": \"UCele uncome amaphoyisa abulale abayisikhombisa, ngiyavuma ukuthi lokhu kuphuca umuntu emoyeni!\", \"rewritten_form_surprise\": \"UCele uncome amaphoyisa abulale abayisikhombisa? Akuku qondile!\", \"rewritten_form_disgust\": \"UCele uncome amaphoyisa abulale abayisikhombisa, lokho akuphathwa kahle! \"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any joy or positive sentiment; it states a fact that could be neutral or negative depending on context. Thus, there is no strong alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The mention of police killing implies a tragic event, and considering the rewritten sadness form directly connects this with a feeling of being an emotional or tragic topic, there is moderate logical alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While there is a sense of apprehension in the rewritten version about the situation's implications, the original sentence itself does not express fear directly. Its neutrality affects this alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten anger sentence portrays a strong moral reaction to the police action. Although the original may provoke such feelings, it does not explicitly contain anger by itself, resulting in a lower alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks any indication that would trigger surprise. It conveys a situation that may provoke a range of emotions but does not do so by itself, leading to no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The rewritten disgust form indicates a reaction to the situation described in the original sentence, suggesting moral discomfort. However, because the original text is presented without expressing any thoughts or sentiments, it aligns weakly with disgust.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Saya komen positif aja (+) takut ada IPO sama SENSOR KPI!!-_-\", \"rewritten_form_joy\": \"Saya sangat senang dan beri komentar positif (+) meskipun ada kemungkinan IPO dan SENSOR KPI yang menyenangkan ini!!\", \"rewritten_form_sadness\": \"Saya hanya bisa berkomentar positif (+) namun khawatir akan IPO dan SENSOR KPI yang mungkin terjadi...-_-\", \"rewritten_form_fear\": \"Saya beri komentar positif (+) tetapi sebenarnya takut akan IPO dan SENSOR KPI yang mungkin akan datang!!-_-\", \"rewritten_form_anger\": \"Saya hanya bisa komentar positif (+) meski merasa marah tentang kemungkinan IPO dan SENSOR KPI!!-_-\", \"rewritten_form_surprise\": \"Saya komentar positif aja (+), eh, bisa jadi ada IPO sama SENSOR KPI yang mengejutkan ini!!-_-\", \"rewritten_form_disgust\": \"Saya cuman komentar positif (+) tapi jijik memikirkan kemungkinan ada IPO dan SENSOR KPI!!-_-\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive comment but is overshadowed by fear regarding the IPO and SENSOR KPI. This makes it less aligned with the joyful tone of the rewritten joy version, which expresses happiness despite any concerns. Thus, there's a low alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "There is an undertone of worry in the original sentence when mentioning the IPO and SENSOR KPI, indicating a sense of sadness or concern for what might happen. Compared to the sadness rewritten version, the sadness is present but not overly emphasized.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence explicitly mentions fear regarding the potential IPO and SENSOR KPI, aligning closely with the rewritten fear sentence. The fear is evident in the tone, hence it is rated high.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence does not explicitly convey anger, it does reflect frustration through the wording. The alignment with the rewritten anger sentence is moderate as the emphasis is more on concern than anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There isn't an element of surprise in the original sentence; it primarily focuses on the fear of potential events. The rewritten surprise sentence introduces an element that is not present originally, indicating a low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence doesn't showcase feelings of disgust; it is more about concern and fear regarding potential events. Thus, it doesn't align with the disgust rewritten version at all.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ey uk'hlaza kanti vele lo mjita \\ud83d\\ude02\", \"rewritten_form_joy\": \"Hahaha, I can't believe this guy! \\ud83d\\ude02\", \"rewritten_form_sadness\": \"Oh, it's so embarrassing for him, this poor guy. \\ud83d\\ude22\", \"rewritten_form_fear\": \"Oh no, what's going to happen to this guy? \\ud83d\\ude28\", \"rewritten_form_anger\": \"Ugh, can you believe this guy? So frustrating! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Wow, I can't believe this guy actually did that! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Ew, this guy is just awful! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys amusement and light-heartedness, indicated by the laughing emoji. It aligns closely with the tone of joy in the rewritten joy sentence, capturing the feeling of finding something funny.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While there is a hint of embarrassment in the original, it does not strongly convey sadness. Instead, it leans more toward amusement than pity, making this alignment weaker.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express fear; it\u2019s more about a humorous situation. The rewritten fear sentence uses phrases indicating worry, which is in contrast with the original's intent.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Though the original expresses some frustration, it is primarily humorous rather than overtly angry. The anger in the rewritten sentence feels too strong for the light tone of the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is an element of surprise in the original, evidenced by the reaction to the behavior of 'this guy.' However, it is not the main sentiment, so the alignment is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence does not express disgust; it instead finds humor in an unfortunate situation. Therefore, this rewritten sentence doesn't align well with the original.",
+        "disgust_intensity": 0
+    }
+}

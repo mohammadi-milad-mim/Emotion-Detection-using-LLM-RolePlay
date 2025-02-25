@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Tohhh faaa \\ud83e\\udd14 Wannan Sabon zancen faa?\", \"rewritten_form_joy\": \"Wow, this new talk is just delightful! \\ud83e\\udd17\", \"rewritten_form_sadness\": \"Oh, is it really true that this new talk is happening? \\ud83d\\ude14\", \"rewritten_form_fear\": \"Wait, is this new talk something we should really be worried about? \\ud83d\\ude28\", \"rewritten_form_anger\": \"Seriously, what\\u2019s with this new talk? It\\u2019s infuriating! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Whoa, is this new talk actually a thing? I can\\u2019t believe it! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Ugh, what is this new talk? It\\u2019s so off-putting! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a tone of excitement or curiosity about 'this new talk,' which closely aligns with the joyful rewritten version that describes the talk as 'delightful.' There is a playful aspect in the original that suggests positivity.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence contains a questioning tone that could suggest concern or uncertainty, similar to the sadness rewritten version that questions the reality of the new talk. However, the overall tone of the original does not strongly convey sadness, so it aligns only moderately.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is an implied concern in the phrase, questioning if the new talk is something to worry about. However, this doesn't strongly convey overt fear but does suggest a tinge of concern, aligning slightly with the fear rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express any frustration or anger directly, whereas the rewritten version does convey strong anger. Therefore, the original does not align well with this emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original phrase suggests a level of surprise or bewilderment about the new talk, similarly reflected in the surprise rewritten sentence that expresses disbelief. Therefore, it aligns well with this emotion.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original does not express any feelings of disgust; rather, it seems more curious or intrigued. The disgust version emphasizes a strong negative reaction that isn\u2019t present in the original sentence, indicating no alignment.",
+        "disgust_intensity": 0
+    }
+}

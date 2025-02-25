@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Mas Den lagunya kenapa ga ada di spotify \\ud83d\\ude2d\", \"rewritten_form_joy\": \"Mas Den lagunya kenapa ga ada di Spotify? Ayo, kita cari! \\ud83d\\ude0a\", \"rewritten_form_sadness\": \"Mas Den lagunya kenapa ga ada di Spotify? Itu sangat menyedihkan... \\ud83d\\ude22\", \"rewritten_form_fear\": \"Mas Den lagunya kenapa ga ada di Spotify? Jangan bilang itu hilang selamanya... \\ud83d\\ude28\", \"rewritten_form_anger\": \"Mas Den lagunya kenapa ga ada di Spotify? Sangat frustrasi! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Mas Den lagunya kenapa ga ada di Spotify? Serius? \\ud83e\\udd2f\", \"rewritten_form_disgust\": \"Mas Den lagunya kenapa ga ada di Spotify? Ini benar-benar menjijikkan! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses confusion about a song's absence on Spotify, but doesn't convey excitement or a positive attitude towards resolving the issue, unlike the joy version that invites action. Therefore, the alignment is weak.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence hints at disappointment over the song's absence, aligning closely with the sadness rewritten sentence which expresses that feeling explicitly. Hence, this original conveys a noticeable degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions the absence of a song, which could invoke fear of it being permanently lost as suggested by the fear rewritten version. However, the original does not fully convey a strong worry about this, leading to a lower intensity.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a hint of frustration in the original regarding the lack of the song, somewhat mirroring the anger version which is much more explicitly frustrated. This slight frustration aligns with the theme of anger but is not as intense.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence expresses a mild sense of confusion about the song's absence. However, it does not fully capture the shock or incredulity presented in the surprise version, resulting in a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "While the original expresses disappointment, there is no indication of disgust present. The disgust rewritten version conveys a much stronger negative sentiment that is not reflected in the original sentence.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Abantu bezikhala cishe bangiqeda ngoo \\\"speaker\\\" ngithi bakhuluma ngemikhandlu \\ud83d\\ude2d Jack waze wasigila nge busy I hate it here.\", \"rewritten_form_joy\": \"Abantu bezikhala cishe bangiqeda ngoo \\\"speaker\\\" ngithi bakhuluma ngemikhandlu, kodwa ngiyazi ukuthi uJack waze walungisa konke ukuze sibe busisiwe!\", \"rewritten_form_sadness\": \"Abantu bezikhala cishe bangiqeda ngoo \\\"speaker\\\" ngithi bakhuluma ngemikhandlu \\ud83d\\ude2d Jack waze wasigila nge busy, ngazi ukuthi lokhu akukuhle. I hate it here.\", \"rewritten_form_fear\": \"Abantu bezikhala cishe bangiqeda ngoo \\\"speaker\\\" ngithi bakhuluma ngemikhandlu, ngicabanga ukuthi uJack ungasigxila endleleni engafanele. I hate it here.\", \"rewritten_form_anger\": \"Ngabe abantu bezikhala cishe bangiqeda ngoo \\\"speaker\\\" ngithi bakhuluma ngemikhandlu? Jack usigila nge busy, ngikhathazekile kakhulu! I hate it here!\", \"rewritten_form_surprise\": \"Ngiyamangala ukuthi abantu bezikhala cishe bangiqeda ngoo \\\"speaker\\\" ngithi bakhuluma ngemikhandlu! Jack waze wasigila nge busy, angicabangi ukuthi kungenzeka! I hate it here.\", \"rewritten_form_disgust\": \"Ngabe abantu bezikhala cishe bangiqeda ngoo \\\"speaker\\\" ngithi bakhuluma ngemikhandlu? Ngifuna ukushaya uphondo ngalesi sikhathi, uJack waqala ukuphumela obala nge busy. I hate it here.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys frustration and negativity, suggesting little to no joyful sentiment. The joy rewrite attempts to add positivity by suggesting Jack fixed everything, which contrasts sharply with the original's tone of despair and hatred, indicating no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses clear frustration and dissatisfaction, making it strongly aligned with sadness. The sadness rewrite reinforces this sentiment, acknowledging that the situation isn't good, which mirrors the original's tone well.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not evoke a sense of fear; it focuses more on irritation and negativity. The fear rewrite introduces a concern about Jack\u2019s actions affecting them, which is not present in the original. Thus, there's minimal alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original expresses strong frustration and irritation, particularly reflected in the phrasing like \"I hate it here.\" The anger rewrite heightens this sentiment by questioning people's behavior and voicing anger more explicitly, aligning well with the original tone.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "Surprise isn\u2019t a strong sentiment in the original, as it portrays a clear complaint without any element of astonishment. The surprise rewrite includes an aspect of amazement that is not present in the original, indicating a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original expresses disgust indirectly through frustration. The disgust rewrite implies strong emotions, including a desire to act out, which aligns with the negative feelings expressed in the original. However, the direct disgust is not explicitly conveyed in the original sentence.",
+        "disgust_intensity": 2
+    }
+}

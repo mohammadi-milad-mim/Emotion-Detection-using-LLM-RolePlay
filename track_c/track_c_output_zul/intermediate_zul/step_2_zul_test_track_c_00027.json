@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Babhodla umlilo ngomholi we-ANC obulewe\", \"rewritten_form_joy\": \"Babhodla umlilo ngomholi we-ANC obulewe, ngempela, sithokozisa kakhulu!\", \"rewritten_form_sadness\": \"Babhodla umlilo ngomholi we-ANC obulewe, futhi lokhu kuholele enhliziyweni ethukile.\", \"rewritten_form_fear\": \"Babhodla umlilo ngomholi we-ANC obulewe; angazi kahle ukuthi kuzokwenzekani manje.\", \"rewritten_form_anger\": \"Babhodla umlilo ngomholi we-ANC obulewe, futhi lokhu ukwazisa ngokungafanele!\", \"rewritten_form_surprise\": \"Babhodla umlilo ngomholi we-ANC obulewe? Ngempela lokhu kuhlelekile!\", \"rewritten_form_disgust\": \"Babhodla umlilo ngomholi we-ANC obulewe; lokho kungokubi kakhulu!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any overt expressions of joy. The rewritten joy version adds an enthusiastic affirmation (sithokozisa kakhulu) which is missing in the original. Thus, the original does not convey this emotion.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not clearly express sadness, but the rewritten version introduces an emotional reaction (enhliziyweni ethukile) associated with loss or tragedy, implying a deeper emotional response to the situation. The original does not evoke such feelings directly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence contains a statement about a leader being killed, which can provoke a sense of uncertainty or fear about the future, aligning with the fear rewritten version that expresses concern about the unknown consequences. This element of fear is present but not strongly sustained in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original statement could imply anger towards the situation of the leader being killed, but there is no explicit expression of it in the original. The rewritten anger version indicates discontent (ukwazisa ngokungafanele), which is a much stronger sentiment than what appears in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not evoke surprise; it is a straightforward sentence stating an event. The rewritten surprise version suggests an unexpectedness which is absent in the original's straightforward presentation.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence reveals a significant event but does not explicitly convey disgust. The rewritten disgust version expresses a strong negative reaction (lokho kungokubi kakhulu), which does not align with the tone of the original text, making it feel absent.",
+        "disgust_intensity": 1
+    }
+}

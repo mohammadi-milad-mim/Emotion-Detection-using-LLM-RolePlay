@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"lah gak cocok luh nyanyi lagi ini\", \"rewritten_form_joy\": \"Wah, ini lucu, tapi sepertinya kamu kurang pas nyanyi lagi ya!\", \"rewritten_form_sadness\": \"Hiks, sayangnya, aku rasa kamu tidak cocok nyanyi lagi ini...\", \"rewritten_form_fear\": \"Hmm, aku khawatir kalau kamu nyanyi lagi ini, hasilnya gak akan baik ya...\", \"rewritten_form_anger\": \"Eh, kamu kurang cocok banget nyanyi lagi ini, serius!\", \"rewritten_form_surprise\": \"Eh, aku gak nyangka kamu nyanyi lagi ini, tapi sepertinya kurang cocok deh!\", \"rewritten_form_disgust\": \"Yah, aku harus bilang, ini benar-benar tidak cocok untukmu nyanyi lagi ini.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a mismatch, which does not inherently convey joy. The rewritten joy sentence is light-hearted but the original does not align with that tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original implies a sense of disappointment regarding someone's singing ability, which aligns with the sadness context of regretting someone's performance.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a slight tone of concern in the original that suggests a fear of a poor outcome, making it somewhat align with the fear emotion.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses a clear disapproval, particularly a blunt one which falls in line with anger; hence, it resonates strongly with the anger context.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original lacks an element of surprise, as it presents a straightforward critique without any unexpectedness, contrasting with the surprised tone in the rewritten sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence indicates a strong aversion to the act of singing again, which is aligned with the disgust sentiment present in the rewritten sentence.",
+        "disgust_intensity": 2
+    }
+}

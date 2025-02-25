@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kufunwa isitshudeni esidukile\", \"rewritten_form_joy\": \"Kufunwa isitshudeni esidukile, njengokukhanya kwelanga!\", \"rewritten_form_sadness\": \"Kufunwa isitshudeni esidukile, kodwa kubuhlungu ukusho lokho.\", \"rewritten_form_fear\": \"Kufunwa isitshudeni esidukile, kodwa ngabe kuzoba nezinselelo?\", \"rewritten_form_anger\": \"Kufunwa isitshudeni esidukile, futhi lokhu akukwazi ukuqhubeka!\", \"rewritten_form_surprise\": \"Kufunwa isitshudeni esidukile? Lokho kuhle kakhulu!\", \"rewritten_form_disgust\": \"Kufunwa isitshudeni esidukile? Yini eyenza omunye umuntu akwenze lokhu?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states that 'Kufunwa isitshudeni esidukile' (which expresses a fact about a beautiful student) but does not convey the exuberance or positivity suggested by the rewritten joyful version. The joyful version adds excitement ('njengokukhanya kwelanga!'), which is absent in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sentence provides a clear sense of pain or regret ('kodwa kubuhlungu ukusho lokho'), which suggests a deeper emotional context. The original sentence lacks this explicit acknowledgment of sorrow, so while it implies beauty, it does not convey sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version introduces uncertainty ('ngabe kuzoba nezinselelo?'), which is not present in the original. The original doesn't imply any challenges or threats, thus the alignment with fear is minimal.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten anger form expresses a strong emotional response to the situation ('lokhu akukwazi ukuqhubeka!'), which is not found in the original. The original statement does not convey frustration or anger at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version uses a questioning tone ('Lokho kuhle kakhulu!'), suggesting astonishment or unexpected joy, but the original sentence is straightforward without an element of surprise or revelation. Thus, the connection to surprise is weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version implies judgment and moral questioning ('Yini eyenza omunye umuntu akwenze lokhu?'), which is far removed from the neutral observation of the original. The original does not express any disgust, therefore alignment is low.",
+        "disgust_intensity": 0
+    }
+}

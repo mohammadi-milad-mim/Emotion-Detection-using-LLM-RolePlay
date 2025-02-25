@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Setia selalu dngan bang Deni, sehat terus cak\", \"rewritten_form_joy\": \"Selalu setia dengan bang Deni, semoga sehat selalu ya!\", \"rewritten_form_sadness\": \"Tetap setia dengan bang Deni, semoga dia selalu sehat...\", \"rewritten_form_fear\": \"Setia dengan bang Deni, semoga selalu sehat, jangan ada yang mengganggu...\", \"rewritten_form_anger\": \"Setia dengan bang Deni, harus tetap sehat, tidak ada alasan untuk sakit!\", \"rewritten_form_surprise\": \"Wow, setia dengan bang Deni! Semoga selalu sehat ya!\", \"rewritten_form_disgust\": \"Setia dengan bang Deni, tapi soal kesehatan, sangat penting untuk diperhatikan!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive sentiment of loyalty and a wish for good health, aligning well with the tone of joy reflected in the rewritten joy sentence. Both convey a sense of hope and positivity.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey a sense of loss or mourning, which is a core component of sadness. The rewritten sadness sentence infers a more somber tone that is absent in the original, indicating a lower alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence lacks any feeling of apprehension or concern that one usually associates with fear. The rewritten fear sentence introduces an element of worry that is missing in the original, resulting in low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While there is a demand for health in the rewritten anger version, the original does not express frustration or a sense of urgency about health; instead, it is more of a hopeful statement. Thus, the alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original has a straightforward sentiment without elements that evoke surprise. The rewritten surprise sentence introduces excitement not present in the original, leading to lower alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not communicate any negative feelings or displeasure regarding the subject matter. The rewritten disgust sentence implies a sense of caution, which is not reflected in the original, indicating low alignment.",
+        "disgust_intensity": 1
+    }
+}

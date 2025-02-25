@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Anak Kecilnya namnya siapa sih ???\", \"rewritten_form_joy\": \"Anak kecilnya itu namanya siapa ya, lucunya!\", \"rewritten_form_sadness\": \"Anak kecilnya namanya siapa, ya? Kangen mereka.\", \"rewritten_form_fear\": \"Anak kecilnya namanya siapa, ya? Jangan sampai terjadi sesuatu pada dia.\", \"rewritten_form_anger\": \"Anak kecilnya namanya siapa sih? Kenapa tidak ada yang memberitahu?\", \"rewritten_form_surprise\": \"Eh, anak kecilnya namanya siapa, ya? Kenapa baru tahu!\", \"rewritten_form_disgust\": \"Anak kecilnya namanya siapa, sih? Kenapa itu penting?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks an upbeat or amusing tone; it comes across as neutral or even slightly frustrated with the use of 'siapa sih' which suggests annoyance rather than joy. Therefore, it does not align with the joyful tone of the rewritten sentence, which has a playful element due to 'lucunya'.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not express longing or a sense of loss, which would be necessary for sadness. There is a lack of emotional depth that signifies missing someone, hence it does not align with the melancholy tone of the rewritten version.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not express any concern or anxiety about the child\u2019s safety. It simply asks a question without the implied fear seen in the rewritten sentence concerning potential dangers.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original evokes mild frustration or confusion ('siapa sih?') but does not express strong anger. The rewritten sentence implies a stronger sentiment of indignation that isn't reflected in the original question.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original question lacks a sense of unexpectedness or revelation. Although it asks about the child's name, it doesn't express surprise, which is evident in the rewritten version that implies the speaker has just discovered something new.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original isn't particularly offensive or alarming, and it doesn't convey a strong sense of disdain or repulsion, as would be expected for disgust. The rewritten version's questioning of the importance suggests a level of disgust that is not present in the original.",
+        "disgust_intensity": 0
+    }
+}

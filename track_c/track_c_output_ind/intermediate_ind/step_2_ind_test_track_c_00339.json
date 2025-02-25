@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"siapa yang masih nonton video ini september 2016???\", \"rewritten_form_joy\": \"Siapa yang masih menikmati video ini di September 2016???\", \"rewritten_form_sadness\": \"Siapa yang masih melihat video ini di September 2016???\", \"rewritten_form_fear\": \"Siapa yang masih berani nonton video ini di September 2016???\", \"rewritten_form_anger\": \"Siapa yang masih mau nonton video ini di September 2016???\", \"rewritten_form_surprise\": \"Siapa yang masih nonton video ini, ternyata di September 2016???\", \"rewritten_form_disgust\": \"Siapa yang masih rela nonton video ini di September 2016??? \"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence uses 'nonton' (watch), which is neutral, while the rewritten version adds 'nikmati' (enjoy), implying a positive experience. The original does not evoke joy as strongly as the rewritten form.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence's neutral tone shifts slightly in the rewritten version, which uses 'melihat' (see), suggesting a more passive observation that can imply sadness. However, it doesn't strongly indicate an emotional sentiment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not contain any language that implies fear or danger. The rewritten version introduces 'berani' (dare), which suggests fear, but the original sentence doesn\u2019t convey it at all.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original question is casual and does not express anger. The rewritten version includes 'mau' (want), which implies frustration or irritation, but this is not present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original is straightforward and does not express surprise, while the rewritten version uses 'ternyata' (it turns out), which adds an element of astonishment. The original sentence does not invoke this feeling.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not convey disgust or negative sentiment. The rewritten version suggests reluctance with 'rela' (willing), which is not implied in the original.",
+        "disgust_intensity": 0
+    }
+}

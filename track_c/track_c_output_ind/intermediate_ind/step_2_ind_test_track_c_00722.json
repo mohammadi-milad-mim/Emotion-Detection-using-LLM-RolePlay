@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Status sosial mediamu. Status pendidikanmu. Buatku sadar diri. Cman orang desa. Tukang ngaret\", \"rewritten_form_joy\": \"Status sosial mediamu dan pendidikanmu membuatku bangga. Aku hanya orang desa, tetapi memiliki semangat yang besar!\", \"rewritten_form_sadness\": \"Status sosial mediamu dan pendidikanmu mengingatkanku pada betapa terbelakangnya diriku. Hanya seorang desa dan tukang ngaret.\", \"rewritten_form_fear\": \"Status sosial mediamu dan pendidikanmu membuatku merasa tertekan. Aku takut tidak bisa mencapai apa yang mereka capai, hanya seorang desa dan tukang ngaret.\", \"rewritten_form_anger\": \"Status sosial mediamu dan pendidikanmu jelas-jelas memojokkan orang sepertiku. Kenapa orang desa selalu dinilai rendah?\", \"rewritten_form_surprise\": \"Wow, status sosial mediamu dan pendidikanmu sangat mengesankan! Siapa sangka, ternyata ada orang desa yang bisa memotivasi!\", \"rewritten_form_disgust\": \"Status sosial mediamu dan pendidikanmu sungguh menyebalkan. Seolah-olah aku yang cuma orang desa dan tukang ngaret tak berarti sama sekali.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of self-awareness paired with a hint of resignation regarding one's social status and education. The joy rewritten version focuses on pride and motivation despite being from a humble background, which contrasts with the original's more negative self-image. Therefore, the original aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'Cman orang desa. Tukang ngaret' contributes to a feeling of inferiority and self-deprecation, clearly resonating with the theme of sadness. The rewritten version effectively highlights these feelings of being left behind, showing a strong alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original text hints at insecurity and a sense of inadequacy in the face of societal standards, which is related to fear of not measuring up. However, the expression is more resigned than fearful, leading to a moderate but not strong alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence reflects frustration regarding social comparison but does not explicitly carry an angry tone. The rewritten anger version expresses clear indignation about social status, making the alignment weak in the original sentence's case.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement is somewhat mundane regarding one's social status and background, lacking the element of astonishment. The rewritten surprise version showcases an unexpected positive view on humble beginnings, thus showing little connection to the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust version effectively captures a strong reaction to the social status implied in the original sentence. The original shows a sense of frustration about being labeled as inferior, which aligns moderately with the feelings of disgust related to social judgments.",
+        "disgust_intensity": 2
+    }
+}

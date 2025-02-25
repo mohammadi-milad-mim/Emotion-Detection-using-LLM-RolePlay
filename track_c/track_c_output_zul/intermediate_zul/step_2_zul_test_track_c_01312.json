@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Umunyu ekhumbula owafela ethoyilethi\", \"rewritten_form_joy\": \"Umunyu ukhumbula kahle owafela ethoyilethi!\", \"rewritten_form_sadness\": \"Umunyu ukhumbula ngothando owafela ethoyilethi.\", \"rewritten_form_fear\": \"Umunyu ukhumbula owafela ethoyilethi, ngicabanga izinto ezimbi.\", \"rewritten_form_anger\": \"Umunyu ukhumbula owafela ethoyilethi, futhi ngiyokhona ukungakhenkethi lokho!\", \"rewritten_form_surprise\": \"Umunyu ukhumbula owafela ethoyilethi, kungabikhona lokho?\", \"rewritten_form_disgust\": \"Umunyu ukhumbula owafela ethoyilethi, lokho kungenza ngabe ngiphumeza.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a memory of someone who has passed but lacks an explicit joyful sentiment. The rewritten joy form emphasizes a positive recollection with an exclamation, which is not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a sense of nostalgia or remembrance, which aligns more closely with sadness. The rewritten sadness sentence emphasizes love and longing, making it more emotionally resonant than the original just by its nature.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not express anything inherently fearful; it merely states a memory. The fear form implies anxiety about negative thoughts, which isn't reflected in the original. Hence, it has a low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original text could potentially hint at frustration or negativity, the rewritten form expresses a clear intent of indignation which is not captured in the original. Therefore, the alignment with anger is limited.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original doesn't indicate any element of surprise. Instead, it straightforwardly mentions a memory. The surprise form suggests uncertainty about the memory's existence, which is absent in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "Similarly, the disgust form implies a strong negative reaction that is not suggested by the original sentence. Therefore, the connection to disgust is very weak.",
+        "disgust_intensity": 0
+    }
+}

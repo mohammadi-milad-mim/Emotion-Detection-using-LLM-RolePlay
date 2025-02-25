@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Knpa gak bisa di downld bang\\u2639\\ufe0f\", \"rewritten_form_joy\": \"Kenapa ya, kok nggak bisa di-download, bang? Yay!\", \"rewritten_form_sadness\": \"Kenapa ya, kok tidak bisa di-download, bang? Sedih...\", \"rewritten_form_fear\": \"Aduh, kenapa ini tidak bisa di-download, bang? Apa ada yang salah?\", \"rewritten_form_anger\": \"Kenapa sih tidak bisa di-download, bang?! Sangat menyebalkan!\", \"rewritten_form_surprise\": \"Hah, kenapa ini nggak bisa di-download, bang? Hmm...\", \"rewritten_form_disgust\": \"Ugh, kenapa sih ini tidak bisa di-download, bang? Menjijikkan!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses frustration over something that cannot be downloaded, but does not convey joy or excitement. The phrase 'Yay!' in the joy rewritten form suggests a tone that is upbeat and cheerful, which is absent in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence briefly suggests disappointment (akin to sadness), as it questions why something cannot be downloaded, aligning somewhat with the sadness rewritten form that adds 'Sedih...', capturing that feeling more explicitly. Therefore, there is a moderate degree of alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not convey a sense of fear or concern. The fear rewritten form suggests anxiety about something being wrong, which isn't reflected in the original. So, this alignment is minimal.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence contains mild annoyance but lacks the intensity of anger expressed in the rewritten form that uses an exclamation mark and strong language like 'Sangat menyebalkan!'. Therefore, the original does connect with anger but not very strongly.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original does not present an element of surprise. The inclusion of 'Hah,' in the surprise rewritten form indicates astonishment, which isn't present in the original sentence; thus, this alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust rewritten form uses words that indicate aversion, suggesting a strong negative emotional response which isn't echoed in the original text. The original communicates frustration but not disgust, so the alignment is weak.",
+        "disgust_intensity": 0
+    }
+}

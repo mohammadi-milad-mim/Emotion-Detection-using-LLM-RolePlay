@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"fatan alkairi a duk inda kake mai gida allah ya kare mana kai ya yayemaka damuwa ya kara maka masoya i stand with you saira\", \"rewritten_form_joy\": \"Fatan alkairi a duk inda kake, mai gida! Allah ya kare ka, ya yayemaka damuwa, ya kara maka masoya! Ni na tsaya tare da ke, Saira!\", \"rewritten_form_sadness\": \"Fatan alkairi a duk inda kake, mai gida. Allah ya kare ka, ya yayemaka damuwa, ya kara maka masoya. Ina tare da ke, Saira, amma na ji tana da wahala.\", \"rewritten_form_fear\": \"Fatan alkairi a duk inda kake, mai gida. Allah ya kare ka, ya yayemaka damuwa, ya kara maka masoya. Na yi fargaba game da halin da kake ciki, Saira.\", \"rewritten_form_anger\": \"Fatan alkairi a duk inda kake, mai gida! Allah ya kare ka, ya yayemaka damuwa, ya kara maka masoya! Zai yi kyau ka duba kanka, Saira!\", \"rewritten_form_surprise\": \"Fatan alkairi a duk inda kake, mai gida! Allah ya kare ka, ya yayemaka damuwa - ina mamakin irin masoyan da ka ke da su! Ni na tsaya tare da ke, Saira!\", \"rewritten_form_disgust\": \"Fatan alkairi a duk inda kake, mai gida. Allah ya kare ka, ya yayemaka damuwa, ya kara maka masoya \\u2013 amma ba na fahimtar me ya faru, Saira.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text has an encouraging tone, wishing well for someone with a sense of unity and support, aligning closely with the joy expressed in the rewritten joy sentence. The use of exclamation in both emphasizes positivity.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original text expresses a sense of support despite difficulties, akin to the sadness in the rewritten form, but it lacks the explicit emotional weight of struggle found in the sadness example. Thus, it aligns moderately.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not directly express fear but provides a general wish for safety and support instead. The rewritten fear version introduces apprehension that is not present, resulting in a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original text conveys support, the anger rewritten form expresses a demanding tone towards addressing issues, which is not present in the original. This leads to no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "Though the original text conveys unexpectedness in terms of the circumstances of the addressee, the emphasis on surprise found in the rewritten sentence does not resonate strongly with the original, resulting in a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence portrays concern and support without expressing any disgust, contrasting sharply with the negative sentiments implied in the rewritten disgust sentence. Hence, there's no alignment at all.",
+        "disgust_intensity": 0
+    }
+}

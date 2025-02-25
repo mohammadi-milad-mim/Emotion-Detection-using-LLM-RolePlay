@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ugwetshwe iminyaka engu-101 owaqotha abathathu ethaveni\", \"rewritten_form_joy\": \"Ugwetshwe iminyaka engu-101! Waqotha abathathu ethaveni, yinto emangalisayo!\", \"rewritten_form_sadness\": \"Ugwetshwe iminyaka engu-101, owaqotha abathathu ethaveni, kwabuhlungu ukwenza njalo.\", \"rewritten_form_fear\": \"Ugwetshwe iminyaka engu-101 owaqotha abathathu ethaveni; angazi ukuthi yini ezolandela kulokhu.\", \"rewritten_form_anger\": \"Ugwetshwe iminyaka engu-101, owaqotha abathathu ethaveni, kufanele kube nemiphumela emibi!\", \"rewritten_form_surprise\": \"Ugwetshwe iminyaka engu-101, owaqotha abathathu ethaveni? Lokhu kukhanga kakhulu!\", \"rewritten_form_disgust\": \"Ugwetshwe iminyaka engu-101 owaqotha abathathu ethaveni, yinto ewuhlungu kakhulu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a significant achievement of 101 years, which could be considered a joyous occasion. However, without any exclamation or positive language indicating happiness or celebration, the alignment is moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The inclusion of the phrase 'kwabuhlungu ukwenza njalo' in the sadness rewrite suggests a sense of loss or pain that is not present in the original sentence, which doesn't explicitly convey sadness\u2014but that implication suggests a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version introduces uncertainty about the future with 'angazi ukuthi yini ezolandela kulokhu', which adds a layer of fear that isn't present in the original text. The original sentence does not hint at any potential danger or concern for the future.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger rewriting implies there should have been repercussions with 'kufanele kube nemiphumela emibi', which suggests an expectation of injustice. The original sentence does not express any anger or frustration, so there's minimal alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version effectively captures the unexpectedness of the situation with 'Lokhu kukhanga kakhulu', which aligns well with the original statement. The original does have an element of astonishment regarding the duration, indicating a moderate degree of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The disgust version emphasizes the pain associated with the act described in the original, which the original does not convey. Hence, there is a lack of alignment since the original text does not imply anything disgusting.",
+        "disgust_intensity": 0
+    }
+}

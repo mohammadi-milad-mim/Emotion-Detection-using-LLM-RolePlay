@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u2018Abesifazane baphuza ngendlela ethusayo\\u2019\", \"rewritten_form_joy\": \"Abesifazane baphuza ngendlela ejabulisayo!\", \"rewritten_form_sadness\": \"Abesifazane baphuza ngendlela ehlaya. \", \"rewritten_form_fear\": \"Abesifazane baphuza ngendlela ethusayo futhi lokho kubangela ukukhathazeka.\", \"rewritten_form_anger\": \"Kubuhlungu ukuthi abesifazane baphuza ngendlela ethusayo!\", \"rewritten_form_surprise\": \"Ngibona abesifazane baphuza ngendlela ethusayo, ngiyamangala!\", \"rewritten_form_disgust\": \"Abesifazane baphuza ngendlela ethusayo, lokho kuyaphoxa!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states, 'Abesifazane baphuza ngendlela ethusayo,' indicating that the way the women drink is alarming, which does not align with joy. The rewritten joy sentence emphasizes drinking in a joyful manner, which is opposite to the original tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version presents a more negative view by suggesting that the drinking is shameful ('ehlaya'). The original sentence does not imply shame but rather a concerning tone. Thus, it resonates less with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence explicitly uses 'ethusayo' which means alarming or scary. The rewritten version explicitly states that this causes distress, which is closely aligned with the original tone.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The anger sentence expresses that it is painful (Kubuhlungu) that women drink in a scary way. The original sentence does not convey pain or frustration, so it aligns less strongly with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not invoke surprise. The surprise rewritten version implies that the way they drink is unexpected, which is not suggested in the original statement.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not imply any disgust, even though it mentions a concerning way of drinking. The disgust version attributes a more negative feeling ('lokho kuyaphoxa'), which isn't present in the original.",
+        "disgust_intensity": 1
+    }
+}

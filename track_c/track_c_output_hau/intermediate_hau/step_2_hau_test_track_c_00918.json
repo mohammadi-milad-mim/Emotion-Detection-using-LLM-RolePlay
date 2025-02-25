@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Coronavirus: Atiku Abubakar ya yi wa Abba Kyari addu\\u2019ar samun lafiya\", \"rewritten_form_joy\": \"Coronavirus: Atiku Abubakar ya yi wa Abba Kyari addu\\u2019ar samun lafiya da \\u0199afafun hutu a yanzu!\", \"rewritten_form_sadness\": \"Coronavirus: Atiku Abubakar ya yi wa Abba Kyari addu\\u2019ar samun lafiya cikin wannan lokaci mai wahala.\", \"rewritten_form_fear\": \"Coronavirus: Atiku Abubakar ya yi wa Abba Kyari addu\\u2019ar samun lafiya, ina fatan ba mu rasa shi ba.\", \"rewritten_form_anger\": \"Coronavirus: Atiku Abubakar ya yi wa Abba Kyari addu\\u2019ar samun lafiya, amma ina jin haushi da yadda abubuwa ke tafiya!\", \"rewritten_form_surprise\": \"Coronavirus: Atiku Abubakar ya yi wa Abba Kyari addu\\u2019ar samun lafiya, wannan na da ban mamaki!\", \"rewritten_form_disgust\": \"Coronavirus: Atiku Abubakar ya yi wa Abba Kyari addu\\u2019ar samun lafiya, amma ina jin karnuka a kan yanayi kamar wannan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a hopeful sentiment through the act of praying for someone's health. However, it lacks the exuberance present in the rewritten sentence that explicitly mentions joy ('da \u0199afafun hutu'). Hence, while there is a hint of joy, it does not align closely enough with high joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does convey a serious tone due to the context of health concerns associated with the coronavirus, which aligns with the sadness in the rewritten version that mentions a 'difficult time'. Therefore, there\u2019s a moderate degree of sadness present in the original statement.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The caution implied in the rewritten sentence about potentially losing someone adds a layer of fear that is not present in the original sentence. The original expresses a hopeful sentiment, which does not align with fear significantly. Therefore, the intensity of fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence reflects concern, it does not express anger, which is strongly present in the rewritten version commenting on frustration with current circumstances. Thus, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not evoke a tone of surprise, as it simply states a fact. The rewritten sentence indicates shock by stating 'this is surprising', which is not reflected in the original. Therefore, surprise is not present.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not convey any feelings of disgust; it purely conveys a message of goodwill. The rewritten sentence expresses distaste regarding the circumstances, which is absent in the original. Therefore, disgust is not present in the original.",
+        "disgust_intensity": 0
+    }
+}

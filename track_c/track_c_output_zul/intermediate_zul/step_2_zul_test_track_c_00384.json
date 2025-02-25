@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bashaqekile ngesidumbu esitholwe esitamkokweni\", \"rewritten_form_joy\": \"Bashaqekile kakhulu ngesidumbu esitholwe esitamkokweni!\", \"rewritten_form_sadness\": \"Bashaqekile futhi balahlekelwe ngesidumbu esitholwe esitamkokweni.\", \"rewritten_form_fear\": \"Bashaqekile kwabafowethu ngesidumbu esitholwe esitamkokweni.\", \"rewritten_form_anger\": \"Bashaqekile ngokuphelele ngesidumbu esitholwe esitamkokweni!\", \"rewritten_form_surprise\": \"Bashaqekile kakhulu ngesikhathi sithola isidumbu esitholwe esitamkokweni!\", \"rewritten_form_disgust\": \"Bashaqekile, ngempela, ngesidumbu esitholwe esitamkokweni; lokho kuyabhikisha!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling of being 'bashaqekile' (happy) about finding a body. However, the context of the word 'isidumbu' (body) implies a somber situation, making it difficult for this sentiment of joy to be strongly felt. The rewritten joy version amplifies the happiness to 'Bashaqekile kakhulu!', suggesting a more intense form of joy that doesn't fully align with the original tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version emphasizes loss ('balahlekelwe'), which resonates well with the original context, implying that while there is a sense of happiness, there is also sadness associated with the discovery of a body. The balance of emotions suggests a higher alignment with sadness than with joy.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version indicates concern for the welfare of brothers ('kwabafowethu'), but the original sentence does not imply fear directly. While there might be an underlying tension due to the body being found, the tone of the original remains more neutral regarding fear than the rewritten form suggests.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version reiterates the happiness but reaffirms it with a strong tone ('ngokuphelele'). The original sentence does not express anger; thus, the rewritten form feels misplaced in relation to the original sentiment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version introduces an element of unexpectedness ('ngesikhathi sithola') which can be aligned with the original sentence\u2019s context relatively well, as finding a body is indeed a surprising situation. However, the original wording does not carry a strong sense of surprise, making the alignment moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The disgust version conveys a strong emotional response to the finding of the body, implying repulsion. The original does not express disgust explicitly, so while it acknowledges the uncomfortable nature of the situation, it doesn't align strongly with the idea of disgust that the rewritten version portrays.",
+        "disgust_intensity": 1
+    }
+}

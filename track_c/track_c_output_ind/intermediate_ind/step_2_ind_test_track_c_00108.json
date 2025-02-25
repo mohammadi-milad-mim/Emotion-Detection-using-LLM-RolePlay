@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Pas ending terakhir sangat menyedihkan dan brantakan\", \"rewritten_form_joy\": \"Pas ending terakhir sangat menggembirakan dan penuh warna!\", \"rewritten_form_sadness\": \"Pas ending terakhir sangat menyedihkan dan berantakan, rasanya hancur.\", \"rewritten_form_fear\": \"Pas ending terakhir sangat menyedihkan dan berantakan, seperti ada sesuatu yang salah.\", \"rewritten_form_anger\": \"Pas ending terakhir sangat menyedihkan dan berantakan, sungguh membuat marah!\", \"rewritten_form_surprise\": \"Pas ending terakhir sangat menyedihkan dan berantakan, tak kusangka itu akan terjadi!\", \"rewritten_form_disgust\": \"Pas ending terakhir sangat menyedihkan dan berantakan, sungguh menjijikkan!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses sadness, which directly contradicts the joyful tone of the rewritten joy version, indicating no alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence matches the rewritten sadness sentence closely, as both convey a sense of sadness and disorder, showing high alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a sense of sadness and disorder, but does not strongly convey a feeling of fear, only a slight hint of something wrong, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does express sadness and chaos, but it does not indicate a feeling of anger. The anger version adds an extra emotional layer that is not present in the original sentence, resulting in low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original conveys sadness, 'surprise' requires an unexpected twist that isn\u2019t implied in the original text. Thus, there is no real alignment here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not convey feelings of disgust directly, although it describes a sad situation. The disgust version embellishes this sentiment with a strong negative opinion that isn't present in the original. Therefore, minor alignment exists.",
+        "disgust_intensity": 1
+    }
+}

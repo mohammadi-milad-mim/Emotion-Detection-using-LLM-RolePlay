@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bener bang, Lagu aslinya kayak lemot gitu, temponya terlalu lambat.\", \"rewritten_form_joy\": \"Bener bang, lagu aslinya itu bikin senang banget, meskipun temponya santai!\", \"rewritten_form_sadness\": \"Bener bang, lagu aslinya terasa agak lesu, temponya kayak bikin hati ini berat.\", \"rewritten_form_fear\": \"Bener bang, lagu aslinya kayak lemot gitu, jadi aku takut bakal bikin suasana jadi membosankan.\", \"rewritten_form_anger\": \"Bener bang, lagu aslinya bener-bener lemot, temponya terlalu lambat dan bikin aku kesal!\", \"rewritten_form_surprise\": \"Bener bang, lagu aslinya kok bisa lemot gitu, aku gak nyangka temponya se-lambat itu!\", \"rewritten_form_disgust\": \"Bener bang, lagu aslinya itu kayak lemot dan sangat menjengkelkan, temponya terlalu lambat.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses a song with a slow tempo but does not express happiness or enjoyment. The rewritten joy version adds enthusiasm about the song, which is absent in the original. Hence, there's no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original commentary about the song's slow tempo hints at disappointment or a lack of energy, which aligns with sadness. The rewritten sadness version emphasizes a heaviness in the heart, mirroring a similar sentiment. The alignment suggests a moderate intensity of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence raises a concern about the song being slow, and the rewritten fear version aligns with this by expressing a fear that it will be boring. Since the original possesses a hint of concern, this aligns moderately with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original contains a somewhat negative evaluation of the song's tempo, but lacks strong anger. The rewritten anger expunges irritation towards the slowness, indicating stronger feelings than the original conveys, resulting in low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original expression does not evoke surprise; rather, it displays an expectation of slowness. The rewritten surprise suggests unexpectedness, which diverges from the original sentiment, leading to a weak alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original highlights a slow tempo without expressing strong distaste. The disgust version characterizes the song as very annoying, which is more extreme than the original perspective. Thus, the original aligns weakly with disgust.",
+        "disgust_intensity": 1
+    }
+}

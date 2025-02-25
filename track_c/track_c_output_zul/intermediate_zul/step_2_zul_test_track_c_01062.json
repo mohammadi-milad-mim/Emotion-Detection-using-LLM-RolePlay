@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Akekho ongezukushushiswa okumele ashushiswe- Shaun Abrahams\", \"rewritten_form_joy\": \"Akekho ongezukushushiswa okumele ayithokozise- Shaun Abrahams!\", \"rewritten_form_sadness\": \"Akekho ongezukushushiswa okumele ashushiswe- Shaun Abrahams...\", \"rewritten_form_fear\": \"Akekho ongezukushushiswa okumele ashushiswe; kuzokwenziwa okungafanele- Shaun Abrahams!\", \"rewritten_form_anger\": \"Akekho ongezukushushiswa okumele ashushiswe, kodwa yini lokhu? Shaun Abrahams!\", \"rewritten_form_surprise\": \"Akekho ongezukushushiswa okumele ashushiswe? Shaun Abrahams, lokhu kuphinde kwenzeke!\", \"rewritten_form_disgust\": \"Akekho ongezukushushiswa okumele ashushiswe; lokhu kwenza umuntu akhathazeke- Shaun Abrahams.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a serious tone without any indication of joy or happiness. The rewritten version expressing joy adds an element of positivity that is not present in the original. Hence, there is no alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence can imply a sense of disappointment or a somber realization. The rewritten version expressing sadness uses ellipsis to suggest a weighty, lingering feeling, which is close to the original's tone.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence lacks direct fear but does hint at negative consequences. The rewritten version expressing fear introduces a clear sense of urgency and potential danger, broadening the implication of the original. However, it may not strongly align with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence implies a situation worth being upset over, but it doesn't express direct anger. The rewritten anger version adds strong indignation, which the original does not possess, leading to a lower alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents a straightforward statement, lacking an element of unexpectedness. The rewritten surprise version introduces a questioning tone that seems to be absent in the original, indicating low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original shows a sense of seriousness that could evoke discomfort, but it does not express outright disgust. The rewritten disgust version explicitly addresses feelings of discomfort, leading to a disconnect with the original tone.",
+        "disgust_intensity": 1
+    }
+}

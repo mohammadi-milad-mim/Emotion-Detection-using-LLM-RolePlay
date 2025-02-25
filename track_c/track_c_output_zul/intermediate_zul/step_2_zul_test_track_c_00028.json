@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kushiswe ibhungu umphambili libulawa\", \"rewritten_form_joy\": \"Kushiswe ibhungu umphambili libulawa, yebo!\", \"rewritten_form_sadness\": \"Kushiswe ibhungu umphambili libulawa, ngalokho kuyadabukisa.\", \"rewritten_form_fear\": \"Kushiswe ibhungu umphambili libulawa, ngiyesaba kakhulu ngaphandle kokwazi ukuthi kwenzekani.\", \"rewritten_form_anger\": \"Kushiswe ibhungu umphambili libulawa, angikholwanga ukuthi le nto ingenzeka!\", \"rewritten_form_surprise\": \"Kushiswe ibhungu umphambili libulawa? Lokhu kuhle kakhulu!\", \"rewritten_form_disgust\": \"Kushiswe ibhungu umphambili libulawa, lokho kukubi kakhulu!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is a straightforward statement without any joyful context, while the rewritten version adds an exclamation 'yebo!' that conveys excitement and happiness. The original lacks this positive connotation, indicating low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten version emphasizes that the situation is sad by stating 'ngalokho kuyadabukisa.' This aligns closely with the sentiment of the original sentence as it deals with a situation that could evoke sorrow.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The rewritten form introduces a strong sense of fear by expressing 'ngiyesaba kakhulu' which suggests apprehension about the situation. However, the original sentence doesn\u2019t express fear directly, so the intensity is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten form reflecting anger states 'angikholwanga ukuthi le nto ingenzeka!' which shows disbelief and frustration. The original does not explicitly evoke anger but can imply irritation about the event, hence a moderate intensity.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The rewritten version here expresses delight and astonishment with 'Lokhu kuhle kakhulu!' which indicates a surprising nature about the situation. The original does not contain elements that conjure surprise, so the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version highlights strong negative feelings with 'lokho kukubi kakhulu!' suggesting a distasteful reaction to the event. Although the original might imply negativity, it does not convey disgust directly, hence low alignment.",
+        "disgust_intensity": 1
+    }
+}

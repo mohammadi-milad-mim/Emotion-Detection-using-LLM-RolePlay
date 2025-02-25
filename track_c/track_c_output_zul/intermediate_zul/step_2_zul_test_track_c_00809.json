@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kunzima bebona indodakazi ibulawa umyeni\", \"rewritten_form_joy\": \"Kukhulu ukujabulisa ukubona indodakazi ivikelwa umyeni!\", \"rewritten_form_sadness\": \"Kunzima kakhulu ukubona indodakazi ibulawa umyeni, kwenze kube nobuhlungu obukhulu.\", \"rewritten_form_fear\": \"Kunzima futhi kuyakhathaza ukubona indodakazi ibulawa umyeni, lokho kunokwesabisa okukhulu.\", \"rewritten_form_anger\": \"Kunzima nokujabulisa ukubona indodakazi ibulawa umyeni, lokho akungabazeki kubonisa ububi.\", \"rewritten_form_surprise\": \"Kunzima kuye kwaba yinto engalindelekile ukubona indodakazi ibulawa umyeni!\", \"rewritten_form_disgust\": \"Kunzima kakhulu nokubabazeka ukubona indodakazi ibulawa umyeni, lokhu kuphatha ngesithukuthezi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a troubling situation, lacking positive elements that would foster joy. The rewritten joy version suggests a protective scenario, which is directly contrary to the original context that indicates harm.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly describes a painful and distressing event, aligning closely with the rewritten sadness version that elaborates on the suffering involved. The intensity of sadness is high as both versions highlight a significant emotional burden.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a sense of violence and danger, which aligns well with the fear expressed in the rewritten version that emphasizes anxiety and the frightening nature of the situation. This creates a moderate to high intensity of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten anger version captures the injustice and negativity conveyed in the original sentence, expressing feelings of outrage about the situation. However, the original sentence doesn't explicitly indicate anger, resulting in a low intensity overall.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The rewritten surprise version notes an unexpected nature of the event, which aligns with the distress implied in the original. However, since the original statement does not explicitly express surprise, the intensity is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The rewritten disgust version connects the troubling circumstance of violence to feelings of repulsion and discomfort, which resonates with the severity of the original sentence. As such, there is a moderate to high intensity of disgust present.",
+        "disgust_intensity": 2
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"#nails #manicure #pinc #purple\", \"rewritten_form_joy\": \"I\\u2019m absolutely thrilled with my new purple manicure!\", \"rewritten_form_sadness\": \"I guess I got a new purple manicure, but it just doesn\\u2019t feel right.\", \"rewritten_form_fear\": \"I just got a new purple manicure, but what if it chips?\", \"rewritten_form_anger\": \"I can't believe how much I spent on this new purple manicure!\", \"rewritten_form_surprise\": \"Wow, I just got a new purple manicure and it's stunning!\", \"rewritten_form_disgust\": \"Ugh, I just got a new purple manicure and it's so over the top.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text implies a positive sentiment about the new purple manicure. The joy rewritten sentence uses strong words like 'absolutely thrilled,' suggesting a high level of happiness connected with the manicure.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence's neutral tone contrasts with the sadness rewritten sentence, which expresses a sense of disappointment despite having a new manicure. The original does not convey this feeling of sadness, thus leading to a lower alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewritten sentence introduces the concern of the manicure chipping. While the original text doesn't express this anxiety directly, it could imply a concern about upkeep. However, this connection is weak, leading to a low intensity score.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version highlights frustration regarding the cost of the manicure. The original text does not contain any anger or dissatisfaction, so the alignment is low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise rewritten sentence expresses unexpected delight. While the original could imply a pleasant surprise, it does not indicate that strong of a reaction, thus the connection is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The disgust rewritten sentence expresses negative feelings towards the manicure for being 'over the top'. The original does not convey any negative feelings, leading to a low alignment here as well.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Indida ngobekhishwa yisisu kodwa ofe esenengozi\", \"rewritten_form_joy\": \"Kepha ngangizizwa ngijabule ngaleso sikhathi, ngempela ngikubona kunokubiza okungaphezu kokujwayelekile.\", \"rewritten_form_sadness\": \"Ngiyazisola ngalolo suku, kube sengathi konke kwahamba kabi.\", \"rewritten_form_fear\": \"Ngangingazi kahle ukuthi kuzoba yini, ngabe kulethe yini engingayazi.\", \"rewritten_form_anger\": \"Ngiyaphoxa ngalesi sikhathi, konke lokho kwakungafanele kube njalo.\", \"rewritten_form_surprise\": \"Ngangingalindele ukuthi kuzoba naleso sikhathi, kwangijabulisa kakhulu.\", \"rewritten_form_disgust\": \"Ngizwa ukungahambi kahle ngaleso sikhathi, kube nesimo sobuhlungu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of having endured a difficult experience (implied by being 'wounded'), which does not align with the happiness expressed in the rewritten joy sentence. Therefore, there is no strong connection between the two.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of loss or difficulty, which aligns with the feelings of regret and negativity expressed in the sadness rewritten sentence. This connection is significant because both express negative experiences.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence suggests uncertainty and potentially dangerous circumstances ('ofe esenengozi'), which aligns well with feelings of apprehension or fear indicated in the rewritten fear sentence. This reflects a significant level of concern about the future.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence's context of being affected negatively suggests a potential for anger, particularly towards the circumstances described. The rewritten anger sentence shows a clear frustration, which resonates with the themes present in the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not suggest an element of surprise or unexpectedness, nor does it evoke a transformative experience. Thus, there is little alignment with the rewritten surprise sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original indicates a difficult situation that may elicit feelings of discomfort or distress, which relates somewhat to the disgust expressed in the rewritten sentence. However, it is more indirect compared to the other emotions.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Umbono kaBabes ngami awuthi shu...' Lady Zamar\", \"rewritten_form_joy\": \"Umbono kaBabes ngami awuthi shu... I can't believe how amazing it is!' Lady Zamar\", \"rewritten_form_sadness\": \"Umbono kaBabes ngami awuthi shu... It's just heartbreaking,' Lady Zamar\", \"rewritten_form_fear\": \"Umbono kaBabes ngami awuthi shu... What if it doesn't work out?' Lady Zamar\", \"rewritten_form_anger\": \"Umbono kaBabes ngami awuthi shu... It makes me so frustrated!' Lady Zamar\", \"rewritten_form_surprise\": \"Umbono kaBabes ngami awuthi shu... Wow, I didn't see that coming!' Lady Zamar\", \"rewritten_form_disgust\": \"Umbono kaBabes ngami awuthi shu... It's just so repulsive,' Lady Zamar\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling related to a vision or idea ('Umbono') but does not explicitly include a joyful sentiment. The joy rewritten version conveys excitement and amazement, which is not directly present in the original, leading to a low alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version introduces a heartbreaking sentiment which is not present in the original sentence. The original may evoke a somber feeling depending on context but does not explicitly imply sadness, so the alignment is very low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewritten sentence suggests a concern about a potential negative outcome. The original does not express fear or anxiety, but there can be an implication of uncertainty, so it aligns with a minimal degree.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey any frustration or anger, whereas the anger rewrite explicitly states the emotion of frustration. This indicates no strong connection to anger in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version offers an expression of unexpectedness that is not present in the original sentence. There are no elements in the original that suggest an element of surprise, so there is no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not imply any negative sentiment that could lead to disgust, while the rewritten disgust sentence has a clear repulsion implied. They are not aligned at all.",
+        "disgust_intensity": 0
+    }
+}

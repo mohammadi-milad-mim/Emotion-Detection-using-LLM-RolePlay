@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Pewe gaskins ga sih di dengerin dari nada\\\"nya?\", \"rewritten_form_joy\": \"Pewe gaskins itu seru banget ya, dengerin nada-nadanya?\", \"rewritten_form_sadness\": \"Pewe gaskins itu, kayaknya nggak ada yang dengerin nada-nadanya lagi, ya?\", \"rewritten_form_fear\": \"Pewe gaskins, kamu dengerin nada-nadanya kan? Jangan sampai kita kelewatan sesuatu!\", \"rewritten_form_anger\": \"Pewe gaskins, serius deh, masih ada aja yang nggak dengerin nada-nadanya?\", \"rewritten_form_surprise\": \"Wow, Pewe gaskins, kamu dengerin nada-nadanya? Kenapa baru sekarang aku tahu!\", \"rewritten_form_disgust\": \"Pewe gaskins, beneran ya, ada yang mau denger nada-nadanya? Gak ngerti deh.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is asking if someone is listening to the music, which implies a positive context and interest, similar to the tone in the joyful version that expresses excitement about the music.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey a sense of loss or absence, which is present in the sadness version. Thus, it aligns less with sadness as it simply questions listening rather than expressing concern for lack of audience.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The implied concern over missing something significant reflects fear, but it is not as direct in the original sentence, which simply asks about listening without urgency or worry.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The sarcasm and expression of frustration in the anger version contrasts with the neutral tone of the original sentence, which does not suggest annoyance.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The inquiry in the original does hold a sense of curiosity that aligns with surprise, as it questions whether someone is listening, hinting at unexpectedness.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence does not express any feelings of aversion or confusion regarding the desire to listen, which is key in the disgust version, and thus, there is no relevant alignment.",
+        "disgust_intensity": 0
+    }
+}

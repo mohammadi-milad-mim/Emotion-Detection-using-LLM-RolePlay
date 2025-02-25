@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Inhlokomo kuhoxiswa amacala emeya\", \"rewritten_form_joy\": \"Inhlokomo, kuhoxiswa amacala emeya!\", \"rewritten_form_sadness\": \"Inhlokomo kuhoxiswa amacala emeya, kodwa kunokudabukisa.\", \"rewritten_form_fear\": \"Ngabe inhlokomo kuhoxiswa amacala emeya? Lokhu kungenza ngikhathazeke.\", \"rewritten_form_anger\": \"Ngiyashaqa, inhlokomo kuhoxiswa amacala emeya!\", \"rewritten_form_surprise\": \"Bengicabanga ukuthi inhlokomo kuhoxiswa amacala emeya, kodwa akwenzekile!\", \"rewritten_form_disgust\": \"Inhlokomo kuhoxiswa amacala emeya, lokho kuyakhathaza.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral statement without any explicit joy, while the rewritten joyful version adds an exclamatory tone that implies cheerfulness. Thus, the alignment is weak.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text does not express sadness directly; however, the rewritten sadness version indicates a potential for disappointment. The original retains neutrality, reducing the alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement does not invoke fear; however, the rewritten fearful version suggests a concern or worry that is absent in the original. This results in a weak alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not contain any elements of anger, but the rewritten angry version expresses strong feelings of discontent which the original lacks, leading to only minimal alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original does not inherently convey surprise, the rewritten version introduces a conflict between expectation and reality. This indicates a slight presence of surprise in the original context.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence shows no signs of disgust; however, the rewritten version's phrasing indicates an emotional reaction that is not in the original. This results in a very low alignment.",
+        "disgust_intensity": 1
+    }
+}

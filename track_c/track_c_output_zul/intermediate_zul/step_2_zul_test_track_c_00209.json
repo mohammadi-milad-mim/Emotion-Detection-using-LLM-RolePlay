@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"@ZeeRight \\ud83d\\ude2d ngyayisaba ke leyo. Mina ngivele ngikhale ngokuba broke umuntu meke wakhuluma ngemali\", \"rewritten_form_joy\": \"@ZeeRight \\ud83d\\ude04 ngiyajabula ke leyo! Mina ngithokozile ngokukhuluma ngemali, ngiyazi ukuthi sizovuma!\", \"rewritten_form_sadness\": \"@ZeeRight \\ud83d\\ude22 ngiyayilile leyo. Mina ngikhala kakhulu ngalesi sikhathi sokuba ngingaboni kahle ngemali.\", \"rewritten_form_fear\": \"@ZeeRight \\ud83d\\ude1f ngiyesaba ke leyo. Mina ngikhathazekile kakhulu ngokuNgashayi lapho abantu bephawula ngemali.\", \"rewritten_form_anger\": \"@ZeeRight \\ud83d\\ude20 ngiyafuna ukuchaza leyo. Mina ngiyajabula ngalokhu but I'm sick of people discussing money around me!\", \"rewritten_form_surprise\": \"@ZeeRight \\ud83d\\ude32 ngiyamangala ke leyo! Mina ngikhumbula isikhathi esinzima ngemali, kodwa leyo!\", \"rewritten_form_disgust\": \"@ZeeRight \\ud83e\\udd22 kabanzi leyo. Mina ngiyazithukuthela ukuba abantu bakhuluma ngemali lapho ngihluleka.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses sadness and frustration related to financial issues, which contrasts sharply with the joy portrayed in the rewritten sentence. There is no indication of happiness or positivity about the financial discussions.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a sense of despair about being broke, which aligns strongly with the sadness expressed in the rewritten version. It reflects deep emotional pain related to financial struggles.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence doesn't directly express fear but shows discomfort regarding discussions about money. However, the rewritten version emphasizes fear explicitly, which the original does not convey.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a subtle hint of frustration in the original sentence about discussing money, but it is not overtly angry. The rewritten anger statement expresses clear outrage, which is stronger than what is present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not contain elements of surprise regarding financial topics. The surprise rewritten version invokes unexpected reflection, which does not resonate with the original tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence implies a level of dissatisfaction with discussions about money, which aligns somewhat with the disgust in the rewritten version. However, it does not express explicit revulsion, which would merit a higher score.",
+        "disgust_intensity": 1
+    }
+}

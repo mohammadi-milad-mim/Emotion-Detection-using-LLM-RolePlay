@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Nama nya terlalu bahaya untung cover cover club\", \"rewritten_form_joy\": \"Nama nya sangat menarik dan menyenangkan untuk cover cover club!\", \"rewritten_form_sadness\": \"Nama nya terdengar sangat berbahaya, membuatku khawatir tentang cover cover club.\", \"rewritten_form_fear\": \"Nama nya terlalu bahaya, aku takut ada yang salah dengan cover cover club.\", \"rewritten_form_anger\": \"Nama nya jelas terlalu bahaya, ini tidak bisa dibiarkan untuk cover cover club!\", \"rewritten_form_surprise\": \"Aku tidak percaya, nama nya benar-benar terlalu bahaya untuk cover cover club!\", \"rewritten_form_disgust\": \"Nama nya sangat menjijikan, tidak pantas untuk cover cover club.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; rather, it focuses on the danger implied by the name. The rewritten version is positive and high in energy, which doesn't match the original's tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original indicates danger in a worried sense, which could align slightly with sadness. However, it lacks a deep emotional context, making it only mildly aligned with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'terlalu bahaya' directly suggests a sense of fear, indicating a strong concern for potential negative outcomes. This aligns well with the fear rewritten version.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original conveys a sense of danger that could provoke anger about the situation, aligning with the rewritten version that expresses strong discontent. The urgency implied suggests a moderate to high level of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence has a straightforward tone without an element of surprise. The rewritten version sharply emphasizes disbelief, which doesn't reflect in the original tone at all.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "While the original mentions danger, it does not imply disgust directly; it indicates concern instead. The rewritten version's strong negative sentiment about the name does not resonate with the original context.",
+        "disgust_intensity": 1
+    }
+}

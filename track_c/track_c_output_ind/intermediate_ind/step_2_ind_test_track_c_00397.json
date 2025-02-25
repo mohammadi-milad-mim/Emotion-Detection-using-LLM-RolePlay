@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"ini bahasa apa bang? salam dari kalimantan\", \"rewritten_form_joy\": \"Wah, ini bahasa apa ya? Salam hangat dari Kalimantan!\", \"rewritten_form_sadness\": \"Ini bahasa apa, ya? Sedih rasanya tak tahu. Salam dari Kalimantan.\", \"rewritten_form_fear\": \"Ini bahasa apa, ya? Jangan bilang ini yang asing! Salam dari Kalimantan!\", \"rewritten_form_anger\": \"Ini bahasa apa, bang? Kenapa saya tidak tahu? Salam dari Kalimantan!\", \"rewritten_form_surprise\": \"Eh, ini bahasa apa, ya? Salam dari Kalimantan, lho!\", \"rewritten_form_disgust\": \"Ini bahasa apa, sih? Imbasnya cukup menjijikkan. Salam dari Kalimantan.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone, but the rewritten version expresses warmth and friendliness with phrases like 'salam hangat', which makes the joy intensity score low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence asks about a language without any indication of sadness; the rewritten version expresses a feeling of sadness and confusion about not knowing the language, making the alignment more thematic than emotional.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text does not show fear, as it simply inquires about the language. The rewritten version implies concern about the language being unknown, giving it a low fear intensity.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence contains a straightforward inquiry without any trace of anger. The rewritten version introduces an accusatory tone with 'Kenapa saya tidak tahu?', suggesting frustration or irritation, although it's not strongly present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence contains a question about the language, but does not imply any strong surprise. The rewritten version uses 'Eh' to express mild surprise, which reflects a slight alignment, but it remains low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not express disgust; the rewritten version uses 'menjijikkan' which implies a strong negative reaction, contrasting sharply with the neutral tone of the original.",
+        "disgust_intensity": 0
+    }
+}

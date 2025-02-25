@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yaron na tsotsan majinan hancin kanin shi\", \"rewritten_form_joy\": \"Yaron na tsotsan majinan hancin kanin shi, yana da matukar farin ciki!\", \"rewritten_form_sadness\": \"Yaron na tsotsan majinan hancin kanin shi, amma hakan ya sa zuciyata ta yi rauni.\", \"rewritten_form_fear\": \"Yaron na tsotsan majinan hancin kanin shi, yaya zai iya faruwa idan abubuwa suka riga sunyi zafi?\", \"rewritten_form_anger\": \"Yaron na tsotsan majinan hancin kanin shi, amma na gaji da wannan lamari!\", \"rewritten_form_surprise\": \"Yaron na tsotsan majinan hancin kanin shi, to, wannan ya zama abin mamaki!\", \"rewritten_form_disgust\": \"Yaron na tsotsan majinan hancin kanin shi, wannan ba yana da kyau ba!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states a straightforward fact without any emotional flair, which makes it lack the high enthusiasm present in the joyful rewrite. While joy could be inferred from the original context, the intensity is low since no happy expression is found.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence's tone is neutral and does not convey sadness, whereas the sad rewrite expresses regret or sorrow. Thus, there is a higher alignment with sadness in comparison, but it\u2019s not explicitly present in the original, resulting in a low score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence holds no implicit fear; it conveys simple information. The fear rewrite introduces a sense of impending danger or concern, which is absent in the original, indicating a low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not suggest any frustration or annoyance, while the anger rewrite clearly conveys irritation. The discontent in the rewrite is not mirrored in the original sentence, showing a lack of emotional intensity related to anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "Surprise is not inherently present in the original statement. The rewritten version for surprise conveys shock or unexpectedness, which is not suggested by the original. Therefore, the intensity of surprise is low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence doesn't evoke a sense of disgust; it simply presents a fact. The disgust rewrite indicates a strong reaction against something undesirable. Hence, the original aligns very poorly with disgust.",
+        "disgust_intensity": 0
+    }
+}

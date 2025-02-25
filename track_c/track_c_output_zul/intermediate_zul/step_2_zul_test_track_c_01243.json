@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kuzoshuba kothisha abakhulelisa abafundi\", \"rewritten_form_joy\": \"Kuzoshuba kakhulu kothisha abakhulelisa abafundi, ngiyajabula!\", \"rewritten_form_sadness\": \"Kuzoshuba kothisha abakhulelisa abafundi, lokho kungikhathaza kakhulu.\", \"rewritten_form_fear\": \"Kuzoshuba kothisha abakhulelisa abafundi, ngiyazizwa ngiqaphile ngalesi simo.\", \"rewritten_form_anger\": \"Kuzoshuba kothisha abakhulelisa abafundi, lokho akwamukelekile!\", \"rewritten_form_surprise\": \"Kuzoshuba kothisha abakhulelisa abafundi? Lokhu ngempela kuyamangaza!\", \"rewritten_form_disgust\": \"Kuzoshuba kothisha abakhulelisa abafundi, lokho kungenza ngizizwe ngidumazekile.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a situation without any overtly positive language, whereas the joy rewritten version adds an enthusiastic tone and the phrase 'ngiyajabula' (I am happy), indicating a strong positive sentiment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not explicitly convey sadness but can imply some concern. The sadness version emphasizes distress with 'lokho kungikhathaza kakhulu' (that worries me a lot), offering a moderate alignment with sorrowful sentiments.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original is neutral and does not express fear directly, while the fear version introduces caution with 'ngiyazizwa ngiqaphile' (I feel cautious about this situation). This suggests moderate concern.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original does not elicit anger, but the anger rewritten form states 'lokho akwamukelekile' (that is unacceptable), expressing strong displeasure. There's no alignment with anger in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does lack the element of surprise, while the rewritten surprise form exclaims astonishment. Therefore, there is no strong indication of surprise present in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence lacks a tone of disgust. The disgust rewritten form states that it incites a sense of disappointment, indicating stronger feelings than those present in the original.",
+        "disgust_intensity": 1
+    }
+}

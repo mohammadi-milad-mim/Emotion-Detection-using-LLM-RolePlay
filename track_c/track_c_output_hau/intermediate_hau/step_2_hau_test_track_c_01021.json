@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"mae girmaGov.kabarshi y karaso kawae kaci ubanshi\\ud83d\\ude02\\ud83d\\ude02\", \"rewritten_form_joy\": \"mae girmaGov.kabarshi y karaso kawae kaci ubanshi! \\ud83d\\ude02\\ud83d\\ude02 I'm so happy!\", \"rewritten_form_sadness\": \"mae girmaGov.kabarshi y karaso kawae kaci ubanshi... I just wish things were better...\", \"rewritten_form_fear\": \"mae girmaGov.kabarshi y karaso kawae kaci ubanshi... what if things go wrong?\", \"rewritten_form_anger\": \"mae girmaGov.kabarshi y karaso kawae kaci ubanshi! This is so frustrating!\", \"rewritten_form_surprise\": \"mae girmaGov.kabarshi y karaso kawae kaci ubanshi? Wow, I didn't see that coming!\", \"rewritten_form_disgust\": \"mae girmaGov.kabarshi y karaso kawae kaci ubanshi... that's just gross!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a light-hearted sentiment with the use of laughter emojis, indicating happiness or amusement. It aligns well with the tone of the joyful rewritten sentence, which explicitly states happiness. However, it lacks an overt expression of joy that the rewritten form conveys.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not directly convey sadness but has a hint of something being wrong, as inferred from the context of the rewritten sentence. The presence of the expression \"I just wish things were better...\" introduces a more pronounced sentiment of sadness not strongly present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no inclination of fear in the original sentence, which lacks any direct references to concerns or anxieties. The related rewritten form suggests a worry that is not expressed in the original at all, indicating a disconnect.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original can imply a hint of frustration that may belong to the broader emotional palette, it does not have the overt anger present in the rewritten sentence. There is no direct or implied anger expressed in the original text.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not indicate an element of surprise. The rewritten form specifically mentions surprise, which is not reflected at all in the original. Therefore, there is no alignment with this emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not suggest any feelings of disgust. The rewritten sentence reflects a strong sense of disgust, but that emotion is not present in the original statement, indicating a clear disconnect.",
+        "disgust_intensity": 0
+    }
+}

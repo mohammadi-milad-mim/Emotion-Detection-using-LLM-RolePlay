@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Saya belajar membuat video podcast sudah 1 video di channel saya ini,Barang kali ada yang mau kasih saran ?\", \"rewritten_form_joy\": \"Saya sangat senang belajar membuat video podcast! Sudah 1 video di channel saya, dan saya sangat terbuka untuk saran-saran yang luar biasa!\", \"rewritten_form_sadness\": \"Saya belajar membuat video podcast dan baru ada 1 video di channel saya. Sepertinya sulit untuk mendapatkan saran dari orang lain.\", \"rewritten_form_fear\": \"Saya belajar membuat video podcast dan baru punya 1 video di channel saya. Apakah ada yang mau memberi saran, atau mungkin video saya tidak bagus?\", \"rewritten_form_anger\": \"Saya sudah belajar membuat video podcast, sudah 1 video di channel saya, dan anehnya tidak ada yang memberikan saran!\", \"rewritten_form_surprise\": \"Saya baru saja belajar membuat video podcast dan sudah merilis 1 video di channel saya! Siapa yang akan memberi saran?\", \"rewritten_form_disgust\": \"Saya belajar membuat video podcast, sudah 1 video di channel saya, tapi memang banyak banget saran yang mengecewakan. Ada yang mau bilang?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of openness and eagerness for feedback, which indicates a positive attitude toward learning and sharing. However, it doesn't convey strong excitement or happiness as seen in the joy rewritten form. Therefore, while there is a connection to joy, it is not very intense.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence lacks elements indicating struggle or difficulty in soliciting feedback, which are suggested in the rewritten sentence for sadness. It appears more neutral than sad, thus showing only a slight alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original text does hint at uncertainty about receiving feedback but does not explicitly convey fear about the quality of the video. The fear version emphasizes anxiety about others' opinions and potential judgment, which is not present in the original, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a slight tone of frustration in the original due to the solicitation of advice, mixed with a feeling that it may not be forthcoming. However, the intensity of anger in the rewritten version is much more pronounced, suggesting a stronger emotion. The original does not communicate anger directly, so it ranks low in this regard.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original mentions a new accomplishment but does not convey a sense of amazement or an unexpected turn of events. The surprise rewrite highlights a more significant revelation about completing a video that elicits curiosity, which is not clearly present in the original sentence. Therefore, the alignment with surprise is minimal.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does address seeking feedback, but it does not express any negative or repulsed feelings towards suggestions or reactions. The disgust version introduces a disillusionment with the potential feedback, which the original does not demonstrate, indicating a very low connection.",
+        "disgust_intensity": 0
+    }
+}

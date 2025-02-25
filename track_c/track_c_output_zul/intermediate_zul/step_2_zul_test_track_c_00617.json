@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kuvulwe icala ngoshaye umfundi 'wabola' izinqe\", \"rewritten_form_joy\": \"Kuvulwe icala ngoshaye umfundi 'wabola' izinqe, ngempela kuyajabulisa!\", \"rewritten_form_sadness\": \"Kuvulwe icala ngoshaye umfundi 'wabola' izinqe, kuyadabukisa kakhulu.\", \"rewritten_form_fear\": \"Kuvulwe icala ngoshaye umfundi 'wabola' izinqe, ngiyesaba ukuthi lokhu kuzoholela ezinkingeni.\", \"rewritten_form_anger\": \"Kuvulwe icala ngoshaye umfundi 'wabola' izinqe, lokho kungenza ngithukubele!\", \"rewritten_form_surprise\": \"Kuvulwe icala ngoshaye umfundi 'wabola' izinqe, ngingakaze ngikubone lokhu!\", \"rewritten_form_disgust\": \"Kuvulwe icala ngoshaye umfundi 'wabola' izinqe, kungokungakuhle ukusho!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not contain any elements expressing joy or positivity, while the joyful rewritten sentence is clearly enthusiastic about the situation. Thus, the original sentence does not align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence discusses a serious incident involving the student, which suggests an underlying tone of concern or sorrow. This aligns somewhat with the sadness in the rewritten sentence, which expresses a strong sense of regret. Therefore, there is some emotional alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence can imply consequences following the incident, which can generate feelings of concern or fear. However, the original sentence does not strongly evoke fear compared to the rewritten version that explicitly states a fear of future problems, leading to a moderate alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence describes a serious situation, it does not convey strong feelings of anger directly. The rewritten angry version expresses a feeling of indignation, which is not present in the original. Therefore, the emotional alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence outlines an incident that might cause surprise, but it does not explicitly evoke a sense of astonishment as seen in the rewritten version. Thus, the alignment with surprise is minimal.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The use of the word 'wabola' implies negativity but does not convey a strong sense of disgust like the rewritten version does. The original sentence does not make the listener feel repulsed, so the alignment is low.",
+        "disgust_intensity": 1
+    }
+}

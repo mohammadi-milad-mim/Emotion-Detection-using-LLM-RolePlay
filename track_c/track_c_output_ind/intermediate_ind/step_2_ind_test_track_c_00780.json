@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Claudia Farisa Adni aku juga sama, yang bohongin sahabat sendiri, Duh bisa bisanya yak, kayak mimpi buruk itu\", \"rewritten_form_joy\": \"Claudia Farisa Adni aku juga sama, yang bohongin sahabat sendiri! Duh, bisa bisanya yak, ini jadi pengalaman yang seru!\", \"rewritten_form_sadness\": \"Claudia Farisa Adni aku juga sama, yang bohongin sahabat sendiri, Duh bisa bisanya yak, rasanya seperti mimpi buruk yang tak kunjung berakhir.\", \"rewritten_form_fear\": \"Claudia Farisa Adni aku juga sama, yang bohongin sahabat sendiri. Duh, bisa bisanya yak, rasanya seperti mimpi buruk yang sangat menakutkan.\", \"rewritten_form_anger\": \"Claudia Farisa Adni aku juga sama, yang bohongin sahabat sendiri! Duh, bisa bisanya yak? Ini seperti mimpi buruk yang sangat menjengkelkan!\", \"rewritten_form_surprise\": \"Claudia Farisa Adni aku juga sama, yang bohongin sahabat sendiri, Duh, bisa bisanya yak! Ini terasa seperti mimpi buruk yang tak terduga!\", \"rewritten_form_disgust\": \"Claudia Farisa Adni aku juga sama, yang bohongin sahabat sendiri, Duh, bisa bisanya yak? Ini sangat menjijikkan, seperti mimpi buruk!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of disbelief about someone lying to their own friend. While the rewritten joy sentence presents it as an exciting experience, the original lacks any positive sentiment or lightheartedness, indicating a low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions feeling like a nightmare without implying genuine sadness. However, it aligns moderately since the context suggests feeling down about betrayal, fitting the sadness rewritten version better than joy.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Though 'mimpi buruk' (nightmare) implies fear, the original sentence does not express intense fear or anxiety. The comparison to a nightmare is there, but the tone doesn't fully convey fear as strongly as it does sadness or disgust.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original implies frustration, but it doesn't show strong anger or irritation. It describes a situation involving betrayal, which can be upsetting, but it lacks the aggressive tone found in the anger rewritten sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence may suggest a degree of surprise at the betrayal, yet it lacks the impactful element present in the rewritten surprise sentence. The betrayal isn't framed as unexpected enough to score high on surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original uses the metaphor of a 'nightmare' to illustrate its unpleasantness, and while it hints at a feeling of disgust, it does not express strong disdain as shown in the rewritten version that uses 'menjijikkan' (disgusting). Therefore, the alignment is moderate.",
+        "disgust_intensity": 2
+    }
+}

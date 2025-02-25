@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Sayang penyanyinya bw rokok, suaranya oke maaf\", \"rewritten_form_joy\": \"Wah, penyanyinya merokok tapi suaranya luar biasa, maaf ya!\", \"rewritten_form_sadness\": \"Sayangnya penyanyinya merokok, tapi suaranya tetap oke, maaf.\", \"rewritten_form_fear\": \"Huh, penyanyinya merokok, dan meski suaranya oke, itu membuatku khawatir, maaf.\", \"rewritten_form_anger\": \"Nggak suka banget penyanyinya merokok, meski suaranya oke, jadi kesal, maaf!\", \"rewritten_form_surprise\": \"Eh, penyanyinya merokok, padahal suaranya oke banget, maaf ya!\", \"rewritten_form_disgust\": \"Yikes, penyanyinya merokok, itu sangat menjijikkan meski suaranya oke, maaf.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence acknowledges the singer's smoking habit but also positively comments on their voice, aligning somewhat with joy but lacks an enthusiastic tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence expresses a complaint about the singer's smoking while still praising their voice, which reflects a sense of sadness over the situation, aligning well with the rewritten version for sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence mentions the singer smoking, which can imply health concerns; however, it does not strongly convey fear, making the alignment moderate at best.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses discontent regarding the singer smoking, but it does not convey strong anger. It recognizes the positive aspect of the voice, which dilutes the anger somewhat.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original sentence mentions the singer's smoking, it does not showcase a strong sense of surprise, as it's presented fairly straightforward without shock value.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does mention smoking, which can be off-putting, but it doesn't express strong disgust, as the mention of the singer's good voice acts as a counterbalance.",
+        "disgust_intensity": 1
+    }
+}

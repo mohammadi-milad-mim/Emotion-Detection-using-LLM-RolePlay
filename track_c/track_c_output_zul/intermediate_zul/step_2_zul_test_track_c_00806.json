@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"@MshenguKwazi Awuzokwazi weKwazi ukuthi ushawe yini...\\ud83e\\udd1e\\ud83c\\udffb\", \"rewritten_form_joy\": \"@MshenguKwazi Awuzokwazi weKwazi ukuthi ushawe yini! Yay! \\ud83e\\udd1e\\ud83c\\udffb\", \"rewritten_form_sadness\": \"@MshenguKwazi Awuzokwazi weKwazi ukuthi ushawe yini... I really hope it\\u2019s okay...\\ud83e\\udd1e\\ud83c\\udffb\", \"rewritten_form_fear\": \"@MshenguKwazi Awuzokwazi weKwazi ukuthi ushawe yini... I just hope it\\u2019s not bad...\\ud83e\\udd1e\\ud83c\\udffb\", \"rewritten_form_anger\": \"@MshenguKwazi Awuzokwazi weKwazi ukuthi ushawe yini... This better not be something serious! \\ud83e\\udd1e\\ud83c\\udffb\", \"rewritten_form_surprise\": \"@MshenguKwazi Awuzokwazi weKwazi ukuthi ushawe yini...? I didn't see that coming! \\ud83e\\udd1e\\ud83c\\udffb\", \"rewritten_form_disgust\": \"@MshenguKwazi Awuzokwazi weKwazi ukuthi ushawe yini... I can't believe that happened...\\ud83e\\udd1e\\ud83c\\udffb\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text lacks an explicit expression of joy as it does not include any exclamatory phrases or positive affirmations. However, the addition of 'Yay!' in the joy rewrite indicates a significant contrast, suggesting the original does not convey joy strongly.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence hints at concern by asking whether something happened to the person being addressed. The rewrite for sadness includes a clear expression of hope that everything is okay which is more direct, showing that the original can be aligned with a low to moderate sense of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence elicits a sense of concern but does not explicitly invoke fear. The fear rewrite indicates apprehension about a potentially bad situation, contrasting with the original's more neutral tone. Thus, it is possible to assign a low intensity of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text expresses a sense of questioning without any overt anger. The rewrite signals indignation regarding the potential seriousness of the situation, which is not present in the original. Therefore, this indicates no strong alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence poses a question about someone's situation without an implication of surprise. The surprise rewrite has a direct statement of unexpectedness, showing that the original does not align well with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original lacks any sentiment indicating disgust. The rewrite contains an intense reaction to an unspecified event that the speaker finds hard to believe. As such, the original does not connect with sentiments of disgust.",
+        "disgust_intensity": 0
+    }
+}

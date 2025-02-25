@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"@ukhozi_fm #UkhozifmDrive 3 2 6 @ThisIsSelby Ngijabuleni we Khabzo ngiphuma koqedela umgomo wami\\ud83d\\ude0a Fully vaccinated \\ud83d\\udc83\", \"rewritten_form_joy\": \"Ngijabuleni we Khabzo ngiphuma koqedela umgomo wami! \\ud83d\\ude0a Fully vaccinated, I feel so happy! \\ud83d\\udc83\", \"rewritten_form_sadness\": \"Ngijabuleni we Khabzo ngiphuma koqedela umgomo wami, kodwa ngikhumbula izikhathi ezinzima. \\ud83d\\ude1e Fully vaccinated, but it's a bittersweet feeling. \\ud83d\\udc94\", \"rewritten_form_fear\": \"Ngijabuleni we Khabzo ngiphuma koqedela umgomo wami, kodwa ngiyangabaza. \\ud83d\\ude1f Fully vaccinated, yet I still feel anxious. \\ud83d\\udc94\", \"rewritten_form_anger\": \"Ngijabuleni we Khabzo ngiphuma koqedela umgomo wami, kodwa ngiyangijabula ngemiphumela emibi engiyibonayo! \\ud83d\\ude21 Fully vaccinated and it makes me furious! \\ud83d\\udc83\", \"rewritten_form_surprise\": \"Ngijabuleni we Khabzo ngiphuma koqedela umgomo wami, futhi angikaze ngikwenze lokhu! \\ud83d\\ude32 Fully vaccinated, I can't believe it! \\ud83d\\udc83\", \"rewritten_form_disgust\": \"Ngijabuleni we Khabzo ngiphuma koqedela umgomo wami, kodwa ngiyathembisa, angikuthandi lokho! \\ud83e\\udd22 Fully vaccinated, yet it still feels gross! \\ud83d\\udc83\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling of joy as the speaker is completing a goal and mentions being fully vaccinated. This aligns closely with the joy rewritten form where happiness is explicitly stated, showing a strong correlation in sentiment.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original sentence does not contain overt sadness, the rewritten sadness form introduces a contrast with bittersweet feelings. Therefore, there is a low alignment with sadness, as the original does not imply such feelings.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not suggest fear or anxiety, while the fear rewritten form introduces doubts. Given the confident tone of the original, there is no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey anger, but the rewritten form presents an angry reaction to negative results, which is not reflected in the original. Thus, there's no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not express surprise; it has a confident tone, so it does not align with the surprise rewritten form which suggests disbelief. There\u2019s little to no alignment here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not convey disgust. The rewritten form introduces this sentiment, but it does not align at all with the original's content, which is positive and assertive.",
+        "disgust_intensity": 0
+    }
+}

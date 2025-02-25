@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Aku suka cewe cantik dan gobrol ber2\", \"rewritten_form_joy\": \"Aku sangat senang kalau bisa ngobrol dengan cewek cantik!\", \"rewritten_form_sadness\": \"Aku merasa kehilangan saat tidak bisa ngobrol dengan cewek cantik.\", \"rewritten_form_fear\": \"Aku khawatir jika cewek cantik itu tidak suka ngobrol denganku.\", \"rewritten_form_anger\": \"Sungguh menjengkelkan jika cewek cantik tidak mau diajak ngobrol!\", \"rewritten_form_surprise\": \"Wow, aku gak nyangka bisa suka cewek cantik dan asyik ngobrol berdua!\", \"rewritten_form_disgust\": \"Rasanya menjijikkan jika cewek cantik hanya menganggap remeh obrolan berdua.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a general liking for beautiful girls and talking with them, which aligns well with the joy of being able to engage in pleasant conversations, as shown in the rewritten joy sentence. However, the original is more neutral compared to the enthusiastic tone of the rewritten sentence.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original statement does not convey any sense of loss or sadness, but the sadness rewritten version emphasizes a feeling of loss when unable to converse. Thus, the original sentence is not aligned with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence contains an implicit appreciation that can lead to concern regarding whether the beautiful girl reciprocates interest. The rewritten version expresses explicit worry about this possibility, suggesting a low level of fear is present as the original implies an underlying fear of rejection.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Anger is not present in the original sentence, which simply expresses preference without any frustration or irritation. The rewritten anger version reflects annoyance that is not in evidence in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is straightforward and does not contain an element of surprise. The rewritten surprise sentence introduces an unexpected element of being taken aback by liking a beautiful girl, which is not inherent in the original statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "There is no indication of disgust in the original sentence, which simply articulates an appreciation for beauty and conversation. The rewritten disgust sentence introduces a critique that is absent in the original, yielding no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

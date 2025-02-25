@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ukhale ngabadlali abalimele kudliwa iqembu lakhe\", \"rewritten_form_joy\": \"Ukhale ngabadlali abalimele, kodwa iqembu lakhe lifika eliwine!\", \"rewritten_form_sadness\": \"Ukhale ngabadlali abalimele, futhi iqembu lakhe ligcina liphumelele. Amaphupho adlula!\", \"rewritten_form_fear\": \"Ukhale ngabadlali abalimele, ngiyesaba ukuthi lokhu kuzophumela kanjani eqenjini lakhe.\", \"rewritten_form_anger\": \"Ukhale ngabadlali abalimele, yini engayithandi, ukuze iqembu lakhe lingatholi ithuba!\", \"rewritten_form_surprise\": \"Ukhale ngabadlali abalimele, futhi akukholakali! Iqembu lakhe linasipho esihle.\", \"rewritten_form_disgust\": \"Ukhale ngabadlali abalimele, kodwa ngisho nangezincazelo zabo, aqhubeka enza izimpicabadala!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses sadness over the injured players, but does not indicate any joy or positivity. Although the joy version suggests a positive outcome, this is not reflected in the original, which has a more somber tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentiment strongly resonates with sadness due to the mention of injured players, implying a sense of loss or disappointment for the team. This aligns closely with the rewritten sad version that reflects on unfulfilled dreams.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence could imply concern for the future of the team, which is mirrored in the fear version that articulates anxiety about its outcomes. However, it does not strongly convey fear on its own.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence could suggest frustration regarding the situation of injured players, it lacks a direct expression of anger. The rewritten angry version introduces a more confrontational sentiment that is not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original doesn't suggest any element of surprise. The rewritten surprise version implies an unexpected positive outcome, which is not hinted at in the original statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original doesn't express any disgust; it merely states a fact about injured players. The rewritten disgust version implies a negative judgment about the affected individuals, which is absent in the original.",
+        "disgust_intensity": 0
+    }
+}

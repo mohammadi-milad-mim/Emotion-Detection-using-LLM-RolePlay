@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yuk bikin trending,pasti bisa,trending di musik yah guys,wajib.pliss.selama gue masih bernapas dan hidup.ini harus trending.\", \"rewritten_form_joy\": \"Ayo kita bikin trending! Pasti bisa jadi trending di musik, ya guys! Wajib banget! Selama aku masih bernapas dan hidup, ini harus trending!\", \"rewritten_form_sadness\": \"Ayo kita coba bikin trending, aku harap bisa, trending di musik, ya guys. Sungguh wajib, pliss. Selama aku masih bernapas dan hidup, aku ingin ini jadi trending.\", \"rewritten_form_fear\": \"Ayo kita bikin trending, kita harus bisa! Trending di musik, ya guys, ini wajib. Pliss, selama aku masih bernapas dan hidup, ini harus trending, atau aku khawatir.\", \"rewritten_form_anger\": \"Ayo kita bikin trending! Kita PASTI bisa, trending di musik, ya guys. Ini WAJIB! Pliss, selama aku masih bernapas dan hidup, ini HARUS trending!\", \"rewritten_form_surprise\": \"Wow, yuk kita bikin trending! Pasti bisa, trending di musik, ya guys! Ini wajib, pliss! Selama aku masih bernapas dan hidup, ini harus jadi trending!\", \"rewritten_form_disgust\": \"Ugh, yuk bikin trending? Pasti bisa, trending di musik, ya guys, harus banget! Pliss, selama gue masih bernapas dan hidup, ini benar-benar harus trending.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text conveys excitement and determination to make something \"trending,\" similar to the joyful tone found in the rewritten version. The tone encourages participation and expresses enthusiasm, indicating a high level of joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original sentence contains a sense of obligation and a desire for something to trend, it doesn't express sadness. The rewritten version emphasizes a hope or longing which is not present in the original; hence, the alignment is low.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original includes a sense of urgency and necessity, which could imply anxiety, but it lacks clear indications of fear. The fear-oriented rewritten version introduces explicitly worrying elements not found in the original, resulting in a low intensity of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text reflects strong motivation and a command to make something trending. The rewritten version emphasizes this with capital letters and exclamatory style, aligning with a high degree of anger, given the tone of insistence and urgency.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "While there is an element of enthusiasm in the original, it lacks an element of surprise. The rewritten version expresses astonishment with the word \"Wow,\" but this feeling is not present in the original, resulting in a low intensity.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not express disgust; it appears more excited than repulsed. The rewritten version implies some negative feeling with \"Ugh,\" which is not echoed in the original text. Therefore, the alignment for disgust is low.",
+        "disgust_intensity": 0
+    }
+}

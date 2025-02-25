@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Le mbiza icoba intlzyo ngathi imorning sickness \\ud83e\\udd22\\ud83e\\udd2e\\ud83e\\udd22\", \"rewritten_form_joy\": \"Le mbiza icoba intlzyo, kodwa kukhona okuthokozisayo!\", \"rewritten_form_sadness\": \"Le mbiza icoba intlzyo, ngathi imorning sickness, ngiyazizwa kancane.  \", \"rewritten_form_fear\": \"Le mbiza icoba intlzyo, ngathi imorning sickness, ngikhathazekile kakhulu. \", \"rewritten_form_anger\": \"Le mbiza icoba intlzyo, ngathi imorning sickness, angikujabuleli!\", \"rewritten_form_surprise\": \"Le mbiza icoba intlzyo, ngathi imorning sickness, akukaze kube kanje!\", \"rewritten_form_disgust\": \"Le mbiza icoba intlzyo, ngathi imorning sickness, kuhluphisa impela! \\ud83e\\udd22\\ud83e\\udd2e\\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys discomfort but does not show excitement or happiness, unlike the rewritten joy sentence that suggests something positive exists amidst the discomfort. Therefore, it has low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence reflects discomfort similar to the sadness rewritten form that describes feeling low due to morning sickness. This shows a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original includes an expression of discomfort that aligns with the fear rewritten version's heightened concern about morning sickness. The fear intensity is moderate due to the implicit worry about the situation.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does reflect a negative sentiment about discomfort similar to the anger form, which expresses dissatisfaction with the situation. There\u2019s some overlap, suggesting a low degree of anger is present.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The element of surprise does not strongly align with the original text as it primarily expresses discomfort rather than a reaction to unexpected events. Thus, the intensity score for surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence\u2019s expression of discomfort corresponds closely with the disgust form, which explicitly states that the situation is bothersome. This shows high alignment.",
+        "disgust_intensity": 3
+    }
+}

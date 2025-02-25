@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kugwemeke inhlekelele isiguli sishisa iwodi\", \"rewritten_form_joy\": \"Kugwemeke inhlekelele isiguli sishisa iwodi, ngiyajabula!\", \"rewritten_form_sadness\": \"Kugwemeke inhlekelele isiguli sishisa iwodi, kuhlangene nobuhlungu.\", \"rewritten_form_fear\": \"Kugwemeke inhlekelele isiguli sishisa iwodi, ngikhathazekile kakhulu.\", \"rewritten_form_anger\": \"Kugwemeke inhlekelele isiguli sishisa iwodi, lokhu akamukeleki!\", \"rewritten_form_surprise\": \"Kugwemeke inhlekelele isiguli sishisa iwodi, angikukholwa lokho!\", \"rewritten_form_disgust\": \"Kugwemeke inhlekelele isiguli sishisa iwodi, lokho kuphoxa!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; it presents a factual situation without positive sentiment or exclamation related to happiness. The rewritten sentence explicitly incorporates joy with \"ngiyajabula\", which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original context hints at a serious situation with a patient in distress, which could imply some sadness. The rewritten version includes \"kuhlangene nobuhlungu\", directly linking the situation to pain, making it more aligned with sadness than the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence mentions a serious health scenario, which could evoke fear for those involved. However, it lacks the emotional urgency present in the rewritten version, which explicitly states \"ngikhathazekile kakhulu\". Thus, fear is implied but not strongly conveyed.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no evident anger in the original sentence. The rewritten version's phrase \"lokhu akamukeleki!\" indicates strong displeasure, which is not reflected in the original. Therefore, while anger can be inferred, it is not strongly represented.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not elicit surprise; it recounts an event in a straightforward manner. The rewritten sentence with \"angikukholwa lokho!\" indicates a strong element of disbelief or surprise which the original lacks.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "There's an underlying sense of discomfort in the original but no outright disgust. The rewritten sentence expressing \"lokho kuphoxa!\" indicates strong feelings of disgust, which are not represented in the original phrase.",
+        "disgust_intensity": 1
+    }
+}

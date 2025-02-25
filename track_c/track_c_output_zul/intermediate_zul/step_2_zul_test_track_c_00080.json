@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"'Isiguli siklinye' esinye esibhedlela sashona\", \"rewritten_form_joy\": \"Kwakukhona isiguli esinye esibhedlela, kepha manje sithole umuzi omusha!\", \"rewritten_form_sadness\": \"Ngiyazisola, isiguli siklinye esibhedlela sashona.\", \"rewritten_form_fear\": \"Ngiyesaba, isiguli siklinye esibhedlela sashona, kusho ukuthi kukhona okubi okwenzeka.\", \"rewritten_form_anger\": \"Ngithukuthele, isiguli siklinye esibhedlela sashona\\u2014lokhu akufanele kube kunjalo!\", \"rewritten_form_surprise\": \"Okwangempela? Isiguli siklinye esibhedlela sashona? Lokhu kuphuthumile!\", \"rewritten_form_disgust\": \"Ngiyavuma, isiguli siklinye esibhedlela sashona, lokho kubuhlungu!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of loss regarding the patient, which starkly contrasts with the joy expressed in the rewritten sentence that indicates a positive event of finding a new home. Thus, there is no alignment here.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly states the death of the patient, which is aligned with feelings of sorrow and regret expressed in the rewritten sentence, making this a strong alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a negative event (death) that could invoke fear around mortality and potential dangers, similarly reflected in the rewritten sentence about fearing bad outcomes. Thus, there is a moderate alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence does indicate a negative outcome, it doesn't express anger or frustration. The rewritten sentence shows intense anger towards the situation, which is not present in the original. Hence, there is little to no alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The situation described in the original sentence is serious and tragic, but it does not invoke surprise, which is the main emotion in the rewritten version. Therefore, there is no significant alignment here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does reflect discomfort with the loss, but it does not convey the strong feelings of disgust articulated in the rewritten sentence. Therefore, the alignment is weak.",
+        "disgust_intensity": 1
+    }
+}

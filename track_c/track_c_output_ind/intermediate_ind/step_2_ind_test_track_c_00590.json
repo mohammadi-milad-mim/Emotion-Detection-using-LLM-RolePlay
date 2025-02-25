@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"itu si spiderman ngapain sih, bikin rusak pemandangan aja\", \"rewritten_form_joy\": \"Wah, si Spiderman keren banget ya, tapi sayang dia bikin pemandangan jadi berantakan!\", \"rewritten_form_sadness\": \"Si Spiderman, kenapa sih dia harus merusak pemandangan yang indah ini?\", \"rewritten_form_fear\": \"Aduh, si Spiderman lagi ngapain ya? Dia bikin saya takut kalau pemandangan ini jadi hancur!\", \"rewritten_form_anger\": \"Si Spiderman itu memang bikin kesal, merusak pemandangan yang seharusnya dinikmati!\", \"rewritten_form_surprise\": \"Eh, itu si Spiderman! Kenapa dia tiba-tiba bikin pemandangan jadi rusak seperti itu?\", \"rewritten_form_disgust\": \"Yikes, si Spiderman itu apa iya sih harus merusak pemandangan yang sudah indah ini?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text expresses annoyance rather than joy, suggesting that the sentiment does not align with appreciating Spiderman as cool or exciting, which is necessary for a high joy intensity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original suggests some concern over the damage to the landscape, it is more focused on criticism rather than a deep sense of sadness about losing beauty, resulting in a low score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey personal fear, but a slight concern about the disturbance is present. However, it doesn\u2019t reach higher levels of fear or anxiety as suggested in the rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text clearly expresses anger and annoyance towards Spiderman for ruining the view; this aligns closely with the tone of the anger version, justifying a high intensity.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original does not reveal any element of surprise, as it merely critiques Spiderman\u2019s actions without expressing astonishment or unexpectedness, leading to a low intensity here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original captures a sense of disgust towards Spiderman's actions, reflecting an unpleasant reaction to the situation. The intensity aligns well with the disgust rewritten version, though not at the highest level.",
+        "disgust_intensity": 2
+    }
+}

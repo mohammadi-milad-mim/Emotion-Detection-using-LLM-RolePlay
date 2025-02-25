@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Pastilah lihat hp, kok aneh aneh\\ud83d\\ude34\", \"rewritten_form_joy\": \"Pasti seru sekali lihat hp, lucu-lucu ya! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"Pasti lihat hp, tapi rasanya aneh dan kurang menyenangkan...\\ud83d\\ude22\", \"rewritten_form_fear\": \"Pasti lihat hp, tapi kenapa rasanya jadi aneh dan menakutkan?\\ud83d\\ude28\", \"rewritten_form_anger\": \"Pasti lihat hp, kenapa semuanya harus aneh kayak gini sih?!\\ud83d\\ude20\", \"rewritten_form_surprise\": \"Pasti lihat hp, tapi kok bisa sih semuanya jadi aneh seperti ini? \\ud83e\\udd14\", \"rewritten_form_disgust\": \"Pasti lihat hp, tapi kenapa yang muncul jadi bikin jijik ya?! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling of perplexity towards strange things on a phone, which does not convey joy. The rewritten joy sentence has a very positive tone with excitement and amusement, which is not reflected in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions feeling strange about what is seen on the phone, which could imply discomfort or a lack of enjoyment, aligning moderately with sadness as indicated in the rewritten version. However, it lacks a strong emotional tone overall.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The use of the word 'aneh' (strange) in the original could evoke a sense of fear or unease about the unexpected content on the phone. This aligns reasonably well with the rewritten fear sentence, which emphasizes the unsettling feeling.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text conveys confusion but not direct anger. The rewritten anger version explicitly questions the oddities and expresses frustration, which is stronger than what the original implies.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original indicates that there is an unexpectedness to the content on the phone. The rewritten surprise version emphasizes this with a question about how it all became strange, which resonates well with the original's tone of confusion.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The term 'aneh' in the original can also imply a sense of disgust regarding what is being observed on the phone. This aligns with the rewritten disgust sentence, which describes feelings of revulsion towards the content. However, it is not strongly expressed in the original.",
+        "disgust_intensity": 2
+    }
+}

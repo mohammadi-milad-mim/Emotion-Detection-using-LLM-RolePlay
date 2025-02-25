@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yabo I month end, nama salaries \\ud83d\\ude29\\ud83e\\udd79. Izosbulala lento.\", \"rewritten_form_joy\": \"Yabo, it's month end, and salaries are out! \\ud83c\\udf89 This is fantastic!\", \"rewritten_form_sadness\": \"Yabo, month end again, and those salaries are so low. This really hurts.\", \"rewritten_form_fear\": \"Yabo, it's month end, and the salaries are coming. I'm so anxious about what they will be!\", \"rewritten_form_anger\": \"Yabo, it's month end, and those ridiculous salaries are here again! This is so frustrating!\", \"rewritten_form_surprise\": \"Yabo, it's month end and wow, the salaries are really here! What a surprise!\", \"rewritten_form_disgust\": \"Yabo, it's month end, and the salaries are just pathetic. I can't stand this!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sentiment related to month end and salaries, but it uses a worried emoji \ud83d\ude29 and an uncertain emoji \ud83e\udd28, which indicates a negative or anxious sentiment rather than joy. Therefore, it does not align with the joyful tone of the rewritten joy sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does imply negative feelings towards the salaries, indicating that the speaker is likely disappointed or sad about them. The use of the sad face emoji reinforces this sentiment, suggesting a reasonable alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the speaker might feel anxious about the salaries, the overall tone does not heavily lean towards fear. The emphasis seems more on disappointment than genuine fear, leading to a lower alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The use of emojis suggests frustration or disappointment rather than outright anger. The original sentence does not match the rhetorical flourish of the rewritten anger version, as it lacks a more aggressive sentiment towards the salaries.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is no indication in the original sentence of surprise regarding the salaries; it seems more resigned. The rewritten surprise version implies astonishment that is not present in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence expresses a sense of dissatisfaction but does not demonstrate the kind of visceral disgust that the rewritten disgust sentence implies. It feels more muted in sentiment, suggesting a lack of strong alignment.",
+        "disgust_intensity": 1
+    }
+}

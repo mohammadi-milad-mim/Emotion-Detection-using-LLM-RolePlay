@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"sayang gitar1 masih banyak mis melodinya\", \"rewritten_form_joy\": \"Wah, gitar ini masih punya banyak melodi yang menakjubkan!\", \"rewritten_form_sadness\": \"Sedih, gitar ini masih banyak melodi yang tidak sempurna.\", \"rewritten_form_fear\": \"Oh tidak, gitar ini masih banyak melodi yang salah!\", \"rewritten_form_anger\": \"Aduh, gitar ini masih banyak melodi yang meleset!\", \"rewritten_form_surprise\": \"Wow, gitar ini masih punya banyak melodi yang terlewat!\", \"rewritten_form_disgust\": \"Eww, gitar ini masih banyak melodi yang hancur!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a nuanced sentiment about the guitar having many melodies, suggesting a potential for enjoyment. However, it lacks overt positivity found in the joyful rewritten sentence. Therefore, it aligns moderately with joy due to its neutral tone that could imply joy at the possibility of perfecting the melodies.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "There is a slight acknowledgment of imperfection in the original statement, as it refers to many melodies being present but doesn't highlight a sense of loss or grief as strongly as the sadness variation does. This gives it a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey any explicit fear regarding the melodies of the guitar. The fear rewritten version introduces an emotional intensity that is completely absent in the original. Hence, the alignment with fear is very low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original implies some dissatisfaction, it does not convey strong anger as indicated in the rewritten form. The mention of melodies being 'off' does suggest frustration, but not to the extent that would invoke strong anger feelings.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not contain an element of surprise; it's a straightforward acknowledgment of the guitar's condition. The rewritten surprise sentence implies a sudden realization which isn't present in the original, indicating a weak alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original phrase does not express any disgust. The rewritten disgust sentence implies a strong negative reaction that simply isn\u2019t present in the original sentence. Therefore, it scores zero in this dimension as well.",
+        "disgust_intensity": 0
+    }
+}

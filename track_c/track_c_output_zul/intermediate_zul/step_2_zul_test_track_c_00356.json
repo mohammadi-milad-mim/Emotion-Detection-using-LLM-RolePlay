@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kungqongqiswe isalukazi sisolwa ngokuthakatha\", \"rewritten_form_joy\": \"Kungqongqiswe isalukazi sisolwa ngendlela enothando!\", \"rewritten_form_sadness\": \"Kungqongqiswe isalukazi sisolwa ngokuthakatha, kwazise imizamo ayiphumelelanga.\", \"rewritten_form_fear\": \"Kungqongqiswe isalukazi sisolwa ngokuthakatha, ngiyesaba ukuthi kuzokwenzeka okubi.\", \"rewritten_form_anger\": \"Kungqongqiswe isalukazi sisolwa ngokuthakatha, lokhu kungumsebenzi wesabekayo!\", \"rewritten_form_surprise\": \"Kungqongqiswe isalukazi sisolwa ngokuthakatha? Lokhu kubukeka kunomqondo ophambene!\", \"rewritten_form_disgust\": \"Kungqongqiswe isalukazi sisolwa ngokuthakatha, akukuhle nakancane! \"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a situation involving 'Kungqongqiswe isalukazi sisolwa ngokuthakatha' (the witch is being attacked), but does not convey warmth or positivity like the rewritten 'with love'. Therefore, it lacks the joy sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sadness version adds 'kwazise imizamo ayiphumelelanga' (because the efforts have failed), which implies a deeper emotional struggle. The original does not explicitly present this aspect of failure, so it connects only slightly to sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version introduces an explicit worry of something bad happening, which is not present in the original. The original does not imply any fear; thus, the intensity of fear is low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten anger sentence clearly expresses outrage by calling it 'a horrific act'. The original does not convey this level of anger but does imply conflict, which gives it a slight connection to anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise sentence questions the initial scenario emphasis on a notable contrast that is not present in the original. Thus, surprise is similarly not strongly aligned with the tone of the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The rewritten disgust sentence expresses a strong negative reaction to the situation, explicitly saying 'akukuhle nakancane' (it is not good at all). The original does not convey disgust, only a conflict situation, so there is no connection to disgust.",
+        "disgust_intensity": 0
+    }
+}

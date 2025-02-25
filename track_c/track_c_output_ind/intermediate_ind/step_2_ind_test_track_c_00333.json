@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Pan dadi yutubers alatnya tidak mendukung :'(\", \"rewritten_form_joy\": \"Wah, pan dadi yutubers, tapi alatnya belum mendukung! Senang sekali!\", \"rewritten_form_sadness\": \"Pan dadi yutubers, tapi alatnya tidak mendukung, rasanya sangat menyedihkan :'(\", \"rewritten_form_fear\": \"Pan dadi yutubers, tetapi alatnya tidak mendukung... apa yang akan terjadi sekarang?\", \"rewritten_form_anger\": \"Pan dadi yutubers, tapi alatnya tidak mendukung! Ini sangat menjengkelkan!\", \"rewritten_form_surprise\": \"Pan dadi yutubers, dan ternyata alatnya tidak mendukung? Oh wow!\", \"rewritten_form_disgust\": \"Pan dadi yutubers, tetapi alatnya tidak mendukung. Ini benar-benar menjijikkan!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative sentiment about not having supportive tools despite achieving a milestone, which contrasts with the joy expressed in the rewritten joy sentence. Thus, there is little alignment here.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of disappointment and sadness about the tools not supporting the achievement. This aligns closely with the rewritten sadness sentence which emphasizes a sad feeling.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does imply some uncertainty or concern about the lack of support, but it does not express a strong sense of fear as suggested in the rewritten fear sentence. The connection is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence carries a tone of disappointment but does not express overt anger or frustration, which the rewritten anger sentence does. The intensity of anger is thus quite low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text does not indicate surprise; it presents a straightforward situation without any shocking elements. The element of surprise in the rewritten version does not align with the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "While the original might have a hint of disdain towards the inadequate tools, it does not strongly evoke disgust, which is more pronounced in the rewritten disgust sentence. Therefore, the alignment is weak.",
+        "disgust_intensity": 1
+    }
+}

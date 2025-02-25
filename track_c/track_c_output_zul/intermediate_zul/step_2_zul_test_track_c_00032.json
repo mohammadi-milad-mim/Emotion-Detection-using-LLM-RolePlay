@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Badidekile kubulawa umhlengikazi ekilinikhi\", \"rewritten_form_joy\": \"Ukhumbula ngokujabula umhlengikazi owasiza kakhulu ekilinikhi!\", \"rewritten_form_sadness\": \"Ngiyazisola ngokudabukisayo ngokushona komhlengikazi ekilinikhi.\", \"rewritten_form_fear\": \"Kukhona umuzwa wokukhathazeka ngalokho okwenzekile kumhlengikazi ekilinikhi.\", \"rewritten_form_anger\": \"Ngiyaxaka ngokuzenzakalelayo kokubulawa komhlengikazi ekilinikhi! Lokhu akuhambisani!\", \"rewritten_form_surprise\": \"Ngiyamangala ukuthi umhlengikazi ekilinikhi ubulawelwe! Lokhu akukhulunywa!\", \"rewritten_form_disgust\": \"Ngiyashaqeka futhi ngiyacasukile ngalesi sahluko sokubulawa komhlengikazi ekilinikhi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses the death of a nurse, which is a serious and somber topic. The joy rewritten sentence talks about remembering the nurse joyfully, which is a very different tone. Thus, the original does not align well with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates that a nurse was killed, which is directly related to loss and grief. This aligns perfectly with the sadness rewritten sentence that expresses sorrow and regret over the nurse's death, thus a high degree of sadness is present.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The mention of a nurse being killed implies a potentially dangerous situation, which invokes feelings of fear. The fear rewritten sentence captures this sentiment by expressing concern over what happened, indicating a moderate alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original indicates a serious incident involving the death of a nurse, which can naturally provoke feelings of anger. The anger rewritten sentence expresses indignation regarding this act, suggesting a strong alignment with the emotion of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original is an alarming statement about a nurse being killed. The surprise rewritten sentence highlights shock and disbelief regarding this event, indicating a strong correlation with the original sentence's disturbing nature, hence a high degree of surprise.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "The original sentence describes a violent act (killing), which can generate feelings of disgust. The disgust rewritten sentence expresses shock and discontent about the nurse's murder, indicating a significant alignment with the emotion of disgust.",
+        "disgust_intensity": 3
+    }
+}

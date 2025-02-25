@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I-IPID iphenya elokudutshulwa kukaShai\", \"rewritten_form_joy\": \"I-IPID ibonakala imnandi kakhulu ngophenyo lokudutshulwa kukaShai!\", \"rewritten_form_sadness\": \"I-IPID iphenya ngobuhlungu bokudutshulwa kukaShai.\", \"rewritten_form_fear\": \"I-IPID iphenya ngocingo ngendaba edidayo yokudutshulwa kukaShai.\", \"rewritten_form_anger\": \"I-IPID iphenya ngokuqinile ngodlame lokudutshulwa kukaShai!\", \"rewritten_form_surprise\": \"I-IPID iphenya ngokumangazayo ngalokhu okukhuluma ngoko kudutshulwa kukaShai.\", \"rewritten_form_disgust\": \"I-IPID iphenya ngezinto eziphazamisayo zokudutshulwa kukaShai.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy; instead, it is more neutral in describing an investigative action. While the rewritten joyful version expresses happiness, the original lacks that enthusiasm. Therefore, it aligns weakly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence indicates an investigation into a serious event, which implies a recognition of negative impacts associated with it. The rewritten sad sentence clearly brings out this emotional aspect of loss or pain from the incident, suggesting a stronger alignment than joy, but not overwhelmingly strong.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence mentions an investigation that carries a serious tone, but it doesn\u2019t directly express fear. The rewritten fearful version heightens the sense of confusion and potential danger associated. Thus, while the original might hint at concern, it is not explicitly fearful.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence tends to portray a straightforward investigation without an emotional charge. The rewritten anger version includes a tone of intensity and strong feelings regarding violence, which the original does not imply, leading to a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is neutral and does not invoke surprise. The rewritten surprise version explicitly suggests unexpectedness regarding the subject of investigation, which is not reflected in the original. Hence, there is little to no alignment here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence is factual and presents no emotional distaste. The rewritten disgust version implies a strong negative reaction to certain aspects of the investigation, which the original does not convey at all, indicating a very low alignment.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Umculo uyangiphilisa'\", \"rewritten_form_joy\": \"Umculo uyangiphilisa, ngiyajabula!\", \"rewritten_form_sadness\": \"Umculo uyangiphilisa, kodwa ngizizwa ngidabukile.\", \"rewritten_form_fear\": \"Umculo uyangiphilisa, kodwa ngikhathazekile ngawe.\", \"rewritten_form_anger\": \"Umculo uyangiphilisa, kodwa umoya ovulekile ungathokozisi!\", \"rewritten_form_surprise\": \"Umculo uyangiphilisa! Akungajabulisi kanjani?\", \"rewritten_form_disgust\": \"Umculo uyangiphilisa? Lokhu akuphili, kuphuca!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a positive sentiment about music being healing. The rewritten joy sentence adds excitement and happiness with the phrase 'ngiyajabula' (I am happy). This suggests a strong alignment with joy, indicating a high intensity of positive emotion.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence suggests that music is healing, but the rewritten sadness version introduces a contrasting emotion of sadness with 'kodwa ngizizwa ngidabukile' (but I feel sad). This shows that while the original is positive, there is a possibility of a sad undercurrent, making it a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "In the original sentence, music has a healing quality, which does not directly align with fear. The rewritten fear sentence introduces an element of anxiety ('ngikhathazekile ngawe' translates to 'but I am worried about you'), which contrasts with the healing aspect. This results in a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is positive about the healing power of music. The rewritten anger version criticizes the open air for being unpleasing, which introduces an emotional conflict. However, this does not strongly relate to the original sentence, leading to a low degree of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is a straightforward statement about music's healing nature. The rewritten surprise sentence expresses astonishment with 'Akungajabulisi kanjani?' (How can this not make one happy?). This suggests a moderate surprise but does not strongly convey surprise relative to the original sentence's tone.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence maintains a positive sentiment towards music. However, the rewritten disgust sentence expresses rejection of the healing quality with 'Lokhu akuphili, kuphuca!' (This does not heal, it disgusts!), which sharply contrasts with the original\u2019s intent. This leads to a strong degree of disgust despite the original's positivity.",
+        "disgust_intensity": 3
+    }
+}

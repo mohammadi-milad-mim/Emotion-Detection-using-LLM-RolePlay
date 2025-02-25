@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Abafuni anikwe ibheyili ona-30\", \"rewritten_form_joy\": \"Nakanjani, abafuni anikwe ibheyili ona-30!\", \"rewritten_form_sadness\": \"Ngiyazi, abafuni anikwe ibheyili ona-30...\", \"rewritten_form_fear\": \"Ngibona lokho, abafuni anikwe ibheyili ona-30... kuyadabukisa!\", \"rewritten_form_anger\": \"Ujola, abafuni anikwe ibheyili ona-30!\", \"rewritten_form_surprise\": \"Yini! Abafuni anikwe ibheyili ona-30?\", \"rewritten_form_disgust\": \"Hhay, abafuni anikwe ibheyili ona-30! Lokhu akukuhle! \"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states \"Abafuni anikwe ibheyili ona-30,\" which translates to \"They don't want to give the 30 bill.\" While it doesn't convey joy, the rewritten form expresses a strong affirmative attitude. Therefore, there's a very weak connection to joy in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version indicates understanding and empathy, using an ellipsis to denote a sense of loss or disappointment. The original sentence doesn't contain emotional weight indicating sadness but does show a lack of something desired, which might imply mild sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Fear is implicated in the fear version, highlighting an emotional reaction to the situation. The term \"kuyadabukisa!\" (it's sad) doesn't strongly relate to fear in the original context; there is no indication of fear present in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten anger form is confrontational. While the structure could indicate frustration, the original sentence lacks the intensity or charged language that conveys anger; it is neutral without overt emotional cues.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Surprise in the rewritten form indicates an unexpected reaction. The original sentence does not express any reaction of surprise; it is a straightforward statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "Disgust is expressed very strongly in the rewritten version, indicating deep disapproval. The original sentence is neutral and lacks any expression of disgust, leading to no alignment with the emotion.",
+        "disgust_intensity": 0
+    }
+}

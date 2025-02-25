@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ngishilo ukuthi ngzovuka ngifa indlala \\ud83d\\ude2d\", \"rewritten_form_joy\": \"Ngishilo ukuthi ngzovuka ngiphunyukwe indlala, ngiyajabula! \\ud83d\\ude0a\", \"rewritten_form_sadness\": \"Ngishilo ukuthi ngzovuka ngifa indlala, kube nzima... \\ud83d\\ude14\", \"rewritten_form_fear\": \"Ngishilo ukuthi ngzovuka ngifa indlala, ngiyesaba kakhulu... \\ud83d\\ude1f\", \"rewritten_form_anger\": \"Ngishilo ukuthi ngzovuka ngifa indlala, lokho akufanele kwenzeke! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Ngishilo ukuthi ngzovuka ngifa indlala? Angikaze ngicabange lokho! \\ud83d\\ude2f\", \"rewritten_form_disgust\": \"Ngishilo ukuthi ngzovuka ngifa indlala, lokho kuyingqondo engiyiphika! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a serious concern about suffering from hunger, which contrasts with the joyful sentiment in the rewritten joy sentence. There's no joyful feeling present in the original text, so the alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a deep sense of impending loss and suffering due to hunger, which directly corresponds to the sadness conveyed in the rewritten sadness sentence. The emotion is highly relevant.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The context of potentially dying from hunger suggests a significant level of fear regarding survival and well-being. The alignment with fear in the rewritten version is strong, indicating anxiety about the situation.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original statement could be interpreted as a frustration about the inevitability of suffering and death from hunger, but it lacks an overt expression of anger. It somewhat aligns with the anger in the rewritten sentence, but not strongly.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The notion of dying from hunger can be shocking, but the original expression does not convey surprise. The surprise in the rewritten sentence suggests a reaction that isn't present in the original, leading to a low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not convey disgust towards the situation itself but rather desperation. The rewritten disgust sentence implies a rejecting sentiment that does not relate to the original's concern, indicating low alignment.",
+        "disgust_intensity": 0
+    }
+}

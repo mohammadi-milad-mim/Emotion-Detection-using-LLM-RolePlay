@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kusolwa isoka ngobulawe ezithwele\", \"rewritten_form_joy\": \"Kusolwa isoka ngobulawe ezithwele, kusho impilo emnandi!\", \"rewritten_form_sadness\": \"Kusolwa isoka ngobulawe ezithwele, kubuhlungu ukusho lokhu.\", \"rewritten_form_fear\": \"Kusolwa isoka ngobulawe ezithwele, uyazithokozisa kodwa kufanele sibe nekhono lokwakha.\", \"rewritten_form_anger\": \"Kusolwa isoka ngobulawe ezithwele, akusiyo indlela efanele yokwenza lokhu!\", \"rewritten_form_surprise\": \"Kusolwa isoka ngobulawe ezithwele? Ngingazama kanjani lokhu?\", \"rewritten_form_disgust\": \"Kusolwa isoka ngobulawe ezithwele, akukuhle lokhu! Uthanda ukusola abantu!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks an overtly joyful tone, which is present in the rewritten joyful version that suggests a pleasant implication ('kusho impilo emnandi'). The original statement could convey a neutral sentiment, hence it has very little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sadness version indicates that the original statement might carry a deeper, painful implication ('kubuhlungu ukusho lokhu'), which isn't directly evident in the original. However, there may be a subtle undertone of sadness present, leading to a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version introduces a cautionary note ('kufanele sibe nekhono lokwakha') that is not present in the original sentence. The original may hint at some risks, but it does not explicitly convey fear, resulting in low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence has no direct reference to anger or frustration, while the anger version expresses indignation regarding a method ('akusiyo indlela efanele'). Thus, the original aligns only slightly with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version introduces a questioning tone which is absent in the straightforward original. However, it does present an unfamiliarity or intrigue that could be related, though subtly. This suggests a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version explicitly highlights a negative view about the situation ('akukuhle lokhu! Uthanda ukusola abantu!'), which aligns poorly with the neutral tone of the original. Thus, it indicates minimal presence of disgust.",
+        "disgust_intensity": 0
+    }
+}

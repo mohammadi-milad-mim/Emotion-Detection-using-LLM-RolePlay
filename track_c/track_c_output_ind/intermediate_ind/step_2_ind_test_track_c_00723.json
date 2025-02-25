@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bagus sayangnya tak ada melodi,tambah melodi bang\", \"rewritten_form_joy\": \"Bagus sekali, tapi akan lebih seru jika ditambah melodi, ya!\", \"rewritten_form_sadness\": \"Bagus, tapi sayangnya melodi ini tidak ada, sangat mengecewakan.\", \"rewritten_form_fear\": \"Bagus, tapi tanpanya jadi menakutkan, kita harus tambahkan melodi segera!\", \"rewritten_form_anger\": \"Bagus, tapi sangat menjengkelkan tidak ada melodi, tolong tambahkan!\", \"rewritten_form_surprise\": \"Bagus! Oh, tapi kok tidak ada melodi? Itu mengejutkan!\", \"rewritten_form_disgust\": \"Bagus, tapi tanpa melodi ini benar-benar tidak enak, sungguh menyebalkan!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence shows appreciation for something good ('Bagus') but suggests adding a melody, which implies a desire for improvement rather than pure joy. The rewritten joy sentence is more enthusiastic and positive, implying high positivity that the original doesn't fully reflect.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original conveys a hint of disappointment by mentioning the absence of melody, which aligns moderately with the sadness expressed in the rewritten version that explicitly states a sense of letdown ('sangat mengecewakan').",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original acknowledges the lack of melody, it doesn\u2019t evoke a sense of fear. The fear rewritten sentence suggests urgency and anxiety which isn't present in the original, indicating low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original reflects some frustration about the absence of melody but not to a high degree, while the anger version expresses strong annoyance. The original doesn't convey the same intensity of irritation that the anger rewritten sentence does.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not convey an element of surprise, as it simply states a lack of melody without any unexpected twist. The surprise version introduces an element of shock that is absent in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original implies a slight dissatisfaction with the absence of melody, but it is not strong enough to evoke disgust. The rewritten disgust sentence shows significant distaste that the original lacks.",
+        "disgust_intensity": 1
+    }
+}

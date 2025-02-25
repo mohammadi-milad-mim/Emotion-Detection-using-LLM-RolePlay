@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Knpa gak bisa di donwload video nya\", \"rewritten_form_joy\": \"Ayay, kenapa ya aku gak bisa download video ini?\", \"rewritten_form_sadness\": \"Kenapa ya, aku sedih banget gak bisa download video ini.\", \"rewritten_form_fear\": \"Oh tidak, kenapa video ini tidak bisa didownload? Ada yang salah?\", \"rewritten_form_anger\": \"Kenapa sih ini gak bisa di-download? Sangat menjengkelkan!\", \"rewritten_form_surprise\": \"Eh, kenapa ini gak bisa di-download? Aneh banget!\", \"rewritten_form_disgust\": \"Ugh, kenapa video ini tidak bisa di-download? Sangat menjijikkan!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses frustration about not being able to download a video, lacking any joyful sentiment. The rewritten joyful version adds an excited tone ('yay'), which does not align with the original's frustration.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does express a mild disappointment about the inability to download the video, but it does not reflect a deep sadness. The rewritten version conveys a strong sense of sadness that isn't present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey any sense of fear or concern, whereas the rewritten version suggests panic or anxiety about the situation, showcasing a stronger emotional reaction.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence includes a tone of annoyance about not being able to download the video. The rewritten angry version emphasizes this annoyance further, indicating a higher intensity of frustration. Thus, the original does align with anger, albeit at a lower level.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence lacks any surprise element. The rewritten version introduces an element of surprise with 'eh', which contrasts with the original's straightforward expression of frustration.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not express disgust but rather a simple frustration. The rewritten disgusted version includes a strong negative reaction to the action, which is not present in the original sentence.",
+        "disgust_intensity": 0
+    }
+}

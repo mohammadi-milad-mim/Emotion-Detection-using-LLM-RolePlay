@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"aku suka lagu ini soalnya bagus\", \"rewritten_form_joy\": \"Aku sangat suka lagu ini, soalnya bener-bener bagus!\", \"rewritten_form_sadness\": \"Aku suka lagu ini, tapi entah kenapa rasanya sedih.\", \"rewritten_form_fear\": \"Aku suka lagu ini, tapi bagaimana kalau orang lain tidak suka?\", \"rewritten_form_anger\": \"Aku suka lagu ini, meskipun banyak yang meremehkannya!\", \"rewritten_form_surprise\": \"Aku suka lagu ini! Tak kukira bisa seseru ini!\", \"rewritten_form_disgust\": \"Aku suka lagu ini, meskipun aneh rasanya banyak yang bilang jelek.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a fondness for the song, aligning well with the tone of the joyful rewritten version, which amplifies excitement and enthusiasm.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence doesn\u2019t express any sadness, while the rewritten version introduces a conflicting emotion that isn\u2019t present in the original, indicating a weak alignment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original does not convey any concern about others' opinions, while the rewritten version introduces doubt, showing no alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence expresses preference but does not convey anger; the rewritten version addresses a dismissive attitude that the original lacks, indicating no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not express any surprise; the rewritten version suggests unexpected enjoyment, which diverges from the original's straightforward tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not evoke any feelings of disgust; the rewritten version implies a negative sentiment about others' views that is not present in the original.",
+        "disgust_intensity": 0
+    }
+}

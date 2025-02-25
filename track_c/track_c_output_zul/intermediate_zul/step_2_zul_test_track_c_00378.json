@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Badidekile ngendodana engatholakali\", \"rewritten_form_joy\": \"Badidekile, ngithokozile ngendodana engatholakali!\", \"rewritten_form_sadness\": \"Ngiphokophele, ngiyazizwa kabi ngendodana engatholakali.\", \"rewritten_form_fear\": \"Ngiyesaba, ngendodana engatholakali ingadala ubungozi.\", \"rewritten_form_anger\": \"Ngicwasa, lokhu kuphuthuma ngendodana engatholakali kuyanshaya!\", \"rewritten_form_surprise\": \"Ngiyamangala, angilindele ukuthi ngendodana engatholakali!\", \"rewritten_form_disgust\": \"Ngiyashaqeka, ngendodana engatholakali lokho kungenza ngizizwe kabi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey happiness or joy, whereas the joyful version expresses excitement and positive sentiment related to the child. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence involves an unspecified negative situation regarding a child, which can be interpreted as sad. It aligns with the sick feeling of the rewritten version, so a moderate intensity is appropriate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original implies a lack or loss (something regarding a child that cannot be found), which can naturally evoke fear. The fear rewritten reinforces that the situation could pose danger. A moderate alignment and intensity are appropriate here.",
+        "fear_intensity": 2,
+        "anger_reasoning": "Although there might be frustration implied in the original about the child, it does not approach outright anger. The rewritten version conveys a stronger sentiment, suggesting that the original doesn't match this emotion strongly.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not include elements of surprise, as it seems to describe a situation rather than a reaction to one. The rewritten form suggests unexpectedness that the original lacks.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not imply any gross or repulsive feeling, nor does it suggest that the situation invokes disgust. Thus, it doesn't align with the disgust emotion at all.",
+        "disgust_intensity": 0
+    }
+}

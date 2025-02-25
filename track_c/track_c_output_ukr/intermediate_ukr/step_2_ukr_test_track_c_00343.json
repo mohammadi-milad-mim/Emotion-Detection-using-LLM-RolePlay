@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u0422\\u0430\\u043a \\u0433\\u0430\\u0440\\u043d\\u043e \\u0431\\u0443\\u043b\\u043e \\u0431\\u0435\\u0437 \\u0442\\u043e\\u0457 \\u0441\\u043f\\u0435\\u043a\\u0438.\", \"rewritten_form_joy\": \"\\u0422\\u0430\\u043a \\u0440\\u0430\\u0434\\u0456\\u0441\\u043d\\u043e \\u0431\\u0443\\u043b\\u043e \\u0431\\u0435\\u0437 \\u0442\\u043e\\u0457 \\u0441\\u043f\\u0435\\u043a\\u0438!\", \"rewritten_form_sadness\": \"\\u0422\\u0430\\u043a \\u0441\\u0443\\u043c\\u043d\\u043e \\u0431\\u0443\\u043b\\u043e \\u0431\\u0435\\u0437 \\u0442\\u043e\\u0457 \\u0441\\u043f\\u0435\\u043a\\u0438.\", \"rewritten_form_fear\": \"\\u0422\\u0430\\u043a \\u043b\\u044f\\u043a\\u0430\\u044e\\u0447\\u0435 \\u0432\\u0438\\u0433\\u043b\\u044f\\u0434\\u0430\\u043b\\u043e \\u0431\\u0435\\u0437 \\u0442\\u043e\\u0457 \\u0441\\u043f\\u0435\\u043a\\u0438.\", \"rewritten_form_anger\": \"\\u0422\\u0430\\u043a \\u0440\\u043e\\u0437\\u0447\\u0430\\u0440\\u043e\\u0432\\u0430\\u043d\\u043e \\u0431\\u0443\\u043b\\u043e \\u0431\\u0435\\u0437 \\u0442\\u043e\\u0457 \\u0441\\u043f\\u0435\\u043a\\u0438!\", \"rewritten_form_surprise\": \"\\u0422\\u0430\\u043a \\u043d\\u0435\\u0439\\u043c\\u043e\\u0432\\u0456\\u0440\\u043d\\u043e \\u0431\\u0443\\u043b\\u043e \\u0431\\u0435\\u0437 \\u0442\\u043e\\u0457 \\u0441\\u043f\\u0435\\u043a\\u0438!\", \"rewritten_form_disgust\": \"\\u0422\\u0430\\u043a \\u043e\\u0433\\u0438\\u0434\\u043d\\u043e \\u0431\\u0443\\u043b\\u043e \\u0431\\u0435\\u0437 \\u0442\\u043e\\u0457 \\u0441\\u043f\\u0435\\u043a\\u0438.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy, but rather describes a negative feeling about the absence of something. The rewritten joyful version adds a positive sentiment which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a lack which can inherently suggest sadness or disappointment. This aligns with the rewritten sadness version, which explicitly reinforces the sentiment of loss. Hence, there is a moderate connection.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not evoke fear; instead, it states something was 'warm' without this element. The rewritten fear version introduces a feeling of fright that is not present in the original. Therefore, there is no connection.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence mentions a significant absence but does not explicitly express anger. The rewritten anger version indicates frustration, which does not align with the more neutral feeling of the original. There is a low connection due to the implicit disappointment but no overt anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks elements of surprise. It simply states a fact, while the rewritten surprise version infers unexpectedness, which is not present in the original's tone. Thus, there is no connection.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not evoke disgust; it merely notes the state of being without something. The rewritten disgust version creates a strong negative feeling, which is absent in the original sentence. Hence, there is minimal or no alignment.",
+        "disgust_intensity": 0
+    }
+}

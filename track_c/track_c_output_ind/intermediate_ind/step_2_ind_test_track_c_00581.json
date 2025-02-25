@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Saya Juga Punya Chanel Tpi Belom Terlalu Bagus :(\", \"rewritten_form_joy\": \"Saya Juga Punya Chanel dan sedang berusaha membuatnya semakin bagus!\", \"rewritten_form_sadness\": \"Saya Juga Punya Chanel, tapi masih merasa belum cukup bagus... :( \", \"rewritten_form_fear\": \"Saya Juga Punya Chanel, tapi saya khawatir itu tidak akan pernah bagus...\", \"rewritten_form_anger\": \"Saya Juga Punya Chanel, tapi kenapa tidak bisa jadi bagus seperti yang lain?!\", \"rewritten_form_surprise\": \"Saya Juga Punya Chanel, dan saya terkejut karena belum bisa membuatnya bagus!\", \"rewritten_form_disgust\": \"Saya Juga Punya Chanel, tapi rasanya begitu jelek dan tidak menarik.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a potential for improvement but does not express joy or excitement about it. The tone is neutral and somewhat negative due to the sadness conveyed by the frown emoticon. Thus, it aligns only slightly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text explicitly expresses a feeling of inadequacy regarding the channel, as indicated by the frown emoticon. This aligns closely with the sadness rewritten form, which also highlights feelings of not being good enough. Thus, sadness is present with moderate intensity.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The tone of the original sentence does not evoke fear; it is more reflective of a lack of confidence or disappointment rather than fear of failure.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While there is some frustration in the original sentence about the channel not being good, it does not convey strong anger. The rewritten form expressing anger is characterized by a more explosive frustration not captured in the original text. Thus, the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not evoke surprise. It expresses a feeling of underachievement without any shocking or unexpected element.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not convey feelings of disgust. It expresses disappointment but not repulsion or strong distaste as indicated in the disgust rewritten form.",
+        "disgust_intensity": 0
+    }
+}

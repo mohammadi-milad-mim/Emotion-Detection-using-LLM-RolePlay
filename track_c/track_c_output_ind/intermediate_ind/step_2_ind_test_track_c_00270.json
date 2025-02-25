@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ini hiburan . Bukan kontes bernyanyi, !!\\ud83e\\udd23\\ud83e\\udd23 abis kena omel bini x ya\\ud83d\\ude05\", \"rewritten_form_joy\": \"Ini hiburan yang seru! Bukan kontes bernyanyi, ya! \\ud83e\\udd23\\ud83e\\udd23 Kena omel bini juga pasti lucu! \\ud83d\\ude05\", \"rewritten_form_sadness\": \"Ini hiburan, tapi bukan kontes bernyanyi...\\ud83d\\ude14 Kena omel bini, rasanya menyedihkan...\\ud83d\\ude05\", \"rewritten_form_fear\": \"Ini hiburan, bukan kontes bernyanyi! Aku takut abis kena omel bini lagi! \\ud83d\\ude28\\ud83e\\udd23\", \"rewritten_form_anger\": \"Ini hiburan, bukan kontes bernyanyi! Kenapa harus kena omel bini? \\ud83d\\ude20\\ud83e\\udd23\", \"rewritten_form_surprise\": \"Wah, ini hiburan! Bukan kontes bernyanyi, ya?! \\ud83e\\udd14\\ud83e\\udd23 Kena omel bini? Wow! \\ud83d\\ude05\", \"rewritten_form_disgust\": \"Ini hiburan, bukan kontes bernyanyi! Kenapa harus kena omel bini, sih? Ugh! \\ud83d\\ude16\\ud83e\\udd23\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a light-hearted sentiment by referring to something as entertainment rather than a competition, and includes emojis that convey humor. However, it lacks the explicitly excited tone of the rewritten joy version, which uses more emphatic language and added positivity.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The sadness version expresses disappointment over the situation of entertainment that seems less enjoyable due to the threat of being scolded. The original does touch on a minor feeling of regret but maintains a more playful tone rather than a deeply sad one.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence indicates a certain fear of being scolded, aligning with the fear rewritten version where that fear is more explicitly stated. However, the fear in the original is not deeply felt, making it more of a light, humorous fear rather than profound.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original hints at annoyance with the mention of being scolded but does not convey strong anger. The rewritten version, however, displays more clear frustration, suggesting that the original reflects frustration rather than outright anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original doesn't exhibit strong surprise; it simply states a perspective about entertainment. The rewritten surprise version suggests more astonishment at the situation. Therefore, the original neither confirms nor surprises about any abrupt changes.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "While the original implies some distaste about being scolded, it does not convey explicit disgust as the rewritten version does. The phrase structure and lack of strong critical tone in the original limits it from reaching a level of disgust.",
+        "disgust_intensity": 1
+    }
+}

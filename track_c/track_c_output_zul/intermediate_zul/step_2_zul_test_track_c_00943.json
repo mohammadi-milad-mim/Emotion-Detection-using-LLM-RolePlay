@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kuboshwe inqwaba ekuleli ngokungemthetho\", \"rewritten_form_joy\": \"Kuboshwe inqwaba ekuleli, lokho kuhle kakhulu!\", \"rewritten_form_sadness\": \"Kuboshwe inqwaba ekuleli, futhi lokhu kuveza ubuhlungu obukhulu kumphakathi wethu.\", \"rewritten_form_fear\": \"Kuboshwe inqwaba ekuleli; lokho kuphakamisa ukukhathazeka ngemiphumela engalindelekile.\", \"rewritten_form_anger\": \"Kuboshwe inqwaba ekuleli, lokhu akwamukelekile neze!\", \"rewritten_form_surprise\": \"Kuboshwe inqwaba ekuleli\\u2014akukuhle kanjani lokhu okwaziyo?!\", \"rewritten_form_disgust\": \"Kuboshwe inqwaba ekuleli, kuhle kakhulu; lokhu kuyakwenyanya!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reports an arrest of a group, lacking positive or joyful connotations. The joyful rewritten form emphasizes a positive outcome, which does not align with the original intent.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates an arrest, which can imply negative consequences for individuals or communities. The sadness rewritten form aligns well, as it reflects the pain this event causes to the community.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original statement does not specifically evoke fear regarding unforeseen consequences; it states a fact about an arrest. The fear rewritten form introduces an element of worry about future implications, which doesn\u2019t match the neutral tone of the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence suggests an arrest but does not inherently express anger. However, the anger rewritten version captures indignation, which resonates more than other emotions regarding inappropriate actions, albeit not directly present in the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "Surprise typically comes from unexpected situations. The original sentence states what happened without leading to any surprise, consequently having low alignment with the surprise rewritten form.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original text does not convey disgust; it merely states a fact. The disgust rewritten version exaggerates the emotion, indicating a strong negative reaction that is not present in the original sentence.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u0443\\u0445! \\u0437 \\u043b\\u0435\\u0433\\u043a\\u0438\\u043c \\u043f\\u0430\\u0440\\u043e\\u043c \\u043c\\u0435\\u043d\\u0435!\", \"rewritten_form_joy\": \"\\u0423\\u0440\\u0430! \\u0417 \\u043b\\u0435\\u0433\\u043a\\u0438\\u043c \\u043f\\u0430\\u0440\\u043e\\u043c \\u043c\\u0435\\u043d\\u0435!\", \"rewritten_form_sadness\": \"\\u041e\\u0445... \\u0437 \\u043b\\u0435\\u0433\\u043a\\u0438\\u043c \\u043f\\u0430\\u0440\\u043e\\u043c \\u043c\\u0435\\u043d\\u0435...\", \"rewritten_form_fear\": \"\\u041e\\u0439! \\u0417 \\u043b\\u0435\\u0433\\u043a\\u0438\\u043c \\u043f\\u0430\\u0440\\u043e\\u043c \\u043c\\u0435\\u043d\\u0435!?\", \"rewritten_form_anger\": \"\\u0427\\u043e\\u0440\\u0442! \\u0417 \\u043b\\u0435\\u0433\\u043a\\u0438\\u043c \\u043f\\u0430\\u0440\\u043e\\u043c \\u043c\\u0435\\u043d\\u0435!\", \"rewritten_form_surprise\": \"\\u041e\\u0433\\u043e! \\u0417 \\u043b\\u0435\\u0433\\u043a\\u0438\\u043c \\u043f\\u0430\\u0440\\u043e\\u043c \\u043c\\u0435\\u043d\\u0435!\", \"rewritten_form_disgust\": \"\\u0424\\u0443! \\u0417 \\u043b\\u0435\\u0433\\u043a\\u0438\\u043c \\u043f\\u0430\\u0440\\u043e\\u043c \\u043c\\u0435\\u043d\\u0435!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of lightness or relief, similar to the joy expressed in the rewritten joyful sentence, which exclaims excitement with '\u0423\u0440\u0430!' This alignment suggests a happy sentiment around the '\u043b\u0435\u0433\u043a\u0438\u043c \u043f\u0430\u0440\u043e\u043c'.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not evoke sadness since it has a more neutral or slightly positive tone, while the sadness version expresses a clear '\u043e\u0445...' which conveys an emotional heaviness that isn't reflected in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The fear version expresses an element of surprise or concern ('\u041e\u0439!'), which isn\u2019t reflected in the original. While there is some fluctuation implied in the original, it doesn't convey fear directly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence has no elements of anger; it lacks the confrontation or frustration found in the anger version ('\u0427\u0435\u0440\u0442!'). Thus, these do not align.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence conveys a mild surprise or delight which resonates with the surprise rewritten sentence ('\u041e\u0433\u043e!'), indicating a moment of unexpected joy.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "There is no expression of disgust in the original sentence. The disgust sentence contains strong disapproval, which is not present in the original's tone.",
+        "disgust_intensity": 0
+    }
+}

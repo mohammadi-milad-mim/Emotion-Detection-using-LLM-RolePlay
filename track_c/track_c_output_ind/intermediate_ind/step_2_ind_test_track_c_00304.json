@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Beli beli apa yang gak pakai uang, tapi kalau di kluar dari air sangat bahaya, hayo, \\ud83d\\ude05\", \"rewritten_form_joy\": \"Beli beli yang gak pakai uang itu seru banget, tapi kalau keluar dari air bisa jadi berbahaya, ya!\", \"rewritten_form_sadness\": \"Beli beli apa yang sebenarnya tidak menggunakan uang, tapi saat keluar dari air, oh, bisa sangat berbahaya...\", \"rewritten_form_fear\": \"Beli beli yang tidak memerlukan uang, tetapi sangat menakutkan ketika keluar dari air, bisa jadi berbahaya!\", \"rewritten_form_anger\": \"Beli beli yang tidak perlu uang tapi keluar dari air bisa sangat berbahaya, pasti bikin kesel!\", \"rewritten_form_surprise\": \"Beli beli yang tidak pakai uang seperti itu, wah, kalau keluar dari air ternyata sangat berbahaya, ya!\", \"rewritten_form_disgust\": \"Beli beli yang tidak menggunakan uang, namun ketika dikeluarkan dari air, itu sangat menjijikkan dan berbahaya!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a playful tone with the phrase 'beli beli apa yang gak pakai uang,' which is echoed in the rewritten version for joy, emphasizing the fun aspect. However, the warning about danger when taken out of water tempers that joy. Overall, there's a lighthearted sentiment but not overwhelmingly joyful.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence suggests an element of danger tied to 'keluar dari air,' and the rewritten version for sadness captures a tone of concern and potential loss. While the original hints at a serious consequence, it lacks strong emotional weight, so the sadness is only moderate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence clearly expresses a potential danger with 'keluar dari air' being described as 'sangat bahaya.' The rewritten version for fear amplifies this sense of anxiety, aligning closely with the original intent. This connection presents a strong fear sentiment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original implies that leaving the water is dangerous, it does not inherently express anger. However, the anger rewritten form suggests frustration, which may reflect a reader's reaction to the warning. Therefore, the alignment is not as strong as with fear.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text captures an element of surprise with the inclusion of 'hayo,' suggesting a playful unpredictability. The rewritten surprise version effectively captures this, but the actual surprise factor is moderate as it doesn't carry a strong unexpected punch.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence does mention danger related to pulling something out of water, but it does not imply disgust directly. The rewritten disgust version exaggerates the unpleasantness but does diverge from the original tone, leading to a low alignment.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ya ji ciwo a kafa wurin ya rube tsutsotsi se yawo suke akai\", \"rewritten_form_joy\": \"Ya ji ciwo a kafa, amma tsutsotsin suna yawo acan da sisi!\", \"rewritten_form_sadness\": \"Ya ji ciwo a kafa, wurin da tsutsotsin suka rube suna yawo akai, ya yi zafi.\", \"rewritten_form_fear\": \"Ya ji ciwo a kafa, tsutsotsin sun rube suna yawo akai, hakan na sa ni jin tsoro.\", \"rewritten_form_anger\": \"Ya ji ciwo a kafa, tsutsotsin suna yawo a wurin da ya rube, abin takaici ne!\", \"rewritten_form_surprise\": \"Ya ji ciwo a kafa, tsutsotsin sun rube suna yawo akai, abin mamaki!\", \"rewritten_form_disgust\": \"Ya ji ciwo a kafa, tsutsotsin suna yawo akai, wannan abin kyama ne!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text conveys a painful experience rather than a joyful one. There's no indication of happiness or humor present, which contrasts with the joyful rewritten sentence's tone of enjoyment despite discomfort.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence communicates a clear discomfort due to a foot injury associated with the presence of worms, which aligns closely with the sadness expressed in the rewritten sentence. The phrase 'ya yi zafi' encapsulates the pain well, indicating a moderate level of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text implies a sense of discomfort due to the presence of worms, and the fear rewritten sentence heightens this with the explicit mention of fear. Although there is a sense of worry, it doesn't convey a strong sense of fear, leading to a low intensity score.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text presents a situation that could induce frustration due to the presence of worms causing discomfort. The rewritten anger sentence explicitly characterizes the situation as frustrating. There is some alignment, but not a strong emotional outburst, suggesting a moderate level of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "While the original sentence captures an unexpected and alarming experience, it doesn't convey the level of shock or astonishment suggested in the surprise rewritten form. This results in a low score for surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original text implies discomfort related to worms, which is closely mirrored by the disgust expression in the rewritten form. The phrase 'wannan abin kyama ne!' aligns well with the sentiment of disgust present in the original, resulting in a high intensity score.",
+        "disgust_intensity": 3
+    }
+}
