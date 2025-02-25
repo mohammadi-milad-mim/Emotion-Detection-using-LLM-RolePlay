@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"with a hot towel for me to put on my abdomen.\", \"rewritten_form_joy\": \"with a wonderfully soothing hot towel for me to gently place on my abdomen!\", \"rewritten_form_sadness\": \"with a heavy, hot towel for me to put on my aching abdomen.\", \"rewritten_form_fear\": \"with a hot towel for me to put on my abdomen, hoping it helps ease the discomfort.\", \"rewritten_form_anger\": \"with a hot towel for me to put on my abdomen, just what I needed after this frustrating day!\", \"rewritten_form_surprise\": \"with a hot towel for me to put on my abdomen\\u2014what a delightful treat!\", \"rewritten_form_disgust\": \"with a hot towel for me to put on my abdomen, how unpleasant!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and lacks any emotional context, while the joy version adds a soothing and uplifting connotation by using 'wonderfully soothing' and the exclamation at the end. The original does not convey this level of positivity.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version portrays a feeling of pain or discomfort, which is more intense than what the original sentence conveys. The word 'heavy' and 'aching' introduces a sense of sorrow that the original lacks, but there is a hint of discomfort in the original which aligns with this emotion.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version implies a concern or worry about the effectiveness of the treatment, which the original does not express. The use of 'hoping it helps ease the discomfort' adds a layer of anxiety that isn't present in the original, but the focal point is the hot towel treatment, so there is a slight alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version introduces a strong emotional reaction related to a frustrating day, which the original sentence does not express. The original statement is neutral while the rewritten version clearly conveys annoyance, so they don't align closely.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version reacts with delight, which is absent from the original sentence. The addition of 'what a delightful treat' suggests an unexpected positivity that contrasts with the neutral tone of the original, leading to low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

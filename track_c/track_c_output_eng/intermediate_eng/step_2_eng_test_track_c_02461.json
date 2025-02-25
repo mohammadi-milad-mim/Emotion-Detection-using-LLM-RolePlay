@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The first location: Wasn't crazy about it because my back faced the '' door '' and that's just not kosher.\", \"rewritten_form_joy\": \"The first location: I wasn't really keen on it since my back was to the door, and that felt a bit off.\", \"rewritten_form_sadness\": \"The first location: I really didn\\u2019t like it much because my back was turned to the door, which just felt wrong.\", \"rewritten_form_fear\": \"The first location: I was anxious about it since my back was to the door, and that made me uneasy.\", \"rewritten_form_anger\": \"The first location: I was really irritated by it because my back was facing the door, and that's just unacceptable.\", \"rewritten_form_surprise\": \"The first location: I was surprisingly not fond of it because my back was to the door, and I didn\\u2019t expect that!\", \"rewritten_form_disgust\": \"The first location: I was honestly put off by it since my back was facing the door; that just felt totally wrong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses mild dissatisfaction, which aligns loosely with the tone of the joy rewritten version, but there is no positive sentiment present. Therefore, the alignment is very weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original reflects a degree of disappointment and discomfort, matching the sadness rewritten version. Both express a sense of unease regarding not liking the situation. This indicates a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original suggests a sense of unease due to the position relative to the door, which aligns well with the fear rewritten version that indicates anxiety. The emotional cue of feeling uneasy makes this alignment stronger.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original expresses irritation with the situation, which aligns closely with the anger rewritten version that conveys a stronger dissatisfaction. The sense of something being 'not kosher' indicates a breach of personal comfort, indicating a moderate intensity of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original statement does not express any unexpected reactions; thus, it does not align with the surprise rewritten version, which suggests an unexpected fondness towards the situation. Therefore, the alignment is minimal.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

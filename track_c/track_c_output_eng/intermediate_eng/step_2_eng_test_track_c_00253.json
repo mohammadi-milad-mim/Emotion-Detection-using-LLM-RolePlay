@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"At this point we realized there had been an accident.\", \"rewritten_form_joy\": \"At this point, we happily realized there had been an accident.\", \"rewritten_form_sadness\": \"At this point, we sadly realized there had been an accident.\", \"rewritten_form_fear\": \"At this point, we feared there had been an accident.\", \"rewritten_form_anger\": \"At this point, we angrily realized there had been an accident.\", \"rewritten_form_surprise\": \"At this point, we were surprised to realize there had been an accident.\", \"rewritten_form_disgust\": \"At this point, we were disgusted to realize there had been an accident.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey happiness or a positive reaction to the realization of an accident. The joy rewritten form adds a positive emotional tone that is entirely absent in the original, indicating no alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a serious situation but does not explicitly express sadness. The sadness rewritten form adds a clear emotional context that the original lacks, but the serious nature does suggest some level of concern.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence presents a neutral realization of an accident without expressing fear; however, the fear rewritten form presents a more intense emotional response that is not reflected in the original,",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not contain any anger; it neutrally states a realization. The anger rewritten form implies a strong emotional reaction that is absent in the original, indicating no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence reveals a realization without directly suggesting surprise. The surprise rewritten form indicates a strong emotional reaction that suggests a significant change in understanding, but the original is more neutral in tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We never saw 70's guy again.\", \"rewritten_form_joy\": \"We never got to see 70's guy again, what a bummer!\", \"rewritten_form_sadness\": \"We never saw 70's guy again, and it really hurts to think about it.\", \"rewritten_form_fear\": \"We never saw 70's guy again; I can't shake the feeling something happened to him.\", \"rewritten_form_anger\": \"We never saw 70's guy again, and I can't believe he just disappeared like that!\", \"rewritten_form_surprise\": \"We never saw 70's guy again; I didn't expect him to just vanish!\", \"rewritten_form_disgust\": \"We never saw 70's guy again, and honestly, it leaves a bad taste in my mouth.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a neutral observation without any emotional impact. The rewritten joy sentence introduces an element of disappointment, which is not inherent in the original, resulting in low alignment for joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence notes the absence of '70's guy' but lacks emotional depth. The sadness sentence adds a sense of hurt, which is stronger than what is conveyed in the original. Thus, while there is a slight alignment, it remains low.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not suggest fear or concern for the well-being of '70's guy.' The fear sentence adds a feeling of unrest about his disappearance, which does not align with the original's tone. Therefore, there is a very low connection.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is neutral and does not express any form of frustration or anger. The rewritten sentence expresses disbelief and anger about the disappearance, which is not present in the original. Therefore, there's minimal alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is straightforward and offers no surprise element, while the surprise version implies an unexpected disappearance. Although the original indicates a lack of seeing someone, it does not convey surprise, resulting in a very low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

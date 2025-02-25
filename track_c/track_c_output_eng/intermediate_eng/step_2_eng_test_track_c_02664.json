@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Obviously, she's pissed.\", \"rewritten_form_joy\": \"Clearly, she's excited!\", \"rewritten_form_sadness\": \"It's clear she's upset.\", \"rewritten_form_fear\": \"It's obvious she's really angry; I'm worried about her.\", \"rewritten_form_anger\": \"Clearly, she's furious!\", \"rewritten_form_surprise\": \"Wow, she's really angry!\", \"rewritten_form_disgust\": \"Ugh, it's obvious she's really mad.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses anger, which is the opposite of joy. The emotion of joy does not align with the tone or content of the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original text indicates anger, it does not directly convey sadness. However, someone could infer a sense of being upset due to the frame of anger, but it doesn't suggest sadness strongly enough.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a hint of fear in the original sentence as the word 'pissed' suggests anger, which might lead someone to worry about the person in question. However, the fear is not the main emotion expressed.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence directly states that 'she's pissed', which is a clear and strong expression of anger. This aligns perfectly with the rewritten version that also focuses on fury.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "There is a strong emphasis on anger in the original sentence that could create a sense of surprise in others witnessing her anger. It suggests that the realization of her anger could catch someone off guard, though it's secondary to the action of being angry.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

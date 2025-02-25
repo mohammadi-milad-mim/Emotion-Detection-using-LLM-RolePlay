@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"`` I hurt my finger and I..\", \"rewritten_form_joy\": \"I hurt my finger and I'm still managing to laugh about it!\", \"rewritten_form_sadness\": \"I hurt my finger and it really just ruins my day..\", \"rewritten_form_fear\": \"I hurt my finger and I'm terrified it might be worse than I thought\\u2026\", \"rewritten_form_anger\": \"I hurt my finger and I can't believe how careless I was!\", \"rewritten_form_surprise\": \"I hurt my finger and I didn't see that coming at all!\", \"rewritten_form_disgust\": \"I hurt my finger and it's just so annoying and gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a physical hurt without additional details of joy or humor. The rewritten joy sentence implies a positive spin on the injury, which does not align with the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement hints at some negative sentiment due to the injury, but it doesn't explicitly state feelings of sadness. The rewritten sadness sentence connects better as it emphasizes a day-ruining effect, which the original lacks.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey any fear or concern about the injury. The rewritten fear sentence contrasts this by implying trepidation associated with the injury.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not express regret or frustration concerning the injury. The rewritten anger sentence introduces a strong feeling of irresponsibility, which the original does not hint at.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence reflects a straightforward expression of pain but lacks any surprising elements. The rewritten surprise sentence implies an unexpected incident that is not hinted at in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

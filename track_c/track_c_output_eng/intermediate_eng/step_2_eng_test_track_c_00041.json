@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Suddenly a silver can whizzed by my head, wetting me with watered down Coors.\", \"rewritten_form_joy\": \"Out of nowhere, a silver can zipped past my head, splashing me with a refreshing spray of Coors!\", \"rewritten_form_sadness\": \"Suddenly, a silver can flew past my head, drenching me in watered down Coors, which just felt like another disappointment.\", \"rewritten_form_fear\": \"In an instant, a silver can shot past my head, showering me with watered down Coors, and my heart raced at the near miss.\", \"rewritten_form_anger\": \"Without warning, a silver can darted by my head, splattering me with watered down Coors\\u2014I can't believe someone would be so reckless!\", \"rewritten_form_surprise\": \"Suddenly, a silver can whizzed by my head, splattering me with watered down Coors\\u2014it completely caught me off guard!\", \"rewritten_form_disgust\": \"Suddenly, a silver can zipped by my head, dousing me with that disgusting watered down Coors, and I felt repulsed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an event that is surprising and somewhat amusing but lacks the positive twist that indicates joy, such as a refreshing spray or enjoyment of the moment. The rewritten version emphasizes joy with words like \"refreshing\" that frame the experience positively, which is not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence indicates an unexpected occurrence but does not clearly imply disappointment or sadness; it simply states a fact about being wet with watered down beer. The rewritten sadness version introduces a sense of disappointment which the original does not capture, lowering the alignment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence indicates a sudden action, but it doesn't evoke strong feelings of fear. In comparison, the rewritten fear version emphasizes physical danger with phrases like \"my heart raced,\" which aren\u2019t present in the original. The original lacks the subjective experience required to stir fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence describes an unexpected incident, it doesn't imply anger or frustration towards another person; it reads more as an observation rather than an emotional response. The rewritten anger version suggests outrage at someone's recklessness, which is absent in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence indicates a sudden occurrence that captures the element of surprise well. It mirrors the tone of the rewritten surprise version effectively, conveying an unexpected event that certainly caught the speaker off guard.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

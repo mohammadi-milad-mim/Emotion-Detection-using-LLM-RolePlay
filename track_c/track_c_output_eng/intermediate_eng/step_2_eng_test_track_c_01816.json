@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"In one split second, the thought in my head reacted against me, and made you notice.\", \"rewritten_form_joy\": \"In one amazing split second, the thought in my head sparked a realization, and made you notice!\", \"rewritten_form_sadness\": \"In one painful split second, the thought in my head turned against me, and made you notice somehow.\", \"rewritten_form_fear\": \"In one frightening split second, the thought in my head betrayed me, and made you notice my weakness.\", \"rewritten_form_anger\": \"In one infuriating split second, the thought in my head backfired, making you notice it against my will.\", \"rewritten_form_surprise\": \"In one shocking split second, the thought in my head unexpectedly reacted, and made you notice!\", \"rewritten_form_disgust\": \"In one revolting split second, the thought in my head disgustingly backfired, making you notice.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks a positive spin or uplifting sentiment found in the joy rewritten version. It doesn't express delight but rather a negative reaction, thus scoring low for joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns moderately with sadness as it indicates a personal struggle with thoughts that reacted negatively, resembling the more painful tone in the sadness rewritten version.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at a sense of betrayal by one's own thoughts, similar to fear's tone of weakness. However, it does not fully embrace a sense of impending danger, thus scoring moderately.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence clearly conveys frustration and a negative reaction to one\u2019s thoughts; it resonates well with the anger rewritten version that highlights a backfire, scoring high for anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original statement does carry an element of unexpectedness, as it emphasizes a sudden reaction of thought that caught someone's attention. However, it lacks dramatic emphasis seen in the surprise rewritten form, scoring moderately.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

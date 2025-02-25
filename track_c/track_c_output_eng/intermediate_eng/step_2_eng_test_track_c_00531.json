@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had wanted to run home and shower, scrub the ick off my skin until I couldn't feel anything at all.\", \"rewritten_form_joy\": \"I couldn't wait to run home and shower, scrubbing the ick off my skin until I felt utterly refreshed!\", \"rewritten_form_sadness\": \"I just wanted to run home and shower, scrubbing the ick off my skin until I felt numb and empty inside.\", \"rewritten_form_fear\": \"I felt a sudden urge to run home and shower, scrubbing the ick off my skin until I was sure I could erase my anxiety completely.\", \"rewritten_form_anger\": \"I was so frustrated that I just had to run home and shower, scrubbing the ick off my skin until it wouldn't cling to me anymore.\", \"rewritten_form_surprise\": \"I surprisingly felt the strong urge to run home and shower, scrubbing the ick off my skin until I couldn't feel anything at all!\", \"rewritten_form_disgust\": \"I was repulsed and just wanted to run home and shower, scrubbing the ick off my skin until it was completely gone.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a desire to wash away discomfort but lacks a joyful tone. The rewritten joy sentence transforms that into excitement and refreshment, which isn't conveyed in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original expresses an intense feeling of wanting to rid oneself of discomfort but does not convey a sense of sadness; rather, it suggests a desire for relief. The rewritten sadness form captures a deeper emotional void that isn't quite present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies discomfort but not fear. The rewritten fear version introduces a sense of anxiety and urgency that is not expressed in the original, indicating a lack of fear in the original context.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence expresses frustration indirectly through the act of scrubbing. The rewritten anger form brings a clearer tone of frustration, suggesting more intensity than the original implies. Still, there is a hint of anger in wanting relief from annoyance.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence has a longing that might invoke surprise if the action were unexpected. However, the surprise version emphasizes a sudden realization that is not reflected in the original, reducing the alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

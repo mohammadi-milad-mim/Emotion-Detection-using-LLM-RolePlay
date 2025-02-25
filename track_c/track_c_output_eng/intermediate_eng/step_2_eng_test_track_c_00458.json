@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She looked up at me, shocked, and said, \\\"My dad is dead.\", \"rewritten_form_joy\": \"She looked up at me, with a bright smile, and said, \\\"My dad is dead, but I still feel him with me every day!\\\"\", \"rewritten_form_sadness\": \"She looked up at me, tears streaming down her face, and said, \\\"My dad is dead...\\\"\", \"rewritten_form_fear\": \"She looked up at me, wide-eyed and trembling, and said, \\\"My dad is dead... what does that even mean for me?\\\"\", \"rewritten_form_anger\": \"She looked up at me, fury blazing in her eyes, and said, \\\"My dad is dead, and it\\u2019s unfair!\\\"\", \"rewritten_form_surprise\": \"She looked up at me, her eyes wide with disbelief, and said, \\\"My dad is dead?!\\\"\", \"rewritten_form_disgust\": \"She looked up at me, revulsion in her voice, and said, \\\"My dad is dead, and people just don\\u2019t care!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not reflect joy; the expression is serious and conveys shock rather than happiness. The rewritten joy sentence presents a positive attitude towards a tragedy, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns closely with the sadness emotion, as it conveys shock and the painful reality of loss. The rewritten sadness reflects a similar tone, emphasizing tears and grief.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does convey an element of fear, given the use of the word 'shocked,' which suggests uncertainty and anxiety about the implications of the news. However, it does not fully capture paranoia or deep fear, making it moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence doesn\u2019t express anger, it does reflect a sense of injustice or frustration about death in the rewritten version. Therefore, there is no alignment with anger in the original context, which seems more reflective and shocked.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence expresses surprise through the initial shock; hence, it aligns well with the surprise emotion. The rewritten surprise sentence maintains this sentiment, amplifying the shock factor.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

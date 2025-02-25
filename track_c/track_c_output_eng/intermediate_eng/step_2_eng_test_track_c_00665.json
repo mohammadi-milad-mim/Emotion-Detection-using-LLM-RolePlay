@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I can only remember my eye getting swollen by a bug bite once before in my life, so I've really made great strides this week.\", \"rewritten_form_joy\": \"I can only remember my eye getting swollen by a bug bite once before, but this week has been a huge win for me!\", \"rewritten_form_sadness\": \"I can only remember my eye getting swollen by a bug bite once before in my life, and it just makes me feel so defeated to have gone through this again this week.\", \"rewritten_form_fear\": \"I can only remember my eye getting swollen by a bug bite once before in my life, and the thought of it happening again really unsettles me this week.\", \"rewritten_form_anger\": \"I can only remember my eye getting swollen by a bug bite once before, and I'm so frustrated that it happened again this week!\", \"rewritten_form_surprise\": \"I can only remember my eye getting swollen by a bug bite once before, so I'm shocked that I've had to deal with it again this week.\", \"rewritten_form_disgust\": \"I can only remember my eye getting swollen by a bug bite once before in my life, and honestly, I just feel gross about this week.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies progress ('really made great strides this week'), but it is not overwhelmingly positive. This matches the joy rewritten form, which expresses a win, suggesting optimism and happiness about overcoming the issue this week.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original does mention a past bug bite, the tone is more neutral and focuses on personal progress rather than defeat. The sadness rewritten form expresses a feeling of defeat which is not present in the original, leading to a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does mention a past experience with a bug bite but does not express fear or apprehension about it happening again. The fear rewritten form emphasizes feeling unsettled, which does not accurately reflect the sentiment of the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original includes an element of progress rather than anger about the situation. The anger rewritten form centers on frustration with the recurrence of the issue, which doesn\u2019t align with the original sentiment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original conveys a sense of remembering past experiences but does not convey shock. The surprise rewritten form emphasizes surprise at dealing with the issue again, which is not what the original sentence suggests.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

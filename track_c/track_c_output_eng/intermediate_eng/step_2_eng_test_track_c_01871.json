@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had brought a crazy outfit: bright red wig, referee jersey, black miniskirt, and knee-high white pleather boots with 3-inch heels.\", \"rewritten_form_joy\": \"I had brought an absolutely fabulous outfit: a bright red wig, a referee jersey, a playful black miniskirt, and stunning knee-high white pleather boots with 3-inch heels!\", \"rewritten_form_sadness\": \"I had brought a rather eccentric outfit: a bright red wig, a referee jersey, a black miniskirt, and knee-high white pleather boots with 3-inch heels, though it felt out of place.\", \"rewritten_form_fear\": \"I had brought a wild outfit: a bright red wig, a referee jersey, a black miniskirt, and knee-high white pleather boots with 3-inch heels, and I worried about how people would react.\", \"rewritten_form_anger\": \"I had brought this ridiculous outfit: a bright red wig, a referee jersey, a black miniskirt, and knee-high white pleather boots with 3-inch heels, and it infuriates me that no one appreciates it!\", \"rewritten_form_surprise\": \"I had brought an unexpectedly crazy outfit: a bright red wig, a referee jersey, a black miniskirt, and knee-high white pleather boots with 3-inch heels!\", \"rewritten_form_disgust\": \"I had brought this ghastly outfit: a bright red wig, a referee jersey, a black miniskirt, and knee-high white pleather boots with 3-inch heels, and I couldn't believe it. \"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an outfit that could be seen as fun or playful, which is echoed in the rewritten joy sentence that emphasizes 'absolutely fabulous' and 'stunning'. However, the tone in the original is less explicitly joyful, hinting more at eccentricity than outright joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence conveys a sense of eccentricity in the outfit, and the rewritten sadness version suggests feeling out of place. The original doesn't imply sadness directly but does share a similar sentiment of being slightly outlandish, hence a moderate degree of alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests a bold choice in outfit without addressing concern, yet the fear sentence implies worry about reactions. Since the original doesn't show fear directly, but could imply a hint of apprehension about how such an outfit will be perceived, the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original describes a 'crazy outfit' without expressing frustration or anger. The anger version, which portrays the outfit as 'ridiculous' and expresses frustration over not being appreciated, reflects an emotional benchmark that the original doesn't match closely. Thus the alignment here is very low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The mention of a 'crazy outfit' in the original sentence aligns well with the idea of something being 'unexpectedly crazy' in the surprise version. This suggests that the original does match the tone of surprise reasonably well.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

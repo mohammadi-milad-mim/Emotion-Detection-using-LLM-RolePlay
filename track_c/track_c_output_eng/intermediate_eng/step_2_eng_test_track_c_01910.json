@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"His back still really hurts, but the doctor says he should be back to normal by the end of the week.\", \"rewritten_form_joy\": \"His back still really hurts, but the doctor says he should be back to normal by the end of the week, and I can't wait to see him feeling good again!\", \"rewritten_form_sadness\": \"His back still really hurts, and even though the doctor says he should be back to normal by the end of the week, I can\\u2019t help but feel worried for him.\", \"rewritten_form_fear\": \"His back still really hurts, and while the doctor says he should be back to normal by the end of the week, I can\\u2019t shake the fear that it might not be true.\", \"rewritten_form_anger\": \"His back still really hurts, and it makes me so angry that the doctor says he'll be back to normal by the end of the week when I know it's worse than that.\", \"rewritten_form_surprise\": \"His back still really hurts, but surprisingly, the doctor says he should be back to normal by the end of the week!\", \"rewritten_form_disgust\": \"His back still really hurts, and it's disgusting that the doctor thinks he'll be back to normal by the end of the week without proper care.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a degree of hope regarding recovery, but lacks the enthusiastic tone present in the joy version. It conveys a more neutral sentiment overall, indicating that while the doctor has a positive outlook, it doesn't evoke strong feelings of joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence reflects a moderate concern about pain without deep emotional distress, unlike the sadness version which explicitly connects the pain to a personal worry. Therefore, it shows a slight alignment with sadness but not strongly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence hints at uncertainty regarding recovery, but lacks the overt fear present in the fear version. It conveys a sense of acceptance about the situation, leading to a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no indication of anger in the original sentence. It simply states a medical opinion without expressing frustration or disbelief like the anger version does.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does contain an element of surprise regarding the recovery timeline but not in an exciting or shocking way. It is more factual. Hence, the alignment with surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

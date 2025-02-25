@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then he was gone.\", \"rewritten_form_joy\": \"Then he was off to his next adventure!\", \"rewritten_form_sadness\": \"And just like that, he was gone, leaving a heavy silence behind.\", \"rewritten_form_fear\": \"Then he was gone, and I felt a chill creep over me. What could happen next?\", \"rewritten_form_anger\": \"Then he was gone, disappearing without a word, just like that!\", \"rewritten_form_surprise\": \"Then he was gone\\u2014wait, what just happened?\", \"rewritten_form_disgust\": \"Then he was gone, as if he couldn't stand being here for another moment.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a departure without any joyful connotation, whereas the rewritten joy sentence suggests excitement and adventure, which is not present in the original. Therefore, the alignment with joy is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of loss with a blunt acknowledgment of someone's absence, aligning closely with the rewritten sadness version that expresses a feeling of heavy silence. This connection indicates a moderate degree of sadness in the original sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original sentence suggests a sudden absence, it does not explicitly evoke fear, unlike the rewritten version that introduces a sense of impending danger. However, the abruptness does create a slight base for fear, though it's not strong.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original mentions a disappearance but lacks the emotional weight of the rewritten anger sentence, which carries a sense of betrayal or irritation at the lack of communication. Therefore, this connection to anger is minimal.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence, while indicating something unexpected, does not convey the shock or confusion found in the rewritten surprise sentence. There is a slight surprise factor due to the abruptness, but it's not powerful.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She put my hair in a side ponytail and threw a hat on top of my head.\", \"rewritten_form_joy\": \"She playfully styled my hair in a side ponytail and cheerfully tossed a hat on top of my head!\", \"rewritten_form_sadness\": \"She put my hair in a side ponytail and placed a hat on top of my head, but it felt so heavy.\", \"rewritten_form_fear\": \"She put my hair in a side ponytail and then threw a hat on top of my head, and I worried about how it would look.\", \"rewritten_form_anger\": \"She carelessly put my hair in a side ponytail and threw a hat on top of my head like it didn\\u2019t matter at all!\", \"rewritten_form_surprise\": \"She unexpectedly put my hair in a side ponytail and threw a hat on top of my head out of nowhere!\", \"rewritten_form_disgust\": \"She hastily put my hair in a side ponytail and plopped a dirty hat on top of my head.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a casual act of styling hair, which can be seen as playful and light-hearted. However, it lacks the exuberance and positive energy expressed in the joy rewrite, where the character is described as playful and cheerful, significantly enhancing the joyful tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence doesn't explicitly convey sadness, as it describes a neutral action. The sadness rewrite evokes a sense of burden with the phrase 'felt so heavy', which is absent in the original, leading to a low alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original acts of putting hair in a ponytail and placing a hat are neutral, the fear rewrite introduces worry about appearance, which is not implied in the original text at all. Therefore, there is minimal alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original description does not indicate anger. However, the anger rewrite adds connotations of carelessness and lack of concern, which are not found in the original sentence. This suggests a significant disconnection from feelings of anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original action can be perceived as somewhat unexpected, but it does not capture the heightened sense of surprise found in the rewrite. The phrase 'out of nowhere' implies a greater level of abruptness and astonishment that the original sentence lacks.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

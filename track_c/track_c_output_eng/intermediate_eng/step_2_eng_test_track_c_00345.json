@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Her face when her mum told her she miscarried still haunts me.\", \"rewritten_form_joy\": \"Her face lit up with relief when her mum finally said everything was okay, and I remember it fondly.\", \"rewritten_form_sadness\": \"Her face when her mum told her she miscarried is a painful memory that lingers with me.\", \"rewritten_form_fear\": \"Her face when her mum told her she miscarried is a terrifying image that disturbs me to this day.\", \"rewritten_form_anger\": \"Her face when her mum told her she miscarried fills me with rage that such a thing could happen to her.\", \"rewritten_form_surprise\": \"Her face when her mum told her she miscarried was so unexpected, it truly shocked me.\", \"rewritten_form_disgust\": \"Her face when her mum told her she miscarried is a grotesque reminder of how cruel life can be.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence speaks about a haunting memory tied to a miscarriage, which doesn't align with the joyful sentiment portrayed in the rewritten form that focuses on relief and fondness. Therefore, there is no connection to joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly expresses a poignant memory related to loss, aligning closely with the sadness conveyed in the rewritten form, which also emphasizes pain and the persistence of that memory.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not express fear but rather a lingering sadness about a past event. While it creates an unsettling image, it does not evoke fear as described in the rewritten sentence regarding the emotional disturbance of the memory.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks a sense of rage or injustice. It conveys deep melancholy rather than anger, making the connection to the rewritten form of anger weak.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not contain an element of surprise; it describes a tragic event rather than an unexpected one. The emotional tone of the original does not match the surprise in the rewritten form.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

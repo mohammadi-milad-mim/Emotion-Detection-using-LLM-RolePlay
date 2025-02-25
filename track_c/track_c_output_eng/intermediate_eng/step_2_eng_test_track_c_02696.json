@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I thought it was against policy.\", \"rewritten_form_joy\": \"I was so happy to discover it wasn't against policy after all!\", \"rewritten_form_sadness\": \"I really wish it wasn't against policy.\", \"rewritten_form_fear\": \"I was terrified it might really be against policy.\", \"rewritten_form_anger\": \"I can't believe it was against policy!\", \"rewritten_form_surprise\": \"Wait, I thought it was against policy?\", \"rewritten_form_disgust\": \"Ugh, I thought it was against policy, but it's ridiculous.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a simple statement without joy, in contrast to the rewritten sentence which conveys a strong positive feeling upon discovering a favorable outcome. There is no indication of joy present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text has a neutral tone and does not express longing or disappointment, unlike the rewritten form which wishes for a different reality. The original does not convey any sense of sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence lacks any direct expression of fear. Although it suggests a concern about policy, it does not convey the level of terror suggested in the rewritten form, which implies a high emotional intensity related to fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The statement does not express explicit anger or outrage. While the rewritten form suggests strong frustration and disbelief, the original sentence maintains a neutral tone without those emotional undertones, indicating low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does provide a sense of uncertainty about the policy, resembling the surprise shown in the rewritten form. However, it lacks the exclamatory or incredulous tone present in the surprise version, suggesting a moderate connection but not strong astonishment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

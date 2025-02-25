@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This plan did not work, I managed to get about 2 hours of sleep all night ( likely because of the tylenol PM I had ) because I could not get my leg into a comfortable position at any point all night.\", \"rewritten_form_joy\": \"This plan didn\\u2019t quite work out, but I still got about 2 hours of sleep! Oddly enough, I think it was the Tylenol PM that helped a bit, even though I struggled to find a comfortable position for my leg all night.\", \"rewritten_form_sadness\": \"This plan did not work out at all. I only managed to get about 2 hours of sleep through the night, probably due to the Tylenol PM I took, since I couldn\\u2019t find a comfortable position for my leg at any point.\", \"rewritten_form_fear\": \"This plan did not work, and I'm worried that I only got about 2 hours of sleep all night. It was likely because of the Tylenol PM, but I couldn't get my leg into a comfortable position even for a moment, which made me anxious.\", \"rewritten_form_anger\": \"This plan was a disaster! I only got 2 hours of sleep all night, probably because of that Tylenol PM I took, and I couldn't get my leg into a comfortable position at any point! It's infuriating!\", \"rewritten_form_surprise\": \"Wow, this plan didn't go as expected. I ended up with only about 2 hours of sleep all night\\u2014probably because of the Tylenol PM I took\\u2014since I couldn't seem to get my leg into a comfortable position at all!\", \"rewritten_form_disgust\": \"This plan completely failed. I managed only about 2 hours of sleep all night, likely due to that annoying Tylenol PM I took, because I couldn't get my leg into a comfortable position even once. What a terrible experience!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy. It talks about a failed plan and struggle with sleep, despite mentioning Tylenol PM. The overall tone is negative rather than positive.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of disappointment and struggle, aligning closely with the sadness expressed in the rewritten form. The mention of not getting enough sleep and discomfort supports this alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is an element of anxiety related to the sleep deprivation and discomfort, although it is not the dominant emotion. This aligns moderately with the fear depicted in the rewritten form, but it is not as intense.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence hints at frustration regarding the situation, but it lacks the strong tone of anger found in the rewritten form. It's more resigned than outraged, suggesting a low level of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence shows some elements of surprise through the unexpected outcome of the plan, but it does not convey a strong sense of surprise as the rewritten version does. There is a mild indication of surprise, but it's subtle.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

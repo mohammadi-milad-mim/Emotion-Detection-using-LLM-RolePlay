@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"it's a battle between my heart and my mind.\", \"rewritten_form_joy\": \"it's such an exciting dance between my heart and my mind!\", \"rewritten_form_sadness\": \"it's a painful struggle between my heart and my mind.\", \"rewritten_form_fear\": \"it's a daunting battle between my heart and my mind, and I fear the outcome.\", \"rewritten_form_anger\": \"it's an infuriating battle between my heart and my mind!\", \"rewritten_form_surprise\": \"it's an unexpected battle between my heart and my mind!\", \"rewritten_form_disgust\": \"it's a revolting conflict between my heart and my mind.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a struggle without an inherently positive or joyous tone. The rewritten version frames it as an 'exciting dance', which adds a clear element of joy that isn't present in the original expression. Therefore, the original aligns very weakly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original phrase suggests an ongoing internal conflict, which can imply a level of emotional struggle and tension. The rewritten version emphasizes pain, closely aligning with the sentiment of the original. Thus, the original carries a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original line indicates a struggle, but it doesn't explicitly convey fear. The rewritten form introduces the term 'daunting' and expresses concern about the outcome, which adds a layer of fear not present in the original. The original aligns with the idea of a struggle but lacks the emotional weight of fear as portrayed in the rewritten form.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original describes a conflict, it does not express anger explicitly. The rewritten version emphasizes the intensity of the conflict with 'infuriating', which indicates strong anger. The original sentiment does not heavily align with anger; it is more neutral than angry.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not imply anything unexpected; it describes a familiar conflict. The rewritten version hints at an unexpected element, suggesting a significant deviation from the norm, which the original lacks. Therefore, there is little alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

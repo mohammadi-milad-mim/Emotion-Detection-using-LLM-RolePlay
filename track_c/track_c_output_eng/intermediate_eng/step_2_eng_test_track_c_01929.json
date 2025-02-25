@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"one night, i had just drifted off to sleep when i woke up to the sound of my cat growling.\", \"rewritten_form_joy\": \"One night, just as I drifted off into blissful sleep, I was joyfully awakened by my cat's playful growling!\", \"rewritten_form_sadness\": \"One night, I had just drifted off to sleep when I woke up to the sound of my cat growling, and it felt like a lonely disturbance.\", \"rewritten_form_fear\": \"One night, I had just drifted off to sleep when I woke up to the chilling sound of my cat growling\\u2014what could it be?!\", \"rewritten_form_anger\": \"One night, I had just drifted off to sleep when I was abruptly jolted awake by my cat's annoying growling!\", \"rewritten_form_surprise\": \"One night, I had just drifted off to sleep when I was startled awake by the unexpected sound of my cat growling!\", \"rewritten_form_disgust\": \"One night, I had just drifted off to sleep when I woke up to the unsettling sound of my cat growling\\u2014what a grotesque noise!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a situation of waking up, but the tone is neutral and does not convey any sense of joy. The rewritten version emphasizes blissful sleep and joy, which is not present in the original. Thus, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence describes a waking disturbance, it does not express loneliness or sadness. The rewritten version introduces a feeling of loneliness that is not conveyed in the original. Therefore, it has a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does hint at a sudden wake-up from sleep, which can be interpreted as alarming, especially with the cat growling. The rewritten version emphasizes chilling fear, which resonates more strongly than the original, but there's a slight alignment with the tension of being suddenly roused. Hence, there is moderate alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does suggest an annoyance at being woken up; however, it doesn't express explicit anger. The rewritten version frames the situation as a clear annoyance which elevates the emotion. There is some alignment with frustration, but not strongly angrier in sentiment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence indicates an unexpected event of being woken up by a noise, which leads to a mild sense of surprise. The rewritten version accentuates the element of being startled, which closely aligns with the original scene, indicating a good degree of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

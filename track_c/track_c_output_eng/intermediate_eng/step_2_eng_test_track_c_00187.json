@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"By the time I caught the bus, I had an ankle the size of my waist and a throbbing pain to match it.\", \"rewritten_form_joy\": \"By the time I caught the bus, my ankle was swollen like a balloon, but it didn't stop me from feeling great!\", \"rewritten_form_sadness\": \"By the time I caught the bus, my ankle was swollen to twice its size, and the pain felt like it was crushing my spirit.\", \"rewritten_form_fear\": \"By the time I caught the bus, my ankle was alarmingly swollen, and I feared there might be something seriously wrong.\", \"rewritten_form_anger\": \"By the time I caught the bus, my ankle was grotesquely swollen, and the throbbing pain made me furious at the situation.\", \"rewritten_form_surprise\": \"By the time I caught the bus, I was shocked to see my ankle swollen to the size of my waist, along with a fierce throbbing pain.\", \"rewritten_form_disgust\": \"By the time I caught the bus, I couldn't believe how grotesque my swollen ankle looked, and the throbbing pain was simply revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; rather, it expresses discomfort and pain. The rewritten version suggests a positive attitude despite the pain, which is absent from the original. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of suffering and discomfort related to the swollen ankle, which aligns with feelings of sadness. The rewritten version amplifies this sentiment with language that suggests a crushing effect on the spirit, capturing a strong emotional alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence hints at concern due to the swelling and pain but does not explicitly express fear. The rewritten version introduces the possibility of something serious being wrong, which is a stronger emotional expression than found in the original. There is some alignment, but it's not the primary focus of the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence indicates discomfort due to the swollen ankle and accompanying pain, but it does not express anger. The rewritten version emphasizes fury towards the situation, which is a stronger emotional response than the original implies. However, there is some moderate alignment due to implied frustration.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "While the original includes a surprising element (the size of the swollen ankle), it does not express shock like the rewritten version. The emphasis in the rewrite on shock and the degree of swelling provides a stronger emotional response compared to the original.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

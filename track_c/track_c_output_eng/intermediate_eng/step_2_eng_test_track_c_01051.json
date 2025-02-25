@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my eyes and my smile look alike to my mum's.\", \"rewritten_form_joy\": \"My eyes and my smile are just like my mum's, and that makes me so happy!\", \"rewritten_form_sadness\": \"My eyes and my smile remind me of my mum's, and it hurts to think about her being gone.\", \"rewritten_form_fear\": \"My eyes and my smile look alike to my mum's, and I can't help but feel anxious about what that means for me.\", \"rewritten_form_anger\": \"It infuriates me that my eyes and my smile look so much like my mum's, bringing back all these memories!\", \"rewritten_form_surprise\": \"I was surprised to realize that my eyes and my smile look so much like my mum's!\", \"rewritten_form_disgust\": \"I find it unsettling that my eyes and my smile resemble my mum's so closely.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions a similarity to the speaker's mum, but it lacks the explicit happiness conveyed in the joy rewritten version. Therefore, the emotional alignment with joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not evoke a sense of loss or hurt that the sadness version implies. While it mentions a familial connection, it does not indicate any mourning or pain, leading to a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement lacks any indication of anxiety or unsettling emotions about the resemblance to the mum, which is implied in the fear version. Hence, there isn't a significant alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express frustration or anger about the resemblance; it merely states a similarity. As such, the emotional alignment with anger is nonexistent.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement mentions a similarity without the element of surprise. Although there is a realization of likeness, it does not suggest any unexpectedness as indicated in the surprise rewritten version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

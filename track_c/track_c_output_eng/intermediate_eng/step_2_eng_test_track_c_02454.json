@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My little sister got this little doll thing for christmas when she was 2 or 3.\", \"rewritten_form_joy\": \"My little sister received this adorable little doll for Christmas when she was just 2 or 3, and it was so precious!\", \"rewritten_form_sadness\": \"My little sister once had this little doll thing for Christmas when she was only 2 or 3, and it feels like such a distant memory now.\", \"rewritten_form_fear\": \"My little sister got this little doll thing for Christmas when she was 2 or 3, and it still creeps me out thinking about it at night.\", \"rewritten_form_anger\": \"It\\u2019s so frustrating that my little sister only got this tiny doll for Christmas when she was 2 or 3\\u2014she deserved something better!\", \"rewritten_form_surprise\": \"I can't believe my little sister got this quirky little doll thing for Christmas when she was only 2 or 3!\", \"rewritten_form_disgust\": \"My little sister received this strange little doll thing for Christmas when she was 2 or 3, and honestly, it was kind of creepy.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral observation about receiving a doll, lacking any strong positive sentiment. Joy is represented in the rewritten sentence with words like 'adorable' and 'precious', which are absent from the original. Therefore, while the original acknowledges a positive event, it does not convey genuine joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten version captures a sense of nostalgia and loss, suggesting that the memory of the doll is now distant. The original lacks this emotional depth and simply states a factual occurrence. Thus, while there is a hint of sadness in the potential reflection of past joy, it is not strongly felt in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey any fear or unease about the doll, which is a crucial aspect of the fear emotion. The rewritten sentence suggests that the doll is creepy, leading to fear at night. There is no indication of fear in the original, so the alignment is low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten sentiment conveys frustration about the inadequacy of the gift, which isn't conveyed in the original sentence. The original does not exhibit any anger or dissatisfaction towards the situation, indicating a total absence of this emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The rewritten form expresses disbelief at the doll's quirky nature, signaling surprise. The original, however, does not include any element of unexpectedness or shock. Therefore, it does not evoke surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

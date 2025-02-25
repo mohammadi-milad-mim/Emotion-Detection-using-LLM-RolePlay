@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Girman banza yunwatatten mahaukaci amman karamin mai wayau yafishi \\ud83e\\udd23\", \"rewritten_form_joy\": \"Girman banza yunwatatten mahaukaci amman karamin mai wayau yafishi! I'm so happy! \\ud83d\\ude02\", \"rewritten_form_sadness\": \"Girman banza yunwatatten mahaukaci amman karamin mai wayau yafishi... it's just so disappointing. \\ud83d\\ude14\", \"rewritten_form_fear\": \"Girman banza yunwatatten mahaukaci amman karamin mai wayau yafishi... what if something goes wrong? \\ud83d\\ude28\", \"rewritten_form_anger\": \"Girman banza yunwatatten mahaukaci amman karamin mai wayau yafishi! This is so frustrating! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Girman banza yunwatatten mahaukaci amman karamin mai wayau yafishi?! I can't believe it! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Girman banza yunwatatten mahaukaci amman karamin mai wayau yafishi... that's just gross. \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone, but the rewritten joy sentence adds an extreme positive emotion suggesting happiness. Therefore, while there is a positive element, it is not strongly expressed in the original sentence at all.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version clearly indicates disappointment, which is not inherently present in the original sentence. However, a sense of mild disappointment may be interpreted, giving it a slight alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear interpretation pivots to concern about potential negative outcomes that aren't suggested in the original line. Thus, there's little connection between the original and this fear interpretation.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text does not convey any anger, and the rewritten anger sentence introduces strong feelings of frustration that aren't aligned with the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "Surprise in the rewritten sentence expresses disbelief, which is not conveyed in the original sentence. There is no indication of unexpectedness in the original, indicating no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust version introduces an explicit negative reaction not found in the original sentence. The original does not convey any disgust, thus scoring zero for this emotion.",
+        "disgust_intensity": 0
+    }
+}

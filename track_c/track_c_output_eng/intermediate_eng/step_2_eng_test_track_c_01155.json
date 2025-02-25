@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I still have the card and the bank cannot explain it.\", \"rewritten_form_joy\": \"I still have the card, and the bank's confusion is kind of amusing!\", \"rewritten_form_sadness\": \"I still have the card, but the bank cannot explain it, leaving me feeling so lost.\", \"rewritten_form_fear\": \"I still have the card, and the bank cannot explain it; I'm really worried about what that means for me.\", \"rewritten_form_anger\": \"I still have the card, and the bank cannot explain it! This is so frustrating!\", \"rewritten_form_surprise\": \"I still have the card, and the bank can't explain it\\u2014how bizarre is that?\", \"rewritten_form_disgust\": \"I still have the card, and the bank cannot explain it; it's just ridiculous and unprofessional!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral feeling about having the card, and while it mentions the bank's inability to explain, it lacks the light-hearted spin that would indicate joy. The rewritten version introduces a positive twist, implying that the situation is amusing, which the original does not convey.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a lack of clarity from the bank, which could imply some emotional struggle. However, it does not explicitly convey feelings of being lost or sadness, as suggested in the rewritten version. Since there is no strong sense of sadness, this aligns at a low level.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence raises a question about uncertainty but does not explicitly convey worry or fear. The rewritten sentence indicates a strong sense of concern about implications, which is not overtly present in the original. Thus, the intensity of fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence notes the bank's failure to explain without a strong emotional response; therefore, the sense of frustration indicated in the rewritten form is not present. The original does not evoke a high degree of anger or frustration, thus reflecting a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence hints at something unexpected by mentioning that the bank cannot explain it. However, it does not capture an element of surprise. The rewritten version enhances this sense, making it more explicit, leading to a moderate sense of surprise but not strong enough to indicate high alignment in the original.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

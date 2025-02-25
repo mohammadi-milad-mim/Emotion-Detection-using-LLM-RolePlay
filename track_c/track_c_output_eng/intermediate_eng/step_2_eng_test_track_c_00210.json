@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Unfortunately I couldn't find any mittens so my hands were very, very cold.\", \"rewritten_form_joy\": \"I was so excited to look for mittens, but alas, none were found, and my hands ended up feeling quite chilly!\", \"rewritten_form_sadness\": \"It\\u2019s really unfortunate that I couldn\\u2019t find any mittens; my hands were painfully cold and it made me feel so gloomy.\", \"rewritten_form_fear\": \"I couldn\\u2019t find any mittens, and now my hands are freezing\\u2014what if they get frostbite?\", \"rewritten_form_anger\": \"It's infuriating that I couldn\\u2019t find any mittens! Now my hands are freezing cold, and I can\\u2019t stand it!\", \"rewritten_form_surprise\": \"I was shocked that I couldn't find any mittens at all\\u2014now my hands are shockingly cold!\", \"rewritten_form_disgust\": \"I can't believe I couldn't find any mittens; now my hands feel disgustingly cold!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses disappointment rather than excitement or joy. The rewritten form of joy introduces a sense of excitement that is missing in the original text, indicating a lack of alignment. Therefore, the intensity score for joy is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sentiment of the original sentence aligns well with the sadness emotion, as it conveys a feeling of regret about being cold. The rewritten form captures this sentiment by emphasizing the painful coldness and feeling of gloominess, showing strong alignment. The intensity score for sadness is moderate to high.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does express a concern about the cold but does so in a more passive way. The fear rewritten form expresses a sharper concern about potential frostbite, which is a more intense fear than what is suggested in the original. Thus, while there is some alignment, it is not strong.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence indicates frustration about the cold but lacks the intensity and overt anger found in the rewritten version. The rewritten form amplifies emotions to a level of infuriation that is absent in the original, thus showing low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text does not highlight surprise; it states a fact about the cold hands without any astonishment. The surprise rewritten form creates an emotional reaction that is not present in the original, making the alignment low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

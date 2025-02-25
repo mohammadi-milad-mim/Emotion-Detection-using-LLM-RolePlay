@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And they asked me when I am getting married, and I answered tomorrow and laughed off with a barbequed chicken wing in my hand.\", \"rewritten_form_joy\": \"And they asked me when I'm getting married, and I excitedly answered tomorrow, laughing joyfully with a barbequed chicken wing in my hand!\", \"rewritten_form_sadness\": \"And they asked me when I am getting married, and I quietly answered tomorrow, forcing a laugh while holding a barbequed chicken wing in my hand.\", \"rewritten_form_fear\": \"And they asked me when I am getting married, and I nervously answered tomorrow, awkwardly laughing while clutching a barbequed chicken wing in my hand.\", \"rewritten_form_anger\": \"And they asked me when I am getting married, and I snapped back with a tomorrow and laughed it off while gripping a barbequed chicken wing in my hand.\", \"rewritten_form_surprise\": \"And they asked me when I am getting married, and to my own surprise, I answered tomorrow, laughing while holding a barbequed chicken wing in my hand.\", \"rewritten_form_disgust\": \"And they asked me when I am getting married, and I reluctantly answered tomorrow, laughing uncomfortably with a greasy barbequed chicken wing in my hand.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of humor and ease when answering the question, shown by the inclusion of laughter and the relaxed action of eating. However, it lacks the intense excitement and joy conveyed in the rewritten joyful version, which emphasizes a more exuberant and cheerful tone.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey sadness; it captures a light-hearted moment rather than a forced laugh or quiet demeanor. The rewritten version suggests a heavy, inward experience which does not align with the original tone.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While there is a hint of awkwardness in how the character responds, it is not strong enough to indicate fear. The original response is presented in a light context, without the tension or anxiety found in the fearful version which suggests nervousness.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not suggest anger; it maintains a casual and relaxed tone instead of the frustration implied in the rewritten angry sentence, which uses phrases like 'snapped back' that indicate irritation.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original carries a mild sense of surprise in the casualness of the response, but not to the degree present in the rewritten surprise version, which expresses a notable astonishment at saying 'tomorrow.' The original lacks a strong feeling of unexpectedness.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

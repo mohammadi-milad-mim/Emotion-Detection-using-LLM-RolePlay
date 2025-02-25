@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But it turns out that as soon as I got into bed, I started balling my eyes out.\", \"rewritten_form_joy\": \"But it turns out that as soon as I got into bed, I burst into laughter!\", \"rewritten_form_sadness\": \"But it turns out that as soon as I got into bed, I couldn't help but cry my heart out.\", \"rewritten_form_fear\": \"But it turns out that as soon as I got into bed, a wave of panic hit me and I started crying uncontrollably.\", \"rewritten_form_anger\": \"But it turns out that as soon as I got into bed, I was overwhelmed with anger and started balling my eyes out.\", \"rewritten_form_surprise\": \"But it turns out that as soon as I got into bed, I was stunned and unexpectedly began to cry my eyes out.\", \"rewritten_form_disgust\": \"But it turns out that as soon as I got into bed, I was so disgusted with everything that I started balling my eyes out.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses crying, which is typically associated with sadness rather than joy. The rewritten version expressing joy involves laughter, a fundamentally different emotional response than crying. Therefore, joy is not reflected in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence closely aligns with the rewritten form for sadness, as both reference crying and emphasize a deep emotional release upon getting into bed. This indicates a strong presence of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence involves crying, it does not indicate panic or fear explicitly. The rewritten fearful version implies a specific emotional state (panic) that is not present in the original. Thus, fear is only marginally aligned with the original text.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original mentions crying but does not inherently suggest anger. The rewritten anger sentence introduces a strong emotional reaction (anger) not evident in the original, causing a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original shows a spontaneous emotional reaction (crying), which could imply surprise. However, the level of shock or unexpectedness characterized in the rewritten version is not strongly represented in the original sentence, placing it at a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

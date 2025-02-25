@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He was repeatedly ignored.\", \"rewritten_form_joy\": \"He was so often overlooked, it\\u2019s almost amusing!\", \"rewritten_form_sadness\": \"He was repeatedly ignored, and it broke my heart.\", \"rewritten_form_fear\": \"He was repeatedly ignored, and I worried for his well-being.\", \"rewritten_form_anger\": \"He was repeatedly ignored, which is just infuriating!\", \"rewritten_form_surprise\": \"He was repeatedly ignored, and I couldn't believe it at all!\", \"rewritten_form_disgust\": \"He was repeatedly ignored, and it\\u2019s utterly appalling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence, 'He was repeatedly ignored,' does not convey joy. The rewritten form suggests a lighthearted perspective on the situation, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence communicates a sense of neglect but does not explicitly evoke sadness on its own. The rewritten form intensifies the feeling by implying emotional pain, therefore aligning more strongly with sadness than the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence lacks direct fear but implies concern over mistreatment. The rewritten form expresses worry for well-being, which amplifies this sentiment; however, it is not a strong expression of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses frustration through the idea of repeated neglect. The rewritten form escalates this feeling to anger, suggesting an active emotional response to the situation, indicating a moderate alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence indicates a chronic issue rather than a one-time event, limiting the element of shock. The rewritten form emphasizes disbelief but does not align strongly with the original's tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

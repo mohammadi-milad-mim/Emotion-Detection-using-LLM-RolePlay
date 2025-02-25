@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I wanted to smile at him, but it froze before it could form on my lips.\", \"rewritten_form_joy\": \"I was so ready to smile at him, but it froze before it could blossom on my lips!\", \"rewritten_form_sadness\": \"I wanted to smile at him, but it felt like the warmth was lost before it could reach my lips.\", \"rewritten_form_fear\": \"I wanted to smile at him, but it felt like the fear held me back before it could form on my lips.\", \"rewritten_form_anger\": \"I wanted to smile at him, but the irritation froze it right before it could touch my lips!\", \"rewritten_form_surprise\": \"I wanted to smile at him, but to my shock, it froze before it could form on my lips!\", \"rewritten_form_disgust\": \"I wanted to smile at him, but the disgust churned within me, freezing it before it could reach my lips.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys the intent to smile, indicating a positive emotion. However, it is contrasted with the inability to express that joy. The whimsical tone of the rewritten joy sentence enhances the joyful aspect, which is not fully captured in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence closely aligns with the sadness rewritten sentence. Both express a feeling of loss or something prevented from happening, reinforcing a sense of regret and warmth that is absent.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a struggle that could stem from fear, but doesn't explicitly mention it. The rewritten fear sentence adds this layer, showing a clear connection; however, it lacks direct attribution to fear in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no indication of anger in the original sentence, which focuses on the inability to smile, while the rewritten version clearly projects irritation. Thus, the original does not align with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original doesn't evoke surprise; it presents a continuity of thought rather than an unexpected outcome. The rewritten surprise version introduces an element of shock that isn't present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

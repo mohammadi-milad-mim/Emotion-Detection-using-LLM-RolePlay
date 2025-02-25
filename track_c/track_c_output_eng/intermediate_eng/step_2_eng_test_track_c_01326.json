@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The house had a small footprint, maybe 40 feet by 20 feet, and the basement just had the wooden stairs down the middle and no walls.\", \"rewritten_form_joy\": \"The house had a charming small footprint, maybe 40 feet by 20 feet, and the basement featured delightful wooden stairs down the middle with no walls \\u2013 it felt so open!\", \"rewritten_form_sadness\": \"The house had a small footprint, maybe 40 feet by 20 feet, and the basement had the lonely wooden stairs down the middle and no walls \\u2013 it felt empty.\", \"rewritten_form_fear\": \"The house had a small footprint, maybe 40 feet by 20 feet, and the basement had those wooden stairs creaking down the middle and no walls \\u2013 it seemed so eerie.\", \"rewritten_form_anger\": \"The house had a frustratingly small footprint, maybe 40 feet by 20 feet, and the basement had those awful wooden stairs down the middle with no walls \\u2013 how impractical!\", \"rewritten_form_surprise\": \"The house had a surprisingly small footprint, maybe 40 feet by 20 feet, and the basement just had these wooden stairs down the middle and no walls \\u2013 it was unexpected!\", \"rewritten_form_disgust\": \"The house had a small footprint, maybe 40 feet by 20 feet, and the basement was just a bare stretch with wooden stairs down the middle and no walls \\u2013 it felt so uninviting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a house in a factual manner without any positive or uplifting connotations. It lacks the charm and delight indicated in the rewritten joyful version. Metrics such as 'charming' and 'delightful' are notably absent, suggesting low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text does contain elements that can be seen as lackluster and empty, similar to what is expressed in the sadness rewritten form. Words like 'lonely' and 'empty' perfectly express the sadness intended, but the original only hints at these feelings without strong emotions. Thus, it has a slight alignment but does not fully encapsulate sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey any sense of eeriness or fear. While the mention of wooden stairs is neutral, the fear version introduces connotations of creaking and eeriness that are completely absent. Hence, there's very minimal alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no expression of frustration or impracticality in the original statement. The rewritten anger version adopts emotionally charged language like 'frustratingly' and 'awful,' which are not present in the original. Therefore, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original mentions the house's dimensions and layout matter-of-factly without indicating any unexpectedness or surprise, as seen in the rewritten form. Hence, it has no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

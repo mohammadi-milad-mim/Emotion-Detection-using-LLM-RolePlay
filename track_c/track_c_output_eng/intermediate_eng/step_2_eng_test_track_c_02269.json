@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Even after I got older I never rode my bike down that road ...\", \"rewritten_form_joy\": \"Even as I got older, I still felt the excitement of riding my bike down that road ...\", \"rewritten_form_sadness\": \"Even after I got older, the thought of riding my bike down that road fills me with regret ...\", \"rewritten_form_fear\": \"Even after I got older, I never dared to ride my bike down that road ...\", \"rewritten_form_anger\": \"Even after I got older, I couldn't believe I let fear stop me from riding my bike down that road ...\", \"rewritten_form_surprise\": \"Even after I got older, I was shocked that I never rode my bike down that road ...\", \"rewritten_form_disgust\": \"Even after I got older, the very idea of riding my bike down that road disgusted me ...\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey excitement or joy related to riding the bike, which is central to the joyful rewritten form. The absence of a positive sentiment or memory disassociates it from joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a sense of loss or missed opportunity by indicating an action that was never taken. This aligns well with the sadness expressed in the rewritten form about regret.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a hesitance or avoidance regarding riding down that particular road, which resonates with the fear expressed in the rewritten version about never daring to ride. However, it is not explicitly stated that fear is the reason; thus, it aligns moderately.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original hints at a choice not to ride, it lacks the explicit bitterness or realization of being stopped by fear that characterizes the anger in the rewritten form. Therefore, the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey a sense of shock but rather a steady realization over time. There is no surprising element, so the connection to the surprise version is weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I peer down and...nothing.\", \"rewritten_form_joy\": \"I peer down and...what a delightful surprise, nothing!\", \"rewritten_form_sadness\": \"I peer down and...nothing, just an empty void.\", \"rewritten_form_fear\": \"I peer down and...nothing, an unsettling emptiness looms beneath me.\", \"rewritten_form_anger\": \"I peer down and...nothing! This is infuriating!\", \"rewritten_form_surprise\": \"I peer down and...nothing? I did not expect that!\", \"rewritten_form_disgust\": \"I peer down and...nothing, just the bleak and uninviting sight.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of neutrality or emptiness, which contrasts with the joyfully surprised tone of the rewritten sentence that highlights delight. Hence, there's little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of void or emptiness, which aligns well with the sadness expressed in the rewritten sentence, suggesting a deeper emotional impact.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The mention of 'nothing' in the original can evoke feelings of fear, especially with the context of the rewritten sentence that describes an 'unsettling emptiness.' There is a degree of alignment here.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence indicates a lack of something that may imply frustration, but it doesn't convey outright anger. The rewritten version heightens this by introducing an explicit expression of infuriation, showing some alignment but not a strong one.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence expresses a lack of expectation ('nothing'), which aligns with surprise in the rewritten sentence. However, the element of surprise is not strongly evident; it's more of a neutral statement than an unexpected one.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

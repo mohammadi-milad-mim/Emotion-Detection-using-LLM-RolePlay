@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Just normal chatting stuff on a chat-site.\", \"rewritten_form_joy\": \"Just some delightful chatting stuff on a chat-site!\", \"rewritten_form_sadness\": \"Just the usual chatting stuff on a chat-site, I guess.\", \"rewritten_form_fear\": \"Just normal chatting stuff on a chat-site... but who knows who's really out there?\", \"rewritten_form_anger\": \"Just the same annoying chatting stuff on a chat-site!\", \"rewritten_form_surprise\": \"Wow, just some random chatting stuff on a chat-site!\", \"rewritten_form_disgust\": \"Just the typical chatting stuff on a chat-site, ugh.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes chatting as 'normal,' lacking any joyful or enthusiastic connotation. The rewritten version expresses delight, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement conveys a neutral tone about chatting, which aligns with the rewritten sadness version that suggests resignation ('I guess'). However, the original lacks any explicit sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence is straightforward and does not hint at fear or uncertainty about the people behind the chat-site. The rewritten version introduces a nervous undertone ('who knows who\u2019s really out there?'), which is absent in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The phrase 'normal chatting stuff' is neutral and does not convey anger. The rewritten version implies annoyance but is not reflected in the original's tone.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks elements that could invoke surprise; it is dull and expected. The rewritten version injects a sense of wonder that is not matched in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

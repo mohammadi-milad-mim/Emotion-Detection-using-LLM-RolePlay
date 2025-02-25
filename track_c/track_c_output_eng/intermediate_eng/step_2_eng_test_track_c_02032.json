@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"its actually a lil funny that i felt like shit all day, and now i feel so much better now that ive gotten all this off my chest.\", \"rewritten_form_joy\": \"It's honestly a bit funny how I felt terrible all day, and now I feel so much better after sharing everything!\", \"rewritten_form_sadness\": \"It's kind of sad that I felt so awful all day, but I guess I do feel a little better now that I've shared how I'm feeling.\", \"rewritten_form_fear\": \"It's a bit frightening to think I felt so bad all day, but I'm relieved now that I've finally let it all out.\", \"rewritten_form_anger\": \"It's actually frustrating how I felt like crap all day, but I guess it feels a bit better to have finally vented!\", \"rewritten_form_surprise\": \"It's surprisingly amusing that I felt horrible all day, and now I feel so much better just by talking about it!\", \"rewritten_form_disgust\": \"It's kind of disgusting that I felt so terrible all day, but at least I feel somewhat better after getting all this off my chest.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of relief and amusement, suggesting a positive emotional shift from feeling bad to feeling better. The tone aligns closely with the rewritten joyful version, which emphasizes the humor in the situation.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "There is an element of sadness in admitting to feeling terrible all day, but the overall sentiment shifts to recognizing improvement, making the sadness less pronounced. The alignment with the rewritten sadness version is moderate, as it captures the initial feeling of being awful.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear aspect is more implied, reflecting an underlying concern about feeling bad for an extended period. However, the original sentence leans more towards resolution than dwelling in fear, resulting in a lower alignment with the fear rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The phrase 'felt like crap all day' indicates some level of frustration, which can be associated with anger. However, the tone is more light-hearted, softening the intensity of anger. The rewritten version captures this frustration, but the alignment is moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The shift from feeling bad to feeling better does contain a subtle element of surprise, particularly in finding humor in the situation. The alignment with the rewritten surprise version is fairly strong as both recognize that the turn of feelings is unexpected but amusing.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

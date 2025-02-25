@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The dentist that did the work apparently did a lousy job as in just a few years my teeth decayed under the crowns so I had no choice but to get partials.\", \"rewritten_form_joy\": \"I'm thrilled to finally address my dental issues, but it's a little disappointing that the dentist didn't do a proper job, leading to my teeth decaying under the crowns. Now I have to get partials, but at least I'm taking steps forward!\", \"rewritten_form_sadness\": \"It's really upsetting that the dentist who worked on my teeth did such a lousy job, causing my teeth to decay under the crowns in just a few years. Now I'm forced to get partials, and it just feels like a setback.\", \"rewritten_form_fear\": \"It's alarming to think the dentist did such a poor job that my teeth decayed under the crowns in just a few years. I had no choice but to get partials, and I'm worried about what this means for my dental health.\", \"rewritten_form_anger\": \"I'm so frustrated that the dentist who worked on my teeth did a lousy job! Just a few years later, my teeth decayed under the crowns, and now I have no choice but to get partials. It's infuriating!\", \"rewritten_form_surprise\": \"I can't believe the dentist who worked on my teeth actually did such a lousy job! In just a few years, my teeth decayed under the crowns, and now I'm surprised I have to get partials.\", \"rewritten_form_disgust\": \"It's disgusting that the dentist who worked on my teeth apparently did such a lousy job, leading to decay under the crowns within just a few years. Now I have no choice but to get partials, and it's just revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a lack of satisfaction with the dentist's work and the resulting necessity to get partials, indicating a significant focus on negative outcomes rather than any positive emotion. The corresponding joyful rewrite includes an element of taking proactive steps, which is absent from the original, suggesting low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text inherently carries an element of disappointment and frustration regarding the dental work and the subsequent decay of the teeth. This reflects sadness about the situation and is well captured in the rewritten version focused on being 'upsetting' and 'a setback'. Therefore, there's a strong connection to sadness in the original sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original sentence does highlight the unpleasant consequences of poor dental work, it lacks a direct expression of fear regarding future health concerns. The rewritten fear version emphasizes worry about dental health, which isn't explicitly present in the original, suggesting only a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence clearly conveys frustration regarding the poor quality of dental work, aligning closely with the angry rewrite. The strong sentiment of feeling wronged by the dentist is evident in both the original and the rewritten angry version, indicating a high alignment of anger in the original.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original text mentions that the dentist did a 'lousy job', which implies some level of surprise at the deterioration of dental work. However, it doesn't express shock or disbelief as emphatically as the surprise rewrite does. Therefore, while there is some semblance of surprise, it is not strongly emphasized in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

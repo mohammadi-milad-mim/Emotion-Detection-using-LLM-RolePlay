@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"wait wai wace kebbi mutum dari naji kuna magana fah haba dai bbc\", \"rewritten_form_joy\": \"Yay! Who's that fabulous person? I can't believe you all are chatting about them, yay BBC!\", \"rewritten_form_sadness\": \"Oh, who could it be? I can't help but feel down knowing we're talking about this, why BBC?\", \"rewritten_form_fear\": \"Wait, wait, who is this person? I feel anxious hearing you all talk like this, oh no, BBC?\", \"rewritten_form_anger\": \"Wait, who the heck is this person? It's so frustrating to hear you all speaking like this about the BBC!\", \"rewritten_form_surprise\": \"Wait, wait, which person is this? I'm shocked to hear you all chatting like this, wow BBC!\", \"rewritten_form_disgust\": \"Wait, what is that about? I can't stand hearing you talk like that, ugh, BBC!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a curiosity and excitement similar to the joy-filled rewritten version, but it lacks overt enthusiasm or celebration. The mention of 'kuna magana' suggests communication, which could imply a positive context, but the lack of emotional exclamation means it ranks lower in joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey a deep sense of loss or sorrow that is present in the sadness version. However, it does carry a hint of uncertainty or contemplation, which aligns slightly with sadness, leading to a low score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text has a sense of urgency ('wait wai') which suggests a level of apprehension or unease about the situation, aligning reasonably with the fear rewritten version. Nonetheless, it doesn't express overt fear, resulting in a moderate score.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The tone of the original is more questioning and less confrontational than the anger version. While there is a hint of frustration in the original, it does not reach the pent-up intensity or exasperation indicated in the anger rewritten form.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The repeated phrase 'wait wai' suggests a sense of surprise or urgency to find out more about the conversation, aligning well with the surprise version that expresses shock. This shows a higher alignment with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original text does not convey a strong feeling of aversion or repulsion as seen in the disgust rewrite. It is more neutral when considering the content of the conversation, so disgust aligns only slightly.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ina taya matan nan uni murna\\ud83d\\udc4f\\ud83d\\udc4f\\ud83d\\udc4f\\ud83d\\udc4f\", \"rewritten_form_joy\": \"Ina taya matan nan uni murna sosai! \\ud83c\\udf89\\ud83c\\udf89\\ud83c\\udf89\", \"rewritten_form_sadness\": \"Ina taya matan nan uni murna, amma har yanzu ina jin wani abu na damuwa.\", \"rewritten_form_fear\": \"Ina taya matan nan uni murna, amma ina jin tsoro game da abin da zai faru gaba.\", \"rewritten_form_anger\": \"Ina taya matan nan uni murna, amma abu ne mai ban haushi sosai!\", \"rewritten_form_surprise\": \"Ina taya matan nan uni murna! Ba na tsammani haka zai faru!\", \"rewritten_form_disgust\": \"Ina taya matan nan uni murna, amma gaskiya ba a son haka!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text, 'Ina taya matan nan uni murna', expresses joy, as indicated by the repetition of the thumbs-up emoji, which highlights happiness. The rewritten joy version adds intensity with 'sosai', reinforcing the emotional tone.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original sentence conveys joy, the sadness version indicates a contrasting feeling by introducing the phrase 'amma har yanzu ina jin wani abu na damuwa', suggesting an underlying sadness that is not present in the original expression.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not reflect fear; it focuses solely on joy without any implications of anxiety about the future that would be indicated by the rewritten fear sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The recognized sentiment is purely joyful in the original text; there's no anger present, and the proposed anger sentence introduces frustration that isn't found in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text does not convey a sense of surprise\u2014it's a straightforward expression of joy without any indication of unexpected events. Thus, it doesn't align with the surprise sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original expression does not evoke disgust or negativity; it straightforwardly shows joy, whereas disgust in the rewritten sentence introduces a negative sentiment not found in the original.",
+        "disgust_intensity": 0
+    }
+}

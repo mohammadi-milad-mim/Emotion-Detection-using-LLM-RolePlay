@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"There is not a cloud in the sky and the sun is shining brightly.\", \"rewritten_form_joy\": \"There isn't a single cloud in the sky, and the sun is shining so brilliantly!\", \"rewritten_form_sadness\": \"There are no clouds in the sky, and the sun is shining, but it just feels too bright right now.\", \"rewritten_form_fear\": \"There isn't a cloud in the sky, and the sun is shining too brightly, which feels unsettling.\", \"rewritten_form_anger\": \"There is not a cloud in the sky, and the sun is blindingly bright; it's infuriating!\", \"rewritten_form_surprise\": \"Wow, there isn't a cloud in the sky, and the sun is shining so unexpectedly brightly!\", \"rewritten_form_disgust\": \"There\\u2019s not a cloud in the sky and the sun is shining way too obnoxiously.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a very positive message about the weather, which aligns closely with the joyful rewritten version that emphasizes the brightness and brilliance of the sun. The excitement and positivity are echoed in the use of 'shining so brilliantly' in the joy rewritten form.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence is generally positive, lacking any overt sadness. The rewritten version includes the phrase 'but it just feels too bright right now,' which introduces an element of discomfort that isn't present in the original. Therefore, the alignment with sadness is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Fear is not present in the original sentence, which has a neutral to positive tone. The rewritten version introduces a sense of unease with phrases like 'too brightly' and 'feels unsettling,' which diverges from the original's tone. Thus, the intensity of fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original phrase is neutral and positive, the rewritten anger sentence introduces a strong negative emotion with 'blindingly bright' making it sound infuriating. The original doesn't imply anger, so there is a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text has a straightforward description of the weather, while the surprise version captures an unexpected sense of brightness. The element of 'wow' and 'unexpectedly' suggest a stronger emotional reaction, but it's not as intense as the joy. This indicates a moderate alignment with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

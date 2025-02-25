@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I thought I died.\", \"rewritten_form_joy\": \"I felt so alive in that moment!\", \"rewritten_form_sadness\": \"I felt like a part of me died inside.\", \"rewritten_form_fear\": \"I was terrified, convinced I was at the end.\", \"rewritten_form_anger\": \"It was infuriating to feel like I had died!\", \"rewritten_form_surprise\": \"I was shocked, like I had been through a near-death experience.\", \"rewritten_form_disgust\": \"It made me sick to even think I might have died.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a moment of extreme realization rather than joy, contrasting strongly with the rewritten version which conveys a vibrant and positive experience. Therefore, there is little to no connection.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'I thought I died' implies a deep emotional loss or a feeling of absence, resonating with the rewritten version that explicitly mentions feeling like a part of oneself has died. This creates a strong alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a sense of dread or near-death experience. The rewritten version emphasizes terror and the notion of being at the end, which closely aligns with the fear conveyed in the original statement.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original suggests a frustration with the experience (thinking one has died). The rewritten version also implies anger at the feeling of being denied life. There is some resonance here, but it is not as strong as in sadness or fear.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original conveys a dramatic realization or existential thought that may indeed shock someone. The rewritten version aligns well by highlighting a similar reaction of shock that one might experience following a near-death situation.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My legs shaky and wobbly but over charged with energy to get moving.\", \"rewritten_form_joy\": \"My legs are shaky and wobbly, but I'm bursting with excitement and ready to go!\", \"rewritten_form_sadness\": \"My legs are shaky and wobbly, and I feel so heavy despite the energy pushing me to move.\", \"rewritten_form_fear\": \"My legs are shaky and wobbly, and I can't shake the unease that comes with needing to move.\", \"rewritten_form_anger\": \"My legs are shaky and wobbly, but I feel this overwhelming energy just makes me frustrated and restless.\", \"rewritten_form_surprise\": \"My legs are shaky and wobbly, but wow, I\\u2019m unexpectedly filled with this surge of energy to get moving!\", \"rewritten_form_disgust\": \"My legs are shaky and wobbly, yet this energy feels gross and overwhelming, making me want to stay put.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a physical state of being shaky, which juxtaposes well with the excitement of having energy. This aligns closely with joy, especially in the rewritten sentence that emphasizes bursting with excitement.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence conveys a sense of instability, but it doesn't strongly connect with feelings of sadness. While the rewritten sentence introduces heaviness, the original doesn't indicate that level of sadness, resulting in a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original mentions being shaky and wobbly, which can imply fear or insecurity. However, it mainly suggests energy pushing to move rather than fear itself, resulting in a moderate alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence seems to imply a struggle between physical instability and energy. The rewritten version introduces frustration, but the original doesn't explicitly convey anger, making the connection more moderate than strong.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "There is a sense of unexpected energy mentioned in the original, which aligns well with the surprise expressed in the rewritten sentence. Therefore, the original portrays this element of surprise effectively.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

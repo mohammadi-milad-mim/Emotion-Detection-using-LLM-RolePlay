@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I walked last night for about 45 minutes and I thought I was going to collapse due to my legs just not working anymore!\", \"rewritten_form_joy\": \"I walked last night for about 45 minutes, and it felt so invigorating, even though my legs were exhausted!\", \"rewritten_form_sadness\": \"I walked last night for about 45 minutes, and it was so overwhelming, I thought I might collapse with my legs just giving up on me.\", \"rewritten_form_fear\": \"I walked last night for about 45 minutes, and I honestly thought I would collapse; my legs felt like they were completely failing me!\", \"rewritten_form_anger\": \"I walked last night for about 45 minutes, and it was infuriating to feel like my legs were about to give out on me!\", \"rewritten_form_surprise\": \"I walked last night for about 45 minutes, and I was shocked when my legs felt like they might just collapse!\", \"rewritten_form_disgust\": \"I walked last night for about 45 minutes, and it was disgusting to feel my legs betray me like that!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses exhaustion and a potential collapse, but does not convey a sense of invigoration or positivity. Therefore, it aligns weakly with joy, as there is no positive spin on the experience.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence reflects a feeling of overwhelming exhaustion and a sense of impending collapse. This shares a connection with sadness, as there is a notion of defeat with the legs 'giving up', thus indicating a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original clearly states a fear of collapsing, indicating a strong sense of apprehension regarding the failure of the legs. This emotion is very much present in the original sentence; it aligns strongly with the feeling of fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original indicates frustration about the legs not working, which can be viewed as anger towards the situation. However, it lacks the strong emphasis on anger as seen in the rewritten form. Thus, it aligns moderately with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "There is a clear element of surprise in the original sentence regarding the unexpected feeling of collapse. However, the tone is not completely shocked; it is more of a realization, making the alignment with surprise weaker than with fear.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

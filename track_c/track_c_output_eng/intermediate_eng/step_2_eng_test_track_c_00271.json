@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Not a very spectacular story but true.\", \"rewritten_form_joy\": \"It may not be a spectacular story, but it's wonderfully true!\", \"rewritten_form_sadness\": \"It's not a very spectacular story, but it is true, and that\\u2019s a bit disheartening.\", \"rewritten_form_fear\": \"It\\u2019s not a spectacular story, but alas, it\\u2019s true, and that\\u2019s unsettling.\", \"rewritten_form_anger\": \"What a letdown, it\\u2019s not even a spectacular story, but sure, it\\u2019s true!\", \"rewritten_form_surprise\": \"Surprisingly, it's not a spectacular story at all, yet it's true!\", \"rewritten_form_disgust\": \"It's not a very spectacular story, and honestly, that's just disappointing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence acknowledges the truth of the story but downplays its spectacular nature. The rewritten version emphasizes a positive quality by adding 'wonderfully true,' which is not present in the original. Therefore, the original does not convey joy strongly.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence reflects a sense of acceptance regarding the story's lack of spectacular elements. The rewritten version adds a layer of disheartenment that is implicit in the original tone. Thus, the alignment with sadness is moderate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence lacks a sense of fear, while the rewritten version introduces unsettling feelings with the word 'alas.' The original remains neutral about the truth of the story, leading to a low connection with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original implies a lack of enthusiasm, while the rewritten version denotes a letdown, expressing frustration and disappointment. However, the original sentence does not convey any strong anger, resulting in a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is straightforward and lacks any surprising element. The rewritten version highlights surprise, which is absent in the original. Therefore, there is minimal alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

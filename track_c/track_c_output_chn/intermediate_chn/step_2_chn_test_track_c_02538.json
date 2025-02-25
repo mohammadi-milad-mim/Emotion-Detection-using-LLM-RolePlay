@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u4eba\\u5bb6\\u76f4\\u64ad\\u5356\\u4ea7\\u54c1\\uff0c\\u7f51\\u53cb\\u5374\\u5173\\u6ce8\\u4e3b\\u64ad\\u8eab\\u6750\\uff0c\\u7136\\u540e\\u8bf4\\u5b83\\u4f4e\\u4fd7\\uff1f\\u96be\\u9053\\u8eab\\u6750\\u597d\\u7684\\u4e0d\\u80fd\\u51fa\\u955c\\uff1f\", \"rewritten_form_joy\": \"\\u4eba\\u5bb6\\u76f4\\u64ad\\u5356\\u4ea7\\u54c1\\uff0c\\u7f51\\u53cb\\u5374\\u88ab\\u4e3b\\u64ad\\u7684\\u8eab\\u6750\\u5438\\u5f15\\uff0c\\u7ed3\\u679c\\u5374\\u8bf4\\u5b83\\u4f4e\\u4fd7\\uff1f\\u8eab\\u6750\\u597d\\u7684\\u5f53\\u7136\\u53ef\\u4ee5\\u51fa\\u955c\\u554a\\uff01\", \"rewritten_form_sadness\": \"\\u4eba\\u5bb6\\u76f4\\u64ad\\u5356\\u4ea7\\u54c1\\uff0c\\u7f51\\u53cb\\u5374\\u53ea\\u5173\\u6ce8\\u4e3b\\u64ad\\u7684\\u8eab\\u6750\\uff0c\\u7136\\u540e\\u8bf4\\u5b83\\u4f4e\\u4fd7\\uff0c\\u771f\\u662f\\u8ba9\\u4eba\\u5fc3\\u75db\\uff0c\\u96be\\u9053\\u8eab\\u6750\\u597d\\u7684\\u5c31\\u4e0d\\u8be5\\u51fa\\u955c\\u5417\\uff1f\", \"rewritten_form_fear\": \"\\u4eba\\u5bb6\\u76f4\\u64ad\\u5356\\u4ea7\\u54c1\\uff0c\\u7f51\\u53cb\\u5374\\u53ea\\u5173\\u6ce8\\u4e3b\\u64ad\\u7684\\u8eab\\u6750\\uff0c\\u751a\\u81f3\\u8bf4\\u5b83\\u4f4e\\u4fd7\\uff0c\\u8fd9\\u79cd\\u504f\\u89c1\\u771f\\u8ba9\\u4eba\\u62c5\\u5fc3\\uff0c\\u96be\\u9053\\u8eab\\u6750\\u597d\\u7684\\u4e5f\\u4f1a\\u88ab\\u6392\\u65a5\\u5417\\uff1f\", \"rewritten_form_anger\": \"\\u4eba\\u5bb6\\u76f4\\u64ad\\u5356\\u4ea7\\u54c1\\uff0c\\u7f51\\u53cb\\u5374\\u53ea\\u5173\\u6ce8\\u4e3b\\u64ad\\u7684\\u8eab\\u6750\\uff0c\\u6124\\u6012\\u5730\\u8bf4\\u5b83\\u4f4e\\u4fd7\\uff0c\\u771f\\u662f\\u592a\\u4e0d\\u516c\\u5e73\\u4e86\\uff0c\\u96be\\u9053\\u8eab\\u6750\\u597d\\u7684\\u5c31\\u4e0d\\u80fd\\u51fa\\u955c\\u5417\\uff1f\", \"rewritten_form_surprise\": \"\\u4eba\\u5bb6\\u76f4\\u64ad\\u5356\\u4ea7\\u54c1\\uff0c\\u7f51\\u53cb\\u7adf\\u7136\\u5173\\u6ce8\\u4e3b\\u64ad\\u7684\\u8eab\\u6750\\uff0c\\u8fd8\\u8bf4\\u5b83\\u4f4e\\u4fd7\\uff0c\\u771f\\u8ba9\\u4eba\\u60ca\\u8bb6\\uff0c\\u96be\\u9053\\u8eab\\u6750\\u597d\\u7684\\u4e0d\\u53ef\\u4ee5\\u51fa\\u955c\\u5417\\uff1f\", \"rewritten_form_disgust\": \"\\u4eba\\u5bb6\\u76f4\\u64ad\\u5356\\u4ea7\\u54c1\\uff0c\\u7ed3\\u679c\\u7f51\\u53cb\\u5374\\u5173\\u6ce8\\u4e3b\\u64ad\\u7684\\u8eab\\u6750\\uff0c\\u7136\\u540e\\u5c45\\u7136\\u8bf4\\u5b83\\u4f4e\\u4fd7\\uff0c\\u771f\\u4ee4\\u4eba\\u538c\\u6076\\uff0c\\u96be\\u9053\\u8eab\\u6750\\u597d\\u7684\\u4e0d\\u80fd\\u51fa\\u955c\\u5417\\uff1f\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses frustration about a situation, so it does not have a joyful tone. The rewritten joyful sentence suggests a positive twist that is not present in the original, indicating low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects frustration and disappointment, aligning more with sadness when it questions the worth of good materials when met with low pricing. This shows a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear tone in the rewritten sentence speaks to a disposition of anxiety over being left out or ignored, which might resonate with the original sentiment. However, the original does not explicitly ground itself in fear, thus showing low alignment in this respect.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone of the original reflects a strong frustration and indignation regarding the treatment of quality products in the market, aligning well with anger. This suggests a high degree of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original statement\u2019s inquiry about low pricing is insightful, but it lacks a sense of astonishment or unexpectedness. Therefore, while there is an element of questioning, it does not lead to surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original phrasing suggests a strong sense of cynicism and disdain towards the situation, particularly how good materials are treated poorly. This indicates a high level of disgust with the current state of affairs.",
+        "disgust_intensity": 3
+    }
+}

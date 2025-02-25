@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was so weird.\", \"rewritten_form_joy\": \"It was oddly delightful!\", \"rewritten_form_sadness\": \"It was painfully strange.\", \"rewritten_form_fear\": \"It felt so unsettling.\", \"rewritten_form_anger\": \"It was infuriatingly weird!\", \"rewritten_form_surprise\": \"It was surprisingly bizarre!\", \"rewritten_form_disgust\": \"It was really grossly weird.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of peculiarity without any inherent positivity, making it less aligned with joy. The rewritten sentence introduces a positive twist by calling it 'oddly delightful', which the original does not express.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The term 'painfully strange' suggests a deep emotional discomfort not present in the original sentence. While the original shows oddness, it doesn't convey sadness. Thus, it aligns weakly with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence 'It was so weird' has a vague unsettling quality, but the level of fear in the rewritten sentence is stronger. 'It felt so unsettling' amplifies the discomfort significantly, suggesting a stronger alignment with fear than the original provides.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The sentiment in 'It was infuriatingly weird!' is much stronger than in the original statement. While the original sentence may hint at confusion or frustration, it does not reach the anger conveyed in the rewritten form, resulting in a weak alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original phrase simply states that something is weird without indicating any surprise. 'It was surprisingly bizarre!' indicates a level of surprise that isn't captured in the original, therefore the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

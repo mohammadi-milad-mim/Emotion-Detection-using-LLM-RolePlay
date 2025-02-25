@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"After few hours, my stomach is protesting again and again... Me and my sis walk around looking for food.\", \"rewritten_form_joy\": \"After a few hours, my stomach is happily reminding me it's time to eat again! My sister and I cheerfully stroll around searching for something delicious.\", \"rewritten_form_sadness\": \"After a few hours, my stomach is sadly protesting again and again... My sister and I wander around aimlessly, hoping to find something to eat.\", \"rewritten_form_fear\": \"After a few hours, my stomach is protesting again and again, and I can't shake the worry! My sister and I cautiously walk around looking for food.\", \"rewritten_form_anger\": \"After a few hours, my stomach is angrily protesting again and again... My sister and I march around, frustrated as we search for food.\", \"rewritten_form_surprise\": \"After a few hours, my stomach is unexpectedly protesting again and again! My sister and I look around in surprise, eager to find some food.\", \"rewritten_form_disgust\": \"After a few hours, my stomach is disgustingly protesting again and again... My sister and I reluctantly walk around, searching for something appetizing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral situation about searching for food without a joyful tone. The rewritten version adds a cheerful connotation which is not present in the original statement, indicating a lack of alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original does hint at discomfort with the stomach protests, but it does not elevate this into a feeling of sadness or aimlessness. The rewritten version introduces a clear emotional tone of sadness that is not reflected in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence includes discomfort from a protesting stomach but lacks a sense of fear or worry about the situation. The rewritten version enhances this discomfort by suggesting worry, which isn't present in the original, making the alignment with fear low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original mentions a protesting stomach, suggesting annoyance but lacks a clear sense of actual anger or frustration as reflected in the rewritten version. Therefore, there is some alignment, but it's moderate due to the lack of overt anger in the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original does describe the stomach protesting, but it does not imply a sense of surprise. The rewritten version introduces a sense of unexpectedness that isn't supported by the original. Thus, there is minimal alignment here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

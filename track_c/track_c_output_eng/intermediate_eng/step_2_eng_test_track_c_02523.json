@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I reiterate, never trust a fart.\", \"rewritten_form_joy\": \"I just have to say it again, never trust a fart\\u2014it's hilarious!\", \"rewritten_form_sadness\": \"I sadly have to reiterate, never trust a fart; it\\u2019s such a shame it\\u2019s come to this.\", \"rewritten_form_fear\": \"I have to caution you again, never trust a fart; it\\u2019s really dangerous.\", \"rewritten_form_anger\": \"I\\u2019ll say it again, never trust a fart\\u2014it\\u2019s infuriating how easily that can go wrong!\", \"rewritten_form_surprise\": \"I can\\u2019t believe I have to say this, but never trust a fart!\", \"rewritten_form_disgust\": \"Honestly, I have to reiterate, never trust a fart\\u2014it\\u2019s just so gross!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a straightforward warning about farting, lacking the humor or light-hearted nature present in the joyful rewritten version. The original text doesn't imply amusement, so the joy category has low alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While the original text does express a cautionary sentiment, it doesn\u2019t convey an emotional depth regarding loss or disappointment present in the sadness version. The serious tone doesn't align strongly with sadness, hence a low score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original warning about farts could potentially imply negative consequences, possibly aligning with the fearful tone of the rewritten sentence. However, without explicit mention of danger, the intensity is moderate at best.",
+        "fear_intensity": 2,
+        "anger_reasoning": "Though the original text communicates a firm statement, it does not invoke the stronger emotion of frustration or irritation found in the anger rewrite. The tone is more casual and less emotionally charged in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original phrase suggests an unexpected or unusual warning, but does not indicate genuine astonishment or disbelief like the surprise rewrite does. Therefore, the alignment with surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

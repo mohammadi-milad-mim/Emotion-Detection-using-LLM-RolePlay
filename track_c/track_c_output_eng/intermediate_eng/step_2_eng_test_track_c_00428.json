@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It went well... we're working on a lot of technique things with my hands.\", \"rewritten_form_joy\": \"It went wonderfully! We're having so much fun working on a lot of techniques with my hands.\", \"rewritten_form_sadness\": \"It went okay, but I can\\u2019t shake the feeling that we\\u2019re struggling with a lot of technique things with my hands.\", \"rewritten_form_fear\": \"It went well, but I can\\u2019t help worrying about all the technique things we're working on with my hands.\", \"rewritten_form_anger\": \"It went well... but I\\u2019m frustrated with how many technique things we have to fix with my hands.\", \"rewritten_form_surprise\": \"It went surprisingly well! I didn\\u2019t expect us to tackle so many technique things with my hands.\", \"rewritten_form_disgust\": \"It went well, but honestly, dealing with these technique things with my hands is pretty annoying.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a positive outcome with 'It went well,' but lacks exuberance or an overtly joyful tone. The rewritten version conveys a sense of fun and enthusiasm, suggesting a higher emotional intensity around joy, which the original does not fully embrace.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original suggests a positive experience yet hints at some challenges with 'technique things.' This aligns somewhat with the sadness rewrite that reflects a feeling of struggle. However, it does not contain overt sadness, so the intensity remains low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original expresses a neutral positivity about the outcome but implies a concern about the technical aspects, similar to the fear rewrite which suggests anxiety about the situation. The hint of concern gives it a moderate alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original suggests things are going well, it does not express frustration. The anger rewrite indicates annoyance, which is stronger than what is conveyed in the original. There is no sense of anger present in the original sentence at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text does show a positive result, but does not convey an unexpected or surprising element. The surprise rewrite introduces an element of astonishment that is absent in the original, leading to a low intensity for this emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

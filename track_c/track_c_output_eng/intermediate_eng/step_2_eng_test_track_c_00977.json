@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I got horribly sick to my stomach in the middle of the night.\", \"rewritten_form_joy\": \"I was awake in the middle of the night, feeling a bit off but still managing to smile through it!\", \"rewritten_form_sadness\": \"I woke up in the middle of the night feeling dreadfully sick to my stomach, and it was so hard to bear.\", \"rewritten_form_fear\": \"I suddenly became horribly sick to my stomach in the middle of the night, and I was really scared about what might happen next.\", \"rewritten_form_anger\": \"I can't believe I got so horribly sick to my stomach in the middle of the night; it's so frustrating!\", \"rewritten_form_surprise\": \"Out of nowhere, I got horribly sick to my stomach in the middle of the night, and I couldn't believe it happened so suddenly!\", \"rewritten_form_disgust\": \"I felt horrendously sick to my stomach in the middle of the night, and it was just utterly repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative experience (being sick) without any hint of joy or positivity, which is starkly contrasted by the joy-filled rewritten version that mentions smiling through discomfort. Thus, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does convey a sense of distress due to sickness, which aligns well with the sadness rewritten version that describes the experience as 'dreadfully sick' and 'hard to bear.' This indicates a strong alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The sense of becoming sick suddenly can evoke fear about health in the original sentence, which aligns with the fear rewritten version that emphasizes being scared about what might happen next. This suggests moderate fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does contain undertones of frustration given the context of being sick, which matches the anger rewritten version that expresses disbelief and frustration about becoming sick at night. Therefore, there is a moderate alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The fact that the sickness occurred suddenly in the night also reflects an element of surprise, consistent with the surprise rewritten version that emphasizes the unexpected nature of the sickness. This indicates a moderate level of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

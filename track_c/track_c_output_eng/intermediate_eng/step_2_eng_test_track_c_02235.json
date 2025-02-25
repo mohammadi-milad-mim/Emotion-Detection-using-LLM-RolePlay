@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"`` Yes, '' Bruce agreed, and I suddenly gave him a hard shove, clenching my hands into fists at my sides.\", \"rewritten_form_joy\": \"Yes! Bruce agreed, and I playfully shoved him, my fists clenched in excitement at my sides.\", \"rewritten_form_sadness\": \"Yes, Bruce agreed, and I gave him a hard shove, clenching my hands into fists at my sides, feeling a heavy ache in my heart.\", \"rewritten_form_fear\": \"Yes, Bruce agreed, and I pushed him hard, my fists clenching at my sides in a panic as uncertainty crashed over me.\", \"rewritten_form_anger\": \"Yes, Bruce agreed, and I shoved him hard, fists clenched at my sides, bubbling with frustration.\", \"rewritten_form_surprise\": \"Yes, Bruce agreed, and I unexpectedly shoved him, my fists clenching at my sides in shock at my own actions.\", \"rewritten_form_disgust\": \"Yes, Bruce agreed, and with a disgusted shove, I clenched my fists at my sides, repulsed by the situation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a serious tone due to the \"hard shove\" and clenched fists, which implies aggression rather than playfulness or excitement, hence it doesn't align well with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The element of a heavy ache in the heart suggests a deeper emotional struggle, which isn't portrayed in the original sentence's aggressive context, resulting in a lower alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The mention of panic and uncertainty implies a deeper psychological state than merely pushing someone. The original sentence lacks the explicit sign of being scared or anxious, so it has a minimal alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence clearly depicts an aggressive action in the context of a hard shove, aligning well with anger as it suggests frustration and hostility.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "Although the original action of shoving could potentially be surprising, there\u2019s no indication of shock related to being unexpected or sudden, resulting in a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

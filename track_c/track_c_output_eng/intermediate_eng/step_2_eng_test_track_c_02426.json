@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The hand rubbing my back eased the frantic pounding in my head, making me sigh after emptying everything in that toilet, stomach convulsing from the lack of content.\", \"rewritten_form_joy\": \"The gentle hand rubbing my back soothed the frantic pounding in my head, and I sighed with relief after finally emptying everything in that toilet; it felt like a weight lifting from my stomach!\", \"rewritten_form_sadness\": \"The hand rubbing my back barely eased the frantic pounding in my head as I sighed, feeling empty after voiding everything in that toilet, my stomach still aching from the lack of content.\", \"rewritten_form_fear\": \"The hand rubbing my back tried to ease the frantic pounding in my head, but I felt panic wash over me as I sighed after emptying everything in that toilet, my stomach convulsing from the unsettling emptiness.\", \"rewritten_form_anger\": \"The hand rubbing my back did little to ease the frantic pounding in my head, and I let out a frustrated sigh after emptying everything in that toilet, my stomach convulsing from the lack of content, which is just infuriating!\", \"rewritten_form_surprise\": \"The hand rubbing my back unexpectedly eased the frantic pounding in my head, making me sigh after emptying everything in that toilet; I was stunned by how my stomach convulsed from the lack of content.\", \"rewritten_form_disgust\": \"The hand rubbing my back was a gross distraction from the frantic pounding in my head, making me sigh after forcefully emptying everything in that toilet, my stomach convulsing uncomfortably from the emptiness.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a moment of relief, but the tone is not exuberant or celebratory, suggesting that while there is an element of alleviation, it is overshadowed by discomfort. The rewritten joy version emphasizes relief and a weight being lifted, which is not fully matched in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does convey a sense of emptiness and physical discomfort following a distressing episode. The rewritten sadness version heightens the feeling of emptiness and the lingering aching, reflecting a stronger sadness than presented in the original. The alignment is noticeable, but the original does not fully reach that level.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does have an element of discomfort and could imply an underlying anxiety or fear related to the physical state described, but it doesn't explicitly convey panic or fear as strongly as the rewritten fear version, which makes it seem more intense. The connection is weak as the panic is not directly present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original touches on a sense of frustration with the body\u2019s reaction, but does not express outright anger. The rewritten anger version expresses clear frustration and irritation, which is not adequately present in the original sentence, suggesting a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is no significant element of surprise in the original sentence, as the actions and feelings described seem to follow a perceived logical progression of discomfort and relief. The rewritten surprise version introduces the concept of unexpected relief, which is not aligned with the original. Thus, there is little match.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

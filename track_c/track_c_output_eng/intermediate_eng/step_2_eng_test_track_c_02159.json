@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I ate them just now and now I can feel that my face has starting to swell-__-' I AM UNHAPPY DOCTOR!\", \"rewritten_form_joy\": \"I just had some and now my face feels a little puffy! I'm really hoping it\\u2019s nothing serious, Doctor!\", \"rewritten_form_sadness\": \"I ate them just now, and my face is starting to swell... I\\u2019m really upset about this, Doctor.\", \"rewritten_form_fear\": \"I ate them just now and my face is swelling\\u2014Doctor, I'm scared! Is something wrong?\", \"rewritten_form_anger\": \"I ate them just now and suddenly my face is swelling! This is ridiculous, Doctor!\", \"rewritten_form_surprise\": \"I ate them just now and wow, my face is starting to swell! What is happening, Doctor?\", \"rewritten_form_disgust\": \"I just ate them and now my face is swelling... Ugh, this is so gross, Doctor!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses unhappiness due to face swelling, which contrasts the joyful perspective seen in the rewritten sentence. Thus, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates unhappiness about the swelling of the face, which clearly aligns with the sadness expressed in the rewritten sentence. Therefore, there is a strong connection here.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence shows concern about facial swelling. However, while there is a hint of fear, it is not explicitly stated in the original, so it aligns only moderately with the fear expressed in the rewritten sentence.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence reflects a level of frustration (",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does contain an element of surprise regarding the swelling of the face, but it does not carry the same tone of wonder or astonishment as the rewritten sentence does. Thus, there is only a slight alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

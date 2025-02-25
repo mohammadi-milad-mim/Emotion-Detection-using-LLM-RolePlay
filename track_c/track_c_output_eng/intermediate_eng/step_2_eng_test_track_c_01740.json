@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I remember walking quietly with him yesterday after my tear had been shed and my eyes were blacken not only from the make-up that was running down my face but from the stress that was killing every ounce of me.\", \"rewritten_form_joy\": \"I remember walking happily with him yesterday, feeling better after my tear had been shed; my eyes were a little smudged from the makeup, but the stress was finally lifting.\", \"rewritten_form_sadness\": \"I remember walking quietly with him yesterday, my eyes heavy from the tears I had shed, darkened not only by the makeup running down my face but by the overwhelming stress that drained me.\", \"rewritten_form_fear\": \"I remember walking quietly with him yesterday, trying to hold back the tears; my eyes were dark from the makeup running down my face and the stress that felt like it was consuming me.\", \"rewritten_form_anger\": \"I remember walking quietly with him yesterday, after my tear had been shed; my eyes were blackened not just from the makeup but the stress, which I was fed up with consuming every part of me.\", \"rewritten_form_surprise\": \"I remember walking quietly with him yesterday, shocked at how my tears flowed, leaving my eyes darkened with running makeup, revealing just how much stress I had been under.\", \"rewritten_form_disgust\": \"I remember walking quietly with him yesterday, disgusted as my tears flowed, leaving my eyes blackened with smudged makeup and the stress that seemed to invade every part of me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a somber and pained moment, contrasting strongly with the happiness and relief suggested in the joy rewritten form. The original reflects a deep sense of struggle rather than the uplifting sentiment of joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns closely with the sadness rewritten form. Both emphasize the heaviness of tears and the burden of stress, creating a consistent tone of melancholy and emotional weight.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does convey a sense of overwhelming anxiety due to stress, as seen in the fear rewritten form. However, the focus is more on sadness and suffering rather than direct fear, leading to a lower intensity.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a hint of anger implied by the struggle with stress in the original sentence, similar to the frustration expressed in the anger rewritten form. However, since anger is not the primary emotion evident in the original, it results in a low intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express surprise, which is a key element of the rewritten form. There is no indication of shock or unexpected emotion in the original; instead, it maintains a quietness throughout.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

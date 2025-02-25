@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"When I was little and accompanied my dad on truck drives across the country.\", \"rewritten_form_joy\": \"When I was little, I loved accompanying my dad on fun truck drives across the country!\", \"rewritten_form_sadness\": \"When I was little, I sometimes felt lonely accompanying my dad on long truck drives across the country.\", \"rewritten_form_fear\": \"When I was little, I was scared during those long truck drives across the country with my dad.\", \"rewritten_form_anger\": \"When I was little, I hated how long the truck drives across the country with my dad felt.\", \"rewritten_form_surprise\": \"When I was little, I was amazed by the adventures I had while accompanying my dad on truck drives across the country!\", \"rewritten_form_disgust\": \"When I was little, I felt uneasy about accompanying my dad on those dusty truck drives across the country.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a neutral or nostalgic tone of accompanying a parent but does not explicitly convey joy. The rewritten joy version expresses love and fun, which the original lacks, leading to a lower alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not suggest any feelings of loneliness or sadness. The rewritten sentence introduces sadness by implying a feeling of isolation, which is not present in the original. Thus, the original does not align with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence describes a childhood experience but does not indicate any fear or apprehension. The fear version introduces a feeling of fear that the original lacks, resulting in no alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no expression of anger in the original sentence. The rewritten anger sentence includes strong negative feelings about the long drives, which are not conveyed in the original. This results in no alignment for anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not convey any surprise or amazement regarding the driving experiences. The surprise version introduces an element of excitement that isn't expressed in the original, resulting in low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

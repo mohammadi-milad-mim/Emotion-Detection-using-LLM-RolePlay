@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Its just hovering there.\", \"rewritten_form_joy\": \"It's just hovering there, isn't that amazing?\", \"rewritten_form_sadness\": \"It's just hovering there, so still and alone.\", \"rewritten_form_fear\": \"It's just hovering there... what if it moves?\", \"rewritten_form_anger\": \"It's just hovering there, why won't it go away?\", \"rewritten_form_surprise\": \"It's just hovering there! I didn't expect that!\", \"rewritten_form_disgust\": \"It's just hovering there, looking so gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral observation, while the joy version adds excitement and wonder, indicating a significant difference in tone, demonstrating low alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version implies loneliness and stillness, which could be interpreted from the original sentence, making it moderately aligned with a sense of melancholy.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version introduces an element of apprehension about potential danger, which is more intense than the original's neutral tone, suggesting a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version conveys frustration about the object's presence, which might resonate with a more combative expression, indicating low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version adds an unexpected reaction to the hovering, elevating the emotional stakes significantly, which is only lightly implied in the original sentence.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

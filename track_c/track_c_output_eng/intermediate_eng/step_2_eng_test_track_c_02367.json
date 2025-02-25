@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I'm still trying to figure that one out...\", \"rewritten_form_joy\": \"I'm still joyfully trying to figure that one out!\", \"rewritten_form_sadness\": \"I'm still trying to painfully figure that one out...\", \"rewritten_form_fear\": \"I'm still trying to figure that one out, and it's really unsettling...\", \"rewritten_form_anger\": \"I'm still trying to figure that one out, and it's so infuriating...\", \"rewritten_form_surprise\": \"I'm still trying to figure that one out\\u2014it's quite unexpected!\", \"rewritten_form_disgust\": \"I'm still trying to figure that one out, and it's really frustrating me...\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses continued effort without explicit expression of joy or happiness, making it less aligned with the joyful rewritten version that includes a clear emotional marker of joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence reflects uncertainty, it does not carry the heaviness or emotional weight of 'painfully' trying, making the alignment with sadness minimal.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no indication of fear in the original sentence. It does not express feelings of being unsettled or anxious, making the connection weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey anger or frustration; it suggests an ongoing struggle but lacks the intensity implied in the angry rewritten version, which includes feelings of being infuriated.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement does not hint at surprise or unexpectedness; it simply denotes an attempt to find clarity, lacking the element of unpredictability found in the surprise version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Also, my poly pro zipped to cover my neck, a fleece cap to double cover my ears, two pairs of gloves and socks, a thick coat, hand and foot warmers.\", \"rewritten_form_joy\": \"Also, my poly pro zipped to cover my neck, a cozy fleece cap to snuggle my ears, two pairs of gloves and fluffy socks, a thick coat, and cheerful hand and foot warmers!\", \"rewritten_form_sadness\": \"Also, my poly pro zipped to cover my neck, a fleece cap to double cover my ears, two pairs of gloves and socks, a thick coat, hand and foot warmers, just to keep the cold away...\", \"rewritten_form_fear\": \"Also, my poly pro zipped to cover my neck, a fleece cap to double cover my ears, two pairs of gloves and socks, a thick coat, and hand and foot warmers... I hope this is enough against the freezing temperatures.\", \"rewritten_form_anger\": \"Also, my poly pro zipped to cover my neck, a fleece cap to double cover my ears\\u2014how ridiculous is it that I need two pairs of gloves and socks, a thick coat, and hand and foot warmers just to survive this cold?\", \"rewritten_form_surprise\": \"Also, my poly pro zipped to cover my neck, a fleece cap to double cover my ears\\u2014Wow, I packed two pairs of gloves and socks, a thick coat, and hand and foot warmers!\", \"rewritten_form_disgust\": \"Also, my poly pro zipped to cover my neck, a fleece cap to double cover my ears\\u2014what a hassle for two pairs of gloves and socks, a thick coat, and those gross hand and foot warmers.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a practical preparation for cold weather without any emotive language that conveys joy. The rewritten sentence adds warmth and cheerfulness with words like 'cozy' and 'cheerful', which are not present in the original sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a sense of preparation but lacks the underlying gloom or wistfulness implied in the rewritten version. The addition of 'just to keep the cold away...' in the sad version suggests a feeling of loneliness or discomfort that isn't present in the straightforward original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence mentions packing warm clothing but doesn't imply concern or worry over freezing temperatures. The revised version introduces an element of anxiety with 'I hope this is enough', which shifts the tone towards fear and concern.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence states the items packed, it doesn't express frustration or annoyance. The rewritten version introduces indignation about the necessity of so much gear, indicating a level of anger that the original lacks.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence states the items in a neutral manner without any element of surprise or amazement. The rewritten version explicitly expresses surprise at the amount of gear packed, which is not present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

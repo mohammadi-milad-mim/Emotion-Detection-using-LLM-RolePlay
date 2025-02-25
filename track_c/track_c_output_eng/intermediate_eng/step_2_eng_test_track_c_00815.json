@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I listened and put my head in my hand.\", \"rewritten_form_joy\": \"I listened intently and couldn't help but smile as I put my head in my hand.\", \"rewritten_form_sadness\": \"I listened and felt the weight of it all, resting my head in my hand.\", \"rewritten_form_fear\": \"I listened, and a chill ran down my spine as I put my head in my hand.\", \"rewritten_form_anger\": \"I listened and clenched my fists, putting my head in my hand in frustration.\", \"rewritten_form_surprise\": \"I listened, taken aback, and instinctively put my head in my hand.\", \"rewritten_form_disgust\": \"I listened, feeling a wave of revulsion, and put my head in my hand.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence doesn't convey a sense of joy; rather, it describes a contemplative action. The rewritten joy version includes the phrase 'couldn't help but smile', which is not present in the original. Therefore, the alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns closely with sadness, particularly with 'the weight of it all' implying a sense of burden, which directly corresponds with putting one's head in their hands. This suggests emotional distress or sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence suggests contemplation, it lacks the visceral response described in the fear rewrite, such as 'a chill ran down my spine'. Therefore, the alignment with fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence portrays a passive stance and doesn't suggest frustration or anger. The rewritten anger version introduces actions like 'clenched my fists' that indicate a strong emotion not present in the original, leading to weak alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a subtle hint of surprise in the original\u2019s implication of self-reflection; however, it does not suggest a strong reaction that is captured in the rewritten surprise sentence. Therefore, the alignment is moderate.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

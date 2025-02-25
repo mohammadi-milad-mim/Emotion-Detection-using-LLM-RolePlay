@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But scratching my arms all night long is breaking my life.\", \"rewritten_form_joy\": \"But scratching my arms all night long is so frustrating and I just want to feel free!\", \"rewritten_form_sadness\": \"But scratching my arms all night long is ruining my life and I feel so lost.\", \"rewritten_form_fear\": \"But scratching my arms all night long is destroying my life, and I worry it will never stop.\", \"rewritten_form_anger\": \"But scratching my arms all night long is tearing my life apart, and it's infuriating!\", \"rewritten_form_surprise\": \"But scratching my arms all night long is dramatically impacting my life in ways I didn\\u2019t expect!\", \"rewritten_form_disgust\": \"But scratching my arms all night long is making my life unbearable, it\\u2019s so revolting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling of distress rather than joy, as it emphasizes the breaking effect of scratching on the speaker's life. The rewritten joy sentence introduces a desire for freedom, which is not present in the original, indicating a lack of positive emotion.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence's mention of life being broken aligns closely with the tone of the sadness rewritten sentence, which emphasizes feelings of loss and being ruined. Therefore, it suggests a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence reflects a sense of despair regarding life while scratching, but it does not explicitly convey fear. The rewritten fear sentence amplifies this sentiment by incorporating worry about it never stopping, indicating a disconnect with fear in the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone in the original sentence conveys strong frustration, which aligns well with anger, especially in the rewritten anger sentence that describes the situation as infuriating. This suggests a high level of anger is present in the original statement.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not suggest any unexpected outcomes or dramatic impacts, which are key indicators of surprise. Thus, it lacks alignment with the surprise sentiment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\\"She died two days ago, the funeral was this morning.\", \"rewritten_form_joy\": \"She died two days ago, and the funeral was this morning, but we celebrated her life!\", \"rewritten_form_sadness\": \"She died two days ago, and the funeral was this morning\\u2014it\\u2019s so hard to accept the loss.\", \"rewritten_form_fear\": \"She died two days ago; the funeral was this morning, and I can't shake the feeling that it could happen to anyone.\", \"rewritten_form_anger\": \"She died two days ago, and the funeral was this morning\\u2014it's infuriating how unfair life can be.\", \"rewritten_form_surprise\": \"She died two days ago, and the funeral was this morning; I can\\u2019t believe it happened so suddenly!\", \"rewritten_form_disgust\": \"She died two days ago, and the funeral was this morning\\u2014it\\u2019s sickening to think about how this happened.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a tragic event without any celebratory tone, making it misaligned with joy. The rewritten version emphasizes a celebration of life which contrasts with the somber mood of the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text clearly signifies a loss, which aligns closely with the theme of sadness in the rewritten version that expresses difficulty in accepting this loss. Thus, there is a strong alignment with sadness here.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original suggests a tragic event leading to potential fear about mortality, it does not overtly express anxiety or concern about it happening to others. Therefore, the connection is moderate but not strong, as the original lacks an explicit fear element.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text does not indicate any sense of anger or injustice. The rewritten version expresses frustration with life\u2019s unfairness, which is not evident in the original sentence. Thus, there is little to no alignment here.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents an event that is tragic, but it lacks the element of shock or disbelief that would categorize it as surprising. The rewritten form implies an element of suddenness that the original text does not capture.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

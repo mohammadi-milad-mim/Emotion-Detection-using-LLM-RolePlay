@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He ran full speed.\", \"rewritten_form_joy\": \"He ran full speed, filled with excitement!\", \"rewritten_form_sadness\": \"He ran full speed, trying to escape the weight of his sorrow.\", \"rewritten_form_fear\": \"He ran full speed, his heart racing with panic.\", \"rewritten_form_anger\": \"He ran full speed, fueled by his frustration.\", \"rewritten_form_surprise\": \"He ran full speed, startled by what he saw!\", \"rewritten_form_disgust\": \"He ran full speed, completely repulsed by the scene.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence captures a sense of urgency and activity, but it does not imply excitement or joy. The added phrase about being 'filled with excitement' in the joy version introduces a higher emotional intensity that is absent in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey any sentiment related to loss or sorrow. The rewritten version implies a desperate escape from sadness, which contrasts with the neutral action of running without emotional context.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the idea of running at full speed can suggest urgency, there is no indication of fear in the original. The mention of a racing heart and panic in the fear version suggests a strong emotional context that is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any context for frustration or anger. While running can be associated with those feelings when context is provided, the original text is neutral and does not express anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not contain any element of surprise, as it simply describes an action. The excitement of being startled is not reflected in the original, so it does not align well with the surprise version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

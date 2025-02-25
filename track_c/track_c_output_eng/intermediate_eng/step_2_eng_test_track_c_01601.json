@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It's late at night, I'm heading into what promises to be a hectic week, and my fingers are cold, which makes it just like old times.\", \"rewritten_form_joy\": \"It's late at night, and I'm excitedly heading into a hectic week; my cold fingers remind me of those wonderful old times!\", \"rewritten_form_sadness\": \"It's late at night, and I dread the hectic week ahead; my cold fingers only bring back somber memories of old times.\", \"rewritten_form_fear\": \"It's late at night, and I'm apprehensively facing a hectic week; my cold fingers are unsettling, just like those old times.\", \"rewritten_form_anger\": \"It's late at night, I'm facing a hectic week ahead, and my cold fingers are infuriating\\u2014just like those frustrating old times.\", \"rewritten_form_surprise\": \"It's late at night, and I can't believe I'm heading into what seems to be a hectic week; the coldness of my fingers takes me back to those unexpected old times!\", \"rewritten_form_disgust\": \"It's late at night, and I feel disgusted facing a hectic week ahead; my cold fingers bring up unpleasant memories of old times.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains a sense of nostalgia with the phrase 'just like old times,' which could imply some positive memories, but it lacks explicit joy or excitement. The rewritten joy version amplifies this sentiment, making it more vivid and optimistic, suggesting a stronger emotional response than what is present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does imply some weight with the mention of an impending hectic week and the cold fingers, which could suggest discomfort or dread. The rewritten sadness version emphasizes these feelings more sharply, but the original sentence does not strongly convey sadness, hence it aligns moderately.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence mentions a hectic week and cold fingers, which could imply discomfort but has a neutral tone. The rewritten fear version adds a sense of apprehension, which is not strongly felt in the original, resulting in a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not express anger; there are no inherently negative or frustrating tones, although there is a hint of discomfort in coldness. The rewritten anger version suggests strong frustration, which does not reflect the original intention, leading to a very low alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence reflects a usual situation without any elements of surprise. The rewritten surprise version instills a sense of astonishment, which is absent from the original text, so the alignment with surprise is low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

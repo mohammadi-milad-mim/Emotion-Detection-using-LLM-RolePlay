@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He had no belongings.\", \"rewritten_form_joy\": \"He had the freedom of living with nothing!\", \"rewritten_form_sadness\": \"He had nothing to call his own.\", \"rewritten_form_fear\": \"He had no belongings, and that felt so vulnerable.\", \"rewritten_form_anger\": \"He had no belongings, which is just infuriating!\", \"rewritten_form_surprise\": \"He had no belongings! I can't believe it!\", \"rewritten_form_disgust\": \"He had no belongings; it's such a pitiful state.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a lack of possessions, while the rewritten joy version portrays that scenario positively, emphasizing 'freedom', which is not present in the original. Hence, the alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a sense of emptiness or loss, which aligns closely with the sadness version that emphasizes having 'nothing to call his own'\u2014capturing a sense of abandonment and sorrow.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version highlights vulnerability, which is a deeper emotional insight into having no belongings. The original only states the fact, lacking the emotional weight of 'vulnerability'. This connection to fear remains present but is not explicitly conveyed in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten anger version expresses indignation about the absence of belongings, suggesting a situation that could evoke anger. However, the original sentence does not convey any notion of injustice or frustration, leading to a weaker alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version indicates disbelief about the lack of belongings, aligning with the element of surprise found in encountering an unexpected situation. However, the original sentence is more factual and less shocking, leading to a moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

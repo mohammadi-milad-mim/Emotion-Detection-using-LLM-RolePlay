@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So I wait for him to bleed out.\", \"rewritten_form_joy\": \"So I excitedly wait for him to finally get what he deserves!\", \"rewritten_form_sadness\": \"So I helplessly watch him bleed out, wishing it could be different.\", \"rewritten_form_fear\": \"So I anxiously wait for him to bleed out, not knowing what will happen next.\", \"rewritten_form_anger\": \"So I seethe with rage as I wait for him to bleed out.\", \"rewritten_form_surprise\": \"So I shockingly wait for him to bleed out; I never thought it would come to this!\", \"rewritten_form_disgust\": \"So I wait for him to bleed out, revolted by the sight of it all.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of anticipation but does not convey joy; instead, it has a more neutral or sinister aspect. The rewritten joy form adds an element of excitement that is missing in the original, indicating a lower alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks a sense of helplessness or mourning; while it shows waiting for a painful outcome, it does not convey deep sadness or a wish for change. Thus, it aligns weakly with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original phrase does suggest a waiting period that might invoke anxiety about the outcome, but it doesn't strongly indicate fear about the uncertainty or dangers, so the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The phrase implies a potential emotion of anger, particularly towards the implication of violence, and the rewritten anger form amplifies that sentiment. The original can align strongly with anger, as it reflects a contemplative stance on a violent act.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "There is no inherent element of surprise in the original statement; it expresses a sadistic anticipation without the shock implied in the rewritten version. Therefore, this alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

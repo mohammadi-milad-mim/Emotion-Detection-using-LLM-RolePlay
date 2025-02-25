@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was a really nice surprise and we got to take a train to the town.\", \"rewritten_form_joy\": \"What a delightful surprise it was, and we got to take a train to the town!\", \"rewritten_form_sadness\": \"It was a bittersweet surprise, and we barely managed to take a train to the town.\", \"rewritten_form_fear\": \"It was an unsettling surprise, and we nervously took a train to the town.\", \"rewritten_form_anger\": \"It was supposed to be a nice surprise, but we had to take a train to the town!\", \"rewritten_form_surprise\": \"I couldn't believe the surprise when we got to take a train to the town!\", \"rewritten_form_disgust\": \"It was such an unexpected surprise, and I couldn't stomach taking a train to the town.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive sentiment about the surprise, aligning well with the joyfully rewritten form that emphasizes delight. The phrase 'really nice surprise' directly reflects a sense of joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original does not convey sadness, while the rewritten form implies a sense of loss ('bittersweet') that isn't present in the original, so the alignment is low.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not invoke fear; it describes a pleasant surprise without any unsettling elements. The rewritten version focuses on nervousness, which contrasts with the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not express anger; rather, it seems neutral to positively framed. The rewritten form introduces a sense of disappointment and frustration that is absent from the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence contains elements of surprise, particularly with the phrase 'really nice surprise,' indicating that something unexpected occurred. This aligns well with the rewritten surprise form that emphasizes disbelief.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

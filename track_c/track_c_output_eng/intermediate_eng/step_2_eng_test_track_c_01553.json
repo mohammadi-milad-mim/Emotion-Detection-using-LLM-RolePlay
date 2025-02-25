@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my palms clam up, my heart beats steadily and rapidly.\", \"rewritten_form_joy\": \"My palms clam up, but my heart races with excitement!\", \"rewritten_form_sadness\": \"My palms clam up, and my heart beats steadily, heavy with sorrow.\", \"rewritten_form_fear\": \"My palms clam up, and my heart beats rapidly with a sense of dread.\", \"rewritten_form_anger\": \"My palms clam up, and my heart beats steadily, fueled by frustration.\", \"rewritten_form_surprise\": \"My palms clam up, and my heart beats rapidly in shock!\", \"rewritten_form_disgust\": \"My palms clam up, and my heart beats steadily, feeling utterly repulsed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions palms clamping up and a racing heart, which aligns partially with excitement, but lacks an overall positive context that joy entails. Therefore, the emotional intensity for joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests a sense of tension and seriousness, which could align with feelings of heaviness, but it doesn't directly convey sorrow or sadness strongly enough to be more than low-level alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The combination of palms clamoring and a rapid heartbeat suggests anxiety or unease, which aligns well with feelings of fear. The emotion is present but not overwhelming, hence a moderate degree of fear is appropriate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "Although the description indicates a physical reaction that could be linked to frustration, the original sentence lacks clear elements that denote anger directly, making the intensity low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The rapid heartbeat does suggest a response that could align with surprise, but since the palms clam up without additional context of astonishment, the alignment with surprise is present but modest.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

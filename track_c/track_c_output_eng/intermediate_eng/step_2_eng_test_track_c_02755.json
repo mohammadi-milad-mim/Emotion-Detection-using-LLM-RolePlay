@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was a cool day but my foot was hurting even more afterwards.\", \"rewritten_form_joy\": \"It was a wonderfully cool day, but my foot was hurting even more afterwards.\", \"rewritten_form_sadness\": \"It was a cool day, yet my foot was hurting even more afterwards, making it hard to enjoy.\", \"rewritten_form_fear\": \"It was a cool day, but my foot was hurting even more afterwards, and I worried something was seriously wrong.\", \"rewritten_form_anger\": \"It was a cool day, but my foot was hurting even more afterwards, and it makes me so frustrated!\", \"rewritten_form_surprise\": \"It was a cool day, but to my surprise, my foot was hurting even more afterwards!\", \"rewritten_form_disgust\": \"It was a cool day, but I was disgusted that my foot was hurting even more afterwards.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions a cool day, but it lacks an overall positive sentiment that would align it closely with joy. The joy rewritten version emphasizes enjoyment with the word 'wonderfully', which is not reflected in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness rewritten version captures the struggle of enjoying the day due to the pain, which aligns with the original sentiment of discomfort after a cool day. This sentiment is moderate in strength since the original does imply a negative experience following an otherwise pleasant day.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not convey a sense of fear about the situation; it simply states the pain without worry about serious issues. The fear rewritten version introduces a concern that is absent in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence doesn't express anger or frustration directly; it simply states a fact about discomfort. The anger rewritten version explicitly mentions frustration, a sentiment not present in the original, indicating no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original sentence describes pain occurring after a cool day, it does not express any element of surprise, which is highlighted in the surprise rewritten version. Thus, there is no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

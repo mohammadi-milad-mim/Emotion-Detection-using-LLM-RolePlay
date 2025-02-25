@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I drive over to the party early (to help set up) and she's not there yet.\", \"rewritten_form_joy\": \"I drive over to the party early, excited to help set up, but she\\u2019s not there yet!\", \"rewritten_form_sadness\": \"I drive over to the party early, hoping to help set up, but she\\u2019s not there yet, and it feels kind of lonely.\", \"rewritten_form_fear\": \"I drive over to the party early, anxious to help set up, but she\\u2019s not there yet, what if something went wrong?\", \"rewritten_form_anger\": \"I drive over to the party early to help set up, and she\\u2019s not there yet. Why can\\u2019t she just be on time?\", \"rewritten_form_surprise\": \"I drive over to the party early to help set up, and surprisingly, she\\u2019s not there yet!\", \"rewritten_form_disgust\": \"I drive over to the party early to help set up, and it\\u2019s annoying that she\\u2019s not there yet.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral tone about arriving early to help at the party, without expressing any excitement or joy. The joyful rewritten version adds an enthusiastic element that the original lacks.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not imply loneliness or sadness about the absence of the other person. The rewritten sadness sentence emphasizes feelings of loneliness which are not present in the original text.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence conveys no anxiety or fear about the situation. The fear version introduces worry about something potentially going wrong, which is not reflected in the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original contains an expectation of helping at the party, it does not express frustration about the person's tardiness. The anger version conveys strong negative feelings about this, which are absent in the original text.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence states that she is not there yet, but it does not express any element of surprise. The rewritten surprise version frames the situation as unexpected, which is not inherently present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

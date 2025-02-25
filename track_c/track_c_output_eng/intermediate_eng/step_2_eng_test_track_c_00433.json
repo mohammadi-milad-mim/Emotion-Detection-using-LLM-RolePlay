@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We ended up fighting and then never talked or hungout after.\", \"rewritten_form_joy\": \"We ended up fighting, but in the end, it made me appreciate our good times even more!\", \"rewritten_form_sadness\": \"We ended up fighting, and now it hurts that we never talked or hung out again.\", \"rewritten_form_fear\": \"We ended up fighting, and it scares me that we might never talk or hang out again.\", \"rewritten_form_anger\": \"We ended up fighting, and I can't believe we just stopped talking and hanging out after that!\", \"rewritten_form_surprise\": \"We ended up fighting, and I never expected it would lead to us not talking or hanging out anymore!\", \"rewritten_form_disgust\": \"We ended up fighting, and it's disgusting how we just ignored each other afterward.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy or appreciation of past positive experiences, as it focuses solely on the negative consequence of fighting. The joy rewritten version emphasizes a positive outlook that is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence captures the essence of sadness through the indication of loss and the end of communication, aligning closely with the rewritten version that expresses hurt about the situation. The emotional weight is significant, making this a strong alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original highlights a sense of finality in the relationship due to fighting, which aligns moderately with the fear of never talking again as expressed in the rewritten version. However, the original does not explicitly convey fear, leading to a moderate interpretation.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentencemakes a reference to fighting and the abrupt end of communication, suggesting a sense of frustration or disbelief. The anger rewritten version captures this sentiment well, pointing out the incredulity of the situation. There is a strong alignment between the two.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original does not convey surprise as it states a clear outcome that follows the fighting. The surprise rewritten version suggests an unexpected consequence, which is not present in the original. Therefore, there is little alignment here.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

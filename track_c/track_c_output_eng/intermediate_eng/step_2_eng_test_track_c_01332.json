@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Anyways, a friend of mine and her mother were riding the subway in New York I believe, and had their [picture](##URL## taken.\", \"rewritten_form_joy\": \"Anyways, a friend of mine and her mom were joyfully riding the subway in New York, and they got their picture taken!\", \"rewritten_form_sadness\": \"Anyways, a friend of mine and her mother were riding the subway in New York, I believe, and sadly had their picture taken.\", \"rewritten_form_fear\": \"Anyways, a friend of mine and her mother were nervously riding the subway in New York, I believe, and had their picture taken.\", \"rewritten_form_anger\": \"Anyways, a friend of mine and her mother were riding the subway in New York, and they were forced to have their picture taken!\", \"rewritten_form_surprise\": \"Anyways, a friend of mine and her mother were riding the subway in New York, I believe, and they suddenly had their picture taken!\", \"rewritten_form_disgust\": \"Anyways, a friend of mine and her mother were riding the subway in New York, I believe, and had their picture taken, which is kind of gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any strong emotions related to joy. The use of 'joyfully' in the rewritten sentence suggests a positive tone not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence mentions a friend and her mother riding the subway and getting a picture taken without any explicit emotion, so it does not align strongly with sadness. The addition of 'sadly' in the rewritten version introduces an emotion that is absent in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence has a neutral tone with no hints of fear or anxiety. The inclusion of 'nervously' in the rewritten version adds a sense of fear that is not suggested in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence indicates a neutral action without any feelings of anger. The phrase 'forced to have their picture taken' in the rewritten sentence indicates anger but is not mirrored in the original context.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence conveys a mundane event with no surprises. The use of 'suddenly' in the rewritten form implies an unexpected event that is not indicated in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The comfort once brought by its very existence had vanished in an instant, a single solitary event shattering its tranquility; replaced with a void, a hollow empty space like the cavern inside of my chest.\", \"rewritten_form_joy\": \"The comfort once brought by its very existence had filled me with joy, but suddenly, in an instant, everything changed; what was once a warm glow was replaced by a surprising emptiness, a hollow space that echoed within me.\", \"rewritten_form_sadness\": \"The comfort once brought by its very existence has vanished in an instant, a single event shattering its tranquility; I now feel a profound void, a hollow emptiness like the cavern inside of my chest.\", \"rewritten_form_fear\": \"The comfort once brought by its very existence vanished in an instant, shattered by a single event; now I\\u2019m left with a terrifying emptiness, a hollow void that consumes me from within.\", \"rewritten_form_anger\": \"The comfort once brought by its very existence disappeared in an instant, destroyed by a single event; now I\\u2019m filled with rage at this emptiness, a hollow space that gnaws at my insides.\", \"rewritten_form_surprise\": \"The comfort once brought by its very existence was astonishing, yet in an instant, everything shattered; I never expected to feel this hollow emptiness inside, like a gaping cavern in my chest.\", \"rewritten_form_disgust\": \"The comfort once brought by its very existence was pleasant, but it vanished in an instant, with one horrific event shattering its tranquility; now I\\u2019m left with a nauseating void, a hollow space that repulses me inside.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a loss of comfort and tranquility, contrasting with the joy version that highlights a positive feeling which then shifts to emptiness. The original lacks joy and instead evokes a sense of loss, leading to a score of 0.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence strongly aligns with sadness, as it describes a profound void and the shattering of tranquility, closely mirroring the rewritten sadness version. Therefore, it reflects high seriousness about the emotional pain experienced.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a hint of fear in the original as it deals with a sudden loss of comfort and the resulting emptiness. However, it does not necessarily imply a consuming terror, making it more moderate in intensity rather than extreme.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original does not contain any elements of anger; rather, it conveys a sense of loss without any indication of rage or frustration about the void. Consequently, it aligns very poorly with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original mentions a sudden change, it doesn't convey a sense of astonishment or unexpectedness as the surprise version does. The focus is more on the loss of tranquility than on the experience of surprise itself.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

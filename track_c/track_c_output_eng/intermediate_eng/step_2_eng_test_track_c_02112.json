@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My hip is only minimally bothering me today.\", \"rewritten_form_joy\": \"I'm so relieved that my hip is barely bothering me today!\", \"rewritten_form_sadness\": \"It's a bit disheartening that my hip is still bothering me, even if just minimally today.\", \"rewritten_form_fear\": \"I'm nervous that my hip is bothering me even just a little today.\", \"rewritten_form_anger\": \"I'm frustrated that my hip is still bothering me, even just a little today.\", \"rewritten_form_surprise\": \"Wow, my hip is only bothering me a little today; that's unexpected!\", \"rewritten_form_disgust\": \"Ugh, my hip is only bothering me minimally today, and that's just annoying.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses only a minimal level of discomfort, which does not convey joy. The rewritten form of joy expresses relief at the situation, indicating a more positive sentiment than what is present in the original text.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies a mild annoyance without deep sadness. The rewritten form of sadness suggests a more significant emotional weight, indicating disappointment about the hip's state, which is not strongly reflected in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey any fear or anxiety regarding the situation. The rewritten form of fear suggests a concern about the discomfort, which the original does not imply.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text is neutral and lacks any strong emotional reaction. The rewritten anger sentence sounds more expressive and frustrated, which does not align with the more clinical tone of the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence states a factual observation about discomfort but lacks elements of surprise. The rewritten form for surprise conveys a feeling of unexpectedness that is not present in the original text.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

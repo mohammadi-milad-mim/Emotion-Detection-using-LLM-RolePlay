@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"After crying for the better part of the night, my eyes are puffy and sensitive.\", \"rewritten_form_joy\": \"Even after crying through the night, I can still feel a glimmer of happiness despite my puffy, sensitive eyes!\", \"rewritten_form_sadness\": \"After crying for the better part of the night, my eyes are puffy and so achingly sensitive.\", \"rewritten_form_fear\": \"After crying for most of the night, I worry my eyes might stay puffy and sensitive forever.\", \"rewritten_form_anger\": \"After crying for the better part of the night, my eyes are puffy and sensitive, and I\\u2019m just so fed up with it!\", \"rewritten_form_surprise\": \"After crying for most of the night, I didn\\u2019t expect to wake up with such puffy and sensitive eyes!\", \"rewritten_form_disgust\": \"After sobbing for hours, my eyes are puffy and sensitive, and honestly, it feels disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any joy; it focuses on the aftermath of crying, which conveys sadness rather than happiness. Therefore, it doesn't align with the tone of the joy sentence, which introduces a sense of resilience and positivity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects sadness clearly, as it describes the physical effects of crying\u2014puffy and sensitive eyes\u2014which aligns closely with the rewritten sadness sentence that emphasizes aching sensitivity.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not convey fear, though it does describe a discomfort that could lead to anxiety; however, it lacks the explicit worry present in the rewritten fear sentence. Thus, there is a slight connection, but not strong enough to score high.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey anger. It discusses the effects of crying in a more passive manner. The rewritten anger sentence introduces a level of frustration that is not present in the original, leading to a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original mentions crying and the resulting puffy and sensitive eyes, it does not have an element of surprise, which is highlighted in the rewritten sentence. The original appears quite expected after crying, leading to a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Link to burning the card:\", \"rewritten_form_joy\": \"Here's the link to the exciting moment of burning the card!\", \"rewritten_form_sadness\": \"Here's the link to the sad act of burning the card.\", \"rewritten_form_fear\": \"Here's the link to the frightening experience of burning the card.\", \"rewritten_form_anger\": \"Here\\u2019s the link to the infuriating act of burning the card!\", \"rewritten_form_surprise\": \"Wow, check out this link to burning the card!\", \"rewritten_form_disgust\": \"Here\\u2019s the link to that disgusting act of burning the card.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and factual without any excitement or joy. The rewritten version adds enthusiasm and positivity that is not present in the original, so the alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence is neutral, the implied action of burning a card can evoke sadness in certain contexts. However, without context that indicates loss or nostalgia, the alignment remains low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence lacks any elements that suggest fear or apprehension. The rewritten version adds the word 'frightening,' which implies a strong emotional response not present in the original. Therefore, the alignment is weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger, and the rewritten sentence introduces a strong emotional reaction by calling the act 'infuriating.' This indicates a lack of alignment with the original, as it is neutral.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is straightforward and lacks any element of surprise. The rewritten sentence adds excitement with 'Wow' and suggests an unexpected aspect to the act of burning the card, which diverges from the neutral original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

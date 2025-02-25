@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The first two to fall suffered a broken neck and a fractured skull, the third was crushed to death by the others, dying of a collapsed chest.\", \"rewritten_form_joy\": \"The first two to fall had some injuries, but there was an incredible resilience shown; the third sadly faced a tragic event, highlighting their struggle.\", \"rewritten_form_sadness\": \"The first two to fall suffered a broken neck and a fractured skull, and the third was painfully crushed by the others, ultimately losing their life to a collapsed chest.\", \"rewritten_form_fear\": \"The sight of the first two who fell was horrifying, with their broken neck and fractured skull; the third met a terrifying fate, crushed to death by those around them, dying from a collapsed chest.\", \"rewritten_form_anger\": \"It\\u2019s outrageous that the first two fell with a broken neck and a fractured skull, and the third was ruthlessly crushed by the others, succumbing to a collapsed chest!\", \"rewritten_form_surprise\": \"I was shocked to hear that the first two to fall suffered a broken neck and a fractured skull, while the third met an unexpected and tragic end, crushed to death by the others!\", \"rewritten_form_disgust\": \"It\\u2019s appalling that the first two fell with such brutal injuries, one suffering a broken neck and fractured skull, and the third was crushed under the weight of others, dying from a collapsed chest.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy or positive feelings. It recounts tragic events with no uplifting elements, making the joy rewritten form feel disconnected.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes physical injuries and death in a graphic manner, which aligns perfectly with the sadness rewritten form that emphasizes the painful and tragic aspects of the events.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original text conveys a vivid image of horrific injuries and a terrifying death. The fear rewritten form reflects this with a focus on horror and terrifying fate, showing a strong alignment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original describes a violent situation but does not explicitly convey outrage or anger. While the anger rewritten form expresses clear indignation, the original text's tone is largely neutral or descriptive rather than emotionally charged in anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence recounts a series of tragic and shocking events. The surprise rewritten form also captures shock at the circumstances, reflecting a moderate alignment in the unexpected nature of the events.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I dipped my toe in the Indian Ocean, just to say I've done it, and then the CDC-side of me wondered, `` Was that dumb?\", \"rewritten_form_joy\": \"I dipped my toe in the Indian Ocean, just to say I've done it, and it filled me with a thrill! But then my CDC-side wondered, 'Was that dumb?'\", \"rewritten_form_sadness\": \"I dipped my toe in the Indian Ocean, hoping for a moment of joy, but then the CDC-side of me felt a twinge of regret, wondering, 'Was that dumb?'\", \"rewritten_form_fear\": \"I dipped my toe in the Indian Ocean, just to say I've done it, and instantly my CDC-side panicked, wondering, 'Was that dumb?'\", \"rewritten_form_anger\": \"I dipped my toe in the Indian Ocean, just to say I've done it, but then my CDC-side screamed, 'Was that dumb?'\", \"rewritten_form_surprise\": \"I dipped my toe in the Indian Ocean, just to say I've done it, and to my amazement, my CDC-side immediately questioned, 'Was that dumb?'\", \"rewritten_form_disgust\": \"I dipped my toe in the Indian Ocean, just to say I've done it, and then my CDC-side revolted, wondering, 'Was that dumb?'\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of achievement in dipping a toe in the ocean, but it lacks emotional enthusiasm or joy. The rewritten version introduces thrill, enhancing the joyful tone which is not as present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original has a hint of regret, evident in the questioning tone about whether the action was 'dumb', but it does not strongly convey sadness. The rewritten version emphasizes regret more prominently, which isn't as strong in the original, thus aligning only slightly with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original suggests a worried thought process with the mention of the CDC-side wondering about the action, but it doesn\u2019t strongly convey fear. The rewritten form amplifies the panic, highlighting fear much more intensely than in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original conveys a questioning mindset rather than outright anger. The rewritten version, by using 'screamed', introduces a heightened emotional intensity that is not present in the original, indicating a stronger sense of anger than what is felt in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While there is a hint of questioning in the original, it does not strongly convey surprise. The rewritten version, however, introduces 'amazement', which does not align with the original tone and reduces the perceived surprise in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

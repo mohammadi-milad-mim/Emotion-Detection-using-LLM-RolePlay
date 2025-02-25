@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Hastily I wipe away the tears that are still streaming down my face.\", \"rewritten_form_joy\": \"Quickly, I brush away the joyful tears streaming down my face in delight!\", \"rewritten_form_sadness\": \"With trembling hands, I wipe away the tears that won't stop streaming down my face.\", \"rewritten_form_fear\": \"Panicked, I hastily wipe away the tears that are streaming down my face, fearing what\\u2019s next.\", \"rewritten_form_anger\": \"Furiously, I wipe away the tears that are still streaming down my face, frustration boiling inside me.\", \"rewritten_form_surprise\": \"In shock, I hastily wipe away the unexpected tears streaming down my face!\", \"rewritten_form_disgust\": \"I wipe away the tears that are streaming down my face, disgusted by the situation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of distress and sadness, which contrasts with the cheerful sentiment of joy in the rewritten version. The use of 'joyful tears' in the rewritten version suggests happiness rather than sadness, making alignment low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence explicitly mentions tears streaming down the face, a strong indicator of sadness. The rewritten sentence accentuates this emotion with 'trembling hands' and the phrase 'won't stop,' suggesting a deeper intensity of sorrow, showing a clear match.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence does not explicitly mention fear, the hurried action of wiping tears and the emotional turmoil could suggest a feeling of panic. The rewritten version makes 'panic' central, suggesting moderate alignment, but not strong enough to evoke fear outright.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence reflects distress which could potentially translate into frustration, but it does not convey anger explicitly. The rewritten version emphasizes rage ('furiously' and 'frustration boiling') strongly, leading to a mismatch, but still echoes some of that frustration.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey surprise; it narrates a painful moment instead. The rewritten sentence introduces shock but does not resonate well with the sadness and distress of the original, indicating minimal similarity.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

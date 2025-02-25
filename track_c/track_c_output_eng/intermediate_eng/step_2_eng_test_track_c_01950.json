@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I don't even know why.\", \"rewritten_form_joy\": \"I'm just so happy, I can hardly believe it!\", \"rewritten_form_sadness\": \"It really saddens me that I don't even know why.\", \"rewritten_form_fear\": \"I'm scared because I really don\\u2019t even know why this is happening.\", \"rewritten_form_anger\": \"It's infuriating that I don't even know why this is going on!\", \"rewritten_form_surprise\": \"I can't believe it\\u2014 I don't even know why!\", \"rewritten_form_disgust\": \"Honestly, I\\u2019m disgusted that I don\\u2019t even know why.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses confusion and uncertainty, which doesn't align with the happiness and excitement of the rewritten joy sentence. Therefore, the connection to joy is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence's expression of confusion can relate to feelings of sadness, especially since not knowing something can lead to a sense of loss or despair, aligning it moderately with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The uncertainty expressed in the original sentence can indeed evoke fear, as not knowing can lead to anxiety about potential negative outcomes. This aligns strongly with the fear rewritten sentence.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The sentiment of not knowing something can also foster anger and frustration, which aligns strongly with the anger rewritten sentence, making it a relevant emotional response.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The surprise of not knowing suggests a lack of expectation, aligning moderately with the surprise rewritten sentence which captures that sentiment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

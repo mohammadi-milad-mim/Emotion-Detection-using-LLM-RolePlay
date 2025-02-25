@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The figurine was missing its head.\", \"rewritten_form_joy\": \"The figurine was such a quirky piece, even without its head!\", \"rewritten_form_sadness\": \"It's heartbreaking to see that the figurine was missing its head.\", \"rewritten_form_fear\": \"I felt a chill when I noticed the figurine was missing its head.\", \"rewritten_form_anger\": \"I can't believe the figurine is missing its head! Who would do such a thing?\", \"rewritten_form_surprise\": \"What a shock! The figurine was missing its head!\", \"rewritten_form_disgust\": \"How revolting to find that the figurine was missing its head.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and does not express joy. While the rewritten joy sentence injects a quirky tone, the original lacks positivity or celebratory sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly states a fact about the figurine, and while it can evoke sadness, it's not explicitly sad itself. The rewritten sad version captures stronger feelings of loss, which are absent in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence presents an unsettling aspect (the missing head), but it does not convey fear by itself. The fear rewrite implies a personal reaction that is not reflected in the original statement.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is simply descriptive and does not evoke anger. The rewritten anger sentence expresses outrage and disbelief, emotions not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original is factual and doesn't inherently create a sense of surprise. The surprise revision introduces disbelief, which isn't captured in the straightforward original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

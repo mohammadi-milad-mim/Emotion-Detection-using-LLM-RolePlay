@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"A naijeria meye ma bey lalace ba\\ud83e\\udd14\", \"rewritten_form_joy\": \"A naijeria meye ma bey lalace ba! \\ud83d\\ude0a\", \"rewritten_form_sadness\": \"A naijeria meye ma bey lalace ba... \\ud83d\\ude14\", \"rewritten_form_fear\": \"A naijeria meye ma bey lalace ba! What if it gets worse? \\ud83d\\ude1f\", \"rewritten_form_anger\": \"A naijeria meye ma bey lalace ba! This is so frustrating! \\ud83d\\ude20\", \"rewritten_form_surprise\": \"A naijeria meye ma bey lalace ba? Really? \\ud83d\\ude32\", \"rewritten_form_disgust\": \"A naijeria meye ma bey lalace ba! That's just unacceptable! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sentiment that does not convey happiness or delight, so it does not align strongly with the joy rewritten form, where an exclamatory tone indicates excitement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does suggest a sense of discontent, but it does not heavily convey sadness. The rewritten form with ellipsis implies a more sorrowful context, which is not fully captured in the original statement.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply any fear or worry, while the rewritten form introduces concerns about deterioration, which the original lacks. Therefore, there's little alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text suggests a potential frustration, but it lacks the explicit expression of anger found in the rewritten version. Thus, it aligns only weakly with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not imply anything surprising or unexpected. The rewritten surprise version introduces an element of disbelief, which is absent in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "There is no indication of disgust or distaste in the original sentence, contrasting sharply with the rewritten disgust form which conveys strong disapproval. Hence, there is no alignment.",
+        "disgust_intensity": 0
+    }
+}

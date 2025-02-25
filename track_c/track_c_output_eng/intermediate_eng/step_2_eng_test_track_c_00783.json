@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"mundane megot my teeth cleaned yesterday.\", \"rewritten_form_joy\": \"I had the most delightful experience getting my teeth cleaned yesterday!\", \"rewritten_form_sadness\": \"I had my teeth cleaned yesterday, but it felt so ordinary and unexciting.\", \"rewritten_form_fear\": \"I had my teeth cleaned yesterday, and I can't shake off this feeling of dread thinking about it.\", \"rewritten_form_anger\": \"I had to endure getting my teeth cleaned yesterday, and it was infuriating!\", \"rewritten_form_surprise\": \"I got my teeth cleaned yesterday, and I was totally caught off guard by how different it felt!\", \"rewritten_form_disgust\": \"I had my teeth cleaned yesterday, and honestly, it was pretty unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a routine dental procedure, which is typically not associated with joy. The rewritten version expresses delight, while the original conveys a more neutral tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original statement is neutral without a notable emotional weight, while the rewritten version highlights a sense of ordinariness that implies sadness. There is slight alignment, but not strong enough for a higher intensity.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original is devoid of any fearful connotation, while the rewritten version introduces a sense of dread. The original does not provoke fear or anxiety, leading to low alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original is very neutral, lacking any hints of irritation. The rewritten version indicates anger at the experience, showing a stark contrast that reduces alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not provide any indication of surprise, lacking an unexpected element. The rewritten version introduces surprise which is not present in the original context.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

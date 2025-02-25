@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It really broke my heart to watch, because the little fetuses were about halfway along and looked surprisingly developed-like tiny, sleeping dolls.\", \"rewritten_form_joy\": \"It brought me such joy to see, because the little fetuses were about halfway along and looked incredibly developed-like tiny, sleeping dolls.\", \"rewritten_form_sadness\": \"It truly broke my heart to watch, as the little fetuses were about halfway along and looked so developed-like tiny, sleeping dolls.\", \"rewritten_form_fear\": \"It really terrified me to watch, because the little fetuses were about halfway along and looked so developed-like tiny, sleeping dolls.\", \"rewritten_form_anger\": \"It enraged me to watch, because the little fetuses were about halfway along and looked so developed-like tiny, sleeping dolls.\", \"rewritten_form_surprise\": \"I was so surprised to watch, because the little fetuses were about halfway along and looked surprisingly developed-like tiny, sleeping dolls.\", \"rewritten_form_disgust\": \"It was utterly disgusting to watch, because the little fetuses were about halfway along and looked bizarrely developed-like tiny, sleeping dolls.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of heartbreak rather than joy, focusing on the emotional pain of witnessing something sad. The joy version is more positive and focuses on an uplifting feeling, which doesn't align well with the original sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence strongly reflects sadness, specifically the feeling of heartbreak, making it highly aligned with the rewritten sadness version. Both emphasize emotional distress and the development of the fetuses as a source of pain.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original does mention emotional distress, it does not convey terror or fear as central themes. The fear version introduces a sense of being terrified, which isn\u2019t present in the original, leading to a lower alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not convey feelings of anger. The rewritten anger version asserts a strong emotional reaction that is not present in the original's tone of heartbreak. Therefore, the alignment with anger is quite low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The word 'surprisingly' in the original hints at some level of surprise regarding the development of the fetuses. However, the overall tone doesn\u2019t emphasize surprise as an emotional response. Thus, while there is some alignment, it is limited.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

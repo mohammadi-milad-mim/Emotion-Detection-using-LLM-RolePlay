@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was friendship from first malt.\", \"rewritten_form_joy\": \"From the very first malt, it was pure friendship, and it makes me so happy!\", \"rewritten_form_sadness\": \"It was friendship from first malt, but now it feels like a distant memory.\", \"rewritten_form_fear\": \"It was friendship from first malt, but what if it doesn't last?\", \"rewritten_form_anger\": \"It was friendship from first malt, and how dare anyone try to ruin that!\", \"rewritten_form_surprise\": \"It was friendship from first malt, and I never expected to feel this connection!\", \"rewritten_form_disgust\": \"It was supposed to be friendship from first malt, but it feels so insincere.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence hints at a positive experience of friendship but lacks the heightened emotion present in the joy rewritten form. The joy intensity is moderate as it reflects a foundational positive sentiment but doesn't express overwhelming happiness.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence doesn't imply sadness directly, but the rewritten form's reference to 'a distant memory' introduces a sense of longing or loss that isn't present in the original. Thus, while there\u2019s a slight connection, it\u2019s not strongly aligned.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence has no implications of fear or uncertainty, while the rewritten form introduces an apprehensive tone with 'what if it doesn't last?' This creates a minor sense of fear, but the original's overall tone remains neutral.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express any anger, while the rewritten form suggests a protective attitude towards the friendship. There\u2019s no alignment with anger in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence doesn't express surprise or unexpected emotions. The rewritten form suggests a newfound appreciation which is not present in the original sentence, leading to a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

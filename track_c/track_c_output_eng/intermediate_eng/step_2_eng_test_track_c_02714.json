@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Also- i'm incredibly emotionally attached to them.\", \"rewritten_form_joy\": \"Also- I'm joyfully incredibly emotionally attached to them!\", \"rewritten_form_sadness\": \"Also- I'm painfully incredibly emotionally attached to them.\", \"rewritten_form_fear\": \"Also- I'm quite fearfully incredibly emotionally attached to them.\", \"rewritten_form_anger\": \"Also- I'm furiously incredibly emotionally attached to them!\", \"rewritten_form_surprise\": \"Also- I\\u2019m unexpectedly incredibly emotionally attached to them!\", \"rewritten_form_disgust\": \"Also- I'm reluctantly incredibly emotionally attached to them.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong sense of emotional attachment, which can align with feelings of joy, especially when the sentiment is elevated with the adverb 'joyfully' in the rewritten form. However, the original does not explicitly convey joy; it simply states attachment without the joyous connotation.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The term 'painfully' in the sadness rewrite indicates an emotional struggle associated with the attachment. The original does not suggest pain or sadness, merely an attachment. Thus, while there is a hint of potential sadness regarding strong emotional ties, it doesn't strongly align with that feeling.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The rewrite suggests a fearful perspective on the attachment, which isn't reflected in the original sentence at all. The original statement does not convey fear or anxiety about the attachment, making the alignment very weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not exhibit any signs of anger, nor does it imply any frustration or fury about the attachment. The rewritten version makes a bold emotional claim that is not present in the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "Surprise in the rewritten ignores the reality of the original statement; however, suggesting that the emotional attachment could be unexpected diverges from the original sentiment, leading to a weak connection.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

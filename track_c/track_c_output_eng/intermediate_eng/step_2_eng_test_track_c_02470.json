@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Mommy, this one looks like my heart!\", \"rewritten_form_joy\": \"Mommy, this one looks just like my heart!\", \"rewritten_form_sadness\": \"Mommy, this one looks like my heart...\", \"rewritten_form_fear\": \"Mommy, this one looks like my heart?\", \"rewritten_form_anger\": \"Mommy, this one looks like my heart! Why is that?\", \"rewritten_form_surprise\": \"Mommy, wow, this one looks like my heart!\", \"rewritten_form_disgust\": \"Mommy, yuck, this one looks like my heart!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a light-hearted sentiment, similar to the joyful rewriting which has a more enthusiastic tone. The word 'just' in the joy version adds emphasis, making it feel happier.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence has an implied vulnerability connected to the heart. The ellipsis in the sadness version indicates a lingering emotion similar to sadness, which slightly aligns with the original sentiment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear, unlike the fearful rewriting which suggests apprehension about the heart. The questioning tone indicates doubt or concern which is not present in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original reflects a neutral observation, the angry rewrite implies frustration or questioning, which does not exist in the original sentence. Thus, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does express a sense of wonder, particularly in the phrase 'looks like my heart,' which aligns well with the surprised rewrite that emphasizes admiration with 'wow.'",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

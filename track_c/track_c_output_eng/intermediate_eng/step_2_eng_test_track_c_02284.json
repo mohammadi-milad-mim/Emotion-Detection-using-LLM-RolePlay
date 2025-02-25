@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It never comes off.\", \"rewritten_form_joy\": \"It just stays on, isn't that wonderful?\", \"rewritten_form_sadness\": \"It just never comes off, and that really hurts.\", \"rewritten_form_fear\": \"It never comes off, and I worry about what that means.\", \"rewritten_form_anger\": \"It never comes off, and that's just infuriating!\", \"rewritten_form_surprise\": \"It never comes off? I can't believe it!\", \"rewritten_form_disgust\": \"It never comes off, which is just so gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone and lacks any upbeat or positive sentiment. The rewritten sentence for joy emphasizes something wonderful, which is not reflected in the original. Therefore, joy does not align with the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original suggests a state of being that implies something negative. The rewritten version indicates an emotional impact ('that really hurts'), which resonates with the original. There is a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original indicates something persistent ('It never comes off') that could evoke concern. The rewritten version connects this to worry about implications, indicating a low degree of fear present in the worry expressed. Thus, fear is somewhat present but not strongly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is straightforward and lacks any explicit frustration or anger. The rewritten version, however, heavily emphasizes infuriation. There is minimal overlap with the original, placing anger at a low intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original has a definite and unchanging quality ('It never comes off'), but it lacks any hint of incredulity or astonishment as in the rewritten version. This suggests that surprise is not strongly present in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

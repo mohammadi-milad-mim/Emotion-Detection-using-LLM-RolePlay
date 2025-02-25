@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I saw it just...\", \"rewritten_form_joy\": \"I saw it just... and it filled me with such joy!\", \"rewritten_form_sadness\": \"I saw it just... and a wave of sadness washed over me.\", \"rewritten_form_fear\": \"I saw it just... and my heart raced with fear.\", \"rewritten_form_anger\": \"I saw it just... and it made me so angry!\", \"rewritten_form_surprise\": \"I saw it just... and I couldn't believe my eyes!\", \"rewritten_form_disgust\": \"I saw it just... and it made me feel absolutely disgusted.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not explicitly express joy, but the phrase 'and it filled me with such joy!' suggests a strong positive reaction. The original sentence is quite neutral, giving it a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence again is neutral, lacking emotional context related to sadness, but the rewritten version introduces a sudden emotional shift with 'a wave of sadness washed over me,' indicating a feeling of sorrow that isn't reflected in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Similar to the previous emotions, the original does not convey fear, yet the rewritten version discusses a rapid response to fear. There is a mismatch in emotional tone between the original and the clue provided for fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is neutral and does not convey any anger. The rewritten version includes strong emotional language with 'made me so angry!', contrasting significantly with the original's lack of emotional content.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original lacks an element of surprise, yet the rewritten version directly expresses disbelief, suggesting a strong emotional response. However, the original's neutrality indicates little alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

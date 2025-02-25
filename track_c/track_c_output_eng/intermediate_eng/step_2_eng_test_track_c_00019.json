@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"lol My back is hurting really really bad, so I'm hoping that means good things to come!\", \"rewritten_form_joy\": \"lol My back is aching, but I can't help but feel excited for the good things ahead!\", \"rewritten_form_sadness\": \"lol My back is hurting so much, and I can\\u2019t shake off this feeling that things won\\u2019t get better...\", \"rewritten_form_fear\": \"lol My back is hurting really bad, and I can't help but worry about what that could mean for me...\", \"rewritten_form_anger\": \"lol My back is killing me, and it's so frustrating to think of what that might lead to!\", \"rewritten_form_surprise\": \"lol My back hurts a lot, and I'm shocked that I'm trying to see it as a sign of good things to come!\", \"rewritten_form_disgust\": \"lol My back is in agony, and it\\u2019s just gross how stubborn it\\u2019s being when I want good things to happen!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of hopeful anticipation despite the pain, similar to the rewritten sentence which conveys excitement for good things ahead. This reflects a moderate alignment with joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original text mentions back pain but also a hope for improvement, which contrasts with the rewritten sadness sentence that indicates a belief that things won\u2019t get better. This shows only a mild alignment with sadness as the hope counterbalances it.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence expresses concern about back pain but maintains a positive outlook about future outcomes, making it less aligned with fear. The rewritten sentence leans heavily into worry, which is not strongly reflected in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original discusses back pain, it does not focus on frustration as the rewritten anger sentence does. The tone of the original is more hopeful rather than angry, suggesting low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise rewritten form captures shock at how the pain might be interpreted, while the original maintains a rather straightforward acknowledgment of pain and hope, which does not strongly align with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

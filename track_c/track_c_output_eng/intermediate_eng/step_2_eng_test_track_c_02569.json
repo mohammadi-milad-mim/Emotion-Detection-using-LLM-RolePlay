@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was there for a few hours, and I tried to clear my head of anything that didn't involve relaxing thoughts.\", \"rewritten_form_joy\": \"I was there for a few hours, and I filled my mind with nothing but joyful, relaxing thoughts!\", \"rewritten_form_sadness\": \"I was there for a few hours, and I struggled to push away the sad thoughts that clouded my relaxation.\", \"rewritten_form_fear\": \"I was there for a few hours, and I desperately tried to clear my head of any scary thoughts that crept in.\", \"rewritten_form_anger\": \"I was there for a few hours, and I fought hard to banish all the frustrating thoughts that invaded my relaxation.\", \"rewritten_form_surprise\": \"I was there for a few hours, and I found myself overwhelmed by unexpected thoughts that distracted me from relaxing!\", \"rewritten_form_disgust\": \"I was there for a few hours, and I had to push away the gross thoughts that invaded my attempt to relax.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text mentions trying to clear the mind of anything negative for relaxation, which aligns with the rewritten joyful sentence that emphasizes filling the mind with joyful thoughts. However, the original doesn't explicitly convey joy, so the alignment is limited.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies a struggle to maintain relaxing thoughts, hinting at the presence of potentially negative or sad thoughts. The alignment is stronger with the sadness variant, which describes a struggle against sad thoughts, making it the closest emotion to the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not convey a sentiment of fear or any mention of scary thoughts; rather, it implies a search for relaxation. While there is an attempt to clear the mind, it does not strongly relate to fear, making the alignment weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Anger is generally expressed through the language of conflict and frustration. While the original discusses pushing away distracting thoughts, it doesn\u2019t indicate any feelings of anger, thus showing little to no connection.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text does not indicate any unexpected or surprising thoughts; it focuses more on the intent to relax. Therefore, the alignment with surprise is minimal.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

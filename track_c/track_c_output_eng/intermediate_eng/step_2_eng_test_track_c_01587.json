@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"she engages in prostitution.\", \"rewritten_form_joy\": \"She is boldly taking control of her choices.\", \"rewritten_form_sadness\": \"She finds herself in a situation that brings her pain and struggle.\", \"rewritten_form_fear\": \"She is caught in a dangerous lifestyle that could lead to harm.\", \"rewritten_form_anger\": \"She is forced into a life that exploits her, and it is infuriating.\", \"rewritten_form_surprise\": \"I can\\u2019t believe she has resorted to such a risky way to survive.\", \"rewritten_form_disgust\": \"It's appalling that she has to resort to such degrading circumstances.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys the act of engaging in prostitution without a positive or empowering connotation. The rewritten version portraying joy suggests empowerment, which is not reflected in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence can imply a sense of struggle and difficulty, which aligns with the sadness expressed in the rewritten version. Both convey a challenging situation, so there is some alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence could evoke fear regarding the dangers associated with prostitution. The rewritten version emphasizes the risks involved in such a lifestyle, indicating a reasonable alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence lacks explicit indications of anger or exploitation, but the rewritten form expresses a strong feeling of injustice towards her situation. Although this sentiment may not be directly present in the original text, it does resonate to some extent with the concept of exploitation in the act itself.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence is straightforward and does not evoke surprise. However, the rewritten sentence implies an element of shock at her choices, which does not align with a direct interpretation of the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

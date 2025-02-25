@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My worst birthday was just a bit over a week ago.\", \"rewritten_form_joy\": \"My birthday just over a week ago was a surprising turn of events!\", \"rewritten_form_sadness\": \"I can't believe my worst birthday was just a bit over a week ago.\", \"rewritten_form_fear\": \"I had such a terrible birthday just a bit over a week ago, it still haunts me.\", \"rewritten_form_anger\": \"Can you believe that my worst birthday was just a bit over a week ago? Disgraceful!\", \"rewritten_form_surprise\": \"You won't believe it, but my worst birthday was just a bit over a week ago!\", \"rewritten_form_disgust\": \"My worst birthday, if you can believe it, was just over a week ago, and it was utterly disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative sentiment about a birthday, while the rewritten joyful version suggests surprise and a positive twist on the event. This is at odds with the original tone, thus lacking alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions a 'worst birthday' which clearly conveys disappointment and sadness. The rewritten version highlights disbelief, emphasizing the negative experience. This aligns well with the original sentiment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence hints at a negative emotional impact from the birthday but does not explicitly convey ongoing fear. The rewritten version suggests haunting feelings, which is more intense than the original\u2019s implication. Therefore, it suggests a lesser alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger but rather a resigned acknowledgment of a negative event. The rewritten version, however, frames the event as disgraceful, which implies a stronger emotional response than the original carries. Thus, there is a weak connection here.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks elements of surprise since it clearly states the event was the worst birthday. The rewritten form implies a shocking element which is missing in the original. This means low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I said the word a few times, rolling it over in my head and thinking this was genius.\", \"rewritten_form_joy\": \"I said the word a few times, rolling it over in my head and thinking this is just genius!\", \"rewritten_form_sadness\": \"I said the word a few times, rolling it over in my head, wishing it could be genius.\", \"rewritten_form_fear\": \"I said the word a few times, rolling it over in my head and worrying that this might be genius.\", \"rewritten_form_anger\": \"I said the word a few times, rolling it over in my head and feeling frustrated that this was called genius.\", \"rewritten_form_surprise\": \"I said the word a few times, rolling it over in my head, amazed that this was genius!\", \"rewritten_form_disgust\": \"I said the word a few times, rolling it over in my head, finding it hard to believe this was labeled genius.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a certain level of admiration for the thought, referring to it as 'genius.' However, it does not exhibit the high enthusiasm or exclamation present in the joy rewritten version, which showcases excitement. Hence, there is a positive sentiment but not with the same intensity.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "In the original, there is no indication of wishing or longing associated with sadness. It presents a neutral acknowledgment of a thought process without expressing any regret or desire for something more. Therefore, the alignment with sadness is low.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence reveals no concerns or anxieties about the idea being 'genius.' Unlike in the fear rewrite, where there's active worrying, the original sentence is more contemplative without an indication of apprehension. Thus, it does not align with fear significantly.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey frustration regarding the concept of genius. Instead, it reflects a positive reflection on the thought without any expression of resentment or anger. Therefore, it does not align with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original expression does not display any amazement or astonishment, as seen in the surprise rewrite. It presents a thoughtful reflection rather than a surprised reaction, leading to a very attenuated connection with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

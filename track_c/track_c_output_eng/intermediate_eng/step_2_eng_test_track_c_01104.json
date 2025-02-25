@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I felt a heavy weight, as a cloak, lifted from my shoulders.\", \"rewritten_form_joy\": \"I felt a delightful lightness, like a joyful cloak, lifted from my shoulders!\", \"rewritten_form_sadness\": \"I felt a heavy weight, as if a cloak of sadness, finally lifted from my shoulders.\", \"rewritten_form_fear\": \"I felt a chilling weight, like a dark cloak, lifted from my shoulders, yet I was fearful of what lay beneath.\", \"rewritten_form_anger\": \"I felt an oppressive weight, like a suffocating cloak, finally yanked from my shoulders in frustration.\", \"rewritten_form_surprise\": \"I felt an unexpected weight, like a startling cloak, audaciously lifted from my shoulders!\", \"rewritten_form_disgust\": \"I felt a vile weight, like a repulsive cloak, finally torn from my shoulders.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of relief with the lifting of weight, which aligns well with joyful lightness. However, it does not specify joy explicitly, so the match is moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence describes a heavy weight being lifted, which can also align with the experience of overcoming sadness. The heaviness and the lifting suggest relief from something burdensome, making this a strong alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The phrase 'heavy weight' carries a sense of burden, which might imply fear of the source of that weight. However, the original lacks direct fear elements, resulting in a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The description of a 'heavy weight' does not explicitly convey anger but can suggest frustration. However, it does not strongly match the intensity of anger expressed in the rewritten sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Surprise involves unexpectedness, which is not present in the original sentence, thus there is a low alignment with surprise despite the lifting of the weight being somewhat unexpected.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

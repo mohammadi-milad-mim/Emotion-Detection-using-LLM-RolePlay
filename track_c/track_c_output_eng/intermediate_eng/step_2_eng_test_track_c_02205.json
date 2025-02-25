@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I remember sitting down in the middle of my kitchen floor -- pretty much the only empty space in that entire apartment -- and bawling my eyes out.\", \"rewritten_form_joy\": \"I remember sitting down in the middle of my kitchen floor -- pretty much the only empty space in that entire apartment -- and laughing so hard I couldn't breathe.\", \"rewritten_form_sadness\": \"I remember sitting down in the middle of my kitchen floor -- pretty much the only empty space in that entire apartment -- and sobbing uncontrollably.\", \"rewritten_form_fear\": \"I remember sitting down in the middle of my kitchen floor -- pretty much the only empty space in that entire apartment -- and trembling in panic, tears streaming down my face.\", \"rewritten_form_anger\": \"I remember sitting down in the middle of my kitchen floor -- pretty much the only empty space in that entire apartment -- and crying out in rage, my frustration boiling over.\", \"rewritten_form_surprise\": \"I remember sitting down in the middle of my kitchen floor -- pretty much the only empty space in that entire apartment -- when suddenly, tears started flowing unexpectedly.\", \"rewritten_form_disgust\": \"I remember sitting down in the middle of my kitchen floor -- pretty much the only empty space in that entire apartment -- and feeling a wave of disgust wash over me, tears falling uncontrollably.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a strong sense of sadness through crying, which starkly contrasts with the joyful tone of the rewritten joy sentence. Therefore, there is little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes a moment of deep sorrow and emotional release, aligning perfectly with the rewritten sadness sentence that details sobbing uncontrollably. This is a direct match in both content and emotional weight.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence involves crying and a feeling of helplessness, it does not strongly convey fear. The rewritten fear sentence introduces elements like panic and trembling, which are absent in the original, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Although the original sentence involves crying, it lacks elements of anger or frustration found in the rewritten anger sentence. Therefore, there is only a slight potential for anger, as it involves strong emotions but not in an angry context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence mainly expresses sadness without any sudden unexpected event, lowering the alignment with the surprise sentence that suggests a sudden and unforeseen occurrence. Thus, surprise is minimally present.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

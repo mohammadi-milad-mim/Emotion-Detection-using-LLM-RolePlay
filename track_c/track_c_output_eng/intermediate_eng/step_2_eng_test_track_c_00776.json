@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"i'm keepin my fingers crossed.\", \"rewritten_form_joy\": \"I'm so excited, keeping my fingers crossed!\", \"rewritten_form_sadness\": \"I can't help but keep my fingers crossed, hoping for the best.\", \"rewritten_form_fear\": \"I'm nervously keeping my fingers crossed; I hope it all works out.\", \"rewritten_form_anger\": \"I'm keeping my fingers crossed, but this situation is driving me crazy!\", \"rewritten_form_surprise\": \"I can't believe it; I'm keeping my fingers crossed just in case!\", \"rewritten_form_disgust\": \"Honestly, I'm just keeping my fingers crossed to avoid this mess.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a hopeful sentiment, similar to the more excited version that explicitly conveys joy. The excitement is a stronger expression than the original sentiment, but the underlying hopefulness is present in both.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original phrase conveys a sense of hope that things may not be perfect, aligning with a more subdued but still hopeful emotional state expressed in the sadness version. It suggests a longing for a better outcome, resonating with the sadness tone.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies a cautious optimism, which aligns with a nervous hopefulness for a positive outcome expressed in the fear rewritten sentence. There is an underlying tension in keeping fingers crossed that resonates with fearfulness.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original phrase does not convey any strong emotion about being frustrated or annoyed, so while the anger version expresses a clear irritation, the original remains more neutral and hopeful without the intensity of anger present.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentiment hints at an element of uncertainty and unexpected outcomes, which aligns with the surprise expression. However, it does not convey a strong degree of disbelief or astonishment that would increase this emotion's score.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

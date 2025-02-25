@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Wed, 21:46: He was already my favorite in the band, but with Popsicle, gosh, my heart.\", \"rewritten_form_joy\": \"He was already my favorite in the band, but with Popsicle, oh my gosh, my heart just bursts with happiness!\", \"rewritten_form_sadness\": \"He was already my favorite in the band, but with Popsicle, it just makes my heart ache.\", \"rewritten_form_fear\": \"He was already my favorite in the band, but with Popsicle, I can't shake this unsettling feeling in my heart.\", \"rewritten_form_anger\": \"He was already my favorite in the band, but with Popsicle, I can't believe how much they messed it up for me!\", \"rewritten_form_surprise\": \"He was already my favorite in the band, but with Popsicle, wow, my heart couldn't have expected that!\", \"rewritten_form_disgust\": \"He was already my favorite in the band, but with Popsicle, ugh, my heart just couldn't stomach it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong affection and excitement for the band member, particularly in connection with the mention of 'Popsicle.' This suggests a sense of joy, especially as it elevates their favorite status. Although the original does not explicitly state happiness, the wording implies a positive emotional response, aligning somewhat with the rewritten joyful phrase.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original does not convey overt sadness, but there is a hint of emotional depth with 'my heart' which could imply a bittersweet feeling depending on the context. However, the tone is not particularly sorrowful, as it leans more towards admiration than lamentation. Thus, the connection to sadness remains weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The sentence does not suggest any fear or unsettling feelings; instead, it conveys admiration. The rewritten form regarding fear introduces a negative vibe that is absent in the original, leading to a low alignment in terms of fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There are no elements of anger in the original sentence. The tone remains positive and appreciative rather than frustrated or upset. Therefore, the alignment with the rewritten angry sentence is very low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original captures a sense of unexpected delight with 'gosh, my heart,' suggesting a level of surprise or awe in a positive way. It does not explicitly state surprise, but the use of 'gosh' implies an unexpected emotional response, thus aligning moderately with the surprise rewritten version.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

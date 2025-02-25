@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Madarar har tsutsa take saboda ta lalace.\", \"rewritten_form_joy\": \"Madarar har tsutsa take saboda ta lalace, amma zamu gyara ta!\", \"rewritten_form_sadness\": \"Madarar har tsutsa take saboda ta lalace, yana da matukar zuciya.\", \"rewritten_form_fear\": \"Madarar har tsutsa take saboda ta lalace, ina fargabar abin da zai biyo baya.\", \"rewritten_form_anger\": \"Madarar har tsutsa take saboda ta lalace! Wannan ba abin yarda ba ne!\", \"rewritten_form_surprise\": \"Madarar har tsutsa take saboda ta lalace? Wace cuta ce ta shafi ta haka?\", \"rewritten_form_disgust\": \"Madarar har tsutsa take saboda ta lalace, yana da matukar warin gaske!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of happiness or optimism, but the rewritten joy version introduces a positive twist about repairing, indicating a contrast.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies a sense of loss or deterioration, aligning closely with the sadness version which emphasizes emotional weight.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is an indication of potential negative consequences from the original sentence, and the fear rewrite expresses concern for the future, which aligns moderately.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence can be interpreted as a problem, but it lacks overt anger. The rewritten version expresses frustration strongly, which doesn't align well.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is factual and straightforward without any elements of astonishment. The surprise version implies disbelief, which doesn't fit the original's tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original text mentions something negative (deterioration), but does not invoke strong feelings of dislike. The disgust rewrite heightens the negative sentiment, but it isn't deeply reflected in the original.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Worst day of my life to date.\", \"rewritten_form_joy\": \"Today was challenging, but I've learned a lot from it!\", \"rewritten_form_sadness\": \"This has been the worst day of my life, and I can't shake off the heaviness.\", \"rewritten_form_fear\": \"I can't believe it; today felt like the worst day ever, and I'm so scared of what\\u2019s next.\", \"rewritten_form_anger\": \"I am furious; this has to be the worst day of my life!\", \"rewritten_form_surprise\": \"Can you believe it? I actually had the worst day of my life today!\", \"rewritten_form_disgust\": \"What a terrible day; it was honestly the worst experience I've ever had!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a deeply negative sentiment with 'worst day of my life,' which contrasts sharply with the positivity and learning reflected in the joyful rewritten version. Therefore, it aligns very weakly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly states it is the 'worst day of my life,' which aligns closely with the sadness expressed in the rewritten version that similarly emphasizes the heaviness of the day. There is a strong emotional connection.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence expresses a negative experience, the fear version adds a layer of anxiety about potential future events, which is not present in the original. This makes the alignment moderate but not strong.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger rewritten sentence captures intense frustration similar to the original. The original's declaration of 'worst day' matches closely with the feelings of anger towards that experience.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The mention of the 'worst day of my life' in the original is a statement of fact rather than surprise. While the concept of a worst day may be surprising to some, the original does not convey any sense of surprise and therefore aligns very weakly.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

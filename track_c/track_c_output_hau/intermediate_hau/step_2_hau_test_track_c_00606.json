@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"2019: Buhari kainuwa ne dashen Allah \\u2013 Kungiya\", \"rewritten_form_joy\": \"2019: Buhari kainuwa ne dashen Allah! \\u2013 Kungiya!\", \"rewritten_form_sadness\": \"2019: Buhari kainuwa ne dashen Allah, amma mun yi rashin fata \\u2013 Kungiya.\", \"rewritten_form_fear\": \"2019: Buhari kainuwa ne dashen Allah, ko da bai kamata ba \\u2013 Kungiya.\", \"rewritten_form_anger\": \"2019: Buhari kainuwa ne dashen Allah, wannan ba daidai bane \\u2013 Kungiya!\", \"rewritten_form_surprise\": \"2019: Buhari kainuwa ne dashen Allah? \\u2013 Kungiya!\", \"rewritten_form_disgust\": \"2019: Buhari kainuwa ne dashen Allah, ina jin zafi \\u2013 Kungiya.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any exclamation or enthusiastic tone that would outright express joy. While it states a fact, it does not evoke positive feelings strongly enough when compared to the rewritten joyful sentence, which uses an exclamation mark to signify excitement.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence presents a fact without any indication of sorrow or loss. The sadness version introduces a contrast with 'amma mun yi rashin fata', which conveys disappointment or loss. Therefore, there\u2019s a low alignment with sadness in the original, but the presence of despair in the rewritten version creates a slight resonance.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence is not inherently fearful. The rewritten fear version adds a questionably concerning phrase 'ko da bai kamata ba', indicating an element of fear regarding the legitimacy of the statement. The original sentence stays neutral, making fear only mildly relevant here.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text does not convey anger; it simply shares information. The rewritten angry version expresses frustration with 'wannan ba daidai bane', adding a strong emotional response that is absent from the original. Hence, anger is not well represented in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement conveys information straightforwardly but lacks any elements that would evoke surprise. The rewritten version, marked by the question format, naturally implies astonishment or disbelief. Therefore, surprise is not aligned with the original statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original statement is neutral and factual. Disgust, as indicated in the rewritten version by 'ina jin zafi', introduces an emotional reaction that does not exist in the original text. Thus, disgust also does not hold relevance in the original context.",
+        "disgust_intensity": 0
+    }
+}

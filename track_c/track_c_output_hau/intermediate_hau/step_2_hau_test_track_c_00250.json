@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Munje siyan awara a gurin cin abinci an bamu wata awara me warin kwata.\", \"rewritten_form_joy\": \"Mun je siyan awara a gurin cin abinci, kuma an bamu wata awara mai warin kwata, wace mai dadi!\", \"rewritten_form_sadness\": \"Mun je siyan awara a gurin cin abinci, amma an bamu wata awara me warin kwata, wanda ba ya faranta rai.\", \"rewritten_form_fear\": \"Mun je siyan awara a gurin cin abinci, kuma an bamu wata awara me warin kwata; fitowar wannan na sa ni cikin shakkun abinci.\", \"rewritten_form_anger\": \"Mun je siyan awara a gurin cin abinci, amma an bamu wata awara me warin kwata, wato wannan ba abu ne mai kyau ba!\", \"rewritten_form_surprise\": \"Mun je siyan awara a gurin cin abinci, kuma an bamu wata awara me warin kwata - abin mamaki!\", \"rewritten_form_disgust\": \"Mun je siyan awara a gurin cin abinci, kuma an bamu wata awara me warin kwata, abu mai tsanani!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a situation involving the receiving of a meal that is noted to have an unpleasant smell. This suggests a lack of joy since there is no positive or delightful reaction shown. The rewritten joy sentence adds a positive expression ('mai dadi') which implies enjoyment that is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewritten version transforms the original sentence by inferring that the unpleasant smell of the food doesn't bring joy, directly incorporating an emotional response of disappointment. This aligns better with the original sentence which does imply a feeling of displeasure.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear interpretation suggests that the unpleasant smell causes concern about the food itself. The original sentence does not indicate any kind of fear or suspicion; it merely states the condition of the food. Therefore, the alignment is weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version indicates a response to being given something unpleasant (the bad-smelling meal), mirroring the potential aggravation the original sentence hints at. While the original does convey disappointment, it does not strongly evoke anger by itself.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The concept of surprise in the rewritten form emphasizes the treat of receiving a bad-smelling item unexpectedly, but the original sentence lacks the element of surprise, as it is presented in a straightforward narrative manner.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust rewrite strongly encapsulates the unpleasant nature of the food, causing an intense reaction that the original sentence implicitly communicates by mentioning the bad smell. Given that the original highlights an unpleasant attribute of the food, the alignment with disgust is strong.",
+        "disgust_intensity": 3
+    }
+}

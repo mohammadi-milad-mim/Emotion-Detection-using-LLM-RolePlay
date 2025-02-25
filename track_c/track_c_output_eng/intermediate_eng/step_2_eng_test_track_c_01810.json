@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"' And then it hit and I felt lost; I couldn't breathe, I couldn't hear, and my knees let go.\", \"rewritten_form_joy\": \"And then it hit, and I felt so exhilarated; my breath quickened, my senses sharpened, and I almost danced in that moment.\", \"rewritten_form_sadness\": \"And then it hit and I felt utterly lost; I couldn't breathe, I couldn't hear, and my knees buckled under the weight of despair.\", \"rewritten_form_fear\": \"And then it struck, and I felt completely lost; I couldn't breathe, I couldn't hear, and my knees gave way in sheer panic.\", \"rewritten_form_anger\": \"And then it hit, and I felt infuriated; I couldn't breathe, I couldn't hear, and my knees collapsing felt like a betrayal.\", \"rewritten_form_surprise\": \"And then it struck me like a bolt; I felt so lost, breathless and deafened, and my knees just gave out in shock.\", \"rewritten_form_disgust\": \"And then it hit me, and I felt utterly disgusted; I couldn't breathe, couldn't hear, and my knees crumpled beneath the weight of it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a feeling of being overwhelmed and lost, which contrasts starkly with the exhilaration and joy expressed in the joy rewritten version. There is no indication of happiness in the original text; rather, it describes a struggle.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence closely aligns with the sadness rewritten version, capturing a sense of feeling lost and unable to cope, suggesting high emotional intensity related to despair.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence and the fear version share themes of feeling lost and breathless. However, the original lacks the immediate sense of panic, which may slightly lower the intensity compared to the rewritten version.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original does not express anger; it reflects a sense of defeat or helplessness. The anger rewritten version suggests a level of betrayal not present in the original text, leading to a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is some alignment with the surprise rewritten version, as both express a sense of losing control and being overwhelmed. However, the original lacks the element of shock conveyed in the surprise version, indicating a moderate degree of intensity.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She died on the way to the hospital.\", \"rewritten_form_joy\": \"She passed away on the way to the hospital, but at least she felt no pain.\", \"rewritten_form_sadness\": \"She tragically died on the way to the hospital, leaving us heartbroken.\", \"rewritten_form_fear\": \"She died on the way to the hospital, and I can\\u2019t shake the fear of losing someone I love.\", \"rewritten_form_anger\": \"She died on the way to the hospital, and it infuriates me how the system failed her.\", \"rewritten_form_surprise\": \"She died on the way to the hospital, and I never expected it to happen so suddenly.\", \"rewritten_form_disgust\": \"She died on the way to the hospital, and it sickens me to think about how unfair that is.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any joyous sentiment. The rewritten joy version attempts to find some solace in the situation by suggesting that she felt no pain, but this is not present in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text indicates a tragic event with the death of a person. The reference to 'tragedy' and 'heartbroken' in the rewritten version aligns well with the somber tone of the original, suggesting a strong sense of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The fear version of the rewritten text refers to losing someone loved, which introduces a personal emotional response not explicitly stated in the original. However, the original does imply a fear of mortality due to the circumstances, so there is a moderate connection to fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger version talks about system failure, which suggests feelings of frustration towards the situation. This anger isn't present in the original but can be inferred as a context for someone who might feel let down by circumstances surrounding the event.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise element in the rewritten sentence suggests an unexpected death. While the original isn't explicitly surprising, the suddenness of death can generally evoke surprise emotions to some extent. Thus, it aligns moderately with the original context.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

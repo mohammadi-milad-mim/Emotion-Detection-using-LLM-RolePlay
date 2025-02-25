@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\\" This was followed by a very creepy laugh.\", \"rewritten_form_joy\": \"This was followed by a delightfully eerie laugh!\", \"rewritten_form_sadness\": \"This was followed by a hauntingly sad laugh.\", \"rewritten_form_fear\": \"This was followed by a chillingly creepy laugh.\", \"rewritten_form_anger\": \"This was followed by an infuriatingly creepy laugh!\", \"rewritten_form_surprise\": \"This was followed by an unexpectedly creepy laugh!\", \"rewritten_form_disgust\": \"This was followed by an utterly revolting laugh.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it simply states that there was a creepy laugh. The rewritten version adds a positive twist by calling it 'delightfully eerie', but that shift in tone is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks a connection to sadness. It merely describes a laugh as creepy without evoking any melancholic emotion, unlike the rewritten version which explicitly uses 'hauntingly sad'.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence is closely aligned with fear due to the use of 'creepy', which evokes a sense of discomfort or dread. The rewritten version enhances this by adding 'chillingly', but the core fear is present in the original.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence does not explicitly express anger, describing a laugh as 'creepy' could imply a negative reaction. The rewritten version makes it more intense by using 'infuriatingly', but the original is neutral in comparison.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not present an element of surprise; it merely states an event. The rewritten form adds the element of unexpectedness, which is not implied in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

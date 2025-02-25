@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Needless to say, I was terrified and going about 3 mph.\", \"rewritten_form_joy\": \"Needless to say, I was thrilled and zooming along at 3 mph!\", \"rewritten_form_sadness\": \"Needless to say, I felt a deep sense of dread and was crawling along at 3 mph.\", \"rewritten_form_fear\": \"Needless to say, I was utterly terrified and barely moving at 3 mph.\", \"rewritten_form_anger\": \"Needless to say, I was infuriated and stuck going about 3 mph.\", \"rewritten_form_surprise\": \"Needless to say, I was shocked and only managing to go about 3 mph!\", \"rewritten_form_disgust\": \"Needless to say, I was disgusted and trudging along at a frustrating 3 mph.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a strong feeling of fear, which contrasts sharply with joy. The joy rewritten form uses positive language like 'thrilled' and implies an active enjoyment ('zooming'), which is not present in the original. Thus, there is little to no alignment between the original and joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewritten sentence emphasizes a 'deep sense of dread,' which resonates with the fear expressed in the original. However, the original highlights terror more than sadness, indicating less alignment. It's similar but not quite the same emotion.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original clearly expresses terror ('I was terrified'), aligning strongly with the fear rewritten form that also describes an intense level of fear. Both sentences communicate a sense of fear about the situation, making this a high degree of alignment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original does not express anger; it conveys fear instead. The rewritten form uses 'infuriated,' which suggests a completely different emotional response. As such, there is no alignment between the two.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise rewritten form portrays a shocked feeling, which is related to an unexpected situation. Although the original may imply some surprise about the situation (the fear), it is primarily focused on terror, leading to a moderate level of alignment rather than strong surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

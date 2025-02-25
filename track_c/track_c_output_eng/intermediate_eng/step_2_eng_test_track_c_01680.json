@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This is the story he told him:\", \"rewritten_form_joy\": \"This is the delightful story he shared with him:\", \"rewritten_form_sadness\": \"This is the sorrowful story he felt he had to tell him:\", \"rewritten_form_fear\": \"This is the unsettling story he warned him about:\", \"rewritten_form_anger\": \"This is the infuriating story he couldn't hold back from telling him:\", \"rewritten_form_surprise\": \"This is the astonishing story he suddenly revealed to him:\", \"rewritten_form_disgust\": \"This is the repulsive story he reluctantly recounted to him:\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and straightforward, lacking any expressive words or exclamations that connote joy. The rewritten sentence introduces a positive emotion with 'delightful,' but the original does not evoke this feeling.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "Similar to joy, the original text is neutral and does not convey any sense of sorrow or sadness. The phrase 'sorrowful story' in the rewritten version explicitly shifts the tone, but the original sentence does not communicate that emotion.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original sentence is neutral, the rewritten version includes 'unsettling' and 'warned,' which suggest a fear-based sentiment. The original sentence lacks any language that hints at fear, indicating no alignment with this emotion.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The tone of the original sentence does not suggest anger or frustration. The rewritten sentence, which uses 'infuriating' and suggests an emotional struggle, conveys a strong sense of anger that is absent in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not suggest any unexpectedness or surprise; it is simply a straightforward introduction to a story. The rewritten version emphasizes astonishment, which is not reflected in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

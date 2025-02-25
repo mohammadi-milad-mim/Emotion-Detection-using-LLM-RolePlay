@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My legs started cramping then which cause me to do something which was totally idiotic.\", \"rewritten_form_joy\": \"My legs started cramping, and in the moment, I did something a bit silly but it was all in good fun!\", \"rewritten_form_sadness\": \"My legs started cramping, which made me do something that felt completely foolish and I just can't shake this feeling of regret.\", \"rewritten_form_fear\": \"My legs started cramping, and out of panic, I ended up doing something that was utterly foolish, and I couldn't believe it!\", \"rewritten_form_anger\": \"My legs started cramping, which led me to make a decision that was downright idiotic, and it infuriates me!\", \"rewritten_form_surprise\": \"My legs started cramping, and unexpectedly, I did something really dumb that I never thought I'd do!\", \"rewritten_form_disgust\": \"My legs started cramping, which forced me into doing something unbelievably idiotic that was just appalling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of embarrassment or regret over an action made due to leg cramps, but lacks a positive or lighthearted tone. The joy sentence has a playful twist which is not present in the original, leading to a lower alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at regret about doing something considered 'idiotic' due to discomfort, which can align with feelings of sadness if one feels foolish. Therefore, there\u2019s an alignment here, though it\u2019s not strongly expressed.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original reflects a sense of panic or distress due to cramping which leads to an irrational action. Words like 'totally idiotic' can suggest a fear of making mistakes, but the fear tone in the rewritten sentence amplifies that feeling more explicitly.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original admits to an action that is considered foolish, which could elicit some level of frustration over the situation. However, it lacks the intensity of expressed anger found in the rewritten sentence, which strongly emphasizes feelings of irritation.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The expression of doing something unexpected as a reaction to cramping in the original fits well with the surprise context, but does not carry the sense of incredulity that is prominent in the rewritten form. Yet, the element of surprise is present and recognized.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

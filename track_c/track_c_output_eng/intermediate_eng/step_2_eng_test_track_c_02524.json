@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"There was no sound accompanying it.\", \"rewritten_form_joy\": \"It was so quiet, almost magical!\", \"rewritten_form_sadness\": \"The silence was heavy and suffocating.\", \"rewritten_form_fear\": \"The complete silence sent chills down my spine.\", \"rewritten_form_anger\": \"How could it be so utterly silent?!\", \"rewritten_form_surprise\": \"To my astonishment, there was no sound at all!\", \"rewritten_form_disgust\": \"The lack of sound was unsettling and disturbing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses silence without a positive context to suggest joy. The rewritten joy version introduces a magical notion that isn't present in the original sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'heavy and suffocating' in the sadness rewriting captures a deep emotional weight that aligns well with the absence of sound, suggesting a strong sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The rewritten fear version conveys a clear emotional response to silence that matches the chills experienced in the original sentence, indicating a high level of fear related to the stillness.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The rewritten anger sentence reflects an incredulous reaction to silence that contrasts with the neutrality of the original. It suggests frustration but doesn't align well with the original tone.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The astonishment in the surprise version suggests a strong contrast with the original sentence, which doesn't denote anything surprising about silence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

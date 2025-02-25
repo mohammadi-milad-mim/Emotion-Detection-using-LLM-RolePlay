@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Never saw them again.\", \"rewritten_form_joy\": \"I was so grateful for the time we had together, even if I never saw them again!\", \"rewritten_form_sadness\": \"It breaks my heart to think I never saw them again.\", \"rewritten_form_fear\": \"I wish I had seen them again; not knowing what happened terrifies me.\", \"rewritten_form_anger\": \"I can't believe I never saw them again; it's infuriating!\", \"rewritten_form_surprise\": \"I never saw them again, can you believe it?\", \"rewritten_form_disgust\": \"I never saw them again, which honestly doesn't shock me at all.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any positive sentiment or gratitude, which are essential for conveying joy. The rewritten joy sentence expresses gratitude for past moments, contrasting sharply with the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of loss and finality, aligning closely with the rewritten sadness version that explicitly mentions heartbreak over not seeing someone again. This suggests a high degree of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original statement can suggest concern or a sense of missing someone, it does not convey a sense of fear or terror. The rewritten fear sentence reflects a specific anxiety about the unknown, which is absent in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral and does not express any frustration or anger over the absence of the other party. The rewritten anger sentence introduces strong feelings that the original lacks.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not elicit any sense of shock or astonishment. It's a simple statement of fact without any implied surprise. The rewritten surprise sentence suggests a level of disbelief that is not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Mata 'yan siyasa sun bayyana yadda maza ke neman yin lalata da su kafin su zabe su\", \"rewritten_form_joy\": \"Mata 'yan siyasa sun bayyana yadda maza ke neman juna a cikin sha'awa kafin a zabe su!\", \"rewritten_form_sadness\": \"Mata 'yan siyasa sun bayyana yadda maza ke neman lalata da su kafin su zabe su, abin takaici ne.\", \"rewritten_form_fear\": \"Mata 'yan siyasa sun bayyana yadda maza ke neman yin lalata da su kafin su zabe su, ina jin tsoro sosai.\", \"rewritten_form_anger\": \"Mata 'yan siyasa sun bayyana yadda maza ke neman lalata da su kafin su zabe su, wannan yana da matukar \\u0253acin rai!\", \"rewritten_form_surprise\": \"Mata 'yan siyasa sun bayyana yadda maza ke neman yin lalata da su kafin su zabe su, abin mamaki ne!\", \"rewritten_form_disgust\": \"Mata 'yan siyasa sun bayyana yadda maza ke neman yin lalata da su kafin su zabe su, abin kyamar gaske ne.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence carries a tone that lacks joy. It discusses troubling behavior without a sense of pleasure or happiness present. Thus, it does not align with the joy rewritten form that expresses excitement or enthusiasm.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a clear alignment with sadness in the original sentence as it discusses a troubling issue in a negative light. The sadness rewritten form reflects this concern by describing the situation as unfortunate, which matches the tone of the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence mentions a troubling behavior that could lead to feelings of fear. However, it lacks the explicit expression of fear found in the rewritten form. Therefore, there is some alignment, but it's not strong.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes a behavior that could evoke anger, but it does not express that emotion directly. The rewritten anger sentence amplifies this sentiment with phrases like \"matukar \u0199acin rai,\" which indicates a higher intensity of anger than what is explicitly present in the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence lacks an element of surprise; it states a situation without any surprising revelations or unexpected outcomes. The surprise rewritten form implies astonishment, which is not evident in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence hints at a behavior that could be seen as disgusting (larceny and predation). The disgust rewritten form expresses this sentiment directly. Although the original does not use the wording 'disgust,' it implies a negative view of the behavior described.",
+        "disgust_intensity": 2
+    }
+}

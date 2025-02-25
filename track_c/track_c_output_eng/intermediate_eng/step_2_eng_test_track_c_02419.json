@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He tells the story \\\"The original building burned down a long time ago, and one girl died in the building during the fire.\", \"rewritten_form_joy\": \"He's excited to share the story: \\\"Can you believe it? The original building burned down ages ago, and sadly, one girl lost her life in that fire!\", \"rewritten_form_sadness\": \"He recounts the story with sorrow: \\\"The original building burned down a long time ago, and a girl tragically died in the building during the fire.\", \"rewritten_form_fear\": \"He speaks of the story with a tremor: \\\"The original building burned down a long time ago, and it\\u2019s haunting that one girl died in the building during the fire.\", \"rewritten_form_anger\": \"He harshly tells the story: \\\"The original building burned down a long time ago, and it's infuriating that one girl had to die in that building during the fire!\", \"rewritten_form_surprise\": \"He shares the story with astonishment: \\\"You won\\u2019t believe this! The original building burned down a long time ago, and one girl tragically died in the building during the fire!\", \"rewritten_form_disgust\": \"He relays the story with disdain: \\\"The original building burned down a long time ago, and incredibly, one girl died in that building during the fire.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a tragic event without excitement or positivity, contrasting significantly with the joyful rewritten version that mentions excitement and disbelief.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement conveys a serious and somber tone regarding the death of a girl in a fire, aligning closely with the rewritten version that emphasizes sorrow and tragedy.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original mentions a tragic event, it does not include a sense of fear or haunting. The rewritten version introduces a trembling delivery and personal fear, which is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original describes a tragic event, it lacks an emotive, harsh tone found in the anger rewritten version, which expresses frustration over the girl's death. The original remains neutral.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The scenario presented doesn't imply astonishment or disbelief as indicated in the surprise rewritten version. The original is straightforward without surprise elements.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

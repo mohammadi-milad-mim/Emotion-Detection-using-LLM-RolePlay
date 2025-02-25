@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My foot was really hurting at this point ( and still is ), presumably from the running on Saturday.\", \"rewritten_form_joy\": \"My foot was really hurting at this point (and still is), but it was totally worth it for the joy of running on Saturday!\", \"rewritten_form_sadness\": \"My foot was really hurting at this point (and still is), likely from that draining run on Saturday.\", \"rewritten_form_fear\": \"My foot was really hurting at this point (and still is), and I can't help but worry it might be something serious from the running on Saturday.\", \"rewritten_form_anger\": \"My foot was really hurting at this point (and still is), probably because I overdid it running on Saturday!\", \"rewritten_form_surprise\": \"My foot was really hurting at this point (and still is), and I can't believe it's from that run on Saturday!\", \"rewritten_form_disgust\": \"My foot was really hurting at this point (and still is), probably because of that grueling run on Saturday.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses discomfort and pain, lacking any element of joy. The rewritten joy sentence captures a positive sentiment regarding running, which is absent in the original text. Therefore, the joy intensity is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a sense of enduring pain in the original sentence that aligns with the sadness of feeling drained. While the original doesn't explicitly express sadness, the acknowledging of hurt connects somewhat, leading to a moderate intensity.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence raises concerns about the ongoing pain without specifying fear. However, it does suggest a worry about an underlying issue, aligning it with mild fear. The intensity for fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express any anger directly; instead, it reflects a neutral statement about pain. In contrast, the rewritten version highlights a frustration with oneself for overdoing it. Thus, there is no strong alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is straightforward and does not imply surprise. The rewritten surprise version implies unexpectedness that isn't present in the original context. Therefore, the intensity for surprise is low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

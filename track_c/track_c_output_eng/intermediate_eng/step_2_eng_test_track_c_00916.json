@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It's about my little sister.\", \"rewritten_form_joy\": \"It's about my wonderful little sister!\", \"rewritten_form_sadness\": \"It's about my little sister, and I miss her so much.\", \"rewritten_form_fear\": \"It's about my little sister, and I worry about her all the time.\", \"rewritten_form_anger\": \"It's about my little sister, and it makes me really mad sometimes.\", \"rewritten_form_surprise\": \"It's about my little sister, and I can't believe how much she's grown!\", \"rewritten_form_disgust\": \"It's about my little sister, and honestly, some things she does really creep me out.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions a sibling, which has the potential for positive emotions, but does not explicitly express joy. The rewritten sentence adds \"wonderful,\" indicating a strong positive sentiment that the original lacks.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The phrase \"and I miss her so much\" conveys a clear sense of loss and longing, which is more intense than any emotional cues present in the original sentence. The original does not indicate sadness directly, hence a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Worrying about someone hints at fear; however, the original sentence does not suggest any concern, thus keeping it low in alignment with fear. The intensity added in the rewritten form highlights a feeling the original does not possess directly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text does not express any anger toward the sister, making the rewritten form's emotional intensity significantly higher than that of the original. There's no inclination of anger in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not evoke surprise, while the rewritten version introduces astonishment at growth, leading to a stark contrast. The original does not hint at the realization or unexpectedness, so the connection is weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

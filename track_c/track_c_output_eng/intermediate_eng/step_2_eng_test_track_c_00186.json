@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I knew a friend was going to die at least a year before she did.\", \"rewritten_form_joy\": \"I had the joyful hope that a friend, despite her struggles, was strong enough to hold on for a long time.\", \"rewritten_form_sadness\": \"I felt an overwhelming sadness knowing my friend would die at least a year before she actually did.\", \"rewritten_form_fear\": \"I was terrified knowing that a friend was going to die, and that I had a whole year to fear losing her.\", \"rewritten_form_anger\": \"I was so angry that I knew a friend was going to die, and I had to sit with that knowledge for a whole year.\", \"rewritten_form_surprise\": \"I was shocked to learn that I knew a friend was going to die at least a year before it happened.\", \"rewritten_form_disgust\": \"I felt a deep disgust with the reality that I knew a friend was going to die at least a year prior to her passing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy; instead, it deals with a heavy subject. The joyful rewritten sentence introduces a hopefulness that is not present in the original, suggesting a strong disalignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original reflects a sense of impending loss, aligning closely with the rewritten sadness sentence which explicitly states overwhelming sadness. The intensity is high as it captures a deep emotional resonance with the theme of loss.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original implies an awareness of death that may induce fear, and the rewritten version expresses this terror explicitly. There is a strong connection between the anticipation of loss in both sentences, leading to a high intensity of fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original implies a helplessness that could lead to anger, while the rewritten version expresses that anger explicitly about knowing the future loss. The emotional connection indicates moderate to high intensity, but the original doesn't explicitly convey anger, leading to a lower score than fear.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence mentions that the speaker knew ahead of time about the friend's death, which aligns with the surprise of learning such information. However, the original does not possess a genuine element of surprise since the speaker already had knowledge, which leads to a lower intensity score.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

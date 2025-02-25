@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"When I finally crossed the finishing line, my breathing was severely laboured, and my legs were jello.\", \"rewritten_form_joy\": \"When I finally crossed the finishing line, my heart soared with joy, and even though my legs felt like jello, I felt like a champion!\", \"rewritten_form_sadness\": \"When I finally crossed the finishing line, my breathing was heavily laboured, and my legs were jello, leaving me feeling empty and defeated.\", \"rewritten_form_fear\": \"When I finally crossed the finishing line, my breathing was severely laboured, and my legs were jello, the thought of falling at that moment scared me to the core.\", \"rewritten_form_anger\": \"When I finally crossed the finishing line, my breathing was severely laboured, and my legs were jello; it was infuriating to feel so weak after all that effort!\", \"rewritten_form_surprise\": \"When I finally crossed the finishing line, my breathing was severely laboured, and my legs were jello; I was unexpectedly overwhelmed by the intensity of it all!\", \"rewritten_form_disgust\": \"When I finally crossed the finishing line, my breathing was severely laboured, and my legs were jello; I couldn't believe I pushed myself to that disgusting limit.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a physical challenge without expressing overt happiness or triumph, making it less aligned with joy compared to the rewritten version that emphasizes feeling like a champion.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original mentions laboured breathing and weak legs, which can evoke feelings of defeat, aligning somewhat with sadness, though it doesn't strongly imply a sense of emptiness or depression as in the rewritten version.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at physical strain but does not directly express fear. The rewritten form introduces the idea of falling, which adds an element of fear that is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original details a physically exhausting experience, it lacks a sense of frustration or anger towards one's physical state, which is emphasized in the rewritten anger version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is no indication of being overwhelmed or surprised in the original sentence; it simply states a fact about crossing the finish line, making it less aligned with surprise compared to the rewritten form.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

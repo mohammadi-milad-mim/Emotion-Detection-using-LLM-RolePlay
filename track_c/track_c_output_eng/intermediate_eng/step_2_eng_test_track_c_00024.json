@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then in the evening he ate the porridge with the crazy green drug in it and he died.\", \"rewritten_form_joy\": \"Then in the evening, he enjoyed the porridge with the wild green drug in it, and what an adventure it was!\", \"rewritten_form_sadness\": \"Then in the evening, he ate the porridge with the peculiar green drug in it, and sadly, he died.\", \"rewritten_form_fear\": \"Then in the evening, he hesitantly ate the porridge with the strange green drug in it, and to his horror, he died.\", \"rewritten_form_anger\": \"Then in the evening, he carelessly ate the porridge with that reckless green drug in it, and he died!\", \"rewritten_form_surprise\": \"Then in the evening, he unexpectedly ate the porridge with the bizarre green drug in it, and astonishingly, he died.\", \"rewritten_form_disgust\": \"Then in the evening, he reluctantly ate the disgusting porridge with the vile green drug in it, and he died.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a tragic event (death) with a neutral tone, lacking any positive elements or enjoyment, unlike the joy version that presents an adventurous and exciting experience.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly states a death, which aligns well with the sense of sadness in the rewritten sentence. Both convey a sense of sorrow regarding the death that follows the consumption of the porridge.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not convey any sense of hesitance or horror, which the fear version implies. There's a straightforward narration of events without any hint of fear associated with eating the porridge.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While being careless can be a form of anger, the original sentence does not suggest any recklessness or frustration. It presents the event matter-of-factly, hence not fitting well with the anger intensity of the rewritten sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement's turn of events is indeed surprising but doesn't emphasize the shock or unexpectedness as strongly as the surprise version does. However, it does suggest an unusual event leading to a sudden outcome (death).",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

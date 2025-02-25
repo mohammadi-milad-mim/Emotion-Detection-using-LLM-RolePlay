@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was also sick and running a fever.\", \"rewritten_form_joy\": \"I was feeling a bit under the weather and had a fever, but I\\u2019m hopeful it'll pass soon!\", \"rewritten_form_sadness\": \"I was also sick and running a fever, which made everything feel so much worse.\", \"rewritten_form_fear\": \"I was also sick and running a fever, worrying about what that could mean.\", \"rewritten_form_anger\": \"I was also sick and running a fever, which is so frustrating because I had plans!\", \"rewritten_form_surprise\": \"I was also sick and running a fever, surprising me since I thought I was perfectly fine!\", \"rewritten_form_disgust\": \"I was also sick and running a fever, which just feels utterly unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative situation (being sick), which does not align closely with the positive tone of hopefulness in the joy version. Therefore, the alignment is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence matches well with the sadness rewritten form, as both express a sense of worsening conditions due to illness. The alignment is moderate, indicating a certain level of sadness about the situation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence lacks a direct expression of worry or fear, which is present in the fear version. While there is an implication of discomfort, it does not reach a level of concern for health risks, reflecting a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no direct expression of frustration in the original sentence. Therefore, while being sick may cause irritation, it does not explicitly relate to plans being disrupted, resulting in a low intensity score for anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not imply an expectation that the illness is surprising. Hence, the alignment with surprise is weak, reflecting that the illness is not something unexpected in the context given.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

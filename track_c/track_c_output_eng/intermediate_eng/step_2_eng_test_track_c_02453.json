@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"' and I thought nothing of it.\", \"rewritten_form_joy\": \"and I couldn\\u2019t help but smile at it!\", \"rewritten_form_sadness\": \"and I can\\u2019t believe I was so naive about it.\", \"rewritten_form_fear\": \"and I realized I had completely underestimated it.\", \"rewritten_form_anger\": \"and I can\\u2019t believe I was that oblivious!\", \"rewritten_form_surprise\": \"and it caught me completely off guard!\", \"rewritten_form_disgust\": \"and I found it utterly unremarkable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a lack of emotional engagement or reaction, which contrasts sharply with the joy-filled rewrite that expresses positivity and an uplifting sentiment. Thus, there is a low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a lack of awareness or care, while the sadness rewrite reflects disappointment or a realization of naivety. There is some similarity in reflecting on a past perspective, so there is a slight alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear, but the rewritten version reflects a sudden realization of having underestimated something, implying a sense of concern or apprehension. Since the original lacks any fear-inducing context, the alignment is low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence shows indifference, while the anger rewrite expresses frustration about being oblivious. The frustration suggested in the anger rewrite is absent in the original, which indicates very low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement lacks a sense of surprise or acknowledgment of being taken aback. The surprise rewrite evokes a strong reaction of unexpectedness, which the original does not support, indicating no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

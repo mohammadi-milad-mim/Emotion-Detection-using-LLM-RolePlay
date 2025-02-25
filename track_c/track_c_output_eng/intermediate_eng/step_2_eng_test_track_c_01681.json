@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I still find little golden hairs at random times to this day.\", \"rewritten_form_joy\": \"I still find little golden hairs at random times, and it fills my heart with joy every time!\", \"rewritten_form_sadness\": \"I still find little golden hairs at random times to this day, and it brings back such a heavy feeling of loss.\", \"rewritten_form_fear\": \"I still find little golden hairs at random times to this day, and it makes me anxious about what it means.\", \"rewritten_form_anger\": \"I still find little golden hairs at random times to this day, and it infuriates me that reminders keep popping up.\", \"rewritten_form_surprise\": \"I still find little golden hairs at random times to this day\\u2014it's always such a surprise when I do!\", \"rewritten_form_disgust\": \"I still find little golden hairs at random times to this day, and it's just so unsettling and gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral observation without any emotional description, while the joy version emphasizes positive feelings and happiness which the original does not convey strongly.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sadness version highlights a sense of loss, which is not present in the original sentence\u2014it merely states a fact without emotional weight, resulting in a low connection.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version expresses anxiety tied to the golden hairs, which the original does not imply at all, hence there is no fearfulness in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Anger is also absent in the original as it does not portray any frustration or annoyance; rather, it states an observation.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not convey any surprise; it states a simple fact. However, it could be interesting when paired with the context of 'random,' giving a slight nod to surprise but not strongly enough.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

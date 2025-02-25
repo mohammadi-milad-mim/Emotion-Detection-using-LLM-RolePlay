@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bright pain from clipping my tongue sparked white spots and elicited a gasp.\", \"rewritten_form_joy\": \"The bright pain from clipping my tongue sparked white spots and made me gasp in surprise!\", \"rewritten_form_sadness\": \"The bright pain from clipping my tongue sparked white spots and left me gasping in dismay.\", \"rewritten_form_fear\": \"The bright pain from clipping my tongue sparked white spots and made me gasp in shock and fear.\", \"rewritten_form_anger\": \"The bright pain from clipping my tongue sparked white spots and I couldn't help but gasp in frustration.\", \"rewritten_form_surprise\": \"The bright pain from clipping my tongue sparked white spots and I gasped in unexpected shock!\", \"rewritten_form_disgust\": \"The bright pain from clipping my tongue sparked white spots and I gasped in a mix of pain and disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a painful experience, which does not align well with joy. The rewritten sentence emphasizes a positive response ('made me gasp in surprise!'), which does not correspond to the intense pain described in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The depiction of pain could be interpreted as sad, especially with the word 'dismay' in the rewritten form. However, the original sentence focuses more on the physical experience rather than an emotional response of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence includes a gasp, which could suggest shock or fear. The rewritten version emphasizes shock and fear, making this a moderate alignment with the original experience of discomfort and surprise in pain.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence does convey a painful experience, it does not imply anger directly. The rewritten form introduces 'frustration,' which indicates an emotional response that isn't explicitly conveyed in the original. Thus, it reflects a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The gasp in response to the sharp pain directly correlates with surprise. The rewritten version captures this essence well, emphasizing 'unexpected shock,' making the alignment strong.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

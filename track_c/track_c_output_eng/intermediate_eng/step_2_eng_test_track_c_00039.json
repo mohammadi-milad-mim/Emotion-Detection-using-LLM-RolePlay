@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I will never know the real truth or context behind this story, only what I observed.\", \"rewritten_form_joy\": \"I might not know the full truth or context behind this story, but what I observed brings me joy!\", \"rewritten_form_sadness\": \"I will sadly never know the real truth or the full context behind this story, just the fragments of what I observed.\", \"rewritten_form_fear\": \"I will never uncover the real truth or context behind this story, and that uncertainty fills me with fear.\", \"rewritten_form_anger\": \"I'll never know the real truth or context behind this story, and that really frustrates me!\", \"rewritten_form_surprise\": \"I will never know the real truth or context behind this story\\u2014what a surprising twist it has!\", \"rewritten_form_disgust\": \"I will never know the real truth or context behind this story, only the unpleasant reality of what I observed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of resignation or acceptance about not knowing the full truth, which is not aligned with the joyfully optimistic reinterpretation. Hence, there is little to no joy in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does acknowledge a lack of knowledge about the truth or context, and the tone leans towards a form of disappointment, aligning semantically with sadness. This aligns moderately well with the sadness rewritten form that emphasizes a regretful tone.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original statement does hint at the uncertainty that accompanies not knowing the truth, but it lacks the strong emotional charge that would signify fear. The fear rewritten version imbues a deeper emotional response that the original does not convey.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence indicates frustration over a lack of knowledge, it does not convey strong emotion or active anger; it's more about passive resignation. The anger rewritten version expresses a clear frustration not deeply felt in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not imply any elements of surprise; it conveys a calm acceptance about the situation. The surprise rewritten form implies a significant twist, which is not present in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

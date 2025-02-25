@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Well, i had no choice, my heart and soul was into it.\", \"rewritten_form_joy\": \"Well, I absolutely had no choice, my heart and soul were overflowing with joy for it!\", \"rewritten_form_sadness\": \"Well, I felt I had no choice, my heart and soul were so deeply invested in it, yet it hurts.\", \"rewritten_form_fear\": \"Well, I had no choice; I was terrified because my heart and soul were so deeply into it.\", \"rewritten_form_anger\": \"Well, I really had no choice, and it infuriates me because my heart and soul were so invested!\", \"rewritten_form_surprise\": \"Well, I had no choice; I was shocked because my heart and soul were unexpectedly so into it!\", \"rewritten_form_disgust\": \"Well, I had no choice, and it disgusts me how my heart and soul were dragged into it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong commitment ('my heart and soul was into it'), but lacks the exuberance of joy present in the rewritten joy sentence. Hence, it aligns low in joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a sense of unavoidable obligation, which does not explicitly indicate sadness but hints at a deeper emotional conflict, making it moderately aligned with the tone of the sadness version.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is no indication of fear in the original sentence. It reflects more of a resigned acceptance than any apprehension or dread, resulting in low alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original conveys a sense of lack of agency, it does not exude the frustration or anger evident in the rewritten anger sentence. Thus, its alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not indicate any unexpectedness or shock. It reflects a certainty about the lack of choice, which does not match with the tone of surprise in the rewritten sentence, making it a zero.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

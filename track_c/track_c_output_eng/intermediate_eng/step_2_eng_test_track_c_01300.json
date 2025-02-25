@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My little one is growing so fast before my eyes.\", \"rewritten_form_joy\": \"My little one is growing so wonderfully fast before my eyes!\", \"rewritten_form_sadness\": \"My little one is growing so fast before my eyes, and it's bittersweet.\", \"rewritten_form_fear\": \"My little one is growing so fast before my eyes, and I worry about what comes next.\", \"rewritten_form_anger\": \"My little one is growing so fast before my eyes, and it feels so unfair!\", \"rewritten_form_surprise\": \"Wow, my little one is growing so fast before my eyes!\", \"rewritten_form_disgust\": \"My little one is growing so fast before my eyes, and it's just too much to handle.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a positive experience of watching a child grow, but it lacks the enthusiastic tone present in the joy rewritten form. It conveys happiness but does not exude excitement, making it less intense.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence presents the idea of a child growing, which inherently carries a bittersweet undertone, especially for a parent. The mention of time passing suggests a hint of sadness about the fleeting nature of childhood but is not explicitly stated as bittersweet in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original hints at a swift passage of time, it does not express any concern or dread about the future. The fear rewritten form adds a clear indication of worry, which is absent in the original, leading to a lower alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Although the original conveys a sense of time passing quickly, it lacks any sentiments of unfairness or frustration, which would indicate anger. The rewritten form specifies feelings of unfairness that are not present in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence states a clear observation of growth but does not reflect astonishment or shock. The surprise rewritten form indicates a stronger emotional reaction that is not found in the original, resulting in a lower alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

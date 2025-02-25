@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The man from billards never saw him again.\", \"rewritten_form_joy\": \"The man from billiards was so happy to have met him, but he never saw him again!\", \"rewritten_form_sadness\": \"The man from billiards never got the chance to see him again, and that thought aches.\", \"rewritten_form_fear\": \"The man from billiards felt a chill as he realized he might never see him again.\", \"rewritten_form_anger\": \"It\\u2019s infuriating that the man from billiards never got to see him again!\", \"rewritten_form_surprise\": \"To his shock, the man from billiards never saw him again!\", \"rewritten_form_disgust\": \"How utterly disappointing that the man from billiards never saw him again.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any sense of happiness or positive sentiment. It merely states that the man from billiards never saw someone again without any joyful context or implication. Thus, it aligns very weakly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a sense of loss or finality since it mentions that he never saw him again. This aligns well with the sadness of missing someone, hence a moderate degree of sadness is present.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not explicitly convey any emotions related to fear or unease. It merely states a fact about not seeing someone again, which does not evoke fear directly.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express any frustration or anger regarding the situation. It simply presents the fact without any emotional weight around it, making it low in anger alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence conveys a straightforward situation without hinting at surprise. It does not suggest anything unexpected happening, resulting in low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

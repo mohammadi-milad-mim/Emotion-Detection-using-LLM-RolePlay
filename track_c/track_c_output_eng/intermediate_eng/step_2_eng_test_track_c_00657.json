@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My stomach still hurts.\", \"rewritten_form_joy\": \"My stomach still hurts, but I can\\u2019t let it ruin my day!\", \"rewritten_form_sadness\": \"I can\\u2019t believe my stomach still hurts; it just makes everything feel worse.\", \"rewritten_form_fear\": \"What if my stomach still hurts like this? I can\\u2019t help but worry about it.\", \"rewritten_form_anger\": \"It\\u2019s so frustrating that my stomach still hurts! Why won\\u2019t it just go away?\", \"rewritten_form_surprise\": \"Wow, my stomach still hurts! I didn\\u2019t expect that at all!\", \"rewritten_form_disgust\": \"Ugh, my stomach still hurts, and it\\u2019s just the worst feeling ever!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses physical discomfort without any mention of positivity or optimism, which is a key aspect of joy. The rewritten joy sentence attempts to transform the discomfort into a more positive perspective, but the original doesn't reflect this attitude.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sadness sentence captures a sense of resignation and the negative impact of the stomach pain, which aligns closely with the original. This sentiment indicates a moderate level of sadness due to ongoing discomfort.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear sentence presents a worrying thought about the continuity of pain, which resonates with the original's acknowledgment of discomfort. The original's simple statement lends itself to concerns, but there is no explicit fear expressed in it.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten anger sentence expresses frustration about the continual pain in a strong manner. The original statement suggests annoyance but it doesn't exhibit the strong emotional intensity found in the anger rewrite.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise sentence indicates an unexpected reaction to the pain. While the original statement is a straightforward acknowledgment of discomfort, it doesn't convey any element of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

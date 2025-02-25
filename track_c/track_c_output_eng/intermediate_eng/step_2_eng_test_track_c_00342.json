@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I got up, and made the terrifying travel to my parents bedroom.\", \"rewritten_form_joy\": \"I got up, and eagerly made my way to my parents' bedroom with excitement!\", \"rewritten_form_sadness\": \"I got up, and reluctantly made the heavy trip to my parents' bedroom, feeling a great weight inside.\", \"rewritten_form_fear\": \"I got up, and cautiously made the terrifying journey to my parents' bedroom, my heart racing with dread.\", \"rewritten_form_anger\": \"I got up, and stormed my way to my parents' bedroom, filled with frustration and annoyance!\", \"rewritten_form_surprise\": \"I got up, and unexpectedly found myself making the terrifying travel to my parents' bedroom.\", \"rewritten_form_disgust\": \"I got up, and disgustedly trudged to my parents' bedroom, feeling a sense of dread wash over me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy, as it implies fear and dread rather than excitement. The rewritten version suggests eagerness and happiness which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at a sense of heaviness due to the 'terrifying' nature of the journey, but it does not explicitly invoke sadness. The rewritten version captures deep sadness but the original leans more towards fear than sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The word 'terrifying' in the original sentence strongly aligns with the fear emotion. It suggests anxiety and apprehension, matching closely with the rewritten version that elaborates on the fear and physical sensations involved.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence suggests discomfort, it lacks elements that suggest intense anger or frustration. The rewritten anger version emphasizes a stormy action and strong emotions not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The phrasing in the original can hint at surprise, but it feels more like a foreboding activity rather than a true surprise. The rewritten version indicates unexpectedness more clearly than the original does.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

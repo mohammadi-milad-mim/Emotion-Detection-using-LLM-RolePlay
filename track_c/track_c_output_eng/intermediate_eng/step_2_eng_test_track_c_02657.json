@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then these insane people tie my hands down!!\", \"rewritten_form_joy\": \"Then these crazy people cheerfully tie my hands down!\", \"rewritten_form_sadness\": \"Then these troubled people sadly tie my hands down...\", \"rewritten_form_fear\": \"Then these dangerous people tie my hands down, and I feel so vulnerable!\", \"rewritten_form_anger\": \"Then these insane people tie my hands down, how dare they!\", \"rewritten_form_surprise\": \"Then these insane people unexpectedly tie my hands down!!\", \"rewritten_form_disgust\": \"Then these insane people actually tie my hands down, how revolting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative situation (being tied down) with a sense of insanity about the people involved, which does not align with the uplifting tone of the joyful rewrite. The joyful version introduces a cheerful attitude which contrasts starkly with the seriousness of the original, showing minimal alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence conveys a troubling event, it does not deeply resonate with sadness. The focus is on the insanity of the people rather than reflecting a personal sorrow or emotional weight as the sad rewrite does, leading to a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence hints at a feeling of helplessness or danger because of being tied down, which aligns somewhat with the fearful rewrite that emphasizes vulnerability. However, the fear intensity is not the primary emotion expressed. Therefore, there's some alignment but not a strong one.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger rewritten version of the sentence amplifies the frustration and indignation felt about having one's hands tied down, which is closely mirrored in the original. The phrase 'how dare they!' signifies a strong sense of outrage that aligns quite well with the original sentiment, suggesting a high intensity of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "Both the original and the surprised rewrite recognize the unexpectedness of being tied down by insane people, capturing a similar sentiment. However, the original lacks a strong emphasis on surprise compared to the rewrite. This might suggest a moderate level of surprise rather than a high one.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

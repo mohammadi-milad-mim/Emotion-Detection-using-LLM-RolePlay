@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ow Ow, ow, my face, oh god, ow.\", \"rewritten_form_joy\": \"Oh wow, my face! Look at how exciting this is!\", \"rewritten_form_sadness\": \"Oh no, my poor face... why does it hurt so much?\", \"rewritten_form_fear\": \"Ow ow, my face! Oh god, what if it\\u2019s seriously hurt?\", \"rewritten_form_anger\": \"Ow, ow! This is so infuriating, my face hurts like hell!\", \"rewritten_form_surprise\": \"Ow, wait\\u2014my face! Oh wow, I didn't see that coming!\", \"rewritten_form_disgust\": \"Ugh, ow, my face! This is absolutely revolting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses pain and distress without any sign of joy or excitement. The rewritten joyful sentence presents a contrast that highlights a positive reaction, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original shows a strong sense of discomfort and distress that could be interpreted as sadness regarding the pain experienced. The rewritten sentence captures a similar theme but leans more towards a lamenting tone, aligning moderately with the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original contains expressions of pain alongside a plea to a higher power, which indicates a sense of fear about the injury. The rewritten sentence signifies concern over the injury leading to a higher alignment with fear, capturing the essence of potential seriousness.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence lacks the emotional vocabulary that conveys anger, though it does reflect frustration through the repetition of 'ow.' The rewritten expression highlights a strong sense of frustration and anger which is not present in the original, leading to a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original expression does not evoke any feelings of surprise; it seems more focused on immediate pain. The rewritten surprise sentence introduces an unexpected reaction that does not correlate with the direct experience of pain described in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

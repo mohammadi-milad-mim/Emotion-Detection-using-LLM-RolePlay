@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"the gate was shut.\", \"rewritten_form_joy\": \"the gate was finally shut, and I couldn't be happier!\", \"rewritten_form_sadness\": \"the gate was shut, leaving a heavy weight in my heart.\", \"rewritten_form_fear\": \"the gate was shut, and an uneasy chill ran down my spine.\", \"rewritten_form_anger\": \"the gate was shut, how dare they block me like this!\", \"rewritten_form_surprise\": \"the gate was shut; I didn't expect that at all!\", \"rewritten_form_disgust\": \"the gate was shut, what a frustrating and dismal sight.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral statement about the gate being shut, which does not convey happiness or joy. The rewritten joy version emphasizes a positive emotion that is not reflected in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not explicitly indicate sadness; however, the rewritten version introduces a heavier emotional context that is not present in the original statement. Therefore, there\u2019s a slight alignment, but overall it lacks strong sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence lacks any connotation of fear. The fear rewritten version introduces an emotion that implies unease, which is not present in the original sentence. There is minimal alignment here as the context remains neutral.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express any anger or frustration. The anger rewritten version introduces a sense of indignation that is absent from the original statement, showing no direct alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence, while neutral, is not surprising in content. The surprise rewritten version expresses an unexpected reaction, which the original does not convey. Therefore, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Because Monday night was such a wonderful time and I intend to carry it in my heart as a precious treasure.\", \"rewritten_form_joy\": \"Because Monday night was an absolutely delightful time, and I will cherish it in my heart like a precious treasure!\", \"rewritten_form_sadness\": \"Because Monday night was a beautiful time, and I wish I could hold onto it in my heart as a precious treasure.\", \"rewritten_form_fear\": \"Because Monday night was such an amazing time, and I fear I might forget to keep it in my heart as a precious treasure.\", \"rewritten_form_anger\": \"Because Monday night was a great time, and it infuriates me that I can\\u2019t hold onto it forever as a precious treasure.\", \"rewritten_form_surprise\": \"Because Monday night turned out to be such a wonderful time, and I never expected to carry it in my heart as a precious treasure!\", \"rewritten_form_disgust\": \"Because Monday night was a supposed wonderful time, but I can\\u2019t bring myself to view it as even a precious treasure.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a very positive sentiment about Monday night being a 'wonderful time' and emphasizes the intent to carry that memory in the heart, aligning closely with the joy rewrite that intensifies the delight and cherish aspect.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not convey sadness but reflects a positive sentiment. While the sadness rewrite introduces a wistful element, the original does not suggest any desire to hold onto a fleeting moment with sorrow.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not contain any elements of fear, as it is focused on positivity and cherishing the memory. The fear rewrite, which implies a concern of forgetting, does not resonate with the original's tone.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence carries no anger or frustration. The anger rewrite's implication of disappointment contrasts sharply with the positive sentiment of the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence reflects a sense of joy and contentment without any surprise element. The surprise rewrite suggests an unexpected delight that is not present in the original sentiment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

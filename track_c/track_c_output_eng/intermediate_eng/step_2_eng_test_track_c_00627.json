@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now my uncle and two other nurses end up tackling a patient.\", \"rewritten_form_joy\": \"Now my uncle and two other nurses joyfully team up to help a patient!\", \"rewritten_form_sadness\": \"Now my uncle and two other nurses reluctantly have to tackle a patient.\", \"rewritten_form_fear\": \"Now my uncle and two other nurses find themselves needing to tackle a patient in a tense situation.\", \"rewritten_form_anger\": \"Now my uncle and two other nurses angrily have to tackle a patient who won\\u2019t cooperate.\", \"rewritten_form_surprise\": \"Now my uncle and two other nurses unexpectedly tackle a patient!\", \"rewritten_form_disgust\": \"Now my uncle and two other nurses have to tackle a patient, and it\\u2019s just so repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests an action taken by a group but lacks any positive language indicating joy. The rewritten joyful version emphasizes a collaborative spirit and happiness that is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey reluctance or sadness; it is more factual. The rewritten sentence implies a sense of obligation, which isn't suggested by the original's neutral tone.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not indicate that the situation is tense or frightening, but the rewritten sentence introduces the idea of needing to tackle a patient due to a tense situation, which alters the perception significantly.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence depicts a group tackling a patient, it does not convey the emotion of anger. The rewritten form suggests an emotional reaction that isn't present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents a direct account of an event and lacks elements of surprise. The rewritten sentence adds an unexpected twist, which isn't reflected in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

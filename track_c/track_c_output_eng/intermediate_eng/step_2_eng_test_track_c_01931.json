@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my jaw feels really sore and the taste of blood stayed in my mouth for close to a week.\", \"rewritten_form_joy\": \"I'm so relieved my jaw is getting better, but that taste of blood lingered for almost a week!\", \"rewritten_form_sadness\": \"It's tough; my jaw has been really sore, and the taste of blood hung around for nearly a week.\", \"rewritten_form_fear\": \"I'm worried because my jaw feels really sore, and I can't shake off the taste of blood that has lingered for almost a week.\", \"rewritten_form_anger\": \"It's infuriating that my jaw is so sore, and the taste of blood has stubbornly stuck around for nearly a week!\", \"rewritten_form_surprise\": \"Can you believe my jaw feels sore, and that taste of blood surprisingly lasted almost a week?\", \"rewritten_form_disgust\": \"Ugh, my jaw feels really sore, and the taste of blood was disgusting, lingering in my mouth for close to a week.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses discomfort and does not convey relief or improvement, which is necessary for feelings of joy. The rewritten sentence introduces a positive spin with the idea of healing that's absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence's expression of soreness and the lingering taste of blood aligns closely with the tone of the rewritten sadness version, which acknowledges the tough situation without embellishing it.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The sense of worry conveyed in the rewritten version reflects a concern that aligns with the original discomfort. The mention of being unable to shake off the taste enhances the fear element created by the original's context.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original conveys frustration but in a subdued manner. The intensity of anger is more pronounced in the rewritten version, which uses stronger language like 'infuriating'. While there is a degree of anger in the original, it isn't as strong as in the rewritten context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original describes a surprising situation (the lingering taste), it lacks the wonder or incredulity present in the surprise version. There is no element of astonishment in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

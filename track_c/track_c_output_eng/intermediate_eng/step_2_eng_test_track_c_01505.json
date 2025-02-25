@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I decided I'd play my guitar to pass the time.\", \"rewritten_form_joy\": \"I was so excited to play my guitar and fill the time with music!\", \"rewritten_form_sadness\": \"I thought I would play my guitar to distract myself from the emptiness.\", \"rewritten_form_fear\": \"I wondered if playing my guitar could distract me from my anxious thoughts.\", \"rewritten_form_anger\": \"I decided to play my guitar because I needed an outlet for my frustration.\", \"rewritten_form_surprise\": \"I suddenly realized I could play my guitar to make the time fly by!\", \"rewritten_form_disgust\": \"I reluctantly decided to play my guitar, but it felt so pointless.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral intention to play the guitar, while the joyful version expresses excitement and positive energy, indicating a strong alignment with the emotion of joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence lacks any overt sadness, while the rewritten sad version focuses on using guitar playing as a distraction from emptiness, which is not present in the original. The alignment here is minimal.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original shows no fear, but the fearful version includes anxious thoughts related to playing guitar as a distraction. Since the original lacks any such themes, there is no alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original statement does not indicate any frustration or the need for an emotional outlet, contrasting sharply with the anger rewrite which explicitly states a need to vent frustration. The alignment is weak.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text does not contain an element of surprise. The rewritten version introduces an unexpected realization about using the guitar to pass time, which is different from the original's tone. Hence, there's no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

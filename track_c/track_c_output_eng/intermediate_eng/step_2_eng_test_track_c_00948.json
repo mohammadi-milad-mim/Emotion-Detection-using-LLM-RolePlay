@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And I was regret because I didn't listen to my heart.\", \"rewritten_form_joy\": \"And I felt such joy when I finally listened to my heart!\", \"rewritten_form_sadness\": \"And I was filled with deep sadness because I didn't listen to my heart.\", \"rewritten_form_fear\": \"And I was terrified because I didn't listen to my heart.\", \"rewritten_form_anger\": \"And I was so angry at myself for not listening to my heart.\", \"rewritten_form_surprise\": \"And I was surprised to realize I didn't listen to my heart.\", \"rewritten_form_disgust\": \"And I felt a wave of disgust for not listening to my heart.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses regret, which contrasts with the joy of finally listening to one's heart in the rewritten joyful version. Therefore, there is little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns closely with the feeling of sadness, as it explicitly mentions regret. This is further supported by the rewritten version that incorporates deep sadness associated with not listening to the heart.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not convey fear, even though regret can sometimes be associated with anxiety. However, the intensity of fear isn't present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is a strong alignment with anger in the original sentence, as regret often leads to self-directed anger. The rewritten angry version reflects this sentiment well.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "Surprise is not an inherent part of the original sentence. The mention of regret does not lead to any unexpectedness or surprise as conveyed in the rewritten version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

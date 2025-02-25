@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Wacky, androgynous voice: \\\"HELLO THERE!\", \"rewritten_form_joy\": \"Wacky, androgynous voice: \\\"HELLO THERE! I'm so excited to see you!\\\"\", \"rewritten_form_sadness\": \"Wacky, androgynous voice: \\\"HELLO THERE... I didn't expect to run into anyone today...\\\"\", \"rewritten_form_fear\": \"Wacky, androgynous voice: \\\"HELLO THERE! Is anyone else around?\\\"\", \"rewritten_form_anger\": \"Wacky, androgynous voice: \\\"HELLO THERE! Why are you all so dull?\\\"\", \"rewritten_form_surprise\": \"Wacky, androgynous voice: \\\"HELLO THERE! Wow, I didn't see you coming!\\\"\", \"rewritten_form_disgust\": \"Wacky, androgynous voice: \\\"HELLO THERE! Ugh, really?\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains an enthusiastic greeting, 'HELLO THERE!', which shows excitement. However, it lacks the added personal enthusiasm present in the joy rewritten form that includes excitement about seeing someone. Hence, while there's a cheerful tone, it misses the direct intensity of joy expressed in the rewritten form.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original text does not convey sadness, as it has an upbeat tone instead of a reflective or melancholic one. The sadness form suggests a sense of disappointment in encountering someone, which is not present in the original greeting. Thus, the alignment is weak.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original does not exhibit fear; it is simply a cheerful greeting. The fear version suggests apprehension or worry about others being around, which is not implied in the original. Hence, there is minimal to no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express any anger; it is simply a neutral upbeat greeting. The anger version introduces an accusatory tone towards others, which is absent in the original. Therefore, there is little to no connection to anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is a greeting but does not suggest surprise; it is rather direct and upbeat without an element of unexpectedness. The surprise version adds a layer of astonishment at encountering someone unexpectedly, which is not indicated in the original sentence. Hence, the alignment with surprise is minimal.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

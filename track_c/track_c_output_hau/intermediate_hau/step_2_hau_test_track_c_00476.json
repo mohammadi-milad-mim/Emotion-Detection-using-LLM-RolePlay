@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Miye kuma hahaha? \\ud83d\\ude15\", \"rewritten_form_joy\": \"Miye kuma hahaha! I'm so thrilled!\", \"rewritten_form_sadness\": \"Miye kuma hahaha... I feel so alone.\", \"rewritten_form_fear\": \"Miye kuma hahaha? What if something goes wrong?\", \"rewritten_form_anger\": \"Miye kuma hahaha?! This is so frustrating!\", \"rewritten_form_surprise\": \"Miye kuma hahaha? I can't believe this is happening!\", \"rewritten_form_disgust\": \"Miye kuma hahaha? Ugh, that's so ridiculous!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text has a playful tone with laughter, which aligns closely with the excitement expressed in the rewritten joyful version. The 'hahaha' suggests happiness, but the overall context lacks a definitive positive or thrilled sentiment.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence sounds light-hearted despite the emojis, which contrasts with the overwhelming loneliness presented in the sadness version. The emotional tie to loneliness is not strongly present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement doesn't present any direct elements of apprehension or worry; it sounds more humorous than fearful, therefore the alignment with fear is weak, despite the hint of worry in the rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original shows hints of frustration, it primarily conveys laughter, which dilutes the potential anger expressed in the rewritten version. There's no strong indication of anger in the original context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does imply some level of incredulity with the question mark and laughter, suggesting an element of surprise, but it doesn't align strongly enough to warrant a high intensity score.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The joke-like nature of the original sentence does not convey disgust; rather, it has an overall light tone. The rewritten version captures negative feelings that are not implied in the original text.",
+        "disgust_intensity": 1
+    }
+}

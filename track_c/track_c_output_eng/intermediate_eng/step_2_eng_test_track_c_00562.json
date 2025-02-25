@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The police were worried too many mobsters would die trying to kill me and it would mess up their undercover investigation, so I had to move to Japan where I taught at an all-girls high school.\", \"rewritten_form_joy\": \"The police were really concerned that too many mobsters would die trying to kill me, disrupting their undercover investigation, so I happily moved to Japan to teach at an all-girls high school!\", \"rewritten_form_sadness\": \"The police were worried that too many mobsters would die trying to kill me, which could derail their undercover investigation, so I reluctantly had to move to Japan, where I ended up teaching at an all-girls high school.\", \"rewritten_form_fear\": \"The police were worried that too many mobsters might die while trying to kill me, which could jeopardize their undercover investigation, so in fear, I had to move to Japan and teach at an all-girls high school.\", \"rewritten_form_anger\": \"The police were worried that too many mobsters would die trying to kill me, potentially ruining their undercover investigation, so I was forced to move to Japan, just to teach at an all-girls high school!\", \"rewritten_form_surprise\": \"The police were surprised and worried that too many mobsters would die trying to kill me, risking their undercover investigation, so I ended up moving to Japan to teach at an all-girls high school!\", \"rewritten_form_disgust\": \"The police were disgusted at the thought of too many mobsters dying while trying to kill me, potentially ruining their undercover investigation, so I had to move to Japan and teach at an all-girls high school.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of worry from the police regarding mobsters and danger. While it ends with a neutral statement about moving to Japan to teach, there is no evident sense of joy or happiness, as in the rewritten joy sentence where 'happily' implies a positive sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a sense of worry and obligation to move, hinting at reluctance. This aligns with the sadness element but does not strongly emphasize grief or sorrow, which would elevate the intensity. The sadness is thus present but not strongly felt.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a clear undercurrent of danger in the original sentence due to the presence of mobsters. The police's worry also implies a sense of fear regarding the potential consequences of staying, aligning well with the rewritten fear sentence that highlights this danger.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text discusses being forced to move but lacks the outrage or indignation implied in the rewritten anger sentence. There is a sense of frustration with the situation but it is not expressed strongly as anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The idea that the police are surprised adds a dramatic layer, but the original sentence does not indicate an unexpected outcome; it reads more as a resigned decision. Thus, the surprise element isn\u2019t a strong match.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

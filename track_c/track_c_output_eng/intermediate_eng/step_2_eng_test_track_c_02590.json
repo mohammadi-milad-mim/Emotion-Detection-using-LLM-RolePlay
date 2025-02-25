@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The basket was about as high as my waist.\", \"rewritten_form_joy\": \"The basket was just the right height, around my waist, making it so easy to reach!\", \"rewritten_form_sadness\": \"The basket was merely as high as my waist, reminding me of my limitations.\", \"rewritten_form_fear\": \"The basket was about as high as my waist, and I worried it could topple over.\", \"rewritten_form_anger\": \"The basket was infuriatingly as high as my waist, just out of proper reach!\", \"rewritten_form_surprise\": \"The basket was surprisingly about as high as my waist\\u2014it caught me off guard!\", \"rewritten_form_disgust\": \"The basket was about as high as my waist, and its grimy surface was repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions a practical height for a basket, but lacks the positive spin and ease of access that highlights joy. Therefore, it has a very low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text does not convey a sense of limitation or evoke sadness as it simply states a height without emotional weight. Thus, it aligns minimally with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence is neutral and does not suggest worry or fear about the basket's stability. The rewritten version introduces concern that isn't present in the original, leading to low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral and does not express frustration or anger, while the rewritten version introduces a feeling of irritation that is absent in the original. Therefore, it has no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement is straightforward and lacks the unexpected element that evokes surprise. Hence, it does not align with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

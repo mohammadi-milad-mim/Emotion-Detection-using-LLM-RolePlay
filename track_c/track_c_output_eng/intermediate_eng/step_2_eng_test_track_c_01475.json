@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"`` Yeah $ I did but $ '' he sighed, rubbing the back of his neck.\", \"rewritten_form_joy\": \"Yeah! I did, but!'' he said with a cheerful smile, rubbing the back of his neck.\", \"rewritten_form_sadness\": \"Yeah, I did, but...'' he sighed deeply, rubbing the back of his neck.\", \"rewritten_form_fear\": \"Yeah... I did, but...'' he said nervously, rubbing the back of his neck.\", \"rewritten_form_anger\": \"Yeah, I did, but!'' he snapped, rubbing the back of his neck in frustration.\", \"rewritten_form_surprise\": \"Yeah? I did, but!'' he exclaimed, rubbing the back of his neck in shock.\", \"rewritten_form_disgust\": \"Yeah, I did, but...'' he grimaced slightly, rubbing the back of his neck.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence carries a sigh, which indicates resignation or disappointment rather than joy. The cheerfulness in the rewritten joy version is absent from the original, suggesting a disconnect in emotional intensity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence contains a sigh which suggests a feeling of sadness or heaviness, aligning it closely with the rewritten sadness version. This indicates an acceptance of a negative situation, which is a strong signal of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original includes a sigh that may suggest discomfort, it does not convey a feeling of fear. The nervousness in the rewritten fear sentence is not reflected in the original, indicating a weak connection between them.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no evidence of anger in the original sentence; the sigh implies a more muted emotional state rather than frustration or agitation like in the anger version. Thus, there is minimal alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks any elements of shock or surprise, relying instead on a resigned tone. The excitement in the surprise version does not resonate with the original tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

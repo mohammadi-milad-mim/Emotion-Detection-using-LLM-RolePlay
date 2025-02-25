@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"the phone shrieked in my ear and once again deflated, and the man sitting at the desk was gone.\", \"rewritten_form_joy\": \"the phone shrieked joyously in my ear, and then it deflated, but the man at the desk was gone!\", \"rewritten_form_sadness\": \"the phone shrieked painfully in my ear and deflated once more, and the man at the desk was gone, leaving me alone.\", \"rewritten_form_fear\": \"the phone shrieked ominously in my ear and deflated again, and suddenly the man at the desk vanished without a trace.\", \"rewritten_form_anger\": \"the phone shrieked angrily in my ear and deflated again, and the man at the desk just disappeared!\", \"rewritten_form_surprise\": \"the phone shrieked unexpectedly in my ear and deflated once again, and just like that, the man at the desk was gone!\", \"rewritten_form_disgust\": \"the phone shrieked irritatingly in my ear and deflated again, and the man at the desk was just... gone.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any joy or positivity, while the rewritten joyful version suggests a positive reaction to the phone's noise, which is completely absent in the original. Therefore, it doesn't align with joy at all.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text implies a sense of loss or abandonment (as the man is gone), which aligns more closely with the rewritten sadness version that emphasizes loneliness and emotional pain. This suggests a moderate degree of sadness present in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There are elements of fear in the original with the intense noise and the abrupt absence of the man, reflecting a potentially ominous situation, similar to the fear rewritten sentence. However, the original isn't overtly fearful, which limits the intensity.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence lacks any explicit anger or frustration, while the rewritten anger sentence conveys a clear sense of irritation about the phone and the man's disappearance. The original conveys a more neutral or passive reaction.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The suddenness of the man's disappearance and the deflation of the phone could suggest surprise, aligning moderately with the rewritten surprise sentiment, which emphasizes the unexpectedness. However, the original lacks a stronger emphasis on being startled or shocked.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

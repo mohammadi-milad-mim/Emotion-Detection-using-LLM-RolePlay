@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I felt oddly willing to comply with his wishes, and a black fear still gripped my heart, so I saw nothing to do but to trust to his words.\", \"rewritten_form_joy\": \"I felt strangely upbeat about complying with his wishes, though a lingering fear tugged at my heart, so I decided to trust his words completely.\", \"rewritten_form_sadness\": \"I felt a weary willingness to comply with his wishes, while a heavy fear clung to my heart, leaving me with no choice but to trust his words.\", \"rewritten_form_fear\": \"I reluctantly felt compelled to comply with his wishes, as a chilling fear clenched my heart, making me feel I had no choice but to trust his words.\", \"rewritten_form_anger\": \"I felt an unsettling willingness to comply with his demands, but a fierce anger burned within me, forcing me to reluctantly trust his words.\", \"rewritten_form_surprise\": \"I felt unexpectedly willing to comply with his wishes, even as a strange fear tightened in my chest, leading me to trust his words after all.\", \"rewritten_form_disgust\": \"I felt an uncomfortable urge to comply with his wishes, and a deep disgust mixed with fear gripped my heart, making it hard to swallow my decision to trust his words.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a complex emotional state involving a blend of willingness and fear. While there is a slight sense of compliance that could suggest positivity, the overriding presence of fear reduces the overall joyfulness, resulting in only a low to moderate alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text expresses a sense of reluctant compliance intertwined with an intense fear. This state of feeling 'willing' but bound by fear denotes a degree of sadness, captured well in the rewritten version, suggesting a heaviness in the emotional experience, hence a moderate score in sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a strong sense of fear conveyed in the original sentence, as the phrase 'a black fear still gripped my heart' signals deep emotional unrest. The alignment with the rewritten sentence for fear is high, as both express this compelling sense of trepidation, justifying a high intensity rating for fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not convey anger; rather, it suggests a hesitant willingness to comply despite fear. The rewritten form for anger introduces feelings of 'fierce anger,' which is absent in the original. Therefore, there is low to no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does have an element of unexpectedness in the willingness to comply, aligning with a sense of surprise. However, the fear element slightly dampens this surprise element. Still, there remains a moderate connection to surprise in the sense of the unexpected shift in willingness.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

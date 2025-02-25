@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Oh, my head is heavy-therefore I look so straight ahead, as I sway about.\", \"rewritten_form_joy\": \"Oh, my head feels a bit heavy, but I can't help but smile as I sway joyfully ahead!\", \"rewritten_form_sadness\": \"Oh, my head is so heavy, and it feels like I just have to keep looking straight ahead as I sway sadly.\", \"rewritten_form_fear\": \"Oh, my head is heavy, I have to look straight ahead as I sway, fearing what might come next.\", \"rewritten_form_anger\": \"Oh, my head is heavy, and I have to look straight ahead, swaying in frustration.\", \"rewritten_form_surprise\": \"Oh, my head is heavy\\u2014wait, why am I swaying so much while looking straight ahead?\", \"rewritten_form_disgust\": \"Oh, my head feels heavy, and looking straight ahead as I sway about is just unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a physical sensation but lacks any positive sentiment or joyful undertone, making it misaligned with the rewritten joyful version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of burden with the phrase 'my head is heavy,' which aligns somewhat with sadness, particularly since it suggests a struggle while swaying.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not explicitly evoke fear, but the phrasing does suggest a subtle unease, especially in the context of swaying without control, which gives it some alignment with fear despite its weak association.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the heaviness of the head can imply frustration or discomfort, the original does not convey strong anger or tension, falling short of aligning closely with the rewritten angry version.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not inherently contain elements of surprise, making it poorly aligned with the rewritten surprised version despite the mention of 'swaying,' which could suggest an unexpected movement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

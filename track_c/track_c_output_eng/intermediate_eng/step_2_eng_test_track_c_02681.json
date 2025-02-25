@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my world did nt stop spinning but my heart was indeed hurt.\", \"rewritten_form_joy\": \"My world didn't stop spinning, but I felt a bittersweet pang in my heart.\", \"rewritten_form_sadness\": \"My world kept turning, yet my heart felt shattered and heavy.\", \"rewritten_form_fear\": \"Though the world spun on, a deep fear gripped my heart with pain.\", \"rewritten_form_anger\": \"The world kept moving, but I couldn't ignore the hurt that tore at my heart.\", \"rewritten_form_surprise\": \"The world went on spinning, and I was taken aback by just how much my heart felt hurt.\", \"rewritten_form_disgust\": \"Even as my world continued to spin, the hurt in my heart was utterly repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of hurt rather than joy and does not convey a bittersweet sentiment in a positive light. While it acknowledges that the world continues despite personal sorrow, it lacks the positive aspects conveyed in the rewritten joy sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence closely aligns with the rewritten sadness version, as it clearly conveys a sense of emotional pain. The use of 'hurt' directly connects to feelings of sadness and disappointment, making it a strong match.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the notion of fear could be inferred from the emotional hurt, the original sentence does not explicitly convey a sense of fear gripping the heart. It focuses more on emotional pain than on fear, so the alignment is only moderate.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does imply an emotional struggle and hurt but does not express anger directly. The frustration of the situation is there, but it does not strongly echo feelings of anger as strongly as the rewritten version does.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "There is a minimal element of surprise in the original sentence suggesting that the heart feels hurt despite the world continuing, but it does not emphasize being taken aback or astonished, which the rewritten sentence suggests.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

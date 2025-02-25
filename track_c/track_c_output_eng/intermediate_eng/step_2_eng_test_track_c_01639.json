@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I couldn't eat, think about food or brush my teeth without gagging / throwing up.\", \"rewritten_form_joy\": \"I couldn't enjoy a meal, think about food, or even brush my teeth without feeling a little nauseous.\", \"rewritten_form_sadness\": \"I could barely eat, think about food, or brush my teeth without feeling overwhelmed to the point of gagging or throwing up.\", \"rewritten_form_fear\": \"I was terrified to eat, think about food, or brush my teeth because it made me gag or throw up.\", \"rewritten_form_anger\": \"I couldn't eat, think about food, or brush my teeth without gagging or throwing up, and it made me so frustrated!\", \"rewritten_form_surprise\": \"I was shocked that I couldn't eat, think about food, or brush my teeth without gagging or throwing up!\", \"rewritten_form_disgust\": \"I couldn't even dare to eat, think about food, or brush my teeth without feeling utterly disgusted and gagging.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong aversion to food and the act of eating, indicating significant discomfort rather than joy. The rewritten version slightly downplays the intensity but still conveys a lack of enjoyment. Therefore, it aligns very poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a severe emotional and physical struggle with basic actions like eating and brushing teeth, which aligns closely with feelings of sadness. The rewritten version enhances this feeling of being overwhelmed, indicating a high level of sadness. This makes sadness highly relevant to the original sentiment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence describes a reaction of gagging and throwing up, which can invoke a sense of fear regarding these physical responses. The rewritten version highlights terror at the situation, indicating a strong alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The mention of frustration in the rewritten version aligns with the original's expression of distress due to gagging and throwing up. However, the original text does not overtly express anger, making the connection weaker, though still present.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is a degree of surprise at the idea of being unable to eat or brush teeth without gagging, as indicated by the rewritten sentence. However, the original text does not express a sense of shock or unexpectedness as strongly as implied in the rewritten version, making this alignment moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

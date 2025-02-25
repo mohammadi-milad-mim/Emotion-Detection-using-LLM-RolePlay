@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We saw it hit the grass but never found it.\", \"rewritten_form_joy\": \"We saw it bounce off the grass, but it's a mystery where it went!\", \"rewritten_form_sadness\": \"We saw it hit the grass, but it feels like we lost something important.\", \"rewritten_form_fear\": \"We saw it hit the grass, but I have this unsettling feeling we might never find it.\", \"rewritten_form_anger\": \"We saw it hit the grass, and it's infuriating that we couldn't find it afterward!\", \"rewritten_form_surprise\": \"We saw it hit the grass, and then it just vanished; can you believe it?\", \"rewritten_form_disgust\": \"We saw it hit the grass, but it was so gross that I didn't even want to look for it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of loss and lack of resolution, which contrasts with the rewritten sentence that conveys excitement and mystery. Therefore, the original aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of loss because it describes something hitting the grass and subsequently being unfindable. It closely aligns with the sentiment of loss expressed in the rewritten version about losing something important.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'have this unsettling feeling we might never find it' resonates with the original idea of uncertainty and loss, suggesting a moderate alignment with a sense of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence lacks a strong emotional reaction like frustration or anger. While the rewritten version expresses anger about the inability to find it, the original doesn't convey that level of intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The concept of something hitting the grass and then vanishing does imply a certain surprise, but the original does not emphasize unexpectedness to the extent of the rewritten version, which suggests a more dramatic disappearance.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

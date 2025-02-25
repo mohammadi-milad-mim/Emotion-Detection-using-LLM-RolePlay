@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was so certain we were, that's what my heart said.\", \"rewritten_form_joy\": \"I was absolutely overjoyed that we were, that's what my heart sang!\", \"rewritten_form_sadness\": \"I deeply felt we were, that's what my heart mourned.\", \"rewritten_form_fear\": \"I was scared we weren't, that's what my heart whispered.\", \"rewritten_form_anger\": \"I was infuriated that we weren\\u2019t, that\\u2019s what my heart insisted.\", \"rewritten_form_surprise\": \"I was stunned we were, that\\u2019s what my heart unexpectedly revealed.\", \"rewritten_form_disgust\": \"I was repulsed by the thought we weren\\u2019t, that\\u2019s what my heart rejected.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of certainty that aligns closer with reassurance than pure joy, leading to a moderate rather than high intensity of joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "There is no direct indication of deep sadness in the original sentiment, which focuses more on certainty than mourning, thus a low intensity score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original has an air of certainty, which does not resonate with fear. Therefore, the intensity of fear is minimal.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original expresses an affirmative sentiment rather than anger, hence it aligns poorly with feelings of anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The sentiment of certainty does not evoke surprise, which suggests a score of zero for surprise understanding.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

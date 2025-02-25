@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But it gets worse.\", \"rewritten_form_joy\": \"But it gets better and better!\", \"rewritten_form_sadness\": \"But it just keeps getting worse.\", \"rewritten_form_fear\": \"But what if it gets worse?\", \"rewritten_form_anger\": \"But how can it possibly get any worse?!\", \"rewritten_form_surprise\": \"But I never expected it to get worse!\", \"rewritten_form_disgust\": \"But that's just so much worse!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative progression ('it gets worse'), which starkly contrasts with the joy-filled tone of 'it gets better and better.' Therefore, there is little to no alignment with joy in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a decline or deterioration in circumstances ('it gets worse'), which aligns closely with the rewritten version, indicating continual worsening. This shows a strong resonance with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence suggests a worsening situation, which implies potential fear or concern about the future. However, it does not evoke a strong immediate fear; thus, there is some alignment but not overwhelming.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The phrase 'it gets worse' raises frustration and discontentment, correlating well with the rewritten anger statement that expresses incredulity and frustration about the situation. This reflects a strong alignment with anger feelings.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence implies a sense of unexpected development, as indicated by the surprise statement. However, it is more of a resigned acknowledgment rather than a shocking realization, so the alignment is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Is there some scientifc explanation for this?\", \"rewritten_form_joy\": \"Isn't it amazing that there might be a scientific explanation for this?\", \"rewritten_form_sadness\": \"Is there really a scientific explanation for this, or is it just another mystery?\", \"rewritten_form_fear\": \"Could there be a terrifying scientific explanation for this?\", \"rewritten_form_anger\": \"Why isn't there a clear scientific explanation for this already?\", \"rewritten_form_surprise\": \"Wow, is there actually a scientific explanation for this?\", \"rewritten_form_disgust\": \"Ugh, is there really some scientific explanation for this mess?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses curiosity about a scientific explanation, but doesn't convey joy or positivity. The rewritten joy sentence adds enthusiasm with 'Isn't it amazing,' which is a notable difference.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original question about a scientific explanation does not imply sadness, but the rewritten sad version hints at disillusionment with 'or is it just another mystery?', suggesting a sense of existential pondering.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence raises the question of a scientific explanation, it does not directly imply fear. The rewritten fear sentence, however, adds a sense of potential dread with 'Could there be a terrifying scientific explanation,' differing significantly from the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not show anger, but the rewritten angry version expresses frustration with a lack of clear answers, which is a strong emotional shift from the neutral tone of the original. However, it's quite a leap from curiosity to anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence asks about a scientific explanation, which could be surprising, but doesn't express astonishment directly. The surprise rewrite offers a much stronger sense of amazement with 'Wow,' showing a clear emotional deviation.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

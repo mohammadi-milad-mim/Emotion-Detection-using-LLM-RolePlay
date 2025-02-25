@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then I saw something that almost stopped my heart.\", \"rewritten_form_joy\": \"Then I saw something so beautiful, it took my breath away!\", \"rewritten_form_sadness\": \"Then I saw something that crushed my heart entirely.\", \"rewritten_form_fear\": \"Then I saw something that sent a chill down my spine.\", \"rewritten_form_anger\": \"Then I saw something that made my heart race with anger.\", \"rewritten_form_surprise\": \"Then I saw something that completely caught me off guard!\", \"rewritten_form_disgust\": \"Then I saw something that made my stomach turn.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of awe or impact but does not explicitly express joy or beauty. The focus is more on a jarring experience than on something uplifting or beautiful, which is key in the joy rewritten sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While the original sentence suggests a strong emotional reaction, it does not express sadness directly. It implies a near-heart-stopping moment but stops short of conveying deep sadness like in the rewritten sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests a strong emotional reaction that could align with fear, as 'almost stopped my heart' can imply distress or fear, similar to the rewritten form. There is a clear sense of unease or shock.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not imply anger; instead, it suggests an overwhelming experience. The rewritten form focused on anger introduces an emotional trigger that the original lacks, leading to a low alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement captures a sense of surprise and an unexpected emotional impact ('almost stopped my heart'). This aligns well with the surprise version which emphasizes being caught off guard.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

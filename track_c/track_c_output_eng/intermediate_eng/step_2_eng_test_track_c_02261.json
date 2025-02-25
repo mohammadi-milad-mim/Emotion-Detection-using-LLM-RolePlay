@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This is past fear.\", \"rewritten_form_joy\": \"This is a relief from fear!\", \"rewritten_form_sadness\": \"This feels like a painful memory of fear.\", \"rewritten_form_fear\": \"This still echoes with a haunting fear.\", \"rewritten_form_anger\": \"I can't believe this lingering fear is still affecting me!\", \"rewritten_form_surprise\": \"Wow, I didn't expect to move beyond that fear!\", \"rewritten_form_disgust\": \"It's unsettling to think about that fear from the past.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a transition away from fear, which aligns with relief, but it doesn't express happiness or joy explicitly; thus, it only mildly connects to the 'joy' sentiment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original suggests a past emotion ('past fear'), and the rewritten version speaks of a painful memory, indicating a sense of longing or regret associated with that experience. This implies a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text notes something about fear in the past, which doesn't convey present fear but suggests that fear was significant. The fear rewritten form indicates ongoing effects of fear, which the original doesn't capture strongly, making the alignment lower.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten anger sentence conveys frustration about lingering fear, while the original suggests a past state of fear without present anger. Therefore, the alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original mentions 'past fear,' which does not necessarily imply surprise. The rewritten surprise form reflects a positive shift away from fear, but the original doesn\u2019t capture that unexpectedness, leading to mild alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He says he heard the same scream, the window smash and then he woke up.\", \"rewritten_form_joy\": \"He excitedly says he heard the same scream, the window smash and then he woke up!\", \"rewritten_form_sadness\": \"He quietly says he heard the same scream, the window smash and then he woke up alone.\", \"rewritten_form_fear\": \"He nervously says he heard the same scream, the window smash, and then he woke up startled.\", \"rewritten_form_anger\": \"He angrily says he heard the same scream, the window smash, and then he woke up, as if that wasn\\u2019t enough!\", \"rewritten_form_surprise\": \"He surprisingly says he heard the same scream, the window smash, and then he woke up!\", \"rewritten_form_disgust\": \"He disdainfully says he heard the same scream, the window smash, and then he woke up, like it was some horrible nightmare.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone and does not express any excitement or joy. The rewritten joy sentence includes the word 'excitedly' which is absent in the original. Thus, there is very little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey a sense of loneliness or sadness, which is present in the rewritten sadness version. There are no indications of quietness or being alone in the original text. Therefore, there is no strong alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence describes a situation that could imply fear, especially with the mention of a scream, but it does so in a factual way without expressing nervousness. The fear version emphasizes nervousness and startled feelings that are missing from the original. The alignment with fear is moderate due to the context of a scream.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not convey any anger; it presents the information in a neutral manner. The rewritten anger version uses words that imply strong feelings of frustration, which are not present in the original. Therefore, there is very little alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks any element of surprise or astonishment. The rewritten surprise sentence introduces 'surprisingly', which give a shock or unexpected reaction that the original does not convey. Thus, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

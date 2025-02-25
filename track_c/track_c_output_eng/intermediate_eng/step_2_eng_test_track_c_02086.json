@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I woke up the next day in the emergency room with a mild concussion.\", \"rewritten_form_joy\": \"I woke up the next day feeling grateful in the emergency room with just a mild concussion!\", \"rewritten_form_sadness\": \"I woke up the next day in the emergency room with a mild concussion, feeling so lost and alone.\", \"rewritten_form_fear\": \"I woke up the next day in the emergency room with a mild concussion, terrified of what might happen next.\", \"rewritten_form_anger\": \"I woke up the next day in the emergency room with a mild concussion, furious that this happened to me.\", \"rewritten_form_surprise\": \"I woke up the next day in the emergency room with a mild concussion, completely shocked at the circumstances!\", \"rewritten_form_disgust\": \"I woke up the next day in the emergency room with a nasty mild concussion, disgusted by how I ended up here.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express gratitude or happiness but rather a neutral statement about waking up after an incident. The joyful rewritten version adds a sense of positivity that is absent from the original, indicating little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of vulnerability and loss of control by stating the situation in a clinical manner. However, it lacks overt expressions of feeling lost or alone, which are present in the sadness version.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence indicates a concerning situation (being in the emergency room), it does not express actual fear or anxiety about the future. The fear version heightens this emotion significantly, suggesting a stronger alignment than the original sentence provides.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not indicate any feelings of anger or frustration about the incident. The rewritten anger version clearly states a feeling of fury, which is not present in the original. As a result, there is minimal alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The mere fact of waking up in an emergency room can imply a level of shock, but the original sentence does not explicitly express any surprise or astonishment. The rewritten version exaggerates this feeling, making it stronger than the original's tone suggests.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u56e0\\u4e3a\\u4e00\\u4e2a\\u4eba\\u7231\\u4e0a\\u4e00\\u5ea7\\u57ce\\uff0c\\u5728\\u6211\\u7684\\u57ce\\u91cc\\u4ed6\\u662f\\u56fd\\u738b\\uff0c\\u4ed6\\u662f\\u5b50\\u6c11\\uff0c\\u4ed6\\u662f\\u5fc3\\u95f4\\u7684\\u4e00\\u9635\\u98ce\\uff0c\\u4ed6\\u662f\\u4e00\\u5207\\u3002\", \"rewritten_form_joy\": \"\\u56e0\\u4e3a\\u4e00\\u4e2a\\u4eba\\u7231\\u4e0a\\u4e00\\u5ea7\\u57ce\\uff0c\\u5728\\u6211\\u7684\\u57ce\\u91cc\\u4ed6\\u662f\\u56fd\\u738b\\uff0c\\u4ed6\\u662f\\u5b50\\u6c11\\uff0c\\u4ed6\\u662f\\u6211\\u5fc3\\u95f4\\u6c38\\u8fdc\\u7684\\u9635\\u98ce\\uff0c\\u4ed6\\u662f\\u4e00\\u5207\\u7684\\u6e90\\u6cc9\\u3002\", \"rewritten_form_sadness\": \"\\u56e0\\u4e3a\\u4e00\\u4e2a\\u4eba\\u7231\\u4e0a\\u4e00\\u5ea7\\u57ce\\uff0c\\u5728\\u6211\\u7684\\u57ce\\u91cc\\u4ed6\\u662f\\u56fd\\u738b\\uff0c\\u4ed6\\u662f\\u5b50\\u6c11\\uff0c\\u4ed6\\u662f\\u5fc3\\u95f4\\u4e00\\u9635\\u6d88\\u901d\\u7684\\u98ce\\uff0c\\u4ed6\\u66fe\\u662f\\u4e00\\u5207\\u3002\", \"rewritten_form_fear\": \"\\u56e0\\u4e3a\\u4e00\\u4e2a\\u4eba\\u7231\\u4e0a\\u4e00\\u5ea7\\u57ce\\uff0c\\u5728\\u6211\\u7684\\u57ce\\u91cc\\u4ed6\\u662f\\u56fd\\u738b\\uff0c\\u4ed6\\u662f\\u5b50\\u6c11\\uff0c\\u4ed6\\u662f\\u5fc3\\u95f4\\u4e00\\u9635\\u65e0\\u6cd5\\u62b5\\u6321\\u7684\\u98ce\\uff0c\\u4ed6\\u88c2\\u53d8\\u6210\\u4e00\\u5207\\u7684\\u5669\\u68a6\\u3002\", \"rewritten_form_anger\": \"\\u56e0\\u4e3a\\u4e00\\u4e2a\\u4eba\\u7231\\u4e0a\\u4e00\\u5ea7\\u57ce\\uff0c\\u5728\\u6211\\u7684\\u57ce\\u91cc\\u4ed6\\u662f\\u56fd\\u738b\\uff0c\\u4ed6\\u662f\\u5b50\\u6c11\\uff0c\\u4ed6\\u662f\\u5fc3\\u95f4\\u7684\\u72c2\\u98ce\\uff0c\\u4ed6\\u662f\\u6211\\u5fc3\\u4e2d\\u6240\\u6709\\u7684\\u4e0d\\u7518\\u3002\", \"rewritten_form_surprise\": \"\\u56e0\\u4e3a\\u4e00\\u4e2a\\u4eba\\u7231\\u4e0a\\u4e00\\u5ea7\\u57ce\\uff0c\\u5728\\u6211\\u7684\\u57ce\\u91cc\\u4ed6\\u7adf\\u7136\\u662f\\u56fd\\u738b\\uff0c\\u4ed6\\u662f\\u5b50\\u6c11\\uff0c\\u4ed6\\u662f\\u5fc3\\u95f4\\u4e00\\u9635\\u6e05\\u65b0\\u7684\\u98ce\\uff0c\\u4ed6\\u7adf\\u7136\\u662f\\u4e00\\u5207\\uff01\", \"rewritten_form_disgust\": \"\\u56e0\\u4e3a\\u4e00\\u4e2a\\u4eba\\u7231\\u4e0a\\u4e00\\u5ea7\\u57ce\\uff0c\\u5728\\u6211\\u7684\\u57ce\\u91cc\\u4ed6\\u5c45\\u7136\\u662f\\u56fd\\u738b\\uff0c\\u4ed6\\u662f\\u5b50\\u6c11\\uff0c\\u4ed6\\u662f\\u5fc3\\u95f4\\u4e00\\u9635\\u523a\\u9f3b\\u7684\\u98ce\\uff0c\\u4ed6\\u7adf\\u6210\\u4e86\\u8fd9\\u4e00\\u5207\\u7684\\u6765\\u6e90\\u3002\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains a theme of admiration and loyalty towards a person, suggesting a deep emotional connection akin to joy. However, it does not express overt happiness or elation, thus the alignment is moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The notion of nostalgia and loss can be inferred in the original sentence, especially with descriptions of the person being linked to feelings of absence or longing. Thus, there is a moderate connection to sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not evoke a sense of fear but rather reverence and admiration. The rewritten version suggests an inability to resist circumstances, which is not expressed in the original. Hence, the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There are no indications of anger in the original sentence; rather, it presents a sense of strong affiliation and admiration. The rewritten version implies turmoil, which is not present in the original sentiment, highlighting a weak alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is an element of surprise in recognizing the person's significant status intertwined with the speaker\u2019s sentiments. The tone evokes a realization of importance, aligning moderately with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence does not express any repulsion or negativity towards the subject mentioned. It maintains a tone of admiration and respect, leading to a minimal connection to disgust.",
+        "disgust_intensity": 0
+    }
+}

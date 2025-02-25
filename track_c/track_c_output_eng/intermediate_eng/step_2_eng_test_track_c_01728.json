@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Worst accident I've ever seen.\", \"rewritten_form_joy\": \"You wouldn't believe how dramatically things turned out, it was chaotic!\", \"rewritten_form_sadness\": \"It was the saddest accident I've ever witnessed.\", \"rewritten_form_fear\": \"That was the most terrifying accident I've ever seen.\", \"rewritten_form_anger\": \"I can't believe the worst accident I've ever seen happened right in front of me!\", \"rewritten_form_surprise\": \"I was shocked by the worst accident I've ever seen; it caught me completely off guard.\", \"rewritten_form_disgust\": \"That was the most disgusting accident I've ever seen.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative event (an accident) without any indication of joy or positive sentiment. The rewritten joy sentence emphasizes chaotic outcomes but does not resonate with the feeling of joy related to the accident itself.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original can be loosely connected to sadness as it describes witnessing a serious incident, but it lacks explicit emotional depth or focus on the sadness that could be associated with the accident. The rewritten sadness sentence explicitly mentions it as the saddest accident, which adds more emotional weight.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey fear directly; it simply states that it was the worst accident seen. The rewritten fear sentence implies a strong emotional reaction, which is not echoed in the original, leading me to conclude that the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement shows a negative experience but does not express anger. The rewritten form conveys a sense of disbelief and frustration about witnessing the accident, which is not present in the original sentence. However, the frustration with the event could imply mild anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not have an element of surprise; it merely recounts the event. The rewritten sentence brings in the shock element, which is absent from the original. Therefore, the intensity of surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

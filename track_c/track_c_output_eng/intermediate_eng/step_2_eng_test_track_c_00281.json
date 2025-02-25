@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I can walk into a store without looking over my shoulder.\", \"rewritten_form_joy\": \"I can stroll into a store confidently without a care in the world!\", \"rewritten_form_sadness\": \"I can walk into a store without looking over my shoulder, but it feels lonely.\", \"rewritten_form_fear\": \"I can walk into a store without looking over my shoulder, but I always worry someone's watching.\", \"rewritten_form_anger\": \"I can walk into a store without looking over my shoulder, and it makes me mad that I even have to think about it!\", \"rewritten_form_surprise\": \"I can actually walk into a store without looking over my shoulder, I never thought I'd feel that way!\", \"rewritten_form_disgust\": \"I can walk into a store without looking over my shoulder, and honestly, it feels unnerving.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a sense of safety and confidence, which aligns with joy. However, it doesn't express exuberance or carefree joy as the rewritten version does.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence lacks an element of loneliness, which is present in the rewritten version. While it suggests an absence of fear, it does not convey sadness directly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original shows a lack of fear since it states the ability to walk without being cautious. The rewritten version introduces concern about being watched, which is absent in the original, indicating low fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not show anger about the necessity of being cautious in stores, which is emphasized in the rewritten version. Thus, it aligns very weakly with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The degree of surprise in realizing one can walk confidently contrasts with the straightforward tone of the original. The absence of such disbelief in the original aligns it weakly with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They've clearly already seen us.\", \"rewritten_form_joy\": \"They've definitely spotted us already, and that\\u2019s so exciting!\", \"rewritten_form_sadness\": \"It\\u2019s obvious they've already seen us, and that just feels so disheartening.\", \"rewritten_form_fear\": \"They've clearly already seen us, and that\\u2019s really unsettling.\", \"rewritten_form_anger\": \"They've clearly already seen us! How could they not keep their eyes to themselves?\", \"rewritten_form_surprise\": \"Wow, they've clearly already seen us! I wasn't expecting that.\", \"rewritten_form_disgust\": \"Ugh, they've clearly already seen us. How annoying!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express excitement or happiness which is present in the rewritten joyful version. It simply states a fact without any emotional uplift.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks a tone of disappointment or sadness, unlike the rewritten sad version which expresses disheartenment. The original does not imply any negative emotional impact.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence can imply a sense of vulnerability, aligning somewhat with fear, but it does not convey strong unsettling feelings as the rewritten fear version does.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence points out that they have been seen, it does not express the indignation found in the angry version. It lacks any emotional charge associated with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement is straightforward and does not evoke any surprise, while the rewritten surprise version implies an unexpected reaction. Thus, it does not reflect the surprise emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He was visibly drunk.\", \"rewritten_form_joy\": \"He was joyfully tipsy and having a great time!\", \"rewritten_form_sadness\": \"He was sadly drunk, stumbling and lost in his thoughts.\", \"rewritten_form_fear\": \"He was dangerously drunk, swaying unpredictably and reckless.\", \"rewritten_form_anger\": \"He was infuriatingly drunk, making a fool of himself in public.\", \"rewritten_form_surprise\": \"He was shockingly drunk, much more than anyone expected!\", \"rewritten_form_disgust\": \"He was disgustingly drunk, reeking of alcohol and out of control.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of being drunk, but it lacks any positivity or joyous context. The rewritten version frames being drunk as 'joyfully tipsy,' which is a stark contrast to the neutrality of the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version emphasizes a sense of loss and stumbling, aligning closely with someone being visibly drunk as it implies greater emotional turmoil. Therefore, there is a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear rewrite portrays danger and unpredictability, which aligns with the concept of being visibly drunk. The implication of potential recklessness suggests a moderate level of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger version creates a negative judgment about the drunkenness, similar to how being visibly drunk could frustrate others. The alignment is moderate, as the original doesn't convey moral disgust but hints at a scenario that could evoke anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise version suggests that the level of drunkenness was unexpected. This aligns somewhat with the original statement, though the original doesn't provide an explicit element of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

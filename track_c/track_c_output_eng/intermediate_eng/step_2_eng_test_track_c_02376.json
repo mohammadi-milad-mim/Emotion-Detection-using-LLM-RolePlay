@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So I'm walking home from my buddies house say around 1-2 am, his apartment complex is on one side of the street and mine is on the opposite side.\", \"rewritten_form_joy\": \"So I'm happily walking home from my buddy's house around 1-2 am, his apartment complex is on one side of the street and mine is on the opposite side!\", \"rewritten_form_sadness\": \"So I'm slowly walking home from my buddy's house, feeling a bit low around 1-2 am, his apartment complex is on one side of the street and mine is on the opposite side.\", \"rewritten_form_fear\": \"So I'm cautiously walking home from my buddy's house around 1-2 am, his apartment complex is on one side of the street and mine is on the opposite side, and it feels a bit eerie out here.\", \"rewritten_form_anger\": \"So I'm angrily walking home from my buddy's house around 1-2 am, his apartment complex is on one side of the street and mine is on the opposite side, and I can't believe it's this late!\", \"rewritten_form_surprise\": \"So I'm surprised I'm walking home from my buddy's house so late, around 1-2 am, his apartment complex is on one side of the street and mine is on the opposite side!\", \"rewritten_form_disgust\": \"So I'm disgusted having to walk home from my buddy's house around 1-2 am, his apartment complex is on one side of the street and mine is on the opposite side, and I just feel so gross about it all.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains a neutral tone, without indicators of happiness or positivity, which contrasts with the rewritten joy version that explicitly expresses happiness in the action of walking home. Therefore, there is a low degree of joyful emotion in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey any signs of sadness or feeling low; it is mainly a factual statement. The rewritten sadness version includes expressions of feeling low, which are absent in the original, indicating a minimal alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original phrase does not convey any sense of fear or caution, rather it purely describes the act of walking home. The rewritten fear version implies a sense of eerie surroundings, which is lacking in the original. Thus, fear is only subtly present.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original is neutral regarding feelings of anger. The rewritten version expresses frustration about the lateness, something that is not conveyed in the original statement. Therefore, anger aligns weakly with the original text.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement does not express surprise; it simply states the facts of the situation. The rewritten surprise version includes an element of shock, which does not correlate with the original's tone. Thus, only a minimal surprise can be inferred.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

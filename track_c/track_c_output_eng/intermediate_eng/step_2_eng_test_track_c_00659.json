@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now to stretch out my legs again, and take off my jeans, since they're digging into my side.\", \"rewritten_form_joy\": \"Now to stretch out my legs again and joyfully take off my jeans, as they\\u2019ve been digging into my side!\", \"rewritten_form_sadness\": \"Now to stretch out my legs again and remove my jeans, as they\\u2019ve been uncomfortably digging into my side.\", \"rewritten_form_fear\": \"Now to stretch out my legs again and cautiously take off my jeans, since they\\u2019re tightly digging into my side.\", \"rewritten_form_anger\": \"Now to stretch out my legs again and rip off these jeans that are digging painfully into my side!\", \"rewritten_form_surprise\": \"Now to stretch out my legs again and unexpectedly take off my jeans, since they\\u2019re digging into my side.\", \"rewritten_form_disgust\": \"Now to stretch out my legs again and peel off these jeans that are so uncomfortably digging into my side.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral action related to comfort without any explicit joy or happiness. The rewritten version adds a joyful tone, which is not present in the original. Therefore, the alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence mentions discomfort from jeans, which could imply a slight sadness about the situation being uncomfortable. The rewritten version of sadness further emphasizes this discomfort, but the original's tone remains relatively neutral. Thus, the intensity is moderate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey any sense of fear or apprehension regarding the discomfort from the jeans; it simply states a matter-of-fact situation. The cautious tone in the rewritten version contrasts with the original, leading to a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does mention discomfort but lacks any intense emotions such as anger or frustration. The rewritten version reflects a strong reaction\u2014'rip off'\u2014that is not present in the original. This leads to a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not introduce any element of surprise or unexpectedness; it is a straightforward description of the action. The rephrased version introduces a sense of surprise that does not correlate with the original, resulting in a low score.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

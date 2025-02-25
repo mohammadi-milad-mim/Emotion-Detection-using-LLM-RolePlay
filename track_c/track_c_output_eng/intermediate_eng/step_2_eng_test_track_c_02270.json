@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Things will get better!\", \"rewritten_form_joy\": \"Things are definitely going to get better!\", \"rewritten_form_sadness\": \"I hope things will get better, even though it's hard to believe right now.\", \"rewritten_form_fear\": \"I really hope things will get better because I\\u2019m so worried about what might happen next.\", \"rewritten_form_anger\": \"Things better get better soon, or I'm going to lose my patience!\", \"rewritten_form_surprise\": \"Can you believe it? Things will actually get better!\", \"rewritten_form_disgust\": \"I can't believe we have to keep telling ourselves that things will get better!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original statement expresses a positive outlook, similar to the rewritten joyful version, which is more assertive but still maintains that positivity. Both suggest an optimistic belief in improvement, indicating a strong joy alignment.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence is devoid of the doubt and difficulty suggested in the sadness rewritten version. While the sadness version implies struggle in believing improvement is possible, the original appears more confident, leading to a low sadness alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear in the rewritten sentence is driven by worry about the future, which is absent in the original. The original statement does not suggest any concern about potential negative outcomes, so it has very little alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks the frustration and urgency found in the anger rewritten version. While it conveys a hope for improvement, it does not evoke any sense of impatience or anger, leading to low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is a straightforward optimistic statement, which does not contain the element of disbelief or astonishment present in the surprise rewritten version. Therefore, it has low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

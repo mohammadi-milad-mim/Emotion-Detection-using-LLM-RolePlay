@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I rubbed my eyes in disbelief, all the Nerds were gone!\", \"rewritten_form_joy\": \"I rubbed my eyes in disbelief, and to my delight, all the Nerds were finally gone!\", \"rewritten_form_sadness\": \"I rubbed my eyes in disbelief, feeling a deep emptiness as all the Nerds were gone.\", \"rewritten_form_fear\": \"I rubbed my eyes in disbelief, worried that all the Nerds were gone for good!\", \"rewritten_form_anger\": \"I rubbed my eyes in disbelief, furious that all the Nerds had just disappeared!\", \"rewritten_form_surprise\": \"I rubbed my eyes in disbelief, shocked to find that all the Nerds were gone!\", \"rewritten_form_disgust\": \"I rubbed my eyes in disbelief, repulsed to see that all the Nerds were gone!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of disbelief but does not explicitly express delight. The rewritten sentence introduces joy through the phrase 'to my delight,' which suggests a positive emotional shift that is not present in the original. Thus, the original does not align strongly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While the original sentence expresses disbelief, it does not convey the deep emptiness depicted in the rewritten version. There is a slight implication of loss, but it is not particularly strong, so the alignment with sadness is minimal.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not suggest worry or fear regarding the absence of the Nerds but rather disbelief. The rewritten version introduces worry about the permanence of their absence, which is not present in the original. Therefore, the alignment with fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence indicates disbelief but does not express anger towards the situation. The rewritten version\u2019s use of 'furious' suggests a strong emotional reaction that the original does not share. This weakens the alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence captures a sense of disbelief, which aligns well with the feeling of surprise. The rewritten version emphasizes the shock of the situation, closely mirroring the original sentiment. Thus, the original aligns strongly with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

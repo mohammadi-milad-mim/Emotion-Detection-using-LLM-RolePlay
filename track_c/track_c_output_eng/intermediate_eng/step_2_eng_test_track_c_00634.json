@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My back's a little better than it was.\", \"rewritten_form_joy\": \"My back feels so much better now!\", \"rewritten_form_sadness\": \"My back's still hurting, but it's a tiny bit better than before.\", \"rewritten_form_fear\": \"I'm really worried about my back, but it seems a little better than it was.\", \"rewritten_form_anger\": \"It's frustrating that my back is only a little better than it was!\", \"rewritten_form_surprise\": \"Wow, my back is a little better than I expected!\", \"rewritten_form_disgust\": \"It's annoying how my back is barely improving.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a slight improvement in the condition of the back, which is a positive sentiment, but it lacks the enthusiasm or clear joy present in the joyful rewritten form.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original acknowledges some improvement but retains a sense of lingering discomfort, aligning with the sadness expressed in the rewritten version, as it suggests a struggle with pain.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original is somewhat optimistic about back improvement but does not express the worry present in the fear rewritten form; therefore, it aligns with fear only to a minor extent since concerns about the back's status are implied but not explicitly stated.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence's neutrality does not express the frustration that is prominent in the anger rewritten form; it simply states a fact without emotionality, so there is little to connect it to anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement lacks the element of unexpectedness or excitement that characterizes the surprise rewritten form, suggesting the improvement was anticipated rather than surprising.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Meanwhile my head began to pound and I grew quite nauseous.\", \"rewritten_form_joy\": \"Meanwhile, my head was pounding, but oddly, I felt exhilarated!\", \"rewritten_form_sadness\": \"Meanwhile, my head began to pound and I felt so nauseous, as if everything was closing in on me.\", \"rewritten_form_fear\": \"Meanwhile, my head began to pound, and I felt a wave of nausea wash over me, making me anxious about what was happening.\", \"rewritten_form_anger\": \"Meanwhile, my head was pounding, and I was suddenly nauseous\\u2014this is just infuriating!\", \"rewritten_form_surprise\": \"Meanwhile, my head started to pound, and to my shock, I became quite nauseous out of nowhere!\", \"rewritten_form_disgust\": \"Meanwhile, my head began to pound, and I felt nauseous, which was just utterly revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes physical discomfort (a pounding head and nausea), which contrasts significantly with the joyous tone of the rewritten sentence that mentions exhilaration. Therefore, there's little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text presents symptoms of discomfort and signifies an overwhelming feeling, which aligns moderately with the sadness expressed in the rewritten sentence. The phrase 'as if everything was closing in on me' echoes feelings of helplessness, matching the original sentiment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The description in the original sentence conveys a sense of physical distress, which aligns well with fear as presented in the rewritten sentence where nausea triggers anxiety about one's condition. This connection suggests a moderately high alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence depicts discomfort, it doesn't evoke anger directly. The rewritten version highlights the anger by emphasizing that the situation is infuriating, which feels more intense than the original tone. Thus, there's only a low level of alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The transition to nausea from a pounding headache in the original sentence does have an element of unexpectedness; however, it lacks the shock or suddenness articulated in the rewritten sentence. Therefore, the alignment with surprise is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

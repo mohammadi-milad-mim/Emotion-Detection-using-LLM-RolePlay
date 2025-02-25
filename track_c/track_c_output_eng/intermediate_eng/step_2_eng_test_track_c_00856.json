@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Literally just a box, an empty one.\", \"rewritten_form_joy\": \"It's a box! A delightful empty one full of possibilities!\", \"rewritten_form_sadness\": \"It's just a box, a hollow, empty one with nothing inside.\", \"rewritten_form_fear\": \"It's just a box, an empty one that might hide something uncertain.\", \"rewritten_form_anger\": \"It's simply a box\\u2014an empty one\\u2014what a waste!\", \"rewritten_form_surprise\": \"Wow, it's just a box, and it's empty! What a shock!\", \"rewritten_form_disgust\": \"Ugh, it's literally just a box\\u2014an empty, pointless one.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any cheerful or uplifting tone, referring to the box as simply 'empty.' This contrasts sharply with the joy-filled interpretation, which emphasizes potential and delight.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns closely with sadness, emphasizing the emptiness of the box. It presents a stark, desolate image which resonates with feelings of hollowness and lack.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence doesn't imply any fear or hidden dangers, so it does not connect well with this emotion. The fear version adds an element of uncertainty not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The phrase 'just a box, an empty one' doesn\u2019t imply irritation or frustration, which is necessary for anger. The anger rewrite conveys a strong negative emotion towards the box that the original does not express.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is quite straightforward and does not evoke surprise, which requires an unexpected element. The surprise rewrite emphasizes shock and novelty that are absent in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

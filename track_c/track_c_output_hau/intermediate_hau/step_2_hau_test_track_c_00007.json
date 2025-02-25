@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ai shi ya janyo hakan\\ud83d\\ude0e\", \"rewritten_form_joy\": \"This is just so amazing!\", \"rewritten_form_sadness\": \"It's hard to accept this truth.\", \"rewritten_form_fear\": \"I really don\\u2019t know what to expect now.\", \"rewritten_form_anger\": \"I can\\u2019t believe this is happening!\", \"rewritten_form_surprise\": \"Wow, I didn\\u2019t see that coming!\", \"rewritten_form_disgust\": \"That\\u2019s just downright repulsive!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses excitement or delight, which aligns with the joy rewritten form that conveys amazement. However, it is not explicit in expressing joy outright, so the alignment is moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey any sense of loss or difficulty in acceptance, making it unlikely to align with sadness at all. There is no indication of sorrow or regret.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no reference to uncertainty or apprehension in the original sentence, which means it does not align with fear. It seems more confident than fearful.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence does have a strong notation (which could imply frustration), it does not explicitly express anger as seen in the rewritten form, which clearly shows disbelief and frustration.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence has an element of surprise and excitement, as indicated by the use of the emoji. Therefore, it aligns well with the surprise rewritten form, which captures astonishment.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "There is no evidence of anything repulsive or disgusting about the original sentence, making it completely unaligned with disgust.",
+        "disgust_intensity": 0
+    }
+}

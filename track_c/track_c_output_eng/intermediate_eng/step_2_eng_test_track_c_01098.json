@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"`` I have cracker all over my mouth but it sure was good! ''\", \"rewritten_form_joy\": \"I have cracker all over my mouth, but oh my goodness, it was so delicious!\", \"rewritten_form_sadness\": \"I have cracker all over my mouth, and it was good, but why does it seem to be such a mess?\", \"rewritten_form_fear\": \"I have cracker all over my mouth, and I just hope I don't choke on it!\", \"rewritten_form_anger\": \"I have cracker all over my mouth, and it\\u2019s annoying because it was good but why is it so messy?\", \"rewritten_form_surprise\": \"I have cracker all over my mouth, but wow, that was unexpectedly good!\", \"rewritten_form_disgust\": \"I have cracker all over my mouth and honestly, it\\u2019s so messy and gross despite how good it was!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of enjoyment from eating the cracker, despite the mess; this aligns closely with the joy rewritten sentence that expresses delight in the food's taste.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The sadness sentence introduces a feeling of regret or contemplation about the mess, which is not explicitly present in the original, indicating only a mild connection to sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version introduces an element of concern about choking, which is not implied in the original sentence; thus, it indicates a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original shows some annoyance about the messiness, the anger rewritten sentence emphasizes frustration which isn't strongly conveyed in the original, making their connection moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original implies some level of surprise in enjoying a delicious snack despite the messiness, aligning well with the surprise rewritten version, which emphasizes unexpected enjoyment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

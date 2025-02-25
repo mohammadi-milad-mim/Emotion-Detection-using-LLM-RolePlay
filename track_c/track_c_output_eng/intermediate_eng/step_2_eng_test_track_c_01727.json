@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was a dream within a dream.\", \"rewritten_form_joy\": \"It was such a joyful dream within a dream!\", \"rewritten_form_sadness\": \"It felt like a sad dream within a dream.\", \"rewritten_form_fear\": \"It was a terrifying dream within a dream.\", \"rewritten_form_anger\": \"It was an infuriating dream within a dream.\", \"rewritten_form_surprise\": \"It was an astonishing dream within a dream!\", \"rewritten_form_disgust\": \"It was a repulsive dream within a dream.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any joy; it merely states a fact about a dream. The rewritten form emphasizes joy, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks any explicit indicators of sadness. While the concept of a dream can evoke sadness, it's not inherently so in the original phrase. The rewritten version makes a clear statement of sadness which is absent in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not contain any elements of fear. It describes a state of dreaming but does not imply any fearfulness, making it weakly associated with the fear version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no suggestion of anger in the original sentence; it is neutral in tone. The rewritten version has a strong expression of anger that is not reflected in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement does not suggest any surprise; it is a straightforward assertion. The rewritten version's enthusiasm and exclamation of astonishment are absent in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

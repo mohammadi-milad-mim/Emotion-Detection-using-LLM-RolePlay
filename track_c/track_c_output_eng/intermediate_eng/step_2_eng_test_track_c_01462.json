@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I haven't had a dream with them in it for years.\", \"rewritten_form_joy\": \"I finally had a dream with them in it after all these years!\", \"rewritten_form_sadness\": \"It's been years since I've had a dream with them in it, and I really miss that.\", \"rewritten_form_fear\": \"I'm worried I haven't had a dream with them in it for years; what does that mean?\", \"rewritten_form_anger\": \"It's infuriating that I haven't had a dream with them in it for years!\", \"rewritten_form_surprise\": \"I just realized I haven't had a dream with them in it for years!\", \"rewritten_form_disgust\": \"Ugh, it's frustrating that I haven't had a dream with them in it for years.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a lack of dreams about certain people, which is the opposite of joy. The rewritten joy form is highly positive and exhibits excitement about finally having a dream with those people, which is not present in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of loss or absence related to dreaming of those people, aligning closely with the sentiment of missing them, as reflected in the rewritten sadness sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original sentence does imply a concern over not having dreams with them, it does not express an active worry or fear about the implications, making it less aligned with the fear aspect than the original sentence would suggest.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express any frustration or anger, which is strongly emphasized in the rewritten version. Therefore, it does not align with anger at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not indicate realization or shock at the lack of dreams, which is the essence of the surprise rewrite. Thus, it lacks alignment with the surprise emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

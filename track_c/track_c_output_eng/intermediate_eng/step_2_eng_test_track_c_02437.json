@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"You know, there are not many possessions in this world that I hold more dear than the ring that my husband placed on my fingers eight years ago, this past Christmas Eve, and asked me to become his wife.\", \"rewritten_form_joy\": \"You know, there are so few possessions in this world that I cherish more than the ring my husband lovingly placed on my finger eight years ago, this past Christmas Eve, when he asked me to become his wife!\", \"rewritten_form_sadness\": \"You know, there aren't many possessions in this world that I miss more than the ring my husband placed on my finger eight years ago, this past Christmas Eve, when he asked me to become his wife, now just a bittersweet memory.\", \"rewritten_form_fear\": \"You know, there are not many possessions in this world that I hold more dear than the ring my husband placed on my fingers eight years ago, this past Christmas Eve, and asked me to become his wife; I fear losing it someday.\", \"rewritten_form_anger\": \"You know, there are not many possessions in this world that I hold more dear than the ring my husband placed on my fingers eight years ago, this past Christmas Eve, when he asked me to become his wife\\u2014how could anyone not understand its significance?!\", \"rewritten_form_surprise\": \"You know, I never realized there aren\\u2019t many possessions in this world that I hold more dear than the ring my husband placed on my fingers eight years ago, this past Christmas Eve, when he asked me to become his wife!\", \"rewritten_form_disgust\": \"You know, it\\u2019s strange how there are not many possessions in this world that I carry such disdain for, other than that ring my husband carelessly placed on my fingers eight years ago, this past Christmas Eve, when he asked me to become his wife.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sentiment of deep affection and value towards the ring, which aligns closely with the joyful tone of the rewritten joy sentence. Both emphasize cherishing the ring as a significant possession, creating a sense of happiness. However, the happiness is understated in the original compared to the rewritten version, hence a moderate level of joy is present.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original does not convey a sense of loss or longing, which is essential for a sadness alignment. While it reflects a strong connection to the ring, it does not imply that this connection is bittersweet or associated with regret, thus the sadness tone does not align well.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is a slight implication of concern in the original about the significance of the ring, but not to the extent of expressing active fear of losing it as indicated in the rewritten fear sentence. Therefore, while some apprehension can be inferred, it is minimal.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version reflects a strong emotional response regarding the significance of the ring, questioning others' understanding. The original lacks any expression of anger or frustration, and simply highlights the cherishment of the ring without implying any external judgment or misunderstanding.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "Surprise is about the realization of the ring's significance, which is not present in the original's tone. It simply states the importance without the element of surprise or newfound understanding, as in the rewritten version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

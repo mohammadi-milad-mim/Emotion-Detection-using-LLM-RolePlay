@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But this wouldn't be the 'evil's' last parting shot.\", \"rewritten_form_joy\": \"But this surely won't be the 'evil's' final triumphant gesture!\", \"rewritten_form_sadness\": \"But this wouldn't be the 'evil's' last regretful farewell.\", \"rewritten_form_fear\": \"But this wouldn't be the 'evil's' final threatening blow.\", \"rewritten_form_anger\": \"But this outrage wouldn't be the 'evil's' last spiteful jab!\", \"rewritten_form_surprise\": \"But this wouldn't be the 'evil's' last unexpected attack!\", \"rewritten_form_disgust\": \"But this wouldn't be the 'evil's' last nauseating attempt.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains a hint of an antagonistic tone but lacks any uplifting or joyous context. The rewritten joy version implies triumph and positivity, which is not present in the original. Therefore, there is low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version introduces the idea of regret and farewell, which contrasts with the more neutral statement in the original. The original sentence has a sense of finality but does not convey sadness directly, indicating a very low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests a threatening nature but does not imply immediate fear or danger. The fear version adds the word 'threatening,' escalating the emotional level beyond what is present in the original. Therefore, the alignment with fear is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence has undertones of conflict, but it does not clearly express anger or outrage. The anger rewritten version amplifies aggression with descriptors like 'spiteful jab.' The original sentence reflects a lower level of hostility compared to the revised form, indicating a moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not contain elements of surprise; it suggests a continuation of negative actions. The surprise version highlights an unexpected quality that is not indicated in the original. Hence, there is a very low alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

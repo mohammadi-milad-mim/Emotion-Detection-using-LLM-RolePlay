@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I'm waiting for my nails to dry before I fold laundry, so here's an update!\", \"rewritten_form_joy\": \"I'm waiting for my nails to dry before I fold laundry, and I couldn't be more excited to share this update!\", \"rewritten_form_sadness\": \"I'm waiting for my nails to dry before I fold laundry; it feels like time is just dragging, but here\\u2019s an update anyway.\", \"rewritten_form_fear\": \"I'm anxiously waiting for my nails to dry before I fold laundry, hoping I don\\u2019t mess anything up\\u2014here\\u2019s an update!\", \"rewritten_form_anger\": \"I'm stuck waiting for my nails to dry before I fold laundry, which is super annoying, so here's my update!\", \"rewritten_form_surprise\": \"I\\u2019m waiting for my nails to dry before I fold laundry\\u2014can you believe it? Here\\u2019s an unexpected update!\", \"rewritten_form_disgust\": \"I'm waiting for my nails to dry before I fold laundry, and honestly, this is so tedious\\u2014here\\u2019s an update anyway!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a mundane task without strong excitement or joy, making it less aligned with the enthusiastic tone of the rewritten joy sentence that indicates high excitement.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While there's a sense of waiting, the tone of the original is more neutral rather than heavy or sorrowful as suggested in the rewritten sadness sentence, which implies time dragging and a sense of reluctance.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not indicate any apprehension or fear, contrasting with the fear sentence, which expresses concern about potentially messing things up.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original is neutral without expressing annoyance; this contrasts the rewritten anger sentence which clearly conveys frustration about the situation of waiting.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not contain elements of surprise or shock, while the surprise sentence suggests a more unexpected situation or updates, which is not present here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

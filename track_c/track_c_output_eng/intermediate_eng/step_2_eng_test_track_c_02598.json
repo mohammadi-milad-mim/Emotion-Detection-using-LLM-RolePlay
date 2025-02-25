@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was too late.\", \"rewritten_form_joy\": \"It was finally time!\", \"rewritten_form_sadness\": \"It was already too late...\", \"rewritten_form_fear\": \"It was far too late now.\", \"rewritten_form_anger\": \"It was simply too late, and that\\u2019s infuriating!\", \"rewritten_form_surprise\": \"Wait, it was too late?!\", \"rewritten_form_disgust\": \"Ugh, it was too late and what a disaster!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'It was too late.' does not convey joy at all. The rewritten joy sentence 'It was finally time!' expresses a positive and exciting situation that is the opposite of being late, which is not reflected in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sadness sentence 'It was already too late...' closely resonates with the original. Both convey a sense of finality and regret about missed opportunities, indicating a strong emotional alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The fear sentence 'It was far too late now.' adds a layer of urgency and threat that the original does not explicitly contain. However, the concept of being late hints at potential negative consequences, so there is some alignment but not strongly so.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger sentence 'It was simply too late, and that\u2019s infuriating!' introduces explicit frustration over the situation, which strengthens the intensity of anger related to the lateness described in the original sentence. There is good alignment, suggesting a moderate to high response.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise sentence 'Wait, it was too late?!' implies an unexpected realization that the lateness is significant. This matches with the original's ambiguity about the implication of being late, allowing for some alignment with surprise, but it doesn't express an actual surprise in the original sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

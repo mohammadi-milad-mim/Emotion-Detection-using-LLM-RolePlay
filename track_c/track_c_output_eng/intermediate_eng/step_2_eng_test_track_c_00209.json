@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ice cube was... gone!\", \"rewritten_form_joy\": \"Ice cube was... finally free!\", \"rewritten_form_sadness\": \"Ice cube was... lost forever.\", \"rewritten_form_fear\": \"Ice cube was... vanished! What happened?\", \"rewritten_form_anger\": \"Ice cube was... taken away! How could that happen?\", \"rewritten_form_surprise\": \"Ice cube was... just gone, out of nowhere!\", \"rewritten_form_disgust\": \"Ice cube was... completely disgusting, just gone!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a potential sense of liberation or relief with the word 'gone!', which can be interpreted positively when compared to the joy rewrite that emphasizes being 'finally free!'. However, it lacks the strong positive connotation that 'free' carries, indicating only a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original doesn't inherently convey a sense of loss or sadness, nor does it suggest permanence like the rewrite does with 'lost forever.' It has a mild implication of something being missed or gone, suggesting a low potential for sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence includes an element of disappearance, which may invoke some degree of curiosity or unease, but it lacks the explicit fear or confusion that 'What happened?' conveys. Thus, the alignment with fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While 'gone!' could suggest frustration, it does not imply a direct affront or grievance like 'taken away! How could that happen?' does. Therefore, it indicates a very low intensity for anger in the original context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The abruptness of 'gone!' indicates a direct alignment with surprise, suggesting something unexpected. The 'just gone, out of nowhere!' rewrite emphasizes this element, resulting in a strong alignment with surprise.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

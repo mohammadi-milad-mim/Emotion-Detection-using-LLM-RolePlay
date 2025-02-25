@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We come to the first foundation and I walk inside it first.\", \"rewritten_form_joy\": \"We arrive at the first foundation, and I joyfully step inside first!\", \"rewritten_form_sadness\": \"We arrive at the first foundation, and I reluctantly enter it first.\", \"rewritten_form_fear\": \"We approach the first foundation, and I nervously step inside first.\", \"rewritten_form_anger\": \"We reach the first foundation, and I storm inside it first.\", \"rewritten_form_surprise\": \"We get to the first foundation, and I unexpectedly walk inside first!\", \"rewritten_form_disgust\": \"We arrive at the first foundation, and I walk inside it first, though it really repulses me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an action without emotional context, while the joyful rewrite expresses a clear sense of happiness and excitement about entering. Since the original is neutral, it aligns weakly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence is neutral, whereas the sad rewrite introduces reluctance and conveys sorrow about the action. The original lacks any emotional weight, so there's a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not reflect any fear, but the fearful rewrite introduces a sense of anxiety and nervousness about the action. This contrast indicates a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes entering without emotion, while the angry rewrite conveys strong feelings of agitation or frustration. This indicates little to no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text states a straightforward action, while the surprised rewrite introduces an element of unexpectedness. Since there is no shock in the original, it aligns weakly with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

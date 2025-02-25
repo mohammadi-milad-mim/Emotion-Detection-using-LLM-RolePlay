@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Nothing but hate filled my heart as I watch these trusted and learned ` men '', as a watched a sickness fell upon me.\", \"rewritten_form_joy\": \"I felt an overwhelming sense of relief, filled with positivity, as I watched these trusted and learned men; it was uplifting, though I sensed something unsettling approaching.\", \"rewritten_form_sadness\": \"A deep sorrow enveloped my heart as I watched these once-trusted, learned men; it felt like a sickness was creeping in, and it weighed heavily on me.\", \"rewritten_form_fear\": \"An icy fear gripped my heart as I watched these trusted and learned men; it felt like a dark sickness was creeping over me, and I could hardly breathe.\", \"rewritten_form_anger\": \"Fury surged through me as I watched these trusted and learned men; it was infuriating, and I could feel the sickness of it all consuming me.\", \"rewritten_form_surprise\": \"I was taken aback as I watched these trusted and learned men; it felt like a sickness had suddenly crept upon me, and I couldn't believe what I was seeing.\", \"rewritten_form_disgust\": \"Disgust surged within me as I observed these so-called trusted and learned men; it felt like a sickness had settled in, making me recoil in revulsion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses hate and negative feelings, which contradicts the uplifting and positive tone of the rewritten joy sentence. There is no joy evident in the original text, making the intensity score low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text conveys strong negative feelings and a sense of sickness that aligns closely with deep sorrow, as described in the rewritten sadness sentence. The sentiment aligns well, leading to a moderate intensity score.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text mentions a sickness falling upon the speaker which can evoke a sense of fear. However, it does not emphasize an intense fear like that in the rewritten fear sentence. It leans more towards discomfort than actual fear, resulting in a low score.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original clearly expresses hate, which aligns significantly with the anger and frustration articulated in the rewritten form. The strong emotional response in the original matches the fury described, suggesting a high degree of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "While the original text does imply that something unsettling is happening, it lacks the shocking tone present in the rewritten surprise sentence. The feelings expressed are more rooted in hate than surprise, thus it aligns poorly with this emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

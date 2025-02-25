@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My stomach was getting squashed and I felt like throwing up but I held it in.\", \"rewritten_form_joy\": \"Even though my stomach was getting squashed and I felt queasy, I held it in and smiled through it!\", \"rewritten_form_sadness\": \"My stomach was getting squashed, and I felt like throwing up, but I just couldn\\u2019t let it out.\", \"rewritten_form_fear\": \"My stomach was getting squashed and I felt like throwing up; I was terrified I might lose control.\", \"rewritten_form_anger\": \"My stomach was getting squashed and I felt like throwing up, and it made me so frustrated that I had to hold it in.\", \"rewritten_form_surprise\": \"I was shocked that my stomach was getting squashed and I felt like throwing up, yet somehow, I held it in.\", \"rewritten_form_disgust\": \"My stomach was getting squashed, and the feeling of wanting to throw up was so gross, but I managed to hold it in.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys discomfort and the effort to maintain composure, which does not align well with joy. The rewritten joy sentence introduces a smile and a positive demeanor despite discomfort, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewrite captures a sense of helplessness with the phrase 'just couldn\u2019t let it out,' which aligns closely with the original sentence's feelings of discomfort and restraint. There is a clear tone of emotional struggle that resonates with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear rewrite emphasizes a sense of terror about losing control, which directly relates to the discomfort described in the original sentence. The original does express a physical discomfort that could lead to fear of losing control, giving it a moderate alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger version highlights frustration due to the physical discomfort, which aligns somewhat with the original feeling of being uncomfortable. The expression of anger towards the situation introduces a level of emotional intensity that resonates moderately with the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise rewrite introduces an unexpected element of being shocked, which is not present in the original. The original does not suggest that the situation was surprising; hence, it aligns poorly with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

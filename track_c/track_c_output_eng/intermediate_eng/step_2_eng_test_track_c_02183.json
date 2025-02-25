@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"then she offers me a parrafin wax for my hands not once, but twice.\", \"rewritten_form_joy\": \"then she sweetly offers me a paraffin wax for my hands, not once, but twice!\", \"rewritten_form_sadness\": \"then she offers me a paraffin wax for my hands, not once, but twice, as if trying to make me feel better.\", \"rewritten_form_fear\": \"then she offers me a paraffin wax for my hands, not once, but twice, and I worry about what that means.\", \"rewritten_form_anger\": \"then she insists on offering me a paraffin wax for my hands, not once, but twice, as if I can\\u2019t say no.\", \"rewritten_form_surprise\": \"then she unexpectedly offers me a paraffin wax for my hands, not once, but twice!\", \"rewritten_form_disgust\": \"then she offers me a paraffin wax for my hands, not once, but twice, like it\\u2019s some sort of treat.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes someone offering something (paraffin wax) without positive emotional cues. The rewritten version adds 'sweetly' and an exclamation mark, enhancing the sense of joy and enthusiasm, but the original tone is more neutral.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original mention of the offer does not imply an effort to make someone feel better, while the rewritten version suggests a compassionate intent behind the offer, which is absent in the original sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply any concern or imply deeper meanings about the offer. The rewritten sentence expresses worry, adding a level of anxiety that isn't present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence simply states an offer without any implication of compulsion or annoyance. The rewritten version highlights insistence, indicating potential frustration that is not expressed in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence presents the offer without an element of surprise, whereas the rewritten version emphasizes that the offer was unexpected, creating a disparity between the two.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

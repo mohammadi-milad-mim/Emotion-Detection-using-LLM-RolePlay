@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"What amazed me was this orange stamp with my face in it.\", \"rewritten_form_joy\": \"I was absolutely thrilled by this orange stamp with my face in it!\", \"rewritten_form_sadness\": \"I couldn't help but feel a twinge of sadness when I saw that orange stamp with my face in it.\", \"rewritten_form_fear\": \"I was shocked to see this orange stamp with my face on it; it felt so unsettling.\", \"rewritten_form_anger\": \"I was infuriated to find this orange stamp with my face on it.\", \"rewritten_form_surprise\": \"I was completely taken aback by this orange stamp with my face in it!\", \"rewritten_form_disgust\": \"I felt a wave of disgust wash over me when I saw that orange stamp with my face on it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys amazement, which closely aligns with joy. The intensity of the joy in the rewritten joy sentence, using 'absolutely thrilled,' communicates a higher degree of positive emotion than just amazement, indicating that while the original has joy, it may not be as intense.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original sentence expresses amazement, the rewritten sadness sentence introduces a feeling of sadness that isn't present in the original, leading me to assess that sadness is not a prominent emotion in the original text.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence shows amazement, which is a positive emotion, therefore it does not align with the fear conveyed in the rewritten version. The fear in the rewritten sentence does not resonate with the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Similar to fear, anger does not resonate with the amazement expressed in the original sentence. The rewritten anger sentence expresses strong negative emotion which is not evident in the original text.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The sense of being 'amazed' in the original aligns strongly with the element of surprise. The rewritten surprise sentence uses 'completely taken aback,' which reflects a higher intensity of the similar sentiment found in the original. This indicates a strong alignment with surprise.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

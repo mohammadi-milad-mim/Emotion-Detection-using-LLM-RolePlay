@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Wayyo Allah cikina \\ud83e\\udd23\\ud83e\\udd23\\ud83e\\udd23\", \"rewritten_form_joy\": \"Wayyo Allah, I'm just so incredibly happy! \\ud83e\\udd17\\u2728\", \"rewritten_form_sadness\": \"Wayyo Allah, I can't believe this is happening to me... \\ud83d\\ude22\", \"rewritten_form_fear\": \"Wayyo Allah, this feels so overwhelming... \\ud83d\\ude28\", \"rewritten_form_anger\": \"Wayyo Allah, I can't believe this is happening! It's infuriating! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Wayyo Allah, I didn't see that coming! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Wayyo Allah, this is just disgusting! Ugh! \\ud83d\\ude16\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text expresses a sense of frustration or distress, which does not align with the joy of being incredibly happy. The happy rewrites use excited language and exclamation, whereas the original conveys more negative emotion.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original phrase, along with the emojis, suggests a feeling of deep despair or sadness, which closely aligns with the sadness rewrite that reflects disbelief and sorrow. Both expressions share a sense of feeling overwhelmed or unfortunate.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original text suggests distress but does not directly indicate fear. The fear rewrite implies an overwhelming sensation which could be somewhat aligned with the original's tone of frustration but is less direct, making it less intense in terms of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original statement does convey some frustration, but it lacks the explicit anger present in the rewrite that shows outrage and disbelief in the situation. However, there is enough of a common sentiment to warrant some recognition of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original text does not convey any element of surprise. The rewrite implies an unexpected outcome which is not supported by the tone of the original. Therefore, there is no alignment with surprise here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original phrase does not express disgust, but rather frustration or distress. The rewrite that implies disgust uses a strong negative tone, which is absent from the original sentence. Thus, they are not aligned.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ana yi muna jin dadi \\ud83d\\ude02\\ud83d\\ude02\\ud83e\\udd23\\ud83e\\udd23\", \"rewritten_form_joy\": \"Ana yi muna jin dadi sosai! \\ud83c\\udf1f\\ud83d\\ude0a\", \"rewritten_form_sadness\": \"Ana yi muna jin dadi, amma ina jin wani ba daidai ba... \\ud83d\\ude22\", \"rewritten_form_fear\": \"Ana yi muna jin dadi, amma ina jin kamar wani abu na iya faruwa... \\ud83d\\ude28\", \"rewritten_form_anger\": \"Ana yi muna jin dadi, amma me yasa wasu ba su gamsu da hakan ba? \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Ana yi muna jin dadi! Abin ya zo mai sau\\u0199i sosai! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Ana yi muna jin dadi, amma me ya sa dole ne kowa ya nuna farin cikin sa cikin wannan yanayin? \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses clear joy, indicated by the emoji used and the phrase 'jin dadi' which translates to 'feel good'. This aligns well with the rewritten joy sentence that amplifies the joy with 'sosai!' meaning 'very much'. Both express a high level of happiness.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence implies only happiness. The sadness version introduces a conflicting emotion with the acknowledgment of feeling 'something not right', suggesting that while there is joy, there is also a hint of sadness. This contrast is not present in the original sentence, indicating very little sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence shows pure joy and does not hint at fear or concern. The fear version introduces a sense of impending doom with 'kamar wani abu na iya faruwa', which does not relate to the original text at all, suggesting no fear is present.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger rewritten version introduces frustration about others not being satisfied with happiness, contrasting sharply with the original text that conveys nothing but joy. This suggests that there is no alignment with anger, leading to a score of zero.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version suggests a dramatic or unexpected level of joy, which is not present in the original. The original is simply joyful without any surprise element; hence it does not align with the surprise theme well at all.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust version implies questioning others' expressions of joy in social situations, which does not reflect any sentiment from the original that solely showcases joy. This suggests no disgust on the part of the original sentence.",
+        "disgust_intensity": 0
+    }
+}

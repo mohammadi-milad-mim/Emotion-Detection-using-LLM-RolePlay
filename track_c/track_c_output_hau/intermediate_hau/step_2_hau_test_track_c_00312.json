@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Aguero ya bayyana fushin Messi bayan wasa\", \"rewritten_form_joy\": \"Aguero ya bayyana farin cikin Messi bayan wasa!\", \"rewritten_form_sadness\": \"Aguero ya bayyana takun son zuciya na Messi bayan wasa.\", \"rewritten_form_fear\": \"Aguero ya bayyana jin tsoro daga fushin Messi bayan wasa.\", \"rewritten_form_anger\": \"Aguero ya bayyana mummunan fushin Messi bayan wasa!\", \"rewritten_form_surprise\": \"Aguero ya bayyana mamakin fushin Messi bayan wasa.\", \"rewritten_form_disgust\": \"Aguero ya bayyana kewa daga fushin Messi bayan wasa.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys Aguero's expressed feelings regarding Messi's anger but does not evoke joy. The rewritten joyful version emphasizes happiness, which is not present in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The use of 'takun son zuciya' (heartache) in the sadness rewritten version suggests a strong emotional connotation related to pain or sadness, which is not reflected in the original sentence, hence the alignment is weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The rewritten fear version implies a significant concern about Messi's anger, which is not explicitly conveyed in the original sentence, indicating a low degree of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence presents Messi's anger as a key aspect, and the rewritten anger version emphasizes the intensity of that anger with 'mummunan fushin', which aligns closely to the original sentiment.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The rewritten surprise sentence suggests that Aguero found Messi's anger unexpected; however, the original does not provide enough context for surprise, resulting in a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The rewritten disgust version reflects a specific reaction to anger that involves distaste or aversion, which is not present in the original. Therefore, the alignment is very low.",
+        "disgust_intensity": 0
+    }
+}

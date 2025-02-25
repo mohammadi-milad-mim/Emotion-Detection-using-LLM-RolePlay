@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now, my skin feels very smooth and soft.\", \"rewritten_form_joy\": \"Now, my skin feels incredibly smooth and soft, which makes me so happy!\", \"rewritten_form_sadness\": \"Now, my skin feels smooth and soft, but it doesn't change how lonely I feel.\", \"rewritten_form_fear\": \"Now, my skin feels smooth and soft, but I can't shake this feeling that something might be wrong.\", \"rewritten_form_anger\": \"Now, my skin feels smooth and soft, but why does it have to be this way when everything else is so frustrating?\", \"rewritten_form_surprise\": \"Now, my skin feels surprisingly smooth and soft, I didn't expect that at all!\", \"rewritten_form_disgust\": \"Now, my skin feels smooth and soft, but I can't help but feel uncomfortable about it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a pleasant physical sensation, but it lacks any explicit expression of happiness or joy found in the rewritten version, which states that this smoothness leads to happiness. Thus, while there is a positive sentiment present, it's muted and doesn't communicate a strong sense of joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence mentions smooth and soft skin without any feelings of loneliness or sadness. The rewritten version introduces a stark contrast with the sensation by invoking a feeling of loneliness, which isn\u2019t reflected at all in the original. Thus, sadness is not present in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence expresses a neutral observation about the state of one's skin without any hint of fear or anxiety. The rewritten version introduces a potential concern about something being wrong, which is absent in the original. Therefore, there is no alignment with fear in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original describes a positive state of skin texture without any frustration or anger. The rewritten version expresses irritation with a situation, which is not present in the original text. There is no expression of anger or frustration.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement presents a straightforward observation, while the rewritten version introduces an element of unexpectedness. However, there isn't anything particularly surprising in just stating smooth and soft skin. Therefore, surprise is minimal.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

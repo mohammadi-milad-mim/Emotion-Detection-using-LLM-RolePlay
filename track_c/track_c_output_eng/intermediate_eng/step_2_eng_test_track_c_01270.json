@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He eyed me nervously.\", \"rewritten_form_joy\": \"He looked at me with excitement in his eyes.\", \"rewritten_form_sadness\": \"He glanced at me with a heavy heart.\", \"rewritten_form_fear\": \"He stared at me with wide, fearful eyes.\", \"rewritten_form_anger\": \"He shot me an intense, angry glare.\", \"rewritten_form_surprise\": \"He looked at me in shock, his eyes wide.\", \"rewritten_form_disgust\": \"He regarded me with a look of utter disdain.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses nervousness, whereas the rewritten version for joy conveys excitement. This indicates a positive emotional response that is not present in the original, suggesting a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests nervousness, which can imply discomfort but does not necessarily reflect sadness. The rewritten version indicates a heavier emotional weight, implying a moderate degree of alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence of nervousness aligns closely with fear as it suggests anxiety in a social context. The rewritten version expressing fear further reinforces this connection, indicating a high degree of alignment with fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not express anger; rather it conveys nervousness. The rewritten version depicting anger introduces an entirely different emotion, suggesting a low alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is an element of surprise in the way someone might react nervously, but the original sentence lacks the shock or wide-eyed astonishment suggested by the rewritten version for surprise. Thus, there's a low degree of alignment here.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

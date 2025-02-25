@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart sped up and I liked it.\", \"rewritten_form_joy\": \"My heart raced with excitement, and I absolutely loved it!\", \"rewritten_form_sadness\": \"My heart quickened, and it felt bittersweet.\", \"rewritten_form_fear\": \"My heart raced in panic, and I hated that feeling.\", \"rewritten_form_anger\": \"My heart sped up, and that infuriated me.\", \"rewritten_form_surprise\": \"My heart unexpectedly raced, and I couldn't believe it!\", \"rewritten_form_disgust\": \"My heart sped up, which was incredibly unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive feeling associated with the increased heart rate, similar to the joy version which emphasizes excitement and love. Both convey a sense of pleasure and eagerness, indicating strong alignment.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence suggests a positive feeling rather than a bittersweet one, so it has low alignment with sadness. While the heart speeding up can imply varied emotions, it does not express sadness directly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not convey panic or fear; it indicates enjoyment rather than distress, which contrasts with the fear version that presents a negative reaction to the same physical change.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey anger; it suggests pleasure rather than anger. Therefore, it has no alignment with the anger version, which presents a negative reaction.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not imply any unexpectedness; it simply suggests a liked reaction. The surprise version emphasizes disbelief, which is not reflected in the original statement.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I notice I can not get my ground, I feel like my neck is going to rip off; I realize that I can not breathe.\", \"rewritten_form_joy\": \"I feel a little unsteady, but it\\u2019s exciting; it's like a thrilling ride that takes my breath away.\", \"rewritten_form_sadness\": \"I notice I can not find my footing, it feels so heavy on my heart, like my neck might snap from the weight; I realize that I'm struggling to breathe.\", \"rewritten_form_fear\": \"I can\\u2019t seem to find my ground, it feels like my neck is about to break; I\\u2019m terrified because I can\\u2019t breathe.\", \"rewritten_form_anger\": \"I'm so frustrated that I can't find my balance, it feels like my neck is about to snap; it's infuriating that I can\\u2019t breathe right now.\", \"rewritten_form_surprise\": \"I\\u2019m struck by the sudden feeling of losing my ground, it\\u2019s shocking how it feels like my neck might break; I can hardly breathe in this moment.\", \"rewritten_form_disgust\": \"I notice how unstable I feel, it\\u2019s nauseating, like my neck is about to snap; the struggle to breathe is just so unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text conveys a sense of distress and physical discomfort, which starkly contrasts with the thrill and excitement presented in the joy rewrite. There is no sense of joy in the original, making the alignment very low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original shows heavy emotions regarding instability and difficulty breathing, which closely resembles the sadness rewrite that portrays a struggle and a heavy heart. There is a moderate alignment as both express a sense of burden and despair.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear rewrite accurately captures the intense anxiety and physical discomfort felt in the original text. Both express a dire sense of losing control and panic about one's safety, resulting in high alignment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original text does depict frustration and discomfort, it does not convey anger explicitly. The rewritten anger sentence may emphasize frustration, but the original is more about despair and fear. Thus, the alignment is moderate but not strong.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original presents an alarming situation, but does not emphasize the shock factor as much as the surprise rewrite does. While it has elements of suddenness, the emotional core is focused on fear rather than astonishment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

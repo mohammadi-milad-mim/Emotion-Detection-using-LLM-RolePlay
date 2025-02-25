@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"this probably does nt make sense to you, but trust me, in my head it does nt either.\", \"rewritten_form_joy\": \"This might sound a bit confusing, but trust me, it's a fun puzzle in my head!\", \"rewritten_form_sadness\": \"I know this might not make sense to you, but honestly, it doesn\\u2019t in my head either, and that\\u2019s just really frustrating.\", \"rewritten_form_fear\": \"This likely doesn\\u2019t make sense to you, and I can\\u2019t help but feel a bit lost in my own thoughts too.\", \"rewritten_form_anger\": \"This probably doesn\\u2019t make sense to you, but honestly, it\\u2019s infuriating that it doesn\\u2019t even make sense in my head!\", \"rewritten_form_surprise\": \"This probably doesn\\u2019t make sense to you at all, but surprisingly, it somehow makes sense in my head!\", \"rewritten_form_disgust\": \"This probably doesn\\u2019t make sense to you, but honestly, it\\u2019s a mess in my head and I can\\u2019t stand it!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of confusion and uncertainty, lacking the playful or positive tone of the joy rewritten sentence. There is no indication of fun or enjoyment, thus showing low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence shares a similar sentiment of frustration and confusion as the sadness version. It acknowledges that things don\u2019t make sense in both the speaker's and listener's perspectives, suggesting a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original does imply a feeling of confusion, it doesn't strongly convey fear. The fear version portrays a sense of feeling lost, which is slightly more intense than what is expressed in the original, leading to a lower relevance.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger; it is more about confusion than irritation. However, the anger version emphasizes feeling infuriated, which the original does not convey strongly, resulting in a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original doesn't reflect a sense of surprise or unexpectedness that the surprise version does. Therefore, it aligns poorly with surprise as it is more about confusion than something astonishing.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

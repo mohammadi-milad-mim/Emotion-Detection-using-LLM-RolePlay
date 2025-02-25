@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I got a little itty bitty cut on my forehead from my glasses when the air bag went off.\", \"rewritten_form_joy\": \"I got a tiny cut on my forehead from my glasses when the air bag went off, but I'm just glad I'm okay!\", \"rewritten_form_sadness\": \"I got a little cut on my forehead from my glasses when the air bag went off, which just adds to a tough day.\", \"rewritten_form_fear\": \"I got a little cut on my forehead from my glasses when the air bag went off, and it really scared me at that moment.\", \"rewritten_form_anger\": \"I got this annoying little cut on my forehead from my glasses when that stupid air bag went off!\", \"rewritten_form_surprise\": \"I got this little cut on my forehead from my glasses when the air bag went off\\u2014what an unexpected shock!\", \"rewritten_form_disgust\": \"I got this tiny cut on my forehead from my glasses when the air bag went off; it\\u2019s just so gross how these things happen.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a minor injury but lacks a positive outlook. The rewritten joy version introduces happiness about being okay, which is not present in the original. Therefore, the alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original mentions a small cut, but does not convey a sense of ongoing struggle or sadness. The rewritten sadness version suggests a tough day, which the original does not imply. This means the alignment is very low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does imply a moment of shock from the airbag incident, but it does not explicitly express fear. The rewritten fear version adds a clear sense of being scared, which the original lacks, so the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence describes a minor annoyance without expressing anger. The rewritten anger version uses stronger language to portray frustration, which is not present in the original, so there's little to no alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original mentions an unexpected event (the airbag going off) which directly relates to surprise; however, it does not emphasize the shock aspect as strongly as the rewritten version. Thus, the original contains an element of surprise but it's not strongly emphasized.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

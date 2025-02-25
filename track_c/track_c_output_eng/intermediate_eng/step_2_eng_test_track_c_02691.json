@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That's what's hanging over my head.\", \"rewritten_form_joy\": \"That's such an exciting challenge hanging over my head!\", \"rewritten_form_sadness\": \"That's the heavy burden I carry over my head.\", \"rewritten_form_fear\": \"That's the looming threat hanging over my head.\", \"rewritten_form_anger\": \"That's the frustrating weight hanging over my head!\", \"rewritten_form_surprise\": \"That's an unexpected thing hanging over my head!\", \"rewritten_form_disgust\": \"That's the unpleasant thought hanging over my head.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks an element of excitement or positivity that would be expected in a joy context. It conveys an ongoing situation but does not express enthusiasm or happiness surrounding it.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'heavy burden' implies a sense of sorrow or weightiness that closely matches the tone of the original sentence, suggesting a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The term 'looming threat' suggests an element of danger that is not present in the original sentence. The original doesn\u2019t convey a sense of fear but simply states a situation.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The frustration of a 'frustrating weight' correlates moderately with the original's tone of burden, indicating a mild but relevant sense of anger about the ongoing situation.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original statement does not indicate any unexpected situation, so it does not align with the surprise context as it seems to denote just a fact rather than an unexpected event.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

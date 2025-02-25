@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But theres nothing, i can see clear\", \"rewritten_form_joy\": \"But there's so much, I can see it all so clearly!\", \"rewritten_form_sadness\": \"But there\\u2019s nothing, and it feels so empty inside.\", \"rewritten_form_fear\": \"But there\\u2019s nothing, and that thought frightens me.\", \"rewritten_form_anger\": \"But there\\u2019s nothing, how can this be happening?!\", \"rewritten_form_surprise\": \"But there\\u2019s nothing? I can\\u2019t believe what I\\u2019m seeing!\", \"rewritten_form_disgust\": \"But there\\u2019s nothing, it\\u2019s so frustratingly pointless.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling of clarity or realization, but it lacks the positive and exuberant tone indicated in the joy rewritten sentence. In joy, the focus is on abundance and clarity, whereas the original seems resigned to a lack of anything meaningful. Therefore, it only aligns slightly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests emptiness with 'there\u2019s nothing', which aligns closely with the feeling of sadness and the sense of inner void expressed in the rewritten version. This suggests a moderate degree of sadness present in the original sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original implies a lack of satisfaction or realization that can spark fear, but it does not directly convey the alarming sentiment that is present in the fear version. Therefore, the fear interpretation is valid but its presence is not strongly emphasized.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence hints at frustration \u2014 the phrase 'there\u2019s nothing' can evoke a sense of disbelief or discontent similar to the anger rewritten sentence. However, it does not convey outrage or feelings of betrayal strongly, resulting in a low intensity for anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The phrase 'there\u2019s nothing' could evoke surprise, but it lacks an element of disbelief or astonishment found in the surprise rewrite. Therefore, surprise is present, but only in a mild form.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

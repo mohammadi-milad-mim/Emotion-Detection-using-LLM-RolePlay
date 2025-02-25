@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart was racing about a million miles an hour.\", \"rewritten_form_joy\": \"My heart was racing with excitement, a million miles an hour!\", \"rewritten_form_sadness\": \"My heart was racing painfully, like it was about to burst.\", \"rewritten_form_fear\": \"My heart was racing, pounding in my chest like it might explode with fear.\", \"rewritten_form_anger\": \"My heart was racing so fast, boiling with anger and frustration.\", \"rewritten_form_surprise\": \"My heart was racing unexpectedly, like it had just received shocking news!\", \"rewritten_form_disgust\": \"My heart was racing with a sickening feeling, overwhelmed by disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence captures a physical sensation of excitement, which aligns well with the joy rewrite emphasizing racing with excitement. However, it is somewhat ambiguous, making it less intense in expressing pure joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence indicates a racing heart, which can imply anxiety or stress, but does not explicitly connect to sadness as described in the rewrite. Thus, it suggests a low intensity for sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence conveys a sense of urgency and rapid heartbeat, suggesting possible fear, aligning well with the rewrite that emphasizes fear explicitly. This indicates a moderate connection to fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While a racing heart can relate to anger, the original does not include explicit references to anger, making it less intense than the rewrite but still connecting to frustration.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not suggest an unexpected event, which is a significant part of the surprise rewrite. The connection is weak, indicating a low intensity for surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

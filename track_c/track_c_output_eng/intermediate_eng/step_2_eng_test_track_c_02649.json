@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My granddad caught us and played it cool.\", \"rewritten_form_joy\": \"My granddad caught us and played it so cool\\u2014it was hilarious!\", \"rewritten_form_sadness\": \"My granddad caught us, and he just played it cool, which felt so heartbreaking.\", \"rewritten_form_fear\": \"My granddad caught us, and he played it cool, but I was terrified of what he might say next.\", \"rewritten_form_anger\": \"My granddad caught us and played it cool, as if nothing happened, and it just made me so mad!\", \"rewritten_form_surprise\": \"I can't believe my granddad caught us and just played it totally cool\\u2014what a shock!\", \"rewritten_form_disgust\": \"My granddad caught us and played it cool, but honestly, I found that incredibly unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of lightness and casualness, which aligns somewhat with joy. However, it lacks the strong positive emotion reflected in the rewritten joy sentence, which emphasizes hilarity. The original is more neutral than joyful, as it does not explicitly express happiness or amusement.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey sadness at all. The rewritten version reflects a negative sentiment that is not present in the original text, which has a neutral tone. Therefore, there is a very low alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not suggest any fear or apprehension, it simply states an event. The rewrite implying fear indicates a worry about potential consequences that the original does not express. Thus, there's no strong alignment here.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any sense of anger or frustration regarding the situation described. The rewritten version's expression of anger highlights a tone that is not reflected in the original. There is no alignment with anger present.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original statement does denote a certain level of unexpectedness (being caught), it lacks the intensity and shock that the rewritten surprise sentence presents. The original does not express surprise effectively.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Some may think \\\"Tape will fix it!\", \"rewritten_form_joy\": \"Some might joyfully say, \\\"Tape will fix it!\\\"\", \"rewritten_form_sadness\": \"Some may sadly think, \\\"Tape will fix it...\\\"\", \"rewritten_form_fear\": \"Some may nervously think, \\\"Tape will fix it?\\\"\", \"rewritten_form_anger\": \"Some might angrily insist, \\\"Tape will fix it!\\\"\", \"rewritten_form_surprise\": \"Some may surprisingly say, \\\"Wait, tape will fix it!\\\"\", \"rewritten_form_disgust\": \"Some may disgustedly scoff, \\\"People actually think tape will fix it?\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a light-hearted attempt at problem-solving, which aligns with the joy in the joyfully rewritten form. However, the original lacks explicit expressions of happiness or excitement, making its alignment more moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence doesn\u2019t inherently carry a sense of loss or sorrow unlike the sad rewriting, which suggests a resignation towards the ineffectiveness of tape. Therefore, it only slightly aligns with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey any apprehension or concern like the fearful rewriting does. The phrase 'may think' doesn't capture a sense of uncertainty; thus, there's little to no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original statement carries a confident assertion but doesn't express the intensity of anger present in the angry rewriting. Therefore, it slightly aligns with anger due to the emphasis on insistence in that form.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence doesn't express an element of surprise as much as the surprised rewriting does, which implies a sudden realization. Thus, the original aligns weakly with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

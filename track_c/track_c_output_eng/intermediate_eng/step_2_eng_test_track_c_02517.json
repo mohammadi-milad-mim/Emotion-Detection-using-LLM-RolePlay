@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They didn't understand why that was not exactly a fun experience.\", \"rewritten_form_joy\": \"They couldn't see why that turned out to be such a unique experience!\", \"rewritten_form_sadness\": \"They failed to grasp why that was such a disappointing experience.\", \"rewritten_form_fear\": \"They didn\\u2019t realize the danger in that experience; it really wasn\\u2019t fun at all.\", \"rewritten_form_anger\": \"They just didn\\u2019t get why that was such an infuriating experience.\", \"rewritten_form_surprise\": \"They were completely baffled about why that wasn\\u2019t seen as a fun experience!\", \"rewritten_form_disgust\": \"They couldn\\u2019t fathom why anyone would consider that a fun experience\\u2014it was truly repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a somewhat neutral or negative perception of the experience, contrasting with the joyfulness in the rewritten version. There's no indication of joy in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at disappointment, aligning with the sadness conveyed in the rewritten sentence. Both imply a lack of enjoyment, focusing on an unsatisfactory experience.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not indicate any sense of danger or fear. It merely addresses a lack of fun, making the connection to fear weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original lacks a sense of anger, focusing instead on a misunderstanding of the experience. The anger in the rewritten version implies a strong emotional response that is not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents a more straightforward observation without the element of surprise. While there\u2019s a lack of understanding, it does not evoke a sense of bewilderment or surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

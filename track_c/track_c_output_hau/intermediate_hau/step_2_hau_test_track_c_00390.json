@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Me tabayyana Dan gutsun uwarta \\ud83d\\ude20\\ud83d\\ude20\", \"rewritten_form_joy\": \"Me tabayyana Dan gutsun uwarta with excitement!\", \"rewritten_form_sadness\": \"Me tabayyana Dan gutsun uwarta, and it makes me feel so down.\", \"rewritten_form_fear\": \"Me tabayyana Dan gutsun uwarta, and it's really unsettling.\", \"rewritten_form_anger\": \"Me tabayyana Dan gutsun uwarta! How could this happen?!\", \"rewritten_form_surprise\": \"Me tabayyana Dan gutsun uwarta, and I can't believe it!\", \"rewritten_form_disgust\": \"Me tabayyana Dan gutsun uwarta, it's truly revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of strong emotion, possibly anger or frustration, but does not express joy or excitement. Thus, it does not align with the joyful rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence expresses negative emotions, it does not convey feelings of sadness explicitly, keeping it neutral rather than sorrowful. Therefore, it does not align well with the sadness rewritten version.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does convey a strong reaction, which could imply discomfort or a degree of fear, but does not explicitly express fear. It leans more towards frustration or anger, so the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence contains an intense expression, likely of frustration, which closely matches the tone of the anger rewritten sentence. Therefore, there is a strong alignment with anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not provide any indication of surprise; instead, it conveys a reaction that seems more frustrated. Thus, it does not align with the surprise rewritten version at all.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not inherently express disgust but conveys an intense negative feeling that may resonate with revulsion on some level. However, the alignment is still weak.",
+        "disgust_intensity": 1
+    }
+}

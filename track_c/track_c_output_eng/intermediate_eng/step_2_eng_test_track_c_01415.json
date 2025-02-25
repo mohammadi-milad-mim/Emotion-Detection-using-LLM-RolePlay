@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I stopped to look at my watch and my heart suddenly started beating fast.\", \"rewritten_form_joy\": \"I stopped to look at my watch, and my heart raced with excitement!\", \"rewritten_form_sadness\": \"I stopped to look at my watch, and my heart sank, beating fast with worry.\", \"rewritten_form_fear\": \"I stopped to look at my watch, and my heart started pounding in panic.\", \"rewritten_form_anger\": \"I stopped to look at my watch, and my heart thudded furiously, raw with frustration.\", \"rewritten_form_surprise\": \"I stopped to look at my watch, and to my surprise, my heart started beating fast!\", \"rewritten_form_disgust\": \"I stopped to look at my watch, and my heart started beating fast, which felt so unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "While the original sentence mentions a fast heartbeat, it lacks an explicit positive context or excitement. The rewritten joy version expresses excitement, which isn't present in the original sentence, making the alignment low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a sense of urgent anticipation with the fast heartbeat, which could imply worry. However, the sadness distilled in the rewritten form creates a stronger emotional weight than what the original presents, keeping the alignment moderate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original's mention of the heart starting to beat fast aligns more closely with fear compared to other emotions. While it doesn't explicitly state panic, the context of a fast heartbeat generally invokes anxiety, thus matching well with the fear rewrite, indicating a more significant emotional connection.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original phrase does not convey frustration or anger but focuses more on the physiological response. The rewritten anger form exaggerates the emotion without a strong basis in the original sentence, resulting in a slight misalignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence contains a sudden change in physiological response but does not indicate surprise. The rewrite suggests surprise explicitly, making their alignment less connected, as the original lacks that element of astonishment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

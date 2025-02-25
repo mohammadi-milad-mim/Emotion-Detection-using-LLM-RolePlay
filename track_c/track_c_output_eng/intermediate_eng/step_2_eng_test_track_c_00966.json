@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My eye is black, my head hurts, but I'm happy, I won.\", \"rewritten_form_joy\": \"My eye is black, my head hurts, but I'm overjoyed, I won!\", \"rewritten_form_sadness\": \"My eye is black, my head hurts, and I feel crushed, but at least I won.\", \"rewritten_form_fear\": \"My eye is black, my head hurts, and I\\u2019m terrified of what might happen next, but I won.\", \"rewritten_form_anger\": \"My eye is black, my head hurts, and I\\u2019m furious, but I still won!\", \"rewritten_form_surprise\": \"My eye is black, my head hurts, and I can\\u2019t believe it, but I won!\", \"rewritten_form_disgust\": \"My eye is black, my head hurts, and honestly, I\\u2019m repulsed by it all, but I won.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a conflicting situation where physical pain coexists with happiness due to winning, aligning closely with the joy in the rewritten version that emphasizes being overjoyed.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original shows some struggle with pain, it does not lean into sadness, as the character is ultimately happy about winning, contrasting with the rewritten expression of feeling crushed.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not convey fear; instead, it maintains a focus on the happiness of winning despite pain, which does not reflect the concern or terror indicated in the rewritten form.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There's no expression of anger in the original sentence; it contrasts with the rewritten version that suggests fury. The original remains positive despite the pain, so it aligns very little with that emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is a slight element of surprise implied in the original when mentioning winning, but it does not convey disbelief as strongly as the rewritten version. The happiness overshadowed the surprise element.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

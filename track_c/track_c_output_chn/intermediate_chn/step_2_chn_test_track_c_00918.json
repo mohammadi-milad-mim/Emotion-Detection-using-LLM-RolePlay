@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u4f60\\u53ef\\u4ee5\\u8bf4\\u6930\\u6811\\u8001\\u677f\\u8001\\u571f\\uff0c\\u4f46\\u5f80\\u6076\\u610f\\u53bb\\u63e3\\u6469\\u751a\\u81f3\\u53bb\\u6293\\u4eba\\u7f5a\\u6b3e\\u5c31\\u5f88\\u4e0d\\u5e94\\u8be5\\u4e86\\u3002\", \"rewritten_form_joy\": \"\\u4f60\\u53ef\\u4ee5\\u7b11\\u8bf4\\u6930\\u6811\\u8001\\u677f\\u6709\\u4e9b\\u8001\\u571f\\uff0c\\u4f46\\u53bb\\u6076\\u610f\\u63e3\\u6469\\u751a\\u81f3\\u6293\\u4eba\\u7f5a\\u6b3e\\u5c31\\u592a\\u8fc7\\u5206\\u4e86\\uff01\", \"rewritten_form_sadness\": \"\\u867d\\u7136\\u4f60\\u53ef\\u4ee5\\u8bf4\\u6930\\u6811\\u8001\\u677f\\u8001\\u571f\\uff0c\\u4f46\\u6076\\u610f\\u63e3\\u6469\\u548c\\u6293\\u4eba\\u7f5a\\u6b3e\\u7684\\u884c\\u4e3a\\u771f\\u8ba9\\u4eba\\u5fc3\\u75db\\u3002\", \"rewritten_form_fear\": \"\\u4f60\\u53ef\\u4ee5\\u8bf4\\u6930\\u6811\\u8001\\u677f\\u8001\\u571f\\uff0c\\u4f46\\u90a3\\u79cd\\u6076\\u610f\\u63e3\\u6469\\u548c\\u6293\\u4eba\\u7f5a\\u6b3e\\u7684\\u884c\\u4e3a\\u8ba9\\u6211\\u611f\\u5230\\u4e0d\\u5b89\\u3002\", \"rewritten_form_anger\": \"\\u4f60\\u53ef\\u4ee5 criticize \\u6930\\u6811\\u8001\\u677f\\u8001\\u571f\\uff0c\\u4f46\\u6076\\u610f\\u63e3\\u6478\\u548c\\u6293\\u4eba\\u7f5a\\u6b3e\\u771f\\u7684\\u592a\\u53ef\\u6076\\u4e86\\uff01\", \"rewritten_form_surprise\": \"\\u4f60\\u7adf\\u7136\\u80fd\\u8bf4\\u6930\\u6811\\u8001\\u677f\\u8001\\u571f\\uff0c\\u4f46\\u90a3\\u4e48\\u6076\\u610f\\u63e3\\u6469\\u751a\\u81f3\\u6293\\u4eba\\u7f5a\\u6b3e\\uff0c\\u8fd9\\u5b9e\\u5728\\u8ba9\\u4eba\\u9707\\u60ca\\u3002\", \"rewritten_form_disgust\": \"\\u4f60\\u53ef\\u4ee5\\u8bf4\\u6930\\u6811\\u8001\\u677f\\u8001\\u571f\\uff0c\\u4f46\\u6076\\u610f\\u63e3\\u6469\\u548c\\u6293\\u4eba\\u7f5a\\u6b3e\\u7684\\u884c\\u4e3a\\u771f\\u8ba9\\u4eba\\u611f\\u5230\\u538c\\u6076\\u3002\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; instead, it conveys a judgment about behavior that is deemed inappropriate. The rewritten joyful version implies a lightheartedness in a similar statement, which does not align with the original's tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original illustrates negative actions (like targeting someone and being inappropriate), which can cause emotional pain. This aligns moderately with sadness, but it doesn't demonstrate deep sorrow, just a recognition of the negative impact.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions the potential danger of actions described (e.g., grabbing someone), which could lead to a feeling of unease. This aligns well with fear, as danger is implied.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original text conveys disapproval of harmful actions, which aligns strongly with anger. The tone suggests a moral outrage towards the behavior being criticized.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original suggests an unexpected aspect regarding the actions being taken (grabbing a person inappropriately), but it does not convey shock or incredulity as much as the rewritten version implies. Therefore, it holds a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original explicitly denotes actions that are judged as inappropriate or disgusting (grabbing someone), which aligns strongly with feelings of disgust. The direct criticism of behavior contributes to this connection.",
+        "disgust_intensity": 3
+    }
+}

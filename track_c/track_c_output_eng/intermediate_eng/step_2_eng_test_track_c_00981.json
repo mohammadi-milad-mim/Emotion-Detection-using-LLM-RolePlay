@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So apparently they met up at the motel.\", \"rewritten_form_joy\": \"So, guess what? They joyfully met up at the motel!\", \"rewritten_form_sadness\": \"So sadly, they met up at the motel.\", \"rewritten_form_fear\": \"So it turns out, they met up at the motel, and I can't shake the fear about what might have happened.\", \"rewritten_form_anger\": \"So apparently, they chose to meet up at the motel, which is just infuriating!\", \"rewritten_form_surprise\": \"So, can you believe it? They actually met up at the motel!\", \"rewritten_form_disgust\": \"So apparently, they met up at the motel, which is just gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and factual, lacking any expression of joy. The rewritten joy form introduces excitement and happiness that isn't present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sadness; it merely states a fact without emotional context. The rewritten sadness form injects a negative sentiment that is not aligned with the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence can imply a potential for fear if one considers the circumstances surrounding the meeting, but it does not explicitly convey fear. The rewritten fear form heightens this potential with a strong emotional expression.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence doesn't express anger; it's neutral. The rewritten anger form conveys strong frustration, which is absent in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a mild sense of surprise in the original sentence by using 'apparently,' but it is not strongly emphasized. The rewritten surprise form presents a more pronounced sense of disbelief that the original does not exhibit.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

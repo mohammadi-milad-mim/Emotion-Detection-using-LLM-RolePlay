@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was home alone one day watching movies waiting for my mom to get home from the store.\", \"rewritten_form_joy\": \"I was home alone one day watching movies, excitedly waiting for my mom to get home from the store.\", \"rewritten_form_sadness\": \"I was home alone one day watching movies, feeling lonely as I waited for my mom to get home from the store.\", \"rewritten_form_fear\": \"I was home alone one day watching movies, nervously waiting for my mom to get home from the store, feeling like something might happen.\", \"rewritten_form_anger\": \"I was home alone one day watching movies, frustrated as I waited for my mom to get home from the store.\", \"rewritten_form_surprise\": \"I was home alone one day watching movies, shocked when I realized how long my mom was taking to get home from the store.\", \"rewritten_form_disgust\": \"I was home alone one day watching movies, feeling a bit grossed out as I waited for my mom to get home from the store.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of neutrality and lacks any explicit excitement or joy. The rewritten form emphasizes excitement, which is not present in the original context, suggesting a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original mentions waiting alone but doesn't express feelings of loneliness or sadness. The rewritten sentence introduces feelings of loneliness explicitly, making it resonate more with the sentiment of sadness than the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence describes a mundane scenario without any fear or nervousness. While the rewritten version adds a sense of nervousness, it doesn't match the tone of the original, indicating a very low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence doesn't convey frustration or anger as it describes a neutral waiting scenario. The rewritten form introduces frustration that contrasts with the original, suggesting minimal connection with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original provides no indications of time perception or unexpected delays; thus, the surprise expressed in the rewritten sentence is not supported, leading to a low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

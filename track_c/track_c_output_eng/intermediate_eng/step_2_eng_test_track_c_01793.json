@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It must be from lack of sleep last night because when I woke up there were dark circles around my eyes.\", \"rewritten_form_joy\": \"I must have been dreaming so vividly last night, but I woke up to find dark circles around my eyes!\", \"rewritten_form_sadness\": \"I guess it\\u2019s just the result of another sleepless night; I woke up to dark circles around my eyes again.\", \"rewritten_form_fear\": \"I woke up with dark circles around my eyes today, and it has to be from the lack of sleep last night\\u2014that worries me.\", \"rewritten_form_anger\": \"This must be from the lack of sleep last night because I woke up with those awful dark circles around my eyes!\", \"rewritten_form_surprise\": \"Oh no! It must be from the lack of sleep last night; I woke up to find dark circles around my eyes!\", \"rewritten_form_disgust\": \"It\\u2019s probably just the lack of sleep from last night; waking up to those dark circles around my eyes is just so frustrating.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any joy. It focuses on a negative experience related to lack of sleep. The joy rewritten version emphasizes a more positive experience of dreaming, which is not present in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a sense of sadness in the original sentence as it references a negative consequence of lack of sleep, specifically dark circles around the eyes. This aligns well with the rewritten sad sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies concern about the effects of lack of sleep but does not directly express fear. The fear rewritten version explicitly states worry, which is not as strongly present in the original. Hence, there's mild alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger, but the rewritten anger version uses more intense words. While there is some frustration over the situation implied, it is not quite angry in tone.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence conveys a lack of surprise about the dark circles due to sleep deprivation. The surprise rewritten version introduces an aspect of shock or surprise at the result, which the original lacks entirely.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

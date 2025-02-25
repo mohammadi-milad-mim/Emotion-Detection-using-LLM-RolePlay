@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It's a mess down there.\", \"rewritten_form_joy\": \"It's quite an adventure down there!\", \"rewritten_form_sadness\": \"It's just so heartbreaking down there.\", \"rewritten_form_fear\": \"It's really dangerous down there.\", \"rewritten_form_anger\": \"It's absolutely infuriating down there!\", \"rewritten_form_surprise\": \"Wow, it's a total chaos down there!\", \"rewritten_form_disgust\": \"It's just revolting down there.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone and does not convey a sense of joy or adventure. It simply states a situation without any positive connotation. Therefore, it scores low for joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'It's a mess' suggests some level of disorder or distress, which may imply sadness but does not strongly indicate a heartbreaking situation. Thus, it has a moderate but not overwhelming sadness alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not explicitly indicate danger. A mess could suggest something bothersome, but it does not invoke strong fear. Therefore, it receives a low score for fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While 'mess' may induce frustration, the lack of intensity in the statement does not convey a strong anger. There's a sense of annoyance, but it isn't emphatic enough for a high score.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The word 'mess' does not inherently surprise the audience, and 'total chaos' adds more dramatic flair not present in the original statement. Therefore, this emotion scores low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This is difficult to explain.\", \"rewritten_form_joy\": \"This is a fun challenge to explain!\", \"rewritten_form_sadness\": \"This is so hard to explain.\", \"rewritten_form_fear\": \"This is really unsettling to explain.\", \"rewritten_form_anger\": \"This is frustrating to explain!\", \"rewritten_form_surprise\": \"Wow, this is difficult to explain!\", \"rewritten_form_disgust\": \"This is unpleasant to explain.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses difficulty, which is contrary to the positive tone of joy found in the rewritten example. Therefore, there is little to no joy associated with the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence shares a sentiment of difficulty that aligns well with the heightened expression of sorrow in the rewritten version. It suggests a struggle, suggesting moderate sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original does not explicitly express fear, the implication of difficulty may evoke some level of unease. However, it does not strongly align with the heightened fear in the rewritten form.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence indicates difficulty, which can generate frustration, similar to the tone in the anger example. However, it does not convey a strong angry sentiment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not create a sense of surprise; it is straightforward in expressing difficulty without any unexpected element, unlike the surprise form.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

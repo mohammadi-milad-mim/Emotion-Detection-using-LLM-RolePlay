@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I watched about 20 minutes of Chumscrubber before its exhilaration sent me to bed at about 7:30 am to Andy opening the door with a full-power light in my face.\", \"rewritten_form_joy\": \"I watched about 20 minutes of Chumscrubber, and its exhilaration joyfully whisked me off to bed around 7:30 am, only to be greeted by Andy bursting through the door with a bright light shining in my face!\", \"rewritten_form_sadness\": \"I watched about 20 minutes of Chumscrubber before its exhilaration sadly sent me to bed at about 7:30 am, just as Andy opened the door with a blinding light in my face.\", \"rewritten_form_fear\": \"I watched about 20 minutes of Chumscrubber, and its exhilaration sent me to bed at around 7:30 am, only to be startled awake by Andy opening the door and shining a bright light in my face.\", \"rewritten_form_anger\": \"I watched about 20 minutes of Chumscrubber until its exhilarating rush forced me to bed at about 7:30 am, only to be infuriated by Andy bursting in and shining a bright light right in my face.\", \"rewritten_form_surprise\": \"I watched about 20 minutes of Chumscrubber, and its exhilaration unexpectedly sent me to bed at around 7:30 am, just as Andy swung the door open, shining a bright light directly in my face!\", \"rewritten_form_disgust\": \"I watched about 20 minutes of Chumscrubber before its exhilaration uncomfortably sent me to bed at about 7:30 am, having to endure Andy opening the door and glaring a bright light right in my face.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions the exhilaration from watching the movie, which aligns well with the joy expressed in the rewritten joy sentence. The word 'whisked' suggests a lightheartedness that corresponds to the joyful tone.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The use of the word 'sadly' in the rewritten version suggests a lost opportunity or a more somber tone, which does not closely align with the upbeat exhilaration described in the original sentence, making the sadness less intense.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The rewritten fear sentence emphasizes being 'startled awake' by Andy's action, which adds a layer of anxiety that isn't present in the original. While there is a sense of intrusion, it doesn't evoke strong fear, so the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The word 'infuriated' strongly suggests a cutting emotional response that does not match the original's tone of exhilaration and surprise. The original does not convey feelings of anger directly, so the alignment is weak.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The notion of being 'unexpectedly' sent to bed aligns with the surprise element present in both the original and rewritten sentences. The immediate setting of Andy opening the door coincides well with the feeling of surprise.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

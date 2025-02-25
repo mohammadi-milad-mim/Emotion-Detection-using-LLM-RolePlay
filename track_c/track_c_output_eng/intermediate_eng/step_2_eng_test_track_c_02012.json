@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I thought it was going to be a police badge.\", \"rewritten_form_joy\": \"I was so excited to think it might be a police badge!\", \"rewritten_form_sadness\": \"I really hoped it would be a police badge, but it wasn't.\", \"rewritten_form_fear\": \"I feared it was going to be a police badge, and that thought scared me.\", \"rewritten_form_anger\": \"I can't believe I thought it was going to be a police badge; what a letdown!\", \"rewritten_form_surprise\": \"I was completely taken aback, thinking it might actually be a police badge.\", \"rewritten_form_disgust\": \"I was disgusted to think it could be a police badge; why would I even think that?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a simple thought about a police badge without any excitement or positivity attached, so it does not align very closely with the joy version, which conveys a strong sense of excitement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text reflects a neutral thought rather than an emotional response to disappointment, which is central to the sadness rewritten version. Thus, there is minimal alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Fear is not present in the original sentence; it simply states a thought without any sense of dread or concern, contrasting with the fear version that implies anxiety regarding the badge.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the rewritten anger version expresses frustration about expectations not being met, the original sentence does not convey any resentment or disappointment; it is neutral in tone.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence hints at a scenario but does not visibly evoke surprise; the surprise version suggests an unexpected revelation that isn't present in the original thought.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

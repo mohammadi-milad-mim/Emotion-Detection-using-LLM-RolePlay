@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Chair... Bolted... Human... Ripped...\", \"rewritten_form_joy\": \"Chair... securely bolted... a human... freed and triumphant...\", \"rewritten_form_sadness\": \"Chair... bolted down... a human... painfully torn apart...\", \"rewritten_form_fear\": \"Chair... bolted tight... a human... violently ripped away...\", \"rewritten_form_anger\": \"Chair... cruelly bolted... human... ripped apart in rage...\", \"rewritten_form_surprise\": \"Chair... unexpectedly bolted... human... ripped apart!\", \"rewritten_form_disgust\": \"Chair... disgustingly bolted... human... grotesquely ripped...\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any positive tone or implication of triumph; instead, it depicts a somewhat grim scenario. The rewritten version expressing joy shifts the meaning dramatically towards a positive outcome, which the original does not suggest.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The alignment with sadness is relatively strong. The original evokes imagery of a human being hurt or torn apart, which resonates with the sadness expressed in the rewritten sentence.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence reflects elements of fear, particularly with the words 'ripped' which evoke a violent and disturbing image. The rewritten sentence amplifies this fear, suggesting a more intense situation.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original implies a negative event involving violence which could evoke anger. The rewritten version centers on that anger and exaggerates the cruelty of the act, which strongly relates to the original sense of disturbance.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "Surprise is present due to the unexpected nature of the violent imagery in the original. However, the emotion does not dominate the overall feeling of the sentence, making it less intense.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

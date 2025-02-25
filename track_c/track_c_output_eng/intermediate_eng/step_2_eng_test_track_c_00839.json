@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Fun fact: I was wearing this jersey when I broke my back.\", \"rewritten_form_joy\": \"Funny story: I was proudly rocking this jersey when I broke my back!\", \"rewritten_form_sadness\": \"It\\u2019s a bittersweet memory: I was wearing this jersey when I broke my back.\", \"rewritten_form_fear\": \"Honestly, it\\u2019s a terrifying thought: I had this jersey on when I broke my back.\", \"rewritten_form_anger\": \"Can you believe it? I was wearing this jersey when I broke my back!\", \"rewritten_form_surprise\": \"You won't believe this: I was wearing this jersey when I broke my back!\", \"rewritten_form_disgust\": \"Isn't that gross? I was wearing this jersey when I broke my back.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a lighter tone, akin to sharing a 'fun fact'. This closely relates to the rewritten joy version, which makes it feel like a fun story despite the serious nature of the injury. It suggests a sense of humorous acceptance.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original does not convey deep sadness but hints at a bittersweet nature. The rewritten sentence presents the memory as bittersweet but it lacks strong emotional weight. Overall, the alignment with sadness is moderate.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not express fear; rather, it presents a casual fact. The rewritten sentence emphasizes fear more strongly with phrases suggesting terror, indicating low alignment with the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral, lacking elements of anger. The rewritten anger sentence expresses disbelief which adds a layer of frustration or indignation not present in the original. Thus, there\u2019s low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is presented as a 'fun fact', which implies surprising content, and the rewritten sentence amplifies this surprise. Thus, there\u2019s a moderate alignment suggesting that the fact could be considered surprising.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

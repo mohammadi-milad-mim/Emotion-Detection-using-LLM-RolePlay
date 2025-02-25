@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Each one of these could be a post all its own, but for the sake of time I'll simply list them:\", \"rewritten_form_joy\": \"Each one of these is so exciting it could be a post all its own, but to keep the fun going, I'll just list them:\", \"rewritten_form_sadness\": \"Each one of these could be a post worthy of attention, but for the sake of time, I'll sadly just list them:\", \"rewritten_form_fear\": \"Each one of these could be a post on its own, but for the sake of time, I\\u2019ll just list them and hope nothing gets missed:\", \"rewritten_form_anger\": \"Each one of these could easily be a standalone post, but out of frustration with time, I'll just list them:\", \"rewritten_form_surprise\": \"Each one of these is so intriguing it could be its own post, but surprisingly, I'm going to just list them for now:\", \"rewritten_form_disgust\": \"Each one of these could be a post all its own, but out of disgust for wasting time, I'm just going to list them:\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents information neutrally without conveying excitement or happiness. In contrast, the rewritten joy version uses words like 'so exciting' and 'fun,' indicating a strong emotional boost, which is absent in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not express sadness; it is more about pragmatism. The rewritten sadness version replaces 'for the sake of time' with 'sadly,' adding an emotional layer that is not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence has no undertone of fear; it simply lists options. The fear version introduces anxiety about missing something, which is not indicated in the original, suggesting a disconnect.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original reflects a desire to keep things concise, there's no evidence of anger or frustration in it. The anger version articulates a clear sentiment of frustration that is not conveyed in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original lacks an element of surprise or intrigue that would evoke curiosity. The rewritten surprise version emphasizes 'intriguing' and 'surprisingly,' creating a contrast that shows the original is not surprising.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

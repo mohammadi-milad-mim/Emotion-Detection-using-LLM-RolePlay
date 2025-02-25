@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The last time though.\", \"rewritten_form_joy\": \"The last time was truly wonderful, though!\", \"rewritten_form_sadness\": \"It felt like the last time, and it still hurts, though.\", \"rewritten_form_fear\": \"I can't shake the feeling that it might be the last time, though.\", \"rewritten_form_anger\": \"It's infuriating that this might be the last time, though!\", \"rewritten_form_surprise\": \"I can't believe that was the last time, though!\", \"rewritten_form_disgust\": \"I can't believe it had to end like this, though.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any positive sentiment or exclamation that would indicate joy. The rewritten joy version introduces a positive experience, which is absent in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has a hint of nostalgia or reflection on a past event, but it doesn't directly express the pain of sadness. The rewritten sadness version includes a clear indication of hurt, which is stronger than the original sentiment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence doesn't explicitly express fear, but it does have an undertone of uncertainty, which can relate to fear. The rewritten fear version more strongly conveys anxiety about the finality of an event, moving beyond the original tone.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence is neutral, the rewritten anger version introduces a strong emotional response to the possibility of a finality. The original lacks any expression of anger, making the alignment weak.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original provides no shock or disbelief, while the rewritten surprise version strongly indicates a moment of surprise regarding the last time, suggesting a notable difference in sentiment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

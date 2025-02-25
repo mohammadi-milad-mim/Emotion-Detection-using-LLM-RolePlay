@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was so ever-lovin ' cold that large chunks of my eye makeup seem to have frozen and fallen off onto my face.\", \"rewritten_form_joy\": \"It was delightfully chilly, and I couldn't help but laugh as large chunks of my eye makeup froze and playfully fell onto my face!\", \"rewritten_form_sadness\": \"It was heartbreakingly cold, and I felt a bit defeated as large chunks of my eye makeup froze and just fell off onto my face.\", \"rewritten_form_fear\": \"It was terrifyingly cold; I was worried as large chunks of my eye makeup seemed to freeze and fall off onto my face, making me feel exposed.\", \"rewritten_form_anger\": \"It was infuriatingly cold! Large chunks of my eye makeup froze and fell off onto my face, ruining my look!\", \"rewritten_form_surprise\": \"Can you believe how cold it was? I was shocked when large chunks of my eye makeup seemed to freeze and just fell off onto my face!\", \"rewritten_form_disgust\": \"It was disgustingly cold, and I was appalled to find that large chunks of my eye makeup had frozen and fallen onto my face!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a humorous situation related to cold weather and makeup. However, it does not convey the lightheartedness found in the joyful rewritten form, which uses words like 'delightfully' and 'playfully'. Therefore, the joy intensity isn't high.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests discomfort rather than deep emotional pain, which the rewritten sad version conveys with expressions like 'heartbreakingly' and 'defeated'. Thus, there's a slight alignment but not strongly aligned with deep sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express a significant sense of fear or exposure; it merely notes the condition of makeup in cold weather. The rewritten form uses 'terrifyingly' and conveys worry, which is missing in the original. This results in low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original conveys inconvenience rather than outright anger. The rewritten form emphasizes frustration ('infuriatingly cold') and emotional response, which is not present in the original. Thus, there\u2019s a minor connection to anger, but it\u2019s not prominent.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is a slight element of surprise in the original when mentioning the unexpected freezing of eye makeup. However, the original lacks the strong shock element present in the rewritten surprise version, which uses phrases like 'can you believe' and 'shocked'. Therefore, there is some alignment but not strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

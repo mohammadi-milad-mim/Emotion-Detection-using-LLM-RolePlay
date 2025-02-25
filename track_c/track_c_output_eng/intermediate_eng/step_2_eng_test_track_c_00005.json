@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I've never done drugs in my life.\", \"rewritten_form_joy\": \"I've never done drugs in my life, and I'm really proud of that!\", \"rewritten_form_sadness\": \"I've never done drugs in my life, and that feels like a lonely choice sometimes.\", \"rewritten_form_fear\": \"I've never done drugs in my life, and I worry about what could happen if I ever tried them.\", \"rewritten_form_anger\": \"I've never done drugs in my life, and I can't stand how often people assume I would!\", \"rewritten_form_surprise\": \"I've never done drugs in my life\\u2014can you believe that?\", \"rewritten_form_disgust\": \"I've never done drugs in my life, and I find them utterly repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral statement about drug use without any indication of pride or positivity. The rewritten version includes a sense of pride, which is absent in the original. Therefore, there is not much alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey loneliness or any negative emotional weight. The rewritten version introduces a feeling of loneliness related to the choice, which is not present in the original statement.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not convey any concern or worry about drug use. The rewritten version introduces a fear of potential consequences which is absent in the straightforward statement, indicating some alignment with fear but not strongly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original statement is neutral, the rewritten version conveys a strong sense of frustration regarding assumptions made by others about drug use. The original does not engage with this aspect of anger at all, indicating low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is straightforward and does not inherently display surprise. The rewritten version introduces an element of disbelief about not having tried drugs, suggesting a higher level of alignment with surprise due to the unexpected nature of the statement.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

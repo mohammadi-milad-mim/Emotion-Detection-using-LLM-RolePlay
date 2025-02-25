@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As the first sip slid down my throat, I felt an uninhibited moment of pure joy.\", \"rewritten_form_joy\": \"As the first sip slid down my throat, I was overwhelmed with a blissful burst of joy!\", \"rewritten_form_sadness\": \"As the first sip slid down my throat, I felt a fleeting moment of happiness that quickly slipped away.\", \"rewritten_form_fear\": \"As the first sip slid down my throat, I felt an unsettling rush of anxiety about what might come next.\", \"rewritten_form_anger\": \"As the first sip slid down my throat, it infuriated me that such a simple pleasure feels so rare.\", \"rewritten_form_surprise\": \"As the first sip slid down my throat, I was astonished by how much joy it brought me unexpectedly!\", \"rewritten_form_disgust\": \"As the first sip slid down my throat, I was disgusted by the thought that this was supposed to bring me joy.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a clear sense of joy, indicating a moment of uninhibited happiness. This aligns closely with the joy in the rewritten version, which emphasizes an overwhelming burst of joy. Both passages celebrate a pleasurable experience, suggesting that joy is the primary emotion in the original.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The sadness version suggests a fleeting moment of happiness that quickly fades, which somewhat contrasts the original's tone of pure and uninhibited joy. It implies a temporary or superficial nature of joy, making the original less aligned with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear reconstruction uses language indicating anxiety about what comes next, which the original does not portray. The original focuses solely on enjoyment without hinting at any troubling feelings or expectations, resulting in a very weak connection to fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger version expresses frustration about the rarity of a simple pleasure, which is not present in the original. The original conveys a moment of joy without any negative sentiments, making it not aligned with anger at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version indicates astonishment at the joy brought by the sip, which connects to the joy felt in the original. However, while there is an element of surprise in joy, the original does not explicitly express being astonished, so the connection is weaker than with joy alone.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

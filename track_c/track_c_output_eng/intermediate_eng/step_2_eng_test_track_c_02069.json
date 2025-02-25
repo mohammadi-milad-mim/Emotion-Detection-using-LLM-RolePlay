@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My left knee scraped just before my palms caught the rest of me, sliding forward with that sting of concrete.\", \"rewritten_form_joy\": \"I felt a rush of excitement when my left knee scraped, but my palms quickly caught me, sliding forward with the unexpected thrill of concrete beneath me.\", \"rewritten_form_sadness\": \"My left knee scraped painfully just before my palms managed to catch me, sliding forward with the harsh sting of concrete that reminded me of my clumsiness.\", \"rewritten_form_fear\": \"My left knee scraped just before my palms caught me, and I felt a jolt of panic as I slid forward, the concrete threatening to leave its mark.\", \"rewritten_form_anger\": \"I can't believe my left knee scraped before my palms caught me, sliding forward painfully into that rough concrete\\u2014what a frustrating fall!\", \"rewritten_form_surprise\": \"I was caught off guard when my left knee scraped just before my palms caught the rest of me, sliding forward unexpectedly on that rough concrete!\", \"rewritten_form_disgust\": \"My left knee scraped against the rough concrete, and the stinging sensation as my palms caught me was utterly revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a negative physical experience rather than excitement or joy. The tone of the original is focused on the discomfort of the fall, which does not align with the positive excitement conveyed in the joy rewritten version. There is no sense of thrill or positive feeling in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions the painful scrape of the knee and the discomfort associated with falling, which aligns closely with the sense of clumsiness and pain indicated in the sadness rewritten version. This emotional resonance is evident, thus indicating a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence describes a fall and the physical reaction (a scrape) without a direct expression of fear or panic. However, the consequences of falling could be interpreted as threatening, which is somewhat aligned with the fear rewritten version, indicating a low acknowledgment of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original expression of falling does not directly reveal feelings of frustration or anger. While the rewritten version reflects understandable frustration, the original maintains a more neutral tone surrounding the experience, suggesting only a low degree of anger about the situation.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks elements of surprise; it describes a fall as a matter of fact rather than an unexpected occurrence. The rewritten version emphasizes the unexpected nature of the scrape and fall, which does not resonate with the original description.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

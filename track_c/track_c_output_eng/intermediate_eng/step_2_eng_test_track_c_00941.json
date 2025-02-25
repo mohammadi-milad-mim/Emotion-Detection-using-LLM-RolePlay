@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And don't lie in your pics.\", \"rewritten_form_joy\": \"And make sure to be honest in your pics, they\\u2019re so much better when they reflect your true self!\", \"rewritten_form_sadness\": \"And please, don\\u2019t lie in your pics; it just makes everything feel more lonely.\", \"rewritten_form_fear\": \"And don\\u2019t lie in your pics, you never know how people will react to the truth.\", \"rewritten_form_anger\": \"And don\\u2019t lie in your pics; it\\u2019s frustrating when people can\\u2019t just be real!\", \"rewritten_form_surprise\": \"And don\\u2019t lie in your pics! I can\\u2019t believe how people try to deceive others like that.\", \"rewritten_form_disgust\": \"And don\\u2019t lie in your pics; it\\u2019s just so off-putting when people fake their appearances.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a straightforward instruction without a joyful tone, contrasting with the joyful rewrite that emphasizes positivity and self-reflection. Thus, there is little to no joy present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewrite suggests feelings of loneliness associated with dishonesty, which isn't explicitly conveyed in the original sentence. While it hints at emotional consequences of lying, the original lacks any overt sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewrite discusses the unpredictability of people's reactions, which does not resonate with the original's more neutral tone of instruction. There is a slight implication of concern, but it's not a strong fit for fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence carries a slight edge of frustration, similar to the anger rewrite, which exclaims frustration over dishonesty. However, it lacks the heightened intensity that the rewritten version communicates, thus showing a lower level of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise rewrite captures a sense of disbelief at dishonesty, which is somewhat echoed in the original sentence's tone. However, the original is more matter-of-fact than surprising, leading to low surprise alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"kuna ruwa indai barca che\", \"rewritten_form_joy\": \"Yay, there's water if Barcelona is here!\", \"rewritten_form_sadness\": \"There's water, but it feels empty without Barcelona.\", \"rewritten_form_fear\": \"What if there's no water when Barcelona arrives?\", \"rewritten_form_anger\": \"How can there be water if Barcelona is around?!\", \"rewritten_form_surprise\": \"Wait, there's actually water if Barcelona shows up?\", \"rewritten_form_disgust\": \"Ugh, who wants water if Barcelona is here?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a presence of water linked to Barcelona, suggesting a positive situation that aligns well with joy. The rewired joy version amplifies this by expressing enthusiasm for the water being there if Barcelona is present.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence touches on a possibility related to Barcelona which could lead to a lack of fulfillment, as implied by the sadness rewritten version. The mention of emptiness without Barcelona indicates a sense of longing or loss.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version implies a concern regarding the availability of water when Barcelona arrives. While the original doesn't directly express fear, the potential absence of water creates a basis for worrying.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger rewritten version implies frustration over the situation presented in the original sentence. While the original does not explicitly contain anger, the tone suggests related feelings of disbelief or irritation.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise rewritten version captures an element of unexpectedness about water being present if Barcelona shows up. This indicates a connection to curiosity or astonishment, but the original sentence lacks a strong surprise indication.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust rewritten form expresses a strong aversion to the idea of water being present with Barcelona. The original sentence does not carry any connotations of disgust, making this alignment weak.",
+        "disgust_intensity": 0
+    }
+}

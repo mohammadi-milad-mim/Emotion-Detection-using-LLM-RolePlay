@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Several years later, one of them died in a traffic accident.\", \"rewritten_form_joy\": \"Several years later, one of them achieved great happiness, although it felt bittersweet now.\", \"rewritten_form_sadness\": \"Several years later, one of them tragically died in a traffic accident, leaving a painful void.\", \"rewritten_form_fear\": \"Several years later, one of them died unexpectedly in a traffic accident, reminding us of how fragile life can be.\", \"rewritten_form_anger\": \"Several years later, one of them senselessly died in a traffic accident, and it infuriates me to think about it.\", \"rewritten_form_surprise\": \"Several years later, one of them shockingly died in a traffic accident, and I could hardly believe it.\", \"rewritten_form_disgust\": \"Several years later, one of them died in a reckless traffic accident, a senseless tragedy that sickens me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a tragic event with no elements of joy. The rewritten joy sentence introduces the concept of achieving happiness, which does not align with the sadness of death.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sadness version emphasizes the tragedy and emotional impact of the death, which closely matches the tone of the original sentence, highlighting loss and pain.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The rewritten fear sentence captures a sense of unexpected loss and the fragility of life, which aligns with the original's tragic context, although it has a slightly elevated degree of alarm.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten anger sentence emphasizes frustration over the senselessness of the death, which is a strong emotional response that could relate back to the original context, yet it overstates the emotion.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The rewritten surprise version introduces disbelief about the death, but it is not strongly present in the original sentence. The original is more straightforward without shock.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

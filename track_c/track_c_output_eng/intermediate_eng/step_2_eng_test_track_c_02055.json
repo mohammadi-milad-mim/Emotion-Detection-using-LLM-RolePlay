@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I need to stick to things that keep my feet planted like biking or elliptical.\", \"rewritten_form_joy\": \"I happily choose activities that keep my feet planted, like biking or using the elliptical!\", \"rewritten_form_sadness\": \"I feel like I have to stick to things that keep my feet planted, like biking or elliptical, even though I miss other activities.\", \"rewritten_form_fear\": \"I need to stick to things that keep my feet planted, like biking or elliptical, because I'm really worried about what might happen otherwise.\", \"rewritten_form_anger\": \"I have to stick to things that keep my feet planted, like biking or elliptical, and it really frustrates me!\", \"rewritten_form_surprise\": \"I find it surprising that I need to stick to things that keep my feet planted, like biking or elliptical!\", \"rewritten_form_disgust\": \"I need to stick to things that keep my feet planted, like biking or elliptical, which just feels so limiting and unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original statement doesn't convey happiness or excitement, as it strictly mentions the need to stick to certain activities without expressing enjoyment about them. The rewritten joy sentence infers an enthusiastic attitude that is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement implies a lack of choice in the activities picked, but it doesn't convey feelings of sadness or longing explicitly. While the sadness rewrite infuses a sense of missing out, the original sentence remains neutral.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence lacks an element of fear or anxiety associated with sticking to the activities. The fear rewrite implies worry about consequences, which is not reflected in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does express a sense of obligation but not anger or frustration. The rewritten anger version introduces an emotional response that isn't supported by the neutral tone of the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text doesn't indicate any element of surprise regarding the choice to stick with certain activities, unlike the rewritten surprise sentence. The tone remains quite straightforward and unaffected by surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

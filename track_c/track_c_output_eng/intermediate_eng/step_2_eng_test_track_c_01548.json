@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He had a good laugh, which was music to my ears.\", \"rewritten_form_joy\": \"His laugh filled the air, and it was pure joy to hear!\", \"rewritten_form_sadness\": \"Even though he laughed, it somehow felt bittersweet to me.\", \"rewritten_form_fear\": \"His laugh echoed, but I couldn't shake the unease that it brought.\", \"rewritten_form_anger\": \"He laughed loudly, but it felt so infuriating to me!\", \"rewritten_form_surprise\": \"He let out this unexpected laugh, and I couldn't believe how delightful it was!\", \"rewritten_form_disgust\": \"His laugh was so obnoxious, it just grated on my nerves.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive reaction to someone's laugh, suggesting happiness. The rewritten sentence emphasizes the joy associated with the laugh even more vividly, indicating a strong connection in tone.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original sentence is positive, the rewritten sentence introduces a bittersweet element. This contrast does not strongly align with the overall optimism of the original, reflecting a low connection to sadness, but it can imply some deeper emotional undercurrent.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text is cheerful, while the rewritten version adds a sense of unease connected to the laugh, which is a stark contrast. The original does not evoke any fear, making this sentiment not applicable.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence has a positive tone, and the rewritten version introduces anger related to the laugh. This sentiment is not present in the original, and thus, they are not aligned.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The rewritten sentence captures an element of unexpected delight which adds surprise to the experience of the laugh. The original sentence can be seen as somewhat surprising due to its positivity, but it does not strongly suggest a surprise itself.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

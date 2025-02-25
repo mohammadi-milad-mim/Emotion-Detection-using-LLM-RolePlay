@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Even as I sit here and type, my eyes are welling up with tears.\", \"rewritten_form_joy\": \"I can hardly believe how happy I feel, my eyes sparkling with joyful tears as I type!\", \"rewritten_form_sadness\": \"As I sit here and type, I can't help but feel the tears welling up in my eyes, sadness consuming me.\", \"rewritten_form_fear\": \"Even as I sit here typing, dread washes over me, causing my eyes to well up with tears.\", \"rewritten_form_anger\": \"Sitting here typing, I feel a surge of anger that brings tears to my eyes, it's infuriating!\", \"rewritten_form_surprise\": \"I never expected it, but here I am typing with tears welling up in my eyes, completely taken aback.\", \"rewritten_form_disgust\": \"As I sit here typing, I feel a wave of disgust rising in me, my eyes stinging with the threat of tears.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of sadness, mentioning tears welling up, which contrasts with the joyfulness expressed in the rewritten joy version. The alignment is weak as the original does not imply happiness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly states that the speaker's eyes are welling up with tears, indicating a strong emotional response consistent with sadness. This aligns closely with the rewritten sadness version.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original indicates tears, it does not express that they are accompanied by dread or fear, which is present in the fear version. Therefore, the alignment is low for fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original doesn't highlight feelings of anger or frustration, which the rewritten version describes. Though there may be a slight possibility of frustration implied, it is primarily a sad narrative.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not indicate being taken aback or a surprising realization; the presence of tears suggests something more emotional than surprising, leading to a low alignment here.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

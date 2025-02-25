@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It started in my throat last night and sleep was `` eh '' last night.\", \"rewritten_form_joy\": \"It started in my throat last night, but I still found a way to enjoy myself, even if sleep was just okay!\", \"rewritten_form_sadness\": \"It started in my throat last night, and I barely slept; it was just a long, restless night.\", \"rewritten_form_fear\": \"It started in my throat last night, and I couldn't help but worry about how it might affect my sleep\\u2014what if it gets worse?\", \"rewritten_form_anger\": \"It started in my throat last night, and I couldn\\u2019t believe how disruptive my sleep was!\", \"rewritten_form_surprise\": \"It started in my throat last night, and I was so surprised that my sleep turned out to be just 'eh'!\", \"rewritten_form_disgust\": \"It started in my throat last night, and honestly, I felt so gross; sleep was nothing but nasty and restless.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a negative experience concerning sleep but does not convey an effort to find joy amidst discomfort, unlike the rewritten version which implies a positive attitude despite the situation.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original conveys a sense of discomfort and dissatisfaction with sleep, aligning closely with the sentiment of unease and restlessness described in the sadness version. The original's acknowledgment of poor sleep resonates with the emotional weight of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence suggests a physical discomfort starting in the throat, which naturally leads to concerns about health and sleep. This aligns well with the fear of potential worsening conditions expressed in the rewritten version.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original mentions difficulty with sleep but does not reflect an emotional response of anger toward the situation. The rewritten version embodies frustration which is not present in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement does mention an 'eh' quality to sleep, suggesting a low-level of surprise about less-than-ideal sleep. However, it lacks the emotional impact of pronounced surprise seen in the rewritten form.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She didn't remember any of the experience.\", \"rewritten_form_joy\": \"She completely embraced the moment, letting it wash over her without a care!\", \"rewritten_form_sadness\": \"It\\u2019s heartbreaking that she didn't remember any of the experience at all.\", \"rewritten_form_fear\": \"What if she never remembers that terrifying experience?\", \"rewritten_form_anger\": \"It\\u2019s infuriating that she didn\\u2019t retain any memory of the experience!\", \"rewritten_form_surprise\": \"Wow, she didn't remember any of that incredible experience!\", \"rewritten_form_disgust\": \"It\\u2019s disgusting to think she didn\\u2019t even remember the awful experience.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a lack of memory, which contrasts sharply with the joy expressed in the rewritten version that describes embracing the moment. Therefore, there is little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten version highlights a poignant realization about the significance of memory loss, aligning closely with the original sentence's implication of something lost. This indicates a strong emotional tie to sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The fear version speculates on the permanence of the memory loss and suggests concern about never remembering a frightening experience. However, the original does not imply fear, leading to a more neutral assessment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger rewritten version expresses frustration with memory loss, which aligns with the original's statement but does not convey strong emotion. It suggests irritation rather than intense anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise version reflects astonishment at the memory loss; however, the original sentence presents a neutral observation. Thus, while some surprise could be present, it is not particularly strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

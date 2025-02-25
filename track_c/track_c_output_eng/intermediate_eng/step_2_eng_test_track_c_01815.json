@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This time, though, there was a man in an old army outfit, standing in front of my doorway.\", \"rewritten_form_joy\": \"This time, though, there was a cheerful man in an old army outfit, standing happily in front of my doorway!\", \"rewritten_form_sadness\": \"This time, though, there was a lonely man in an old army outfit, standing quietly in front of my doorway.\", \"rewritten_form_fear\": \"This time, though, there was a menacing man in an old army outfit, standing ominously in front of my doorway.\", \"rewritten_form_anger\": \"This time, though, there was a stubborn man in an old army outfit, standing defiantly in front of my doorway!\", \"rewritten_form_surprise\": \"This time, though, I was shocked to see a man in an old army outfit, standing unexpectedly in front of my doorway!\", \"rewritten_form_disgust\": \"This time, though, there was a disgusting man in an old army outfit, standing repulsively in front of my doorway.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy. It simply states the presence of a man in an army outfit without any indicators of happiness or cheerfulness. Therefore, it aligns poorly with the joyful rewrite.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks elements that specifically indicate sadness. It describes the man's presence but does not imply loneliness or quietude. As a result, it aligns weakly with the sadness rewrite.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not have any cues that suggest fear or menace. While the man is described in an army outfit, there is nothing inherently threatening about it. Thus, it scores low on the fear intensity.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not suggest anger or resistance; it simply presents a fact about the man in the doorway. The term 'stubborn' in the rewrite indicates a refusal to yield, which is absent from the original. Therefore, it has minimal alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence describes a situation that could be surprising depending on context; however, it does not explicitly convey shock or unexpectedness. The lack of an emotional response means it aligns moderately with the surprise rewrite.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

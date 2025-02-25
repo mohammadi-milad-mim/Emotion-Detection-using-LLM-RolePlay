@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Even without having one a common resource are wedding guides, things like this would be one of the items on the checklist.\", \"rewritten_form_joy\": \"Even without having one, it's wonderful that there are common resources like wedding guides; things like this would definitely be on the checklist!\", \"rewritten_form_sadness\": \"Even without having one, it\\u2019s a bit disheartening that common resources like wedding guides exist, but things like this would just be another item on the checklist.\", \"rewritten_form_fear\": \"Even without having one, it's concerning that common resources like wedding guides are out there; things like this might not even be on the checklist!\", \"rewritten_form_anger\": \"Even without having one, it\\u2019s infuriating that common resources like wedding guides exist, and things like this should be on the checklist!\", \"rewritten_form_surprise\": \"Even without having one, it\\u2019s surprising that common resources like wedding guides are available; things like this could definitely be on the checklist!\", \"rewritten_form_disgust\": \"Even without having one, it\\u2019s disgusting that common resources like wedding guides are needed; things like this should not even be on the checklist!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence acknowledges the existence of wedding guides in a neutral tone, but does not express joy or positivity, which is strongly present in the rewritten joy version. Therefore, it aligns poorly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a neutral sentiment, but the rewritten sadness version introduces a feeling of disheartenment that isn't present in the original. This suggests only a slight alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There\u2019s no indication of concern or fear in the original sentence. It merely describes wedding guides as common resources without implying any negative consequences, hence the score for fear is low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original statement lacks any frustration or anger toward the existence of wedding guides. While the rewritten anger version emphasizes irritation, the original does not convey this sentiment, leading to a low alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original doesn't contain elements of surprise, as it presents the existence of wedding guides as a factual statement without emotional weight. Thus, it aligns poorly with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

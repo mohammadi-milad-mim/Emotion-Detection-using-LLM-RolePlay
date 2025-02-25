@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I turned the lights off and put my hands over my ears, nothing happened.\", \"rewritten_form_joy\": \"I turned the lights off and put my hands over my ears, and it was so peaceful! Nothing happened, and I felt so happy.\", \"rewritten_form_sadness\": \"I turned the lights off and put my hands over my ears, nothing happened, just silence... and it felt so lonely.\", \"rewritten_form_fear\": \"I turned the lights off and put my hands over my ears, nothing happened, but I couldn't shake the feeling that something might.\", \"rewritten_form_anger\": \"I turned the lights off and put my hands over my ears, nothing happened, this is utterly ridiculous!\", \"rewritten_form_surprise\": \"I turned the lights off and put my hands over my ears, nothing happened! I was totally not expecting that.\", \"rewritten_form_disgust\": \"I turned the lights off and put my hands over my ears, nothing happened, what a waste of time!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral action with no positive emotional undertones, unlike the rewritten joyful version which expresses happiness and peace. The absence of joy in the original leads to a low intensity score.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original's description of silence aligns with the sadness rewritten version's sentiment of loneliness. While no overt sadness is expressed, the implication of isolation through silence allows for a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'nothing happened' can imply an unsettling quiet, potentially heightening anxiety, but it lacks a strong explicit fear element. The original does not convey an overt sense of fear or anticipation as in the rewritten form.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no indication of frustration or anger in the original sentence; rather, it reads as a calm observation of what occurred. The rewritten anger version presents a strong emotional response that the original lacks, leading to a very low alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original's neutral tone does not express any form of surprise; it only states what occurred without expectation or reaction. Thus, it scores a low alignment with surprise, as there\u2019s no indication of unexpectedness.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I suppose this was an instictive act, but fortunately prevented me from hitting my head anywhere.\", \"rewritten_form_joy\": \"I suppose this was an instinctive act, but it happily saved me from hitting my head anywhere!\", \"rewritten_form_sadness\": \"I suppose this was an instinctive act, but it was a reminder that I could have hit my head anywhere.\", \"rewritten_form_fear\": \"I suppose this was an instinctive act, but I was terrified it might not prevent me from hitting my head!\", \"rewritten_form_anger\": \"I suppose this was an instinctive act, but why did I even need it to prevent me from hitting my head?\", \"rewritten_form_surprise\": \"I suppose this was an instinctive act, but I was surprisingly saved from hitting my head anywhere!\", \"rewritten_form_disgust\": \"I suppose this was an instinctive act, but it's disgusting how easily I could have hurt myself by hitting my head.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a sense of relief due to the prevention of injury, which aligns with joy; however, the tone is more neutral than emphatically joyful. The rewritten version explicitly states happiness, thus suggesting more joy than is conveyed in the original. Therefore, it has a mild connection to joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sadness version implies a negative feeling about a potential injury, which is absent from the original. The original focuses on being fortunate rather than sorrowful. Thus, the connection to sadness seems very weak.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence reminds us of a potential injury but does not express fear explicitly. The rewritten sentence emphasizes terror over the possibility of hitting the head, which lacks an echo in the original. Hence, fear is not strongly expressed.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original reflects a nonchalant acceptance of the instinctive act without anger. The rewritten version questions the necessity of the act with anger, which is not present in the original. Therefore, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original discusses the instinctive act leading to a fortunate outcome, it does not evince surprise. The rewritten version emphasizes surprise about being saved, which is absent in the original. This results in a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

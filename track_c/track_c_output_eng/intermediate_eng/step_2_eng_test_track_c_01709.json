@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My eyes went from the shocked and surprised look of the CSM to the lady and, in milliseconds the center of my chest was bombarded with such intense relief and joy, tears pooled in my eyes.\", \"rewritten_form_joy\": \"My eyes shifted from the shocked and surprised look of the CSM to the lady, and in an instant, a wave of pure bliss washed over me, making tears of joy well up in my eyes.\", \"rewritten_form_sadness\": \"My eyes moved from the shocked and surprised look of the CSM to the lady, and in a heartbeat, an overwhelming sense of loss filled my chest, causing tears to gather in my eyes.\", \"rewritten_form_fear\": \"My eyes darted from the shocked and surprised look of the CSM to the lady, and in an instant, a wave of dread washed over me, tightening my chest and blurring my vision with tears.\", \"rewritten_form_anger\": \"My eyes flicked from the shocked and surprised look of the CSM to the lady, and in a split second, a surge of frustration exploded within me, fueling my anger as tears threatened to spill.\", \"rewritten_form_surprise\": \"My eyes jumped from the shocked and surprised look of the CSM to the lady, and in a heartbeat, an unexpected rush of relief flooded my chest, leaving me speechless and teary-eyed.\", \"rewritten_form_disgust\": \"My eyes shifted from the shocked and surprised look of the CSM to the lady, and in no time, a wave of revulsion clawed at my chest, making my eyes brim with unshed tears.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong sense of joy and relief, indicating a positive emotional response. The presence of tears pooling in the eyes reinforces this joy, aligning closely with the rewritten joy sentence that features pure bliss and tears of joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original sentence hints at deep emotion, the primary sentiment is relief and joy rather than sadness. The sadness rewritten sentence introduces a sense of loss that is not present in the original, leading to a disconnection in tone.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey any feelings of dread or fear; instead, it emphasizes relief and happiness. The rewritten fear sentence introduces a negative emotional reaction that is absent in the original, indicating little to no alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of frustration or anger in the original sentence; it focuses on a positive emotional response. The rewritten anger sentence introduces an emotion that does not align with the original's primarily joyful tone.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence has elements of surprise due to the context of shifting focus, but it centers around joy rather than shock or surprise alone. The rewritten surprise sentence integrates a rush of relief that is somewhat present in the original, giving it a moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

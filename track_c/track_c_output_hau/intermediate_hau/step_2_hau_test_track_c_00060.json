@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kace wahala ta qaru\\ud83d\\ude15\", \"rewritten_form_joy\": \"Kace wahala ta qaru!\\u263a\\ufe0f\", \"rewritten_form_sadness\": \"Kace wahala ta qaru...\\ud83d\\ude22\", \"rewritten_form_fear\": \"Kace wahala ta qaru?\\ud83d\\ude28\", \"rewritten_form_anger\": \"Kace wahala ta qaru!!!\\ud83d\\ude21\", \"rewritten_form_surprise\": \"Kace wahala ta qaru?!\\ud83d\\ude2e\", \"rewritten_form_disgust\": \"Kace wahala ta qaru...ugh, how awful!\\ud83d\\ude12\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'Kace wahala ta qaru' conveys some struggle or trouble, which does not align with joy. The joy version adds enthusiasm and happiness, indicating no alignment with the original sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sad version expresses an emotional reaction to trouble worsening, which aligns closely with the original sentence's tone indicating issues. Therefore, there is a significant sadness depicted in both.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The fear version suggests uncertainty and concern about the worsening situation. The original could imply worry, but it does not explicitly express fear. Thus, there is some relation, but not strong.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version emphasizes frustration and a more intense reaction to the situation. The original seems to reflect annoyance or trouble but does not convey outright anger, resulting in a moderate representation.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise version adds an element of shock or unexpectedness. The original statement does not imply anything surprising or unforeseen, resulting in very little alignment with this emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust version uses a strong negative reaction that is more intense than the original, which simply states that trouble has increased. This does not express disgust, but it hints at frustration, so there is a minimal connection.",
+        "disgust_intensity": 1
+    }
+}

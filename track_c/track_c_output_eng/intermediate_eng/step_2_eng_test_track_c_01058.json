@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The aisles were foggy to me, because my eyes were filled with tears that I was fighting to keep in my eyes and off my cheeks.\", \"rewritten_form_joy\": \"The aisles appeared dreamy to me, as I felt the warmth of happiness in my heart, trying to hold back joyous tears.\", \"rewritten_form_sadness\": \"The aisles were so blurry to me, my eyes brimming with tears I desperately fought to keep from spilling down my cheeks.\", \"rewritten_form_fear\": \"The aisles became a thick fog, my eyes filled with tears as I resisted the panic threatening to break free.\", \"rewritten_form_anger\": \"The aisles looked blurry to me, my eyes welling with frustrated tears that I struggled to push back.\", \"rewritten_form_surprise\": \"The aisles felt like a fog, caught off guard by the sudden rush of tears threatening to spill from my eyes.\", \"rewritten_form_disgust\": \"The aisles appeared murky to me, my eyes overflowing with tears I was trying to push away, just feeling so repulsed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a struggle with tears, which indicates sadness rather than joy. It lacks any uplifting sentiment and doesn't convey happiness or warmth, unlike the rewritten joyful version that highlights warmth and happiness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence clearly conveys deep emotional pain through the imagery of foggy aisles and the struggle against tears. This aligns closely with the rewritten sadness sentence, which also emphasizes the overwhelming sensation of tears.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence hints at a degree of emotional struggle with tears and a foggy vision. However, while the rewritten fear version emphasizes panic, the original does not express strong fear, just sadness and an emotional effort.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There are elements of frustration in the original sentence, as the struggle with tears can imply anger or annoyance, but it does not clearly highlight anger as the dominant emotion, making it only a mild connection.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The sensory experience of fog and tears could suggest surprise, but the dominant theme of emotional struggle overshadows any sense of being caught off guard. Thus, the connection is weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

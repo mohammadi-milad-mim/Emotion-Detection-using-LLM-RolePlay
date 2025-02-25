@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Amin Ya Allah. \\ud83d\\ude2d Allah Ka yaye mana bala'in nan.\", \"rewritten_form_joy\": \"Amin Ya Allah! \\ud83e\\udd73 Allah, welcome these blessings!\", \"rewritten_form_sadness\": \"Amin Ya Allah. \\ud83d\\ude22 Oh Allah, these burdens are heavy.\", \"rewritten_form_fear\": \"Amin Ya Allah. \\ud83d\\ude28 Oh Allah, please protect us from these dangers.\", \"rewritten_form_anger\": \"Amin Ya Allah! \\ud83d\\ude20 Oh Allah, why must we face these trials?\", \"rewritten_form_surprise\": \"Amin Ya Allah! \\ud83d\\ude32 Oh Allah, what is happening here?\", \"rewritten_form_disgust\": \"Amin Ya Allah. \\ud83e\\udd22 Oh Allah, this situation is unbearable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text expresses a plea or prayer, but lacks any overtly joyful tone. The rewritten form for joy has an enthusiastic exclamation and a welcoming of blessings, which is not conveyed in the original. Therefore, there is a very weak alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence fits well with the sadness rewritten form because it shares a tone of desperate supplication and an acknowledgement of burdens without any positive spin, making it relatable to sorrowful sentiments.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a slight sense of apprehension about danger in the original, but it does not distinctly convey fear about a specific situation. The rewritten version emphasizes the desire for protection, which is only implicitly suggested in the original. Thus, the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original does not express anger or frustration overtly, and the rewritten version emphasizes questioning the situation. However, there is an implication of hardship in the original that could evoke indignation, so the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not express any element of surprise, as it is more focused on prayer and pleading. The rewritten version evokes feelings of astonishment, and there is no alignment here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original evokes a sense of pleading without indication of disgust. The rewritten version for disgust presents a clear disdain for a situation, which is not reflected in the original. Therefore, there is no alignment.",
+        "disgust_intensity": 0
+    }
+}

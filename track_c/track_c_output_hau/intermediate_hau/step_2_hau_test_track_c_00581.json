@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\ud83e\\udd26\\u200d\\u2642\\ufe0f\\ud83e\\udd26\\u200d\\u2642\\ufe0f\\ud83e\\udd26\\u200d\\u2642\\ufe0f\\ud83e\\udd26\\u200d\\u2642\\ufe0f mu ina ruwanmu\", \"rewritten_form_joy\": \"Yay! Where's our water?\", \"rewritten_form_sadness\": \"Oh no, where have we lost our water?\", \"rewritten_form_fear\": \"Where\\u2019s our water? What happened?\", \"rewritten_form_anger\": \"Where is our water? This is unacceptable!\", \"rewritten_form_surprise\": \"Wait, where is our water?\", \"rewritten_form_disgust\": \"Ugh, where\\u2019s our water? This is gross!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses excitement with the repeated emoji, similar to the joyful tone of asking 'Where's our water?' This implies anticipation or enthusiasm about water being present.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The sadness tone, 'Oh no, where have we lost our water?' indicates a loss or concern, which aligns moderately with the original sentiment of wondering about the water but isn't as strong as pure joy.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The rewritten form expressing fear suggests a sense of urgency and concern, which slightly mirrors the original's sense of questioning regarding the water but is not overtly fearful.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger expressed in the rewritten form implies dissatisfaction with the absence of water. The original sentence does have a demanding tone, which aligns moderately with this emotion.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The expression of surprise is a direct question about the water's whereabouts, resonating strongly with the questioning nature of the original sentence. This creates a significant alignment with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "While there is an element of questioning about the water, the disgusted tone suggests that the situation is not just one of curiosity but revulsion. However, the original does not convey strong disgust, leading to a lower alignment.",
+        "disgust_intensity": 1
+    }
+}

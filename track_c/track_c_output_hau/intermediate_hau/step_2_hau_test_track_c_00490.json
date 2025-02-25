@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"wai daman malami ne amma tir da wannan maluntakar\", \"rewritten_form_joy\": \"Wai, gashi malami ne amma ina jin dadin wannan maluntakar!\", \"rewritten_form_sadness\": \"Wai, daman malami ne amma na ji zafi daga wannan maluntakar.\", \"rewritten_form_fear\": \"Wai, malami ne amma wannan maluntakar na sa ni cikin fargaba.\", \"rewritten_form_anger\": \"Wai, malami ne amma ina fushin wannan maluntakar!\", \"rewritten_form_surprise\": \"Wai, malami ne amma wannan maluntakar ta zo mini da mamaki!\", \"rewritten_form_disgust\": \"Wai, malami ne amma wannan maluntakar tana da fya\\u0257i!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of acknowledgment about being a teacher (malami) but contrasts it with a potential negativity about something referred to as maluntakar. The joy version reinterprets that contrast with a sense of pleasure ('jin dadin') in an upbeat manner, which does not align closely with the reserved tone of the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies a rather neutral or mild discontent, while the sadness version highlights a strong emotional reaction ('na ji zafi') which intensifies the perception of sadness. The original lacks this strong emotional resonance with pain or sorrow, resulting in a lower alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not suggest any sense of danger or apprehension, while the fear version introduces a clear threat ('na sa ni cikin fargaba'), which elevates the emotional intensity significantly. There is no indication of fear present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence reflects a certain resignation but does not explicitly suggest anger, whereas the anger version expresses a strong negative reaction ('ina fushin'). This suggests a level of indignation that isn't present in the original statement, resulting in a lower alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence's tone is quite straightforward and lacks any suggestive cues of surprise, while the surprise version uses language that evokes unexpectedness ('ta zo mini da mamaki'). This indicates that the original statement does not align well with the emotion of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does share a negative viewpoint about maluntakar, which is somewhat aligned with the disgust version mentioning something unpleasant ('tana da fya'). However, the emotional intensity surrounding disgust is not strongly felt in the original.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Anyway, back to Tuesday.\", \"rewritten_form_joy\": \"Anyway, back to Tuesday!\", \"rewritten_form_sadness\": \"Anyway, back to Tuesday...\", \"rewritten_form_fear\": \"Anyway, back to Tuesday, I guess...\", \"rewritten_form_anger\": \"Anyway, back to Tuesday, like it even matters!\", \"rewritten_form_surprise\": \"Anyway, back to Tuesday\\u2014can you believe it?\", \"rewritten_form_disgust\": \"Anyway, back to Tuesday, ugh.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks an exclamation that would convey strong positive emotion, therefore aligning only slightly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The ellipsis added in the sadness version indicates a sense of longing or resignation, which aligns somewhat with the original tone but is still quite neutral.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'I guess...' suggests uncertainty and hesitation, indicating a level of fear; however, the original does not inherently carry this tone.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The dismissal apparent in the rewritten version for anger implies frustration, which is not clearly present in the neutral original sentence, leading to a minor alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The addition of 'can you believe it?' in the surprise version introduces an element of incredulity that is not present in the original, leading to low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

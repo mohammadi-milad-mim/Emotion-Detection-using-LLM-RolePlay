@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"i fall to my knees in fear for this dark figure is now staring at me.\", \"rewritten_form_joy\": \"I fall to my knees, overwhelmed with excitement as this mysterious figure gazes at me!\", \"rewritten_form_sadness\": \"I fall to my knees, my heart heavy, for this dark figure is now staring at me in despair.\", \"rewritten_form_fear\": \"I fall to my knees in sheer terror as this dark figure is now staring at me.\", \"rewritten_form_anger\": \"I fall to my knees, furious that this dark figure dares to stare at me like this!\", \"rewritten_form_surprise\": \"I fall to my knees in shock; this dark figure is now staring at me unexpectedly!\", \"rewritten_form_disgust\": \"I fall to my knees in revulsion, as this dark figure is now staring at me with such an unsettling gaze.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses fear, contrasting sharply with the excitement suggested in the joy rewritten form. The emotion of joy is not present in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys fear rather than sadness. While it touches on a heavy emotion, it does not convey a sense of despair that sadness implies. Therefore, the alignment is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence strongly aligns with the fear version, as it explicitly expresses fear of the dark figure. This is the most prominent emotion in the original text.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original text does not convey anger; instead, it depicts fear. Although falling to one's knees could imply a vulnerable reaction to anger, the core emotion is still fear rather than fury.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The element of surprise is present in the original text due to the sudden appearance of the dark figure. However, the primary emotion is fear, not shock or unexpectedness, so the level of alignment is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

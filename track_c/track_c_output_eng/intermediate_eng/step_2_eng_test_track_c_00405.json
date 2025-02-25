@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I never spent the night there..\", \"rewritten_form_joy\": \"I finally didn't spend the night there, and I can't help but feel so relieved!\", \"rewritten_form_sadness\": \"I never spent the night there... I wish I could have experienced that moment.\", \"rewritten_form_fear\": \"I never spent the night there, and I can't shake off the unease about what I missed.\", \"rewritten_form_anger\": \"I never spent the night there, and it's infuriating to think I could have but didn't!\", \"rewritten_form_surprise\": \"I never spent the night there? I didn't even realize that was an option!\", \"rewritten_form_disgust\": \"I never spent the night there, and I'm honestly appalled by the thought of it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence simply states a fact about not spending the night; it lacks any positive sentiment or relief, unlike the joyful rewritten version which expresses a sense of relief. Therefore, it does not align well with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys an absence of experience but does not express longing or desire for that experience. While sadness is implied in the rewritten version, the original does not reflect that yearning sentiment; thus, it only shows a hint of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence indicates that the speaker did not spend the night, it does not inherently convey fear or unease. The rewritten version emphasizes a sense of loss and anxiety regarding what could have happened, which is not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral and does not evoke any feelings of frustration or anger. The rewritten sentiment reflects a strong emotional response about a missed opportunity, which is absent in the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is a straightforward statement that does not elicit a sense of surprise, as it does not imply any unexpectedness. The enthusiasm in the surprise rewritten version contrasts with the original's plain tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

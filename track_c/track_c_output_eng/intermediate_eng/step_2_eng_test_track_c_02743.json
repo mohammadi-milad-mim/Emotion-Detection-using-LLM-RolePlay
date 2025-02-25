@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Except she had too much air in the pressure thing she put at the top of my arm and so my fingers were starting to go numb.\", \"rewritten_form_joy\": \"Except she had so much air in the pressure thing she put at the top of my arm that I almost felt a tickle in my fingers!\", \"rewritten_form_sadness\": \"Except she had too much air in the pressure thing she put at the top of my arm, and I felt my fingers go numb, like a part of me fading away.\", \"rewritten_form_fear\": \"Except she had too much air in the pressure thing she put at the top of my arm, and suddenly my fingers started to go numb\\u2014I was terrified something was wrong.\", \"rewritten_form_anger\": \"Except she put way too much air in that pressure thing on my arm, and now my fingers are going numb! How careless can she be?\", \"rewritten_form_surprise\": \"Except she had so much air in the pressure thing at the top of my arm that my fingers started going numb\\u2014what a strange sensation!\", \"rewritten_form_disgust\": \"Except she had too much air in that pressure thing on my arm, and now my fingers feel so weird and numb\\u2014it\\u2019s just gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes discomfort due to numbness in the fingers without any sense of joy or lightheartedness. Although the joy rewritten version attempts to inject a playful element by mentioning a 'tickle', this is not present in the original text, making joy a poor match.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sadness version implies a sense of loss with the phrase 'a part of me fading away'. This aligns closely with the original's sense of discomfort due to numbness, although the original does not convey overt sadness, making it a moderate but not high fit.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original statement indicates unease due to the numbness caused by too much air. The fear rewritten version amplifies this unease into a feeling of terror, which is not explicitly present in the original. Still, the fear of something being wrong aligns moderately well with the situation described.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten anger version explicitly mentions carelessness and frustration regarding the situation. Although the original does illustrate a problem with excessive air, it does not convey outright anger, leading to a lower alignment with this emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence describes a physical sensation, and the rewritten surprise version emphasizes the unexpected nature of numbness by stating it as a 'strange sensation'. This aligns relatively well, as there is an element of surprise in the shift from normal feeling to numbness.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

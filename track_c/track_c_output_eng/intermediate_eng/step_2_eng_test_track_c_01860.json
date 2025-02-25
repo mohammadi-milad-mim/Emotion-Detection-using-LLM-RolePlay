@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This did not sit well with my granny(my father's mother).\", \"rewritten_form_joy\": \"My granny, my father's mother, was not at all pleased with this!\", \"rewritten_form_sadness\": \"This really upset my granny, my father's mother.\", \"rewritten_form_fear\": \"I was scared this would really upset my granny, my father's mother.\", \"rewritten_form_anger\": \"I can't believe this didn't sit well with my granny, my father's mother!\", \"rewritten_form_surprise\": \"To my surprise, this did not sit well with my granny, my father's mother.\", \"rewritten_form_disgust\": \"This was really distasteful to my granny, my father's mother.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys disappointment rather than positivity, which conflicts with the tone of happiness indicated in the joy version. Therefore, the alignment is very weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a negative reaction from the granny, aligning well with the sadness version which directly states that it upset her. Thus, there is a strong connection.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not explicitly evoke fear or concern about the granny's response; it states a fact without indicating that there was a fearful anticipation of her reaction. Therefore, there is a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence reflects disappointment, and the rewritten version expresses frustration or disbelief. There is some alignment in the sentiment of being upset, but it is not intensely angry. So, the alignment is moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The element of surprise is somewhat present as the original sentence suggests that the reaction was unexpected; however, it does not convey the level of astonishment as emphasized in the rewritten sentence. This results in a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

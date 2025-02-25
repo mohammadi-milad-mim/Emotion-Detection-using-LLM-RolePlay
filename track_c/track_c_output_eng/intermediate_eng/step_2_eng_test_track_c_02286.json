@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He had died from his injuries.\", \"rewritten_form_joy\": \"He had finally found peace after his injuries.\", \"rewritten_form_sadness\": \"He had tragically died from his injuries.\", \"rewritten_form_fear\": \"He had died from his injuries, leaving us all in uncertainty about what comes next.\", \"rewritten_form_anger\": \"He had died from his injuries, and it\\u2019s so infuriating that it shouldn\\u2019t have happened!\", \"rewritten_form_surprise\": \"He had died from his injuries\\u2014it was so unexpected.\", \"rewritten_form_disgust\": \"He had died from his injuries, and it\\u2019s disturbing how careless some people can be.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a factual statement about death, lacking any indication of joy or peace. The joy rewritten form introduces a sense of serenity that is absent in the original sentence, illustrating a stark contrast.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly states that someone has died, which inherently carries a tone of sadness. The rewritten form emphasizes the tragic nature of the death, aligning closely with the sentiment of the original sentence.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence presents a straightforward account of death without explicit emotional context, but the rewritten form of fear adds a layer of uncertainty about the future, which is not explicitly present in the original. Therefore, the alignment is moderate but not strong.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not express anger; it's merely stating a fact. The rewritten anger form adds an emotional layer about the injustice of the situation, which gives a higher intensity to anger than what is present in the original.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence is factual and direct, lacking any element of surprise. The rewritten version highlights unexpectedness, making it a notable deviation from the original tone, which lacks any dramatic element.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

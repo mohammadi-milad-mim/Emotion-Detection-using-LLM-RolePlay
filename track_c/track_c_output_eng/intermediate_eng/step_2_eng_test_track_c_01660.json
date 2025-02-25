@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Next thing I know I've screamed, the phone has been flung from my hand, and I had thus been rear-ended by some stupid 18 year old.\", \"rewritten_form_joy\": \"Next thing I know, I let out a joyful scream, the phone flew from my hand in excitement, and I was playfully bumped by a silly 18-year-old!\", \"rewritten_form_sadness\": \"Next thing I know, I screamed in despair, the phone slipped from my hand, and I was rear-ended by a careless 18-year-old.\", \"rewritten_form_fear\": \"Next thing I know, I've screamed in panic, the phone was flung from my hand in terror, and I realized I had been rear-ended by some reckless 18-year-old.\", \"rewritten_form_anger\": \"Next thing I know, I've screamed out of frustration, the phone flew from my hand, and I was infuriated to have been rear-ended by some stupid 18-year-old.\", \"rewritten_form_surprise\": \"Next thing I know, I screamed in shock, the phone unexpectedly flew from my hand, and I was startled to have been rear-ended by a clueless 18-year-old!\", \"rewritten_form_disgust\": \"Next thing I know, I've screamed in disgust, the phone was flung from my hand, and I had been rear-ended by some infuriating 18-year-old.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of panic and frustration rather than joy. The joyful interpretation in the rewritten sentence contrasts sharply with the distress in the original, leading to a very low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence includes elements of distress, it focuses more on anger and frustration than sadness. Therefore, the alignment with sadness is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence has a strong element of fear and panic, highlighted by the act of screaming and the immediate danger of being rear-ended. This aligns well with the rewritten sentence reflecting fear, making it a high degree of alignment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence clearly expresses a feeling of anger and frustration towards the situation and the driver, making it closely aligned with the rewritten sentence that emphasizes anger as well. Thus, it scores high.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does evoke surprise (as indicated by the scream), particularly in the unexpectedness of the rear-end collision. This aligns moderately well with the surprise rewritten version, though the focus on anger makes it less intense than fear and anger.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

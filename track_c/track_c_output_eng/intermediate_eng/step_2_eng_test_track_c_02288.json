@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Everything just flashed dark.\", \"rewritten_form_joy\": \"Everything just flashed dark! What a thrilling surprise!\", \"rewritten_form_sadness\": \"Everything just flashed dark, and it feels like a weight has fallen on my heart.\", \"rewritten_form_fear\": \"Everything just flashed dark, and I'm terrified of what's happening!\", \"rewritten_form_anger\": \"Everything just flashed dark, and it makes me so angry that I can't see anything now!\", \"rewritten_form_surprise\": \"Everything just flashed dark, and I can't believe how unexpectedly eerie it feels!\", \"rewritten_form_disgust\": \"Everything just flashed dark, and it\\u2019s utterly repulsive how unsettling this is.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a moment of darkening but lacks the joyful context implied in the rewritten joyful version, which frames it as a thrilling surprise. The original doesn't convey happiness or excitement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does suggest a loss of brightness or clarity, which can be associated with sadness, but it doesn\u2019t strongly convey a feeling of heaviness or sorrow as the rewritten version does. Nevertheless, there is a hint of melancholia.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence creates a sense of foreboding with the phrase 'flashed dark', which can evoke fear. The rewritten fear sentence captures this sentiment more explicitly with terror, but the original does imply uncertainty.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original does not express anger; it simply states a fact about darkness. The rewritten sentence introduces anger that is not present in the original sentence, indicating little to no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The phrase 'flashed dark' does contain an element of unexpectedness, but it does not fully capture the sense of disbelief and eeriness that the surprise version provides.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

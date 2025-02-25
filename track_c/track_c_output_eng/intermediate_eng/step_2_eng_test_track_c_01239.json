@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The next day, I could feel my legs aching a little.\", \"rewritten_form_joy\": \"The next day, I could feel a little ache in my legs, a reminder of my adventures!\", \"rewritten_form_sadness\": \"The next day, I could feel my legs aching just a little, a sign of how tough everything felt.\", \"rewritten_form_fear\": \"The next day, I could feel my legs aching a little, and I worried it might mean something was wrong.\", \"rewritten_form_anger\": \"The next day, I could feel my legs aching a little, and I was so frustrated that I pushed myself too hard.\", \"rewritten_form_surprise\": \"The next day, I could feel my legs aching a little, and I didn\\u2019t expect that at all!\", \"rewritten_form_disgust\": \"The next day, I could feel my legs aching a little, and it made me feel gross just thinking about it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a mild physical sensation without any strong positive emotions. In the joy version, the ache is seen positively as a reminder of fun experiences, which contrasts with the neutral tone of the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version reflects a struggle and tough times, suggesting a deeper emotional connection to the ache. The original, while indicating discomfort, does not explicitly convey sadness, so there's only a mild alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version implies concern about the ache indicating a potential problem. The original sentence does mention the ache but lacks an indication of worry or fear, leading to low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version conveys frustration over pushing too hard, which adds an emotional layer absent in the original sentence. The original does not suggest frustration, so their alignment is minimal.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version indicates unanticipated feelings related to the ache, which is not present in the original. The original feels more matter-of-fact, so the intensity of surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

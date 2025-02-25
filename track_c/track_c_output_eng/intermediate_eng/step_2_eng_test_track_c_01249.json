@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Tell him, right Elmra?\", \"rewritten_form_joy\": \"Absolutely, tell him, right Elmra?\", \"rewritten_form_sadness\": \"Please tell him, right Elmra?\", \"rewritten_form_fear\": \"You should tell him, right Elmra?\", \"rewritten_form_anger\": \"Just tell him, right Elmra?!\", \"rewritten_form_surprise\": \"Wow, tell him, right Elmra?!\", \"rewritten_form_disgust\": \"Ugh, tell him, right Elmra?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is somewhat neutral; however, the rewritten version expressing joy adds a level of enthusiasm. The original doesn't convey excitement or happiness, thus it shows low alignment with the joy tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version indicates a more pleading or emotional appeal, which the original lacks. It does not express any sense of loss or sorrow, hence it shows minimal alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The fear version adds a sense of urgency or caution that is not present in the original. It implies a need for assurance, which is not reflected in the original sentence, therefore the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version expresses frustration or annoyance, which is implied by the use of 'just'. The original sentence does not convey any irritation, showing a low alignment with this emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version indicates an unexpected situation or realization, which is not present in the original sentence. The original doesn't evoke any sense of astonishment, indicating a low match with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

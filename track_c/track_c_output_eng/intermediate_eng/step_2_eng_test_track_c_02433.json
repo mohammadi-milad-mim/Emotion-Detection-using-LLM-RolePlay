@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As the person in front of me moved, I quickly moved forward, and my eyes widened.\", \"rewritten_form_joy\": \"As the person in front of me moved, I eagerly rushed forward, and my eyes brightened with excitement.\", \"rewritten_form_sadness\": \"As the person in front of me moved, I slowly moved forward, and my eyes widened in despair.\", \"rewritten_form_fear\": \"As the person in front of me moved, I instinctively moved forward, and my eyes widened in panic.\", \"rewritten_form_anger\": \"As the person in front of me moved, I charged forward, and my eyes widened with fury.\", \"rewritten_form_surprise\": \"As the person in front of me moved, I unexpectedly moved forward, and my eyes widened in astonishment.\", \"rewritten_form_disgust\": \"As the person in front of me moved, I reluctantly moved forward, and my eyes widened in disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of movement and surprise, but it lacks the joyful eagerness implied in the joy rewritten version. While there is a degree of enthusiasm, it does not imply joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not align with the tone of sadness; it does not convey feelings of despair or heaviness but instead indicates alertness and engagement.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The widening of eyes in the original may suggest anticipation, but it does not strongly imply panic. The context does not indicate a fearful reaction, thus it does not align entirely with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not imply a charging forward or fury; the action is more neutral. There are no indicators of anger in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The widening of the eyes does suggest surprise at a certain level; however, the lack of explicit indicators such as \u2018unexpectedly\u2019 prevents a stronger alignment with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

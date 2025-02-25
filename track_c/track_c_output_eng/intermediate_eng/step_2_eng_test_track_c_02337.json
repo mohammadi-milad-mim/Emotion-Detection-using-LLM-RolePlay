@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I wanted to open my eyes, to make the bad dream go away.\", \"rewritten_form_joy\": \"I was so excited to open my eyes, hoping to chase away the bad dream!\", \"rewritten_form_sadness\": \"I desperately wanted to open my eyes, to escape the nightmare that kept haunting me.\", \"rewritten_form_fear\": \"I was terrified, wanting to open my eyes to escape the grasp of the bad dream.\", \"rewritten_form_anger\": \"I was so frustrated, eager to open my eyes and put an end to that awful dream!\", \"rewritten_form_surprise\": \"I suddenly felt the urge to open my eyes, shocked to find myself stuck in a bad dream.\", \"rewritten_form_disgust\": \"I just wanted to open my eyes, disgusted by the very thought of that bad dream.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a desire to wake up from a bad dream, implying a wish for relief rather than excitement. There is no strong alignment with joy since the emphasis is on a struggle rather than a positive expectation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The desire to escape the nightmare aligns well with the rewritten version that conveys desperation and haunting feelings, reflecting a strong emotional weight.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence suggests a struggle against a bad dream, which connects closely with fear, as wanting to open one's eyes implies a sense of entrapment in fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence indicates a wish to escape discomfort, but it lacks the frustration conveyed in the rewritten version. There is some alignment since the mention of a bad dream can evoke frustration, but it is mild.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not imply any shock or sudden realization, making it less compatible with surprise. The connection is weak since the focus is on the bad dream rather than an unexpected situation.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

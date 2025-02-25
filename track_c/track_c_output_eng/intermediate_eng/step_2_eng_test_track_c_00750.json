@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My spine actually tingled with the thrill as I started to touch the fabric!!!\", \"rewritten_form_joy\": \"My spine tingled with pure joy as I gently touched the fabric!\", \"rewritten_form_sadness\": \"My spine tingled, but it felt bittersweet as I touched the fabric.\", \"rewritten_form_fear\": \"My spine tingled with a nervous thrill as I hesitated to touch the fabric!\", \"rewritten_form_anger\": \"My spine tingled with frustration as I reluctantly touched the fabric!!!\", \"rewritten_form_surprise\": \"Whoa, my spine tingled with unexpected excitement as I touched the fabric!!!\", \"rewritten_form_disgust\": \"I felt a tingle in my spine, but it turned ugly as I reluctantly touched the fabric.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys excitement and pleasure from the act of touching the fabric, which aligns closely with the joy in the rewritten sentence. The words 'tingled with pure joy' match the thrill expressed in the original.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not imply any sadness or bittersweet feelings, so it does not align with the sadness rewritten sentence, which introduces a negative nuance that is absent in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence captures a thrilling sensation but does not imply hesitation or fear; therefore, it does not align closely with the fear rewritten sentence, where the nervous thrill suggests anxiety or apprehension.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any sense of frustration or anger; it expresses excitement instead. Therefore, it does not align with the anger rewritten sentence, which introduces a negative emotional context.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence contains an element of surprise or excitement, which is captured by the surprise rewritten sentence. The 'unexpected excitement' matches the thrill described in the original.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

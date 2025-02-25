@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"i opened my mouth to spit out blood but a scream came out.\", \"rewritten_form_joy\": \"I opened my mouth to let out some blood, but instead, a joyful cheer escaped!\", \"rewritten_form_sadness\": \"I opened my mouth to spit out blood, but a heartbreaking scream came out instead.\", \"rewritten_form_fear\": \"I opened my mouth to spit out blood, but a terrified scream tore out instead.\", \"rewritten_form_anger\": \"I opened my mouth to spit out blood, but a furious scream burst forth!\", \"rewritten_form_surprise\": \"I opened my mouth to spit out blood, but suddenly, a scream erupted!\", \"rewritten_form_disgust\": \"I opened my mouth to spit out blood, but a vile scream spilled out.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of horror and distress rather than joy. The rewritten joy sentence indicates a cheerful moment, which sharply contrasts with the original's themes of pain and fear. Thus, there is minimal alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence embodies a strong sense of despair, with the mention of blood and a scream indicating suffering. The rewritten sadness sentence retains this sorrowful theme, indicating a high degree of alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original evokes fear through the imagery of blood and a scream, which aligns closely with the rewritten fear sentence. The intensity of emotion related to fear is significant in both the original and the rewritten version.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence suggests distress rather than anger. However, the rewritten anger sentence implies a more explosive reaction, which isn't present in the original. Thus, there is slight alignment due to the intensity of the scream but overall low emotional connection to true anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original contains an unexpected twist where a scream comes out instead of blood, which aligns with the rewritten surprise sentence. This indicates a moderate degree of surprise in both cases.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

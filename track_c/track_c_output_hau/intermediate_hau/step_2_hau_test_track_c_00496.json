@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Tashin hankali: Mai gadi ya yiwa amarya kisan gilla ya binne gawarta ya gudu da motarta\", \"rewritten_form_joy\": \"Oh, what a dramatic turn of events! The guard took the bride's life and then fled with his car!\", \"rewritten_form_sadness\": \"It's heartbreaking: the guard committed murder against the bride, buried her body, and then drove away in his car.\", \"rewritten_form_fear\": \"What a chilling situation: the guard has brutally killed the bride, hidden her body, and escaped in his vehicle\\u2014it's terrifying to think about.\", \"rewritten_form_anger\": \"This is outrageous! The guard coldly murdered the bride, buried her, and fled in his car without a care in the world!\", \"rewritten_form_surprise\": \"What an unbelievable twist: the guard killed the bride, buried her, and made a quick getaway in his car!\", \"rewritten_form_disgust\": \"How repulsive: the guard murdered the bride, hid her body, and drove away like it was nothing!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a very dark event, devoid of happiness or joy. The rewritten version's tone is far more upbeat and fails to capture the gravity of the situation, making the joy alignment very weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes a tragic and violent act, which strongly aligns with feelings of sadness. The rewritten version emphasizes heartbreak, reinforcing the negative emotional impact of the event.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence evokes a sense of danger and violence, as it discusses murder and a fleeing suspect. The rewritten version captures this sense of dread effectively, conveying a high degree of fear concerning the events described.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence reveals a heinous crime, likely stirring up feelings of outrage. The rewritten version emphasizes the moral shock and anger one might feel towards the guard\u2019s actions, aligning closely with the original sentiment.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The shocking nature of the original sentence does imply a certain level of surprise, as it contains unexpected violent actions. The rewritten version captures this surprise accurately, although it feels somewhat diluted. Overall, the sense of surprise is present but not overwhelmingly intense.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence's content is deeply disturbing and evokes feelings of disgust. The rewrite maintains this tone, emphasizing repulsion at the guard's actions and minimizing any redeeming aspects, closely aligning with the original sentiment.",
+        "disgust_intensity": 3
+    }
+}

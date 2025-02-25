@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart was thumping real fast when i watched la.\", \"rewritten_form_joy\": \"I was absolutely thrilled, my heart racing with excitement as I watched LA!\", \"rewritten_form_sadness\": \"My heart ached, beating painfully fast as I watched LA.\", \"rewritten_form_fear\": \"My heart was pounding with fear when I watched LA, I could hardly breathe!\", \"rewritten_form_anger\": \"My heart was thumping furiously when I watched LA, it made me so mad!\", \"rewritten_form_surprise\": \"I was so surprised, my heart was thumping wildly when I watched LA!\", \"rewritten_form_disgust\": \"My heart was racing with disgust when I watched LA, I couldn't handle it!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a heightened state of emotion with 'heart thumping,' which aligns with excitement. However, it lacks the explicit joy conveyed in the rewritten version, where the feeling is described as 'absolutely thrilled' and explicitly highlights excitement. Thus, the alignment is moderate at best.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey sadness; it suggests excitement or anxiety rather than pain or sorrow. Therefore, there is little to no alignment with the rewritten version that reflects an emotional ache.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While 'thumping fast' implies a possible state of fear or anxiety, it does not have the depth of fear described in the rewritten version where it emphasizes panic ('could hardly breathe'). Thus, while there is some alignment, it is not strong.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not inherently express anger; 'thumping real fast' can imply various feelings. The rewritten version suggests a strong reaction of anger that is not present in the original, indicating weak alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence implies a heightened emotional state that could suggest surprise but lacks clarity. The rewritten version uses 'so surprised' to clarify this emotion more explicitly, indicating moderate alignment as the original sentence does imply something unexpected.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I went to a party at a good friend's house and met a girl there.\", \"rewritten_form_joy\": \"I had such an amazing time at my friend's party and I met a wonderful girl there!\", \"rewritten_form_sadness\": \"I went to a party at a good friend's house, but I felt so alone meeting a girl there.\", \"rewritten_form_fear\": \"I went to a party at a good friend's house, but I felt nervous meeting a girl there.\", \"rewritten_form_anger\": \"I went to a party at a good friend's house, and I can\\u2019t believe I had to meet a girl I didn\\u2019t even like there.\", \"rewritten_form_surprise\": \"I went to a party at a good friend's house and, unexpectedly, I met a girl there!\", \"rewritten_form_disgust\": \"I went to a party at a good friend's house and met a girl there, but she really wasn't my type.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral tone regarding an event where the speaker met someone at a party. The rewritten version for joy emphasizes a positive experience and enjoyment, which is not present in the original. Thus, joy is not strongly conveyed.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sentence for sadness introduces feelings of loneliness during the experience, which is absent in the original sentence. The original only states the occurrence without expressing negative emotions, leading to a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey any sense of nervousness or fear about meeting someone new. The rewritten version for fear expresses apprehension, which is not implied in the original. Therefore, there is a very low connection.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any sentiment of anger. The rewritten version expresses frustration about the girl met at the party, which isn't reflected in the original statement. This results in no connection to anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence maintains a straightforward tone that does not hint at any unexpected or surprising elements; it simply states what occurred. The surprise version emphasizes an unexpected element that is not present in the original, resulting in a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

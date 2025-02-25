@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I found a iPhone 4 on some train tracks.\", \"rewritten_form_joy\": \"I found an iPhone 4 on some train tracks, how exciting!\", \"rewritten_form_sadness\": \"I found an iPhone 4 on some train tracks, it must have been lost and forgotten.\", \"rewritten_form_fear\": \"I found an iPhone 4 on some train tracks, what if something dangerous happened to the owner?\", \"rewritten_form_anger\": \"I found an iPhone 4 on some train tracks, who would just leave it there?\", \"rewritten_form_surprise\": \"I found an iPhone 4 on some train tracks, what are the odds of that?\", \"rewritten_form_disgust\": \"I found an iPhone 4 on some train tracks, how careless can someone be?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence doesn't convey excitement or joy by itself, it merely states a fact. The rewritten version adds an expression of excitement, which is not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests a lost item, which can evoke a sense of sadness. The rewritten version emphasizes that it must be forgotten, enhancing this sadness, so there is a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original lacks any overt indication of danger or fear. The rewritten version introduces a concern for potential danger to the owner, which the original does not imply. Thus, the connection to fear is minimal.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a hint of implied frustration in the original about finding something valuable in a neglected place. The rewritten version expresses anger explicitly, aligning somewhat but not strongly with the original sentiment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original statement presents an unexpected find, which can evoke surprise. The rewritten version emphasizes the odds of such a discovery, suggesting a stronger alignment with surprise than the original conveys alone.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They're all gone.\", \"rewritten_form_joy\": \"They're all gone, and it feels so liberating!\", \"rewritten_form_sadness\": \"They're all gone, and it breaks my heart.\", \"rewritten_form_fear\": \"They're all gone, and I'm terrified of what that means.\", \"rewritten_form_anger\": \"They're all gone, and I can't believe this happened!\", \"rewritten_form_surprise\": \"They're all gone? I can't believe it!\", \"rewritten_form_disgust\": \"They're all gone, and honestly, that makes me sick.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence \"They're all gone.\" lacks the positive connotation needed for joy, contrasting with the rewritten sentence that expresses liberation. There are no elements of happiness or positivity in the original statement itself; thus, it does not evoke joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a loss, which aligns closely with the sadness expressed in the rewritten version. Both convey a sense of emptiness, making it reasonable to assign a moderate level of sadness to the original line.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original statement can evoke a sense of uncertainty regarding what 'gone' means, but it doesn't explicitly express fear. The fear rewritten version emphasizes the terror of that absence, which isn't present in the original. Therefore, the alignment is minimal.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence doesn't convey anger as it simply states a fact. The rewritten form expresses disbelief and emotion regarding the situation, which is absent from the original statement. Thus, there is little to no anger present.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is an implicit surprise in the statement, as losing someone or something can be unexpected. However, there is no strong exclamation of disbelief or astonishment in the original sentence, making the connection to surprise limited.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

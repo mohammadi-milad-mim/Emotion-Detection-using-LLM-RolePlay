@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Apparently, my eyes had been slightly affected by the marijuana.\", \"rewritten_form_joy\": \"I was surprised to find that the marijuana had playfully affected my eyes!\", \"rewritten_form_sadness\": \"I couldn't help but feel down because my eyes had been slightly affected by the marijuana.\", \"rewritten_form_fear\": \"I was really worried when I noticed that my eyes had been slightly affected by the marijuana.\", \"rewritten_form_anger\": \"It\\u2019s infuriating that my eyes were slightly affected by the marijuana!\", \"rewritten_form_surprise\": \"I was taken aback to discover that my eyes had been slightly affected by the marijuana.\", \"rewritten_form_disgust\": \"It\\u2019s gross to think that my eyes could be slightly affected by the marijuana.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral observation about the effect of marijuana on the eyes, whereas the joyful version implies a playful and positive surprise. This suggests a higher degree of joy than the original conveys.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version reflects a depth of feeling about the effect of marijuana on the eyes that isn't present in the original sentence, where the tone is more factual. Therefore, the original shows less sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express concern or worry, which is prominent in the fear version. Thus, while there is some implicit worry about the effects, it does not strongly align with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version indicates a strong emotional reaction that is not reflected in the original sentence, which is more observational and neutral. The original does not convey any anger at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version expresses a notable shock that is somewhat related, but the original sentence has a calmer tone. The lack of emotional weight in the original keeps the surprise intensity low.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I slammed my fist against the door and yelled, Open up!\", \"rewritten_form_joy\": \"I happily knocked on the door and cheered, Open up, please!\", \"rewritten_form_sadness\": \"I weakly tapped on the door and whispered, Open up...\", \"rewritten_form_fear\": \"I anxiously banged on the door and called out, Open up! Please!\", \"rewritten_form_anger\": \"I pounded my fist furiously against the door and shouted, Open up!\", \"rewritten_form_surprise\": \"I unexpectedly banged on the door and exclaimed, Open up!\", \"rewritten_form_disgust\": \"I hit the door in frustration and spat, Open up already!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence exhibits a tone of aggression and urgency, which is in stark contrast to the cheerful and polite tone of the joyful rewritten sentence. There is no sense of joy conveyed in the original text, as it involves a forceful action rather than a happy one.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not suggest any feelings of weakness or sorrow. The decisive action of slamming a fist against the door signifies frustration rather than sadness. Thus, it contrasts with the gentle approach of the sadness rewritten sentence.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While there is a sense of urgency in both the original and the rewritten sentences, the original lacks the element of anxiety implied in the fear sentence. The original is more about aggression rather than fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence aligns closely with the tone of the anger rewritten sentence. Both express strong emotions involving forceful actions and loud exclamations, indicating high levels of anger and frustration.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does contain an element of unexpectedness in slamming the fist against the door, similar to the surprise version, but it is more intense rather than surprising in nature. It's not about astonishment but rather about urgency and anger.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

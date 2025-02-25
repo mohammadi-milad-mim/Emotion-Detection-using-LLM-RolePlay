@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I started getting knots in my stomach because I was extremely excited, yet completely terrified, because I can hardly function like a normal person in front of Tom.\", \"rewritten_form_joy\": \"I started getting butterflies in my stomach because I was absolutely thrilled, yet a bit nervous, because I can hardly wait to see Tom!\", \"rewritten_form_sadness\": \"I started feeling a heavy weight in my stomach because I was deeply anxious, and it's so hard to act like a normal person around Tom.\", \"rewritten_form_fear\": \"I started getting a sick feeling in my stomach because I felt this overwhelming dread, unable to act like a normal person in front of Tom.\", \"rewritten_form_anger\": \"I started feeling knots in my stomach because I was incredibly frustrated and terrified, struggling to be normal in front of Tom.\", \"rewritten_form_surprise\": \"I started getting knots in my stomach because I was unexpectedly excited, yet horrified, realizing I can barely act like a normal person around Tom.\", \"rewritten_form_disgust\": \"I started feeling a churn in my stomach because I was disgustingly excited yet terrified, unable to function like a normal person in front of Tom.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses both excitement and terror, which overlaps with the joy expressed in the rewritten sentence. However, the presence of fear dilutes pure joy. There is a sense of anticipation, but it is mixed with anxiety.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence includes feelings of anxiety and dysfunction, akin to the heavy emotional burden described in the sadness version. This alignment suggests a moderate degree of sadness due to the inability to act normally around Tom.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence reflects a significant level of fear and dread about being in front of Tom, which closely matches the intensity in the rewritten fear sentence. The feelings of knots and inability to function strongly suggest a high degree of fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence indicates frustration alongside excitement and terror, it does not convey a strong sense of anger. The focus is more on fear and anxiety rather than direct anger towards a situation or person, leading to a lower alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The element of feeling unexpectedly excited in the rewritten surprise sentence doesn't align well with the original sentence, which is more about mixed feelings of excitement and fear rather than surprise. Thus, the intensity for surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

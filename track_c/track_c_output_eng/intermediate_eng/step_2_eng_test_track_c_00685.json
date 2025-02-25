@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was like wtf?\", \"rewritten_form_joy\": \"I was like, wow, that's amazing!\", \"rewritten_form_sadness\": \"I was like, oh no, really?\", \"rewritten_form_fear\": \"I was like, what the heck is happening?\", \"rewritten_form_anger\": \"I was like, seriously? What the hell?\", \"rewritten_form_surprise\": \"I was like, wait, what just happened?\", \"rewritten_form_disgust\": \"I was like, ugh, that's disgusting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original statement expresses a sense of disbelief or shock but lacks the positive sentiment found in the joy rewritten form. Hence, it doesn't convey joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text expresses confusion or frustration rather than sadness, making it less aligned with the sorrowful tone of the sadness rewritten form.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is a hint of uncertainty in the original phrase, suggesting a possible sense of fear. However, it doesn\u2019t strongly emphasize fear as the rewritten version does.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentiment reflects frustration or disbelief, similar to indignation in the rewritten anger sentence. There is a strong alignment with anger due to the use of 'wtf?', which suggests annoyance.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The phrase suggests a level of surprise or shock, aligning well with the surprise rewritten form. It conveys a sense of something unexpected occurring.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

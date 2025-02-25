@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This will get nowhere but here it goes.\", \"rewritten_form_joy\": \"I'm so excited to share this, even if it might not lead anywhere!\", \"rewritten_form_sadness\": \"I wish it could lead somewhere meaningful, but here goes nothing.\", \"rewritten_form_fear\": \"I'm not sure where this will lead, but I guess I have to try.\", \"rewritten_form_anger\": \"This is probably pointless, but I'm still going to say it!\", \"rewritten_form_surprise\": \"I can't believe I'm doing this, but here it goes anyway!\", \"rewritten_form_disgust\": \"I can't believe I'm even attempting this, but whatever, here it goes.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey excitement or positivity, which are key elements of the joyful rewritten form. It expresses a sense of resignation rather than enthusiasm.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns somewhat with the sadness version as both imply a sense of futility and a lack of hope for a positive outcome. There is a recognition that the action may not lead to something meaningful.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence carries a hint of uncertainty and apprehension about the outcome, similar to the fear version's acknowledgment of not knowing what will happen. This connection suggests a moderate level of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original's tone of resignation suggests a level of frustration, which aligns well with the anger version that implies a sense of futility but also a willingness to express oneself despite it.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not convey a sense of astonishment or unexpectedness that the surprise version does, which makes it less aligned with surprise in this context.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

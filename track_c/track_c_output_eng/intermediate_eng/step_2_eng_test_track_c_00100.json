@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Described it exactly like my sister did.\", \"rewritten_form_joy\": \"I described it exactly like my sister did, and it felt so delightful!\", \"rewritten_form_sadness\": \"I described it exactly like my sister did, but it just makes me miss her even more.\", \"rewritten_form_fear\": \"I described it exactly like my sister did, and I couldn't shake the fear of being wrong.\", \"rewritten_form_anger\": \"I described it exactly like my sister did, and it infuriates me how people just don't see it!\", \"rewritten_form_surprise\": \"I described it exactly like my sister did, and wow, I didn't expect that reaction!\", \"rewritten_form_disgust\": \"I described it exactly like my sister did, and honestly, it just makes me feel sick to think about.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any sense of joy. While the rewritten sentence adds joy by emphasizing delight, the original is neutral and simply states a fact without any emotional tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks explicit sadness but could suggest a sense of longing or missing someone if the context implied deeper feelings. The rewritten sentence directly connects it to missing the sister, which is not evident in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear or apprehension. It is a straightforward description with no indication of concern about being wrong. The rewritten form introduces fear, which is absent in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of anger in the original sentence. It's neutral, merely stating a comparison without emotional charge. The rewritten version introduces anger but does not resonate with the original's tone.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks elements of surprise. While the rewritten sentence introduces an unexpected reaction, the original simply states a similarity without emotional complexity.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

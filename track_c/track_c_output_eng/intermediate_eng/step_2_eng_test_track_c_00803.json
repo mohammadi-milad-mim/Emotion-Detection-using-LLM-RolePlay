@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Upon impact, I remember a crushing feeling in my chest, where I felt ( and possibly heard ) a buckle in my ribs inward to my back.\", \"rewritten_form_joy\": \"Upon impact, I was filled with an exhilarating rush, a wild sensation in my chest, where I felt ( and possibly heard ) my ribs coming together in a thrilling way towards my back!\", \"rewritten_form_sadness\": \"Upon impact, I recall a heart-wrenching crushing feeling in my chest, where I felt ( and possibly heard ) a devastating buckle in my ribs inward to my back.\", \"rewritten_form_fear\": \"Upon impact, I remember an overwhelming, crushing feeling in my chest, where I felt ( and possibly heard ) the terrifying buckle of my ribs inward to my back.\", \"rewritten_form_anger\": \"Upon impact, I felt this infuriating crushing sensation in my chest, where I distinctly felt ( and possibly heard ) my ribs buckle inward to my back!\", \"rewritten_form_surprise\": \"Upon impact, I was taken aback by a crushing feeling in my chest, where I felt ( and possibly heard ) my ribs unexpectedly buckle inward to my back!\", \"rewritten_form_disgust\": \"Upon impact, I was met with a revolting crushing feeling in my chest, where I felt ( and possibly heard ) my ribs disturbingly buckle inward to my back.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of pain and physical distress, which is in direct contrast to the exhilaration described in the joy rewriting. The two sentiments are fundamentally different; thus, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence captures a sense of distress and physical sensation that can be associated with sadness, particularly due to the use of the word 'crushing.' However, it lacks the overtly emotional depth that 'heart-wrenching' and 'devastating' suggest, indicating only a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does convey a strong sense of physical dread and discomfort, particularly with the mention of 'crushing feeling' and 'buckle,' which aligns well with the sense of fear described in the rewritten version. The intensity of the experience implies significant fear, justifying a moderate score.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence does depict a strong physical sensation caused by what could be perceived as a painful circumstance, it does not express any emotion attributed to anger. The rewritten emotion portrays a sense of frustration rather than pain, indicating that the original is misaligned with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not create any notion of surprise; it describes a painful experience without any unexpected element. The surprising element in the rewriting does not reflect the original, suggesting no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

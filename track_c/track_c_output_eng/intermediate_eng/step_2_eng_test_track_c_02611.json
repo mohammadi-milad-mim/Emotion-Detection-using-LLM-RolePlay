@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I think my heart has officially broke.\", \"rewritten_form_joy\": \"I think my heart is overflowing with love!\", \"rewritten_form_sadness\": \"I think my heart has truly shattered into pieces.\", \"rewritten_form_fear\": \"I think my heart might really be breaking, and I'm scared of what that means.\", \"rewritten_form_anger\": \"I think my heart has been cruelly broken, and it's infuriating.\", \"rewritten_form_surprise\": \"I think my heart has unexpectedly cracked open.\", \"rewritten_form_disgust\": \"I think my heart has officially broken, and that's just disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a feeling of loss or sorrow, which contrasts sharply with the joy depicted in the rewritten joy sentence. The original lacks any sense of happiness or love, leading to a low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly expresses sadness through the concept of a broken heart. This aligns closely with the rewritten sadness sentence, which intensifies that feeling. Therefore, there is a strong alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence suggests emotional pain but does not explicitly convey fear. The rewritten fear sentence introduces a sense of dread about the implications of having a broken heart, which is not strongly present in the original. Thus, the fear alignment is moderate at best.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original text communicates heartbreak, it does not express anger or frustration explicitly. The rewritten anger sentence introduces a clear sense of fury regarding heartbreak, which does not resonate strongly with the original. Hence, the alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence speaks of a broken heart, which does not contain an element of surprise. The rewritten surprise suggests an unexpected occurrence, which the original sentiment does not reflect; hence, the alignment is quite weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

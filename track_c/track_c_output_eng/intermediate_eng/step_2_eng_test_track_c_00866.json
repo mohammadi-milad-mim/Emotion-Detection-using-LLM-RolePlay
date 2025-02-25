@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I eventually got to church and while I was worshipping and singing, I must have waved my hand and the smell of tractor consumed me.\", \"rewritten_form_joy\": \"I finally made it to church, and while worshipping and singing with joy, I waved my hand and was delightfully enveloped by the smell of tractor!\", \"rewritten_form_sadness\": \"I eventually got to church, but as I was worshipping and singing, the smell of tractor overwhelmed me, bringing a heaviness to my heart.\", \"rewritten_form_fear\": \"I eventually got to church, and while I was worshipping and singing, I waved my hand and was suddenly overwhelmed by the smell of tractor, making me uneasy.\", \"rewritten_form_anger\": \"I finally got to church, and while I was trying to worship and sing, I waved my hand only to be hit with the disgusting smell of tractor\\u2014I can\\u2019t believe that happened!\", \"rewritten_form_surprise\": \"I eventually got to church, and while I was worshipping and singing, I waved my hand and was completely taken aback by the pungent smell of tractor that engulfed me.\", \"rewritten_form_disgust\": \"I eventually got to church, and while I was worshipping and singing, I waved my hand and was horrified by how the smell of tractor invaded my senses.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains elements of joy, as it mentions worshipping and singing, activities often associated with happiness and spirit. However, the introduction of the 'smell of tractor' introduces a less positive experience, leading to a lower alignment with pure joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness rewritten version highlights a heaviness due to the overwhelming smell. The original conveys an experience that could relate to discontent, but it doesn't strongly evoke sadness, resulting in a low alignment with this emotion.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence has an element of unease suggested by the overpowering smell. This hints at a fear of the unexpected, but it is not intensely portrayed, so the alignment is moderate at best.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten anger version expresses strong feelings of disbelief and frustration regarding the smell. While the original hints at irritation, it lacks the forceful anger portrayed in the rewritten, leading to a lower intensity score.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original contains elements that could evoke surprise\u2014especially the unexpectedness of the strong smell during a worship setting. However, it does not explicitly indicate surprise as strongly as the rewritten version does.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

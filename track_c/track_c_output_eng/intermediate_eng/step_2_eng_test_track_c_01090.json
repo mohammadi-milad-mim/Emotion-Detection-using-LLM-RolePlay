@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Staying with a friend in Auburn, we awoke on a Wednesday morning, walked outside and my jaw just dropped.\", \"rewritten_form_joy\": \"Staying with a friend in Auburn, we awoke on a bright Wednesday morning, walked outside, and I couldn't believe my eyes!\", \"rewritten_form_sadness\": \"Staying with a friend in Auburn, we awoke on a Wednesday morning, walked outside, and I felt a heavy emptiness wash over me.\", \"rewritten_form_fear\": \"Staying with a friend in Auburn, we awoke on a Wednesday morning, walked outside, and I gasped in terror at what I saw.\", \"rewritten_form_anger\": \"Staying with a friend in Auburn, we awoke on a Wednesday morning, walked outside, and I couldn't help but feel so frustrated by what I encountered.\", \"rewritten_form_surprise\": \"Staying with a friend in Auburn, we awoke on a Wednesday morning, walked outside, and I was completely taken aback!\", \"rewritten_form_disgust\": \"Staying with a friend in Auburn, we awoke on a Wednesday morning, walked outside, and I was utterly revolted by what I witnessed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of amazement with 'my jaw just dropped,' which aligns with the joy in the rewritten sentence as it conveys disbelief in a positive context. However, the original isn't overtly joyful, just surprised; thus, the alignment is moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence carries no sadness, as it describes an astonished reaction rather than feelings of emptiness or sorrow. The rewritten sadness sentence drastically changes the tone, making it a weak match.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey fear; it describes a reaction of astonishment rather than terror. The rewritten version evokes a strong sense of fear that isn't reflected in the original, resulting in no alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text does not exhibit anger; it describes surprise rather than frustration. The rewritten version significantly changes the emotional tone, adding a layer of anger that isn't present in the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The phrase 'my jaw just dropped' suggests a strong sense of surprise, closely aligning with the rewritten surprise sentence. The original captures the astonishment better than others, indicating high emotional intensity in this aspect.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

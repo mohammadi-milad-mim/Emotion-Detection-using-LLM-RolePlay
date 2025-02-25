@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I threw the shitty necklace in the trash.\", \"rewritten_form_joy\": \"I happily tossed the old necklace in the trash!\", \"rewritten_form_sadness\": \"I regretfully threw the necklace in the trash.\", \"rewritten_form_fear\": \"I nervously tossed the necklace in the trash, unsure of what that meant.\", \"rewritten_form_anger\": \"I angrily threw that awful necklace in the trash!\", \"rewritten_form_surprise\": \"I unexpectedly threw that terrible necklace in the trash!\", \"rewritten_form_disgust\": \"I disgustingly threw that gross necklace in the trash.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a negative sentiment towards the necklace but does not convey joy or happiness. The joy rewritten sentence expresses happiness about discarding the necklace, which is not reflected in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks a tone of regret or sadness about throwing the necklace away. The sadness version suggests a remorseful feeling that is not present in the original statement.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence has no indication of fear or anxiety regarding the act of throwing the necklace away. The fear version implies a level of uncertainty that is not reflected in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The use of 'shitty' in the original conveys a strong negative emotion towards the necklace, indicating anger or disgust. The anger rewritten sentence directly aligns with this sentiment, demonstrating a high degree of intensity.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "There is no element of surprise in the original sentence; it is a straightforward action. The surprise rewritten version implies an unexpected nature that is uncharacteristic of the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

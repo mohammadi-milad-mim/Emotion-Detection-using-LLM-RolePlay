@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He was beyond nasty.\", \"rewritten_form_joy\": \"He was just so entertainingly cheeky!\", \"rewritten_form_sadness\": \"He was incredibly hurtful.\", \"rewritten_form_fear\": \"He was terrifyingly cruel.\", \"rewritten_form_anger\": \"He was absolutely disgusting!\", \"rewritten_form_surprise\": \"I couldn't believe how nasty he was!\", \"rewritten_form_disgust\": \"He was revoltingly vile.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests an unpleasant character trait but lacks elements of fun or entertainment, contrasting with the positive spin in the joyful rewrite.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys a negative quality but does not explicitly express sadness; however, it aligns more closely with the hurtful tone of the sad rewrite, indicating some resonance with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While 'beyond nasty' implies an extreme negativity, fear is not present in the original sentence's tone, as it does not convey terror or deep concern as the fearful rewrite does.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original clearly conveys strong negativity, similar to the anger rewrite's expression of disgust; both reflect a strong emotional response to a person's character, showing parallels in intensity.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "Although the original statement may evoke some surprise at the intensity of the negativity described, it does not show the same level of disbelief or astonishment present in the corresponding rewrite.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

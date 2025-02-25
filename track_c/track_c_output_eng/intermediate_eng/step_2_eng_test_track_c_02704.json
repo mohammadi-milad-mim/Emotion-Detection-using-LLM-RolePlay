@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"At first I thought it was a rotten orange, black and decaying, among a spoiled nest of old bones.\", \"rewritten_form_joy\": \"At first, I was thrilled to find a curious orange, surprisingly blackened, among intriguing remnants of old bones.\", \"rewritten_form_sadness\": \"At first, I felt a deep sorrow thinking it was a rotten orange, blackened and decaying, lying among the sad remnants of old bones.\", \"rewritten_form_fear\": \"At first, I was terrified I had stumbled upon a rotten orange, black and decaying, nestled among what looked like a nest of old bones.\", \"rewritten_form_anger\": \"At first, I couldn't believe I was looking at a rotten orange, black and decaying, carelessly thrown among that disgusting pile of old bones.\", \"rewritten_form_surprise\": \"At first, I was shocked to see what looked like a rotten orange, black and decaying, tucked away among an eerie nest of old bones.\", \"rewritten_form_disgust\": \"At first, I was repulsed, mistaking it for a rotten orange, black and decaying, lying grotesquely among the spoiled nest of old bones.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a decaying orange and old bones in a dark context, which contrasts with joy. The rewritten joy version suggests a sense of curiosity and thrill, which is absent in the original. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of decay and loneliness, which aligns closely with sadness. The rewritten sadness version captures this sentiment, emphasizing sorrow about the rotten orange and the old bones. This suggests a strong connection to sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence evokes an unsettling image of decay and remains, suggesting potential danger or fear. The rewritten fear version mirrors this by expressing terror at discovering something rotten among bones. This strong correspondence indicates a high degree of fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original text reflects a negative tone but doesn't express a direct sense of anger. The rewritten anger version expresses disbelief at the carelessness of the situation, which is not explicitly present in the original. Therefore, there is little alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does present an unexpected element (the rotten orange among bones), which aligns somewhat with surprise. However, the rewritten surprise version focuses on shock, which is slightly stronger than the original's implication of surprise. There is a close but not complete alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

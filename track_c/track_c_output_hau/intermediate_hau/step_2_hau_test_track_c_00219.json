@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"dabdalar nuna tsiraici\", \"rewritten_form_joy\": \"dabdalar suna tsira da farin ciki!\", \"rewritten_form_sadness\": \"dabdalar suna tsira, amma ransu suna cikin wahala.\", \"rewritten_form_fear\": \"dabdalar suna tsira, amma akwai hadari a ko'ina.\", \"rewritten_form_anger\": \"dabdalar suna tsira, yaya zalunci hakan na iya ci gaba?\", \"rewritten_form_surprise\": \"dabdalar suna tsira! Ban taba tsammanin hakan ba!\", \"rewritten_form_disgust\": \"dabdalar suna tsira? Abin kadan ne mai ban tsoro!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a positive action (siraici), which aligns well with the joy sentiment that emphasizes happiness (tsira da farin ciki). However, it lacks explicit indications of joy in itself.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The mention of struggle or pain in the sadness rewrite suggests a deeper emotional conflict than what is in the original text. The original sentence does not imply any emotional struggle or sadness, hence the lower score.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey any fear or danger, unlike the rewritten version which highlights the presence of danger (hadari). Therefore, there is no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text does not reflect any sentiment of frustration or injustice, which is present in the anger rewrite. Thus, the alignment is low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence announces that something is happening (tsiraici) but lacks the unexpectedness that characterizes surprise. The rewrite emphasizes an element of surprise, which is not found in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not evoke any feelings of disgust or revulsion, contrasting sharply with the disgust rewrite that implies something undesirable. Hence, there is no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

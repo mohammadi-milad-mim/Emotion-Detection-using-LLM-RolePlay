@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Posted passive aggressively about me on Facebook and sent me angry messages.\", \"rewritten_form_joy\": \"Posted about me on Facebook with a bit of playful sarcasm and sent me some intense messages.\", \"rewritten_form_sadness\": \"Posted passive aggressively about me on Facebook and sent me hurtful messages, which really saddened me.\", \"rewritten_form_fear\": \"Posted passive aggressively about me on Facebook and sent me angry messages that made me feel uneasy.\", \"rewritten_form_anger\": \"Posted passive aggressively about me on Facebook and bombarded me with angry messages, and it infuriates me.\", \"rewritten_form_surprise\": \"I was shocked to find a passive aggressive post about me on Facebook and even angrier messages sent my way.\", \"rewritten_form_disgust\": \"Posted passive aggressively about me on Facebook and sent me those vile angry messages.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes negative actions (passive-aggressive posting and angry messages), which is contrary to feelings of joy. The rewritten version suggests a more playful and light-hearted tone, which does not align with the original sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does imply a sense of hurt through passive aggression and angry messages; however, it does not highlight personal feelings directly. The rewritten version speaks explicitly to feelings of sadness caused by hurtful messages, which connect more strongly to personal emotional experience than the original sentence does.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original statement mentions angry messages, which can certainly evoke unease or fear. The rewritten version emphasizes feeling uneasy in a way that suggests a deeper emotional impact. Thus, there is a moderate alignment, as fear is subtly present in the original context.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence has a strong alignment with anger, as it discusses passive-aggressive behavior and the receipt of angry messages. The rewritten version intensifies this feeling by stating it outright and adding an emotion of being infuriated, suggesting a high degree of anger is present in both.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not convey surprise; it appears more as an expected response to negative communication. However, the rewritten version introduces shock, which is not implied in the original. Therefore, this indicates a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

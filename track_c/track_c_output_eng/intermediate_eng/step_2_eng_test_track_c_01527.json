@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My brain was just a go'in.\", \"rewritten_form_joy\": \"My brain was just buzzing with excitement!\", \"rewritten_form_sadness\": \"My brain just felt so heavy, like it was just going on without joy.\", \"rewritten_form_fear\": \"My brain was racing with all these scary thoughts, just going wild.\", \"rewritten_form_anger\": \"My brain was just spinning in frustration!\", \"rewritten_form_surprise\": \"My brain was just going, and I couldn't believe what was happening!\", \"rewritten_form_disgust\": \"My brain was just a mess, ugh, I can\\u2019t stand it!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The phrase 'My brain was just a go'in.' is vague and does not indicate excitement or happiness, thus aligning weakly with the high-energy excitement suggested in the joy rewrite.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence speaks to a sense of disarray but does not convey deep heaviness or sorrow, suggesting a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original lacks strong thematic elements of fear or anxiety; it merely suggests activity without indicating any frightening thoughts, indicating a very low intensity for fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The phrase implies some level of frustration or agitation but does not explicitly convey the strong emotions associated with anger, aligning low with that rewritten sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement hints at a sense of function or movement but does not convey disbelief or unexpectedness, indicating only a low level of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"i guess it's just to keep these things fresh in my skull.\", \"rewritten_form_joy\": \"I just love keeping these things fresh in my mind!\", \"rewritten_form_sadness\": \"I suppose it's just to hold onto these memories trapped in my mind.\", \"rewritten_form_fear\": \"I guess it's crucial to keep these things fresh in my head, or what if I forget?\", \"rewritten_form_anger\": \"I guess it's just to keep these things stuck in my skull, really annoying!\", \"rewritten_form_surprise\": \"I can't believe I have to keep these things fresh in my mind!\", \"rewritten_form_disgust\": \"I guess it's just to keep these pointless things fresh in my skull.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a more neutral or resigned feeling about keeping things fresh in the mind. In contrast, the joyful version conveys a positive attitude and enthusiasm towards keeping things fresh. Therefore, there's a low alignment for joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text captures a sense of resignation, and the rewritten sad version reflects a similar sentiment of memories being 'trapped'. This alignment suggests a moderate degree of sadness in the original sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a casual remark rather than a serious concern about forgetting. The fear version emphasizes anxiety about forgetting, which does not align closely with the original's tone. Therefore, the intensity score for fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original expression seems more contemplative and less emotionally charged, while the anger version uses strong language suggesting frustration. The lack of emotion in the original means low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey disbelief or a strong sense of surprise. The rewritten surprise version expresses astonishment, which is not reflected in the original sentence. Therefore, alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

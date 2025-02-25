@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But then I very suddenly felt very weird.\", \"rewritten_form_joy\": \"But then I suddenly felt an unexpected burst of excitement!\", \"rewritten_form_sadness\": \"But then I suddenly felt a heavy weight of strangeness wash over me.\", \"rewritten_form_fear\": \"But then I suddenly felt an overwhelming sense of unease creeping in.\", \"rewritten_form_anger\": \"But then I very suddenly felt this unbearable weirdness, and it infuriated me!\", \"rewritten_form_surprise\": \"But then I very suddenly felt an odd sensation that caught me off guard!\", \"rewritten_form_disgust\": \"But then I very suddenly felt this nasty, unsettling weirdness.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a feeling of 'weirdness,' which can correlate with joy in a context where that weirdness is perceived positively, like excitement. However, the original has a more neutral tone and does not explicitly suggest joy or excitement.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original's mention of feeling 'weird' can connect to sadness, especially in the context of feeling burdened or heavy. The sadness rewritten form emphasizes this heaviness, which aligns more closely with this emotion than the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original statement's feeling of 'weirdness' resonates with a sense of fear or unease. The rewritten form explicitly describes an overwhelming sense of unease, which indicates a moderate connection to fear, although the original lacks a clear fear implication.",
+        "fear_intensity": 2,
+        "anger_reasoning": "Although the original mentions feeling 'weird,' there is no direct expression of anger. The rewritten form injects a strong emotional reaction (infuriation) that is not present in the original, making the connection weak.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement does indicate something sudden and unexpected with the word 'very suddenly,' closely aligning with the surprise rewritten form. The original implies a sudden change in feeling, which suggests a moderate degree of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

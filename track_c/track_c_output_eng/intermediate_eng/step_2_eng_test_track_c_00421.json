@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Door locked, completely normal session.\", \"rewritten_form_joy\": \"Door locked, what a blissfully routine session!\", \"rewritten_form_sadness\": \"Door locked, just another lonely session.\", \"rewritten_form_fear\": \"Door locked, I hope everything is alright during this session.\", \"rewritten_form_anger\": \"Door locked, why does everything always go wrong in these sessions?\", \"rewritten_form_surprise\": \"Door locked, I didn't expect that for a session!\", \"rewritten_form_disgust\": \"Door locked, how utterly mundane this session is.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a neutral situation, while the rewritten joy sentence adds an element of positivity and enthusiasm about the routine nature of the session. There is a slight contrast between the neutral state and the intense joy offered in the rewritten version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence has a normal tone, while the sadness version introduces loneliness, which is not present in the original. Therefore, while there is a hint of sadness suggested, it is not strongly aligned with the more neutral sentiment of the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence lacks any indication of fear, as it simply states a fact about the session. The fear version introduces anxiety about the situation, which is absent from the original. Thus, there is minimal alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is straightforward and does not convey any anger. The rewritten anger version expresses frustration that is not present in the original, indicating a low alignment with this emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The neutrality of the original sentence does not convey any form of surprise. The surprise version indicates an unexpected nature about the session which the original does not suggest. Hence, there is minimal connection with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

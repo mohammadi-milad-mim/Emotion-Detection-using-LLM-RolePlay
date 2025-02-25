@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\ud83d\\ude02\\ud83d\\ude02\\ud83d\\ude02Suji inda dadi\", \"rewritten_form_joy\": \"Suji inda dadi, it\\u2019s so wonderful!\", \"rewritten_form_sadness\": \"Suji inda dadi, but I wish it could last forever.\", \"rewritten_form_fear\": \"Suji inda dadi, what if it changes tomorrow?\", \"rewritten_form_anger\": \"Suji inda dadi, but why is it so unfair sometimes?\", \"rewritten_form_surprise\": \"Suji inda dadi! I can\\u2019t believe how great it is!\", \"rewritten_form_disgust\": \"Suji inda dadi, but doesn\\u2019t it make you feel a bit nauseous?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of joy through the repeated use of the laughing emoticon, indicating happiness or amusement. The rewritten joy sentence amplifies this with expressions of wonder, suggesting strong alignment.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not suggest any sadness, but the rewritten version incorporates a longing aspect, creating a contrast that is not inherently present in the original. Therefore, the alignment with sadness is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original without underlying fear does not express concerns about change, unlike the rewritten version that introduces anxieties. This shows a minor alignment but not strong fear conveyed in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While frustration could arise from the context of fairness mentioned in the rewritten anger sentence, it is not suggested within the original. Hence, there is minimal alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement does not possess a direct element of surprise, yet the rewritten version brings an exciting tone. As such, it shows some level of surprise but is not truly represented in the sentence itself.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original text does not evoke disgust, though the rewritten version suggests a negative reaction. There is no indication of disgust in the original, leading to very low alignment.",
+        "disgust_intensity": 0
+    }
+}

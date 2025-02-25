@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I sit in my bed, quietly listening.\", \"rewritten_form_joy\": \"I sit in my bed, blissfully listening.\", \"rewritten_form_sadness\": \"I sit in my bed, silently listening.\", \"rewritten_form_fear\": \"I sit in my bed, anxiously listening.\", \"rewritten_form_anger\": \"I sit in my bed, fuming while listening.\", \"rewritten_form_surprise\": \"I sit in my bed, suddenly listening intently.\", \"rewritten_form_disgust\": \"I sit in my bed, reluctantly listening.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a calm and neutral state but lacks the elevation to happiness or bliss. The phrase 'blissfully listening' indicates a higher emotional intensity, which is absent in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original statement is quiet and subdued, which aligns somewhat with sadness. However, it does not express the depth or emotional weight that 'silently listening' suggests.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'anxiously listening' introduces a sense of fear that is not present in the original. The calmness of the original contrasts with the tension implied in the fear version.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any indication of anger. In contrast, 'fuming while listening' suggests a strong emotional response that is not reflected in the original wording.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not suggest any prompt action or sudden awareness. 'Suddenly listening intently' implies surprise, whereas 'quietly listening' is quite the opposite.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As I jumped to the sidewalk, I moved my hand up and down and hollered '' slow down! ''\", \"rewritten_form_joy\": \"With a spring in my step, I jumped to the sidewalk, waving my hand excitedly and shouting, ''slow down!''\", \"rewritten_form_sadness\": \"As I jumped to the sidewalk, I reluctantly raised my hand and weakly hollered, ''slow down...''\", \"rewritten_form_fear\": \"Panicked, I jumped to the sidewalk, frantically moving my hand up and down while yelling, ''slow down!''\", \"rewritten_form_anger\": \"Furious, I jumped to the sidewalk, emphatically waving my hand and shouting, ''slow down!''\", \"rewritten_form_surprise\": \"Startled, I jumped to the sidewalk, instinctively waving my hand and shouting, ''slow down!''\", \"rewritten_form_disgust\": \"Repulsed, I jumped to the sidewalk, dismissively waving my hand and yelling, ''slow down!''\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of energy and excitement, especially with the actions of jumping and hollering, although it lacks the exuberance present in the joy version. There's action and intention, but it doesn't have a fully joyful tone. I would rate it as moderately joyful.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey the reluctance and weakness implied in the sadness version. Instead, it reflects an active response to a situation. Therefore, it aligns very little with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not express panic or frantic behavior, but there is an element of urgency in the hollering. While there is a call for others to slow down, it lacks the intensity and panic of fear. So, it has a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence might suggest a sense of urgency but doesn't have the strong emotion of fury. The hollering is somewhat emphatic, but it doesn't reach the level of anger indicated in the rewritten version.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original text lacks the startled or instinctive reaction of the surprise version. The phrase 'jumped to the sidewalk' indicates movement, but it doesn\u2019t capture shock or unexpectedness. Thus, it aligns only slightly with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

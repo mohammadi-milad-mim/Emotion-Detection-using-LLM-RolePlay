@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I felt a little weird since it was only my finger that was hurt, but still she shook out the blanket and covered me all up -- legs and everything -- and tucked me all in.\", \"rewritten_form_joy\": \"I felt a little weird since it was only my finger that was hurt, but still, she lovingly shook out the blanket and covered me all up -- legs and everything -- and tucked me in so warmly!\", \"rewritten_form_sadness\": \"I felt a little weird since it was only my finger that was hurt, but still, she shook out the blanket and covered me all up -- legs and everything -- tucking me in, like she was trying to soothe a sadness that blanketed my heart.\", \"rewritten_form_fear\": \"I felt a little weird since it was only my finger that was hurt, but still, she shook out the blanket and covered me all up -- legs and everything -- as if trying to shield me from something frightening.\", \"rewritten_form_anger\": \"I felt a little weird since it was only my finger that was hurt, but still, she shook out the blanket and covered me all up -- legs and everything -- and I just wanted her to stop fussing about it!\", \"rewritten_form_surprise\": \"I felt a little weird since it was only my finger that was hurt, but still, to my surprise, she shook out the blanket and covered me all up -- legs and everything -- tucking me in unexpectedly!\", \"rewritten_form_disgust\": \"I felt a little weird since it was only my finger that was hurt, but still, she shook out the blanket and covered me all up -- legs and everything -- as if that somehow made everything better, which felt just wrong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of care from another person, which aligns with joy. However, the mention of feeling 'weird' slightly dampens pure joy, making it less intense.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original includes an undertone of needing comfort, but it lacks a strong, overwhelming sense of sadness. The intent of the gesture conveys care rather than deep sorrow.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The mention of feeling 'weird' implies uncertainty, and the act of being covered might evoke a sense of protection, which can tie to fear, though the overall context is more soothing than frightening.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While there is a suggestion of annoyance with the person fussing over a small injury, the overall tone remains calm and appreciative rather than outright angry.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original conveys a hint of surprise in the unexpectedness of the gesture, especially juxtaposed with expressing discomfort. However, it isn't as powerful as the rewritten surprise sentence suggests.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

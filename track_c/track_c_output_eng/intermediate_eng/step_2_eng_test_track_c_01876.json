@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This comment will never be seen at this point, but I have to try and get this off my chest as I've never shared it with anyone.\", \"rewritten_form_joy\": \"I know this comment might slip under the radar, but I just have to share it because it\\u2019s been bubbling inside me for so long!\", \"rewritten_form_sadness\": \"This comment feels like it will go unnoticed forever, but I need to release this burden I've carried alone for so long.\", \"rewritten_form_fear\": \"I doubt anyone will see this comment, but I feel compelled to share it, even though I'm terrified of being judged for what I reveal.\", \"rewritten_form_anger\": \"This comment will probably go ignored, but I can't keep this bottled up any longer; it's infuriating to hold it inside all this time!\", \"rewritten_form_surprise\": \"This comment is likely to be overlooked, but I can\\u2019t believe I haven\\u2019t shared this yet; it\\u2019s been weighing on my mind!\", \"rewritten_form_disgust\": \"I know this comment is destined to be ignored, but I must get this off my chest despite how revolting it is to have kept it hidden for so long.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "While the original sentence speaks of a desire to share something personal, it lacks the optimism or lightness found in the joy-oriented rewritten sentence. The joy version implies a sense of excited release that isn't present in the original, which is more about necessary expression than happiness.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a feeling of isolation and burden, indicating that this sentiment is heavy and would go unnoticed, similar to the sadness rewritten version. The alignment is strong, as both express a sense of loneliness about the unshared comment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentiment does hint at a fear of exposure because the speaker is mentioning that nobody will see their comment. However, it does not convey a strong feeling of terror or anxiety associated with judgment, so it aligns moderately with the fear version.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original expression of having to get something off the chest does reflect a level of frustration that could be related to anger about keeping it inside. However, it doesn't express the outright frustration or urgency that the anger rewritten form possesses.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text indicates some level of surprise in reflection on past silence but lacks the astonishment of the surprise rewritten sentence, which emphasizes disbelief at not having shared the thought sooner. Hence, it has only a mild alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

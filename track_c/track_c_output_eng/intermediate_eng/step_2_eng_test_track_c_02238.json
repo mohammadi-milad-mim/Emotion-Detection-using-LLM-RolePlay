@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She's hysterical, I'm all calm and collected, getting ready to illegally drive to the hospital.\", \"rewritten_form_joy\": \"She's filled with excitement, while I'm calmly focused, absolutely determined to dash to the hospital!\", \"rewritten_form_sadness\": \"She's overwhelmed with panic, and I\\u2019m just chilling, quietly preparing to break the law to get her to the hospital.\", \"rewritten_form_fear\": \"She's in a panic, and I\\u2019m calmly bracing myself, knowing I might have to drive illegally to reach the hospital in time.\", \"rewritten_form_anger\": \"She's losing it, meanwhile I\\u2019m just here, calmly gearing up to drive illegally to the hospital because no one else seems to care!\", \"rewritten_form_surprise\": \"She\\u2019s in a frenzy, and here I am, shockingly calm and collected, getting ready to make an illegal drive to the hospital!\", \"rewritten_form_disgust\": \"She's hysterical, and I'm just here, calmly sickened by the thought of having to drive illegally to the hospital.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a drastic contrast between feelings, where joy is not present. The joyful version implies excitement, which does not exist in the original context of urgency and illegal action regarding a person's distress.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "Sadness could be inferred from the panic described, but it is muted by the calmness presented in the original. While there is someone overwhelmed, it does not resonate strongly with the sadness tone of quiet preparation; thus, this emotion is present but not strongly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Fear aligns quite closely as the original sentence discusses a high-stress situation involving possibly life-threatening urgency. The calmness juxtaposed with the potential danger of illegally driving demonstrates an awareness of risk.",
+        "fear_intensity": 2,
+        "anger_reasoning": "Anger is suggested in the rewritten sentence, where the calmness represents frustration at the lack of concern from others. Although the original gives hints of irritation at the situation, it centers more on calmness than aggression, thus not strongly indicating anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is a notable contrast in the emotions displayed, mainly the person's frenetic state versus a calm demeanor, leading to a surprising element. This juxtaposition of emotions does strike a chord of surprise in the original but does not feel extremely intense.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I exclaimed loudly, \\\"look at that crazy thing!\", \"rewritten_form_joy\": \"I joyfully shouted, \\\"look at that amazing thing!\\\"\", \"rewritten_form_sadness\": \"I sighed and said, \\\"look at that unfortunate thing...\\\"\", \"rewritten_form_fear\": \"I yelled nervously, \\\"look at that terrifying thing!\\\"\", \"rewritten_form_anger\": \"I shouted furiously, \\\"look at that ridiculous thing!\\\"\", \"rewritten_form_surprise\": \"I gasped in disbelief, \\\"look at that unbelievable thing!\\\"\", \"rewritten_form_disgust\": \"I blurted out in disgust, \\\"look at that disgusting thing!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses enthusiasm and excitement, highlighted by the word 'exclaimed loudly,' which is similar to 'joyfully shouted.' The notion of something being 'crazy' can also have a positive connotation, aligning it with joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original does not convey sadness; it is more about excitement rather than expressing regret or sorrow. Compared to the rewritten version that portrays concern, the original lacks the melancholic tone.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no indication of fear in the original statement. The use of 'crazy thing' does not imply danger or anxiety, unlike 'terrifying thing,' which has a clear fearful connotation. Therefore, the original sentence does not elicit fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence expresses strong emotion, it does not reflect anger, despite the similarity to 'shouted furiously.' The term 'crazy' is more playful than angrily dismissive, unlike the word 'ridiculous.'",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence has an element of surprise with the exclamation and its context, but it leans more toward excitement than disbelief. The term 'crazy' suggests unexpectedness but lacks the strong connotation of something being 'unbelievable.'",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

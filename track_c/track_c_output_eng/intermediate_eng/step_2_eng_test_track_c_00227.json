@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But I'll never forget the face.\", \"rewritten_form_joy\": \"But I'll always cherish the face!\", \"rewritten_form_sadness\": \"But I\\u2019ll always carry the memory of that face with sadness.\", \"rewritten_form_fear\": \"But I\\u2019ll always dread remembering that face.\", \"rewritten_form_anger\": \"But I'll always be haunted by that face!\", \"rewritten_form_surprise\": \"But I can't believe I still remember that face!\", \"rewritten_form_disgust\": \"But I'll never shake off the image of that face.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sentiment of remembrance, which could align with joy when framed positively. However, the wording 'I'll never forget' is more neutral and does not convey the same light-heartedness or positivity as 'I'll always cherish.'",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original statement resonates with elements of sadness, especially considering the permanence of the memory implied. The rewritten form emphasizes carrying that memory with sadness, making the original align moderately with this emotion.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'I'll never forget' does not inherently express fear; rather, it acknowledges a lasting memory. The rewrite suggests dread, which is not strongly present in the original sentence, indicating a weak connection to fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The phrase in the original is more about remembrance than anger. However, the rewritten version about being haunted introduces a sense of distress, suggesting a mild connection to this emotion, but not as strong as anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not express surprise; it merely states a fact about memory. The rewritten form introduces an element of disbelief, which is absent in the original, indicating little to no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

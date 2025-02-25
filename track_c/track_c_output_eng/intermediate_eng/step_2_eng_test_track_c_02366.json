@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\\" If you still hear silence, flee.\", \"rewritten_form_joy\": \"If you still hear silence, run towards adventure!\", \"rewritten_form_sadness\": \"If you still hear silence, it\\u2019s time to leave quietly.\", \"rewritten_form_fear\": \"If you still hear silence, you must escape now!\", \"rewritten_form_anger\": \"If you still hear silence, get out of there immediately!\", \"rewritten_form_surprise\": \"If you still hear silence, that\\u2019s odd... you should probably run!\", \"rewritten_form_disgust\": \"If you still hear silence, get away from this disgusting situation!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; instead, it suggests a cautious or defensive action (to flee) rather than embracing adventure. Thus, it aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The notion of silence and the command to leave quietly suggests a sadness or loss, which aligns somewhat with the rewritten form that implies a gentle departure.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The urgency and immediacy in the phrase \"flee\" strongly aligns with fear, as it implies a threat or danger linked to silence, matching the tone of the rewritten fear sentence.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The command to \"get out of there immediately\" connotes urgency and a need to escape from a potentially aggressive situation, reflecting a moderate intensity of anger, but it lacks the overtly hostile tone.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The expression of surprise is triggered by an unusual occurrence ('silence'), which aligns with the need to run due to unexpected circumstances, but it is less certain than fear.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

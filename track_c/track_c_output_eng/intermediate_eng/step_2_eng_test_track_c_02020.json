@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Just then, there is a loud and authoritative **knock** on the glass.\", \"rewritten_form_joy\": \"Just then, there is an exciting and enthusiastic knock on the glass!\", \"rewritten_form_sadness\": \"Just then, there is a loud and heavy knock on the glass that echoes a sense of loss.\", \"rewritten_form_fear\": \"Just then, there is a loud and threatening knock on the glass that sends chills down my spine.\", \"rewritten_form_anger\": \"Just then, there is a loud and aggressive knock on the glass that infuriates me.\", \"rewritten_form_surprise\": \"Just then, a surprising and loud knock on the glass catches me off guard!\", \"rewritten_form_disgust\": \"Just then, there is a loud and jarring knock on the glass that makes me cringe.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a loud knock, but it doesn't convey excitement or enthusiasm as the rewritten form for joy does. The knock is neutral and does not indicate happiness or joyfulness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original statement does not evoke a sense of loss or heaviness, it does reflect an impactful sound. However, it lacks the deeper emotional resonance associated with sadness, as there is no indication of sorrow or nostalgia.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence describes a loud and authoritative knock, which can imply a sense of threat or intimidation. This aligns somewhat with the fear rewrite, but it does not strongly convey a deeply personal fear or dread, so the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The authoritative tone of the knock suggests an element of assertiveness or aggression. While it does not evoke strong anger like the rewritten form implies, it could be interpreted as frustrating, leading to a moderate intensity of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence details a loud knock that could reasonably be surprising, but it does not explicitly convey that sense of unexpectedness or shock as the rewritten version does, leading to a moderate assessment of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

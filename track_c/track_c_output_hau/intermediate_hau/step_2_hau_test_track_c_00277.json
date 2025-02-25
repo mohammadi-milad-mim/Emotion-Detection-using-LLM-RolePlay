@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Mahaukaci yana shan ruwan kurjin gyambo me wari da ya fashe a kafarsa\", \"rewritten_form_joy\": \"Mahaukaci yana shan ruwan kurjin gyambo mai dadi da ya fashe a kafarsa!\", \"rewritten_form_sadness\": \"Mahaukaci yana shan ruwan kurjin gyambo me wari da ya fashe a kafarsa, abu mai tausayi.\", \"rewritten_form_fear\": \"Mahaukaci yana shan ruwan kurjin gyambo me wari, yana fuskantar hatsari a kafarsa!\", \"rewritten_form_anger\": \"Mahaukaci yana shan ruwan kurjin gyambo me wari da ya fashe a kafarsa! Me ya jawo hakan?\", \"rewritten_form_surprise\": \"Mahaukaci yana shan ruwan kurjin gyambo mai ban mamaki da ya fashe a kafarsa!\", \"rewritten_form_disgust\": \"Mahaukaci yana shan ruwan kurjin gyambo mai wari, ya yi min juyayi a kafarsa!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes someone consuming a beverage with a bad smell, which does not evoke joy. The rewritten joyful version introduces a pleasant taste, contrasting with the negative aspect of the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a negative experience with a smelly beverage, which can evoke pity or sadness, aligning moderately with the sad tone of the rewritten version that emphasizes the unfortunate nature of the situation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does imply a potential danger from the drink ('da ya fashe a kafarsa'), but it lacks a strong element of fear like the rewritten version that explicitly mentions facing danger. The fear element is present but not emphasized clearly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express overt frustration or anger, whereas the rewritten version introduces a questioning tone of blame. Therefore, while some irritation can be inferred, it isn't strongly evident in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement lacks any elements of surprise. The rewritten surprise version introduces an unexpected positive aspect, which does not correlate with the original scenario.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence explicitly refers to a smelly drink, which naturally aligns with feelings of disgust. The rewritten version that adds a visceral reaction ('ya yi min juyayi') enhances this sentiment.",
+        "disgust_intensity": 3
+    }
+}

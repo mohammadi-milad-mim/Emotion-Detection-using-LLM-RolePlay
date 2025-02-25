@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"In any case, I was car-sick for the first time in my life ( well, I didn't actually get sick, but I needed to have the windows open and air on my face to preven that from happening ), and as soon as I got home I fell asleep on the sofa for about five hours.\", \"rewritten_form_joy\": \"In any case, I experienced car-sickness for the first time in my life ( well, I didn't actually get sick, but I had the windows open and the wind in my face to prevent that from happening ), and when I got home, I happily fell asleep on the sofa for about five hours!\", \"rewritten_form_sadness\": \"In any case, I felt car-sick for the first time in my life ( well, I didn't actually get sick, but I needed to have the windows open and air on my face to prevent that from happening ), and when I got home, I just fell asleep on the sofa for about five hours, feeling drained.\", \"rewritten_form_fear\": \"In any case, I was car-sick for the first time in my life ( well, I didn't actually get sick, but I had to have the windows open and air on my face to prevent an awful feeling from taking over ), and as soon as I got home, I collapsed on the sofa for about five hours, completely exhausted.\", \"rewritten_form_anger\": \"In any case, I was car-sick for the first time in my life ( well, I didn't actually get sick, but I had to open the windows and let air on my face to avoid feeling sick ), and as soon as I got home, I just crashed on the sofa for about five hours, so frustrating!\", \"rewritten_form_surprise\": \"In any case, I was car-sick for the first time in my life ( well, I didn't actually get sick, but I needed to open the windows and feel the air on my face to stop it from happening ), and when I got home, I unexpectedly fell asleep on the sofa for about five hours!\", \"rewritten_form_disgust\": \"In any case, I was car-sick for the first time in my life ( well, I didn't actually get sick, but I had to have the windows open and air on my face to avoid that wretched feeling ), and as soon as I got home, I just fell asleep on the sofa for about five hours, utterly repulsed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does mention falling asleep on the sofa, but it does not convey happiness. It lacks the celebratory tone of the rewritten joy version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence expresses a slight sense of fatigue after feeling car-sick, but it does not reflect intense sadness or feeling drained. The sadness version emphasizes emotional exhaustion which isn't strongly present in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original expresses a need to prevent feeling sick but doesn't convey a strong sense of fear. The fear version implies a more intense reaction to the situation that isn't reflected in the original statement.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original mentions being car-sick, it does not convey frustration or anger about the experience. The rewritten anger version carries a strong emotional response that the original does not.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does describe an unexpected feeling of car-sickness, but it doesn't have the strong element of surprise emphasized in the rewritten version. It is somewhat unexpected but not deeply surprising.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

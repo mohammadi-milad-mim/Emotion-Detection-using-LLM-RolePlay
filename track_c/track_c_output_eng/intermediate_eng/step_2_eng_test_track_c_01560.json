@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It became a contest of pickled willpower.\", \"rewritten_form_joy\": \"It turned into such a delightful contest of pickled willpower!\", \"rewritten_form_sadness\": \"It sadly became a contest of pickled willpower.\", \"rewritten_form_fear\": \"It became a nerve-wracking contest of pickled willpower.\", \"rewritten_form_anger\": \"It transformed into an infuriating contest of pickled willpower!\", \"rewritten_form_surprise\": \"It unexpectedly became a contest of pickled willpower!\", \"rewritten_form_disgust\": \"It became a disgusting contest of pickled willpower.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a contest of willpower but lacks overtly joyous language; however, the rewritten version adds 'delightful' which suggests a positive experience. Thus, the alignment with joy is weak.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not express sadness, but the rewritten version uses 'sadly' which suggests regret. Therefore, the connection is minimal but present.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear directly. The rewritten example introduces 'nerve-wracking,' leading to a stronger connection with fear than other emotions, yet the base sentence remains neutral.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence is neutral and does not express anger. The added 'infuriating' in the rewritten form suggests strong feelings of frustration but doesn't naturally stem from the original context, resulting in weak alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not lead to surprise but the phrase 'unexpectedly' introduces an element of surprise not present in the original. The connection is slight, as there\u2019s no surprise in the original context.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

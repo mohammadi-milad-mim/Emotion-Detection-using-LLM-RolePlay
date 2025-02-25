@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"kun zama yan iska \\ud83d\\ude02\", \"rewritten_form_joy\": \"kun zama yan iska! \\ud83d\\ude02\", \"rewritten_form_sadness\": \"kun zama yan iska... \\ud83d\\ude02\", \"rewritten_form_fear\": \"kun zama yan iska? \\ud83d\\ude02\", \"rewritten_form_anger\": \"kun zama yan iska! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"kun zama yan iska?! \\ud83d\\ude02\", \"rewritten_form_disgust\": \"kun zama yan iska... ugh. \\ud83d\\ude02\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a light-hearted tone, similar to the joyful rewritten version which uses an exclamation mark to convey excitement. Both use the same emoticon, underscoring a joyful sentiment.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original text does not convey sadness explicitly, but the ellipsis in the rewritten version implies a sense of loss or longing, which is not present in the original. Therefore, the alignment is weak for sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The question mark in the fear version suggests uncertainty or worry, which is not evident in the original sentence. The original tone does not imply fear, resulting in no strong alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The use of the angry face in the rewritten sentence indicates strong displeasure, but the original sentence lacks any elements that would suggest anger, leading to no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not carry any surprise element, while the surprise version introduces both a question mark and an exclamation mark to imply astonishment. The original lacks this sense of unexpectedness.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version indicates revulsion, but such negative sentiment is not present in the original sentence, therefore showing a weak alignment.",
+        "disgust_intensity": 0
+    }
+}

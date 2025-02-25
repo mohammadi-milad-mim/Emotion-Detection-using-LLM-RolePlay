@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"In my heart that is what I want.\", \"rewritten_form_joy\": \"In my heart, that's exactly what I joyfully desire!\", \"rewritten_form_sadness\": \"In my heart, that is what I long for, but it hurts.\", \"rewritten_form_fear\": \"In my heart, that's what I want, but I fear it may never happen.\", \"rewritten_form_anger\": \"In my heart, that is what I want, and it drives me crazy that I can't have it!\", \"rewritten_form_surprise\": \"In my heart, that's what I want, and I can't believe I just realized it!\", \"rewritten_form_disgust\": \"In my heart, that is what I want, but honestly, it just feels wrong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a desire but lacks the joyful enthusiasm seen in the rewritten joy version. There's no overt indication of happiness, so it doesn't align strongly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys a longing but does not express pain or hurt, which are key elements of sadness. There is a hint of desire, but it doesn't strongly align with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence shows a desire without any indication of fear or apprehension. The fear version implies a concern about the future that is absent in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original phrase does not communicate frustration or anger, which are prominent in the anger version. It is neutral in emotion and does not convey any rage or irritation.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not provide any element of surprise or unexpected realization as indicated in the surprise version. It is a straightforward expression of desire.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

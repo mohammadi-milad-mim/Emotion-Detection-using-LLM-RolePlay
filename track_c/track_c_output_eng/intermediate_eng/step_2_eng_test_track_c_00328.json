@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The next thing I knew, a spoon full of cinnamon was in my mouth.\", \"rewritten_form_joy\": \"The next thing I knew, a spoon full of cinnamon was in my mouth, and it was so delightful!\", \"rewritten_form_sadness\": \"The next thing I knew, a spoon full of cinnamon was in my mouth, reminding me of better times now gone.\", \"rewritten_form_fear\": \"The next thing I knew, a spoon full of cinnamon was in my mouth, and I panicked at what I had just done.\", \"rewritten_form_anger\": \"The next thing I knew, a spoon full of cinnamon was in my mouth, and I couldn't believe someone would do that to me!\", \"rewritten_form_surprise\": \"The next thing I knew, a spoon full of cinnamon was in my mouth, and I was totally taken aback!\", \"rewritten_form_disgust\": \"The next thing I knew, a spoon full of cinnamon was in my mouth, and I couldn't shake off how gross it felt.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions an unexpected event (a spoon full of cinnamon in the mouth), but it lacks the overt positivity and delight present in the joy rewrite. Thus, while it hints at a possibility of joy through surprise, it does not strongly convey happiness or delight.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "There is no sense of longing or nostalgia in the original sentence that could align it with sadness. The original lacks references to better times or a sense of loss, which means it does not evoke sadness at all.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not inherently convey fear or panic. The action described could be unsettling to some, but without an emotional cue indicating fear or regret, it is not aligned with fear either.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original incident could lead to a mixed emotion like anger (if provoked intentionally), there is no direct indication of indignation or betrayed trust in the original text. Therefore, it does not express anger strongly.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence conveys an element of surprise due to the unexpectedness of finding cinnamon in one's mouth, closely aligning with the surprise rewrite. Both sentences share a similar setup, indicating a moment of shock or unexpectedness.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

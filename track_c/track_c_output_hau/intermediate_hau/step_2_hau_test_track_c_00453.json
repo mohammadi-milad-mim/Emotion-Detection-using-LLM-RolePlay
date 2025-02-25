@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Matsalar tsaro: 'Yan bindiga sun kai hari jihar Kebbi\", \"rewritten_form_joy\": \"Matsalar tsaro: 'Yan bindiga sun kai hari jihar Kebbi, amma akwai wasu na tabbatar da tsaro!\", \"rewritten_form_sadness\": \"Matsalar tsaro: 'Yan bindiga sun kai hari jihar Kebbi, wannan yana sadaukar da zukatanmu.\", \"rewritten_form_fear\": \"Matsalar tsaro: 'Yan bindiga sun kai hari jihar Kebbi, wannan ya jawo matsanancin tunani.\", \"rewritten_form_anger\": \"Matsalar tsaro: 'Yan bindiga sun kai hari jihar Kebbi, me yasa wannan ya faru a jidajenmu?\", \"rewritten_form_surprise\": \"Matsalar tsaro: 'Yan bindiga sun kai hari jihar Kebbi, wannan ba a zata ba!\", \"rewritten_form_disgust\": \"Matsalar tsaro: 'Yan bindiga sun kai hari jihar Kebbi, irin wannan sharrin ba zai yuwu ba!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an attack in Kebbi, with no positive connotations or uplifting sentiments attached. As such, it does not align with joy, which is reflected clearly in the rewritten joy sentence that adds an element of reassurance and positivity. Therefore, the alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence discusses an attack, which can evoke feelings of sadness, particularly as it implies loss and suffering in the community. The rewritten sadness version emphasizes this emotional impact, suggesting a mourning or hurt response. Hence, there is a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence indicates a violent action, which naturally elicits fear. The rewritten fear sentence enhances this by mentioning 'extreme thoughts,' further establishing an atmosphere of concern and anxiety. Hence, there is a strong alignment with fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original context of an attack may also provoke anger, particularly regarding the evidence of violence occurring in one's neighborhood. The rewritten anger version contains a direct and questioning tone about why events like this happen, which channels anger towards the situation. Thus, there is a moderate alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence's content can certainly be surprising, given the nature of unexpected violence. The rewritten surprise sentence highlights the unexpected nature of the attack, indicating a moderate alignment with surprise due to the element of the unforeseen event. Therefore, the alignment is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence conveys serious content but lacks a strong visceral reaction often associated with disgust. The rewritten disgust version implies a rejection or revulsion of the violence, which is not inherently present in the original sentence. Thus, there is little alignment with disgust.",
+        "disgust_intensity": 1
+    }
+}

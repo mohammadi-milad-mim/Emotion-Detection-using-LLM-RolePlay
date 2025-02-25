@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Someone wrapped a towel around my shoulders.\", \"rewritten_form_joy\": \"Someone wrapped a towel around my shoulders, and it felt so warm and cozy!\", \"rewritten_form_sadness\": \"Someone wrapped a towel around my shoulders, but it just reminded me of how alone I truly feel.\", \"rewritten_form_fear\": \"Someone wrapped a towel around my shoulders, and I couldn't shake off the feeling of unease it brought.\", \"rewritten_form_anger\": \"Someone wrapped a towel around my shoulders, as if I needed their pity right now!\", \"rewritten_form_surprise\": \"Someone wrapped a towel around my shoulders, and I couldn't believe how unexpected that was!\", \"rewritten_form_disgust\": \"Someone wrapped a towel around my shoulders, and I couldn't help but feel so grossed out!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a neutral act of someone wrapping a towel around the shoulders. The joy sentence adds warmth and coziness, suggesting a positive emotion that is not explicitly present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness sentence introduces feelings of loneliness connected to the act of having a towel wrapped around the shoulders. The original lacks this emotional depth and does not imply sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear sentence suggests an unease associated with the towel being wrapped around, which is not present in the original statement. The original does not evoke fear or apprehension.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten anger sentence expresses resentment towards the act, framing the towel wrapping as pity, which does not resonate with the neutral tone of the original. The original sentence lacks any indication of anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version emphasizes the unexpected nature of the act. While it highlights a reaction to the action, the original sentence does not indicate any surprise or highlight the unexpectedness of the gesture.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

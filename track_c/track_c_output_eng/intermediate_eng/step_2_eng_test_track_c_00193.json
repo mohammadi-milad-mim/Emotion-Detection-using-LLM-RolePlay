@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The rest, I du n no, i can still feel it there, inside my head trying to bring me down again.\", \"rewritten_form_joy\": \"The rest, I'm not sure, but I can still feel it there, inside my head, trying to remind me to stay strong!\", \"rewritten_form_sadness\": \"The rest, I don\\u2019t know, I can still feel it there, inside my head, constantly trying to drag me down again.\", \"rewritten_form_fear\": \"The rest, I don\\u2019t know, I can still feel it lurking there, inside my head, threatening to bring me down again.\", \"rewritten_form_anger\": \"The rest, I don't know, but I can still feel that annoyance there, inside my head, trying to drag me down again!\", \"rewritten_form_surprise\": \"The rest, I don\\u2019t know, but I\\u2019m surprised I can still feel it there, inside my head trying to bring me down again.\", \"rewritten_form_disgust\": \"The rest, I don\\u2019t know, but I\\u2019m sickened by how I can still feel it there, inside my head, trying to bring me down again.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of struggle and internal conflict without any uplifting emotion. In contrast, the rewritten joy version suggests a positive reminder to stay strong, indicating a significant tonal shift.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses feelings of being brought down, matching the sadness tone of the rewritten version, which emphasizes a constant struggle, leading to a strong alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence includes a feeling of something menacing inside the speaker's head, aligning with the fear version that suggests a threatening presence, denoting a high level of fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence does imply frustration about being dragged down, it lacks the directness of anger. The rewritten anger statement implies annoyance, which the original doesn't strongly convey, resulting in a lower alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not instill a sense of surprise about its content or emotional state; it appears more resigned. The surprise version denotes an unexpected reaction, which is not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

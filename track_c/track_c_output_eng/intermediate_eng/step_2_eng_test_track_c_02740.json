@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The light grew grater and what I saw under my eyelids caused grief.\", \"rewritten_form_joy\": \"The light grew greater, and what I saw under my eyelids filled me with happiness.\", \"rewritten_form_sadness\": \"The light grew greater, and what I saw under my eyelids overwhelmed me with sorrow.\", \"rewritten_form_fear\": \"The light grew greater, and what I saw under my eyelids filled me with dread.\", \"rewritten_form_anger\": \"The light grew greater, and what I saw under my eyelids filled me with rage.\", \"rewritten_form_surprise\": \"The light grew greater, and what I saw under my eyelids left me utterly shocked.\", \"rewritten_form_disgust\": \"The light grew greater, and what I saw under my eyelids made me feel utterly repulsed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a negative experience ('caused grief'), which is the opposite of joy. Therefore, there is no alignment with the tone of joy in the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence explicitly states that what was seen caused grief, aligning closely with the rewritten version that emphasizes overwhelming sorrow. Both convey a strong negative emotional experience.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original does not explicitly mention fear, the mention of grief can imply a sense of dread. However, it doesn't directly evoke substantial fear; hence the alignment is weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not suggest anger nor does it imply any elements that would lead to rage. The emotional tone is not aligned with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original mention of seeing something significant ('the light grew greater') might imply an unexpected revelation, but it's overshadowed by the grief expressed and doesn't convey surprise effectively.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Not really creepy, but fairly interesting.\", \"rewritten_form_joy\": \"It's not creepy at all, and I find it quite interesting!\", \"rewritten_form_sadness\": \"It's not creepy, but I can't help feeling it's just a bit dull.\", \"rewritten_form_fear\": \"It's not creepy, but there's something unsettling about it.\", \"rewritten_form_anger\": \"It's not even creepy; it's just frustratingly interesting!\", \"rewritten_form_surprise\": \"It's not creepy at all, which is surprisingly interesting!\", \"rewritten_form_disgust\": \"It's not creepy, but honestly, it's rather off-putting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral stance that suggests interest, but does not convey strong joy or positivity as indicated in the rewritten joy sentence. The joy version uses more enthusiastic language, making it feel brighter compared to the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version implies a sense of disappointment or lethargy, suggesting that while something is not creepy, it lacks appeal. The original doesn't evoke that sense of dullness or sadness; it is more neutral and has a hint of intrigue.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version indicates an unsettling quality that is not present in the original. The original sentence does not express any fear or apprehension, making the fear version misaligned with it.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger version injects frustration into the sentiment which is absent in the original statement. The original expresses a more relaxed viewpoint about being interesting, instead of conveying annoyance.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise sentence expresses unexpectedness about the interesting aspect, while the original lacks a strong element of surprise since it simply states a neutral opinion about the item.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

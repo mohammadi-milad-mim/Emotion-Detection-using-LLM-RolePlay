@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I know lots of children have imaginary friends, but looking back on this feels very weird to me.\", \"rewritten_form_joy\": \"I know lots of children have imaginary friends, and looking back on this brings such a joyful smile to my face!\", \"rewritten_form_sadness\": \"I know lots of children have imaginary friends, but looking back on this makes me feel a deep pang of sadness.\", \"rewritten_form_fear\": \"I know lots of children have imaginary friends, but looking back on this feels a bit unsettling to me.\", \"rewritten_form_anger\": \"I know lots of children have imaginary friends, but looking back on this really frustrates me.\", \"rewritten_form_surprise\": \"I know lots of children have imaginary friends, but looking back on this, I\\u2019m honestly surprised by how strange it feels!\", \"rewritten_form_disgust\": \"I know lots of children have imaginary friends, but looking back on this is just so odd and unsettling to me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions looking back at imaginary friends but describes it as feeling 'very weird' rather than joyful. This is in contrast to the joyful rewrite, which expresses happiness rather than confusion or strangeness. There is no alignment with joy in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence's acknowledgment of feeling 'very weird' about children's imaginary friends suggests some level of discomfort, but it does not explicitly express sadness as in the rewritten form. Therefore, the alignment with sadness is low because it does not convey a strong emotional connection to sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence touches on an unusual feeling associated with imaginary friends but does not convey active fear. The rewrite suggests more unsettling feelings, which aren't fully captured in the original; hence, it does not align strongly with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not express frustration or anger, focusing instead on a strange feeling regarding the concept of imaginary friends. The rewrite's tone implies frustration that does not resonate with the original sentiment, which describes confusion rather than anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original expresses a sense of being weirded out, hinting at unexpectedness but not clearly indicating surprise. The rewrite emphasizes surprise, leading to a misalignment; thus, the intensity for surprise remains low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That was the villain's sidekick, Horace Horrible.\", \"rewritten_form_joy\": \"That was the villain's sidekick, Horace Horrible! How delightfully wicked!\", \"rewritten_form_sadness\": \"That was the villain's sidekick, Horace Horrible, always in the shadows of darkness.\", \"rewritten_form_fear\": \"That was the villain's sidekick, Horace Horrible, and he sends chills down my spine.\", \"rewritten_form_anger\": \"That was the villain's sidekick, Horace Horrible, lurking there like he owns the place!\", \"rewritten_form_surprise\": \"Whoa! That was the villain's sidekick, Horace Horrible?! I didn't see that coming!\", \"rewritten_form_disgust\": \"Ugh, that was the villain's sidekick, Horace Horrible. What a revolting sight!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence simply states the identity of a character without expressing any joy or delight. The rewritten version adds an exclamation and a positive descriptor ('delightfully wicked'), which is not present in the original, indicating a lack of joy in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original does not convey any sense of sadness or darkness. The rewritten version introduces a somber tone ('always in the shadows of darkness'), which suggests a feeling of sadness or despair, contrasting with the original's neutral tone.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not evoke any fear. However, the rewritten version includes a phrase that indicates intimidation ('sends chills down my spine'), which is absent in the original context, resulting in little alignment with the fear emotion in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text is neutral and does not imply anger. The rewritten version introduces an accusatory tone ('lurking there like he owns the place'), which suggests anger but is not expressed in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks any elements of surprise or revelation. The rewritten version expresses astonishment with 'Whoa! I didn't see that coming!', highlighting a sense of unexpectedness which is missing from the original, resulting in low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

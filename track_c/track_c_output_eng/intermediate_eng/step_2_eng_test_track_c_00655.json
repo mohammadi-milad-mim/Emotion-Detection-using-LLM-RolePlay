@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Y'all are so awesome actually!\", \"rewritten_form_joy\": \"Y'all are just the best!\", \"rewritten_form_sadness\": \"It's a shame you can't see how awesome you really are.\", \"rewritten_form_fear\": \"Y'all are awesome, but what if that changes?\", \"rewritten_form_anger\": \"How can you not realize how awesome you all are?!\", \"rewritten_form_surprise\": \"Wow, I can't believe how awesome y'all actually are!\", \"rewritten_form_disgust\": \"Honestly, it's hard to believe how you think you're awesome.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a clear and positive sentiment by affirming that the addressed individuals are 'awesome,' which closely aligns with the enthusiastic tone of the rewritten joy sentence, 'Y'all are just the best!'. Both convey admiration and positivity, indicating a high alignment with joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not contain any elements of sadness. It is purely positive, unlike the rewritten sadness sentence, which introduces regret and a sense of unfulfilled recognition. Thus, there\u2019s no alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original sentence conveys positivity, the rewritten fear sentence acknowledges a potential change that could undermine that positivity. The original text does not have an undertone of fear; therefore, there is a very low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any elements of anger or frustration, contrasting with the rewritten anger sentence that expresses incredulity and disappointment in a strong, confrontational tone. Thus, the original does not align with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise sentence carries an element of astonishment about how awesome the individuals are, which somewhat aligns with the original's positive assertion. However, the original does not express surprise; rather, it confidently declares awesomeness, leading to a moderate alignment with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

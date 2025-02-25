@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was useless at sport and used to spend my lunchtimes sat on my own, quite happily staring into space and picking my nose.\", \"rewritten_form_joy\": \"I was never really good at sports, but I spent my lunchtimes happily sitting alone, daydreaming and picking my nose.\", \"rewritten_form_sadness\": \"I was never good at sports, and I often spent my lonely lunchtimes sitting by myself, staring blankly into space and idly picking my nose.\", \"rewritten_form_fear\": \"Since I was useless at sports, I dreaded the lunchtimes spent alone, nervously staring into space and picking my nose, hoping no one noticed me.\", \"rewritten_form_anger\": \"I was awful at sports, and I spent my lunchtimes sitting alone, furiously staring into space and picking my nose, feeling so frustrated with myself.\", \"rewritten_form_surprise\": \"I was hopeless at sports, and who would have thought I spent my lunchtimes sitting alone, staring into space and picking my nose so blissfully?\", \"rewritten_form_disgust\": \"I was terrible at sports, and I used to sit alone during lunchtimes, staring into space and disgustingly picking my nose without a care.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a sense of acceptance and contentment in spending time alone, which aligns with the joy in the rewritten version where the character is described as 'happily' engaged in a peaceful activity. However, the original lacks overt indicators of joy that are in the rewrite.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence hints at loneliness and potentially negative feelings about being excluded from sports, which aligns well with the explicit mention of loneliness and a blank stare in the sadness rewrite. The tone conveys more of a wistful acceptance rather than overt sadness, suggesting a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text does not communicate fear or anxiety about social situations. The fear rewrite departs significantly, introducing an active dread and concern about being noticed, which are absent in the original. Therefore, fear does not resonate with the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not express feelings of frustration or anger towards sports or solitude; it simply states a sense of being 'useless.' The anger rewrite implies a much stronger emotional response that is not reflected in the original. Thus, the anger emotion has no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not generate surprise and presents a straightforward narrative about being alone with no unexpected elements. The surprise rewrite introduces an unexpected contrast with the word 'blissfully,' which the original does not convey. Therefore, there is low alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

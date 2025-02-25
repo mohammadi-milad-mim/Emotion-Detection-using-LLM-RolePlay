@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I scratched my eyes with my finger again, and another one came out, and then another.\", \"rewritten_form_joy\": \"I can't believe I scratched my eyes again, and wow, another one came out, and then another!\", \"rewritten_form_sadness\": \"I scratched my eyes again with my finger, and another one came out, then another, and it just hurts.\", \"rewritten_form_fear\": \"I scratched my eyes with my finger again, and then another one came out... what if this keeps happening?\", \"rewritten_form_anger\": \"I can't believe I scratched my eyes again with my finger, and just like that, another one came out, and another!\", \"rewritten_form_surprise\": \"I scratched my eyes with my finger, and to my shock, another one came out, and then another!\", \"rewritten_form_disgust\": \"I scratched my eyes with my finger again, and then, gross, another one came out, and another.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it focuses on an unpleasant action rather than a positive experience. The rewritten version, however, suggests excitement or disbelief, which is absent in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of discomfort due to scratching the eyes, which aligns somewhat with the sadness in the rewritten form. The addition of the pain in the rewritten sentence enhances the emotional tone, aligning it closer to sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at a troublesome experience with repeated eye scratching, but it lacks a deep sense of fear. The rewritten version introduces a possibility of ongoing issues, which injects more fear into the context, making it feel somewhat compatible, but not strongly present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes a frustrating act of scratching the eyes without any explicit expression of anger. The rewritten version, however, carries a tone of disbelief and frustration that could imply anger, yet the original lacks that intensity of feeling.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence, while it describes an unexpected occurrence (scratching eyes resulting in losing more), does not convey strong surprise. The rewritten version explicitly communicates shock, which is a sentiment that is not really present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

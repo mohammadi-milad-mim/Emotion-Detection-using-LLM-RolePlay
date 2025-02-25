@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That's mommy's hair from down there.\", \"rewritten_form_joy\": \"Look at mommy's lovely hair from down there!\", \"rewritten_form_sadness\": \"That's mommy's hair from down there, and I miss her.\", \"rewritten_form_fear\": \"That's mommy's hair from down there, but where is she?\", \"rewritten_form_anger\": \"That's mommy's hair from down there, and it's so unfair!\", \"rewritten_form_surprise\": \"Wow, that's mommy's hair from down there!\", \"rewritten_form_disgust\": \"Ew, that's mommy's hair from down there.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a joyful sentiment, as it simply states a fact without an enthusiastic tone or positivity. Although the rewritten version expresses joy, the original lacks that emotional warmth.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a connection to a maternal figure, but it does not imply longing or sorrow. The rewritten version introduces a personal loss which is absent in the original, making the original not sad.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original does not evoke any sense of fear or concern about the whereabouts of 'mommy.' The rewritten version adds a layer of uncertainty, while the original remains neutral.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the rewritten version expresses anger regarding unfairness, the original sentence does not contain elements of dissatisfaction or frustration. Thus, there is no anger present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement presents a factual observation that lacks any element of astonishment or unexpectedness. The rewritten version introduces an exclamatory tone that is not reflected in the original, indicating that it does not invoke surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

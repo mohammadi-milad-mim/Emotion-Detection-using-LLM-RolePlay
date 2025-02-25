@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I fumble to the shower and pull out the knob, turning it toward hot.I then turn around, grab the shaver and proceed to remove the little stubble on my face that has somehow grown over the past hours.Placing the shaver away, I open the shower doors and step into the... COLD water!!!\", \"rewritten_form_joy\": \"I fumble to the shower and pull out the knob, turning it toward hot! I then turn around, grab the shaver, and happily remove the little stubble on my face that has surprisingly grown over the past hours. Placing the shaver away, I open the shower doors and step into the... refreshing COLD water!!!\", \"rewritten_form_sadness\": \"I fumble to the shower and pull out the knob, turning it toward hot. I then turn around, grab the shaver, and sadly remove the little stubble on my face that has somehow grown over the past hours. Placing the shaver away, I open the shower doors and step into the... COLD water.\", \"rewritten_form_fear\": \"I fumble to the shower and pull out the knob, turning it toward hot. I then turn around, grab the shaver, feeling nervous as I proceed to remove the little stubble on my face that has somehow grown over the past hours. Placing the shaver away, I open the shower doors and step into the... COLD water!!!\", \"rewritten_form_anger\": \"I fumble to the shower and pull out the knob, angrily turning it toward hot. I then turn around, grab the shaver, and aggressively remove the little stubble on my face that has somehow grown over the past hours. Placing the shaver away, I open the shower doors and step into the... COLD water!!!\", \"rewritten_form_surprise\": \"I fumble to the shower and pull out the knob, turning it toward hot. I then turn around, grab the shaver, and am surprised as I remove the little stubble on my face that has somehow grown over the past hours. Placing the shaver away, I open the shower doors and step into the... COLD water!!!\", \"rewritten_form_disgust\": \"I fumble to the shower and pull out the knob, turning it toward hot. I then turn around, grab the shaver, and grimace as I remove the little stubble on my face that has somehow grown over the past hours. Placing the shaver away, I open the shower doors and step into the... COLD water!!!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a routine action without explicit joyful expressions. However, it conveys a sense of relief or pleasantness when turning to hot water, so there is a mild connection. The tone does not explicitly evoke joy as the rewritten version does.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not express sadness, but the use of words like 'sadly' in the rewritten version indicates an emotional state that isn't present in the original. It maintains a neutral tone rather than a sad one.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no direct indication of fear in the original sentence. While nervousness is introduced in the rewritten version, the original conveys a straightforward description of a mundane action without any sense of anxiety or apprehension.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not exhibit anger; it describes morning preparations in a neutral way. The use of 'angrily' in the rewritten version shifts the tone significantly, making it more intense compared to the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence contains an element of surprise with the sudden cold water but lacks the explicit emotional cue that would express surprise, as seen in the rewritten version. The connection is there, but it lacks intensity in the original character.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

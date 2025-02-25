@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That glance, a glance which met my eyes has made my heart pounding.\", \"rewritten_form_joy\": \"That glance, oh, the one that met my eyes, made my heart soar with excitement!\", \"rewritten_form_sadness\": \"That glance, the one that met my eyes, left my heart feeling heavy and aching.\", \"rewritten_form_fear\": \"That glance, the one that met my eyes, sent a chill straight through my heart.\", \"rewritten_form_anger\": \"That glance, that look that met my eyes, made my heart pound with frustration!\", \"rewritten_form_surprise\": \"That glance, the one that met my eyes, startled my heart into a wild rhythm!\", \"rewritten_form_disgust\": \"That glance, the one that met my eyes, made my heart pound with disdain.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of excitement through the description of the heart pounding, similar to the rewritten joy sentence that emphasizes soaring with excitement. However, the original lacks the explicit positive emotional expression of joy, suggesting a lower intensity.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not reflect a sense of sadness; it captures a thrilling moment rather than a heavy or aching feeling. Thus, there is no alignment with the sadness sentiment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original mentions heart pounding, it does not imply a fear-related context. Instead, it suggests excitement rather than fear, showing little alignment with the fear sentiment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The phrase 'made my heart pounding' implies a strong emotional reaction but not specifically anger. Thus, it does not strongly align with frustration as mentioned in the anger sentence, indicating a low intensity for anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original evokes an intense reaction with the heart pounding but does not specify surprise or a startled condition, resulting in a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

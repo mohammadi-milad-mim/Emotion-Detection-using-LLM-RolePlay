@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This happened in third grade and I will NEVER EVER forget it.\", \"rewritten_form_joy\": \"This happened in third grade, and I will ALWAYS cherish it!\", \"rewritten_form_sadness\": \"This happened in third grade, and I can\\u2019t help but think about it with a heavy heart.\", \"rewritten_form_fear\": \"This happened in third grade, and I will NEVER be able to shake that memory off.\", \"rewritten_form_anger\": \"This happened in third grade, and I can\\u2019t believe I\\u2019ll NEVER be able to forget that!\", \"rewritten_form_surprise\": \"This happened in third grade, and I still can\\u2019t believe it\\u2019s stuck with me for so long!\", \"rewritten_form_disgust\": \"This happened in third grade, and I\\u2019ll NEVER forget how utterly awful it was.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong memory that is unforgettable, but it lacks an explicit positive sentiment. The rewritten joy sentence highlights cherishing the event, which is more positive than merely stating that one will never forget it.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence hints at a significant emotional impact without explicitly conveying sadness. The sadness version emphasizes a 'heavy heart,' capturing a deeper emotional weight than the original conveys.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The use of 'NEVER' in both the original and fear versions implies a sense of entrapment by a memory. The original lacks explicit fear but does convey a lingering apprehension about their thoughts.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original conveys frustration with the unforgettable nature of the event, similar to the anger version's disbelief. While the original expresses annoyance, it does not have the same level of emphasis on anger as the rewritten version.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original implies lasting impact, but the surprise version captures disbelief in a more explicit way. The original doesn\u2019t convey the same level of astonishment, which is present in the surprise rephrasing.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

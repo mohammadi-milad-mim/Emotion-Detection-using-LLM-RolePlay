@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I explain that between us we have no other form of payment.\", \"rewritten_form_joy\": \"I happily explain that between us we have no other form of payment!\", \"rewritten_form_sadness\": \"I regretfully explain that between us, we have no other form of payment.\", \"rewritten_form_fear\": \"I nervously explain that between us we have no other form of payment.\", \"rewritten_form_anger\": \"I angrily explain that between us we have no other form of payment!\", \"rewritten_form_surprise\": \"I suddenly find myself explaining that between us we have no other form of payment!\", \"rewritten_form_disgust\": \"I disdainfully explain that between us we have no other form of payment.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral tone regarding the payment situation, lacking the positive sentiment expressed in the joyful version. It aligns minimally with joy and feels more factual than happy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence can imply a sense of regret in certain contexts, it does not express personal feelings or emotional weight that would classify it as sad. Therefore, it has a very low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not convey any nervousness or fear regarding the payment situation. The straightforward nature of the statement suggests a lack of urgency or concern, resulting in minimal alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is quite neutral and does not suggest any anger or frustration. The assertive and straightforward nature of the statement lacks any emotional outbursts or strong feelings of irritation, so it aligns very weakly with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement does not contain any element of surprise or sudden realization. It presents the information in a straightforward manner, which contrasts sharply with the excited tone of the surprise version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

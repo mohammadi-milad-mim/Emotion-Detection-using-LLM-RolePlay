@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I never felt anything with my legs either.\", \"rewritten_form_joy\": \"I never felt anything with my legs either, and that's okay!\", \"rewritten_form_sadness\": \"I never felt anything with my legs either, and it's just so heartbreaking.\", \"rewritten_form_fear\": \"I never felt anything with my legs either, and that really scares me.\", \"rewritten_form_anger\": \"I never felt anything with my legs either, and it absolutely infuriates me!\", \"rewritten_form_surprise\": \"I never felt anything with my legs either, can you believe that?\", \"rewritten_form_disgust\": \"I never felt anything with my legs either, it's just so gross how this happened.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; it simply states a fact about not feeling anything with the legs. The rewritten joy sentence introduces a positive spin that is not present in the original, indicating that the original has no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a lack of feeling, which could suggest a sense of loss or disappointment. The rewritten sadness sentence heightens this implication by directly labeling it as 'heartbreaking,' and while the original lacks explicit sadness, it carries a subtle undertone that allows for a moderate degree of emotional alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original contains no direct expression of fear. However, the rewritten fear sentence introduces a strong emotional response that is absent from the original. There is no indication that the speaker feels fear about their condition; thus, the alignment with fear is minimal.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence doesn't convey anger; rather, it is quite neutral. The rewritten anger sentence amplifies this feeling significantly, but this intensity does not carry over to the original sentence, leading to a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents a factual statement without any element of surprise. The rewritten surprise sentence adds an element of disbelief, which is not suggestive of the original's tone. Therefore, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

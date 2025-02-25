@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My mother and fathers story:\", \"rewritten_form_joy\": \"My mother and father's wonderful story:\", \"rewritten_form_sadness\": \"My mother and father's heartbreaking story:\", \"rewritten_form_fear\": \"My mother and father's chilling story:\", \"rewritten_form_anger\": \"My mother and father's infuriating story:\", \"rewritten_form_surprise\": \"My mother and father's astonishing story:\", \"rewritten_form_disgust\": \"My mother and father's repulsive story:\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a neutral mention of a story involving the mother and father. It doesn't imply any particularly cheerful or happy narrative. The joy version adds the word 'wonderful', which strongly conveys happiness, while the original does not. Thus, it aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten version describes the story as 'heartbreaking', which conveys a strong sadness that is not present in the original text. The original lacks any indication of sorrow, thus it has no alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The corresponding fear version introduces a chilling quality to the story. However, the original sentence does not signify any fear or ominous themes. As a result, it does not resonate with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral without any expressions of frustration or anger. The anger version introduces strong negative emotions with the word 'infuriating', contrasting sharply with the original's lack of emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version highlights an element of astonishment, implying an unexpected twist or remarkable aspect of the story. The original does not indicate anything surprising about the story, leaving a strong disconnect in this emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

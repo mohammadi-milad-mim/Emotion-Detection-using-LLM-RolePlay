@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The baby goats bleated in protest at an interrupted breakfast, and I stood up fast, expecting the worst, but only bonked my head on the heat lamp in my hurry.\", \"rewritten_form_joy\": \"The baby goats bleated in protest at an interrupted breakfast, and I sprang up, excited to help, but I joyfully bumped my head on the heat lamp in my haste!\", \"rewritten_form_sadness\": \"The baby goats bleated in protest at an interrupted breakfast, and I stood up quickly, fearing the worst, only to sadly bonk my head on the heat lamp as I rushed to them.\", \"rewritten_form_fear\": \"The baby goats bleated in protest at an interrupted breakfast, and I jumped up, bracing for disaster, only to accidentally bonk my head on the heat lamp in my panic.\", \"rewritten_form_anger\": \"The baby goats bleated in protest at an interrupted breakfast, and I stood up quickly, furious at the interruption, but I ended up banging my head on the heat lamp in my rush.\", \"rewritten_form_surprise\": \"The baby goats bleated in protest at an interrupted breakfast, and I stood up suddenly, shocked at the noise, only to unexpectedly slam my head on the heat lamp in my hurry.\", \"rewritten_form_disgust\": \"The baby goats bleated in protest at an interrupted breakfast, and I stood up fast, repulsed by the commotion, but ended up ungracefully bonking my head on the heat lamp in my rush.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of urgency and unexpectedness but lacks the positive tone that joy would require. The mention of the goats' bleating suggests some playful energy, but the focus is more on the trouble than on delight or excitement, which aligns less with the joyfulness in the rewritten sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "There is no strong indication of sadness in the original sentence. While the sentence implies a little bit of inconvenience with the interruption, it does not convey a significant emotional burden or loss, suggesting a low alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence indicates some level of apprehension, as there is an expectation of 'the worst,' which aligns closely with fear. The urgency in standing up also implies a reaction to potentially negative consequences, giving it a moderate degree of fear intensity.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not express anger; instead, it suggests a light-hearted reaction to the goats' interruption. The tone is more about surprise and inconvenience than about feeling furious, which significantly reduces the alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does have an element of surprise, specifically when reacting quickly to the noise created by the goats. The suddenness of the action and the unexpected head bonk imply an element of shock, aligning well with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

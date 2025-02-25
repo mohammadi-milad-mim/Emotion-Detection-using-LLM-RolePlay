@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"huh, my life is too boring and my brain too empty to warrant a blog.\", \"rewritten_form_joy\": \"Wow, my life may feel simple, but maybe I can share my thoughts more vibrantly in a blog!\", \"rewritten_form_sadness\": \"It\\u2019s hard to accept that my life feels so boring and my mind so empty that a blog seems pointless.\", \"rewritten_form_fear\": \"What if my life is too boring and my brain too empty to ever write anything valuable on a blog?\", \"rewritten_form_anger\": \"I can\\u2019t believe my life feels so boring and my brain so empty that I think I can\\u2019t even write a blog!\", \"rewritten_form_surprise\": \"Huh, I never thought I\\u2019d feel my life is too boring and my brain too empty for a blog!\", \"rewritten_form_disgust\": \"Ugh, the thought of my life being so boring and my brain so empty is just revolting enough to not even start a blog.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of dullness and emptiness in life, and it does not align with the optimistic tone of the joy rewrite, which encourages sharing thoughts more vibrantly. There is no evidence of joy in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly communicates feelings of boredom and emptiness, aligning well with the sadness rewrite that captures the struggle of accepting this state. The tone is reflective and resonates with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence hints at uncertainty about the value of one's thoughts and abilities, similar to the fear rewrite that contemplates the worry of never being able to write anything valuable. However, it lacks a direct expression of fear. It aligns moderately.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence's tone is more resigned and lacks the strong emotional reaction found in the anger rewrite, which expresses disbelief and frustration. Thus, the original does not strongly align with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence opens with 'huh,' indicating a slight element of surprise about life being boring, but it does not resonate as strongly as the surprise rewrite, which reflects a realization. There\u2019s a low level of surprise evoked.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

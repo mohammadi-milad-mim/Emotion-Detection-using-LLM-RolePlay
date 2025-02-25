@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My boss and I are shocked.\", \"rewritten_form_joy\": \"My boss and I are absolutely thrilled!\", \"rewritten_form_sadness\": \"My boss and I are deeply upset.\", \"rewritten_form_fear\": \"My boss and I are really scared right now.\", \"rewritten_form_anger\": \"My boss and I are incredibly angry about this.\", \"rewritten_form_surprise\": \"My boss and I are completely taken aback!\", \"rewritten_form_disgust\": \"My boss and I are utterly disgusted by this.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a state of shock, which contrasts strongly with the intense joy expressed in the rewritten joy sentence. Therefore, it does not convey joy at all.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "Shock does not imply sadness; instead, it suggests a reaction to unexpected news, making the alignment with sadness very low.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While shock can carry elements of fear, the wording 'shocked' is more neutral and does not denote extreme fear as suggested in the rewritten sentence. Still, there is minimal alignment due to the potential for fear in a shocking situation.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Shock does not imply anger directly; it can result from various situations that may or may not involve anger. In this case, the original sentence does not indicate any anger, leading to no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence directly indicates shock, which aligns strongly with the rewritten surprise sentence that expresses being taken aback. Therefore, there is a high alignment here.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Malami ya bai wa dalibansa nasarar jarabawa saboda murnar baiko\", \"rewritten_form_joy\": \"Malami ya bai wa dalibansa nasarar jarabawa saboda jin dadin sake dawowa!\", \"rewritten_form_sadness\": \"Malami ya bai wa dalibansa nasarar jarabawa, duk da cewa murnar baiko bata da karfi.\", \"rewritten_form_fear\": \"Malami ya bai wa dalibansa nasarar jarabawa, amma ina jin firgita daga murnar baiko da zamu fuskanta?\", \"rewritten_form_anger\": \"Malami ya bai wa dalibansa nasarar jarabawa, amma murnar baiko ta jefa mu cikin rashin adalci!\", \"rewritten_form_surprise\": \"Malami ya bai wa dalibansa nasarar jarabawa, abin mamaki, murnar baiko ta zo da sabin nasarori!\", \"rewritten_form_disgust\": \"Malami ya bai wa dalibansa nasarar jarabawa, abin kunya ne wannan murnar baiko!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a positive outcome (the students passing) tied to a sense of celebration (joy), similar to the rewritten joy sentence emphasizing happiness in returning. This suggests a strong alignment with joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The sadness version implies a weak celebration, indicating that while there is a positive outcome, the mood is dampened. The original has an underlying tone of joy, making this alignment moderate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version introduces an element of apprehension about the joy, which is not present in the original. This implies a lack of fear in the original, hence the two sentences diverge significantly.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger rewritten sentence discusses injustice stemming from celebration, introducing negativity absent in the original. Hence, it does not align with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a sense of surprise regarding the unexpected nature of joy in the rewritten version. The original sentence, however, presents a straightforward narrative without any surprising context, signifying little alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version speaks to shame around the celebration that isn't present in the original. The original maintains a neutral tone aligned with a positive event, indicating low alignment with disgust.",
+        "disgust_intensity": 1
+    }
+}

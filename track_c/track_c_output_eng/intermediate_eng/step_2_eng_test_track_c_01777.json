@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"You should be *ashamed*!\", \"rewritten_form_joy\": \"I can't believe you would do that! How could you not feel proud?\", \"rewritten_form_sadness\": \"It's really disheartening that you feel this way about yourself.\", \"rewritten_form_fear\": \"What if you don't realize how this could affect you?\", \"rewritten_form_anger\": \"How dare you not feel ashamed after all that's happened?!\", \"rewritten_form_surprise\": \"Wait, are you serious? You should be ashamed of that!\", \"rewritten_form_disgust\": \"It\\u2019s disgusting that you can't see why you should be ashamed!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a negative sentiment (shame) which contrasts with the joy expressed in the rewritten version. There is little to no alignment as shame is inherently different from pride and joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence invokes shame, which can lead to feelings of sadness about oneself. Therefore, there is a moderate alignment as it relates to self-perception and potential regret.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence suggests that the person should be ashamed without addressing the consequences. The fear version expresses concern about the potential future impact of this shame, indicating a moderate connection to anxiety and fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is a strong alignment with anger, as the rewritten version expresses outrage about the lack of shame, amplifying the accusatory tone of the original sentence. Both convey frustration or disappointment directed at the subject.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence implies a strong opinion about the necessity of feeling ashamed, which aligns with surprise at the idea of someone not recognizing this shame. The alignment is moderate, showing surprise at the subject's feelings or actions.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

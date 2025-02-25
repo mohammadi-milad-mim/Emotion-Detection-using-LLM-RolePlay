@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I could feel the socks shifting at the balls of my feet and blisters starting to well up.\", \"rewritten_form_joy\": \"I could feel the socks shifting comfortably at the balls of my feet, with only a couple of blisters starting to form, but that\\u2019s okay!\", \"rewritten_form_sadness\": \"I could feel the socks shifting at the balls of my feet, and the blisters starting to well up made me feel so uncomfortable and alone.\", \"rewritten_form_fear\": \"I could feel the socks shifting at the balls of my feet, and I was terrified of the blisters starting to well up, wondering how much worse it might get.\", \"rewritten_form_anger\": \"I could feel the socks shifting at the balls of my feet, and it infuriated me that blisters were starting to well up; why couldn\\u2019t they just fit right?\", \"rewritten_form_surprise\": \"I could feel the socks shifting at the balls of my feet, and to my surprise, blisters were starting to well up quicker than I expected!\", \"rewritten_form_disgust\": \"I could feel the socks shifting at the balls of my feet, and I felt a wave of disgust as the blisters started to well up, ruining my comfort.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions discomfort from the socks and impending blisters, which does not align with the cheerful tone of the joy rewritten form. The joy version presents a comfort that is absent in the original, leading to very little alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original captures a sense of discomfort but does not explicitly convey feelings of loneliness or deep sadness, as suggested by the sadness rewritten form. Therefore, there is some alignment due to the discomfort expressed, but it is not strong enough to convey deep sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewritten form indicates a strong sense of anxiety regarding the blisters. The original, while acknowledging blisters, does not indicate any fear or concern about worsening discomfort, leading to low alignment with the fear emotion.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original indicates discomfort, it does not convey a sense of anger about the blisters or the socks. This contrasts sharply with the anger rewritten form, which expresses frustration and irritation distinctly, resulting in low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original indicates that blisters are forming but does not express shock or unexpectedness. The surprise rewritten form suggests an abrupt realization about quickening discomfort, which is not present in the original. Therefore, there is little alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

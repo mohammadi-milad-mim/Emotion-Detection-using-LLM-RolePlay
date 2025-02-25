@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I'm the least superstitious guy around, but just creepy, man...\", \"rewritten_form_joy\": \"I'm the least superstitious guy around, but that was oddly fun, man!\", \"rewritten_form_sadness\": \"I'm the least superstitious guy around, but it's just so unsettling, man...\", \"rewritten_form_fear\": \"I'm the least superstitious guy around, but that really gives me the creeps, man...\", \"rewritten_form_anger\": \"I'm the least superstitious guy around, but seriously, that\\u2019s just creepy, man!\", \"rewritten_form_surprise\": \"I'm the least superstitious guy around, but wow, that was really creepy, man...\", \"rewritten_form_disgust\": \"I'm the least superstitious guy around, but honestly, that\\u2019s just gross, man...\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence doesn't express joy; it indicates a neutral or negative experience rather than fun or enjoyment. The joyful version presents a contrast that wasn't present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence contains a hint of uneasiness but does not explicitly convey sadness. The rewritten version emphasizes that unsettling feeling, making it more aligned with sadness than the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'creepy' in the original suggests a sense of discomfort, which aligns more closely with fear in the rewritten sentence, showcasing a stronger feeling of being unsettled.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original conveys some irritation through the word 'creepy,' it lacks the intensity and explicit focus on anger seen in the rewritten form, which expresses a stronger reaction against the situation.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original does not imply surprise; it portrays a more static observation. The rewritten sentence introduces an element of astonishment which is not present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

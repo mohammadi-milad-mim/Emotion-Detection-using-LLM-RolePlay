@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"allah yayi mana maganin wannan cutar\", \"rewritten_form_joy\": \"Allah ya yi mana maganin wannan cutar!\", \"rewritten_form_sadness\": \"Allah, me zai faru idan ba a yi mana maganin wannan cutar ba?\", \"rewritten_form_fear\": \"Allah, ina jin tsoro idan wannan cutar ba ta da magani.\", \"rewritten_form_anger\": \"Me yasa Allah ba ya ba mu maganin wannan cutar?\", \"rewritten_form_surprise\": \"Allah ya yi mana maganin wannan cutar? Ba na tsammani!\", \"rewritten_form_disgust\": \"Allah, cutar nan tana da matukar rashin jin dadi, ina fatan an samo maganinta.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a hopeful sentiment about receiving a cure for a disease. The joy version amplifies this by emphasizing the joy of having received the cure. Thus, there is a clear alignment with joy, though it's somewhat muted as the original does not explicitly show exuberance.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence is neutral and does not convey a sense of fear or concern about the absence of a cure. However, the sadness version expresses a worry about not receiving a cure. There is no strong alignment with sadness, as the original is not centered on worry or fear of loss.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not inherently express fear or concern about the lack of a cure, but the fear version reveals a strong anxiety and a sense of urgency regarding health. The original lacks this emotional depth, so the alignment is limited.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Similarly, the original sentence does not convey frustration or anger, while the anger version questions why a cure was not given. This frustration is absent in the original, leading to little alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence states a simple fact about having received a cure, with no element of surprise. The surprise version expresses disbelief or unexpected joy. Since the original lacks any sense of astonishment, the alignment is weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not reflect any sense of disgust or negative emotion toward the disease. The disgust version expresses a strong negative sentiment regarding the disease itself, which is not present in the original.",
+        "disgust_intensity": 0
+    }
+}

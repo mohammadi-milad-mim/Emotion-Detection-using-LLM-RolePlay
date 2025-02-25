@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It felt very surreal.\", \"rewritten_form_joy\": \"It felt incredibly surreal and delightful!\", \"rewritten_form_sadness\": \"It felt painfully surreal, like a haunting dream.\", \"rewritten_form_fear\": \"It felt so surreal, it made my heart race with unease.\", \"rewritten_form_anger\": \"It felt unjustifiably surreal, like a cruel joke.\", \"rewritten_form_surprise\": \"It felt astonishingly surreal, almost too bizarre to believe!\", \"rewritten_form_disgust\": \"It felt unsettlingly surreal, like a nightmare I couldn't escape.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of surrealness, but lacks the clear sense of joy or delight found in the rewritten joyful sentence. Therefore, while there is a hint of positive emotion in the term 'surreal,' it does not reach the level of expressed joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does touch upon a feeling of surrealness, which can imply a sense of disorientation or loss often associated with sadness. The rewritten version deepens this feeling with the word 'painfully', indicating a more substantial emotional weight, leading to a moderate connection.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The surreal element in the original sentence does imply uncertainty or discomfort, which aligns with fear. The rewritten fear sentence explicitly connects surrealness with a physical reaction (heart racing), indicating a close tie between the original and the fearful context, leading to a moderate intensity of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The notion of something being surreal can evoke feelings of injustice or frustration, particularly as expressed in the rewritten anger sentence. However, the original sentence does not explicitly indicate anger, implying a lower alignment. Thus, the connection is somewhat weak but present.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence suggests an unusual experience, which aligns closely with the element of surprise presented in the rewritten sentence. 'Surreal' itself provokes a sense of astonishment, leading to a moderate intensity of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

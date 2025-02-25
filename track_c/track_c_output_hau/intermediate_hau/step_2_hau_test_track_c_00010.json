@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Katsina: Yan bindiga sun bude wuta a kan wata mota, sun kashe fasinjoji 5\", \"rewritten_form_joy\": \"Katsina: Yan bindiga sun bude wuta a kan wata mota, amma akwai fasinjoji da suka tsira da ransu!\", \"rewritten_form_sadness\": \"Katsina: Yan bindiga sun bude wuta a kan wata mota, sun kashe fasinjoji 5, abin tausayi ne.\", \"rewritten_form_fear\": \"Katsina: Yan bindiga sun bude wuta a kan wata mota, sun kashe fasinjoji 5, hakan na sa zuciya ta tsere da fargaba.\", \"rewritten_form_anger\": \"Katsina: Yan bindiga sun bude wuta a kan wata mota, sun kashe fasinjoji 5! Wannan ba abu ne mai kyau ba!\", \"rewritten_form_surprise\": \"Katsina: Yan bindiga sun bude wuta a kan wata mota, sun kashe fasinjoji 5? Wannan abin mamaki ne!\", \"rewritten_form_disgust\": \"Katsina: Yan bindiga sun bude wuta a kan wata mota, sun kashe fasinjoji 5; wannan davranan ba tare da wata tausayi ba.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a violent act without any positive outcome and emphasizes death, which makes it starkly misaligned with joy. The joy rewrite mentions survivors, which adds a positive tone absent from the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence clearly communicates the death of five passengers, which is a tragic event that directly aligns with the emotion of sadness. The rewrite emphasizes this aspect, reinforcing the feeling of sorrow.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The mention of a shooting indicates a threatening and dangerous situation, which aligns with fear. The rewritten sentence heightens this fear by explicitly stating the impact of such violence on one's heart, which resonates strongly with the original.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The violence described in the original and the rewrite implies a strong sense of injustice, which evokes anger. The rewritten form emphasizes that this act is unacceptable, aligning closely with feelings of rage.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence directly presents shocking information\u2014the death toll from an attack. The rewrite queries the event, indicating an element of surprise. However, the inherent nature of an act of violence might have a limited capacity for surprise within the context it\u2019s presented.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original describes a violent act that lacks compassion, aligning with feelings of disgust. The rewritten sentence explicitly notes a lack of mercy, which resonates with the revulsion conveyed in the original.",
+        "disgust_intensity": 3
+    }
+}

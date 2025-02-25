@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Technically guilty of murder.\", \"rewritten_form_joy\": \"Somehow found guilty of murder! What a twist!\", \"rewritten_form_sadness\": \"Ultimately, found guilty of murder, which is heartbreaking.\", \"rewritten_form_fear\": \"They've been found technically guilty of murder; what does this mean for everyone?\", \"rewritten_form_anger\": \"It's infuriating that they're just deemed technically guilty of murder!\", \"rewritten_form_surprise\": \"Can you believe it? They are technically guilty of murder!\", \"rewritten_form_disgust\": \"The fact that they are technically guilty of murder is repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any sense of joy, whereas the rewritten joy version includes an element of surprise and a playful tone with 'What a twist!'. Thus, it doesn't resonate with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement is clinical and factual without emotional weight, while the sadness version emphasizes the heartbreak of the verdict. There\u2019s no intrinsic sadness conveyed in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not evoke fear directly, but it involves a serious crime that can imply fear for both the convicted and the society. However, it lacks an explicit expression of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original phrasing sounds detached, while the anger version expresses frustration over the technicality of the verdict. There's an implied frustration, but the anger isn't prominent in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original lacks a sense of surprise, being straightforward, whereas the surprise version indicates disbelief and astonishment. Thus, there is no alignment with surprise in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"All their Christmas stuff was 75 % off but there was nothing that caught my eye.\", \"rewritten_form_joy\": \"All their Christmas stuff was 75% off, and yet I couldn't find anything that really excited me!\", \"rewritten_form_sadness\": \"All their Christmas stuff was 75% off, but sadly, nothing caught my eye this time.\", \"rewritten_form_fear\": \"All their Christmas stuff was 75% off, but what if I miss finding something really special?\", \"rewritten_form_anger\": \"All their Christmas stuff was 75% off, yet I'm frustrated because nothing caught my eye!\", \"rewritten_form_surprise\": \"All their Christmas stuff was 75% off, but I was surprised that nothing seemed to catch my eye!\", \"rewritten_form_disgust\": \"All their Christmas stuff was 75% off, but honestly, nothing was appealing to me at all.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey excitement or joy about the sale, contrasting with the rewritten joy sentence which indicates excitement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a sense of disappointment that aligns well with the sadness rewrite, as both acknowledge a missed opportunity with the sale.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original does not express fear, it implies a sense of missed opportunity which leads to questioning, similar to the rewritten fear sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence indicates a passive recognition of missed items, which is less intense than the explicit frustration presented in the anger rewrite.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not indicate surprise; it is more neutral in tone concerning the items and their lack of appeal.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

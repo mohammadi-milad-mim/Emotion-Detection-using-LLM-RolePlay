@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"When I was eight years old, my dad let me get my ears pierced.\", \"rewritten_form_joy\": \"When I was eight years old, my dad finally let me get my ears pierced, and it was the happiest day ever!\", \"rewritten_form_sadness\": \"When I was eight years old, my dad let me get my ears pierced, but I wished he had been there with me.\", \"rewritten_form_fear\": \"When I was eight years old, my dad let me get my ears pierced, and I was terrified of the pain.\", \"rewritten_form_anger\": \"When I was eight years old, my dad let me get my ears pierced, which felt like a decision made without asking me first!\", \"rewritten_form_surprise\": \"When I was eight years old, my dad unexpectedly let me get my ears pierced, and I couldn\\u2019t believe it!\", \"rewritten_form_disgust\": \"When I was eight years old, my dad let me get my ears pierced, and honestly, the thought of it made me feel a bit sick.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a positive experience of getting ears pierced, but it does not express the intense joy present in the rewritten version. Thus, it aligns moderately with joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence lacks the element of wishing for presence, which is strong in the sadness version. While there is a neutral tone, it does not fully evoke sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original mentions getting ears pierced, but it does not suggest any fear of pain, which is explicitly stated in the rewritten fear version. Therefore, it is low on fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes a straightforward event. There is no hint of feeling imposed upon, unlike the anger version; hence, it aligns minimally with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not suggest any unexpectedness nor astonishment, as seen in the surprise version. Thus, it shows a very low degree of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

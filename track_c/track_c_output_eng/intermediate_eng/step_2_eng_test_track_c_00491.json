@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The towel grabbed back.\", \"rewritten_form_joy\": \"The towel playfully grabbed back!\", \"rewritten_form_sadness\": \"The towel sadly grabbed back, as if it wanted to keep me from leaving.\", \"rewritten_form_fear\": \"The towel grabbed back, startling me like it had a mind of its own.\", \"rewritten_form_anger\": \"The towel grabbed back, how ridiculous is that?\", \"rewritten_form_surprise\": \"The towel unexpectedly grabbed back and caught me off guard!\", \"rewritten_form_disgust\": \"The towel grabbed back, gross and totally unwelcome.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys an action that could be perceived as playful, but it lacks the enthusiastic tone and clear positivity of the rewritten joyful sentence. Therefore, it aligns only slightly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey a sense of longing or sadness as emphasized in the rewritten sadness version. The idea of the towel wanting to keep someone from leaving adds depth that is missing from the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does suggest an unexpected or startling action, aligning it moderately with fear. It indicates a sense of unexpectedness, but does not elaborate on the emotional response in the same dramatic way as the rewritten version.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not convey frustration or absurdity the way the rewritten anger version does. The anger version emphasizes a judgment on the ridiculousness of the event, which is not reflected in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does have a surprising element\u2014an inanimate object seemingly 'grabbing back' is unexpected. This aligns reasonably with the surprise rewritten version, capturing an element of being caught off guard.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

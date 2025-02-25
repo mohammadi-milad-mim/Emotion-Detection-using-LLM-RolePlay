@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Tashin hankali: Wani matashi ya cakawa abokinshi kwalba a kahon zuci akan guntuwar giya\", \"rewritten_form_joy\": \"Tashin hankali: Wani matashi ya cakawa abokinshi kwalba cikin nishadi akan guntuwar giya!\", \"rewritten_form_sadness\": \"Tashin hankali: Wani matashi ya cakawa abokinshi kwalba a kahon zuci, abin bakin ciki ne akan guntuwar giya.\", \"rewritten_form_fear\": \"Tashin hankali: Wani matashi ya cakawa abokinshi kwalba a kahon zuci, yana da wuyar gaske akan guntuwar giya.\", \"rewritten_form_anger\": \"Tashin hankali: Wani matashi ya cakawa abokinshi kwalba a kahon zuci! Menene hakan akan guntuwar giya?\", \"rewritten_form_surprise\": \"Tashin hankali: Wani matashi ya cakawa abokinshi kwalba a kahon zuci, abin mamaki ne akan guntuwar giya!\", \"rewritten_form_disgust\": \"Tashin hankali: Wani matashi ya cakawa abokinshi kwalba a kahon zuci, abin kaushi akan guntuwar giya.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a violent act but lacks any joyful context or element. The rewritten joy version introduces 'nishadi' (fun) which completely changes the sentiment to something positive, differentiating it from the original meaning.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes a troubling situation involving violence, which can be seen as sad. The rewritten sadness version explicitly states that it is 'abin bakin ciki' (a sad thing), making it closely aligned with the original tone of distress.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence depicts a violent act without directly invoking fear, but the implication of potential harm leaves room for fear. The fear version emphasizes the danger ('yana da wuyar gaske'), which aligns well with the original context.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence describes an aggressive action. The rewritten anger version adds an exclamatory tone ('Menene hakan?'), which enhances the sense of outrage but both expressions share a sense of anger towards the act.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence doesn't suggest anything shocking, while the rewritten surprise version calls it 'abin mamaki' (a surprise), which is not aligned with the original. There's nothing in the original that indicates it should invoke surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence contains a violent act that could elicit disgust, and the rewritten disgust version reinforces this notion by describing the act as 'abin kaushi' (something detestable). This connection is made clear through the language used.",
+        "disgust_intensity": 2
+    }
+}

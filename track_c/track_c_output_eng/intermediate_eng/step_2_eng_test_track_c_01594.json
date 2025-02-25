@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This will probably get buried, but it's worth a shot.\", \"rewritten_form_joy\": \"This might get buried, but I'm so excited to give it a try!\", \"rewritten_form_sadness\": \"This will likely get buried, but I just really hope it gets noticed.\", \"rewritten_form_fear\": \"This may end up buried, and honestly, that scares me, but I have to try anyway.\", \"rewritten_form_anger\": \"This will probably get buried, which is so frustrating, but I'm going to give it a shot anyway!\", \"rewritten_form_surprise\": \"This might get buried, which is surprising to me, but I really want to try!\", \"rewritten_form_disgust\": \"This will probably get buried, which is just pathetic, but I guess it's worth a shot.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral or slightly positive attitude toward trying something despite potential negative outcomes, but it lacks the strong excitement seen in the joy rewritten version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "There is a hint of hopefulness in the original sentence about getting noticed, which aligns with the sadness version, but it is less emotionally intense and more matter-of-fact.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not convey a strong sense of fear about the outcome, as it reads more as resignation than apprehension, making it less aligned with the fear rewritten sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original's tone is too neutral to express the frustration found in the anger rewritten sentence. It reflects acceptance more than anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence recognizes that something might be buried without expressing astonishment, so it doesn't fully align with the surprise rewritten version that conveys an element of unexpectedness.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

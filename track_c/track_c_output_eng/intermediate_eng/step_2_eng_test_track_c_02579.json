@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He stood up and said, 'I'm in love with the bride!\", \"rewritten_form_joy\": \"He stood up and exclaimed, 'I\\u2019m absolutely in love with the bride!'\", \"rewritten_form_sadness\": \"He stood up and sorrowfully said, 'I\\u2019m in love with the bride... but it feels bittersweet.'\", \"rewritten_form_fear\": \"He stood up, heart racing, and said, 'I\\u2019m in love with the bride!' hoping no one would react harshly.\", \"rewritten_form_anger\": \"He stood up and angrily shouted, 'I\\u2019m in love with the bride! This is all so unfair!'\", \"rewritten_form_surprise\": \"He stood up in shock and said, 'I\\u2019m in love with the bride! I can\\u2019t believe I just said that!'\", \"rewritten_form_disgust\": \"He stood up and said, 'I\\u2019m in love with the bride! What a ridiculous situation to find myself in!'\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses joy through the declaration of love, which aligns well with the rewritten joyful version that emphasizes absolute affection with the use of 'absolutely'. They share a similar tone of excitement and happiness.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence lacks a sense of sorrow or bittersweetness, making it not align well with the sadness version. While unrequited love could imply sadness, the direct statement does not convey that emotion.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey any sense of fear or anxiety about the situation. The absence of apprehension in the declaration makes it differ significantly from the rewritten fear version, which implies concern about reactions.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger or frustration. The statement is straightforward and lacks the emotional charge present in the anger version, where the speaker feels wronged or unfairly treated.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is an element of surprise in the original statement, as the act of confessing love in a public or unexpected setting could catch others off guard, similar to the rewritten version that emphasizes shock. However, the original lacks the overtness of disbelief indicated in the surprise version.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

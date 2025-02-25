@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then there was the time I woke up 3 hours before I went to bed.\", \"rewritten_form_joy\": \"Then there was the amazing time I woke up 3 hours before I went to bed, feeling so refreshed!\", \"rewritten_form_sadness\": \"Then there was the time I woke up 3 hours before I went to bed, and it just felt so hopeless.\", \"rewritten_form_fear\": \"Then there was the unsettling time I woke up 3 hours before I went to bed, my heart racing with confusion.\", \"rewritten_form_anger\": \"Then there was the frustrating time I woke up 3 hours before I went to bed, and I was so annoyed!\", \"rewritten_form_surprise\": \"Then there was the astonishing time I woke up 3 hours before I went to bed\\u2014how bizarre!\", \"rewritten_form_disgust\": \"Then there was the gross time I woke up 3 hours before I went to bed; it felt so wrong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys an unusual experience of waking up early but does not imply joy or freshness as in the rewritten joy sentence. Hence, it aligns weakly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence lacks a sense of hopelessness or sadness, which the rewritten sadness version suggests. Therefore, it aligns minimally with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does carry an element of confusion but lacks any intense fear or anxiety suggested in the rewritten fear version. It aligns moderately with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is no direct expression of frustration or annoyance in the original sentence; it doesn\u2019t align well with the sentiment in the anger rewritten form. Thus, it aligns weakly with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence suggests an unexpected or strange situation, which fits with the sense of surprise in the rewritten version. Therefore, it aligns moderately with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Sojoji sun yi wa \\u2019yan bindiga ruwan wuta a Kaduna\", \"rewritten_form_joy\": \"Sojoji sun yi wa \\u2019yan bindiga ruwan fuka-fuka mai kyau a Kaduna!\", \"rewritten_form_sadness\": \"Sojoji sun yi wa \\u2019yan bindiga ruwan wuta a Kaduna, abin takaicin gaske ne.\", \"rewritten_form_fear\": \"Sojoji sun yi wa \\u2019yan bindiga ruwan wuta a Kaduna, ina jin tsoro akan abin da zai faru.\", \"rewritten_form_anger\": \"Sojoji sun yi wa \\u2019yan bindiga ruwan wuta a Kaduna, yana da ban haushi!\", \"rewritten_form_surprise\": \"Sojoji sun yi wa \\u2019yan bindiga ruwan wuta a Kaduna! Ban yi tsammani ba!\", \"rewritten_form_disgust\": \"Sojoji sun yi wa \\u2019yan bindiga ruwan wuta a Kaduna, wannan abu yana da sosa rai.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states a fact about soldiers (sojoji) and gunmen (\u2019yan bindiga) in Kaduna; there is no element of joy or positivity that aligns with the joyful rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewritten version adds a clear expression of regret ('abin takaicin gaske ne') to the original sentence's context, which aligns well with the sense of sorrow due to the situation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear rewritten version expresses concern and anxiety about potential outcomes ('ina jin tsoro akan abin da zai faru'), which matches with the potential danger implied by the original sentence about armed conflicts.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger rewritten version introduces frustration with the situation ('yana da ban haushi!'), which is a strong emotional reaction considering the context of violence and conflict implied in the original sentence.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise version portrays shock and unexpectedness ('Ban yi tsammani ba!'), which is not inherently present in the original sentence. However, one might feel surprised about the situation mentioned.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust rewritten version criticizes the situation ('wannan abu yana da sosa rai'), evoking a strong negative emotional response that aligns more closely with the unpleasantness of armed conflict.",
+        "disgust_intensity": 2
+    }
+}

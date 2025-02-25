@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Something very important and it ruined his life.\", \"rewritten_form_joy\": \"Something very important happened, and it changed his life for the better!\", \"rewritten_form_sadness\": \"Something very important happened, and it tragically ruined his life.\", \"rewritten_form_fear\": \"Something very important and it has the potential to completely ruin his life.\", \"rewritten_form_anger\": \"Something very important happened, and it absolutely ruined his life!\", \"rewritten_form_surprise\": \"Something very important occurred, and it unexpectedly ruined his life.\", \"rewritten_form_disgust\": \"Something very important, and it utterly ruined his life in such a disgusting way.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a negative outcome ('ruined his life'), which directly contrasts with the joyful sentiment in the rewritten joy version that speaks of a positive change and betterment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns closely with the sadness version since both express the negative impact of an important event, both emphasizing the tragedy of life's ruin.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a connection between the original sentence and the fear version, as both suggest a significant negative impact from an important event; however, the fear sentence implies potentiality rather than certainty, making it less intense than the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence fits well with the anger version since both express a strong negative feeling about the life-ruining event, accentuated by the term 'absolutely' in the anger rewrite.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "While there is an element of surprise in noting the unexpected nature of life's ruin, the original sentence does not contain any sense of unexpectedness or astonishment, so the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

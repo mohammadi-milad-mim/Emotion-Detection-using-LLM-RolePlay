@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"`` I was flat on my back, the wind knocked out of me, but somehow I managed to scramble to my hands and knees.\", \"rewritten_form_joy\": \"I was flat on my back, the wind knocked out of me, but somehow I joyfully managed to scramble to my hands and knees!\", \"rewritten_form_sadness\": \"I was flat on my back, the wind knocked out of me, and it felt so heavy as I managed to scramble to my hands and knees.\", \"rewritten_form_fear\": \"I was flat on my back, the wind knocked out of me, and panic surged through me as I scrambled to my hands and knees.\", \"rewritten_form_anger\": \"I was flat on my back, the wind knocked out of me, but I was furious as I managed to scramble to my hands and knees.\", \"rewritten_form_surprise\": \"I was flat on my back, the wind knocked out of me, and to my surprise, I somehow managed to scramble to my hands and knees.\", \"rewritten_form_disgust\": \"I was flat on my back, the wind knocked out of me, feeling utterly disgusted with my situation as I scrambled to my hands and knees.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a challenging situation, but lacks any joyful expression or sentiment. The rewrite introduces 'joyfully' which changes the tone significantly. Therefore, there's little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of struggle but does not explicitly reflect sadness or heaviness. The rewrite emphasizes feeling heavy, which enhances the sadness, but the original lacks that depth.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence shows a physical challenge but does not express any fear. The rewrite introduces 'panic,' which indicates fear, but this sentiment is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement discusses a struggle to get back up without any indication of anger. The rewrite introduces fury, which is absent in the original, showing no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence reflects an unexpected struggle, but does not convey surprise. The rewrite adds 'to my surprise', which indicates an unexpected result, but the original does not include this sentiment clearly.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

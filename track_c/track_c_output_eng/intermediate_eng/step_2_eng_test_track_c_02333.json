@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"it was fun but it made my head hurt.\", \"rewritten_form_joy\": \"I had such a blast, but wow, it left my head spinning!\", \"rewritten_form_sadness\": \"It was enjoyable, yet it still brought on a painful headache.\", \"rewritten_form_fear\": \"I thought it would be fun, but it ended up giving me a terrible headache.\", \"rewritten_form_anger\": \"I had a great time, but then it ruined everything with that awful headache!\", \"rewritten_form_surprise\": \"It was unexpectedly fun, but I didn't see that headache coming!\", \"rewritten_form_disgust\": \"It was fun, but then it turned into this awful headache.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a degree of enjoyment ('fun') but immediately contrasts it with a negative outcome (a headache). This indicates a lower alignment with joy as the overall sentiment isn't purely positive.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text's shift from enjoyment to pain captures a sense of regret or disappointment, aligning well with sadness since it acknowledges the pleasurable experience overshadowed by discomfort.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The mention of the headache can convey an element of fear regarding potential pain or discomfort, but the overall tone of the original does not evoke strong fear; it suggests concern rather than outright dread or terror.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement reflects frustration as the enjoyment is marred by a headache, but it does not express vehement anger or outrage. Thus, while moderate, the intensity is not high.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence hints at an unexpected outcome\u2014having fun leading to pain. However, it lacks strong elements of surprise since the connection between fun and a headache is somewhat predictable.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

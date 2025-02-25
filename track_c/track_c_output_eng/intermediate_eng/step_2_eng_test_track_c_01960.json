@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We left him with the security guys.It disturbed me, fear got into my head, i started to think `` what on earth are we doing putting ourselves and others in this situation? ''\", \"rewritten_form_joy\": \"We left him with the security guys. It felt a bit unsettling, but I was hopeful, thinking, 'Maybe this will turn out just fine!'\", \"rewritten_form_sadness\": \"We left him with the security guys. It really weighed on me, and I couldn\\u2019t help but think, 'Why are we putting ourselves and others in such a painful situation?'\", \"rewritten_form_fear\": \"We left him with the security guys. A chill ran down my spine, and I started to panic, thinking, 'What on earth are we doing putting ourselves and others in this dangerous situation?'\", \"rewritten_form_anger\": \"We left him with the security guys. It infuriated me, and I thought, 'What on earth are we doing putting ourselves and others in this reckless situation?'\", \"rewritten_form_surprise\": \"We left him with the security guys. I was shocked, and it hit me hard as I thought, 'What on earth are we doing putting ourselves and others in this bizarre situation?'\", \"rewritten_form_disgust\": \"We left him with the security guys. It made me feel sick, and I couldn't fathom, 'What on earth are we doing putting ourselves and others in this disgusting situation?'\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of disturbance and fear, which contrasts sharply with the hopeful and slightly unsettling tone of the joy rewritten sentence. There is no element of joy present in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a moderate sense of sadness expressed in the rewritten sadness sentence, which reflects the weight of the situation and the self-reflection that the original text conveys. This aligns more closely with the original sentiment of disturbance and questioning the situation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence explicitly expresses fear, with phrases that indicate panic and unsettling thoughts. The fear rewritten sentence heightens this emotion further with imagery of a chill and panic, aligning almost perfectly with the original's fearful sentiment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not explicitly convey anger but does express disturbance and questioning of the situation, which can hint at a form of frustration. The rewritten anger sentence intensifies this feeling of recklessness, but it does not align as closely with the original emotion compared to fear.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not evoke a sense of surprise; rather, it focuses on fear and questioning. The rewritten surprise sentence adds shock but fails to resonate with the original feeling of unease and fear.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

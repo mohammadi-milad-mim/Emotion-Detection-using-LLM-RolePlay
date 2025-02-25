@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And you already forgot.\", \"rewritten_form_joy\": \"And you\\u2019ve already forgotten, huh?\", \"rewritten_form_sadness\": \"And you already forgot...\", \"rewritten_form_fear\": \"And you already forgot? What if it happens again?\", \"rewritten_form_anger\": \"And you just forgot, didn't you?\", \"rewritten_form_surprise\": \"And you already forgot? Wow!\", \"rewritten_form_disgust\": \"And you already forgot? That's just sad.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a more straightforward comment about forgetfulness without much playfulness or light-heartedness associated with joy. The rewritten joy form uses a more casual tone, which is notably lighter, but this isn't strongly present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence has a tone that can be interpreted as slightly melancholic, especially with the ellipsis in the rewritten sad form suggesting a deeper emotional weight. The sadness aligns well with the original statement's implication of loss or neglect.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original doesn't evoke fear on its own; it simply states a fact. However, the rewritten fear form suggests a worry that the forgetfulness could repeat, which adds a layer of concern that isn\u2019t present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original can imply exasperation or annoyance but does not explicitly evoke anger. The rewritten anger form captures a sharper tone, suggesting irritation which is not as evident in the original's more neutral phrasing.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original lacks the element of surprise, as it is a straightforward observation. The rewritten surprise form introduces enthusiasm or astonishment that is not indicated in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

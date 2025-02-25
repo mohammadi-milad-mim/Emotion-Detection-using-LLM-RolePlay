@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"In my head i was like `` what the fish!\", \"rewritten_form_joy\": \"In my head, I was like, \\\"What a delightful surprise!\\\"\", \"rewritten_form_sadness\": \"In my head, I was like, \\\"What a disappointing turn of events...\\\"\", \"rewritten_form_fear\": \"In my head, I was like, \\\"What the fish! This can't be happening!\\\"\", \"rewritten_form_anger\": \"In my head, I was like, \\\"What the fish! This is absolutely infuriating!\\\"\", \"rewritten_form_surprise\": \"In my head, I was like, \\\"What the fish! I did not see that coming!\\\"\", \"rewritten_form_disgust\": \"In my head, I was like, \\\"What the fish! That's just revolting!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original statement does not express joy; it uses a casual shock or surprise instead. The rewritten joy sentence adds a sense of delight, which is absent in the original. Thus, the alignment is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentiment does not convey sadness. The rewritten sadness sentence implies a feeling of disappointment, which does not resonate with the tone of the original. Therefore, the alignment is minimal.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original expression, 'What the fish!' suggests an expression of shock, which slightly aligns with fear. The rewritten sentence strongly amplifies that fear, suggesting a dangerous or shocking scenario. It has some resemblance but not a strong alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence implies frustration but without the same intensity conveyed in the rewritten anger sentence. The phrase 'What the fish!' suggests annoyance, but it doesn't reach the level of infuriating expressed in the rewrite. Hence, there is some alignment but not strong.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original phrase strongly suggests surprise, similar to the rewritten surprise sentence. Both express an unexpected reaction, making this alignment quite high. The phrase 'What the fish!' directly indicates a surprise element.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

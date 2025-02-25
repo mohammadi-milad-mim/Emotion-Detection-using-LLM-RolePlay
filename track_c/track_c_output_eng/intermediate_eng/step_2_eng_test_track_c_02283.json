@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And its freakin ' getting on my nerves.\", \"rewritten_form_joy\": \"And it's really lighting up my day!\", \"rewritten_form_sadness\": \"And it's just making me feel so down.\", \"rewritten_form_fear\": \"And it's honestly starting to freak me out.\", \"rewritten_form_anger\": \"And it's absolutely driving me insane!\", \"rewritten_form_surprise\": \"And it's honestly starting to get to me like I didn't expect!\", \"rewritten_form_disgust\": \"And it's downright repulsive how much it's bothering me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses irritation and frustration, which contrasts sharply with the joy in the rewritten version, which is positive and uplifting. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence does convey a negative feeling, it is more about irritation than deep sadness. The rewritten version highlights feeling down, which is not quite captured in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original reflects a sense of annoyance rather than fear. The rewritten version suggests a more alarming and anxious feeling, making it less aligned with the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a strong alignment here; the original sentence communicates irritation and frustration, closely matching the tone of the rewritten anger version that indicates driving someone to insanity.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original doesn\u2019t present an element of surprise; it is a straightforward expression of annoyance. The rewritten surprise version implies an unexpected reaction which doesn\u2019t correlate with the original feeling.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

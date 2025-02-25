@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I pushed the door upon and laid my eyes on a buffet table with tons of delicious foods.\", \"rewritten_form_joy\": \"I pushed the door open and my eyes immediately landed on a magnificent buffet table overflowing with delicious foods!\", \"rewritten_form_sadness\": \"I pushed the door open and my eyes fell upon a buffet table filled with tons of delicious foods, but I felt so alone enjoying it.\", \"rewritten_form_fear\": \"I pushed the door open cautiously and was struck with apprehension at the sight of a buffet table filled with so much delicious food; what if I couldn't handle it?\", \"rewritten_form_anger\": \"I pushed the door open and was met with a buffet table piled high with a mountain of delicious foods, making me furious that I wasn't invited sooner!\", \"rewritten_form_surprise\": \"I pushed the door open and to my astonishment, there was a buffet table brimming with delicious foods!\", \"rewritten_form_disgust\": \"I pushed the door open and saw a buffet table cluttered with what could only be described as an overwhelming amount of food, most of which looked far from appetizing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a positive reaction to encountering a buffet table with delicious foods, similar to the joy-filled rewrite that emphasizes an immediate and excited engagement with the sight of the food.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original does not contain elements of loneliness or melancholy but simply describes a pleasant scene. The rewritten version introduces feelings of solitude that are absent in the original, suggesting a lower alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence conveys a sense of delight rather than apprehension. The fear rewrite introduces worry about being overwhelmed by the food, which is not implied in the original, leading to a disconnection in emotional intensity.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence lacks any feelings of frustration or anger, while the angry rewrite expresses irritation about not being invited to the feast. This results in little to no connection with the anger sentiment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a slight surprise element in the original due to the newness of the setting. However, the surprise rewrite emphasizes extreme astonishment, which is more intense than what is conveyed in the original, leading to a moderate alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

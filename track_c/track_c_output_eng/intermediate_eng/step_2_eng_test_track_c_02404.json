@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I spent the night at the hotel, mostly hanging out in Sandman & Marian's room, trying to edit pics and meet about band merch while my tooth hurt cuz a filling fell out!\", \"rewritten_form_joy\": \"I spent the night at the hotel, having a blast hanging out in Sandman & Marian's room, trying to edit pics and chat about band merch, even though my tooth hurt a bit because a filling fell out!\", \"rewritten_form_sadness\": \"I spent the night at the hotel, mostly hanging out in Sandman & Marian's room, trying to edit pics and discuss band merch while my tooth throbbed because a filling fell out... it was hard to focus.\", \"rewritten_form_fear\": \"I spent the night at the hotel, mostly hanging out in Sandman & Marian's room, trying to edit pics and talk about band merch while worrying about how my tooth hurt since a filling fell out!\", \"rewritten_form_anger\": \"I spent the night at the hotel, mostly stuck in Sandman & Marian's room, trying to edit pics and deal with band merch while my tooth was aching because that stupid filling fell out!\", \"rewritten_form_surprise\": \"I spent the night at the hotel, unexpectedly hanging out in Sandman & Marian's room, trying to edit pics and figure out band merch\\u2014wow, my tooth hurt because a filling fell out!\", \"rewritten_form_disgust\": \"I spent the night at the hotel, mostly stuck in Sandman & Marian's room, trying to edit pics and discuss band merch while my tooth throbbed, ugh, because a filling fell out!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a somewhat enjoyable experience despite discomfort; however, the tone is more neutral and does not match the excitement of the rewritten joy version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence mentions physical discomfort, which aligns with feelings of sadness but lacks an emotional depth or reflection, making it moderately aligned.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence indicates worry about the tooth hurting, which aligns with fear, but the overall tone doesn't convey a strong sense of anxiety, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original mentions pain from a dental issue but doesn't convey much frustration or anger, particularly in the context of enjoying the night; thus, it has a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original lacks an element of unexpectedness; while there is mention of discomfort, it doesn't convey surprise, resulting in no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

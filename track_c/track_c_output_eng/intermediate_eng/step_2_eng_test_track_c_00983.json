@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I used to be best friends with this guy.\", \"rewritten_form_joy\": \"I used to be best friends with this amazing guy!\", \"rewritten_form_sadness\": \"I used to be best friends with this guy, and now it hurts to think about it.\", \"rewritten_form_fear\": \"I used to be best friends with this guy, but I worry about what happened between us.\", \"rewritten_form_anger\": \"I used to be best friends with this guy, and I can\\u2019t believe how things ended up!\", \"rewritten_form_surprise\": \"I used to be best friends with this guy, and it's shocking how quickly we drifted apart!\", \"rewritten_form_disgust\": \"I used to be best friends with this guy, but thinking about it now just makes me cringe.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a simple fact about a past friendship, lacking any positive emotional language. The joy version adds enthusiasm ('amazing'), suggesting a fondness that isn't present in the original. Therefore, the alignment with joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version explicitly mentions hurt, indicating an emotional depth and pain related to the friendship's past. The original only states the fact of friendship but doesn't imply loss or hurt, so while there is some sadness present, it isn't strong.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version introduces worry about the past relationship's outcome, which is not present in the original. While the friendship's end suggests some potential concern, the original sentence does not express fear, making this alignment low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version adds a significant emotional charge about disbelief regarding how the friendship ended. While the original may imply some level of bitterness due to the friendship's status, it does not explicitly show anger, resulting in a very low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version introduces the concept of drifting apart quickly, which is not implied in the original sentence. However, the mere mention of being best friends suggests a change, so there might be a slight level of surprise in the transition, but it is not strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

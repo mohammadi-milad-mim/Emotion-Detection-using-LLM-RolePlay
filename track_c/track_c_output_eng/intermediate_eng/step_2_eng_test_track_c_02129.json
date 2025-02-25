@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Thy walk today with me Has made my heart within me burst; As I communed with thee.\", \"rewritten_form_joy\": \"Walking with you today has filled my heart with joy beyond measure; it was a delightful conversation.\", \"rewritten_form_sadness\": \"Our walk today together has left my heart aching; my thoughts lingered on what we could have shared more.\", \"rewritten_form_fear\": \"As we walked today, a chill seized my heart; what if this moment was fleeting and could never happen again?\", \"rewritten_form_anger\": \"Today\\u2019s walk with you only made my heart swell with frustration; I wish you could truly understand my feelings.\", \"rewritten_form_surprise\": \"I can't believe how that walk with you today made my heart soar; it caught me completely off guard!\", \"rewritten_form_disgust\": \"That walk with you today only left a sour taste in my heart; I wish our time together could have been better.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong sense of happiness and affection, indicating that the walk was an uplifting experience. This aligns closely with the joyful rewritten sentence, which uses similar phrases to convey overwhelming joy and delight in the experience.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence conveys deep emotional significance but doesn't convey a sense of loss or ache as described in the sad rewritten sentence. While there is a strong emotional connection, the context of joy is more prominent.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey any fear or anxiety about the moment being fleeting. The fear rewritten sentence projects a sense of urgency and worry that is not present in the original. This makes it a misalignment with the original tone.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original text does express a deep emotional experience, there is no frustration or negative emotion akin to anger, as depicted in the rewritten version. Thus, the original sentence does not resonate with this emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The joy expressed in the original may contain an element of pleasant surprise, but the tone is mainly one of contentment rather than astonished delight. The joy is consistent but lacks the suddenness implied by the surprise rewritten sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my heart is empty.\", \"rewritten_form_joy\": \"my heart is bursting with joy!\", \"rewritten_form_sadness\": \"my heart feels so empty and heavy.\", \"rewritten_form_fear\": \"my heart feels like it's in a dark void.\", \"rewritten_form_anger\": \"my heart is infuriatingly empty!\", \"rewritten_form_surprise\": \"my heart feels unexpectedly empty!\", \"rewritten_form_disgust\": \"my heart is disgustingly empty.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of emptiness, which starkly contrasts with the exuberance of joy expressed in the rewritten version. There's no indication of joy in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'my heart is empty' closely aligns with the rewritten sentence that expands on this feeling with 'heavy' and deepens the emotional weight. Both convey a sense of loss or sorrow.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The expression of an 'empty' heart in the original connects with the fear of a void or darkness as suggested in the rewritten version. It implies discomfort and possible dread but is less intense compared to overt fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not explicitly indicate anger, while the rewritten version conveys a sense of frustration and infuriation regarding the emptiness. There is no correlation of anger present in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original gives no hint of surprising emptiness, while the rewritten version implies an unexpected feeling which is not reflected in the original's straightforward statement. The tone of surprise is absent in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

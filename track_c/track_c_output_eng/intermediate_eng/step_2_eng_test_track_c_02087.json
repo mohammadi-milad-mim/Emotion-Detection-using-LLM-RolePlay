@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My feet are doin ' fine, for as much as I ran around, and now I'm thirsty.\", \"rewritten_form_joy\": \"My feet are doing great after all that running, and now I\\u2019m so excited to quench my thirst!\", \"rewritten_form_sadness\": \"My feet are holding up okay, but after all that running, I feel so tired and now I'm just really thirsty.\", \"rewritten_form_fear\": \"My feet are barely okay after all that running, and now I\\u2019m worried about how thirsty I am.\", \"rewritten_form_anger\": \"My feet are fine, considering I ran around so much, but seriously, now I'm just fed up with being thirsty.\", \"rewritten_form_surprise\": \"I can\\u2019t believe my feet are doing fine after all that running, but wow, now I really need to drink something!\", \"rewritten_form_disgust\": \"My feet are surprisingly alright after all that running, but ugh, now I\\u2019m just grossed out by how thirsty I feel.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral to positive sentiment about the condition of the feet, suggesting they are fine after running. However, it lacks the exuberance and excitement that comes with joy, as seen in the rewritten joy version. Therefore, while there is a hint of positive feeling, it does not reach the joyful intensity present in the rewritten form.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence indicates that the feet are fine, but it does not convey a strong sense of tiredness or a sad feeling that is present in the rewritten sadness version. There is no explicit mention of feeling worn out or overly negative, leading to a lower alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is no indication of fear in the original sentence. The expression of the condition of the feet does not suggest worry or concern about thirst - the tone is neutral. Thus, the fear aspect is not present in the original text.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text presents a neutral feeling regarding the condition of the feet and does not express frustration or irritation about thirst. The rewritten anger version expresses a clear annoyance we do not see in the original, so there is little to align with anger here.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence expresses a straightforward observation about the feet and thirst. While the rewritten surprise version highlights disbelief and astonishment, these feelings are not present in the original, which expresses a more matter-of-fact tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

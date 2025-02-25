@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had at least a half dozen, sad songs whirling around in my head, and I'm still eager to get them lengthened and mixed.\", \"rewritten_form_joy\": \"I had at least a half dozen joyful songs whirling around in my head, and I'm so excited to get them lengthened and mixed!\", \"rewritten_form_sadness\": \"I had at least a half dozen sad songs swirling around in my head, and I'm still longing to get them lengthened and mixed.\", \"rewritten_form_fear\": \"I had at least a half dozen, sad songs whirling around in my head, and I'm a bit anxious about getting them lengthened and mixed.\", \"rewritten_form_anger\": \"I had at least a half dozen sad songs swirling around in my head, and I'm so frustrated that I can't get them lengthened and mixed yet!\", \"rewritten_form_surprise\": \"I had at least a half dozen sad songs unexpectedly whirling around in my head, and I'm surprised at how eager I am to get them lengthened and mixed!\", \"rewritten_form_disgust\": \"I had at least a half dozen sad songs cluttering my head, and I'm actually repulsed by how I still want to get them lengthened and mixed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of eagerness and creativity, but it does not convey outright joy; instead, it maintains a neutral tone despite the mention of 'sad songs'.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The mention of 'sad songs' indicates a clear element of sadness, and it aligns with the rewritten version in that respect, though the eagerness somewhat mitigates the sadness's intensity.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is no indication in the original sentence that the speaker feels anxious or fearful about the songs or process; thus, it does not align well with the fear emotion.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentiment doesn't contain frustration or anger; it expresses eagerness instead, which does not match the anger context at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence shows eagerness to work on sad songs, but does not indicate any surprise, making it less aligned with the surprise rewritten version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

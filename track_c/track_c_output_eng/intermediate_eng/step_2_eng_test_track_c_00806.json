@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I remember looking at the Dairy Queen sign across the street because it directed my face away from the crowd of onlookers.\", \"rewritten_form_joy\": \"I joyfully remember glancing at the Dairy Queen sign across the street, as it cheerfully turned my face away from the crowd of onlookers.\", \"rewritten_form_sadness\": \"I remember sadly looking at the Dairy Queen sign across the street, as it felt like my only escape from the crowd of onlookers.\", \"rewritten_form_fear\": \"I remember nervously looking at the Dairy Queen sign across the street, as it helped me turn my face away from the intimidating crowd of onlookers.\", \"rewritten_form_anger\": \"I remember angrily glaring at the Dairy Queen sign across the street, desperately directing my face away from the crowd of onlookers judging me.\", \"rewritten_form_surprise\": \"I remember startlingly noticing the Dairy Queen sign across the street, which unexpectedly directed my face away from the crowd of onlookers.\", \"rewritten_form_disgust\": \"I remember feeling repulsed while looking at the Dairy Queen sign across the street, as it helped me turn my face away from the crowd of onlookers.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a joyful sentiment. It describes looking at a sign as a distraction from an onlooker crowd, but lacks any positive or cheerful tone. The rewritten joyful version adds a sense of happiness that isn't present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of looking away from the crowd, implying discomfort or isolation, which aligns somewhat with sadness. The rewritten version specifies that the act of looking at the sign is a sad memory, thus creating a more direct emotional link to sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at a possible discomfort due to the crowd but does not explicitly indicate fear. The rewritten version emphasizes nervousness, making it more aligned with fear. Overall, the original lacks the intensity of fear indicated in the rewrite.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express any anger; it merely describes an act of looking away. The rewritten version adds a semantic shift towards anger that isn't reflected in the original context, leading to a disconnection between the two.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original provides a straightforward observation and does not include elements of surprise. The rewritten version implies an unexpected realization, which does not correspond with the original's tone. Therefore, there's little alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

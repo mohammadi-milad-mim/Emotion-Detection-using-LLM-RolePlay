@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then I had a reaction to a medication that almost closed my throat.\", \"rewritten_form_joy\": \"Then I had an unexpected reaction to a medication, and it was such a wild experience!\", \"rewritten_form_sadness\": \"Then I had a reaction to a medication that nearly closed my throat, and it really scared me.\", \"rewritten_form_fear\": \"Then I had a terrifying reaction to a medication that almost closed my throat.\", \"rewritten_form_anger\": \"Then I had this awful reaction to a medication that nearly closed my throat, and it\\u2019s infuriating!\", \"rewritten_form_surprise\": \"Then I had a shocking reaction to a medication that almost closed my throat!\", \"rewritten_form_disgust\": \"Then I had a disturbing reaction to a medication that almost closed my throat.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence doesn't convey joy at all; it focuses on a serious medical response rather than a positive or joyful experience.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a frightening experience, but it doesn't explicitly express sadness. While it might have led to fear or concern, it lacks a deep emotional impact related to sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence describes a reaction that could have led to serious consequences, which strongly aligns with fear. The use of 'almost closed my throat' implies a life-threatening situation that is inherently fear-inducing.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original suggests distress related to the medication, but it does not invoke a strong sense of anger. While it might be upsetting, it lacks an explicit frustration or blame directed at the medication or situation.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The idea of a reaction that nearly closed the throat can certainly be surprising, but the original sentence does not emphasize the shock or unexpectedness of such an occurrence convincingly enough to score high on intensity.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

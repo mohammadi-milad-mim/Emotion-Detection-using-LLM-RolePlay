@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Because it was fun.\", \"rewritten_form_joy\": \"Because it was so much fun!\", \"rewritten_form_sadness\": \"Because it was fun, but it\\u2019s over now.\", \"rewritten_form_fear\": \"Because it was fun, but I\\u2019m worried it could change everything.\", \"rewritten_form_anger\": \"Because it was fun, and I can\\u2019t believe it's being taken away from us!\", \"rewritten_form_surprise\": \"Because it was fun\\u2014who would have thought it would be like that?\", \"rewritten_form_disgust\": \"Because it was fun, but honestly, I didn\\u2019t enjoy it as much as I should have.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of fun, which aligns well with the tone of enthusiasm in the joy rewritten sentence, indicating a high degree of enjoyment.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence is positive but lacks the acknowledgment of loss present in the sadness rewritten sentence, suggesting a lower intensity of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence does not imply worry or concern, the rewritten fear sentence introduces an element of potential change, which is not present in the original, leading to a low intensity of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey any frustration or feelings of being wronged, which are key to the anger rewritten sentence. Thus, there is no alignment here.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement is neutral and does not suggest an unexpected aspect, which is a significant part of the surprise rewritten statement; thus, it does not align with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

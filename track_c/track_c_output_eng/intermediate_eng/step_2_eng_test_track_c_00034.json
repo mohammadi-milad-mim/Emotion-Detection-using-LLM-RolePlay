@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"when she was squatting she said she could hear her aunt saying how horrible it was(in her own head).\", \"rewritten_form_joy\": \"when she was squatting, she said she could hear her aunt cheerfully teasing about how silly it was (in her own head).\", \"rewritten_form_sadness\": \"when she was squatting, she said she could hear her aunt sadly lamenting how terrible it was (in her own head).\", \"rewritten_form_fear\": \"when she was squatting, she said she could hear her aunt ominously whispering how horrible it was (in her own head).\", \"rewritten_form_anger\": \"when she was squatting, she said she could hear her aunt harshly criticizing how horrible it was (in her own head).\", \"rewritten_form_surprise\": \"when she was squatting, she said she could hear her aunt unexpectedly exclaiming how horrible it was (in her own head).\", \"rewritten_form_disgust\": \"when she was squatting, she said she could hear her aunt disgustedly complaining about how horrible it was (in her own head).\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any joy or lightheartedness; instead, it conveys a negative perception of the situation. The joy version portrays a playful and teasing tone that is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a negative sentiment and aligns more closely with the sadness version, which suggests a lamenting tone. This demonstrates a moderate to high degree of sadness in the original text, as it reflects an internal struggle with a negative thought.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence includes a sense of inner turmoil and reflects something that is troubling to the speaker, which aligns with the fear version. However, there is no explicit indication of fear; rather, it expresses a more neutral inner critique.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence captures a critical thought rather than outright anger or criticism from the aunt. The anger version suggests harshness, which inflates the tone compared to what is actually present in the original. The degree of alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Surprise implies an unexpected emotional reaction to the situation, which the original does not convey. The original text is consistently reflective rather than shocking or surprising; thus, there is no surprise conveyed.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then my knee.\", \"rewritten_form_joy\": \"Then my knee, and I feel so lively!\", \"rewritten_form_sadness\": \"Then my knee, and it really hurts.\", \"rewritten_form_fear\": \"Then my knee, and I can't shake this feeling of dread.\", \"rewritten_form_anger\": \"Then my knee! Why does this always happen?\", \"rewritten_form_surprise\": \"Then my knee\\u2014what just happened?!\", \"rewritten_form_disgust\": \"Then my knee, ugh, that's just gross!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any expression of joy or liveliness. The rewritten version emphasizes feeling 'lively', which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not explicitly mention pain or discomfort. However, it is the only rewritten sentence that directly relates to the implication of the knee potentially causing discomfort, suggesting a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is no implication of dread or fear in the original sentence. The idea of a 'feeling of dread' does not connect with the original context of 'my knee'.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text lacks an expression of frustration or anger; there is no indication of recurring issues. The rewritten version expresses frustration explicitly, which is not present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not carry any elements of confusion or unexpected events, unlike the rewritten form which suggests surprise at an occurrence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

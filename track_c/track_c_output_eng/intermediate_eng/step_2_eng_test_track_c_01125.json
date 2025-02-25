@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"There is a pencil in my hand, But the words are not writing.\", \"rewritten_form_joy\": \"There is a pencil in my hand, yet I'm excited to create something wonderful!\", \"rewritten_form_sadness\": \"There is a pencil in my hand, but the words just won\\u2019t come; it feels so heavy.\", \"rewritten_form_fear\": \"There is a pencil in my hand, and I feel a dread that I might never find the right words.\", \"rewritten_form_anger\": \"There is a pencil in my hand, but the words refuse to come, and it infuriates me!\", \"rewritten_form_surprise\": \"There is a pencil in my hand, but to my astonishment, the words just won\\u2019t write themselves!\", \"rewritten_form_disgust\": \"There is a pencil in my hand, and it's frustrating that the words feel so unappealing and stuck.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of frustration and lack of creativity, which contrasts strongly with the optimistic excitement in the joy version. As such, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The emphasis on the words not coming and the heaviness felt aligns well with the sadness version. The original reflects a struggle that resonates with feelings of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text expresses frustration and inability to write, which can imply some level of fear about a creative block, but it does not strongly convey an overarching sense of dread. Therefore, the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence captures frustration, but it lacks the explicit anger and fierce emotion indicated in the rewritten anger version. Thus, the alignment is moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not convey any unexpectedness or astonishment, which is fundamental to the surprise emotion. Thus, there is no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

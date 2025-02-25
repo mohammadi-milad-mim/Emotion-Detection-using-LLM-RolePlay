@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"ever the same ~ On December 16th, 2010, I fell on the ice in my drive way and broke my hip.\", \"rewritten_form_joy\": \"On December 16th, 2010, I had an unexpected adventure slipping on the ice in my driveway, and oh, did I break my hip!\", \"rewritten_form_sadness\": \"On December 16th, 2010, I fell on the ice in my driveway, and it was heartbreaking to break my hip like that.\", \"rewritten_form_fear\": \"On December 16th, 2010, I took a dangerous fall on the ice in my driveway, and the fear of breaking my hip consumed me.\", \"rewritten_form_anger\": \"On December 16th, 2010, I slipped on the ice in my driveway and broke my hip, and I was furious about that stupid ice.\", \"rewritten_form_surprise\": \"On December 16th, 2010, I unexpectedly fell on the ice in my driveway and broke my hip\\u2014it shocked me!\", \"rewritten_form_disgust\": \"On December 16th, 2010, I fell on the icy driveway and broke my hip\\u2014ugh, how awful and slippery that was!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a straightforward recounting of an unfortunate event without any joyful connotation, unlike the joyful rewrite which frames the fall as an unexpected adventure. Therefore, it does not align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes an accident but lacks emotional depth; however, it aligns somewhat with sadness since breaking a hip can be seen as unfortunate. The rewritten version emphasizes heartbreak, which is stronger than the emotional resonance of the original text.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not convey a sense of fear; it merely states the fall and the injury. The rewrite indicates strong fear which is absent in the original, leading to a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence emphasizes the accident without expressing anger. The rewritten version, however, includes frustration with the ice, which is not reflected in the original; hence, there is a very low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text recounts a fall with no indication of surprise; the rewrite captures shock at the fall, which is distinctly different. There is no element in the original that indicates surprise, leading to a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

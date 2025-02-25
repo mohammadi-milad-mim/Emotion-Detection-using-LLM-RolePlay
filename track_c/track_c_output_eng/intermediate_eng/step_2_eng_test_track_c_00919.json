@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Sometimes I do see ice cubes, but it's never the same.\", \"rewritten_form_joy\": \"Sometimes I do see ice cubes, and they always bring a smile!\", \"rewritten_form_sadness\": \"Sometimes I do see ice cubes, but it never feels the same anymore.\", \"rewritten_form_fear\": \"Sometimes I do see ice cubes, but it makes me anxious; it\\u2019s never the same as before.\", \"rewritten_form_anger\": \"Sometimes I do see ice cubes, but it frustrates me because it\\u2019s never the same!\", \"rewritten_form_surprise\": \"Sometimes I do see ice cubes, and I can hardly believe it\\u2019s never the same!\", \"rewritten_form_disgust\": \"Sometimes I do see ice cubes, but ugh, it\\u2019s never the same and I hate that.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express happiness or positive emotion, whereas the joy rewritten form suggests that ice cubes bring a smile, which is not indicated in the original. Therefore, there's a low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a sense of nostalgia or loss, implying that the experience with ice cubes has changed for the worse, which closely aligns with the sadness rewritten form. There is definite resonance with a feeling of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence lacks any indication of anxiety or fear. The fear rewritten form introduces a significant emotional twist that is not present in the original statement. Thus, there is little to no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence hints at a negative sentiment about change but lacks explicit anger. The rewritten anger form expresses frustration, which is not captured in the original. This results in a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Although the original indicates that ice cubes are sometimes seen, it does not convey any level of astonishment like the surprise rewritten form does. Thus, the alignment with surprise is very low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

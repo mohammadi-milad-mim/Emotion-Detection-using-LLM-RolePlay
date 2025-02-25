@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I asked ( with a pleading look in my eyes ), `` can I leave the apple store? ''\", \"rewritten_form_joy\": \"I asked (with excitement in my eyes), `` can I please leave the apple store? ''\", \"rewritten_form_sadness\": \"I asked (with a heavy heart in my eyes), `` can I just leave the apple store? ''\", \"rewritten_form_fear\": \"I asked (with fear in my eyes), `` can I leave the apple store? ''\", \"rewritten_form_anger\": \"I asked (with frustration in my eyes), `` can I leave the apple store already? ''\", \"rewritten_form_surprise\": \"I asked (with wide eyes), `` can I really leave the apple store? ''\", \"rewritten_form_disgust\": \"I asked (with distaste in my eyes), `` can I leave this awful apple store? ''\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a pleading tone rather than excitement, which is crucial for joy. Joyful expressions typically include enthusiasm and positivity, which are not present in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence includes a desperate, pleading look which can align with sadness, as the tone suggests a wish to escape rather than a desire to stay; however, it does not convey deep sadness but instead highlights a mild sense of urgency.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The pleading request implies a level of discomfort in the situation, but it does not express overt fear. The request to leave may indicate uneasiness, but without strong fear elements involved in the original clause.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original demonstrates some level of frustration reflected in the pleading nature, it does not convey outright anger. The tone is more submissive than confrontational, reducing the intensity associated with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement lacks any indication of surprise; it is a straightforward inquiry without any elements of astonishment or unexpectedness. Thus, there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

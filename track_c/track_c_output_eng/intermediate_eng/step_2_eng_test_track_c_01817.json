@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We then ran to my house and tried to calm down, nothing else happened that night.\", \"rewritten_form_joy\": \"We then joyfully ran to my house and laughed while trying to calm down; nothing else amazing happened that night.\", \"rewritten_form_sadness\": \"We then ran to my house and desperately tried to calm down, but nothing else good happened that night.\", \"rewritten_form_fear\": \"We then rushed to my house, terrified, trying to calm down; nothing else dangerous happened that night.\", \"rewritten_form_anger\": \"We then stormed to my house, furious, trying to calm down; nothing else infuriating happened that night.\", \"rewritten_form_surprise\": \"We then unexpectedly ran to my house, trying to calm down; nothing else shocking happened that night.\", \"rewritten_form_disgust\": \"We then hurried to my house, feeling nauseated, trying to calm down; nothing else revolting happened that night.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not display particular joy or excitement. While there is an action of running and calming down, there is no indication of happiness or laughter, which are key components of joy. The intensity of joy in the original is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence contains a sense of urgency in running and calming down but lacks a profound feeling of desperation or hopelessness, which would elevate it to a stronger depiction of sadness. However, it does reflect a mild discontent about the lack of other events, suggesting minor sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The urgency in the action of running implies a slight sense of concern, but the absence of strong words linked to fear (like 'terrified' or 'dangerous') indicates that fear is not a primary emotion in the original. Therefore, the fear intensity is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no element of frustration or anger present in the original sentence; it discusses running to the house but doesn't convey feelings of being furious or storming. Thus, anger does not resonate strongly.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not convey any sense of unexpectedness or shock, as it describes a straightforward action without any twist or surprising element. Therefore, surprise is not present.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I'm on the opposite end of the spectrum.\", \"rewritten_form_joy\": \"I'm bursting with excitement on the opposite end of the spectrum!\", \"rewritten_form_sadness\": \"I'm feeling lost on the opposite end of the spectrum.\", \"rewritten_form_fear\": \"I'm scared to be on the opposite end of the spectrum.\", \"rewritten_form_anger\": \"I'm furious to find myself on the opposite end of the spectrum.\", \"rewritten_form_surprise\": \"Wow, I'm unexpectedly on the opposite end of the spectrum!\", \"rewritten_form_disgust\": \"I find it repulsive that I'm on the opposite end of the spectrum.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any indicators of excitement or positive feelings, while the rewritten joy version emphasizes bursting excitement, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original expresses a neutral position rather than deep emotional distress, while the rewritten sadness sentence suggests a profound feeling of being lost, which significantly contrasts with the original's neutrality.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no indication of fear in the original; it simply states a position. The rewritten version introduces a strong sense of fear that is not implied in the original at all.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not convey any anger, but the rewritten sentence expresses a furious sentiment, which is entirely absent from the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original conveys a neutral sense of being on the opposite end, while the rewritten surprise version implies a sense of unexpectedness that is not hinted at in the original statement.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

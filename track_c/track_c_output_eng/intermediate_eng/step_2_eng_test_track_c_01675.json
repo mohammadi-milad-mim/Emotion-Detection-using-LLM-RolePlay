@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Though, it was cool.\", \"rewritten_form_joy\": \"Wow, it was so cool!\", \"rewritten_form_sadness\": \"Unfortunately, it was cool.\", \"rewritten_form_fear\": \"I can\\u2019t believe it was cool... is that really safe?\", \"rewritten_form_anger\": \"How can they say it was cool!?\", \"rewritten_form_surprise\": \"Wait, it was cool? Really?\", \"rewritten_form_disgust\": \"Ugh, I can't believe it was cool.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral statement about something being cool, while the rewritten version reflects excitement and positive enthusiasm. There is no strong expression of joy in the original text, so it aligns weakly.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original text does not convey a sense of misfortune or regret, which the rewritten version implies. Thus, it lacks sadness in the original interpretation.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The expression in the rewritten fear sentence suggests apprehension about safety, which is not present in the original. The original does not imply any concern or fear, so it doesn't align with the fearful sentiment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten anger version shows a strong reaction against the coolness of something, indicating displeasure. The original is too neutral to suggest the same anger, hence it scores low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original offers no shocking or unexpected elements, while the rewritten surprise sentence suggests a sudden realization about the coolness. Therefore, the original sentence does not effectively convey surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

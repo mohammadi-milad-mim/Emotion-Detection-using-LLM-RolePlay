@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This guy notices my friend and is startled as all hell by him, as if he'd seen a ghost.\", \"rewritten_form_joy\": \"This guy notices my friend and is absolutely thrilled, as though he's seen a long-lost friend!\", \"rewritten_form_sadness\": \"This guy notices my friend and is taken aback, as if he\\u2019s lost something he can never get back.\", \"rewritten_form_fear\": \"This guy notices my friend and jumps back in fear, as though he's just seen a ghost!\", \"rewritten_form_anger\": \"This guy notices my friend and reacts angrily, as if he's been confronted by a ghost he wishes to avoid.\", \"rewritten_form_surprise\": \"This guy notices my friend and is incredibly surprised, as if he\\u2019s seen a ghost out of nowhere!\", \"rewritten_form_disgust\": \"This guy notices my friend and recoils in disgust, as if he\\u2019s stumbled upon something repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a startling reaction, which doesn't convey joy or excitement. Thus, it doesn't align with the tone of joy, which implies positivity and happiness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "Although there is a sense of surprise in the original, it lacks the depth of loss or longing that typically characterizes sadness. Hence, it does not align closely with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence expresses a strong reaction of being startled, which is closely aligned with fear as the person is startled as if they saw a ghost. This suggests a strong fear response.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence indicates a strong negative reaction, it does not suggest anger. The startled reaction does not indicate a confrontational response, thus it lacks alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence implies a surprising moment since the character is startled by their friend, which is closely aligned with the emotion of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

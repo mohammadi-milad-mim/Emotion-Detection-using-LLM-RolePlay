@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"maa sha allah allah ya kawo mana karshen wannan annoban\", \"rewritten_form_joy\": \"Maa sha Allah! I can't wait for Allah to bring us an end to this calamity!\", \"rewritten_form_sadness\": \"Maa sha Allah... I just pray Allah guides us to an end of this sorrowful time.\", \"rewritten_form_fear\": \"Maa sha Allah, I can only hope Allah frees us from this frightening ordeal soon.\", \"rewritten_form_anger\": \"Maa sha Allah! It's infuriating that we are still suffering through this mess\\u2014Allah, please bring it to an end!\", \"rewritten_form_surprise\": \"Maa sha Allah! I never thought we would experience such an intense trial; may Allah bring us through it!\", \"rewritten_form_disgust\": \"Maa sha Allah, this situation is truly revolting; I hope Allah swiftly brings it to an end.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses hope and blessings through the phrase 'Maa sha Allah,' aligned with the joyful anticipation for relief from the calamity. However, while it shows optimism, it lacks overtly joyful expressions like excitement or elation. Thus, the alignment is moderate but not strongly joyful.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence acknowledges a struggle with calamity, linking it to a deep concern and a prayer for guidance. This connection to sorrowful times aligns well with the sadness expressed in the rewritten form, indicating a significant degree of sadness overall.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original mentions calamity, which can invoke fear about the current situation, aligning closely with the fear in the rewritten form. However, it lacks overt expressions of fear or urgency found in the rewritten sentences, leading to a more moderate assessment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text shows frustration about the ongoing calamity, suggesting a degree of anger. The rewritten version captures that anger effectively, though it doesn't express it as strongly as the rewritten sentences, resulting in a lower intensity.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "There is a sense of surprise about the intensity of the situation implied in both the original and the rewritten forms. However, the original sentence does not emphasize this surprise in the same way, causing a weaker alignment with the emotion of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not express disgust about the situation, which is prominently featured in the rewritten disgust sentence. Therefore, there's a very low alignment with disgust, as the original text does not indicate any physical revulsion or strong negative repulsion.",
+        "disgust_intensity": 0
+    }
+}

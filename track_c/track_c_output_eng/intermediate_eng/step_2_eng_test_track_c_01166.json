@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"After the breathing treatment and EKG was done, I moved back into a wheelchair and head off to get some x-rays of my chest done.\", \"rewritten_form_joy\": \"After the breathing treatment and EKG, I happily moved back into a wheelchair and excitedly headed off for some x-rays of my chest!\", \"rewritten_form_sadness\": \"After the breathing treatment and EKG, I reluctantly moved back into a wheelchair, feeling dejected as I headed off to get some x-rays of my chest done.\", \"rewritten_form_fear\": \"After the breathing treatment and EKG, I nervously moved back into a wheelchair, anxious about heading off for some x-rays of my chest.\", \"rewritten_form_anger\": \"After the breathing treatment and EKG, I angrily moved back into a wheelchair, frustrated to have to head off for more x-rays of my chest.\", \"rewritten_form_surprise\": \"After the breathing treatment and EKG, I unexpectedly moved back into a wheelchair and was surprised to head off for some x-rays of my chest!\", \"rewritten_form_disgust\": \"After the breathing treatment and EKG, I grimaced as I moved back into a wheelchair and reluctantly headed off for some x-rays of my chest.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any language indicating happiness or excitement, making it misaligned with the joy version that uses enthusiastic words like 'happily' and 'excitedly'.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey any sense of reluctance or dejection, which are critical elements of the sadness version. While there is a mention of a wheelchair, the overall tone is neutral.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original statement does not imply any anxiety or nervousness, making it weakly aligned with the fear version that emphasizes these feelings. It presents a straightforward narrative without indicating concern.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no sign of anger or frustration in the original sentence; it simply states actions taken after medical procedures, without emotional undertones associated with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is factual and lacks an element of unexpectedness or surprise, contrasting significantly with the rewritten surprise sentence that emphasizes unexpectedness.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

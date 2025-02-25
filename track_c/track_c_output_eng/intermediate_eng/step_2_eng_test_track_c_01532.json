@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Seriously... did I really just shut my finger in the car door.\", \"rewritten_form_joy\": \"Wow, I can't believe I just accidentally shut my finger in the car door!\", \"rewritten_form_sadness\": \"Ugh, I can't believe I just shut my finger in the car door... why does this always happen to me?\", \"rewritten_form_fear\": \"Oh no, did I really just shut my finger in the car door? What if it's hurt badly?\", \"rewritten_form_anger\": \"Seriously? I can't believe I just shut my finger in the car door! What a klutz I am!\", \"rewritten_form_surprise\": \"Wait, did I just shut my finger in the car door? That's so unexpected!\", \"rewritten_form_disgust\": \"Yikes, I can't believe I just shut my finger in the car door\\u2014what a gross mistake!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy or amusement about the situation, instead, it expresses disbelief or resignation, which is more aligned with confusion than joy. Thus, it aligns poorly with the joyful reinterpretation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at an element of exasperation or frustration, which could evoke sadness, especially if viewed as a repeated unfortunate event. However, it is not deeply sorrowful, so it receives a low score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement implies a potential concern for injury, but it doesn't strongly convey fear. It expresses surprise and disbelief rather than outright worry about long-term consequences, so the fear is present but mild.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The tone in the original text has a slight element of frustration, which aligns well with the anger interpretation of feeling like a klutz. The sentiment of 'seriously' conveys annoyance effectively, leading to a moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The phrase 'did I really just shut my finger in the car door' suggests an element of surprise, particularly the unexpected nature of the incident. This core element of shock or disbelief aligns well with the surprised rewriting.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

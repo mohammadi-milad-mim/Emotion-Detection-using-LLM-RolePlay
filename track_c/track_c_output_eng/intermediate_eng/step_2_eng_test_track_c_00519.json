@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"By the end of the class, my legs felt like jelly.\", \"rewritten_form_joy\": \"By the end of the class, my legs felt like jelly, and I couldn't stop smiling!\", \"rewritten_form_sadness\": \"By the end of the class, my legs felt like jelly, and it reminded me of how weak I've become.\", \"rewritten_form_fear\": \"By the end of the class, my legs felt like jelly, and I worried I might just collapse.\", \"rewritten_form_anger\": \"By the end of the class, my legs felt like jelly, and it made me furious at my lack of stamina.\", \"rewritten_form_surprise\": \"By the end of the class, my legs felt like jelly, which totally took me by surprise!\", \"rewritten_form_disgust\": \"By the end of the class, my legs felt like jelly, and I couldn't shake off the feeling of it being utterly pathetic.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses physical fatigue which, while common, does not inherently suggest joy. The rewritten sentence adds a feeling of happiness (smiling) that is not present in the original, indicating a more intense positive emotion that is absent in the original context.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original statement can be construed as a negative physical experience, particularly if taken to mean weakness. The rewritten version offers a more explicit link to sadness through self-reflection on decline, a connection that isn't clearly established in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence about feeling weak can imply potential danger or discomfort, but it doesn\u2019t explicitly convey fear. The rewritten sentence highlights a concern about collapsing, which suggests a fear reaction not directly evident in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original communicates fatigue, it doesn\u2019t express anger or frustration. The rewritten form introduces a strong reaction to a lack of stamina, which implies a level of anger not present in the original sentence.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "Feeling weak after a class can be expected and does not evoke surprise. However, the rewritten sentence introduces a sense of unexpectedness that alters the perception, aligning with surprise more strongly than the original does.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

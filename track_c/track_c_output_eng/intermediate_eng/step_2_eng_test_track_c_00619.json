@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"i thought my heart was beating so fast.\", \"rewritten_form_joy\": \"I felt my heart racing with excitement!\", \"rewritten_form_sadness\": \"I felt my heart pounding heavily, drowning in sadness.\", \"rewritten_form_fear\": \"I thought my heart was racing in panic.\", \"rewritten_form_anger\": \"I thought my heart was beating so fast out of frustration!\", \"rewritten_form_surprise\": \"I thought my heart was racing unexpectedly fast!\", \"rewritten_form_disgust\": \"I thought my heart was beating so fast, and it made me feel nauseated.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a physical response that could relate to joy, but doesn't explicitly convey excitement as seen in the rewritten joy sentence. It lacks an uplifting context that fully aligns with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence captures a sense of rapid heartbeat but does not specifically mention sadness or a heavy emotional burden. Instead, it is more neutral, indicating a physical reaction without the depth of sorrow depicted in the rewritten sadness sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'my heart was beating so fast' suggests a heightened emotional state, which may imply fear, but does not strongly indicate panic as expressed in the rewritten fear sentence.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence captures a fast heartbeat, it doesn't explicitly convey frustration or anger as seen in the rewritten anger sentence. The emotion of anger is not strongly conveyed in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence suggests a sense of unease due to the rapid heartbeat, which could be associated with surprise, but does not explicitly convey this unexpected quality like in the rewritten surprise sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

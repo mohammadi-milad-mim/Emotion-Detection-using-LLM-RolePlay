@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Being out of control and surprised would cause a severe anxiety attack.\", \"rewritten_form_joy\": \"The thrill of being out of control and surprised can create such exhilarating excitement!\", \"rewritten_form_sadness\": \"Feeling out of control and surprised would bring on such overwhelming sadness and anxiety.\", \"rewritten_form_fear\": \"Being out of control and surprised could trigger a terrifying anxiety attack.\", \"rewritten_form_anger\": \"It's infuriating that being out of control and surprised can lead to a severe anxiety attack.\", \"rewritten_form_surprise\": \"Wow! Being out of control and surprised might actually trigger a severe anxiety attack!\", \"rewritten_form_disgust\": \"The thought of being out of control and surprised is just nauseating and could lead to a severe anxiety attack.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses anxiety and a negative experience, which does not align with joy. The rewritten form focuses on exhilaration, which contrasts sharply with the emotion of anxiety.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a sense of losing control and the anxiety that comes with it, which aligns well with the sadness expressed in the rewritten form. Both convey a sense of overwhelm and negative emotion.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence explicitly mentions anxiety attacks resulting from feeling out of control and surprised, which aligns closely with the fear indicated in the rewritten sentence. Both highlight a sense of dread and intense fear regarding the situation.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original focuses on the negative outcome of anxiety but does not invoke anger as a primary emotion, unlike the rewritten sentence. There's a slight connection due to disappointment with the situation, but it is not strong.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence describes an unexpected outcome (anxiety attack) arising from being surprised, which reflects a degree of surprise in the sense of an unforeseen reaction. However, the focus is more on anxiety than on surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

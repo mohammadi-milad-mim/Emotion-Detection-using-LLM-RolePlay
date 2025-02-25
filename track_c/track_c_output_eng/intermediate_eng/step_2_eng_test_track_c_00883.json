@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Allison was a spoiled rich girl whose parents were 1st generation immigrants.\", \"rewritten_form_joy\": \"Allison was a vibrant, affluent girl with parents who bravely came here as 1st generation immigrants!\", \"rewritten_form_sadness\": \"Allison was a spoiled rich girl, raised in luxury but overshadowed by the struggles of her 1st generation immigrant parents.\", \"rewritten_form_fear\": \"Allison was a spoiled rich girl, and I couldn't help but worry about the pressure her immigrant parents faced as 1st generation newcomers.\", \"rewritten_form_anger\": \"Allison was a spoiled rich girl, completely oblivious to the sacrifices her 1st generation immigrant parents made for her advantage.\", \"rewritten_form_surprise\": \"Allison was an unexpectedly spoiled rich girl, and I learned her parents were 1st generation immigrants!\", \"rewritten_form_disgust\": \"Allison was a spoiled rich girl, a stark contrast to the hardworking 1st generation immigrant parents who raised her.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "While the original sentence highlights Allison's status as a spoiled rich girl and her immigrant parents, it does not convey any explicit joy or positivity, making it less aligned with the joyful tone of the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at a disconnect between Allison's affluent life and her parents' immigrant struggles, which correlates with the sense of sadness described in the rewritten version.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions Allison's privileged background but does not express a sense of fear related to her parents' struggles, reducing its alignment with the fearful tone presented in the rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a clear implication of disregard for her parents' sacrifices in the original sentence, aligning well with the anger expressed in the rewritten sentence. However, it is somewhat subtle.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not have a surprising element regarding Allison's wealth or her background, making it less aligned with the surprise tone in the rewritten version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

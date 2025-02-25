@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I stomped on a spider with a flip flop.\", \"rewritten_form_joy\": \"I joyfully stomped on a spider with a flip flop!\", \"rewritten_form_sadness\": \"I regretfully stomped on a spider with a flip flop.\", \"rewritten_form_fear\": \"I anxiously stomped on a spider with a flip flop, worried it might crawl on me.\", \"rewritten_form_anger\": \"I angrily stomped on a spider with a flip flop because I couldn't stand it!\", \"rewritten_form_surprise\": \"I was shocked when I stomped on a spider with a flip flop!\", \"rewritten_form_disgust\": \"I disgustedly stomped on a spider with a flip flop.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it simply describes an action without any positive or happy connotation. The rewritten version adds 'joyfully,' suggesting a strong positive feeling which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks any sense of regret or sadness about the action taken. The rewritten version implies regret, which does not match the original's neutral tone.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While there may be an implied concern about the spider, the original text does not express fear or anxiety; it merely describes the action taken. The fear version adds worry which is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence reflects a somewhat aggressive action by the nature of 'stomping,' suggesting a certain level of frustration or annoyance towards the spider. The rewritten anger version enhances this sentiment, capturing an emotional intensity that is somewhat congruent with the original tone.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "There is no indication of shock or surprise in the original sentence; it lacks any emotional cue that suggests an unexpected outcome. The rewritten surprise version expresses a strong emotional reaction that is not present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

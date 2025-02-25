@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It didn't freak me out so much as blow my mind, the odds must have been astronomical.\", \"rewritten_form_joy\": \"I wasn't just freaked out; it totally blew my mind! The odds must have been absolutely astronomical!\", \"rewritten_form_sadness\": \"It didn't just freak me out; it left me feeling lost. The odds must have been agonizingly astronomical.\", \"rewritten_form_fear\": \"It didn't just freak me out; it sent chills down my spine. The odds must have been terrifyingly astronomical.\", \"rewritten_form_anger\": \"It wasn't just freaky; it was infuriating! The odds must have been outrageously astronomical.\", \"rewritten_form_surprise\": \"I wasn't just freaked out; it completely blew my mind! I mean, the odds must have been mind-bogglingly astronomical!\", \"rewritten_form_disgust\": \"It didn't just freak me out; it made me feel sick to my stomach. The odds must have been disgustingly astronomical.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a sense of awe and amazement with phrases like 'blew my mind', which aligns well with the joy tone of the rewritten joy sentence. The intensity is high because the speaker is expressing a very positive reaction despite initial fear.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not convey feelings of sadness or loss; rather, it focuses more on being amazed than upset. The rewritten sadness sentence introduces a sense of feeling lost, which isn't present in the original context.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence mentions 'freak me out' but does not elaborate on fear, instead highlighting a positive astonishment. Since the fear sentence escalates into feeling chills and being terrified, the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger; rather, it communicates an astonished perspective. The emotion of anger in the rewritten form suggests frustration, which is absent in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence clearly expresses surprise through the phrase 'blew my mind', which aligns directly with the tone of the rewritten surprise sentence. The intensity of surprise is high since it conveys a sense of disbelief due to astronomical odds.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

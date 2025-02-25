@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We are at this for about an hour, getting blisters and burns from how hot this fire is.\", \"rewritten_form_joy\": \"We've been working at this for about an hour, and even though we have some blisters, the warmth of this fire is kinda exhilarating!\", \"rewritten_form_sadness\": \"We've been struggling with this for about an hour, and the blisters and burns from this hot fire just make it feel even worse.\", \"rewritten_form_fear\": \"We've been at this for about an hour, and the blisters and burns from this dangerously hot fire are making me really worried.\", \"rewritten_form_anger\": \"We've been at this for about an hour, and the blisters and burns from this scorching fire are so frustrating!\", \"rewritten_form_surprise\": \"We've been at this for about an hour, and wow, these blisters and burns from how hot this fire is really caught me off guard!\", \"rewritten_form_disgust\": \"We've been at this for about an hour, and honestly, getting blisters and burns from this disgusting hot fire is just unbearable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys discomfort and struggle due to blisters and burns from the fire, which is a more negative experience compared to the rewritten joy sentence that frames the situation positively. Thus, there's a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence highlights struggle and physical pain, aligning well with the sadness sentence that emphasizes worsening conditions, indicating a stronger alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original mentions blisters and burns, which can imply danger, but does not explicitly denote fear or worry as the rewritten fear sentence does. The fear is present but not central to the original sentence.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence indicates discomfort but lacks an overt tone of frustration or anger compared to the rewritten version, making the alignment moderately low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not indicate surprise; it presents a straightforward experience of pain rather than an unexpected reaction, so the alignment with surprise is weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

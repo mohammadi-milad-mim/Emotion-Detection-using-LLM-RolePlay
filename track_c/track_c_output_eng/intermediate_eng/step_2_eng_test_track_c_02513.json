@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had never seen so much blood.\", \"rewritten_form_joy\": \"I couldn\\u2019t believe my eyes; there was so much blood, it was almost mesmerizing!\", \"rewritten_form_sadness\": \"I had never seen so much blood, and it shattered my heart to witness such pain.\", \"rewritten_form_fear\": \"I had never seen so much blood; it filled me with dread and terror.\", \"rewritten_form_anger\": \"I had never seen so much blood, and it infuriated me to think of how this happened.\", \"rewritten_form_surprise\": \"I had never seen so much blood; it was utterly shocking to confront such a sight.\", \"rewritten_form_disgust\": \"I had never seen so much blood, and the sight of it made my stomach churn.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy or positivity; instead, it describes a potentially traumatic sight without any uplifting context or elation. The rewritten joy sentence suggests a mesmerizing quality to the blood, which the original does not imply.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a shocking moment and can imply sadness, especially if interpreted in the context of witnessing violence or trauma. However, it does not explicitly express sadness or emotional pain itself; hence, the alignment is moderate rather than high.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text describes a moment of shock without a direct indication of emotional response. The rewritten sentence strongly conveys feelings of dread and terror, which aligns well with a fearful interpretation of witnessing so much blood. Therefore, there is a high degree of fear implied in the original statement when assessed in that context.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original speaks about witnessing blood, it does not evoke feelings of anger or highlight any injustice or wrongdoing. The rewritten sentence suggests anger regarding the situation which is not present in the original. This weakens the connection to anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original emphasizes a shocking sight; therefore, it fits well with the concept of surprise. The rewritten sentence captures an element of shock very effectively. As such, the original aligns quite strongly with surprise.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

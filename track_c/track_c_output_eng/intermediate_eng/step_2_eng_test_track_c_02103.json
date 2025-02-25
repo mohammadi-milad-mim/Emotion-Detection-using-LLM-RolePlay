@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We'll a couple months later, he died.\", \"rewritten_form_joy\": \"A couple of months later, he happily transitioned into a peaceful rest.\", \"rewritten_form_sadness\": \"Just a couple of months later, he passed away, leaving a heavy heart behind.\", \"rewritten_form_fear\": \"A couple of months later, he died, and I couldn't shake the dread it filled me with.\", \"rewritten_form_anger\": \"A couple of months later, he died, and it infuriates me to think it was so unfair.\", \"rewritten_form_surprise\": \"A couple of months later, he died\\u2014no one saw it coming at all.\", \"rewritten_form_disgust\": \"A couple of months later, he died, and it just feels so wrong and unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates an event (the death) that is generally not associated with joy. The joy rewrite frames the death in a positive light, suggesting peaceful transition, which contrasts with the original sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence mentions death, which inherently invokes feelings of sadness. The sadness rewrite emphasizes the weight of loss, aligning closely with the original context of death, suggesting moderate to high sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence simply states that someone died, but it lacks language that clearly conveys fear. The fear rewrite suggests that the event filled the speaker with dread, which is not present in the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence states a death but does not express anger. The anger rewrite indicates unfairness regarding the death, which the original does not imply, leading to a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence's phrasing implies abruptness, but it does not specifically indicate surprise. However, the surprise rewrite better captures an unexpected nature regarding the death, which lends it some credibility but still does not fully align with the original.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I saw that and just started screaming.\", \"rewritten_form_joy\": \"I saw that and couldn't help but scream with joy!\", \"rewritten_form_sadness\": \"I saw that and felt a wave of sadness wash over me, so I just started screaming.\", \"rewritten_form_fear\": \"I saw that and a chill ran down my spine\\u2014I started screaming in panic!\", \"rewritten_form_anger\": \"I saw that and just erupted into screaming out of sheer frustration.\", \"rewritten_form_surprise\": \"I saw that and was so shocked that I started screaming in disbelief!\", \"rewritten_form_disgust\": \"I saw that and just screamed in disgust at what I witnessed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a strong reaction, but there's no clear indication of positive feelings such as joy. It aligns somewhat with joy, but the tone is neutral without any positive context, so the connection is weak.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey feelings of sadness; rather, it expresses a reaction that is more neutral in tone without any clear emotional depth associated with sadness. The connection to sadness is not present.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence captures a spontaneous reaction of screaming, but it lacks the specific context that evokes fear. Although there is an implied intensity, it doesn\u2019t indicate panic or a chilling experience.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not specify anger, which is present in the rewritten version. The reaction of screaming does not suggest frustration or aggression directly, making the anger connection weaker.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence suggests an intense reaction, but it does not indicate the element of surprise; therefore, it does not align with the surprise sentiment strongly. There might be a hint of surprise, but it's not clear from the text itself.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

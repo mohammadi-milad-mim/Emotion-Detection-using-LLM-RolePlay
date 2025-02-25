@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So far seems normal.\", \"rewritten_form_joy\": \"Everything so far feels wonderful and just right!\", \"rewritten_form_sadness\": \"So far, it just feels painfully ordinary.\", \"rewritten_form_fear\": \"So far, everything seems unsettlingly normal.\", \"rewritten_form_anger\": \"So far, it just looks annoyingly normal!\", \"rewritten_form_surprise\": \"So far, it's surprisingly normal, almost too good to be true!\", \"rewritten_form_disgust\": \"So far, it all seems disgustingly normal.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states that everything seems normal, which is a neutral observation. However, joy is conveyed with a strong positive feeling in the rewritten form, indicating a significant difference in tone. Therefore, there is low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original phrase expresses a neutral state, whereas the rewritten sentence introduces a negative feeling of pain regarding normality. Thus, there is a slight connection, but it is not heavily pronounced in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase conveys that things seem normal, which can be comforting. However, the rewritten version introduces an unsettling undertone. Still, the original doesn't evoke a strong sense of fear, resulting in a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone in the original sentence is neutral and does not convey frustration or anger. In contrast, the rewritten form expresses annoyance, which is not present in the original, leading to a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence simply states that things seem normal, lacking any unexpected quality. The rewritten version claims a sense of surprise. There is a slight recognition of an unexpected normalcy, but not significant enough to warrant a strong connection.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

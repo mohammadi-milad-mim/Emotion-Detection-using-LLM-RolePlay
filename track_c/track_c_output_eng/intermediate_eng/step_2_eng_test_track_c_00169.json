@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Has this happened to anyone else?\", \"rewritten_form_joy\": \"Has this happened to anyone else? It's such a delightful experience!\", \"rewritten_form_sadness\": \"Has this happened to anyone else? I feel so alone in this.\", \"rewritten_form_fear\": \"Has this happened to anyone else? I'm really scared this could be serious.\", \"rewritten_form_anger\": \"Has this happened to anyone else? Why does this keep happening?\", \"rewritten_form_surprise\": \"Has this happened to anyone else? I can't believe this has occurred!\", \"rewritten_form_disgust\": \"Has this happened to anyone else? It's so unsettling!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of delight or positivity, so it does not align strongly with the emotion of joy as suggested by the rewritten version. Joy typically involves positive feelings, which are absent here.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a question that could imply a sense of searching for validation or empathy, which aligns somewhat with feelings of loneliness and sadness. However, it lacks a direct expression of personal grief or sorrow, making the intensity low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests uncertainty and potentially a serious issue, which can evoke fear. While it doesn't explicitly convey fear, the context of asking if others have experienced something troubling implies a concern that aligns moderately with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence indicates a search for shared experiences, but it does not express anger overtly. However, relating it to the rewritten version that expresses frustration suggests a mild level of dissatisfaction, without strong anger present.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence poses a question that inherently invites curiosity. The rewritten version that expresses disbelief captures an element of surprise, but the original does not strongly invoke the emotion of surprise by itself.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

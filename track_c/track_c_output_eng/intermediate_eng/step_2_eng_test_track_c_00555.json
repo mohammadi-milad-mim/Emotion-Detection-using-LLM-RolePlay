@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I have never seen him cry, ever.\", \"rewritten_form_joy\": \"I can't believe I've never seen him cry, ever!\", \"rewritten_form_sadness\": \"It\\u2019s so heartbreaking that I have never seen him cry, ever.\", \"rewritten_form_fear\": \"I dread that I have never seen him cry, ever.\", \"rewritten_form_anger\": \"It's infuriating that I have never seen him cry, ever!\", \"rewritten_form_surprise\": \"I am shocked that I have never seen him cry, ever!\", \"rewritten_form_disgust\": \"It's truly unsettling that I have never seen him cry, ever.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral observation about someone not crying, lacking the celebratory or upbeat tone needed for joy. The rewritten joy sentence introduces a sense of disbelief or surprise, implying excitement, which doesn't align well with the sober tone of the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a sense of missed emotion, which can be seen as sad, especially given that it hints at deeper feelings of the person being observed. The rewritten sadness form amplifies this interpretation by explicitly addressing heartbreak, closely aligning with the original sentiment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey a sense of dread or anxiety. The fear version implies a worry about the implications of someone not crying, which is not captured in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original doesn't indicate any frustration or anger regarding the situation. The anger version expresses a strong emotional reaction, which is entirely absent in the more passive observation of the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original can be seen as somewhat surprising, its tone is more restrained. The surprise version implies an exaggerated reaction to the fact, while the original carries a neutral acknowledgment of the observation.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

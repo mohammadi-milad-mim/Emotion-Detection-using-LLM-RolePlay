@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I'll never forget it.\", \"rewritten_form_joy\": \"I'll always cherish that moment!\", \"rewritten_form_sadness\": \"I\\u2019ll always carry that memory in my heart.\", \"rewritten_form_fear\": \"I hope I can cope with that memory forever.\", \"rewritten_form_anger\": \"I can't believe that memory still haunts me.\", \"rewritten_form_surprise\": \"I can't believe I actually experienced that!\", \"rewritten_form_disgust\": \"Ugh, I wish I could erase that memory.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong feeling of remembrance, which closely aligns with cherishing a moment, but it lacks the overt positivity and happiness present in the joy example.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original conveys a sense of lasting impact which aligns closely with carrying a memory in one's heart, indicating a moderate degree of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original shows a sense of being marked by a memory but does not express explicit fear about coping with it, hence less alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original reflects a strong memory, it does not convey the anger or resentment implied in the rewritten anger sentence, showing less connection.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement conveys a strong impression but does not express shock or disbelief similar to the surprise example, indicating low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

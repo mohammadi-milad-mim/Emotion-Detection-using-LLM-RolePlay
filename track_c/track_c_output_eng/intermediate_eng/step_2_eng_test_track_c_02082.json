@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"After my legs were burning from the first bit of exercised that I probably had in the past several weeks we went to get some ice cream and then made our way back for some more video games.\", \"rewritten_form_joy\": \"After my legs were burning from my first bit of exercise in weeks, we joyfully went for ice cream, then made our way back for more video games!\", \"rewritten_form_sadness\": \"After my legs were burning from the first bit of exercise I\\u2019ve had in weeks, we went to get some ice cream, but it felt like a small distraction before heading back to more video games.\", \"rewritten_form_fear\": \"After my legs were burning from the first bit of exercise I\\u2019ve had in weeks, we nervously went to get some ice cream, hoping it wouldn't make me too sore to play more video games later.\", \"rewritten_form_anger\": \"After my legs were burning from what little exercise I\\u2019ve had in weeks, we trudged to get ice cream, then dragged ourselves back for more video games despite my irritation.\", \"rewritten_form_surprise\": \"After my legs were burning from a surprising bit of exercise I hadn\\u2019t done in weeks, we unexpectedly went to get ice cream and then happily returned for more video games.\", \"rewritten_form_disgust\": \"After my legs were burning from the first bit of exercise in weeks, we went to get some ice cream\\u2014a treat that felt unnecessary before heading back to video games.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an activity that follows an exercise experience, leading to ice cream and video games, activities typically associated with enjoyment. However, the tone lacks the explicit joy present in the rewritten version.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The mention of exercise being a 'small distraction' implies a sadness that isn't as strongly conveyed in the original. This alignment suggests a recognition of the fleeting nature of joy in this context.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is no indication of fear in the original sentence. The act of going for ice cream and playing video games does not convey nervousness or concern about soreness.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original conveys fatigue from exercise, it does not evoke a sense of irritation or anger. The use of 'trudged' and 'dragged' in the rewritten sentence adds a negative connotation not reflected in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not convey any surprise about the exercise or the subsequent activities, which is a key element in the rewritten sentence's depiction of surprise. The vocabulary does not reflect an unexpected reaction.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

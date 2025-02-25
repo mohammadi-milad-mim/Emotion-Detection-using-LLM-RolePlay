@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I tried to turn so I could get my feet in front of me, causing the rocks to slice the skin under my shirt.\", \"rewritten_form_joy\": \"I eagerly turned to get my feet in front of me, but the rocks unexpectedly grazed the skin beneath my shirt.\", \"rewritten_form_sadness\": \"I tried to turn to get my feet in front of me, but the rocks cruelly sliced the skin under my shirt.\", \"rewritten_form_fear\": \"I quickly turned to get my feet in front of me, only to feel the rocks painfully slice the skin under my shirt.\", \"rewritten_form_anger\": \"I tried to turn to get my feet in front of me, and those damn rocks sliced the skin under my shirt.\", \"rewritten_form_surprise\": \"As I turned to get my feet in front of me, I was shocked to feel the rocks slice the skin under my shirt.\", \"rewritten_form_disgust\": \"I attempted to turn to get my feet in front of me, and the rocks grossly sliced the skin under my shirt.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "While there is a sense of action in the original sentence, it lacks a joyful tone. The mention of rocks slicing the skin introduces an injury, which is contrary to the joy expressed in the rewritten joy sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence depicts a painful experience but does not emphasize a sense of loss or deep sadness as the rewritten sadness version does with the term 'cruelly.' Therefore, it mildly aligns but not strongly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original indicates a quick movement to avoid injury, suggesting a sense of immediate danger. This aligns fairly well with the fear expressed in the rewritten version since it describes the slicing as painful and sudden.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original reflects frustration with the rocks but does not exude intense anger. The rewritten anger version uses stronger language with 'damn rocks,' which adds intensity that is not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is an element of unexpected pain in the original, which aligns with the surprise element. However, the original lacks overt expressions of shock that the rewritten version implies.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

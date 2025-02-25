@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I felt two positions on my ears being highlighted.\", \"rewritten_form_joy\": \"I felt two positions on my ears being joyfully highlighted!\", \"rewritten_form_sadness\": \"I felt two positions on my ears being highlighted, and it just made me sad.\", \"rewritten_form_fear\": \"I felt two positions on my ears being highlighted, and it scared me a little.\", \"rewritten_form_anger\": \"I felt two positions on my ears being highlighted, and it really irritated me!\", \"rewritten_form_surprise\": \"I felt two positions on my ears being highlighted, and it totally took me by surprise!\", \"rewritten_form_disgust\": \"I felt two positions on my ears being highlighted, and it felt so disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents neutral information about positions on ears being highlighted, which does not convey joy. The rewritten version expresses a clear positive emotional response with the word 'joyfully'. Therefore, there is a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence lacks any emotional weight that would lead to sadness. However, the rewritten version indicates that highlighting the positions on ears caused sadness, suggesting a contrast that is absent in the original. Hence, the alignment with sadness is minimal.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement doesn't indicate any fear or apprehension. Its description is neutral, while the rewritten sentence introduces fear, indicating a definite lack of alignment between the original and the emotion of fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Like fear, the original sentence does not express any irritation or anger. The rewritten form introduces a strong emotional response with 'really irritated', which is absent in the neutral tone of the original. There is no clear alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence simply states an observation without any element of surprise. The rewritten sentence clearly indicates surprise with 'totally took me by surprise', suggesting that the original does not align with this emotion at all.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

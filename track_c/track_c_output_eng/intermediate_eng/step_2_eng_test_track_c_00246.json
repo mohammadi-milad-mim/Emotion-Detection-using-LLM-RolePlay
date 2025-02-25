@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I've also felt slightly sick to my stomach for the past two days.\", \"rewritten_form_joy\": \"I can't believe how wonderful it feels to finally be on the mend after feeling slightly sick to my stomach for the past two days!\", \"rewritten_form_sadness\": \"It's just been so hard feeling slightly sick to my stomach for the past two days, and I wish it would go away.\", \"rewritten_form_fear\": \"I've been really anxious about feeling slightly sick to my stomach for the past two days, and I'm worried about what it could mean.\", \"rewritten_form_anger\": \"I'm so frustrated that I've been feeling slightly sick to my stomach for the past two days! Why won't it just stop?\", \"rewritten_form_surprise\": \"I didn\\u2019t expect to feel slightly sick to my stomach for the past two days - it\\u2019s really caught me off guard!\", \"rewritten_form_disgust\": \"I can't stand feeling slightly sick to my stomach for the past two days; it's utterly repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses discomfort without any overtly positive sentiments, thus it does not align with joy. The rewritten version conveys relief and happiness which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a level of discomfort, which can lead to an interpretation of sadness. However, the sentiment in the rewriting expresses a deeper emotional struggle compared to the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence mentions feeling sick, which can invoke some anxiety about one's health. The rewritten form emphasizes worry and anxiety which align closely but the original does not strongly express fear itself.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence reflects discomfort but does not express frustration, while the rewritten version does display anger and frustration. Therefore, the original does not match the intensity of anger present in the rewritten form.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express any unexpectedness. While the rewritten version conveys surprise at the illness, the original remains fairly neutral and straightforward without any sense of shock.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Dad thought it was just my imagination.\", \"rewritten_form_joy\": \"Dad thought it was just my imagination, but I was so excited to share my ideas!\", \"rewritten_form_sadness\": \"Dad thought it was just my imagination, and it hurt to feel that way.\", \"rewritten_form_fear\": \"Dad thought it was just my imagination, but what if it was something real?\", \"rewritten_form_anger\": \"Dad thought it was just my imagination, which really frustrated me!\", \"rewritten_form_surprise\": \"Dad thought it was just my imagination, but I had a shocking revelation!\", \"rewritten_form_disgust\": \"Dad thought it was just my imagination, and that idea makes me feel sick.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of dismissal or underestimation from the father, which does not align strongly with excitement or joy. Thus, the original lacks the enthusiasm noted in the joy rewrite.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of emotional pain due to the dismissal of the speaker's thoughts, aligning closely with sadness. The phrase 'it hurt to feel that way' resonates with the emotion of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not express an element of fear; it merely states a perception of rejection from the father about the speaker's imagination. There is no signaling of potential danger or concern that would invoke fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original reflects a sense of being misunderstood, which could generate frustration but does not convey overt anger. Therefore, while there is potential frustration, it does not reach a high level of intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The phrase 'just my imagination' in the original sentence does not suggest any unexpected insights or revelations. Thus, it falls short of aligning with any surprise, which is necessary for the intensity of that emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

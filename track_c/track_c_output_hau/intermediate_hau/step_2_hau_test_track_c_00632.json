@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Wannan jafa'i har ina? Idan ka lashe shekaru, dole a ci tsufa ba makawa \\ud83d\\ude03\", \"rewritten_form_joy\": \"Wannan jafa'i har ina? Idan ka lashe shekaru, dole a ci tsufa ba makawa! Yana da dadi!\", \"rewritten_form_sadness\": \"Wannan jafa'i har ina? Idan ka lashe shekaru, dole a ci tsufa ba makawa, abin ba\\u0199in ciki ne.\", \"rewritten_form_fear\": \"Wannan jafa'i har ina? Idan ka lashe shekaru, dole a ci tsufa ba makawa... na ji tsoron hakan.\", \"rewritten_form_anger\": \"Wannan jafa'i har ina? Idan ka lashe shekaru, dole a ci tsufa ba makawa! Me ya sa wannan ke faruwa?\", \"rewritten_form_surprise\": \"Wannan jafa'i har ina? Idan ka lashe shekaru, dole a ci tsufa ba makawa?! Ban ta\\u0253a tunanin haka ba!\", \"rewritten_form_disgust\": \"Wannan jafa'i har ina? Idan ka lashe shekaru, dole a ci tsufa ba makawa! Gaskiya yana da \\u0199ara ban haushi!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of acceptance about aging, which aligns slightly with joy, but it lacks the enthusiasm or cheerfulness present in the rewritten joy sentence. The addition of \"Yana da dadi!\" in the joyful version adds a positive tone that isn't present in the original, indicating a more explicit expression of happiness.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence has a tinge of resignation about aging, which could align with sadness, but it\u2019s not strongly articulated in a way that clearly conveys sorrow. The sadness version states explicitly that it's a \"abin ba\u0233in ciki ne,\" which is stronger than the implied sentiment in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original conveys a sense of inevitability about growing old, which could lead to fear, but it does not directly express fear or anxiety. The rewritten fear sentence states \"na ji tsoron hakan,\" which doesn't reflect the original's more neutral acceptance of aging.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is a sense of inquiry in the original, represented by the question, but it does not express genuine anger or frustration. The anger rewritten version, which questions \"Me ya sa wannan ke faruwa?\" introduces a level of emotional conflict not present in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original hints at an unexpected or unusual thought ('Wannan jafa'i har ina?'), indicating a low level of surprise but not strong emotion. The rewriting makes an explicit statement of surprise with \"Ban ta\u0183a tunanin haka ba!\" which heightens the emotional context.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not express disgust; it\u2019s more neutral about aging. The rewritten disgust sentence adds an element of irritation with \"Gaskiya yana da \u0199ara ban haushi!\" which does not reflect any disgust in the original context.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I would not be groggy nor tired.\", \"rewritten_form_joy\": \"I would be so refreshed and full of energy!\", \"rewritten_form_sadness\": \"I wish I could be alert and not feel tired anymore.\", \"rewritten_form_fear\": \"I'm afraid of being groggy and tired again.\", \"rewritten_form_anger\": \"I should never be groggy or tired like this!\", \"rewritten_form_surprise\": \"Wow, I actually wouldn't be groggy or tired!\", \"rewritten_form_disgust\": \"Ugh, I can't stand feeling groggy and tired.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states a neutral fact about not feeling groggy or tired, while the rewritten joy sentence is highly positive, suggesting a complete transformation to feeling refreshed and energetic, which is not conveyed in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence lacks an expression of wishfulness or longing that is present in the sadness sentence. The original simply states a fact without reflecting on any desire for a different state of being.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express fear regarding the possibility of being groggy or tired. It simply acknowledges the absence of these feelings, whereas the fear sentence suggests an anxiety about returning to that state.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original indicates a state free from grogginess, the anger version expresses frustration over the possibility of being that way. This frustration is not present in the original's tone, which is calmer and more neutral.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original states a fact about not feeling groggy or tired, the surprise sentence expresses astonishment, which the original does not convey. There is no element of disbelief or unexpectedness present in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"At my school it was knowing how to swim and at my brother's it was ballroom dance classes.\", \"rewritten_form_joy\": \"At my school, we got to learn how to swim, and at my brother's, they had the joy of ballroom dance classes!\", \"rewritten_form_sadness\": \"At my school, all we had was learning how to swim, and at my brother's, they enjoyed ballroom dance classes while I missed out.\", \"rewritten_form_fear\": \"At my school, it was a constant pressure to know how to swim, and at my brother's, he faced the daunting challenge of ballroom dance classes.\", \"rewritten_form_anger\": \"At my school, we were stuck with just swimming lessons, and at my brother's, they flaunted their ballroom dance classes!\", \"rewritten_form_surprise\": \"At my school, it was all about knowing how to swim, and I was shocked to find out at my brother's they had ballroom dance classes!\", \"rewritten_form_disgust\": \"At my school, it was just this boring requirement to learn how to swim, and at my brother's, the idea of ballroom dance classes seemed utterly ridiculous!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys both activities in a neutral tone, lacking any significant expression of joy compared to the rewritten version which emphasizes 'joy' in learning ballroom dance.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten version captures a sense of loss or missing out on ballroom dance classes, which is implied in the original sentence by the comparison, representing a feeling of sadness that is not strongly present in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original doesn't imply pressure or fear related to swimming or dancing. The rewritten version introduces those elements, indicating a stark contrast not reflected in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original statement is neutral, while the rewritten one adopts an angry tone about the exclusivity of swimming lessons. The original lacks any expression of anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence presents a factual comparison without displaying any emotional response. The surprise version directly expresses shock, which is not present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

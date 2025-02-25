@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then they kill him.\", \"rewritten_form_joy\": \"Then they celebrate his life!\", \"rewritten_form_sadness\": \"Then they take his life away.\", \"rewritten_form_fear\": \"Then they brutally end his life.\", \"rewritten_form_anger\": \"Then they heartlessly kill him!\", \"rewritten_form_surprise\": \"Then, out of nowhere, they kill him!\", \"rewritten_form_disgust\": \"Then they coldly dispose of him.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; it depicts a violent act. The rewritten version that indicates joy ('Then they celebrate his life!') implies a positive remembrance instead of the act of killing, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of loss and finality, directly in line with the sadness expressed in the rewritten version. The phrase 'take his life away' directly relates to the concept of sadness associated with death.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a violent act without immediate context, which can evoke fear. The rewritten version that emphasizes brutality ('brutally end his life') suggests a terrifying scenario aligned with fear, but it is less direct than the original, thus the alignment is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence's straightforward depiction of killing can naturally evoke anger. The rewritten version that states 'heartlessly kill him!' captures this emotional intensity directly linked to the original act, indicating strong alignment with the emotion of anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original act of killing can indeed come as a surprise depending on the context provided prior, especially with unexpected events. The expression 'out of nowhere' in the rewritten version emphasizes this element of surprise, suggesting a moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

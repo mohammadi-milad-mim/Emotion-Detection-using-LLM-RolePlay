@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My knee was throbbing and was bloody.\", \"rewritten_form_joy\": \"My knee was throbbing, but I was amazed it was still a part of my adventure!\", \"rewritten_form_sadness\": \"My knee was throbbing and was bloody, reminding me of how fragile I really am.\", \"rewritten_form_fear\": \"My knee was throbbing and was bloody, and I couldn't help but worry about what might be wrong.\", \"rewritten_form_anger\": \"My knee was throbbing and was bloody, and I was furious that this happened to me!\", \"rewritten_form_surprise\": \"My knee was throbbing and was bloody, and I never expected to find such a shocking injury!\", \"rewritten_form_disgust\": \"My knee was throbbing and was bloody, and I couldn't stand the sight of it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects pain and injury, which is contrary to the joy expressed in the rewritten form. There is no indication of delight or amazement in the original, leading to a low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys physical suffering which resonates strongly with the theme of fragility in the rewritten version. The emotional undertone of vulnerability is present but not deeply explored, indicating a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The concern indicated in the rewritten sentence aligns closely with the injury described in the original. The phrase 'worry about what might be wrong' suggests a level of apprehension that is consistent with the physical state presented, implying a strong connection.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence describes pain, it does not inherently express anger or frustration. The mention of fury in the rewritten version is not reflected in the original statement, resulting in a minimal relationship.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The shocked reaction to an injury is somewhat relatable, but the original text lacks an element of surprise. The injury is portrayed as a given rather than an unexpected event, suggesting a weak connection to surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

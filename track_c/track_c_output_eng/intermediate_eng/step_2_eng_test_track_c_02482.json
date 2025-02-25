@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I get there and I burst into tears.\", \"rewritten_form_joy\": \"I get there and I burst into happy tears!\", \"rewritten_form_sadness\": \"I get there and I can't help but burst into tears.\", \"rewritten_form_fear\": \"I get there and, afraid of what\\u2019s wrong, I burst into tears.\", \"rewritten_form_anger\": \"I get there and it infuriates me, so I burst into tears.\", \"rewritten_form_surprise\": \"I get there and, overwhelmed by the unexpected, I burst into tears.\", \"rewritten_form_disgust\": \"I get there and, feeling sickened by it all, I burst into tears.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey happiness, as it simply states the action of bursting into tears without any positive context. Therefore, it does not align with the joy rewritten form.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence matches closely with the sadness rewritten form since both express an uncontrollable crying response, indicating deep emotional distress. There is a strong alignment of tone and sentiment here.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not imply fear; it lacks context that suggests worry or trepidation before crying. Thus, it does not align with the fear rewritten form.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger or frustration surrounding the act of crying. There is no implication of being infuriated, leading to a disconnect with the anger rewritten form.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original sentence shows an emotional reaction, it does not suggest surprise at the situation; it simply narrates the act of crying, making it less aligned with the surprise rewritten form.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

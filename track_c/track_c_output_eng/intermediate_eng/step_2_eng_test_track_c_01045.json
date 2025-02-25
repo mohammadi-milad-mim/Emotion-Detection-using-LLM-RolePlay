@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My eyes searched the table for a wide wicked smile and long blond locks.\", \"rewritten_form_joy\": \"My eyes joyfully darted around the table, hoping to spot that gleeful wicked smile and those lovely long blond locks.\", \"rewritten_form_sadness\": \"My heart sank as my eyes searched the table for the wide wicked smile and long blond locks that I deeply missed.\", \"rewritten_form_fear\": \"My eyes anxiously scanned the table, searching for the wide wicked smile and long blond locks, fearing they might not be there.\", \"rewritten_form_anger\": \"My eyes fiercely searched the table for that infuriating wide wicked smile and long blond locks that felt so out of place.\", \"rewritten_form_surprise\": \"I was taken aback as my eyes searched the table for a wide wicked smile and long blond locks, half-expecting a delightful surprise.\", \"rewritten_form_disgust\": \"My eyes reluctantly searched the table for a wide wicked smile and long blond locks, a thought that disgusted me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of enthusiastic searching, aligning closely with the joyfully darting eyes and hopeful sentiment in the rewritten joyful version. Both indicate a positive inclination towards the smile and blond locks.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original sentence does not explicitly express sadness, the rewritten version suggests a sense of longing and missed presence. This disconnect indicates a low alignment with sadness since there is no strong emotional weight in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence has an element of searching that could imply anxiety, but it lacks the explicit concern of possibly not finding what one is looking for, which is present in the fearful rewritten version. Therefore, the alignment is weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not carry a tone of anger; rather, it suggests a neutral search. The rewritten anger version implies frustration that is not evident in the original text. Thus, there is minimal connection to anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence reflects an anticipatory sentiment that something pleasant might be found. However, it lacks a strong signaling of surprise as indicated in the rewritten version. This alignment is moderate at best.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

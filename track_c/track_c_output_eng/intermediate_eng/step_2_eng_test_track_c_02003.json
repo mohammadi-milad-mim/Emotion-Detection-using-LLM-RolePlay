@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My brother snores and his snores are constant in one spot at the head of the bed, so it could not have been him.\", \"rewritten_form_joy\": \"My brother snores so much! It's always the same funny sound at the head of the bed, so it couldn\\u2019t have been him this time.\", \"rewritten_form_sadness\": \"My brother snores, always in that same spot at the head of the bed, so it couldn\\u2019t possibly be him now.\", \"rewritten_form_fear\": \"My brother snores, and it's always that same constant noise at the head of the bed, which makes me wonder what else it could be.\", \"rewritten_form_anger\": \"My brother snores, always in that annoying spot at the head of the bed, so it obviously wasn\\u2019t him causing that noise!\", \"rewritten_form_surprise\": \"Whoa, my brother snores! It's always that same sound at the head of the bed\\u2014could it really not be him?\", \"rewritten_form_disgust\": \"Ugh, my brother\\u2019s snores are just awful, always that same noise at the head of the bed\\u2014it couldn\\u2019t have been him causing that sound!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a factual observation about the brother's snoring but lacks a light-hearted or humorous tone that would indicate joy. The rewritten joy version adds an enthusiastic and playful tone, which the original does not convey. Hence, there is little to no alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence is factual and does not express any emotions related to loss or melancholy. The rewritten sadness version suggests a sense of despair or resignation that the original does not have, leading to no alignment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence is simply stating a fact about snoring without evoking any sense of worry or fear. The fear version, however, implies concern about other potential noises, which is absent in the original. Therefore, the alignment is weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes the brother's snoring but does not express frustration or annoyance. The rewritten anger version uses more accusatory language, suggesting irritation, which is not present in the original context. Thus, there\u2019s minimal alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence conveys a general statement without any element of surprise. The rewritten surprise version expresses astonishment at the brother's snoring, which doesn't echo in the original, resulting in low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"but somehow it appeared at my feet.\", \"rewritten_form_joy\": \"but to my delight, it appeared right at my feet!\", \"rewritten_form_sadness\": \"but tragically, it just appeared at my feet.\", \"rewritten_form_fear\": \"but suddenly, it ominously appeared at my feet.\", \"rewritten_form_anger\": \"but infuriatingly, it just showed up at my feet.\", \"rewritten_form_surprise\": \"but unexpectedly, it appeared at my feet!\", \"rewritten_form_disgust\": \"but grossly, it just landed at my feet.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions something appearing at the speaker's feet, but it lacks the positive connotation of delight found in the joy version. The original suggests a neutral or ambiguous reaction rather than pure joy, thus scoring low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey a sense of tragedy or loss as implied by the sadness version. There are no strong negative emotions present that would align it with sadness, resulting in a low score.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original does not imply any sense of foreboding or danger, which is central to the fear version. It sounds neutral rather than fear-inducing, leading to a low intensity score.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original does indicate something just appearing at the speaker's feet, it lacks any strong emotion of frustration or irritation that the anger version evokes. It doesn't suggest strong feelings of annoyance, leading to a low score.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does imply an unexpectedness, as something suddenly appearing is surprising by nature. However, it doesn't heighten the surprise to a strong degree as in the rewritten version, resulting in a moderate score.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

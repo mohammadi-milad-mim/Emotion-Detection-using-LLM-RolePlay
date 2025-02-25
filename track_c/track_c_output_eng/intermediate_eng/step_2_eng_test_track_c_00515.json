@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Second, my lobster gloves-which are too warm for ordinary cold weather riding-actually didn't do a great job of keeping my hands warm.\", \"rewritten_form_joy\": \"Second, my lobster gloves, which are typically too warm for ordinary cold weather riding, still managed to keep my hands from feeling too chilly!\", \"rewritten_form_sadness\": \"Second, my lobster gloves, which are usually too warm for ordinary cold weather riding, really failed to keep my hands warm at all.\", \"rewritten_form_fear\": \"Second, my lobster gloves, which are too warm for ordinary cold weather riding, worryingly didn't do a great job of keeping my hands warm.\", \"rewritten_form_anger\": \"Second, my lobster gloves, which are supposed to be too warm for ordinary cold weather riding, absurdly didn't keep my hands warm at all!\", \"rewritten_form_surprise\": \"Second, my lobster gloves, which are known for being too warm for ordinary cold weather riding, surprisingly didn't do much to keep my hands warm!\", \"rewritten_form_disgust\": \"Second, my lobster gloves, which are annoyingly too warm for ordinary cold weather riding, disgustingly failed to keep my hands warm.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses some disappointment with the performance of the gloves rather than joy. The rewritten joy version indicates a positive outcome that isn't reflected in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of inadequacy regarding the gloves, aligning with the sadness rewrite, which emphasizes failure, so there is a strong alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The word 'worryingly' in the fear rewrite adds an element of concern not present in the original. The original simply states the gloves didn't perform well, without a sense of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The use of 'absurdly' in the anger version adds a strong emotional response that is not fully captured in the original, which lacks outright anger but expresses frustration. Moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original states a clear expectation versus outcome, which can lead to surprise. The word 'surprisingly' in the rewritten sentence aligns well with this, suggesting that the original has some degree of surprising quality.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

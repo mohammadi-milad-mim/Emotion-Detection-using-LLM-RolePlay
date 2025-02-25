@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"i probably washed my hands about 4 times after first using it, and it still seemed to be there.\", \"rewritten_form_joy\": \"I was so excited after first using it, I probably washed my hands about 4 times, but it still seemed to be there!\", \"rewritten_form_sadness\": \"Even after I washed my hands about 4 times after first using it, it still seemed to be there, and that really upset me.\", \"rewritten_form_fear\": \"I must have washed my hands about 4 times after first using it, and the thought that it was still there terrified me.\", \"rewritten_form_anger\": \"I can't believe I washed my hands about 4 times after first using it, and it still seemed to be there! How frustrating!\", \"rewritten_form_surprise\": \"I probably washed my hands about 4 times after first using it, and to my surprise, it still seemed to be there!\", \"rewritten_form_disgust\": \"I washed my hands about 4 times after first using it, and it still seemed to be there; that was absolutely revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of frustration and concern rather than excitement, which is the tone of the rewritten joy sentence. Therefore, the original does not align strongly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does express a level of concern about the persistent problem, similar to the rewritten sadness version, although it does not explicitly convey upset feelings.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Fear is somewhat present in the original due to the implication of something unwanted lingering despite attempts to remove it, aligning moderately with the fear in the rewritten form.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is a tone of frustration evident in the original sentence as it mentions washing hands multiple times and still feeling something is amiss, which is closely mirrored in the rewritten anger sentence.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original contains a hint of surprise regarding the unforeseen persistence of the issue, similar to the rewritten surprise version, though it is not as pronounced.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

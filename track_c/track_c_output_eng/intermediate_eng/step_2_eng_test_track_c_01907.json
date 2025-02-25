@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I probably got a happy birthday from my boyfriend though, and I think a back rub.\", \"rewritten_form_joy\": \"I definitely got a delightful birthday wish from my boyfriend, and I can\\u2019t wait for that back rub!\", \"rewritten_form_sadness\": \"I might have received a birthday wish from my boyfriend, and maybe even a back rub, but it still doesn\\u2019t feel special.\", \"rewritten_form_fear\": \"I\\u2019m really hoping I got a happy birthday from my boyfriend and that he gives me a back rub, but what if he forgets?\", \"rewritten_form_anger\": \"I can\\u2019t believe I\\u2019m only getting a happy birthday from my boyfriend, and maybe a back rub. Is that all I\\u2019m worth?\", \"rewritten_form_surprise\": \"Can you believe I might have gotten a happy birthday from my boyfriend? Plus, he might surprise me with a back rub!\", \"rewritten_form_disgust\": \"I guess I probably got a generic happy birthday from my boyfriend, along with a back rub I didn\\u2019t even ask for.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral to positive sentiment about the birthday wish and potential back rub from the boyfriend. However, it uses 'probably' and 'I think', which makes it less definitive than the joy rewritten sentence that conveys excitement and certainty. Therefore, while there is some joy in the original, it isn\u2019t as strong as in the rewritten version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey a strong sense of sadness, as it mentions a happy birthday and a back rub, even if expressed tentatively. The rewritten version highlights feelings of underwhelming specialness which are not present in the original, suggesting that the original is more positive than the sadness rewritten form.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests a hope for a birthday wish and back rub, which can imply a mild concern about not receiving them. However, the level of fear inferred in the rewritten version is higher, particularly with phrases like 'what if he forgets?'. The original does not convey significant fear, therefore the score remains low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger; rather, it seems more neutral or slightly content. The rewritten version conveys frustration and dissatisfaction, which is absent in the original sentence. Thus, the original does not align with the anger rewritten form at all.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text expresses a hint of surprise with the use of 'probably', suggesting uncertainty. However, it lacks the excitement and incredulity found in the rewritten surprise sentence. The alignment is present but not very strong.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

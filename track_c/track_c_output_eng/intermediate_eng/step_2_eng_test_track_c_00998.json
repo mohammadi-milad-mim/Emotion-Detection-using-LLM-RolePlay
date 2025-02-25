@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It is my Birthday this week.\", \"rewritten_form_joy\": \"I can't believe it's my Birthday this week!\", \"rewritten_form_sadness\": \"It's my Birthday this week, but it doesn't feel special.\", \"rewritten_form_fear\": \"What if my Birthday this week is just another day of disappointment?\", \"rewritten_form_anger\": \"I can't believe this\\u2014it's my Birthday this week, yet no one seems to care!\", \"rewritten_form_surprise\": \"Wow, I just realized it's my Birthday this week!\", \"rewritten_form_disgust\": \"Ugh, it\\u2019s my Birthday this week, as if that matters anymore.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral tone by simply stating that it is the speaker's birthday week. The rewritten joyful sentence expresses excitement and anticipation, indicating a stronger emotional alignment than the original sentence. Therefore, while there is a potential for joy, it is not explicitly expressed in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not express sadness, as it simply states a fact without any emotional weight. The rewritten sad version captures a feeling of disappointment regarding the birthday celebration, which is not reflected in the original sentence. Hence, there is little to no alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence lacks any fearful connotations, as it only mentions the occurrence of a birthday week. The rewritten fearful sentence introduces anxiety about the day being disappointing, which the original does not suggest at all. Thus, there is no fear present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Anger is absent in the original statement. The rewritten angry version expresses frustration about a lack of recognition for the birthday, which is not implied in the original text. Therefore, the original does not convey any anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original sentence is somewhat factual, the surprise version highlights an unexpected realization about the birthday week. This indicates some potential for surprise, but the original does not convey any surprise inherently.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

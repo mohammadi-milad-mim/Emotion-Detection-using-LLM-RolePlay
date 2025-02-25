@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I bet she'll find this too.\", \"rewritten_form_joy\": \"I just know she\\u2019ll find this too!\", \"rewritten_form_sadness\": \"I\\u2019m afraid she might find this too.\", \"rewritten_form_fear\": \"I really hope she doesn\\u2019t find this too.\", \"rewritten_form_anger\": \"I can't believe she\\u2019ll find this too!\", \"rewritten_form_surprise\": \"Wow, I bet she\\u2019ll find this too!\", \"rewritten_form_disgust\": \"Ugh, I can\\u2019t believe she\\u2019ll find this too.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone and suggests a possibility, while the joy version expresses certainty and positivity ('I just know'). Therefore, there is a very low alignment with joy, as the original doesn't convey that same confidence or happiness.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version expresses fear and concern about the possibility, while the original is more neutral. The sentiment does not strongly align with sadness since the original doesn't express worry or fear.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version conveys a strong hope that something won't happen, which suggests a level of anxiety. The original sentence is not fearful or anxious, so it aligns very low with this emotion.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version displays disbelief and frustration, which is not present in the original sentence's neutral tone. Although there\u2019s a hint of discontent in the original, it doesn\u2019t exhibit strong feelings of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version expresses excitement and astonishment (\u2018Wow\u2019), which isn\u2019t conveyed in the original. The original sentence is a straightforward statement without any element of surprise or extra emotion. Therefore, it aligns very low with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

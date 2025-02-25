@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Amma Boda ba akulle takeva\\ud83e\\udd14\\ud83e\\udd14kodai ta huje ne?\", \"rewritten_form_joy\": \"Amma Boda ba akulle takeva! Kodai ta huje ne?\", \"rewritten_form_sadness\": \"Amma Boda ba akulle takeva... Kodai ta huje ne?\", \"rewritten_form_fear\": \"Amma Boda ba akulle takeva? Kodai ta huje ne?\", \"rewritten_form_anger\": \"Amma Boda ba akulle takeva! How could this happen?\", \"rewritten_form_surprise\": \"Amma Boda ba akulle takeva? Wait, is that really possible?\", \"rewritten_form_disgust\": \"Amma Boda ba akulle takeva... That just feels wrong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a questioning tone and includes an emoji that does not convey pure joy, making it less aligned with joy compared to the joyful rewritten sentence which embodies excitement.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence captures a sense of something being unclear or possibly disheartening, similar to the sadness rewritten form which adds ellipses to indicate sorrowful contemplation. There's a mild alignment suggesting a touch of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original question implies uncertainty or confusion, akin to fear reflected in the rewritten form, though it may not be deeply rooted in fear. It creates a sense of questioning which relates to fear's uncertainty, leading to low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The frustration implied in the rewritten anger sentence does not strongly match with the original sentence. The original has a neutral questioning tone with slight tension but doesn't convey clear anger, leading to a low intensity score.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence reflects a sense of unexpectedness through its questioning nature, which aligns more with the surprise rewritten form. It captures a sense of genuine inquiry about something unexpected, indicating a moderate level of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "While the original sentence might evoke slight discomfort or unease, it doesn't strongly convey the disgust that the rewritten disgust form communicates with its more explicit expression of wrongness. Thus, the disgust intensity remains low.",
+        "disgust_intensity": 1
+    }
+}

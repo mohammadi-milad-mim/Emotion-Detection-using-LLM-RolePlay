@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"one square was about having gone to a middle school nobody in this homeroom had gone to.\", \"rewritten_form_joy\": \"one square was about the excitement of having gone to a middle school that nobody in this homeroom had attended!\", \"rewritten_form_sadness\": \"one square was about the loneliness of having gone to a middle school that nobody in this homeroom had experienced.\", \"rewritten_form_fear\": \"one square was about the unease of having gone to a middle school that nobody in this homeroom had gone to\\u2014it made me feel out of place.\", \"rewritten_form_anger\": \"one square was about the frustration of having gone to a middle school nobody in this homeroom had attended; it felt so isolating!\", \"rewritten_form_surprise\": \"one square was about discovering that I had gone to a middle school nobody in this homeroom had gone to; how unexpected!\", \"rewritten_form_disgust\": \"one square was about having gone to a middle school nobody in this homeroom had gone to\\u2014it felt so strange and alienating.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral observation about the shared experience of attending a middle school. It lacks any positive sentiment or excitement that would indicate joy. Therefore, it does not align strongly with the tone of the rewritten joy sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase in the original sentence reflects a sense of separation or disconnection from peers, which aligns with feelings of loneliness. This suggests a moderate degree of sadness, as it hints at an emotional experience related to being in a different environment than others.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not express any explicit feelings of unease or fear, although it hints at a difference in experience. However, there is no strong implication of fear in the wording, leading to a low evaluation.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence implies a disconnect but does not express frustration or anger. There is no strong emotive language that represents anger, making this alignment weak.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks elements of discovery or unexpectedness. It merely states a fact without expressing surprise about the situation, indicating that it does not align with the sentiment of the surprise sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u8fd9\\u4e2a\\u70ed\\u641c\\u5c31\\u597d\\u50cf\\u8001\\u677f\\u7ed9\\u6211\\u753b\\u7684\\u5927\\u997c\\uff0c\\u90fd\\u8bb8\\u5230\\u660e\\u5e74\\u4e86\\uff0c\\u5c31\\u662f\\u8bf4\\u4eca\\u5e74\\u5565\\u5e0c\\u671b\\u4e5f\\u6ca1\\u6709\\u4e86\\u7684\\u610f\\u601d\\u5457\\uff1f\", \"rewritten_form_joy\": \"\\u8fd9\\u4e2a\\u70ed\\u641c\\u5c31\\u50cf\\u8001\\u677f\\u7ed9\\u6211\\u63cf\\u7ed8\\u7684\\u7f8e\\u597d\\u84dd\\u56fe\\uff0c\\u867d\\u7136\\u5e0c\\u671b\\u662f\\u660e\\u5e74\\u7684\\uff0c\\u4f46\\u4eca\\u5e74\\u6211\\u4f9d\\u7136\\u5145\\u6ee1\\u671f\\u5f85\\uff01\", \"rewritten_form_sadness\": \"\\u8fd9\\u4e2a\\u70ed\\u641c\\u5c31\\u50cf\\u8001\\u677f\\u7ed9\\u6211\\u753b\\u7684\\u5927\\u997c\\uff0c\\u627f\\u8bfa\\u5ef6\\u7eed\\u5230\\u660e\\u5e74\\uff0c\\u53ef\\u6211\\u5fc3\\u91cc\\u660e\\u767d\\uff0c\\u4eca\\u5e74\\u7684\\u5e0c\\u671b\\u4f3c\\u4e4e\\u5df2\\u7ecf\\u8361\\u7136\\u65e0\\u5b58\\u3002\", \"rewritten_form_fear\": \"\\u8fd9\\u4e2a\\u70ed\\u641c\\u5c31\\u50cf\\u8001\\u677f\\u7ed9\\u6211\\u753b\\u7684\\u5927\\u997c\\uff0c\\u660e\\u5e74\\u624d\\u80fd\\u5b9e\\u73b0\\u7684\\u627f\\u8bfa\\u8ba9\\u6211\\u4e0d\\u7981\\u62c5\\u5fc3\\uff0c\\u4eca\\u5e74\\u771f\\u7684\\u4f1a\\u6beb\\u65e0\\u5e0c\\u671b\\u5417\\uff1f\", \"rewritten_form_anger\": \"\\u8fd9\\u4e2a\\u70ed\\u641c\\u5c31\\u597d\\u50cf\\u8001\\u677f\\u7ed9\\u6211\\u753b\\u7684\\u5927\\u997c\\uff0c\\u7adf\\u7136\\u8981\\u7b49\\u5230\\u660e\\u5e74\\uff0c\\u771f\\u662f\\u8ba9\\u6211\\u60f3\\u53d1\\u706b\\uff0c\\u96be\\u9053\\u4eca\\u5e74\\u5c31\\u6ca1\\u6709\\u4e00\\u70b9\\u5e0c\\u671b\\u4e86\\u5417\\uff1f\", \"rewritten_form_surprise\": \"\\u8fd9\\u4e2a\\u70ed\\u641c\\u5c31\\u597d\\u50cf\\u8001\\u677f\\u7ed9\\u6211\\u753b\\u7684\\u5927\\u997c\\uff0c\\u5c45\\u7136\\u8bb8\\u8bfa\\u5230\\u4e86\\u660e\\u5e74\\uff0c\\u6211\\u8fd8\\u771f\\u6ca1\\u60f3\\u5230\\u4eca\\u5e74\\u4f1a\\u8fd9\\u6837\\u6ca1\\u6709\\u5e0c\\u671b\\u3002\", \"rewritten_form_disgust\": \"\\u8fd9\\u4e2a\\u70ed\\u641c\\u5c31\\u50cf\\u8001\\u677f\\u7ed9\\u6211\\u753b\\u7684\\u5927\\u997c\\uff0c\\u7a7a\\u6d1e\\u7684\\u627f\\u8bfa\\u5c45\\u7136\\u62d6\\u5230\\u660e\\u5e74\\uff0c\\u4eca\\u5e74\\u7684\\u5e0c\\u671b\\u5b8c\\u5168\\u6beb\\u65e0\\u610f\\u4e49\\uff0c\\u771f\\u8ba9\\u4eba\\u6076\\u5fc3\\u3002\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of hope and positivity about the future, but it's overshadowed by a sense of loss regarding the present year, hence it does not strongly align with joy. The tone is more reflective than joyful.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence communicates a feeling of disappointment and sadness about unrealistic expectations for the current year. The mention of prolonged hope feeling futile strongly aligns with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a subtle undercurrent of fear regarding the lack of hope for the present year, culminating in worry about uncertainty. This urgency places moderate alignment with fear, although it isn't explicitly fearful.",
+        "fear_intensity": 2,
+        "anger_reasoning": "Anger may be perceived in the frustration with the situation, reflecting a desire to express being upset about waiting until next year, but it doesn't manifest strongly in the text.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The sentence's surprise element might come from the unexpected expectation for the next year, although it does not strongly convey astonishment or shock.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "There is an element of distaste mentioned indirectly as feelings are described negatively regarding the current situation, aligning it with a level of disgust towards the circumstances and feelings expressed in the original analysis.",
+        "disgust_intensity": 2
+    }
+}

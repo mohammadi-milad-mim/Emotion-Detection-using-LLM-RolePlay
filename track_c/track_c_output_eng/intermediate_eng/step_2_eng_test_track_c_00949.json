@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I didnt know how to handle this.\", \"rewritten_form_joy\": \"I was so excited to figure out how to handle this!\", \"rewritten_form_sadness\": \"I feel so lost and didn't know how to handle this.\", \"rewritten_form_fear\": \"I was terrified and didn't know how to handle this.\", \"rewritten_form_anger\": \"I was furious because I didn't know how to handle this.\", \"rewritten_form_surprise\": \"I was shocked to find out that I didn't know how to handle this.\", \"rewritten_form_disgust\": \"I was appalled that I didn't know how to handle this.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses uncertainty and confusion, lacking any positive or excited elements present in the joyful rewrite. There is no excitement or joy in not knowing how to handle a situation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns moderately with the sadness rewrite. The feeling of being lost is closely related to the idea of not knowing how to handle a situation, indicating a sense of emotional vulnerability.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not explicitly convey fear, despite the fear rewrite suggesting a strong emotional response to the lack of knowledge. The absence of a sense of danger or anxiety means this is not a strong match.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence expresses frustration or confusion, it does not communicate the intensity of anger suggested by the rewrite. There is no indication of fury in the sentiment of not knowing how to handle something.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks an element of astonishment or sudden realization. While it acknowledges a lack of knowledge, it does not suggest the surprise that comes with discovering something unexpected.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

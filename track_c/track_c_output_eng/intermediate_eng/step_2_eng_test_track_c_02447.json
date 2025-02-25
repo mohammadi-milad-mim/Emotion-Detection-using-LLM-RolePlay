@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Not too exciting of a story I guess.\", \"rewritten_form_joy\": \"It's a simple story, but it has its own charm!\", \"rewritten_form_sadness\": \"It's such a disappointing story, really.\", \"rewritten_form_fear\": \"It's not the most thrilling story, and that worries me.\", \"rewritten_form_anger\": \"What a boring story, it really has no spark!\", \"rewritten_form_surprise\": \"I can't believe how uneventful this story turned out!\", \"rewritten_form_disgust\": \"Ugh, what a dull and unappealing story.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a lack of excitement, which is opposite to the joyful tone of finding charm in simplicity. The alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys a sense of disappointment, which aligns with the rewritten version that explicitly states the story is disappointing. This shows a stronger alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version expresses worry about the lack of thrill, which is slightly reflected in the original sentence. However, the original does not strongly convey fear, making this a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence suggests boredom, but the rewritten anger version explicitly expresses frustration. The mild dissatisfaction in the original does not strongly evoke anger, leading to a lower intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original lacks an element of surprise as it denotes a lack of excitement rather than an unexpected outcome. This leads to minimal alignment with the surprise tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

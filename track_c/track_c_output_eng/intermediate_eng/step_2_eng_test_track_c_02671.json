@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had learned to hide my limp by the time I was 13 by concentrating on my feet.\", \"rewritten_form_joy\": \"By the time I was 13, I had joyfully learned to hide my limp by focusing on my feet!\", \"rewritten_form_sadness\": \"By the time I was 13, I had sadly learned to hide my limp by concentrating on my feet.\", \"rewritten_form_fear\": \"By the time I was 13, I had learned to hide my limp, fearing the judgment from others as I concentrated on my feet.\", \"rewritten_form_anger\": \"By the time I was 13, I was angry that I had to learn to hide my limp by focusing on my feet.\", \"rewritten_form_surprise\": \"I was surprised to learn, by the time I was 13, how to hide my limp just by concentrating on my feet.\", \"rewritten_form_disgust\": \"By the time I was 13, I had learned, to my disgust, to hide my limp by focusing intently on my feet.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey an element of joy; it reflects a practical adjustment rather than a positive emotional experience. The rewritten version the introduces a joyful aspect which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a struggle or experience of a challenge, which aligns somewhat with sadness, but does not explicitly express sorrow. The rewritten version captures this emotion better by adding the word 'sadly', indicating that this experience brought sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not directly display fear, yet the context can imply a level of concern about judgment. The rewritten form contextualizes this fear more explicitly, enhancing the notion of hiding due to fear, suggesting greater alignment with the emotion than the original does alone.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original does not express anger but rather an adaptation to a circumstance. The rewritten form deeply implies frustration about hiding the limp, which reflects anger more vividly than the original does. Although the context suggests a struggle, it is devoid of intense anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks an element of surprise; it reflects a learning process but not one that conveys unexpectedness. The rewritten version introduces the element of surprise, which is absent in the original statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

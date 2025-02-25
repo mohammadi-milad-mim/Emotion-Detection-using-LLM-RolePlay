@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Right when things start getting interesting she stops.\", \"rewritten_form_joy\": \"Right when things start getting interesting, she brings a delightful twist!\", \"rewritten_form_sadness\": \"Right when things start getting interesting, she suddenly puts an end to it all.\", \"rewritten_form_fear\": \"Right when things start getting interesting, she suddenly stops, leaving me uneasy.\", \"rewritten_form_anger\": \"Right when things start getting interesting, she just decides to stop, how infuriating!\", \"rewritten_form_surprise\": \"Right when things start getting interesting, she unexpectedly stops!\", \"rewritten_form_disgust\": \"Right when things start getting interesting, she just has to ruin it by stopping.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of disappointment rather than delight, so it aligns poorly with joy. The rewritten joy version indicates a positive outcome, which contrasts with the original tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a feeling of abruptness and loss as something interesting is cut short. The rewritten sadness sentence captures that feeling well, indicating a strong alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does suggest a sense of unease due to the sudden ending of interest. The rewritten fear version emphasizes this concern, therefore aligning moderately with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence suggests frustration with the person stopping at an intriguing moment, which aligns strongly with the rewritten anger version that emphasizes infuriation.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence indicates an unexpected halt, so it somewhat aligns with surprise, which highlights the suddenness of her stopping.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

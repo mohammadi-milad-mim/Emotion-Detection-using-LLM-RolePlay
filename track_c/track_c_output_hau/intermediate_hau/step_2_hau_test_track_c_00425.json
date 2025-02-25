@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ina asibiti, bani da lafiya - Abdulrasheed Maina ya maida martani ga hukuncin Kotu\", \"rewritten_form_joy\": \"Ina asibiti, ina jin da\\u0257i - Abdulrasheed Maina ya maida martani ga hukuncin Kotu\", \"rewritten_form_sadness\": \"Ina asibiti, ban da lafiya - Abdulrasheed Maina ya maida martani ga hukuncin Kotu cikin damuwa.\", \"rewritten_form_fear\": \"Ina asibiti, na damu da lafiya ta - Abdulrasheed Maina ya maida martani ga hukuncin Kotu\", \"rewritten_form_anger\": \"Ina asibiti, ina jin haushi da rashin lafiya - Abdulrasheed Maina ya maida martani ga hukuncin Kotu\", \"rewritten_form_surprise\": \"Ina asibiti, ban yi tsammani hakan ba - Abdulrasheed Maina ya maida martani ga hukuncin Kotu\", \"rewritten_form_disgust\": \"Ina asibiti, na gaji da rashin lafiya - Abdulrasheed Maina ya maida martani ga hukuncin Kotu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does express a state of being unwell ('bani da lafiya'), which does not align with joy. Both 'no health' and 'pain' are negative sentiments, contrasting with the positive tone indicated in the rewritten joy sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence explicitly states a lack of health, which closely aligns with sadness, especially as the rewritten form adds the element of 'damuwa' (distress). This indicates a higher level of empathy towards the speaker's condition.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original indicates being in a hospital and not well, there is no definitive expression of fear regarding health in the sentence. The rewritten version introduces a concern for health, but the original does not convey this directly, leading to a lower alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not convey anger; instead, it presents a straightforward statement about health and a court ruling. The mention of anger in the rewritten sentence is absent in the original, indicating no direct correlation.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not display any elements of surprise. The surprise version indicates unexpectedness, which is not reflected in the straightforward statement of health in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence discusses the condition of being unwell but does not imply disgust as expressed in the rewritten version. Thus, there is little to no correlation with feelings of disgust in the original.",
+        "disgust_intensity": 0
+    }
+}

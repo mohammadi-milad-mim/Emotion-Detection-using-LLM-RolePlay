@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The second half started and I couldn't feel my toes.\", \"rewritten_form_joy\": \"The second half started and I was so excited, I barely noticed my toes!\", \"rewritten_form_sadness\": \"The second half started and all I could feel was the coldness in my toes.\", \"rewritten_form_fear\": \"The second half started and I realized with dread that I couldn't feel my toes.\", \"rewritten_form_anger\": \"The second half started and it infuriated me that I couldn't feel my toes.\", \"rewritten_form_surprise\": \"The second half started, and to my shock, I couldn't feel my toes!\", \"rewritten_form_disgust\": \"The second half started and it was disgusting that I couldn't even feel my toes.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral observation rather than excitement or joy. The rewritten joy version expresses a strong sense of happiness and enthusiasm that is absent in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at discomfort due to losing sensation, but it doesn't strongly convey sadness like the rewritten version does, which focuses on the feeling of coldness and emotional heaviness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests a loss of feeling which could imply a potential safety concern, aligning with the sense of dread in the rewritten version, though it doesn't explicitly express fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original statement does not display any anger; it simply reports the state of feeling. The rewritten version implies frustration, which is not present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not indicate any element of surprise or shock, as it states a situation rather plainly. The rewritten version implies a sudden, unexpected realization which is absent in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

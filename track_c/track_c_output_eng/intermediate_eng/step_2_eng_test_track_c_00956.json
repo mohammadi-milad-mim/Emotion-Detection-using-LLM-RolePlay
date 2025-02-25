@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My hand was wrapped for a while.\", \"rewritten_form_joy\": \"My hand was wrapped for a while, and it felt like a cozy hug!\", \"rewritten_form_sadness\": \"My hand was wrapped for a while, like it was trapped in a lonely prison.\", \"rewritten_form_fear\": \"My hand was wrapped for a while, and I worried about what might happen next.\", \"rewritten_form_anger\": \"My hand was wrapped for a while, and it made me furious that I had to deal with this!\", \"rewritten_form_surprise\": \"My hand was wrapped for a while, and I didn't expect that at all!\", \"rewritten_form_disgust\": \"My hand was wrapped for a while, which felt so uncomfortable and gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a neutral experience of having a hand wrapped, which doesn't strongly align with joy. The rewritten version expresses joy through the imagery of a cozy hug, which the original does not convey.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence lacks strong negative sentiment, while the rewritten version frames the experience as 'trapped in a lonely prison,' which adds a significant layer of sadness to an otherwise neutral statement.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not imply fear or anxiety about the situation, while the rewritten version emphasizes worry about future consequences. The original's tone is more neutral, leading to a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger; it is merely a statement about having a hand wrapped. The rewritten version conveys strong frustration but does not reflect this sentiment in the original sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents a straightforward fact without indication of surprise. The rewritten version suggests an unexpectedness that is simply not present in the original, indicating low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

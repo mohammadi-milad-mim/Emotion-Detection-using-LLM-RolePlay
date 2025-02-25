@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The band that played before us blew the roof off the place, and that didn't exactly help ease my nerves.\", \"rewritten_form_joy\": \"The band that played before us absolutely blew the roof off the place, which totally got me pumped!\", \"rewritten_form_sadness\": \"The band that played before us blew the roof off the place, and it only made my nerves feel heavier.\", \"rewritten_form_fear\": \"The band that played before us blew the roof off the place, and it absolutely shattered whatever calm I had left.\", \"rewritten_form_anger\": \"The band that played before us blew the roof off the place, and it just made my nerves flare up even more.\", \"rewritten_form_surprise\": \"The band that played before us blew the roof off the place, and I wasn't expecting that at all! It ramped up my nerves!\", \"rewritten_form_disgust\": \"The band that played before us blew the roof off the place, which made my stomach churn with anxiety.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "While the original sentence does mention that the band played energetically, it highlights the speaker's nerves rather than any joy or excitement they might feel. The rewritten sentence emphasizes a pumped-up feeling that isn't present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a feeling of nervousness, which aligns somewhat with the heavier emotional weight in the rewritten sentence about sadness, as it suggests a worsening of the speaker's nerves. There is a slight alignment, reflecting the emotional heaviness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence conveys a sense of nervousness exacerbated by the band's performance. The rewritten version expresses a stronger sense of fear with the use of 'shattered' and 'calm', which resonates well with the original's sentiment, amplifying the emotional intensity.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence shows that the prior performance impacted the speaker negatively related to their nerves, which aligns with the aggression in the rewritten anger statement. However, it lacks a strong accusatory tone and almost revels in the nervousness rather than angering about it.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original mentions nerves but does not communicate surprise regarding the performance. The rewritten sentence incorporates an element of surprise that isn't explicitly present in the original, which puts it at odds with the original's tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

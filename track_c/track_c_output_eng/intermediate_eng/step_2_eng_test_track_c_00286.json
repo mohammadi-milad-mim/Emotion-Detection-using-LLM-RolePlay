@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My legs are still sore.\", \"rewritten_form_joy\": \"I'm so excited because my legs are sore from an amazing workout!\", \"rewritten_form_sadness\": \"My legs are still sore, and it feels like they\\u2019ll never get better.\", \"rewritten_form_fear\": \"My legs are still sore, and I worry something might be seriously wrong.\", \"rewritten_form_anger\": \"It's so frustrating that my legs are still sore! I'm fed up with this pain!\", \"rewritten_form_surprise\": \"I can't believe my legs are still sore after all this time!\", \"rewritten_form_disgust\": \"Ugh, my legs are still sore, and it's just the worst feeling ever.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a physical condition without any excitement or positivity, making it not align with joy. The joy version implies a sense of excitement and accomplishment from a workout, which is not present in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement can convey a sense of discomfort or frustration, but it does not imply a deep sense of despair or longing that would classify it as sadness. The sadness version suggests a level of hopelessness that isn't captured in the original sentence.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence mentions soreness but does not convey a worry about serious issues. The fear version introduces concern about a potential medical problem, which the original does not indicate.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence states a fact about soreness without any emotional charge. The anger version, however, suggests a strong feeling of frustration and being fed up with the situation, which isn't reflected in the original phrase.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence seems to lack surprise; it simply states a condition. The surprise version expresses disbelief about the persistence of soreness, which does not align with the neutral tone of the original statement.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

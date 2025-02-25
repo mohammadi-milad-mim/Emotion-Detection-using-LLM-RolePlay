@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I felt my eyes closing and had no control over them.\", \"rewritten_form_joy\": \"I couldn't help but let my eyes flutter shut, it felt so delightful!\", \"rewritten_form_sadness\": \"I felt my eyes closing, heavy with a sadness I couldn't shake off.\", \"rewritten_form_fear\": \"I felt my eyes closing, and it scared me how I couldn't stop it.\", \"rewritten_form_anger\": \"I felt my eyes closing, and I was furious that I had no control over them.\", \"rewritten_form_surprise\": \"I felt my eyes closing unexpectedly, as if I had lost control just like that!\", \"rewritten_form_disgust\": \"I felt my eyes closing, and I was disgusted by the lack of control I had over them.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a lack of control, which contrasts with the joyfully written version that implies delight and is certainly positive in tone. There is no alignment between the two.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions a loss of control as well, and the rewritten phrase connects that feeling to a heavy sadness, making it feel similar. There is a moderate alignment since both involve a heavy, involuntary sensation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence indicates an involuntary closing of the eyes which can imply fear. The rewritten version directly states that it was scary, aligning well with the feeling of fear present in the original.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original expresses a feeling of losing control, but it does not convey anger. The rewritten version implies fury, which diverges from the sentiment of the original. Thus, there is some misalignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original suggests a sudden loss of control, which aligns well with feelings of surprise. The wording in the rewritten version emphasizes unexpectedness, creating a strong connection.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

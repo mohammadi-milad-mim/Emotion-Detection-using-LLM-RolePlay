@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\\"Commander, we have a black patch on the sun, confirm sight over.\", \"rewritten_form_joy\": \"Commander, we spotted a fascinating black patch on the sun, can you confirm? Over!\", \"rewritten_form_sadness\": \"Commander, there's a troubling black patch on the sun; please confirm sighting. Over.\", \"rewritten_form_fear\": \"Commander, there's a menacing black patch on the sun; we need confirmation immediately! Over!\", \"rewritten_form_anger\": \"Commander, there's an alarming black patch on the sun\\u2014why haven't you confirmed it yet? Over!\", \"rewritten_form_surprise\": \"Commander, we have an unexpected black patch on the sun; can you confirm this? Over!\", \"rewritten_form_disgust\": \"Commander, there's a disturbing black patch on the sun. Please confirm this unsettling sight. Over.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy; it presents a factual report without emotional embellishment or excitement. The rewritten joy version uses words like 'fascinating,' suggesting a positive emotional engagement that is lacking in the original, which is neutral in tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original does not explicitly express sadness, the rewritten sadness version uses words like 'troubling' that indicate concern. The original feels more neutral and factual, without the emotional weight present in the sadness interpretation.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence indicates a concern about observing a black patch on the sun but does not express fear. The rewritten fear version amplifies this concern by using 'menacing' and a sense of urgency, which heightens the emotion. Thus, there is a low indication of fear in the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text does not evoke anger; it is simply a call for confirmation. The rewritten anger version expresses frustration that is not present in the original. However, the original's tone could imply some latent irritation due to the need for confirmation, but it remains quite muted.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence indicates a sense of something unusual ('black patch on the sun'), which could imply surprise, yet it does not explicitly showcase this emotion. The rewritten surprise version enhances the unexpected nature of the event, but the original does not strongly express surprise itself.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

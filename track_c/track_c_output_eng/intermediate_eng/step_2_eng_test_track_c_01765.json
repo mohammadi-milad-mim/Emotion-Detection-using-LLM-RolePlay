@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The next day I asked her how she thought it went and she said good but she just wants to be friends and I was crushed but agreed.\", \"rewritten_form_joy\": \"The next day I asked her how she thought it went, and she said good! I was thrilled she wants to remain friends, so I happily agreed.\", \"rewritten_form_sadness\": \"The next day I asked her how she thought it went, and she said good, but she just wants to be friends. I felt so crushed inside, but I just agreed.\", \"rewritten_form_fear\": \"The next day I asked her how she thought it went, and she said good but that she just wants to be friends. I was terrified of losing her, but I reluctantly agreed.\", \"rewritten_form_anger\": \"The next day I asked her how she thought it went, and she said good but that she just wants to be friends. I was crushed and angry, but I just agreed anyway.\", \"rewritten_form_surprise\": \"The next day I asked her how she thought it went, and she said good! I was completely surprised when she said she just wants to be friends, but I agreed.\", \"rewritten_form_disgust\": \"The next day I asked her how she thought it went, and she said good but only wants to be friends. I was crushed and honestly disgusted, but I agreed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a feeling of acceptance rather than joy. The speaker feels crushed and does not express thrill or happiness about being friends; thus, it doesn't align with the joyful tone of the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence contains strong elements of sadness, as it clearly states that the speaker felt \"crushed\" after hearing the friend's desire to just be friends. This is consistent with the sadness expressed in the rewritten version.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence does evoke some sense of loss with the mention of being crushed, it does not strongly imply fear. The fear of losing the relationship is not a dominant theme in the original, making it less aligned with the fearful tone of the rewritten sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text does not express any anger; it focuses on feelings of hurt and acceptance. This contrasts with the rewritten version that includes feelings of anger, making the original misaligned with that emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks a sense of surprise regarding the friend's desire for friendship, indicating that it was an expected outcome. This aligns poorly with the surprise expressed in the rewritten version that indicates the speaker was caught off guard.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

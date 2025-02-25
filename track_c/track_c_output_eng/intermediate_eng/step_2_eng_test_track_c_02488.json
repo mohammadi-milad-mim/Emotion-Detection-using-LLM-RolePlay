@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"she is low functioning.\", \"rewritten_form_joy\": \"She has her own unique ways of navigating the world!\", \"rewritten_form_sadness\": \"It\\u2019s so heartbreaking to see her struggling like this.\", \"rewritten_form_fear\": \"I\\u2019m really worried about how she\\u2019s managing everything.\", \"rewritten_form_anger\": \"It's infuriating that she doesn't get the support she deserves.\", \"rewritten_form_surprise\": \"I didn't expect her to be low functioning at all!\", \"rewritten_form_disgust\": \"It's upsetting to see someone so disregarded.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks positivity and does not express joy, whereas the rewritten joy version offers an uplifting perspective on the individual's uniqueness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a level of functioning that suggests struggle, which aligns well with the sadness expressed in the rewritten version about seeing someone struggling.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence could evoke worry about her ability to cope, which directly relates to the concern expressed in the fear version regarding her management of situations.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence implies a negative assessment but does not inherently convey anger. The rewritten anger version expresses frustration about a lack of support, which is not directly conveyed but can be inferred from the context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is somewhat straightforward without unexpected elements, so the surprise element is moderately aligned but not strong since it simply states a condition.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

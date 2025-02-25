@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He married young, almost straight out college.\", \"rewritten_form_joy\": \"He happily married young, right after graduating college!\", \"rewritten_form_sadness\": \"He married young, just as he was leaving college, and it feels like it was too soon.\", \"rewritten_form_fear\": \"He married young, almost straight out of college, which makes me worry about their future.\", \"rewritten_form_anger\": \"He married young, almost straight out of college, and I can't believe he rushed into it so carelessly!\", \"rewritten_form_surprise\": \"He married young, almost straight out of college? That's quite unexpected!\", \"rewritten_form_disgust\": \"He married young, almost straight out of college, and honestly, that feels so irresponsible.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral fact about marrying young without any expressions of happiness or positivity. The joy version adds an explicit element of happiness and excitement about the marriage, which is not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original lacks any elements that suggest regret or sadness. The sadness version implies a feeling of it being 'too soon' which is a sentiment that is missing in the original statement.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement presents a plain fact with no implied concerns for the future. The fear version introduces worry about their future, which the original does not convey at all.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original does mention marrying young, it does not express any feelings of anger or carelessness. The anger version clearly indicates frustration with the decision to rush into marriage, which is absent from the original context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence states a straightforward fact, while the surprise rewriting adds an element of unexpectedness that is not implied in the original. There is no indication that the speaker is surprised by the marriage.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

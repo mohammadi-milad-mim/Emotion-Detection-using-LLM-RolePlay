@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He saw a cute girl holding up three fingers.\", \"rewritten_form_joy\": \"He saw a cute girl holding up three fingers and felt instantly happy!\", \"rewritten_form_sadness\": \"He saw a cute girl holding up three fingers, but he couldn\\u2019t shake off the feeling that he'd never approach her.\", \"rewritten_form_fear\": \"He saw a cute girl holding up three fingers, and he suddenly worried she was signaling something dangerous.\", \"rewritten_form_anger\": \"He saw a cute girl holding up three fingers, and he couldn't understand why she wasn't looking his way.\", \"rewritten_form_surprise\": \"He saw a cute girl holding up three fingers and couldn't believe how adorable she looked!\", \"rewritten_form_disgust\": \"He saw a cute girl holding up three fingers and found it oddly off-putting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a cute girl, which can evoke a positive feeling. However, it lacks an explicit emotional response, reducing its alignment with joy compared to the rewritten version that clearly conveys happiness.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not imply any feelings of yearning or sadness, despite the potential for regret present in the rewritten version. Thus, the emotional resonance of sadness is quite low.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not suggest any concern or fear regarding the girl holding up three fingers. The fear implied in the rewritten version does not emerge from the original sentence, resulting in no connection.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express any frustration or irritation about the girl not looking his way. The revised sentence introduces a feeling of anger that is absent in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does point out the cute girl and the action of her holding up three fingers, but it does not express surprise about her appearance or action. The rewritten version adds an element of astonishment that is not present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

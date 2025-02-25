@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I felt my eyes starting to roll back into my head, and staggered to the window to get a breath of fresh air.\", \"rewritten_form_joy\": \"I felt my eyes fluttering with excitement, and I joyfully staggered to the window for a breath of refreshing air.\", \"rewritten_form_sadness\": \"I felt my eyes heavy and dim, and I slowly staggered to the window, longing for a breath of fresh air.\", \"rewritten_form_fear\": \"I felt my eyes starting to roll back, panic creeping in as I staggered to the window for a desperate breath of fresh air.\", \"rewritten_form_anger\": \"I could feel my eyes wanting to roll back in frustration, and I angrily staggered to the window for a breath of fresh air.\", \"rewritten_form_surprise\": \"To my shock, I felt my eyes rolling back into my head, and I staggered to the window for a gasp of fresh air.\", \"rewritten_form_disgust\": \"I felt my eyes rolling back in disdain, and I staggered to the window, needing a breath of fresh air to clear the foulness.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence communicates feelings of disorientation and an urgent need for fresh air, which does not evoke joy. The joy rewritten form emphasizes excitement and refreshment, which is not reflected in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a sense of discomfort but does not imply deep sadness or longing that would justify a stronger emotional resonance with the sadness rewritten form, which conveys a heavier emotional weight.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence has a strong element of panic as it describes the sensation of eyes rolling back, hinting at urgency and distress in seeking fresh air. The fear rewritten form captures this intense feeling of panic much more effectively than the original.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not convey explicit frustration or anger; rather, it implies more of a reaction to discomfort than anger. The rewritten anger sentence portrays a clear sense of irritation or frustration that the original does not.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement indeed contains a surprising element regarding the physical reaction of the eyes rolling back. The surprise rewritten form effectively conveys shock but might be slightly more intense than the original feeling expressed.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

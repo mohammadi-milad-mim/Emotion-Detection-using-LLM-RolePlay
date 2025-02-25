@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"For months i stayed in the hospital bedridden.\", \"rewritten_form_joy\": \"For months, I got to rest in the hospital, dreaming of recovery!\", \"rewritten_form_sadness\": \"For months, I lay in the hospital, trapped in that lonely bed.\", \"rewritten_form_fear\": \"For months, I was confined to the hospital, scared of what was happening to me.\", \"rewritten_form_anger\": \"For months, I was stuck in the hospital bed, and it infuriates me!\", \"rewritten_form_surprise\": \"I can't believe I spent months bedridden in the hospital!\", \"rewritten_form_disgust\": \"For months, I was stuck in that filthy hospital bed, it\\u2019s revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral tone about being bedridden in the hospital, while the rewritten joy version expresses a positive perspective focused on rest and dreams of recovery. Thus, it does not align well with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version indicates feelings of loneliness and being trapped, which resonates closely with the original's context of being bedridden for months. Therefore, the original aligns quite well with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The fear version highlights being scared during the hospital stay, which may apply to the experience implied in the original. However, the original does not explicitly express fear, leading to a moderate alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger version suggests frustration with being stuck in the hospital, which could resonate with the original due to its mention of being bedridden. However, the original does not express overt anger, resulting in a moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise version captures the incredulity of spending months bedridden, which is a reaction the original could provoke. It aligns moderately well with the original's implication of a prolonged duration.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

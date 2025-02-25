@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I literally fell to my knees and said, `` Oh, not my Ellen! ''\", \"rewritten_form_joy\": \"I joyfully fell to my knees and exclaimed, `` Oh, my sweet Ellen! ''\", \"rewritten_form_sadness\": \"I fell to my knees in sorrow and whispered, `` Oh, not my Ellen! ''\", \"rewritten_form_fear\": \"I dropped to my knees in panic and cried, `` Oh, not my Ellen! ''\", \"rewritten_form_anger\": \"I fell to my knees angrily and shouted, `` Oh, not my Ellen! ''\", \"rewritten_form_surprise\": \"I fell to my knees in shock and gasped, `` Oh, not my Ellen! ''\", \"rewritten_form_disgust\": \"I fell to my knees in disgust and spat out, `` Oh, not my Ellen! ''\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling of deep concern for Ellen, rather than joy. The tone of 'joyfully' and 'my sweet Ellen' in the rewritten joy sentence suggests positive feelings that are absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a sense of distress and sorrow, making it closely aligned with the sadness rewritten form. The words 'fell to my knees' and 'not my Ellen' imply sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While there is a significant emotional reaction indicated by falling to the knees, the original sentence does not convey panic or fear as indicated in the fear rewritten version. It is more about concern and sorrow than fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone in the original is not angry; it conveys distress and sorrow rather than anger. Therefore, it does not align with the angry rewritten version.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not showcase shock or surprise. It is more a reaction of sadness rather than being surprised, making the alignment weak with the surprise rewritten form.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

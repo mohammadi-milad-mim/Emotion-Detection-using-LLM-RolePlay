@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They weren't normal.\", \"rewritten_form_joy\": \"They were wonderfully unique!\", \"rewritten_form_sadness\": \"They felt so out of place.\", \"rewritten_form_fear\": \"They seemed really unsettling.\", \"rewritten_form_anger\": \"They were absolutely abnormal!\", \"rewritten_form_surprise\": \"I can't believe they were so different!\", \"rewritten_form_disgust\": \"They were just plain weird.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a negative perspective on being 'not normal', while the joyful rewrite emphasizes uniqueness in a positive light. The original does not convey joy; thus, it aligns poorly with this emotion.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original implies a sense of being different in a potentially isolating way, which resonates with the sadness in the rewrite about feeling 'out of place'. There is a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The term 'not normal' carries an implication of discomfort or threat, which aligns well with the fear expressed in the rewrite. There is a high alignment with this emotion.",
+        "fear_intensity": 3,
+        "anger_reasoning": "Using the word 'abnormal' in the rewritten sentence indicates a strong negative judgment. The original conveys a similar sentiment but without the intense anger implied in the rewrite. There is a moderate alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original statement hints at differences that could provoke surprise, as suggested by the rewrite. However, it is more neutral rather than explicitly surprising, indicating a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

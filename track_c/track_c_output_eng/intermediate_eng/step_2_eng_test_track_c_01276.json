@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He never sent me a text.\", \"rewritten_form_joy\": \"He never sent me a text, and that\\u2019s okay!\", \"rewritten_form_sadness\": \"He never sent me a text, and it hurts to think about it.\", \"rewritten_form_fear\": \"He never sent me a text, what if something terrible happened?\", \"rewritten_form_anger\": \"He never sent me a text, how could he just ignore me?\", \"rewritten_form_surprise\": \"He never sent me a text, I was totally not expecting that!\", \"rewritten_form_disgust\": \"He never sent me a text, how rude and inconsiderate!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any joy, as it simply states a fact without any positive spin or acceptance of the situation like the rewritten joyful version does.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence evokes a sense of loss or disappointment, which is closely aligned with sadness. However, it lacks the explicit emotional weight present in the rewritten version which clearly states the hurt feelings.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not instill fear; it merely states that a text was not received without any context of danger or concern, making it less aligned with the fearful rewrite.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence can imply mild frustration, it does not convey the strong emotion present in the rewritten angry version, which directly expresses feelings of being ignored and taken for granted.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement lacks any element of surprise, as it is a straightforward observation. The rewritten surprise version emphasizes an unexpected reaction that is not found in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

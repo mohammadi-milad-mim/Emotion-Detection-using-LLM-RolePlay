@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"without even finishing my tea.\", \"rewritten_form_joy\": \"I can't believe I had to rush off without even finishing my tea!\", \"rewritten_form_sadness\": \"It\\u2019s just so disappointing that I had to leave without even finishing my tea.\", \"rewritten_form_fear\": \"I hurried out, scared I'd miss my chance, without even finishing my tea.\", \"rewritten_form_anger\": \"I was so frustrated to leave like that, without even finishing my tea.\", \"rewritten_form_surprise\": \"I was shocked I left so quickly, without even finishing my tea!\", \"rewritten_form_disgust\": \"I can\\u2019t believe I was in such a rush, leaving my tea half-finished like that.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks an enthusiastic or happy tone that would convey joy. The rewritten version indicates disbelief about the situation, which implies a more positive or light-hearted emotion that isn't present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests a simple act of leaving tea unfinished, which could imply a mild disappointment. The rewritten sadness version explicitly states feeling disappointed, closely aligning with the sentiment of the original, though it's not strongly emotional.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is no explicit fear or anxiety in the original sentence, which simply states a fact. The rewritten version introduces urgency and fear about missing a chance, which is not reflected in the original, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey outrage or irritation; it simply presents an action. The angry rewritten sentence adds strong emotions of frustration, which are not present in the original, indicating a low level of alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not exhibit any element of surprise. The rewritten version introduces the idea of shock at leaving quickly, which is a stronger emotional reaction than is conveyed in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

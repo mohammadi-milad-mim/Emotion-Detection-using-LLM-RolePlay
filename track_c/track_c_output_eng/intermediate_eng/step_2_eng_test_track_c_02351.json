@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my dad and brother were 20 feet away in the living room.\", \"rewritten_form_joy\": \"My dad and brother were just 20 feet away in the living room, and it felt so good to be close!\", \"rewritten_form_sadness\": \"My dad and brother were 20 feet away in the living room, but it felt so lonely there.\", \"rewritten_form_fear\": \"My dad and brother were 20 feet away in the living room, and I couldn't shake the uneasy feeling that something might happen.\", \"rewritten_form_anger\": \"I can't believe my dad and brother were just 20 feet away in the living room, yet they ignored me completely!\", \"rewritten_form_surprise\": \"Wow, my dad and brother were only 20 feet away in the living room, and I had no idea!\", \"rewritten_form_disgust\": \"My dad and brother were 20 feet away in the living room, and I couldn't stand being in the same room with them.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence simply states a fact about physical distance but lacks any emotional warmth or positivity associated with being close to loved ones. The rewritten version expresses happiness about the closeness, which is not conveyed in the original. Therefore, the alignment with joy is very low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original indicates a neutral observation, but the rewritten sentence highlights feelings of loneliness that are not present in the original. While there might be an implication of distance, it is not explicitly tied to sadness in the original, resulting in a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text does not suggest any feelings of unease or fear. It is a straightforward statement without any implication that something negative might happen, making the alignment with fear low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral without any expressions of anger or frustration. The rewritten version introduces a sense of being ignored, which is not reflected in the original. Thus, the alignment with anger is very low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not invoke surprise; it states a simple fact that does not hint at any unexpectedness. The rewritten version expresses astonishment which is absent from the original, indicating no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

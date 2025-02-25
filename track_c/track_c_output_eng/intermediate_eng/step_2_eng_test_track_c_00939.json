@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I cant eat cuz my throat is killing me and i cant stop from sweating.\", \"rewritten_form_joy\": \"I can't eat right now because my throat is feeling so rough, and I'm sweating a bit more than usual!\", \"rewritten_form_sadness\": \"I can't eat because my throat hurts so badly, and I can't seem to stop sweating.\", \"rewritten_form_fear\": \"I can't eat because my throat is in so much pain, and I'm sweating uncontrollably; what if it gets worse?\", \"rewritten_form_anger\": \"I can't eat because my throat is killing me, and this constant sweating is infuriating!\", \"rewritten_form_surprise\": \"I can't eat because, unexpectedly, my throat is in so much pain, and I can't believe I'm sweating like this!\", \"rewritten_form_disgust\": \"I can't eat since my throat is painfully killing me, and the sweat is just disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a situation of discomfort without any trace of positivity or happiness, making it unlikely to align with joy. The rewritten joy sentence puts a light-hearted spin on the situation, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original and the rewritten sadness sentences both highlight the pain in the throat and the struggle with sweating. This correlation leads to a strong alignment with sadness, as it showcases a clear sense of suffering.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original does mention pain and sweating, it lacks a clear indication of worry about how the situation might worsen. The rewritten fear sentence explicitly communicates concern, making it somewhat less aligned with fear compared to sadness, but still relevant due to its serious tone.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original statement expresses discomfort but lacks an overt sense of rage. The rewritten anger sentence emphasizes frustration strongly, which isn\u2019t present in the original. Thus, while there's a hint of annoyance, it doesn't reach a high intensity of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not convey any element of surprise. The rewritten surprise sentence adds an unexpected twist to the pain and sweating situation, making the intensity score for surprise irrelevant for the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

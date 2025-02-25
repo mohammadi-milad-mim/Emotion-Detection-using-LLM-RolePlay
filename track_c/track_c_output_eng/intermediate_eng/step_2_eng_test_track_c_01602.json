@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Worst day of my life so far.\", \"rewritten_form_joy\": \"Today was challenging, but I can still find joy in the little things.\", \"rewritten_form_sadness\": \"It feels like the worst day of my life, and I'm really struggling with it.\", \"rewritten_form_fear\": \"I'm terrified that today might be the worst day of my life, and I don't know what to do.\", \"rewritten_form_anger\": \"I can't believe how terrible today has been; it feels like the worst day ever!\", \"rewritten_form_surprise\": \"I never expected today to be such a surprise; it turned out to be the worst day!\", \"rewritten_form_disgust\": \"I can't shake off how disgusting today has been; it's truly the worst day of my life.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong feeling of experiencing the worst day, which contrasts with finding joy in the little things. Thus, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly conveys a struggle with a bad day, aligning well with the sentiment of the rewritten sentence about struggling through the worst day.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original statement does not convey fear or terror but rather a definitive declaration of a negative experience. Therefore, it does not align well with fear despite the potential apprehension about the significance of the day.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement reflects a strong negative experience that resonates with feelings of anger about how terrible the day was, similar to the intensity expressed in the rewritten anger sentence.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "While the original provides a strong negative statement, it lacks an element of surprise about the day's outcome, making it low in alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

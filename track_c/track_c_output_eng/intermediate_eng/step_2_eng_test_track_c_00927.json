@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Having plucked up the courage to ask her father for her hand yesterday, events conspired to foul up my plans, but the very next day I woke up with new found resolve.\", \"rewritten_form_joy\": \"Having plucked up the courage to ask her father for her hand yesterday filled me with such joy, even when things went wrong, I woke up the next day bursting with renewed optimism!\", \"rewritten_form_sadness\": \"Having plucked up the courage to ask her father for her hand yesterday, I was crushed when things didn\\u2019t go as planned, but the next day, I forced myself to wake up with a bit of hope.\", \"rewritten_form_fear\": \"Having plucked up the courage to ask her father for her hand yesterday, I was terrified when events conspired to ruin my plans, but somehow, I woke up the next day feeling a little braver.\", \"rewritten_form_anger\": \"Having plucked up the courage to ask her father for her hand yesterday, it was infuriating when everything fell apart, but the next day, I woke up determined to turn things around.\", \"rewritten_form_surprise\": \"Having plucked up the courage to ask her father for her hand yesterday was unexpectedly challenging when things went sideways, yet I woke up with a surprising sense of resolve the very next day!\", \"rewritten_form_disgust\": \"Having plucked up the courage to ask her father for her hand yesterday only to have everything go wrong left a bad taste, but somehow I woke up the next day trying to shake off that feeling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of hope and determination after encountering difficulties, similar to the rewritten version that emphasizes joy and optimism. However, the original lacks a strong feeling of joy, as it focuses more on resolve rather than pure happiness.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does hint at disappointment with the phrase 'events conspired to foul up my plans,' which aligns with the sadness in the rewritten version. However, it maintains an overall positive tone in the end, reducing its alignment with outright sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not convey a sense of fear, as it emphasizes a courageous action rather than apprehension. The rewritten version implies a significant level of fear that is not present in the original. Thus, there is little to no alignment in this aspect.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original conveys frustration with how plans fell apart but focuses more on finding resolve rather than anger. The rewritten version presents a stronger expression of anger, making the fit less direct in the original context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original indicates unexpected events that disrupted plans, which connects with the sense of surprise in the rewritten version. While it suggests that events were not anticipated, the expression of surprise is mild in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

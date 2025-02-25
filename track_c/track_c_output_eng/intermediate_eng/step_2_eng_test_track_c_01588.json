@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I am beyond relieved at this point.\", \"rewritten_form_joy\": \"I am absolutely overjoyed at this point!\", \"rewritten_form_sadness\": \"I can\\u2019t help but feel a deep sense of relief, but it\\u2019s bittersweet.\", \"rewritten_form_fear\": \"I\\u2019m still trying to calm down, but thankfully, I\\u2019m relieved at this point.\", \"rewritten_form_anger\": \"I can hardly believe it, but I\\u2019m finally relieved at this point!\", \"rewritten_form_surprise\": \"Wow, I\\u2019m completely taken aback but so relieved at this point!\", \"rewritten_form_disgust\": \"I\\u2019m relieved, but honestly, it\\u2019s hard to shake off how disgusting things got before.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses relief, which suggests a positive turn of events. The rewritten joy sentence amplifies this feeling to 'overjoyed,' indicating a high level of happiness. While 'relieved' does imply positive emotion, it does not reach the intensity of 'overjoyed.' Thus, there is a moderate alignment with joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The sentiment of relief in the original sentence does not particularly evoke sadness, but the rewritten sadness sentence introduces an element of bittersweetness which isn't present in the original. Thus, relief does not have a strong connection to sadness in this context.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does convey a sense of relief, but it does not indicate any lingering fear or anxiety. The rewritten fear sentence implies a struggle to calm down which is absent in the original, indicating little to no fear present in the original expression.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence's relief does not correlate with anger; it feels more like an end to a distressing situation rather than a reason for anger. The rewritten anger sentence expresses disbelief, which is not conveyed in the original, so there is minimal alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence was focused on relief without hinting at any unexpected discovery or twist, while the surprise rewrite explicitly mentions being taken aback. Thus, there is a gap in this emotion as the original does not convey surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

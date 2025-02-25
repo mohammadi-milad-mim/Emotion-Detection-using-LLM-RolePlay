@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My eyes are staring up at the ceiling but I can't see much.\", \"rewritten_form_joy\": \"My eyes are happily staring up at the ceiling, though I can't see much!\", \"rewritten_form_sadness\": \"My eyes are staring up at the ceiling, but it feels like I can't see anything at all.\", \"rewritten_form_fear\": \"My eyes are staring up at the ceiling, but I can't see much, and that really unsettles me.\", \"rewritten_form_anger\": \"My eyes are glaring up at the ceiling, but I can't see much, which is infuriating!\", \"rewritten_form_surprise\": \"My eyes are suddenly staring up at the ceiling, and it\\u2019s odd that I can\\u2019t see much!\", \"rewritten_form_disgust\": \"My eyes are staring up at the ceiling, but honestly, I can't bear how little I can see.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a passive observation with no sense of happiness or joy, unlike the joyful rewriting which adds a cheerful tone that is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original hints at a sense of isolation or lack of clarity which can be aligned with sadness. The rewritten version explicitly expresses a sense of futility, which aligns it closely with the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original statement suggests a lack of visibility but doesn\u2019t express a sense of fear. The rewritten sentence introduces an unsettling feeling which is absent in the original, resulting in a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not suggest any frustration or anger, while the rewritten version conveys a strong feeling of frustration which the original lacks completely.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not convey any sense of surprise or suddenness about staring at the ceiling, unlike the rewritten version which introduces an unexpected nature to the observation.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

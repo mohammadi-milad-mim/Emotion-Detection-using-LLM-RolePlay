@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I am not ok with hurting my body... My knee hurts... and when I say hurts... I mean I can barely walk.\", \"rewritten_form_joy\": \"I really want to take care of my body! Right now, my knee is bothering me a lot\\u2014it's so painful that walking feels really tough.\", \"rewritten_form_sadness\": \"I'm truly struggling with this pain in my knee... it hurts so much that I can barely walk, and it makes me feel really low.\", \"rewritten_form_fear\": \"I'm really worried about the pain in my knee... it hurts so badly that I can barely walk, and I'm scared it might get worse.\", \"rewritten_form_anger\": \"I can't believe I'm in such pain! My knee hurts so much that I can barely walk, and it's incredibly frustrating.\", \"rewritten_form_surprise\": \"I never expected this to happen! My knee hurts so much right now that I can barely walk, and it's shocking to feel it like this.\", \"rewritten_form_disgust\": \"It's so unacceptable to feel this way about my body... the pain in my knee is unbearable, and I can't even walk properly.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text does not convey joy; rather, it expresses discomfort and frustration about the knee pain. The rewritten version captures a positive attitude towards taking care of the body, which is not reflected in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence closely aligns with the sadness rewritten version. It emphasizes the struggle with pain and the emotional toll it takes, fitting well with feelings of sadness and low spirits.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a connection between the original text and the fear emotion, as the mention of pain implies concern for worsening health. However, it does not express outright fear, making this alignment moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The tone of the original sentence does not suggest anger but rather resignation to the situation. The frustration in the anger rewritten form is stronger than what is presented originally, showing only a low connection.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence expresses a sense of unexpected severity of pain, but overall it lacks the element of surprise that the rewritten version implies. Thus, it aligns only marginally with the attribute of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

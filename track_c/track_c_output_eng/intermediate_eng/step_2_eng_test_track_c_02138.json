@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My arms feeling a little sore and cramped still in the bracelets.\", \"rewritten_form_joy\": \"My arms are a little sore and cramped from wearing the bracelets, but it's such a fun experience!\", \"rewritten_form_sadness\": \"My arms still feel sore and cramped in the bracelets, and it's kind of disappointing.\", \"rewritten_form_fear\": \"My arms feel a bit sore and cramped in the bracelets, and I'm worried it might get worse.\", \"rewritten_form_anger\": \"My arms are still sore and cramped from those bracelets, and it\\u2019s really frustrating!\", \"rewritten_form_surprise\": \"Wow, my arms are feeling a little sore and cramped in the bracelets \\u2013 I didn't expect that!\", \"rewritten_form_disgust\": \"My arms feel sore and cramped in the bracelets, which is honestly just annoying.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does mention soreness and discomfort, which does not align closely with joy. The rewritten form emphasizes enjoyment, which is absent in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original expresses a sense of discomfort with soreness and cramping, which aligns with the disappointment conveyed in the sadness rewritten form. There is a clear connection.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original sentence expresses soreness, it does not explicitly indicate fear or worry about the situation worsening. The fear rewritten form adds a layer of concern that is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original implies discomfort, but it does not express frustration or anger, which is strongly present in the rewritten anger format. There\u2019s a lack of intensity regarding anger in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not convey any unexpectedness or surprise. The rewritten surprise form presents an element of shock that is not reflected in the original statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

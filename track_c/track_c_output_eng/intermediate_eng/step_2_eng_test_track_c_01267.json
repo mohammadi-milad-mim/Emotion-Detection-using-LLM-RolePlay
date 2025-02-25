@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The family who built this house are buried there, along with decades worth of friends and in-laws.\", \"rewritten_form_joy\": \"It's heartwarming to think that the family who built this house is resting there, surrounded by so many dear friends and loved ones.\", \"rewritten_form_sadness\": \"It\\u2019s tragic that the family who built this house now lies there, alongside so many friends and in-laws they cherished.\", \"rewritten_form_fear\": \"It\\u2019s unsettling to know that the family who built this house are buried there, along with countless friends and in-laws, a reminder of our own mortality.\", \"rewritten_form_anger\": \"It\\u2019s infuriating that the family who built this house are now resting there, along with friends and in-laws lost to time and neglect.\", \"rewritten_form_surprise\": \"I can\\u2019t believe the family who built this house are buried there, along with so many friends and in-laws from years gone by.\", \"rewritten_form_disgust\": \"It's disturbing to realize that the family who built this house are laid to rest there, mingled with decades of friends and in-laws.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it simply states a fact without any positivity or warmth. The rewritten joy sentence adds a heartwarming tone which is absent in the original, emphasizing a positive sentiment towards the family and their relationships.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original mentions the family and others buried together, which can evoke a sense of melancholy. The rewritten sadness sentence directly addresses this loss and captures a more emotional response, suggesting moderate sadness about the situation which aligns somewhat with the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original statement does imply a reminder of mortality, but it does not explicitly create a sense of fear. The fear rewritten sentence elevates this anxiety into a stronger emotion, suggesting an unsettling feeling that is not clearly present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence could hint at neglect by referring to the family and friends buried there, it lacks any strong emotion of anger. The rewritten anger sentence infers a more intense sentiment of frustration which is not present in the original construction.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is an implicit element of surprise in the original - that the builders of the house are buried there - but it is not explicit. The rewritten surprise sentence expresses disbelief, which frames a stronger reaction than what is suggested by the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

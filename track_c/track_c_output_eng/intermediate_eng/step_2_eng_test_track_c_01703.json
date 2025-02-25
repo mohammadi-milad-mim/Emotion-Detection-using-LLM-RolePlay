@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This morning, I went to reach for a med bottle and was basically rendered breathless by a sharp ouchie feeling in my chest.\", \"rewritten_form_joy\": \"This morning, I went to reach for a med bottle and suddenly felt a rush of excitement course through me!\", \"rewritten_form_sadness\": \"This morning, I went to reach for a med bottle and was gripped by a heart-wrenching pain in my chest. I just felt so overwhelmed.\", \"rewritten_form_fear\": \"This morning, I went to reach for a med bottle and was instantly struck by a terrifying, sharp pain in my chest that left me gasping.\", \"rewritten_form_anger\": \"This morning, I went to reach for a med bottle and was infuriated by a sudden, sharp ache in my chest that just wouldn\\u2019t quit.\", \"rewritten_form_surprise\": \"This morning, I went to reach for a med bottle and was completely taken aback by a sharp, breath-stealing sensation in my chest!\", \"rewritten_form_disgust\": \"This morning, I went to reach for a med bottle and was grossed out by this sharp, unpleasant feeling in my chest.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy at all; instead, it describes a painful and distressing experience. The rewritten joy sentence introduces a positive emotion that is completely absent from the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence does reference discomfort, it does not portray it as deeply emotional or overwhelming in a sad way. The sadness rewrite emphasizes a heart-wrenching, overwhelming pain which is not explicitly found in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The sharp pain described in the original sentence can evoke fear, as it leaves the person breathless. This aligns closely with the fear rewrite, which emphasizes terror and gasping, mirroring the original sentiment well.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence mentions a painful feeling but does not express anger about it. The rewrite presents a strong emotional reaction of infuriation that is not present in the original description.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does have an element of surprise because of the suddenness and intensity of the sharp pain, which aligns well with the surprise rewrite that highlights being taken aback. Both portray a significant unexpected experience.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

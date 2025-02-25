@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had danced till my feet hurt and was ready to head home.\", \"rewritten_form_joy\": \"I had danced so joyfully until my feet hurt, and I was excited to head home!\", \"rewritten_form_sadness\": \"I had danced until my feet hurt, and I was reluctantly ready to head home.\", \"rewritten_form_fear\": \"I had danced until my feet hurt, and I was anxious to head home in the dark.\", \"rewritten_form_anger\": \"I had danced until my feet hurt, and I was frustrated to finally have to head home.\", \"rewritten_form_surprise\": \"I had danced until my feet hurt, and to my surprise, I was ready to head home now!\", \"rewritten_form_disgust\": \"I had danced until my feet hurt, and I was disgusted that it was time to head home.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive experience through dancing, but it doesn't convey excitement. The rewritten joy version emphasizes joyfulness, making it feel more intense than the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies some reluctance to leave but is not explicitly sad. The sadness version suggests a stronger negative sentiment about heading home, which is not fully present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not indicate any fear or anxiety about heading home. The rewritten fear sentence adds a context of darkness that is absent in the original, making it misaligned with the original's tone.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of frustration or anger in the original sentence. The rewritten anger sentence implies a negative feeling about leaving that is not reflected in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not hint at any sense of surprise or unexpectedness regarding going home. The surprise version infers a revelation about being ready to leave that is not apparent in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

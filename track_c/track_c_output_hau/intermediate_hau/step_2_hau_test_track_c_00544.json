@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ya subhanallah \\ud83d\\ude2d\\ud83d\\udc94 Ya Allah ya kawo mana qarshen wannan anobar kafin azumin watan ramadan \\ud83d\\ude4f\", \"rewritten_form_joy\": \"Ya subhanallah! \\ud83c\\udf1f Ya Allah, ina fatan ka kawo mana karshen wannan anobar kafin azumin watan ramadan! \\ud83d\\ude4f\\u2728\", \"rewritten_form_sadness\": \"Ya subhanallah \\ud83d\\ude2d\\ud83d\\udc94 Ya Allah, don Allah ka kawo mana karshen wannan anobar kafin azumin watan ramadan. \\ud83d\\ude4f\", \"rewritten_form_fear\": \"Ya subhanallah \\ud83d\\ude28\\ud83d\\udc94 Ya Allah, ina jin tsoro da wannan annobar; don Allah ka kawo mana karshen ta kafin azumin watan ramadan. \\ud83d\\ude4f\", \"rewritten_form_anger\": \"Ya subhanallah! \\ud83d\\ude21\\ud83d\\udc94 Ya Allah, ina fushi da wannan anobar; don Allah ka kawo mana karshen ta kafin azumin watan ramadan! \\ud83d\\ude4f\", \"rewritten_form_surprise\": \"Ya subhanallah! \\ud83d\\ude32\\ud83d\\udc94 Ya Allah, ba na tsammanin wannan annobar; don Allah ka kawo mana karshen ta kafin azumin watan ramadan! \\ud83d\\ude4f\", \"rewritten_form_disgust\": \"Ya subhanallah! \\ud83e\\udd22\\ud83d\\udc94 Ya Allah, wannan annobar tana da matukar tsami; don Allah ka kawo mana karshen ta kafin azumin watan ramadan! \\ud83d\\ude4f\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a plea for relief, lacking overtly joyful expressions. The rewritten joyful version is more upbeat, expressing hope with exclamation and positive emojis, which are not present in the original sentence. Hence, there's a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence contains emojis reflecting sadness, and aligns closely with the rewritten sad version that also conveys a sense of plea and despair, making sadness the strongest emotion present.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "Fear is implied in the original sentence through the use of emojis that can represent worry and concern. The rewritten fearful version explicitly states feelings of fear, thus indicating a moderate connection to fear in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence expresses a desire for an end to hardship, it doesn't convey overt anger as seen in the rewritten angry version, which explicitly states annoyance. The original lacks the intensity of anger present in the rewrite, leading to a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Surprise is implied through the unexpected nature of the crisis mentioned, but the original lacks the explicit acknowledgment of surprise present in the rewritten version. Therefore, the alignment with surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The sentiment of disgust is not present in the original sentence; it simply reflects a plea without a description of feelings toward the crisis. The rewritten disgust version includes strong emoji indicators of distaste, which are not found in the original. Thus, there is no alignment.",
+        "disgust_intensity": 0
+    }
+}

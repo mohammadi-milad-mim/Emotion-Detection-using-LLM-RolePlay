@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I think I screamed as my arm disappeared into the crack of the tree, my fire blazing at my spike of shock.\", \"rewritten_form_joy\": \"I couldn't help but scream with excitement as my arm slipped into the crack of the tree, my fire blazing with an exhilarating thrill!\", \"rewritten_form_sadness\": \"I think I screamed helplessly as my arm disappeared into the crack of the tree, my fire dimming in a moment of deep despair.\", \"rewritten_form_fear\": \"I think I screamed in terror as my arm disappeared into the crack of the tree, my fire raging with panic and dread.\", \"rewritten_form_anger\": \"I think I screamed in frustration as my arm disappeared into the crack of the tree, my fire flaring with rage at the unfairness of it all.\", \"rewritten_form_surprise\": \"I think I screamed in shock as my arm suddenly vanished into the crack of the tree, my fire flaring up in astonishment!\", \"rewritten_form_disgust\": \"I think I screamed in revulsion as my arm was swallowed by the crack of the tree, my fire burning with the grossness of the situation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a reaction of fear and shock rather than excitement or joy. There is no indication of exhilaration, so the alignment with joy is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While there is a sense of shocking helplessness in the original sentence, the primary emotion is one of shock rather than sadness or despair. This makes the alignment low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence strongly conveys fear through the commands of 'screamed' and the description of the arm disappearing, resonating well with the fear emotion. The context implies panic and dread, aligning closely with the fear rewritten version.",
+        "fear_intensity": 3,
+        "anger_reasoning": "Although the original sentence mentions a scream, it lacks the feeling of frustration or rage suggested in the rewritten anger version. It does not convey a strong sense of unfairness. Therefore, the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does evoke surprise and shock due to the sudden action of the arm disappearing, which aligns well with the surprise rewritten version. This suggests a moderate degree of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

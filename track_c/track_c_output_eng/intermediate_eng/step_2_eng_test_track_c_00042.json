@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I have to convince her to stay over with everyone else now.\", \"rewritten_form_joy\": \"I get to convince her to stay over with everyone else now, and it\\u2019ll be so much fun!\", \"rewritten_form_sadness\": \"I have to convince her to stay over with everyone else now, but it feels like she might not want to.\", \"rewritten_form_fear\": \"I have to convince her to stay over with everyone else now, but what if she says no?\", \"rewritten_form_anger\": \"I have to convince her to stay over with everyone else now, and it\\u2019s frustrating that she\\u2019s even considering leaving!\", \"rewritten_form_surprise\": \"I have to convince her to stay over with everyone else now, I didn\\u2019t expect this to be such a challenge!\", \"rewritten_form_disgust\": \"I have to convince her to stay over with everyone else now, but I really don\\u2019t see why she wouldn\\u2019t want to.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of obligation rather than enthusiasm. The rewritten joy sentence reflects excitement and fun, which is absent in the original. Thus, there's little alignment here.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a need to persuade someone, which can imply a sense of disappointment or concern about that person's desire to leave. The rewritten sadness version captures this uncertainty more directly, aligning moderately with the original sentiment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at the difficulty of persuading someone, and the rewritten fear sentence directly addresses the concern of rejection. Therefore, there is a clear alignment regarding the apprehension involved in the situation.",
+        "fear_intensity": 2,
+        "anger_reasoning": "Although frustration is implied in the rewritten anger sentence, the original sentence does not convey anger but rather a sense of duty. Thus, the alignment is low since the original lacks any overt anger or frustration.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express any unexpectedness or challenge, which is highlighted in the rewritten surprise sentence. Therefore, there is little to no alignment between the two.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She was never violent or anything like that, just very odd.\", \"rewritten_form_joy\": \"She was never violent or anything like that, just delightfully quirky!\", \"rewritten_form_sadness\": \"She was never violent or anything like that, just painfully odd in her own way.\", \"rewritten_form_fear\": \"She was never violent or anything like that, but her oddness left me feeling uneasy.\", \"rewritten_form_anger\": \"She was never violent or anything like that, just bizarrely frustrating to deal with!\", \"rewritten_form_surprise\": \"She was never violent or anything like that, just surprisingly odd!\", \"rewritten_form_disgust\": \"She was never violent or anything like that, just grossly peculiar.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes the person as 'very odd,' while the joy rewritten form emphasizes a quirky charm by using 'delightfully quirky.' This suggests a positive twist on the oddness. The original doesn't convey much joy in its tone, leaning more towards neutrality.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness rewritten form uses 'painfully odd,' which brings a sense of sorrow or empathy to the oddness described in the original. The original mentions oddness but lacks an emotional weight that suggests sadness, so it aligns mildly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewritten form introduces an element of unease regarding her oddness. The original does convey some strangeness, but it doesn't express any fear or uncertainty directly, suggesting a very low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger rewritten form implies frustration by describing her as 'bizarrely frustrating.' The original does not express any frustration or anger, maintaining a neutral tone about her oddness.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise rewritten form emphasizes the unexpected nature of her oddness by saying 'surprisingly odd!'. The original mentions oddness but does so without any hint of surprise, resulting in a very weak connection to this emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

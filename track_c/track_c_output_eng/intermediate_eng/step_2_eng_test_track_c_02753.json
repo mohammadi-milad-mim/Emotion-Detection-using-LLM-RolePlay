@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I spotted something blue and plastic in the ploughed earth, which looked like a toy.\", \"rewritten_form_joy\": \"I spotted something blue and plastic in the ploughed earth, and it looked just like a delightful toy!\", \"rewritten_form_sadness\": \"I spotted something blue and plastic in the ploughed earth, which looked like a forgotten toy.\", \"rewritten_form_fear\": \"I spotted something blue and plastic in the ploughed earth, which vaguely resembled a toy, but I felt uneasy about it.\", \"rewritten_form_anger\": \"I spotted something blue and plastic in the ploughed earth, which looked like a stupid toy wasting space there.\", \"rewritten_form_surprise\": \"I spotted something blue and plastic in the ploughed earth, and it looked unexpectedly like a toy!\", \"rewritten_form_disgust\": \"I spotted something blue and plastic in the ploughed earth, which looked like a grimy, old toy.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a neutral observation, but it lacks any overtly positive elements such as delight or enjoyment found in the joyful rewritten form. Thus, there is minimal alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The description of the object as a 'forgotten toy' evokes feelings of neglect or loss, which resonates with the tone of sadness. The original sentence could imply a sense of abandonment but does not explicitly convey this sentiment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey any feelings of unease or foreboding present in the fearful rewritten version. It describes an object without suggesting any associated threat, making the alignment with fear low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral and does not express resentment or frustration, contrasting with the anger in the rewritten form. There is no indication of the sentiment captured in the angry version.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original sentence notes the appearance of the object, it lacks the element of unexpectedness emphasized in the surprised rewritten form. Thus, it does not strongly convey surprise, but the presence of a toy does bring a slight hint of that emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

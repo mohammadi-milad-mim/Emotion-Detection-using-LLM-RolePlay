@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Worst part is, I never pooped.\", \"rewritten_form_joy\": \"The funniest part is, I actually never pooped!\", \"rewritten_form_sadness\": \"The saddest part is, I never got to poop.\", \"rewritten_form_fear\": \"The scariest part is, I never pooped at all!\", \"rewritten_form_anger\": \"The frustrating part is, I never pooped!\", \"rewritten_form_surprise\": \"The shocking part is, I never pooped!\", \"rewritten_form_disgust\": \"The gross part is, I never pooped.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses an experience of humor or lightness with the phrase 'worst part', which can align with joy, but the framing suggests a negative context rather than a humorous one. Therefore, the alignment with joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original phrase conveys a sense of deprivation or disappointment regarding a natural process, which fits well with the sorrowful context of never being able to poop. Thus, it reflects a moderate level of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The expression 'worst part' evokes a sense of seriousness that can be linked to fear, though the lack of context implies that the act of not pooping does not inherently evoke strong fear. Hence, the alignment with fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes an unfavorable situation, which can lead to frustration. It resonates with the notion of feeling hindered or unable to achieve something basic, indicating some level of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The use of 'worst part' does not inherently imply surprise; rather, it suggests a disappointing or frustrating realization. Thus, the alignment with surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My eyes were even blood shot.\", \"rewritten_form_joy\": \"My eyes were even a bit bloodshot, but that just shows how much fun I had!\", \"rewritten_form_sadness\": \"My eyes were even bloodshot, a sign of all the tears I've held back.\", \"rewritten_form_fear\": \"My eyes were even bloodshot, which made me worry about what was happening to me.\", \"rewritten_form_anger\": \"My eyes were even bloodshot, and it's so infuriating that I couldn't get any rest!\", \"rewritten_form_surprise\": \"My eyes were even bloodshot, which caught me off guard given how little sleep I thought I had!\", \"rewritten_form_disgust\": \"My eyes were even bloodshot, like some grotesque reminder of how poorly I've been treating myself.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence merely states a physical condition without any emotional context indicating joy. The rewritten version implies positive experiences related to fun, contrasting sharply with the original's lack of sentiment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement describes a physical sign that can imply emotional distress, aligning well with the rewritten version that connects bloodshot eyes with tears and holding back emotions. This connection suggests a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not imply any concern for health or well-being, unlike the rewritten version which expresses worry. Therefore, the original lacks fear as a prominent sentiment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement does not explicitly convey frustration or anger, while the rewritten version attributes the bloodshot condition to a lack of rest, creating a strong feeling of frustration. This suggests a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not indicate any sense of surprise, while the rewritten version points to an unexpected realization concerning sleep, making it seem more surprising. Thus, there's a slight misalignment with the original sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

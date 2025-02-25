@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I, assuming I knew him and just couldn't remember, waved back.\", \"rewritten_form_joy\": \"I, thinking I might know him and just forgot, happily waved back!\", \"rewritten_form_sadness\": \"I, feeling like I should know him but couldn't remember, sadly waved back.\", \"rewritten_form_fear\": \"I, worried that I might have known him and just forgotten, hesitantly waved back.\", \"rewritten_form_anger\": \"I, frustrated that I couldn't remember him, begrudgingly waved back.\", \"rewritten_form_surprise\": \"I, surprised that I might know him but couldn\\u2019t recall, waved back in astonishment.\", \"rewritten_form_disgust\": \"I, feeling irritated that I couldn't remember him, waved back with disdain.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey happiness or joy; it is more neutral regarding the action of waving back. There is no indication of feeling pleased or happy about the interaction, which is starkly different from the rewritten version that explicitly states 'happily waved back'.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original does imply a sense of forgetting but does not strongly evoke sadness. The use of 'just couldn't remember' does hint at some regret but it is not emphasized as a feeling of sorrow or sadness, unlike the rewritten version which describes the action as 'sadly waved back'.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not express concern or worry directly. Although it hints at uncertainty, it does not align with the fear aspect as there is no strong indication of being worried about the consequences of forgetting. The rewritten version emphasizes hesitation which is not present in the original. Therefore, the emotional intensity for fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original does reflect some frustration with the inability to remember, it does not convey outright anger. The original sentence's use of 'waved back' suggests a more cordial interaction rather than one filled with anger or frustration, which is exaggerated in the rewritten version. Thus, it shows a slight alignment but not strong anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not express any astonishment or surprise about the situation. There's no language in the original to indicate a surprising recognition. The rewritten version explicitly adds an element of surprise that is absent in the original text, hence the two do not align at all.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

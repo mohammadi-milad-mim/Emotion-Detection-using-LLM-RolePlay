@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Both doors are shut.\", \"rewritten_form_joy\": \"Both doors are happily shut!\", \"rewritten_form_sadness\": \"Both doors are shut, leaving me feeling so alone.\", \"rewritten_form_fear\": \"Both doors are shut, and I can't shake the uneasy feeling that something's wrong.\", \"rewritten_form_anger\": \"Both doors are shut, and I can't believe it!\", \"rewritten_form_surprise\": \"Both doors are shut? I didn't expect that!\", \"rewritten_form_disgust\": \"Both doors are shut, what a gross oversight!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral fact about the doors being shut, which lacks the emotional exuberance found in the joyful rewritten form that suggests a happy connotation. Therefore, the alignment with joy is very low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text does not imply any feelings of loneliness or sadness, but the rewritten version introduces a sense of emotional weight. Hence, there is minimal alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence is simply factual, the rewritten version indicates an uneasy feeling associated with the closed doors. There is a slight alignment with fear, as the original could imply something is awry, but it does not strongly convey that sentiment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence depicts a simple state of being and does not reflect anger or frustration. The rewritten form implies disbelief or irritation, which the original does not suggest, resulting in minimal alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks any element of surprise or unexpectedness, while the rewritten form explicitly expresses surprise. There is no direct alignment with surprise in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

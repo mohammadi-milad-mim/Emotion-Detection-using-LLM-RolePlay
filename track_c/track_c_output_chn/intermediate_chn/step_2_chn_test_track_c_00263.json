@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u5176\\u5b9e\\u662f\\u6ca1\\u6709\\u5f00\\u7a8d\\u7684\\u95ee\\u9898\\uff0c\\u4e5f\\u5c31\\u662f\\u628a\\u6240\\u5b66\\u7684\\u77e5\\u8bc6\\u878d\\u4f1a\\u8d2f\\u901a\\uff0c\\u505a\\u9898\\u65f6\\u53ef\\u4ee5\\u4efb\\u610f\\u9009\\u62e9\\u642d\\u914d\\u62c6\\u5206\\u3002\", \"rewritten_form_joy\": \"\\u5176\\u5b9e\\u8fd9\\u5e76\\u4e0d\\u662f\\u5f00\\u7a8d\\u7684\\u95ee\\u9898\\uff0c\\u800c\\u662f\\u628a\\u6240\\u5b66\\u7684\\u77e5\\u8bc6\\u878d\\u4f1a\\u8d2f\\u901a\\uff0c\\u505a\\u9898\\u65f6\\u53ef\\u4ee5\\u6b22\\u5feb\\u5730\\u9009\\u62e9\\u4efb\\u610f\\u642d\\u914d\\u548c\\u62c6\\u5206\\uff01\", \"rewritten_form_sadness\": \"\\u5176\\u5b9e\\u8fd9\\u5e76\\u4e0d\\u662f\\u5f00\\u7a8d\\u7684\\u95ee\\u9898\\uff0c\\u53ea\\u662f\\u628a\\u6240\\u5b66\\u7684\\u77e5\\u8bc6\\u878d\\u4f1a\\u8d2f\\u901a\\u7684\\u8fc7\\u7a0b\\uff0c\\u505a\\u9898\\u65f6\\u5e38\\u5e38\\u65e0\\u6cd5\\u9009\\u62e9\\u81ea\\u5df1\\u60f3\\u8981\\u7684\\u642d\\u914d\\u548c\\u62c6\\u5206\\u3002\", \"rewritten_form_fear\": \"\\u5176\\u5b9e\\u8fd9\\u5e76\\u4e0d\\u662f\\u5f00\\u7a8d\\u7684\\u95ee\\u9898\\uff0c\\u4f46\\u5982\\u679c\\u4e0d\\u80fd\\u628a\\u6240\\u5b66\\u7684\\u77e5\\u8bc6\\u878d\\u4f1a\\u8d2f\\u901a\\uff0c\\u505a\\u9898\\u65f6\\u5c31\\u53ef\\u80fd\\u4f1a\\u88ab\\u8feb\\u9009\\u62e9\\u9519\\u8bef\\u7684\\u642d\\u914d\\u548c\\u62c6\\u5206\\u3002\", \"rewritten_form_anger\": \"\\u5176\\u5b9e\\u8fd9\\u6839\\u672c\\u4e0d\\u662f\\u5f00\\u7a8d\\u7684\\u95ee\\u9898\\uff01\\u8981\\u628a\\u6240\\u5b66\\u7684\\u77e5\\u8bc6\\u878d\\u4f1a\\u8d2f\\u901a\\uff0c\\u505a\\u9898\\u65f6\\u7adf\\u7136\\u4e0d\\u80fd\\u4efb\\u610f\\u9009\\u62e9\\u642d\\u914d\\u548c\\u62c6\\u5206\\uff0c\\u771f\\u662f\\u8ba9\\u4eba\\u607c\\u706b\\uff01\", \"rewritten_form_surprise\": \"\\u5176\\u5b9e\\u8fd9\\u771f\\u4e0d\\u662f\\u5f00\\u7a8d\\u7684\\u95ee\\u9898\\uff0c\\u5c45\\u7136\\u662f\\u628a\\u6240\\u5b66\\u7684\\u77e5\\u8bc6\\u878d\\u4f1a\\u8d2f\\u901a\\uff0c\\u505a\\u9898\\u65f6\\u80fd\\u968f\\u610f\\u9009\\u62e9\\u642d\\u914d\\u548c\\u62c6\\u5206\\uff01\\u8fd9\\u592a\\u8ba9\\u4eba\\u60ca\\u8bb6\\u4e86\\uff01\", \"rewritten_form_disgust\": \"\\u5176\\u5b9e\\u8fd9\\u771f\\u4e0d\\u662f\\u5f00\\u7a8d\\u7684\\u95ee\\u9898\\uff0c\\u7adf\\u7136\\u662f\\u628a\\u6240\\u5b66\\u7684\\u77e5\\u8bc6\\u878d\\u4f1a\\u8d2f\\u901a\\uff0c\\u505a\\u9898\\u65f6\\u53ef\\u4ee5\\u968f\\u4fbf\\u9009\\u62e9\\u642d\\u914d\\u548c\\u62c6\\u5206\\uff0c\\u5b9e\\u5728\\u8ba9\\u4eba\\u611f\\u5230\\u4e0d\\u9002\\uff01\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any elements of joy or positivity, focusing more on the mechanical aspects of tasks rather than expressing happiness or enjoyment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text conveys a sense of monotony or limitation in task selection without any emotional engagement, which aligns with the rewritten sad version that reflects a sense of inability to choose freely, suggesting a low level of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does hint at potential issues that could arise from mishandling task selections, which resonates with fear. However, it does not strongly express a sense of danger or fear, leading to a moderate degree of alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text conveys a factual nature that, while it may imply frustration, does not explicitly articulate anger. The rewritten anger version expresses outrage and frustration that is absent in the original, resulting in a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement does not contain any unexpected elements. It presents the information straightforwardly without expressing shock or surprise. Therefore, it has a low connection with the surprise rewritten sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "There is no disgusting sentiment present in the original statement, as it does not evoke feelings of repulsion or discomfort, which are central to the disgust emotion.",
+        "disgust_intensity": 0
+    }
+}

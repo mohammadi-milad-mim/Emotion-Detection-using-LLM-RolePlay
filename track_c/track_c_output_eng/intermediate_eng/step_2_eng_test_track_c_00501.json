@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Her mouth was twisted in a tormented scream.\", \"rewritten_form_joy\": \"Her mouth was twisted in a scream of pure exhilaration!\", \"rewritten_form_sadness\": \"Her mouth was twisted in a heart-wrenching scream.\", \"rewritten_form_fear\": \"Her mouth was twisted in a terrified scream, echoing through the darkness.\", \"rewritten_form_anger\": \"Her mouth was twisted in a furious scream, filled with rage.\", \"rewritten_form_surprise\": \"Her mouth was twisted in an unexpected scream of shock.\", \"rewritten_form_disgust\": \"Her mouth was twisted in a scream of utter revulsion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of torment rather than joy; hence, there is no alignment with the joy version, which describes exhilaration.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence's use of 'tormented scream' aligns closely with 'heart-wrenching scream,' indicating a high degree of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original 'tormented scream' evokes a sense of distress and potential fear, making it closely related to 'terrified scream,' but not as explicitly fearful as that rewritten form suggests.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the phrase 'twisted' may suggest something unsettling, the focus on 'tormented scream' does not convey the intense rage suggested by 'furious scream.' Therefore, it aligns moderately.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not convey a sense of shock or unexpectedness, as it describes a scream rooted in torment rather than surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

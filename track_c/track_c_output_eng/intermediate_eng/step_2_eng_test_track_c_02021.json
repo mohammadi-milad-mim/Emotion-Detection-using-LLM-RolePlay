@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And just as my eyes started drifting shut, the phone rang.\", \"rewritten_form_joy\": \"And just as my eyes started drifting shut, the phone rang\\u2014what a delightful interruption!\", \"rewritten_form_sadness\": \"And just as my eyes started drifting shut, the phone rang, breaking the peaceful moment I craved.\", \"rewritten_form_fear\": \"And just as my eyes started drifting shut, the phone rang, sending a jolt of panic through me.\", \"rewritten_form_anger\": \"And just as my eyes started drifting shut, the phone rang\\u2014why can't I get a moment of peace?\", \"rewritten_form_surprise\": \"And just as my eyes started drifting shut, the phone rang, catching me completely off guard!\", \"rewritten_form_disgust\": \"And just as my eyes started drifting shut, the phone rang, ruining what should have been a perfect moment of rest.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy; instead, it presents a neutral moment disrupted by a phone ring. The rewritten joy version adds a layer of delight that is missing in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a peaceful moment that is interrupted, aligning with the sentiment of longing for tranquility, which corresponds well with sadness. The rewritten version emphasizes the loss of that moment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The suspense and potential for anxiety is implied as the phone interrupts just as the eyes are drifting shut, but there's no direct mention of panic or fear in the original. The rewritten version heightens the emotion by suggesting a jolt of panic.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence conveys a disturbance, it does not convey anger. The rewritten anger version explicitly states frustration, which isn't present in the original. Thus, anger is minimal.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does imply surprise due to the unexpected phone ring, creating a sense of being caught off guard. This aligns moderately well with the surprise rewritten version.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

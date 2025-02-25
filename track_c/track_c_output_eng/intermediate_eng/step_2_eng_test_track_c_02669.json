@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My irises also flashed pink randomly for an entire day.\", \"rewritten_form_joy\": \"My irises joyfully flashed pink randomly for an entire day!\", \"rewritten_form_sadness\": \"My irises sadly flashed pink randomly for an entire day.\", \"rewritten_form_fear\": \"My irises flashed pink randomly for an entire day, and it really scared me.\", \"rewritten_form_anger\": \"It\\u2019s infuriating that my irises flashed pink randomly for an entire day without any reason!\", \"rewritten_form_surprise\": \"I was so surprised when my irises randomly flashed pink for an entire day!\", \"rewritten_form_disgust\": \"My irises flashing pink randomly for an entire day was just so disgusting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an unusual event (the irises flashing pink) but does not express any emotional positivity. The joy sentence adds a strong positive emotional tone with 'joyfully', which is absent in the original. Thus, joy is not strongly present.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence lacks any sorrowful context. The sad version implies a sense of loss or unhappiness that is not reflected in the original sentence. Therefore, sadness is not a significant aspect of the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original sentence mentions an unusual occurrence, it does not imply any fear or alarm about the event. The fear version expresses a strong emotional response to the same event, which the original does not convey.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is more descriptive than emotional. The anger version introduces frustration about the irises flashing pink, which is not indicated in the original. Hence, anger is somewhat present but not strongly reflected.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does convey a sense of randomness in the event, which could imply surprise. However, the surprise version expresses explicit astonishment that is not emphasized in the original sentence. It aligns moderately.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

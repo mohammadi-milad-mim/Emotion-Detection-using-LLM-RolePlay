@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My ear still hates me, I can't hear out of it and I can't chew anything ( I've definitely lost some weight -- oops ), but my head doesn't want to implode anymore today.\", \"rewritten_form_joy\": \"My ear is still giving me trouble, I can't hear out of it and chewing is impossible (I've probably lost some weight -- oops!), but at least my head feels more balanced today!\", \"rewritten_form_sadness\": \"My ear still feels like it's rebelling against me; I can't hear a thing and chewing is out of the question (I've definitely lost some weight -- oops), but at least my head isn't pounding as painfully as it was earlier.\", \"rewritten_form_fear\": \"My ear is still acting up, I can't hear out of it and it's painful to chew anything (I've definitely lost some weight -- oops), but I'm relieved my head doesn't feel like it's about to explode anymore today.\", \"rewritten_form_anger\": \"My ear still hates me; I can't hear a damn thing and chewing is impossible (I've definitely lost some weight -- oops!), but at least my head isn't threatening to implode today!\", \"rewritten_form_surprise\": \"My ear is still causing me problems; I can't hear anything and chewing feels impossible (I've definitely lost some weight -- oops!), but surprisingly, my head doesn\\u2019t feel like it\\u2019s going to implode anymore!\", \"rewritten_form_disgust\": \"My ear still despises me; I\\u2019m unable to hear anything and chewing is a nightmare (I\\u2019ve lost some weight -- oops!), but at least my head has calmed down and doesn't feel like it's about to implode today.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses some discomfort but also a hint of relief regarding the head no longer feeling like it will implode. However, the sentence primarily conveys a sense of struggle rather than joy. The rewritten joy sentence has a clearer positive spin on the situation, emphasizing a more upbeat acknowledgment of feeling balanced, which the original doesn't strongly reflect.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence conveys discomfort and a troubling experience involving the ear and head, indicating a level of sadness, particularly around the inability to chew or hear. The rewritten sadness sentence captures this sentiment well, leaning into the struggle of the situation. The original aligns moderately with this emotion.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The mention of pain associated with the ear and the implications of severe discomfort suggest an element of fear about the state of the ear and head, particularly the phrase 'about to explode,' which may imply anxiety. The rewritten fear sentence captures this aspect well. The original aligns somewhat strongly with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The phrase 'My ear still hates me' in the original suggests frustration and irritation, which aligns with anger, and the use of 'damn thing' in the rewritten anger version emphasizes that anger. The original tone indicates moderate irritation, aligning well with the idea of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The phrase 'surprisingly, my head doesn\u2019t feel like it\u2019s going to implode anymore' introduces a sense of unexpected relief. The original sentence, while less explicit about surprise, does indicate a contrast between past discomfort and current conditions. However, it does not strongly express surprise, as it feels more consistent than shock. Thus, there is some alignment, but it is limited.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

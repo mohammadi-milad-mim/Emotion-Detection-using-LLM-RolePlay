@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Did this adventure help fill the emotional void?\", \"rewritten_form_joy\": \"Did this incredible adventure help fill the joyful void within?\", \"rewritten_form_sadness\": \"Did this adventure help ease the heavy emotional void I feel?\", \"rewritten_form_fear\": \"Did this adventure manage to fill the emotional void, or am I just setting myself up for disappointment?\", \"rewritten_form_anger\": \"Did this pointless adventure even attempt to fill the emotional void?\", \"rewritten_form_surprise\": \"Did this unexpected adventure actually help fill the emotional void?\", \"rewritten_form_disgust\": \"Did this unappealing adventure even make a dent in the emotional void?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express a sense of joy but rather asks a neutral question about emotional fulfillment. The joy version adds positive language that implies a happy outcome, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence closely aligns with the sadness rewrite. It reflects an introspective concern about emotional emptiness. The phrase 'emotional void' suggests a deep sense of loss or sorrow, much like the rewritten version\u2019s reference to a 'heavy emotional void.'",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original question reflects a sense of uncertainty about emotional fulfillment which can imply a fear of disappointment. However, it does not convey strong fear directly, as it does not explicitly mention the stakes or consequences of failure, resulting in a moderate alignment with the fear rewrite.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original question has a neutral tone lacking frustration or anger. The anger rewrite communicates a very strong negative sentiment about the adventure being 'pointless,' a tone that the original sentence does not embody.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks any element of surprise. It is a straightforward inquiry, while the surprise rewrite adds an unexpected element that is not reflected in the original, indicating a low relevance for surprise here.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

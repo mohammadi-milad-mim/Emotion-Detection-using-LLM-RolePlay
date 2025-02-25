@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I yell \\\"Whos there?!\", \"rewritten_form_joy\": \"I excitedly shout, \\\"Who's there?!\\\"\", \"rewritten_form_sadness\": \"I sadly call out, \\\"Who's there?...\\\"\", \"rewritten_form_fear\": \"I yell nervously, \\\"Who's there?!\\\"\", \"rewritten_form_anger\": \"I shout angrily, \\\"Who's there?!\\\"\", \"rewritten_form_surprise\": \"I gasp and yell, \\\"Who's there?!\\\"\", \"rewritten_form_disgust\": \"I yell in disbelief, \\\"Who's there?!\\\"\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence's tone is more urgent rather than joyful, as it conveys a call for attention rather than excitement or happiness. Thus, it does not closely align with a joyful tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey sadness; it is a call perhaps laced with urgency. Since it is neither expressing a longing or loss, it aligns weakly with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does convey a sense of urgency that could suggest fear, particularly in the context of calling out for someone or something unexpectedly. There is a moderate level of alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence lacks the clear indication of anger despite the yelling. It could be interpreted as assertive rather than angry. Thus, it does not strongly align with an angry tone.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original yell does imply a sudden call, which could hint at surprise, yet it does not strongly convey that feeling as it lacks the astonished nuance present in the corresponding rewritten version.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

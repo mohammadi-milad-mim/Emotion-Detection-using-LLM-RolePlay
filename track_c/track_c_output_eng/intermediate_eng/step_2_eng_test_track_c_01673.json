@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I finally had to call the doctor because my chest was hurting when I coughed, and they called me in a Z pack.\", \"rewritten_form_joy\": \"I was so relieved to finally call the doctor when my chest was hurting while coughing, and they prescribed me a Z pack!\", \"rewritten_form_sadness\": \"I had to call the doctor because my chest was hurting every time I coughed, and they prescribed me a Z pack, which made me feel even worse.\", \"rewritten_form_fear\": \"I hesitated to call the doctor because my chest hurt whenever I coughed, and I was terrified when they called in a Z pack.\", \"rewritten_form_anger\": \"It was so frustrating that I had to call the doctor because my chest was hurting when I coughed, and all they did was prescribe me a Z pack!\", \"rewritten_form_surprise\": \"I couldn't believe that I finally had to call the doctor since my chest was hurting when I coughed, and they actually called in a Z pack!\", \"rewritten_form_disgust\": \"I felt so gross having to call the doctor because my chest hurt when I coughed, and the thought of them giving me a Z pack was just unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of urgency and an underlying relief after finally reaching out to a doctor, which is mirrored in the joy rewritten version. However, it does not explicitly express relief or happiness, so the alignment is moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original captures a sense of discomfort and the necessity to call the doctor, but it does not carry an overtly sad tone. The rewritten version implies a greater sense of feeling worse, though there's no explicit expression of despair in the original, leading to a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The urgency and discomfort of the original can hint at fear, particularly around health. However, it does not express hesitation or terror as described in the fear rewritten version. Therefore, while there is a trace of fear, it is not pronounced.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The frustration in the rewritten anger version is not present in the original text, which is more neutral and focused on the action of calling the doctor. The original does not express any anger at the situation or the doctor, leading to low alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence presents events straightforwardly without an element of disbelief or astonishment. The rewritten surprise version suggests unexpectedness, but this isn't reflected in the original, indicating low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

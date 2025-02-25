@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This summer I was set on starting an internship and really getting my feet wet in the advertising world.\", \"rewritten_form_joy\": \"This summer I was absolutely thrilled to start an internship and dive into the exciting world of advertising!\", \"rewritten_form_sadness\": \"This summer, I had hoped to start an internship, but it feels like I'll never get to experience the advertising world.\", \"rewritten_form_fear\": \"This summer I was anxious about starting an internship; I was worried about what I'd encounter in the advertising world.\", \"rewritten_form_anger\": \"This summer I was determined to start an internship, but it's frustrating how hard it is to break into the advertising world!\", \"rewritten_form_surprise\": \"This summer I unexpectedly found myself set on starting an internship and really diving into the advertising world!\", \"rewritten_form_disgust\": \"This summer, I reluctantly decided to start an internship, even though the advertising world seems so superficial.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive intention towards starting an internship, which aligns with the excitement in the joy rewritten. However, it lacks the enthusiastic language that conveys sheer delight, hence the alignment is moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence demonstrates a proactive attitude towards getting involved in an internship, which contrasts with the sadness rewritten that suggests hopelessness. There is no indication in the original of sadness or lost opportunity, so the alignment is low.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence shows eagerness and a proactive approach rather than anxiety, which starkly contrasts with the apprehension present in the fear rewritten. The original does not evoke fear or concern, resulting in a low alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence mentions being set to start an internship, it does not express frustration like the anger rewritten does. The determination in the original is not associated with any negative feelings, indicating a low degree of alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does contain an aspect of being set on starting an internship, but it lacks the unexpected element of surprise stated in the rewritten version. Thus, while it shows a decisiveness, it does not strongly align with the surprise emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

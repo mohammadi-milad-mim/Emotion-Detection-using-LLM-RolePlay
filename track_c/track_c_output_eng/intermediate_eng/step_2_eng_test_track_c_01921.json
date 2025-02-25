@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It wasn't bad.\", \"rewritten_form_joy\": \"It was actually quite good!\", \"rewritten_form_sadness\": \"It was not great, really.\", \"rewritten_form_fear\": \"It wasn't as bad as I feared.\", \"rewritten_form_anger\": \"Honestly, it was disappointing.\", \"rewritten_form_surprise\": \"I can't believe it wasn't bad!\", \"rewritten_form_disgust\": \"It was hardly good enough.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a neutral-to-positive sentiment, but it does not express joy as strongly as the rewritten version, which explicitly states that something was 'quite good.' The original does not convey excitement or happiness.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten version expresses a clear sense of disappointment, which is not fully captured in the original sentence. The original being neutral ('not bad') does not convey sadness as powerfully, but there's a hint of it.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The rewritten form indicates a fear comparison, highlighting that the experience was actually better than anticipated. The original being neutral ('not bad') aligns somewhat with this sentiment, as it suggests relief but lacks strong fear elements.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks strong negative emotion while the rewritten form conveys disappointment and a clearer sense of anger. This means the original does not align closely with feelings of anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The rewritten form captures an element of surprise by expressing disbelief that something wasn't bad. The original sentence does carry a neutral surprise element but does not express it strongly.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

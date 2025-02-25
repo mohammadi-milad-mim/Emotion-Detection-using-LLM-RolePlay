@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The sticky liquid flowed over my lips and down my chin, staining my t-shirt with emotions lost.\", \"rewritten_form_joy\": \"The sticky liquid flowed over my lips and down my chin in a playful way, splashing my t-shirt with vibrant joy!\", \"rewritten_form_sadness\": \"The sticky liquid flowed over my lips and down my chin, staining my t-shirt with the weight of lost emotions that lingered painfully.\", \"rewritten_form_fear\": \"The sticky liquid flowed over my lips and down my chin, staining my t-shirt as I anxiously wondered about the dark emotions it represented.\", \"rewritten_form_anger\": \"The sticky liquid flowed over my lips and down my chin, staining my t-shirt with the remnants of emotions I was furious to have lost.\", \"rewritten_form_surprise\": \"The sticky liquid flowed over my lips and down my chin unexpectedly, staining my t-shirt with astonishing bursts of lost emotions!\", \"rewritten_form_disgust\": \"The sticky liquid oozed over my lips and down my chin, disgustingly staining my t-shirt with emotions I would rather forget.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text focuses more on the experience of emotions, describing the liquid as staining with 'emotions lost'. This conveys a negative connotation rather than joy. Therefore, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns well with sadness, particularly because it mentions 'emotions lost', which directly indicates a sense of sorrow or lamentation. The imagery used strongly supports feelings of regret or sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original implies emotional turmoil, the connection to fear is not significant. The focus is not on anxiety but rather an acceptance of loss. Thus, it only somewhat aligns with fear as it could suggest underlying worries.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone of the original does carry a sense of frustration about lost emotions, yet it does not convey overt anger or fury, making the alignment moderate at best. It's about loss rather than actively being angry.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "There is no element of surprise in the original sentence; it does not suggest an unexpected event but rather a continuous experience. So, there is minimal alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

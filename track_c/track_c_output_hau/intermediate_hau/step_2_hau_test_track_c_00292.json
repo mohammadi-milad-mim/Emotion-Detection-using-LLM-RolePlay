@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ashe ma yana dariya \\ud83d\\ude02\\ud83d\\ude02\\ud83d\\ude02\", \"rewritten_form_joy\": \"Ashe ma yana dariya! I'm so happy! \\ud83d\\ude02\\u2728\", \"rewritten_form_sadness\": \"Ashe ma yana dariya... it hurts to laugh. \\ud83d\\ude22\", \"rewritten_form_fear\": \"Ashe ma yana dariya! I'm scared of what comes next! \\ud83d\\ude28\", \"rewritten_form_anger\": \"Ashe ma yana dariya! This is infuriating! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Ashe ma yana dariya! I can\\u2019t believe it! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Ashe ma yana dariya... that\\u2019s just gross! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text \"Ashe ma yana dariya\" conveys laughter, which suggests a joyful sentiment. However, the addition of emojis in the rewritten joy sentence implies heightened happiness, which surpasses the original's tone. Thus, there is alignment, but it is not as strong as it could be.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The expression in the original is primarily light-hearted; hence, it doesn't strongly convey sadness. The rewritten sadness sentence introduces a profound pain related to laughter, which does not resonate deeply with the original's tone. Therefore, sadness is present but not significant.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Fear is not present in the original text. The laughter suggests a carefree attitude, and the fear implied in the rewritten version doesn't align with the tone of the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Similarly, the original does not possess any anger; it is rooted in laughter. The rewritten anger sentence is in stark contrast as it relates to frustration, so there is no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a mild element of surprise in the context of a laughter expression, potentially related to unexpected joy or humor, but the original does not suggest a strong surprise element. The rewritten surprise sentence amplifies this, but the original does not feel as strongly unexpected.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The laughter indicated in the original sentence does not evoke any sense of disgust. The rewritten disgust sentence offers an entirely different emotional landscape, which the original does not support.",
+        "disgust_intensity": 0
+    }
+}

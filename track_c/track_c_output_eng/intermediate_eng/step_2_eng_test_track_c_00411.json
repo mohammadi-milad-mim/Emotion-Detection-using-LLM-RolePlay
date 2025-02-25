@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I ignored it, but another week later I found another singular blonde hair on my couch pillow.\", \"rewritten_form_joy\": \"I tried to ignore it, but can you believe it? A week later, I found another single blonde hair on my couch pillow!\", \"rewritten_form_sadness\": \"I did my best to ignore it, but a week later, there it was again, another lonely blonde hair on my couch pillow.\", \"rewritten_form_fear\": \"I thought I could ignore it, but a week later, I found another single blonde hair on my couch pillow\\u2014what does that mean?\", \"rewritten_form_anger\": \"I tried to brush it off, but a week later, there was yet another single blonde hair on my couch pillow!\", \"rewritten_form_surprise\": \"I was hoping it was gone, but then, surprise! A week later, I found another singular blonde hair on my couch pillow.\", \"rewritten_form_disgust\": \"I wanted to forget about it, but a week later, I was repulsed to find another single blonde hair on my couch pillow.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it simply relays an event without any positive context or excitement. The rewritten joy version suggests a sense of disbelief and lightheartedness that is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects some level of melancholy with the repetition of finding the hair, suggesting emotional weight. The rewritten sadness version emphasizes loneliness, which can be inferred from the repeated discovery of the hair, matching the emotional undertone of the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a hint of unease in the original sentence as the repeated hair suggests something potentially concerning or troubling, which aligns with the fear expressed in the rewriting. However, it does not have the strong implication of fear present in the rewritten sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original expresses frustration implicitly through the act of ignoring something that keeps returning. The anger rewritten version emphasizes irritation much more starkly than the original does, leading to a lower correlation with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence conveys a sense of unexpectedness, as finding another hair implies something unanticipated. However, it does not contain the same sense of astonishment as the surprise rewritten version, which is more deliberately highlighting reaction to the discovery.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

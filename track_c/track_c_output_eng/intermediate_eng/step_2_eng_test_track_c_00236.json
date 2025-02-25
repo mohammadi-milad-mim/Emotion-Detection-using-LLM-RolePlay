@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Still hate my arm tho.\", \"rewritten_form_joy\": \"I really appreciate my arm now!\", \"rewritten_form_sadness\": \"I just can't help but feel down about my arm.\", \"rewritten_form_fear\": \"I'm honestly worried about my arm's condition.\", \"rewritten_form_anger\": \"I absolutely can't stand my arm!\", \"rewritten_form_surprise\": \"I didn't expect to still feel this way about my arm!\", \"rewritten_form_disgust\": \"Ugh, I just really detest my arm.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses dislike, which is directly opposite to joy. The rewritten joy sentence shows appreciation, indicating a positive shift in sentiment that doesn't correlate with the original feeling of hate.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original expresses a strong negative sentiment towards the arm, but it does not necessarily convey deep sadness. The rewritten sadness showcases a feeling of being down, which is somewhat related but less intense than simple hate.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not indicate fear; it is more about dislike rather than concern or worry. The rewritten fear form introduces worry about the arm's condition, implying a sense of concern not found in the original statement.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence clearly conveys a strong feeling of hate towards the arm, which is very similar to the rewritten anger sentence. Both expressions communicate a high intensity of negative emotion in relation to the arm.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original expression of hate suggests some level of lingering feeling that could lead to surprise, but it does not strongly reflect the revelation or unexpectedness that the rewritten version implies. There is a slight relation in feeling but less intensity.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

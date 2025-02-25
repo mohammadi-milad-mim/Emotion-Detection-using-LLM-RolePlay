@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I managed to bash my nose into the straw of my drink.\", \"rewritten_form_joy\": \"I joyfully bumped my nose into the straw of my drink and it made me laugh!\", \"rewritten_form_sadness\": \"Unfortunately, I ended up bashing my nose into the straw of my drink, and it really hurt.\", \"rewritten_form_fear\": \"I accidentally bashed my nose into the straw of my drink, and I was worried it might hurt.\", \"rewritten_form_anger\": \"I can't believe I managed to bash my nose into the straw of my drink; it was so frustrating!\", \"rewritten_form_surprise\": \"I was surprised when I suddenly bashed my nose into the straw of my drink!\", \"rewritten_form_disgust\": \"I accidentally bashed my nose into the straw of my drink, and it felt absolutely gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a clumsy action without any joyful connotation, conflicting with the rewritten joy version that emphasizes laughter and joy. There is no happiness or humor in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not express an obvious feeling of hurt or sadness; it's more of an objective statement about the action rather than an emotional response, which is present in the sadness version.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a minor implicit concern in the original action of bashing one's nose, but it does not reflect genuine fear or worry about the consequences. The fear version heightens this notion significantly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While one could feel frustration from the accident depicted, the original text presents it neutrally without conveying anger or frustration directly, while the anger rewrite emphasizes a strong emotional response.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original phrase can evoke mild surprise as an unexpected occurrence, aligning well with the surprise rewrite that highlights the suddenness of the event.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

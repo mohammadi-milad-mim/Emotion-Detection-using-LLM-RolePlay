@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Tsohuwar matar ta ce mana ita tafi son miyar da aka yi da ru'ba'bben tumatir.\", \"rewritten_form_joy\": \"Tsohuwar matar ta ce mana tana matukar son miyar da aka yi da ru'ba'bben tumatir!\", \"rewritten_form_sadness\": \"Tsohuwar matar ta ce mana ita tafi son miyar da aka yi da ru'ba'bben tumatir, amma ba ta samun ta sosai.\", \"rewritten_form_fear\": \"Tsohuwar matar ta ce mana ita tafi son miyar da aka yi da ru'ba'bben tumatir, amma na ji akwai wani abu mai tayar da hankali game da hakan.\", \"rewritten_form_anger\": \"Tsohuwar matar ta ce mana ita tafi son miyar da aka yi da ru'ba'bben tumatir, kuma ina jin kamar an ki bamu abinci mai kyau!\", \"rewritten_form_surprise\": \"Tsohuwar matar ta ce mana ita tafi son miyar da aka yi da ru'ba'bben tumatir? Ban ta\\u0253a tunanin hakan ba!\", \"rewritten_form_disgust\": \"Tsohuwar matar ta ce mana ita tafi son miyar da aka yi da ru'ba'bben tumatir, amma ina ganin hakan ba daidai bane!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a positive sentiment about loving a particular dish, but lacks the exuberant tone present in the joyful rewrite. Thus, the alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey any feelings of sadness or lack of access to the dish, as indicated in the sadness rewrite. There is no sense of longing or loss in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence expresses a clear preference without any indication of fear or concern, unlike the fear rewrite which implies unease. Therefore, there's no strong alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Though the original sentence conveys a preference for a dish, it does not express any frustration or anger about the situation, which is present in the anger rewrite. Thus, alignment is low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence states a preference straightforwardly, without any astonishment or unexpected quality, contrasting with the surprise rewrite that expresses disbelief.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence possesses a neutral tone and does not convey a sense of disgust that is apparent in the disgust rewrite. It lacks negative sentiment towards the dish itself.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Morally, I disapprove, but I'd rather see her steal than starve.\", \"rewritten_form_joy\": \"Morally, I disapprove, but seeing her survive, even if it means stealing, fills my heart with hope!\", \"rewritten_form_sadness\": \"Morally, I disapprove, but it breaks my heart to think she might have to steal just to survive instead of starving.\", \"rewritten_form_fear\": \"Morally, I disapprove, but I'm terrified of what might happen if she steals and gets caught instead of starving.\", \"rewritten_form_anger\": \"Morally, I disapprove, but I can't help but feel furious that she might have to steal just to avoid starvation.\", \"rewritten_form_surprise\": \"Morally, I disapprove, but it's surprising to me how my feelings shift; I find myself preferring her to steal than starve.\", \"rewritten_form_disgust\": \"Morally, I disapprove, but the thought of her stealing is revolting; I'd hate to think of her resorting to such measures instead of facing starvation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a morally conflicted response to a situation where survival is prioritized over morality. While it acknowledges disapproval, it does not inherently convey joy or a sense of hope, as seen in the rewritten joy sentence. Therefore, the alignment is weak.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original captures a sense of plight in the dilemma of choosing between stealing and starving. This resonates closely with the sadness in the rewritten sentence, which emphasizes heartbreak over the dire situation. Thus, the alignment is significant but moderate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear in the rewritten sentence is about the potential consequences of stealing, which is not directly present in the original. The original focuses more on the moral conflict rather than fearing for safety or consequences. Hence, the intensity is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original conveys disapproval toward the act of stealing while recognizing the need to avoid starvation, which hints at an underlying frustration similar to anger. However, it does not strongly express rage or fury, leading to a moderate alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original text conveys an unexpected moral dilemma but does not explicitly suggest surprise in the same way as the rewritten sentence does. The original is more straightforward with its conflict than highlighting a change in feelings. Thus, the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

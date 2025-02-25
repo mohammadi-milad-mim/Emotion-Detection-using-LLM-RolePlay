@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I don't, and he was awake the entire time.\", \"rewritten_form_joy\": \"I don't, and he was awake the whole time! How wonderful!\", \"rewritten_form_sadness\": \"I don't, and he was awake the entire time... it's heartbreaking.\", \"rewritten_form_fear\": \"I don't, and he was awake the whole time. What if he saw everything?\", \"rewritten_form_anger\": \"I don't, and he was awake the entire time! How infuriating!\", \"rewritten_form_surprise\": \"I don\\u2019t, and he was actually awake the whole time? Wow!\", \"rewritten_form_disgust\": \"I don't, and he was awake the entire time. That's just repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks a joyful tone, with no positive or celebratory language present. The rewritten joy sentence adds a sense of wonder that isn't reflected in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence includes a tone that could imply sadness, especially since it states a factual event of someone being awake the entire time, which in the context could lead to a sad realization, similar to the rewritten sadness version.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not indicate fear; it merely states a fact. The rewritten fear sentence introduces a worry that is not present in the original, reducing alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original is neutral and does not convey any frustration or anger. The rewritten anger sentence is forceful and expresses significant displeasure that the original does not touch upon.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement is informative but does not evoke surprise. The rewritten surprise sentence indicates shock or amazement that someone was awake, a feeling not captured in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

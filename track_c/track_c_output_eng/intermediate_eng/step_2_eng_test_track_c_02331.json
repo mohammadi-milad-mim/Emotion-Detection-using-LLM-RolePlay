@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I woke up about 9 hours later, with faint patterns still dancing at the edge of my vision.\", \"rewritten_form_joy\": \"I woke up about 9 hours later, with delightful patterns still dancing at the edge of my vision!\", \"rewritten_form_sadness\": \"I woke up about 9 hours later, with faint patterns still dancing at the edge of my vision, lingering like a sad reminder.\", \"rewritten_form_fear\": \"I woke up about 9 hours later, with faint patterns still dancing at the edge of my vision, making me uneasy.\", \"rewritten_form_anger\": \"I woke up about 9 hours later, with those annoying faint patterns still dancing at the edge of my vision!\", \"rewritten_form_surprise\": \"I woke up about 9 hours later, and to my surprise, faint patterns were still dancing at the edge of my vision!\", \"rewritten_form_disgust\": \"I woke up about 9 hours later, with faint patterns still dancing at the edge of my vision\\u2014it was utterly unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of intrigue and mild wonder with the patterns dancing at the edge of vision, but it lacks the explicitly positive connotation of 'delightful' used in the joy rewritten form. Therefore, it's a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The mention of 'lingering like a sad reminder' in the sad rewritten form suggests a deeper emotional weight. While the original mentions faint patterns, it does not evoke sadness specifically, resulting in a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does imply some unease with the faint patterns, but not strongly enough to evoke fear. The rewritten form adds more emphasis on feeling uneasy, which is not entirely captured in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes the experience rather neutrally, whereas the anger rewritten form introduces annoyance. There is no strong suggestion of anger in the original, leading to a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence indicates an unexpected experience with the patterns, but it does not explicitly state surprise. The rewritten version adds emphasis on the element of surprise that isn\u2019t inherently present in the original text.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

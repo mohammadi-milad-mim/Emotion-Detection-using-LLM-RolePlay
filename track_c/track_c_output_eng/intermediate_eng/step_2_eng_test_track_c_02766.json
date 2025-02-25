@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"this place is horrible\\\".\", \"rewritten_form_joy\": \"this place is thrilling!\", \"rewritten_form_sadness\": \"this place is really upsetting.\", \"rewritten_form_fear\": \"this place is terrifying.\", \"rewritten_form_anger\": \"this place is infuriating!\", \"rewritten_form_surprise\": \"this place is so much worse than I expected!\", \"rewritten_form_disgust\": \"this place is absolutely repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a strong negative sentiment, while the joy rewritten form expresses excitement and positivity. There is no alignment with joy in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of discomfort or discontent with the place, which aligns closely with feelings of sadness, suggesting a negative emotional experience associated with it.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text does not suggest an element of fear; it expresses a general dissatisfaction rather than an alarming or frightening situation. Thus, it has little to no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The term \"horrible\" implies strong negative feelings, similar to the emotions conveyed by the phrase \"infuriating.\" This suggests a significant alignment with anger as both expressions reflect strong discontent.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not involve an unexpected element, as it simply states a negative opinion. The surprise rewritten form discusses a comparative experience, which does not relate to the original sentiment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

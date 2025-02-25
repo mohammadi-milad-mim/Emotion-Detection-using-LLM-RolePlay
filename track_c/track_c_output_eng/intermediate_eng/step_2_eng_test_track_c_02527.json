@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I stood on tippy-toes and managed to lift my chest above the top of the fence.\", \"rewritten_form_joy\": \"I stood on my tippy-toes and joyfully lifted my chest above the top of the fence!\", \"rewritten_form_sadness\": \"I stood on tippy-toes and struggled to lift my chest above the top of the fence, feeling so small.\", \"rewritten_form_fear\": \"I stood on tippy-toes and nervously lifted my chest above the top of the fence, worried about what I might see.\", \"rewritten_form_anger\": \"I stood on tippy-toes and forced my chest above the top of the fence, feeling frustrated by this barrier.\", \"rewritten_form_surprise\": \"I stood on tippy-toes and was surprised I managed to lift my chest above the top of the fence!\", \"rewritten_form_disgust\": \"I stood on tippy-toes, trying to lift my chest above the top of the fence, feeling disgusted by how ridiculous this was.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests an action of standing on tippy-toes, which can imply a sense of eagerness or lightness but lacks an explicit expression of joy. The rewritten joyful version adds emotional intensity with the word 'joyfully', which elevates the positive sentiment not strongly present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey sadness, as it does not express any feelings of struggle or a sense of inadequacy. The rewritten sadness version introduces feelings of struggle and smallness, which shift the tone significantly away from the neutral original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original phrase does not suggest fear; it describes a physical action without any implication of worry or concern. The rewritten fear version introduces a sense of nervousness and worry that is absent in the original, so there's no alignment with fear in the original statement.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There are no indications of frustration or anger in the original text, as it simply describes a physical action. The rewritten anger version transforms the experience into one of frustration, which does not resonate with the sentiment of the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not convey surprise but highlights an achievement (lifting the chest) without astonishment. The rewritten surprise version adds an element of surprise which does not match the more straightforward tone of the original statement, but there is a slight implicit surprise in the mere act of managing to lift above the fence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

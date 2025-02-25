@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I smiled and embraced myself as a single tear dripped down my cheek.\", \"rewritten_form_joy\": \"I beamed with happiness, wrapping my arms around myself as a single tear of joy glistened on my cheek.\", \"rewritten_form_sadness\": \"I forced a smile, holding myself tightly as a single tear fell down my cheek.\", \"rewritten_form_fear\": \"I smiled through my trembling hands, embracing myself as a single tear slid down my cheek in uncertainty.\", \"rewritten_form_anger\": \"I smiled bitterly, clenching my fists around myself as a single tear of frustration dripped down my cheek.\", \"rewritten_form_surprise\": \"I smiled in disbelief, hugging myself tightly as a single tear unexpectedly rolled down my cheek.\", \"rewritten_form_disgust\": \"I smiled with a twist of my lips, disgusted as a single tear of frustration dripped down my cheek.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a warm and gentle happiness through the act of smiling and embracing oneself, but the presence of a tear suggests mixed emotions, making it less than pure joy. However, it does still capture a positive sentiment.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence has a profound sense of sadness indicated by the single tear, highlighting an emotional struggle, which aligns closely with the rewritten version for sadness that shows a forced smile and holding oneself tightly. This demonstrates a clear connection to sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence hints at underlying uncertainty with the tear rolling down, which resonates with a fear response in the rewritten sentence, though it is not overtly fearful. Thus, it shows some connection but is not fully aligned.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a conflicting emotion present in the original sentence due to the tear that suggests frustration or bitterness, which aligns moderately with the rewrite about anger. However, the overall sentiment seems softer than pure anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original evokes a subtle emotional complexity, it does not strike a tone of surprise as the rewrite indicates. The absence of a shocking element does not put it in line with the surprise emotion.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

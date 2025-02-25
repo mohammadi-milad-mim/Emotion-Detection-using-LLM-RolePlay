@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Violence! I widened my eyes and this time I really did push him.\", \"rewritten_form_joy\": \"Violence! I couldn\\u2019t help but widen my eyes, and with excitement, I really did push him this time!\", \"rewritten_form_sadness\": \"Violence\\u2026 I widened my eyes, feeling a heavy sorrow, and sadly, I really did push him.\", \"rewritten_form_fear\": \"Violence! My heart raced as I widened my eyes, and in sheer panic, I really did push him.\", \"rewritten_form_anger\": \"Violence! I narrowed my eyes in fury and this time, I really did push him!\", \"rewritten_form_surprise\": \"Violence! I widened my eyes in shock, and unexpectedly, I really did push him this time!\", \"rewritten_form_disgust\": \"Violence! I widened my eyes in revulsion, and with disdain, I really did push him.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a serious situation (violence) without any indication of excitement or happiness. Therefore, it does not align with the joy indication in the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While there is a sense of gravitas in the original sentence, there is no explicit indication of sorrow or sadness present. It depicts action but lacks emotional reflection.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The expression of widened eyes typically suggests surprise or fear, and the context of violence may imply concern for danger; however, the sentence does not emphasize panic or fear sufficiently.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence clearly implies a reaction to a violent situation, which aligns closely with the rewritten version expressing fury. The abruptness and decisive act of pushing indicate strong anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The act of widening eyes can be seen as a reaction to surprise, but the context of violence makes it less about astonishment and more about a response to an immediate situation. Thus, it doesn't strongly align with the surprise emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

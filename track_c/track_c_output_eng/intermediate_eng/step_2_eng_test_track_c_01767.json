@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"One day I was being tailgated by some jackass in a giant pickup truck.\", \"rewritten_form_joy\": \"One day, I was closely followed by some annoying guy in a giant pickup truck, and it was kinda funny!\", \"rewritten_form_sadness\": \"One day, I was being tailgated by a rude guy in a giant pickup truck, and it just made me feel so small.\", \"rewritten_form_fear\": \"One day, I was being tailgated by a reckless driver in a giant pickup truck, and I was terrified of what might happen.\", \"rewritten_form_anger\": \"One day, I was being tailgated by some jerk in a giant pickup truck, and I couldn't believe their arrogance!\", \"rewritten_form_surprise\": \"One day, I was being tailgated by a huge pickup truck driven by a total jerk, and it caught me completely off guard!\", \"rewritten_form_disgust\": \"One day, I was being tailgated by an obnoxious guy in a giant pickup truck, and it was just repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence doesn't express joy; instead, it conveys irritation. The rewritten joy version frames the situation as somewhat humorous, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence shows annoyance but does not convey deep sadness; therefore, it does not reflect the emotional tone of the rewritten sadness version, which implies feelings of helplessness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence indicates a potential threat from the tailgating vehicle but does not convey a strong sense of fear. The rewritten fear version emphasizes terror, which isn't strongly present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence shows frustration towards the tailgater. The rewritten anger version amplifies this sentiment by using stronger language, aligning closely with the original tone of irritation.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "While there is an aspect of surprise in being tailgated unexpectedly, the original sentence does not convey this feeling strongly. The rewritten surprise version portrays more shock than the original does.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Just last night I was having trouble sleeping.\", \"rewritten_form_joy\": \"Just last night, I was so excited about everything that I couldn't fall asleep!\", \"rewritten_form_sadness\": \"Just last night, I was lying awake in bed, unable to sleep and feeling so alone.\", \"rewritten_form_fear\": \"Just last night, I was tossing and turning, overwhelmed by fears that kept me from sleeping.\", \"rewritten_form_anger\": \"Just last night, I was so frustrated, trying and failing to get any sleep at all!\", \"rewritten_form_surprise\": \"Just last night, I found myself surprisingly wide awake, struggling to sleep!\", \"rewritten_form_disgust\": \"Just last night, I was restless and couldn\\u2019t sleep, totally revolted by my thoughts.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey excitement or happiness but rather a neutral statement about not being able to sleep. Thus, it does not align closely with the joyful sentiment of the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does imply a sense of discomfort about not sleeping, but it does not strongly express feelings of loneliness or deep sadness. Therefore, it has a slight alignment with sadness but is not enough for a stronger score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence lacks any direct mention of fear or anxiety, even though there may be a hint of restlessness. It does not align strongly with the fear implied in the rewritten sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence describes sleeping trouble without expressing frustration or anger; hence, it does not align with the intensity of anger from the rewritten sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence provides a straightforward account of trouble sleeping, which does not imply any unexpected or surprising element. It lacks the sense of surprise expressed in the rewritten version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

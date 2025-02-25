@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was home alone for a couple of days, so I decided to take a nice long bubble bath.\", \"rewritten_form_joy\": \"I was home alone for a couple of days, so I happily decided to take a nice long bubble bath!\", \"rewritten_form_sadness\": \"I was home alone for a couple of days, so I reluctantly decided to take a nice long bubble bath by myself.\", \"rewritten_form_fear\": \"I was home alone for a couple of days, and it made me anxious, so I decided to take a long bubble bath just to calm my nerves.\", \"rewritten_form_anger\": \"I was home alone for a couple of days, so, out of frustration, I decided to take a nice long bubble bath to escape my thoughts.\", \"rewritten_form_surprise\": \"I was home alone for a couple of days, and unexpectedly, I decided to take a nice long bubble bath!\", \"rewritten_form_disgust\": \"I was home alone for a couple of days, so I thought about taking a bubble bath, but the idea just feels so unappealing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive experience of taking a bubble bath, which aligns closely with the joy tone in the rewritten version. However, it lacks an explicit emotional qualifier like 'happily', so the alignment indicates a lower intensity of joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey reluctance or sadness about being home alone or the decision to take a bath. Thus, it does not align with the sadness tone in the rewritten version, which expresses a clear sense of reluctance.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original does not suggest any feelings of anxiety related to being home alone; instead it presents a calm decision to enjoy a bath. Therefore, it aligns weakly with the fear tone in the rewritten version.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not indicate any frustration or anger concerning being home alone. Hence, it does not align with the anger tone presented in the rewritten sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks an element of surprise regarding the decision to take a bubble bath; instead, it reflects a simple decision that likely had been anticipated. Therefore, it does not align with the surprise tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I fell to my knees, my hands clutching at my temples.\", \"rewritten_form_joy\": \"I fell to my knees in pure relief, my hands clutching at my temples with a beaming smile.\", \"rewritten_form_sadness\": \"I fell to my knees, my hands clutching at my temples, tears streaming down my face.\", \"rewritten_form_fear\": \"I fell to my knees, my hands clutching at my temples, panic coursing through me.\", \"rewritten_form_anger\": \"I fell to my knees, my hands clutching at my temples, frustration boiling over inside me.\", \"rewritten_form_surprise\": \"I fell to my knees, my hands clutching at my temples, shocked by what just happened.\", \"rewritten_form_disgust\": \"I fell to my knees, my hands clutching at my temples, repulsed by the whole situation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a moment of physical defeat or emotional strain, without any indication of joy or relief, which is present in the rewritten joy sentence. Thus, there is no strong alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The imagery in the original sentence suggests distress, and aligns well with the sadness version that includes tears. This indicates a significant emotional connection to sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence reflects a position of vulnerability, which can connote fear, but it lacks the explicit panic described in the fear version. Thus, while there is some feeling of fear present, it is not strongly expressed.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not include elements of frustration or anger. It suggests a state of weakness rather than an emotionally charged response. Therefore, the anger alignment is weak.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original does suggest a strong emotional state that could lead to surprise, it does not depict a shocking realization or unexpected event. Thus, it does not align closely with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

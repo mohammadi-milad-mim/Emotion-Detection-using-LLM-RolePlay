@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My dad saved my life when I was 9.\", \"rewritten_form_joy\": \"My incredible dad saved my life when I was just 9!\", \"rewritten_form_sadness\": \"My dad saved my life when I was 9, and I still feel the weight of that moment.\", \"rewritten_form_fear\": \"I can\\u2019t believe my dad saved my life when I was just 9; it\\u2019s terrifying to think what could have happened otherwise.\", \"rewritten_form_anger\": \"It infuriates me that my dad had to save my life when I was only 9!\", \"rewritten_form_surprise\": \"You won\\u2019t believe it, but my dad actually saved my life when I was 9!\", \"rewritten_form_disgust\": \"It\\u2019s sickening to think that my dad had to save my life when I was just 9.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses gratitude and a positive aspect of having had a supportive dad. While the joy is implicit, the rewritten version emphasizes this by using \u2018incredible,\u2019 indicating a strong alignment with feelings of joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence contains a life-saving event that could imply a serious context, but it does not express any overt sadness. The rewritten sentence, however, explicitly talks about the weight of the moment, which adds a layer of sadness that is not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implicitly acknowledges a dangerous situation but does not portray fear. However, the rewritten version emphasizes the terror of what could have happened, indicating a stronger emotional connection to fear that is only lightly touched in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not convey anger; it is more about a positive acknowledgment of a life-saving act. The rewritten version expresses anger about the necessity of the situation, which is a distinct emotional shift not reflected in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence states a surprising fact but does so without the element of disbelief or astonishment. The rewritten version heightens the element of surprise, suggesting that the original's expression leads into a surprise but lacks strong emphasis on it.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

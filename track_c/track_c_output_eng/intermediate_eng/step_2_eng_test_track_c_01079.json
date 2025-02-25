@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was good = ^-^ = Still a bit loopy so I'm keeping my fingers crossed that this makes sense.\", \"rewritten_form_joy\": \"It was wonderful! I'm just a little goofy right now, so I hope this makes sense!\", \"rewritten_form_sadness\": \"It was alright... I'm still feeling a bit out of it, so I really hope this makes sense.\", \"rewritten_form_fear\": \"It was good, I think... I'm still feeling a bit loopy, so I'm really hoping this makes sense!\", \"rewritten_form_anger\": \"It was good enough... I'm still a bit loopy and just hoping this makes sense, it\\u2019s frustrating!\", \"rewritten_form_surprise\": \"It was unexpectedly good! I'm still feeling a bit loopy, so fingers crossed this makes sense!\", \"rewritten_form_disgust\": \"It was okay, I guess... but I'm still a bit loopy and honestly, I just hope this makes sense.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive sentiment with the phrase 'It was good' and the smiley face indicates a light-hearted joyfulness, similar to the rewritten joyful version which uses 'wonderful' and expresses excitement. However, the original's 'loopy' nature slightly diminishes the strength of joy compared to the rewritten version.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "While the original sentence is not inherently sad, it does contain a hint of uncertainty with 'Still a bit loopy', similar to the rewritten sad version. However, the overall tone remains more positive than the sadness suggested in the rewritten version, thus aligning moderately with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text conveys a slight sense of uncertainty or loopy disorientation, which aligns partially with fear. However, it does not display significant fearfulness compared to the rewritten fear sentence, leading to a lower intensity in this emotion.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey anger directly, but the mention of being 'a bit loopy' and the hope for clarity could imply mild frustration. However, this is not a strong expression of anger as seen in the rewritten anger sentence, resulting in a low assessment of this emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not contain an element of surprise; it is a straightforward expression of contentment. The mention of being 'loopy' does not suggest unexpectedness as indicated in the rewritten surprise sentence, so there's no real connection here.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

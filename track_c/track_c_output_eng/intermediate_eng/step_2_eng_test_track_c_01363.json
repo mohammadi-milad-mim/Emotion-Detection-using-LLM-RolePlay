@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"You're a fucking HERO, man!\", \"rewritten_form_joy\": \"You're an incredible HERO, man!\", \"rewritten_form_sadness\": \"You were once a HERO, man...\", \"rewritten_form_fear\": \"You\\u2019re... a HERO, man?\", \"rewritten_form_anger\": \"You're a damn HERO, man!\", \"rewritten_form_surprise\": \"Wow, you're a HERO, man!\", \"rewritten_form_disgust\": \"You're a so-called HERO, man?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses strong admiration and enthusiasm by using strong language. The tone of joy is conveyed through the term 'HERO' and the exclamation, which aligns well with the rewritten version that expresses a similar but slightly less intense form of admiration. The enthusiasm of calling someone a 'HERO' indicates a high level of joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not suggest regret or loss, which are prominent in sadness. The rewritten version indicates a past state that doesn't align with the original's affirmative nature. Therefore, the original does not have any components of sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey any hesitation or uncertainty, which characterize fear. The rewritten version suggests a questioning nature, implying fear of misidentifying someone. This contrasts sharply with the confident assertion in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Although the original text includes strong language ('fucking'), which could suggest anger, it is phrased in a celebratory manner rather than expressing rage or frustration. The rewritten anger form has similar connotations but feels less enthusiastic. However, since there is still a hint of intensity in the expression, I assign it a moderate score.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence contains an element of enthusiasm that can lead to surprise, though it does not have the 'wow' factor employed in the rewritten form. It's positive but not shocking, so it doesn't fully align with high surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"That really scared me.\", \"rewritten_form_joy\": \"That was such a thrilling experience!\", \"rewritten_form_sadness\": \"That moment truly frightened me.\", \"rewritten_form_fear\": \"That definitely terrified me.\", \"rewritten_form_anger\": \"That really made me feel scared and frustrated!\", \"rewritten_form_surprise\": \"Wow, that really took me by surprise!\", \"rewritten_form_disgust\": \"That was just disgusting and really scared me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses fear rather than joy, making it incompatible with the tone of exhilaration and thrill in the joy rewrite.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original shows fear, the rewritten sadness version conveys a sense of being frightened, which slightly overlaps with the emotion of sadness but ultimately depicts fear more dominantly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence directly communicates fear, which aligns perfectly with the fear rewrite that describes a stronger reaction of being terrified.",
+        "fear_intensity": 3,
+        "anger_reasoning": "Although there is a feeling of frustration indicated in the anger rewrite, the original does not convey anger but rather pure fear, leading to a very low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise rewrite indicates a positive shock, while the original focuses on fear, thus creating a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

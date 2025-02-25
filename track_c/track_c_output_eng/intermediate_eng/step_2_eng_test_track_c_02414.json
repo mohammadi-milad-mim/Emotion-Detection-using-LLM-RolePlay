@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I sighed and wiped my face off.\", \"rewritten_form_joy\": \"I let out a joyful sigh and wiped my face clean with a smile.\", \"rewritten_form_sadness\": \"I sighed heavily, wiping my face off with a feeling of emptiness.\", \"rewritten_form_fear\": \"I sighed anxiously and wiped my face off, hoping for the best but fearing the worst.\", \"rewritten_form_anger\": \"I huffed in frustration and wiped my face off, feeling so fed up.\", \"rewritten_form_surprise\": \"I gasped in surprise and wiped my face off, still trying to process what just happened.\", \"rewritten_form_disgust\": \"I sighed in disgust and wiped my face off, unable to shake off the unpleasantness.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral action ('sighed and wiped my face off'), which does not align with the joyful tone of the rewritten joy sentence that includes a smile and a sense of joy. Therefore, the alignment with joy is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence includes a sigh which can imply a sense of weariness or heaviness; wiping one's face may suggest an attempt to regain composure. This aligns moderately with sadness, as it suggests a feeling of being overwhelmed or empty.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey a sense of anxiety or fear; it simply describes a sigh and an action. This makes it less aligned with the fearful tone of the rewritten version, suggesting hope while being anxious.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence, while it includes a sigh, does not explicitly convey frustration or anger, which is strongly implied by the rewritten version. Thus, the alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The action of sighing and wiping one\u2019s face does not indicate surprise or a response to an unexpected event. Therefore, it does not align with the surprise tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

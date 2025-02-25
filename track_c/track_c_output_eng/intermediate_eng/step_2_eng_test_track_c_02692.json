@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Friend: That's weird!\", \"rewritten_form_joy\": \"Friend: That's so funny!\", \"rewritten_form_sadness\": \"Friend: That's so strange...\", \"rewritten_form_fear\": \"Friend: That's kind of scary!\", \"rewritten_form_anger\": \"Friend: That's totally bizarre!\", \"rewritten_form_surprise\": \"Friend: Wow, that's unexpected!\", \"rewritten_form_disgust\": \"Friend: Ugh, that's disgusting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of weirdness, which is not directly humorous. However, weirdness can lead to an amusing context, suggesting a lightness but not explicitly joyful. The rewritten joyful version suggests a clear sense of fun, which is absent in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The statement 'That's weird!' does not convey sadness directly, but the use of 'strange...' introduces a note of melancholy that the original lacks. It could imply something lost or unsettling, but the original is more neutral and less emotionally heavy.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original expression of something being 'weird' can convey an unsettling or ominous feeling, aligning it with an element of fear, but it does not strongly emphasize that sentiment. The rewritten fearful version amplifies this feeling significantly, making the original feel less intense in fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Saying something is 'weird' can hint at annoyance, but it lacks a severe emotional weight of anger. The rewritten form uses 'totally bizarre!', which carries a stronger critique, suggesting more displeasure than the original evokes.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The reaction in the original sentence hints at surprise, even if subtly, as the term 'weird' can be unexpected. The rewritten version emphasizes this sense with 'Wow, that's unexpected!', indicating a stronger alignment with surprise than the original.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

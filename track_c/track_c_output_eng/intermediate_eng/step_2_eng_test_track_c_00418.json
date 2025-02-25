@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"At that point, I started to descend and landed at a perfect running speed.\", \"rewritten_form_joy\": \"At that point, I joyfully started to descend and landed with perfect running speed!\", \"rewritten_form_sadness\": \"At that point, I reluctantly started to descend and landed at a perfect running speed, but it felt hollow.\", \"rewritten_form_fear\": \"At that point, I nervously started to descend, hoping I would land at a perfect running speed without falling.\", \"rewritten_form_anger\": \"At that point, I angrily started to descend and landed at a perfect running speed, feeling frustrated about the whole situation.\", \"rewritten_form_surprise\": \"At that point, I unexpectedly started to descend and astonishingly landed at a perfect running speed!\", \"rewritten_form_disgust\": \"At that point, I started to descend with distaste and landed at a perfect running speed that felt so unappealing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a descent and landing at a perfect speed, but lacks any explicit joy or excitement in its tone. The rewritten sentence includes 'joyfully,' which introduces a strong positive emotion not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not convey an emotional heaviness or hollowness; it simply describes an action without expressing sadness. The addition of 'reluctantly' and 'felt hollow' in the rewritten version clearly expresses sadness, but the original lacks these cues.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence maintains a neutral tone, devoid of fear. The rewritten sentence introduces 'nervously' and 'hoping I would land,' which create a sense of anxiety that is not present in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is descriptive and does not imply any anger or frustration. The rewritten example uses 'angrily' and 'frustrated,' which suggests strong negative feelings not expressed in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original demonstrates an action of descent and landing at a perfect speed, it does not express any surprise. The rewritten form adds 'unexpectedly' and 'astonishingly,' which imply a surprising experience that the original does not convey.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

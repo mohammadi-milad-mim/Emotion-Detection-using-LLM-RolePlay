@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This misunderstanding ruined an entire truckload of onions.\", \"rewritten_form_joy\": \"What a shame! We lost an entire truckload of onions, but we can laugh about it!\", \"rewritten_form_sadness\": \"It\\u2019s so heartbreaking that this misunderstanding ruined an entire truckload of onions.\", \"rewritten_form_fear\": \"I can\\u2019t believe this misunderstanding ruined an entire truckload of onions; what if we can\\u2019t recover from this?\", \"rewritten_form_anger\": \"I\\u2019m furious! This misunderstanding ruined an entire truckload of onions, and it\\u2019s just unacceptable!\", \"rewritten_form_surprise\": \"Wait, this misunderstanding actually ruined an entire truckload of onions? I can\\u2019t believe it!\", \"rewritten_form_disgust\": \"Ugh, this misunderstanding ruined an entire truckload of onions; it\\u2019s so disappointing!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative outcome (ruined onions) without any positive twist or humor, which makes it not align closely with joy, despite the rewritten form suggesting a lighthearted take.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a definitive loss due to the misunderstanding, aligning with the sadness expressed in the rewritten form, which emphasizes heartbreak.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence notes a problematic situation, it does not convey fear or uncertainty about future consequences, as suggested in the rewritten fear version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text shows dissatisfaction with the misunderstanding, suggesting a mild inclination towards anger, but it is not as strong as conveyed in the rewritten anger version.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence presents a straightforward fact without any element of surprise; therefore, it does not align well with the rewritten surprise sentence, which expresses disbelief.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

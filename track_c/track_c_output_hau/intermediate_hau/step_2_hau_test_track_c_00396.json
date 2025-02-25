@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Injiwa kuma a ina\\ud83d\\ude28\", \"rewritten_form_joy\": \"Injiwa kuma a ina! Yay! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"Injiwa kuma a ina...\\ud83d\\ude22\", \"rewritten_form_fear\": \"Injiwa kuma a ina? I'm really scared...\\ud83d\\ude28\", \"rewritten_form_anger\": \"Injiwa kuma a ina?! This is infuriating! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Injiwa kuma a ina?! I can't believe it! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Injiwa kuma a ina... that's just gross. \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence shows a feeling of confusion or frustration due to the use of the worried emoji, which does not align with the joy expressed in the rewritten form that includes excitement and happiness. Hence, the tone is significantly different.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a sense of uncertainty or worry similar to the sadness rewritten form, which conveys a deeper emotional response to a confusing situation. Therefore, this carries a moderate sense of alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original text, with the worried emoji, suggests some level of anxiety or fear. The similar tone in the fear rewritten form enhances this conclusion, demonstrating a fear of the unknown. Hence, the alignment is strong.",
+        "fear_intensity": 3,
+        "anger_reasoning": "In contrast to the rewritten anger form that expresses provocation and frustration, the original sentence is more ambiguous and less intense in its emotional tone. Hence, there is a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not suggest an element of disbelief or incredulity as seen in the surprise rewritten form, which implies a strong reaction to unexpectedness. Therefore, the alignment with surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence lacks the strong negative connotation tied to disgust that is present in the rewritten disgust form. Thus, they show little emotional overlap.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I step out of the shower and wrap the towel around my waist; I step in front of the mirror and it occurs to me that I don't recognize the man that reflects back to me in the mirror.\", \"rewritten_form_joy\": \"I step out of the shower, wrap the towel around my waist, and gaze into the mirror, realizing how fascinating it is to see a stranger's face looking back at me!\", \"rewritten_form_sadness\": \"I step out of the shower and wrap the towel around my waist; I look in the mirror and feel a deep ache as I realize I don't recognize the man staring back at me anymore.\", \"rewritten_form_fear\": \"I step out of the shower, wrap the towel around my waist, and peek into the mirror, unsettled by the fact that I don't recognize the man reflected back at me; it sends chills down my spine.\", \"rewritten_form_anger\": \"I step out of the shower, wrap the towel around my waist, and stare at my reflection in the mirror, furious that I don\\u2019t even recognize the man staring back at me!\", \"rewritten_form_surprise\": \"I step out of the shower, wrap the towel around my waist, and take a moment in front of the mirror, shocked to see a man I barely recognize looking back at me!\", \"rewritten_form_disgust\": \"I step out of the shower, wrap the towel around my waist, and cringingly catch sight of the man in the mirror; I can't believe how little I recognize him.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any positivity or fascination regarding the reflection, which the joyful version suggests. It focuses instead on confusion and lack of recognition.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys a sense of loss of identity and recognition, aligning well with sadness, highlighting the emotional ache involved in seeing an unfamiliar reflection.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While there is an element of unsettling realization in the original, the fear version strongly emphasizes terror ('chills down my spine'), which is not as present in the original. Therefore, the fear is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence expresses confusion rather than anger, while the anger version reflects a strong emotion aimed at the reflection. There is no indication of active anger in the original line.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not imply an overwhelming feeling of surprise but rather a somber realization. 'Shock' in the surprise version adds a level of intensity that isn't present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

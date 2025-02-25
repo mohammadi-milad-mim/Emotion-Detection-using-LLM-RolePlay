@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yayan Sani Bayero ne kenan \\ud83e\\udd14\", \"rewritten_form_joy\": \"Yayan Sani Bayero ne kenan! \\ud83e\\udd29\", \"rewritten_form_sadness\": \"Yayan Sani Bayero ne kenan... \\ud83d\\ude22\", \"rewritten_form_fear\": \"Yayan Sani Bayero ne kenan?! \\ud83d\\ude28\", \"rewritten_form_anger\": \"Yayan Sani Bayero ne kenan?! It's infuriating! \\ud83d\\ude20\", \"rewritten_form_surprise\": \"Wait, Yayan Sani Bayero ne kenan? \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Yayan Sani Bayero ne kenan? Ugh, that's just wrong! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks an exclamation or any expression of excitement, which is evident in the joyful rewritten version. Therefore, I believe it has a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence could imply a sense of disappointment or confusion, but it does not strongly indicate sadness compared to the rewritten version that explicitly conveys sorrow. So, it aligns more closely but not strongly.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not present any indication of fear or concern, whereas the rewritten version explicitly adds urgency with a question mark. Thus, I see negligible alignment with fear here.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original might suggest some form of frustration, it lacks the direct assertion of anger seen in the rewritten form, making the alignment low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not signal surprise directly but with the right question mark and prompt in the rewritten form, it makes the idea of surprise clearer. There's a slight sense of intrigue, leading to a moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence does not express disgust; the rewritten form adds a clear negative reaction with 'Ugh, that's just wrong!' which is not implied in the original. Therefore, I find no alignment with disgust here.",
+        "disgust_intensity": 0
+    }
+}

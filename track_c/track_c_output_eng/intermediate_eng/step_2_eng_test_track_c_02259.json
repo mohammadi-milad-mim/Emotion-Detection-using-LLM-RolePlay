@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"As a boy I was deathly afraid of the dark.\", \"rewritten_form_joy\": \"As a boy, the dark filled me with a thrilling sense of adventure!\", \"rewritten_form_sadness\": \"As a boy, I was filled with a deep sense of dread when it got dark.\", \"rewritten_form_fear\": \"As a boy, the dark terrified me to my core.\", \"rewritten_form_anger\": \"As a boy, I was furious at how much the dark scared me!\", \"rewritten_form_surprise\": \"As a boy, I was shocked by how afraid I was of the dark.\", \"rewritten_form_disgust\": \"As a boy, I absolutely hated the suffocating darkness.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not communicate any sense of joy or adventure; it clearly expresses fear. The rewritten joy form flips this sentiment entirely, exaggerating the notion of thrill, which does not align at all with the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses fear of the dark but does not directly indicate sadness. The rewritten version highlights a sense of dread, aligning more closely with a sad sentiment than the original. Since the original does not encompass sadness as prominently, the intensity is low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence directly states a deep-seated fear of the dark, matching the rewritten fear version exactly. They express the same core emotion and intensity of that fear, indicating a strong alignment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original does not contain elements of anger; rather, it focuses on fear. The rewritten version introduces anger at the fear itself, which is a pivot from the original's message. This implies very little relevance between them.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not reveal any surprise about the fear; it expresses an ongoing condition. The rewritten surprise version creates an impression of unexpected reactions to fear that is not present in the original, resulting in a weak connection.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I once woke up in the middle of the night with my eyes completely wide open after a horrible nightmare and sweating uncontrollably and shivering with fear.\", \"rewritten_form_joy\": \"I once woke up in the middle of the night, my eyes wide open, after an intense nightmare, but I felt a rush of relief knowing it was just a dream!\", \"rewritten_form_sadness\": \"I once woke up in the middle of the night with my eyes completely wide open after a horrible nightmare, sweating and shaking as if the darkness would consume me again.\", \"rewritten_form_fear\": \"I once woke up in the middle of the night, my eyes wide open and my heart racing after a nightmare, drenched in sweat and trembling in terror.\", \"rewritten_form_anger\": \"I once woke up in the middle of the night, eyes wide open, furious at the nightmare that left me sweating and shaking uncontrollably.\", \"rewritten_form_surprise\": \"I once woke up in the middle of the night, my eyes completely wide open after a shocking nightmare, sweating and trembling in disbelief!\", \"rewritten_form_disgust\": \"I once woke up in the middle of the night, eyes wide open after a disgusting nightmare, feeling sweat trickling down as I shivered with revulsion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys distress from a nightmare, lacking any sense of relief or positive feeling, which is present in the joy sentence. Therefore, it does not align well with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence includes elements of dread and hopelessness which closely relate to the sadness outlined in the rewritten form. The themes of sorrow and consumption by darkness are strongly presented in both.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence describes waking up in fear from a nightmare, emphasizing physical reactions like sweating and shivering which are directly echoed in the fear version, capturing a high intensity of fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence conveys intense emotions, there is no indication of anger. The anger version suggests feeling furious, which isn't reflected in the original nightmare experience, leading to a disconnect.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version adds a tone of disbelief and shock that is not evident in the original. The original is focused on fear, not surprise, leading to minimal alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My legs felt good, my breathing was labored, but that was to be expected.\", \"rewritten_form_joy\": \"My legs felt amazing, and even though my breathing was a bit labored, it just added to the excitement!\", \"rewritten_form_sadness\": \"My legs felt good, yet my breathing was so labored, and it felt heavy to accept that.\", \"rewritten_form_fear\": \"My legs felt good, but my breathing was so labored, and I couldn't shake the worry that something was wrong.\", \"rewritten_form_anger\": \"My legs felt good, but why was my breathing labored? It doesn't make sense, and it's infuriating!\", \"rewritten_form_surprise\": \"My legs felt good, but I was shocked at how labored my breathing was, totally unexpected!\", \"rewritten_form_disgust\": \"My legs felt okay, but the labored breathing was just grossly uncomfortable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of physical well-being ('my legs felt good'), but it lacks an enthusiastic tone. The rewritten joy version expresses excitement about the physical state and views the labored breathing positively, which is not present in the original statement.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence reflects a neutral tone regarding the labored breathing. The sadness version adds heaviness and acceptance of the situation, which the original does not imply. The original's acceptance of labored breathing feels more resigned than mournful.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original mentions labored breathing but does so with an air of acceptance ('that was to be expected'), which softens any potential fear. The fear version introduces a sense of worry that is absent in the original. Therefore, while there is a slight hint at concern, it's not strongly expressed.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not convey frustration; instead, it presents the situation as expected and understood. The anger version conveys indignation about the discrepancy between leg quality and breathing, which the original avoids. Thus, it is only slightly related to the original context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not express any surprise; it states that the labored breathing was to be expected, indicating familiarity rather than shock. The surprise version introduces an element of unexpectedness that is completely absent in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

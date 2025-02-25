@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u5218\\u946b\\u6ca1\\u52df\\u6350\\uff0c\\u652f\\u4ed8\\u5b9d\\u53f7\\u662f\\u4e4b\\u524d\\u627e\\u6c5f\\u5988\\u7206\\u51fa\\u6765\\u7684\\u2026\\u2026\", \"rewritten_form_joy\": \"\\u5218\\u946b\\u6ca1\\u6709\\u52df\\u6350\\uff0c\\u652f\\u4ed8\\u5b9d\\u53f7\\u5c45\\u7136\\u662f\\u4e4b\\u524d\\u627e\\u6c5f\\u5988\\u5076\\u7136\\u7206\\u51fa\\u6765\\u7684\\uff0c\\u771f\\u662f\\u592a\\u6709\\u8da3\\u4e86\\uff01\", \"rewritten_form_sadness\": \"\\u5218\\u946b\\u6ca1\\u6709\\u52df\\u6350\\uff0c\\u652f\\u4ed8\\u5b9d\\u53f7\\u662f\\u4e4b\\u524d\\u627e\\u6c5f\\u5988\\u7206\\u51fa\\u6765\\u7684\\uff0c\\u8fd9\\u8ba9\\u6211\\u6709\\u70b9\\u5931\\u671b\\u2026\\u2026\", \"rewritten_form_fear\": \"\\u5218\\u946b\\u6ca1\\u52df\\u6350\\uff0c\\u652f\\u4ed8\\u5b9d\\u53f7\\u662f\\u4e4b\\u524d\\u627e\\u6c5f\\u5988\\u7206\\u51fa\\u6765\\u7684\\uff0c\\u8fd9\\u8ba9\\u6211\\u611f\\u5230\\u6709\\u4e9b\\u4e0d\\u5b89\\u2026\\u2026\", \"rewritten_form_anger\": \"\\u5218\\u946b\\u7adf\\u7136\\u6ca1\\u52df\\u6350\\uff0c\\u652f\\u4ed8\\u5b9d\\u53f7\\u5c45\\u7136\\u662f\\u4e4b\\u524d\\u627e\\u6c5f\\u5988\\u7206\\u51fa\\u6765\\u7684\\uff0c\\u8fd9\\u771f\\u8ba9\\u4eba\\u751f\\u6c14\\uff01\", \"rewritten_form_surprise\": \"\\u5218\\u946b\\u7adf\\u7136\\u6ca1\\u52df\\u6350\\uff0c\\u652f\\u4ed8\\u5b9d\\u53f7\\u5c45\\u7136\\u662f\\u4e4b\\u524d\\u627e\\u6c5f\\u5988\\u7206\\u51fa\\u6765\\u7684\\uff0c\\u8fd9\\u771f\\u8ba9\\u6211\\u5403\\u60ca\\uff01\", \"rewritten_form_disgust\": \"\\u5218\\u946b\\u6ca1\\u52df\\u6350\\uff0c\\u652f\\u4ed8\\u5b9d\\u53f7\\u7adf\\u7136\\u662f\\u4e4b\\u524d\\u627e\\u6c5f\\u5988\\u7206\\u51fa\\u6765\\u7684\\uff0c\\u771f\\u8ba9\\u4eba\\u611f\\u5230\\u6076\\u5fc3\\u2026\\u2026\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text mentions a situation that was previously faced, with a tone indicating a lack of excitement or satisfaction. The joy rewritten version suggests a humorous perspective on the same situation, using the phrase '\u771f\u662f\u592a\u6709\u8da3\u4e86', which implies a light-hearted and positive reflection on a previous event. Thus, the original does not align strongly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sadness version expresses disappointment or hopelessness in the same situation, indicated by '\u8fd9\u8ba9\u6211\u6709\u70b9\u5931\u671b...'. The original text mentions past events without a direct statement of sadness, but it does imply a lack of satisfaction. Given this context, there is a slight resonance with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The rewritten fear version conveys a sense of unease or apprehension about the situation, evident in '\u8fd9\u8ba9\u6211\u611f\u5230\u6709\u4e9b\u4e0d\u5b89...'. The original does suggest a potential concern but does not explicitly evoke fear. Still, there is a minor alignment due to the uneasy subtone.",
+        "fear_intensity": 1,
+        "anger_reasoning": "In the rewritten anger form, there is a clear indication of frustration with the situation, expressed with '\u8fd9\u8ba9\u4eba\u6c14\u6124\uff01'. The original sentence does not express anger but hints at disappointment or annoyance regarding a past event, leading to a slight alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise rewritten form captures an element of shock or unexpectedness about the previous events, summarized by '\u8fd9\u771f\u8ba9\u6211\u5403\u60ca\uff01'. The original text indicates a past event's outcome but lacks a direct emotional surprise connection. However, there is a slight suggestion of unexpectedness, allowing for minor alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust form reflects a strong aversion to past events with '\u8fd9\u8ba9\u4eba\u611f\u5230\u6076\u5fc3...'. The original sentence does not explicitly convey a feeling of disgust but implies a negative sentiment about the situation. Therefore, there is moderate alignment with this feeling despite the lack of outright disgust in the original.",
+        "disgust_intensity": 2
+    }
+}

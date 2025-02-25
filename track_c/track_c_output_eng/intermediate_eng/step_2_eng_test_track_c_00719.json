@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And like the little traitors they are, tears were on my face.\", \"rewritten_form_joy\": \"And like the little traitors they are, tears of joy were on my face!\", \"rewritten_form_sadness\": \"And like the little traitors they are, tears of sorrow streamed down my face.\", \"rewritten_form_fear\": \"And like the little traitors they are, tears betrayed my fear and spilled onto my face.\", \"rewritten_form_anger\": \"And like the little traitors they are, I felt rage as tears fell from my face.\", \"rewritten_form_surprise\": \"And like the little traitors they are, I was surprised to find tears on my face.\", \"rewritten_form_disgust\": \"And like the little traitors they are, I felt disgusted as tears marred my face.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; instead, it suggests a more conflicted emotional state with the implication of traitorous tears. The joy version adds an explicit positive sentiment that doesn't align with the original's tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns more closely with sadness, as the mention of tears directly connects to sorrow, though the tone is somewhat complicated by the use of 'traitors.' Still, the sadness version explicitly defines the tears as sorrowful, which enhances this emotional interpretation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Fear is somewhat implied by the presence of tears, suggesting vulnerability, but it is not the primary emotion. The original lacks strong fear elements compared to the rewritten fear version, which indicates a clearer fear-driven context.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The mention of 'little traitors' implies a sense of betrayal that could lead to anger, but the overall tone of the original sentence does not strongly embody anger. The rewritten version explicitly identifies rage, distinguishing it from the original's more passive acknowledgment of tears.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original doesn\u2019t provide any cues that indicate surprise; instead, the focus is on an emotional conflict. The surprise version introduces a sense of unexpectedness that is not present in the original context.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

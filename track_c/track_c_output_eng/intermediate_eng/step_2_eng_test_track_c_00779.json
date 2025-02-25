@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We hugged and cried.\", \"rewritten_form_joy\": \"We hugged tightly, tears of joy streaming down our faces!\", \"rewritten_form_sadness\": \"We hugged and cried, overwhelmed by our sorrow.\", \"rewritten_form_fear\": \"We hugged, trembling, as tears streamed from our eyes in fear.\", \"rewritten_form_anger\": \"We hugged and cried, our hearts filled with anger and frustration.\", \"rewritten_form_surprise\": \"We hugged in shock, tears unexpectedly spilling from our eyes.\", \"rewritten_form_disgust\": \"We hugged, and I couldn't help but cry, disgusted by the situation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of connection through hugging and crying, which aligns with a positive emotional release, though it lacks the specific joy suggested in the rewritten version.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence clearly expresses a moment of vulnerability and sorrow through hugging and crying, which aligns closely with the sentiment of sadness in the rewritten version.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not indicate a feeling of fear; it describes a moment of emotional support rather than a reaction to fear, making this alignment weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence implies emotional distress through crying, it does not suggest anger or frustration. Thus, this alignment is minimal.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is no indication of surprise in the original sentence. The original emotion is more about comfort than unexpectedness, so the alignment is weak.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Half the crowd was passionate and animated while the other wanted only to enjoy the company of their seats.\", \"rewritten_form_joy\": \"Half the crowd was so lively and animated, while the others contentedly enjoyed their cozy seats!\", \"rewritten_form_sadness\": \"Half the crowd was passionate and animated, yet the other half seemed so distant and just wanted to sit alone.\", \"rewritten_form_fear\": \"Half the crowd was passionate and animated, but the other seemed anxious, barely able to enjoy their seats at all.\", \"rewritten_form_anger\": \"Half the crowd was passionately animated, while the other half just sat there, doing nothing and wasting the moment!\", \"rewritten_form_surprise\": \"Half the crowd was unexpectedly lively and animated, while the other half just sat, seemingly indifferent to all the energy!\", \"rewritten_form_disgust\": \"Half the crowd was overly passionate and animated, while the other half slumped in their seats, simply disgusted by the chaos.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence acknowledges a lively part of the crowd, which aligns with joy, but it contrasts this with those merely occupied by their seats instead of highlighting pure happiness.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original mentions a disconnect between the passionate crowd and those who seemed to just be sitting, which aligns with feelings of sadness or isolation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original notes a contrast, it does not imply anxiety, which would align with fear, but rather a lack of engagement.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is a hint of frustration in the original sentence regarding the passivity of half the crowd, which aligns with a moderate degree of anger over missed opportunity.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original highlights an unexpected division within the crowd, which relates to surprise, but this isn't the main emotional thrust.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

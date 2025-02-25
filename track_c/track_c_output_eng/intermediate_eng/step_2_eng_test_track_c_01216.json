@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I stopped rising about two feet above the bed.\", \"rewritten_form_joy\": \"I finally stopped rising about two feet above the bed, and what a delightful end to that experience!\", \"rewritten_form_sadness\": \"I stopped rising about two feet above the bed, and it felt so lonely to come back down.\", \"rewritten_form_fear\": \"I suddenly stopped rising about two feet above the bed, and a chill ran down my spine.\", \"rewritten_form_anger\": \"I stopped rising about two feet above the bed, and it was so frustrating to be grounded again!\", \"rewritten_form_surprise\": \"I stopped rising about two feet above the bed, and I couldn't believe what just happened!\", \"rewritten_form_disgust\": \"I stopped rising about two feet above the bed; it was just so unpleasant to experience.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any positive or joyful sentiment. The rewritten joy sentence adds a delightful end to the experience, which is not present in the original. Hence, there is little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original implies a sense of conclusion but does not specifically express loneliness. The sadness rewrite captures a strong emotion of loneliness that the original does not convey. As such, there's a low connection with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not indicate fear or anxiety. However, the fear rewritten version introduces an element of surprise and fear, which is absent in the original. Thus, there is minimal alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not express frustration or anger; it merely states a fact. The anger version emphasizes feelings of frustration, which are not reflected in the original, indicating a weak connection.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not express any disbelief or surprise. The rewrite conveys a sense of shock which is not present in the original. Therefore, surprise is not relevant.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

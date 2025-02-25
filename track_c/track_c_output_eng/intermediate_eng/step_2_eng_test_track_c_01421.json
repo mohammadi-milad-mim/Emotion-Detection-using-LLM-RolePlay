@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He refused to not count me as tardy.\", \"rewritten_form_joy\": \"He joyfully insisted on treating me fairly, not counting me as tardy at all.\", \"rewritten_form_sadness\": \"He sadly refused to overlook my situation and counted me as tardy.\", \"rewritten_form_fear\": \"He adamantly refused to not count me as tardy, and now I worry about the consequences.\", \"rewritten_form_anger\": \"He stubbornly refused to not count me as tardy, and it made me so frustrated.\", \"rewritten_form_surprise\": \"He surprisingly refused to not count me as tardy, which I didn't expect at all.\", \"rewritten_form_disgust\": \"He disgustingly refused to acknowledge my reasons and counted me as tardy regardless.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence implies a negative experience with the refusal to be counted fairly, which contrasts greatly with the joyful insistence in the rewritten sentence. Therefore, there is little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a situation that could evoke a sense of sadness if considered from the perspective of being unjustly labeled as tardy. However, the original does not carry an explicit sense of regret or heaviness that denotes sadness, so it has a slight alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does imply a level of anxiety in being counted as tardy; however, it does not convey strong fear. The fear in the rewritten version suggests looming consequences, which is stronger than what the original conveys. Still, there is some alignment due to potential negative implications.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is a significant degree of frustration implied in the original sentence about being counted as tardy. The rewritten sentence captures this frustration very well, suggesting high alignment with anger.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not imply any expectation or unexpectedness; therefore, there is a mismatch with the concept of surprise. The directness of the refusal suggests a clear intent rather than an unexpected action.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

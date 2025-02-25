@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my heart dropped.\", \"rewritten_form_joy\": \"my heart soared with excitement!\", \"rewritten_form_sadness\": \"my heart sank into a deep sadness.\", \"rewritten_form_fear\": \"my heart raced with a sudden fear.\", \"rewritten_form_anger\": \"my heart dropped in anger!\", \"rewritten_form_surprise\": \"my heart dropped in shock!\", \"rewritten_form_disgust\": \"my heart dropped in utter disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of loss or disappointment, which is the opposite of joy. The rewritten version indicates a feeling of excitement, suggesting a positive and elevated emotional state. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of dropping or sinking feeling, closely aligning with the idea of sadness as depicted in the rewritten version, which explicitly mentions a deep sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "Although the original phrase 'my heart dropped' may imply some kind of emotional disturbance, it does not suggest the urgency or intensity of fear present in the corresponding sentence about racing with sudden fear. Therefore, the alignment with fear is moderate at best.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence suggests a feeling of distress, while the rewritten anger version indicates a proactive emotional response of anger. They both communicate a sense of intensity but are driven by different emotional processes, leading to a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The phrase 'my heart dropped' can signal a sense of unexpectedness which aligns with surprise. The rewritten version amplifies this, indicating shock, making them closely related but not as intense as true surprise might convey.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

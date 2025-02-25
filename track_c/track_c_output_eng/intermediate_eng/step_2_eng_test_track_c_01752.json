@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was really faint and sounded like they were far away.\", \"rewritten_form_joy\": \"It was so faint, yet it felt like they were playfully far away!\", \"rewritten_form_sadness\": \"It was so faint, like they were heartbreakingly far away.\", \"rewritten_form_fear\": \"It was really faint, almost like they were ominously far away.\", \"rewritten_form_anger\": \"It was faint, almost as if they were deliberately keeping their distance!\", \"rewritten_form_surprise\": \"It was faint, surprisingly making it seem like they were so far away!\", \"rewritten_form_disgust\": \"It was faint, sounding utterly distant and unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy; instead, it has a neutral tone regarding the distance of the sound, lacking any playful or uplifting connotation found in the rewritten joyful sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of distance but does not explicitly communicate sadness. The rewritten version emphasizes heartbreak, which is not present in the original text.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original mentions something being faint, which could suggest fear if interpreted as a sense of foreboding. However, it does not strongly imply fear, as it remains mostly neutral without ominous implications in the sentence itself.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The language in the original is neutral; it does not imply any anger or frustration, while the rewritten sentence suggests deliberate distance, which the original does not imply. Therefore, no strong connection to anger emerges from the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence implies a faintness that makes it seem distant but does not include any element of surprise. The playful twist of surprise in the rewritten form does not align with the tonality of the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

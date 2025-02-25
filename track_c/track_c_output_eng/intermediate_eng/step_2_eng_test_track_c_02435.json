@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"In my work the most important parameter is sufficiently high value of fps - frames per second for video game scenes that are hard to render.\", \"rewritten_form_joy\": \"In my work, the most exciting parameter is achieving a sufficiently high value of fps - frames per second for those challenging video game scenes that are a thrill to render!\", \"rewritten_form_sadness\": \"In my work, the most crucial parameter is a sufficiently high value of fps - frames per second for video game scenes that are tough to render, and it often feels overwhelming.\", \"rewritten_form_fear\": \"In my work, the most critical parameter is a sufficiently high value of fps - frames per second for video game scenes that are hard to render; the thought of low performance is quite frightening.\", \"rewritten_form_anger\": \"In my work, the most frustrating parameter is the need for a sufficiently high value of fps - frames per second for video game scenes that are hard to render; it\\u2019s incredibly irritating when things don't go smoothly.\", \"rewritten_form_surprise\": \"In my work, the most essential parameter is a sufficiently high value of fps - frames per second for video game scenes that are hard to render, and it can be surprising how much impact it has!\", \"rewritten_form_disgust\": \"In my work, the most disappointing parameter is a sufficiently high value of fps - frames per second for video game scenes that are hard to render; it's quite repulsive how often performance issues arise.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence maintains a neutral tone, focusing on the importance of fps without expressing excitement or joy. Therefore, it doesn\u2019t align closely with the joy version, which emphasizes excitement and thrill.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text states the importance of the fps value but does not express feelings of being overwhelmed. The sadness version introduces a sense of difficulty and emotional weight that is absent in the original, making the alignment weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does mention the challenge of rendering hard scenes, but it lacks a sense of fear or anxiety about performance issues. The fear version expresses a fear of low performance which is not captured in the original text, indicating low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does convey some technical difficulty but lacks emotional weight or expressions of frustration. The anger version explicitly conveys irritation and frustration, which is not present in the original, thus aligning very poorly.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not express any surprise or remarkable impact related to fps; it is straightforward and factual. The surprise version implies a sense of discovery that is not captured in the original text at all, leading to a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

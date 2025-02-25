@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heart melted and the tears started to well up in my eyes straight away.\", \"rewritten_form_joy\": \"I felt my heart swell with happiness, and tears of joy filled my eyes immediately!\", \"rewritten_form_sadness\": \"My heart broke, and tears began to spill from my eyes right away.\", \"rewritten_form_fear\": \"I felt my heart sink, and tears pushed at the corners of my eyes instantly.\", \"rewritten_form_anger\": \"My heart churned with frustration, and tears of anger welled up in my eyes immediately.\", \"rewritten_form_surprise\": \"My heart skipped a beat, and tears of shock quickly filled my eyes.\", \"rewritten_form_disgust\": \"My heart twisted, and I felt tears of revulsion start to brim in my eyes right away.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a warm and tender feeling associated with emotional responses, particularly the melting of the heart, which aligns closely with the joy sentence about happiness and joyful tears. It suggests a positive emotional transition leading to tears, which is a strong indicator of joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original also has an element of sadness as it describes tears welling up, which is common in moments of sorrow. It doesn't explicitly state heartbreak, but the connotation of melting could suggest a vulnerability that is present in sadness, hence a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not evoke a sense of fear as it focuses on warmth and tenderness rather than dread or anxiety. While the idea of tears is common in fear, the phrase 'my heart melted' does not suggest a sinking feeling associated with fear, hence minimal alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Similar to fear, the original sentence lacks any indication of anger. The emotions expressed (melting heart and tears) imply tenderness rather than frustration, indicating no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is a slight element of surprise in the original as melting hearts can evoke unexpected emotional responses, but it doesn't convey the jolt or shock that would be associated with surprise. Thus, it aligns low with the surprise emotion.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He became very confused, how could this be?\", \"rewritten_form_joy\": \"He became so intrigued, how thrilling could this be?\", \"rewritten_form_sadness\": \"He became very confused, it was all so heartbreaking, how could this be?\", \"rewritten_form_fear\": \"He became very confused, what if this means something terrible?\", \"rewritten_form_anger\": \"He became very confused, how could this even happen?\", \"rewritten_form_surprise\": \"He became very confused, how could this possibly be?\", \"rewritten_form_disgust\": \"He became very confused, how could this be so repulsive?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses confusion rather than intrigue or excitement, which reduces its alignment with joy. The feeling of intrigue is absent because the person is perplexed rather than thrilled by the situation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While confusion can have a tinge of sadness, it is not outright heartbreaking in the original sentence. The original sentiment lacks overt sadness, reducing the score in this case.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The confusion expressed in the original sentence implies a potential uncertainty about the situation but does not inherently invoke fear. However, one could reasonably speculate about negative implications, justifying a moderate score.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence conveys a sense of confusion, which could imply frustration, but it does not explicitly express anger or incredulity. The tone does not suggest any aggressive sentiment even though one could feel frustrated by the situation.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence includes an element of surprise due to the confusion about the situation, fitting well with the tone of being startled or astonished, hence a higher score.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

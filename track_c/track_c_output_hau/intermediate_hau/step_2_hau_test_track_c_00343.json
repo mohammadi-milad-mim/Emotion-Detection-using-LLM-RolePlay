@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Allah ya isa wlh \\ud83d\\ude2d\\ud83d\\ude2d\\ud83d\\ude2d Ana cikin yanayi matuka amman sukuwa babu tausayi d imani a Zukatansu .\", \"rewritten_form_joy\": \"Allah ya isa wlh! \\ud83d\\ude04 Ana cikin yanayi maar dariya, kuma idan muka kalli su, akwai jaruntaka da imani a zukatansu.\", \"rewritten_form_sadness\": \"Allah ya isa wlh \\ud83d\\ude2d\\ud83d\\ude2d\\ud83d\\ude2d Ana cikin yanayi matuka, amman sukuwa sun zama marasa tausayi da imani a zukatansu.\", \"rewritten_form_fear\": \"Allah ya isa wlh! \\ud83d\\ude30 Wannan yanayi yana firgita ni, sabida sukuwa suna da rashin tausayi da imani a zukatansu.\", \"rewritten_form_anger\": \"Allah ya isa wlh! \\ud83d\\ude21 Ana cikin yanayi matuka, amman sukuwa sun \\u0199i yin tausayi da imani a zukatansu!\", \"rewritten_form_surprise\": \"Allah ya isa wlh! \\ud83d\\ude32 Ban yi tsammani za su zama marasa tausayi da imani a zukatansu ba.\", \"rewritten_form_disgust\": \"Allah ya isa wlh! \\ud83e\\udd22 Ina jin nauseating cewa ana cikin wannan yanayi, suna da rashin tausayi da imani a zukatansu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling of despair and sadness about the state of others, which contrasts sharply with the joy rewritten sentence that speaks of laughter and bravery. Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence clearly reflects sadness, using phrases like 'cikin yanayi matuka' (in a very difficult situation) and 'sun zama marasa tausayi' (they have become merciless). This alignment with the sadness rewritten form is strong.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original does not convey a sense of fear. While the fear rewritten version expresses panic about the merciless nature of others, the original focuses on sadness without invoking fear. Hence, fear does not align here.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original expresses dissatisfaction with others, it does not convey overt anger as seen in the anger rewritten sentence. The frustration is present but not intense enough to express anger distinctly.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original conveys a sense of resignation to the current state, whereas the surprise rewritten sentence expresses unexpectedness. There is no surprising element in the original to align with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original conveys a sense of discontent but does not align closely with disgust like the disgust rewritten form. The feeling does not evoke nausea or repulsion strongly enough.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He brushed my bangs off of my face.\", \"rewritten_form_joy\": \"He brushed my bangs off of my face, and it made me smile!\", \"rewritten_form_sadness\": \"He brushed my bangs off of my face, but it only reminded me of how alone I feel.\", \"rewritten_form_fear\": \"He brushed my bangs off of my face, and I couldn\\u2019t shake the feeling of vulnerability.\", \"rewritten_form_anger\": \"He brushed my bangs off of my face, as if he had the right to invade my space.\", \"rewritten_form_surprise\": \"He brushed my bangs off of my face, catching me completely off guard!\", \"rewritten_form_disgust\": \"He brushed my bangs off of my face, and I felt his touch was so unwelcome.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and lacks any joy-inducing elements. The rewritten version introduces a positive emotional outcome, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sadness but the rewritten version relates an experience that emphasizes feelings of loneliness, which is absent in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The act of brushing bangs can evoke vulnerability as indicated in the rewritten version. This feeling of vulnerability could be inferred but is not explicitly stated in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The rewritten version implies an invasion of personal space, which suggests anger. The original sentence lacks this connotation and reads more as a neutral action.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not contain an element of surprise. The rewritten version directly relates to being caught off guard, contrasting with the plain nature of the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

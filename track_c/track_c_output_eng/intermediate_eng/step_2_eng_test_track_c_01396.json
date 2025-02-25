@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"No one showed up.\", \"rewritten_form_joy\": \"I was so excited, but no one showed up.\", \"rewritten_form_sadness\": \"It makes me really sad that no one showed up.\", \"rewritten_form_fear\": \"What if this keeps happening? No one showed up.\", \"rewritten_form_anger\": \"I can't believe no one showed up.\", \"rewritten_form_surprise\": \"I honestly didn't expect it, but no one showed up.\", \"rewritten_form_disgust\": \"It's just so disappointing that no one showed up.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks a joyful tone. The rewritten joy sentence introduces excitement, which contrasts with the neutral statement of no one showing up, reflecting disappointment instead.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does align with sadness, as it conveys a sense of loss or disappointment clearly, which the rewritten sadness sentence emphasizes further.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence expresses a factual situation that, when turned into a fear statement, imagines potential future disappointment. It does not exhibit fear on its own, but the fear sentence builds on it well.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is quite neutral, lacking anger. It does not express frustration or irritation, which the rewritten anger sentence does.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence itself does not convey surprise; it simply states a fact. The rewritten sentence introduces an element of expectation, which is absent in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

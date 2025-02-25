@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I hurried over to my desk, sure that I had left the pen there, and sure enough, there it was.\", \"rewritten_form_joy\": \"I rushed to my desk, filled with excitement, and there it was, just as I hoped!\", \"rewritten_form_sadness\": \"I hurried over to my desk, desperately hoping I\\u2019d find that pen I left there, and, to my dismay, it was right where I thought.\", \"rewritten_form_fear\": \"I hurried over to my desk, my heart racing, fearing I had lost the pen for good, but there it was, just in time.\", \"rewritten_form_anger\": \"I rushed over to my desk, frustrated that I thought I had left the pen there, and of course, it was sitting right there as if taunting me.\", \"rewritten_form_surprise\": \"I dashed to my desk, thinking I had left the pen there, and to my surprise, it was right where I expected it!\", \"rewritten_form_disgust\": \"I hurried over to my desk, thinking I had left that pen there, and grossed out to find it just sitting there, exactly where I thought.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of anticipation and satisfaction upon finding the pen, which aligns with joy. However, it lacks the strong emotional expression found in the joy rewrite, which emphasizes excitement.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey desperation or dismay, which are present in the sadness rewrite. The tone is relatively neutral, indicating low alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original sentence expresses a sense of certainty, it does not convey the intense worry or anxiety that would align with fear. Thus, it scores low here.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express frustration or any strong negative feelings towards the situation, unlike the anger rewrite, which features a more confrontational tone.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is an element of expectation in the original sentence, but it doesn't contain the element of surprise as strongly as the rewritten sentence does, making it moderately aligned with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

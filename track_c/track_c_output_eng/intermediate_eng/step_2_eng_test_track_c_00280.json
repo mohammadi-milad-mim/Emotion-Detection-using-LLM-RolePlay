@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my stomach... my back... legs... feet... and it feels like care unbundled.\", \"rewritten_form_joy\": \"My stomach... my back... my legs... my feet... and it feels like such a relief!\", \"rewritten_form_sadness\": \"My stomach... my back... my legs... my feet... and it feels like I\\u2019ve lost all sense of care.\", \"rewritten_form_fear\": \"My stomach... my back... my legs... my feet... and it feels like dread has taken over.\", \"rewritten_form_anger\": \"My stomach... my back... my legs... my feet... and it feels like care has been ripped away from me!\", \"rewritten_form_surprise\": \"My stomach... my back... my legs... my feet... and it feels like care has totally come undone!\", \"rewritten_form_disgust\": \"My stomach... my back... my legs... my feet... and it feels like care has been thrown away.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence focuses on physical sensations and implies a sense of overwhelming discomfort. The rewritten version indicating relief suggests a positive transformation from discomfort to joy, which does not align with the original discomfort expressed. Thus, there is minimal joy present.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of physical discomfort intertwined with emotional neglect or loss of care, which directly aligns with the sadness expressed in the rewritten version. Both convey a feeling of burden and a lack of emotional support, indicating a close alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence hints at a negative physical experience, it lacks the intense feelings of dread or fear described in the rewritten version. There is no explicit suggestion of fear or anxiety in the original, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original piece implies discomfort, but it does not express the strong emotional outrage indicated in the rewritten anger sentence. While there is a sense of grievance about 'care unbundled,' it does not convey the anger outright, resulting in a low degree of alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence suggests a state of disarray regarding care but does not convey a sense of unexpectedness or dramatic revelation captured in the surprise version. There\u2019s a sense of continuity in discomfort rather than a surprising shift, so alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

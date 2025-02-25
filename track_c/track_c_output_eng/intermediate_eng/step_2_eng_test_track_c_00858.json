@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Best friend and I met on reddit!\", \"rewritten_form_joy\": \"I\\u2019m so thrilled that my best friend and I met on Reddit!\", \"rewritten_form_sadness\": \"I never imagined I would find my best friend on Reddit, it feels a bit lonely thinking about it.\", \"rewritten_form_fear\": \"I can\\u2019t believe I met my best friend on Reddit; what if it's not as great as it seems?\", \"rewritten_form_anger\": \"It\\u2019s infuriating that I had to meet my best friend on Reddit instead of in person!\", \"rewritten_form_surprise\": \"I\\u2019m amazed that I found my best friend on Reddit! What a wild coincidence!\", \"rewritten_form_disgust\": \"Honestly, it's a bit ridiculous that I had to meet my best friend on Reddit of all places!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive experience about meeting a best friend through Reddit, which aligns closely with the joy rewritten sentence expressing thrill. Therefore, there's a significant sense of happiness and satisfaction in the original.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original does not convey loneliness or regret, so the sadness rewritten form feels more like a stretch than a reflection of the original sentiment, which leans more to positive emotions. Thus, it aligns poorly with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original statement implies a positive meeting, the fear rewritten sentence suggests doubt and worry, which is not present in the original. There isn't any sense of unease, so it does not align well with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not express frustration or anger over the platform where the friendship began. The anger rewritten form suggests irritation that isn't reflected in the original statement, indicating little to no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is an inherent element of surprise in the original sentence regarding how they met, which reflects well with the surprise rewritten form that conveys amazement and coincidence. This indicates a moderate alignment with surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

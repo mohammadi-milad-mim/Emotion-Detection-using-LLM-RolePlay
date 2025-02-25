@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I shook my head.\", \"rewritten_form_joy\": \"I shook my head with a smile.\", \"rewritten_form_sadness\": \"I shook my head, feeling a heavy weight in my heart.\", \"rewritten_form_fear\": \"I shook my head, dread creeping in.\", \"rewritten_form_anger\": \"I shook my head, frustration bubbling up inside me.\", \"rewritten_form_surprise\": \"I shook my head in disbelief.\", \"rewritten_form_disgust\": \"I shook my head in revulsion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'I shook my head.' does not express any joy or positivity. The rewritten form that includes 'with a smile' clearly indicates joy, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sadness, but the rewritten version suggests a profound emotional weight. There is no indication of sadness in the original, leading to a low score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence lacks any expression of fear or tension. The revision indicating 'dread creeping in' introduces fear that is not present in the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence is neutral, the rewritten version conveys a strong sense of frustration. However, the original does not convey anger, leading to a low intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The phrase 'in disbelief' suggests a reaction of surprise that is not indicated in the original sentence. There is no suggestion of surprise in 'I shook my head.'",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I am not going to wake up, I vow, but open my eyes just enough to see the clock, 2:00 a.m..\", \"rewritten_form_joy\": \"I\\u2019m so cozy and happy right now that I won\\u2019t wake up yet, but I peek at the clock\\u20142:00 a.m.!\", \"rewritten_form_sadness\": \"I\\u2019m so tired of this, I promise not to wake up, yet I force myself to open my eyes to see the clock says 2:00 a.m..\", \"rewritten_form_fear\": \"I\\u2019m terrified of facing another long night, so I vow not to wake up, yet I open my eyes just enough to see the clock, 2:00 a.m..\", \"rewritten_form_anger\": \"I am absolutely furious about this sleepless night, I swear I won\\u2019t wake up, but I crack my eyes open to see it\\u2019s 2:00 a.m..\", \"rewritten_form_surprise\": \"I can\\u2019t believe it\\u2019s already 2:00 a.m.! I promised myself I wouldn\\u2019t wake up, but I can\\u2019t help but sneak a peek at the clock.\", \"rewritten_form_disgust\": \"I can\\u2019t stand this feeling; I swear not to wake up, but I reluctantly open my eyes to see it's already 2:00 a.m..\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of reluctance and fatigue rather than joy. There is no expression of happiness or coziness, which is central to the joy reinterpretation. The joy version presents a positive attitude, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a sense of heavy tiredness, suggesting a struggle against waking up which aligns well with the sadness rewrite. Both express a sense of weariness, hinting at deeper emotional exhaustion.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions a vow not to wake up, which can imply a fear of facing what the night brings. However, it lacks the intensity of fear found in the related rewritten sentence, which adds an explicit sense of terror about a long night. Thus, it aligns moderately with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original communicates annoyance at waking up but does not express outright anger as shown in the rewritten version. The sentiment of frustration is present but not as intense as in the anger reinterpretation, which emphasizes a stronger emotional response.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not express any astonishment or shock about the time on the clock. The rewritten version captures that surprise clearly by emphasizing disbelief at the time, which is missing in the original statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

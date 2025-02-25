@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They are always there to pick up the pieces when my heart is breaking or when I've had a hard day.\", \"rewritten_form_joy\": \"They are always there to lift me up with joy when my heart is aching or I've had a tough day!\", \"rewritten_form_sadness\": \"They are always there to help me through the pain when my heart is breaking or I've had a hard day.\", \"rewritten_form_fear\": \"They are always there to pick up the pieces when my heart is breaking, making me feel safe during my hardest days.\", \"rewritten_form_anger\": \"They are always there to pick up the pieces, even when I'm furious and my heart is breaking from another hard day.\", \"rewritten_form_surprise\": \"They are always there to pick up the pieces when I least expect it, especially when my heart is breaking or I've had a hard day.\", \"rewritten_form_disgust\": \"They are always there to pick up the pieces, even when it's revolting to face my broken heart or those tough days.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses gratitude for support during difficult times, but it does not have a joyful tone; the focus is more on difficulty than on celebration or upliftment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence mentions a breaking heart and hard days, which directly aligns with feelings of sadness. This makes the alignment strong, as the sentiment resonates with emotional support in times of trouble.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original mentions a breaking heart, which could imply vulnerability. However, it does not suggest a direct feeling of fear or anxiety about the situation, as it focuses on support rather than fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence focuses on support during hard times, it does not express anger directly. Thus, the connection to anger is weak.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is no element of surprise in the original sentence; the repeated mention of support portrays stability rather than unpredictability, leading to a low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

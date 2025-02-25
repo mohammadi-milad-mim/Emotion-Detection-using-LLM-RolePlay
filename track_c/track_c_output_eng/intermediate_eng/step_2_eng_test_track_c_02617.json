@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My ear had finally managed to clear on Saturday and I could hear properly-hurrah!\", \"rewritten_form_joy\": \"My ear finally cleared on Saturday, and I could hear perfectly\\u2014what a wonderful feeling!\", \"rewritten_form_sadness\": \"My ear finally cleared on Saturday, but it still felt like such a long struggle to hear properly.\", \"rewritten_form_fear\": \"My ear finally cleared on Saturday, and I could hear again. I was so worried I\\u2019d never be able to!\", \"rewritten_form_anger\": \"My ear finally cleared on Saturday! I can hear properly now, why did this take so long!?\", \"rewritten_form_surprise\": \"My ear finally cleared on Saturday, and to my shock, I could hear properly\\u2014what an unexpected relief!\", \"rewritten_form_disgust\": \"My ear finally cleared on Saturday, and I could hear properly. It\\u2019s amazing how uncomfortable it felt before!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of happiness and relief about being able to hear again, similar to the joy expressed in the rewritten joy sentence. The exclamation 'hurrah!' emphasizes this joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence does not express sadness; rather, it focuses on the relief of improvement. The rewritten sadness version suggests a struggle associated with hearing, which is absent in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is a hint of concern in the original context, but it is not as pronounced as in the rewritten fear sentence. The original emphasizes relief rather than a struggle with fear, leading to minimal alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While there is a sense of frustration that could be inferred regarding the duration of the issue, the joy expressed in the original sentence downplays any significant anger. Therefore, the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is a slight element of surprise in realizing that hearing was restored, but it is not as strong as in the rewritten surprise sentence, which emphasizes shock. Thus, the intensity of surprise in the original is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

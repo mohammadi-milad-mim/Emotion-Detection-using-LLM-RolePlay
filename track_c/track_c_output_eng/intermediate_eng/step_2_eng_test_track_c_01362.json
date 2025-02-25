@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"not a big issue, at least it wasn't my hips.\", \"rewritten_form_joy\": \"It's really not a big issue, and thank goodness it wasn't my hips!\", \"rewritten_form_sadness\": \"It's not too big of an issue, but I can't help feeling relieved that at least it wasn't my hips.\", \"rewritten_form_fear\": \"It's not a major issue, but I'm really relieved it wasn't my hips; something could have gone wrong.\", \"rewritten_form_anger\": \"It's hardly an issue, but seriously, I'm just glad it wasn't my hips this time.\", \"rewritten_form_surprise\": \"It's not a huge deal, but wow, at least it wasn't my hips!\", \"rewritten_form_disgust\": \"It's not a big deal, but honestly, thank goodness it wasn't my hips; that would have been gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of relief that something negative did not happen, which aligns with the joyful sentiment of thankfulness in the rewritten joy sentence. This shows a moderate alignment but lacks strong enthusiasm.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentiment expresses relief while downplaying the issue, which can imply a subtle sense of sadness about the situation. Yet, it is outweighed by the relief, resulting in a lower intensity for sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text expresses relief that a potentially negative situation did not occur, which somewhat connects with the fear sentiment reflected in the rewritten fear sentence. However, the original lacks a strong sense of fear, thus a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The phrase has an undertone of irritation about the situation, but it does not strongly express anger. It aligns somewhat with the irritation shown in the rewritten anger sentence, but it\u2019s more subdued.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While the original sentence expresses surprise that it wasn't the hips, it does not capture a strong sense of astonishment. The rewritten surprise sentence emphasizes a more intense sense of surprise, suggesting a low alignment with the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

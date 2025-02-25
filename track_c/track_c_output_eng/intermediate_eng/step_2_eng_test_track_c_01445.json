@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I left my heart in San Francisco, but my soul is in Brooklyn.\", \"rewritten_form_joy\": \"I left my heart in sunny San Francisco, and my soul sings in vibrant Brooklyn!\", \"rewritten_form_sadness\": \"I had to leave my heart in San Francisco, while my soul seems lost in Brooklyn.\", \"rewritten_form_fear\": \"I left my heart in San Francisco, but my soul feels trapped in Brooklyn.\", \"rewritten_form_anger\": \"I left my heart in San Francisco, and it frustrates me that my soul is stuck in Brooklyn!\", \"rewritten_form_surprise\": \"I left my heart in San Francisco, but I never expected my soul to end up in Brooklyn!\", \"rewritten_form_disgust\": \"I left my heart in San Francisco, yet my soul awkwardly lingers in Brooklyn.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of longing rather than joy. The rewritten version conveys an upbeat and vibrant tone which does not match the sentiment of missing one's 'heart' or 'soul'.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys a sense of loss or longing, resonating with the sentiment of having to leave something cherished behind. This aligns closely with the rewritten version that explicitly expresses feeling lost, enhancing the emotional tone.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not imply a feeling of entrapment or fear, thus lacking the intensity present in the rewritten fear version, which suggests a negative and concerning situation.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original conveys some frustration about being separated from one's heart, it does not express anger overtly as the rewritten version does. Therefore, the alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence implies an unexpected separation, which can evoke surprise; however, the specific emphasis on unexpectedness in the rewritten version is stronger than what is expressed in the original. Thus, there is only a moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"You could say I am lucky I guess, when I cry I don't make a sound and my eyes never turn red, the tears just flow like rain.\", \"rewritten_form_joy\": \"I guess you could say I'm lucky because when I cry, it's silent and my eyes don't even turn red\\u2014the tears just flow like gentle rain.\", \"rewritten_form_sadness\": \"You could say I'm lucky, but when I cry, it's so quiet that my eyes remain dry, with the tears just pouring down like rain, unnoticed.\", \"rewritten_form_fear\": \"You could say I'm lucky, but when I cry in silence, I fear my eyes won't turn red; I just hope those tears don't fall like the rain.\", \"rewritten_form_anger\": \"You could say I'm lucky, but when I cry without making a sound and my eyes don't turn red, it's almost infuriating how the tears just flow like rain.\", \"rewritten_form_surprise\": \"You could say I'm lucky, but it's surprising that when I cry, there's no sound, and my eyes stay clear while the tears just flow like rain.\", \"rewritten_form_disgust\": \"You could say I\\u2019m lucky, but honestly, when I cry without a sound and my eyes stay normal while the tears flow like rain, it feels utterly gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a sense of luck and a calm acceptance regarding the act of crying without making sounds. The tone is gentle, which aligns with the tone of the rewritten joy sentence, where the act of crying is framed positively. However, the original sentence lacks emotional exuberance typically associated with joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence acknowledges a sense of quiet pain when crying, which implies an underlying sadness. The rewritten sadness sentence enhances this notion by mentioning unnoticed tears, aligning with a deeper sense of sorrow about silent suffering, reflecting the subtler emotional textures of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The fear in the original sentence can be interpreted as a fear of the silence itself and the resulting invisibility of one\u2019s emotional pain. The rewritten fear sentence captures the essence of concern connected to soundlessness when crying, though it lacks stronger indicators of fear present in the rewritten form.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence's description of silent tears hints at an internal struggle that could lead to frustration or anger about being misunderstood. However, the rewritten anger sentence introduces more explicit frustration, which the original doesn't fully convey, indicating that anger is not strongly present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does carry a slight element of surprise in the contradiction of feeling lucky while describing very quiet tears. The rewritten surprise sentence captures that surprise better, but the original does not seem particularly focused on being surprised, giving it a moderate connection.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

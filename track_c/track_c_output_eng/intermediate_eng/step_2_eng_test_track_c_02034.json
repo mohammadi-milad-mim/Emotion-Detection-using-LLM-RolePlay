@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my chest.\", \"rewritten_form_joy\": \"my chest is so full of happiness!\", \"rewritten_form_sadness\": \"my chest feels heavy with sadness.\", \"rewritten_form_fear\": \"my chest tightens with fear.\", \"rewritten_form_anger\": \"my chest burns with anger.\", \"rewritten_form_surprise\": \"my chest is racing with surprise!\", \"rewritten_form_disgust\": \"my chest recoils in disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'my chest.' does not convey any sense of happiness or joy. It lacks any positive or uplifting elements present in the rewritten joy sentence, which explicitly conveys fullness of happiness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has the potential to imply a feeling, but it is too vague and does not explicitly convey heaviness or sadness like the rewritten sadness sentence does. Thus, it suggests some emotional weight, but not as strong as suggested.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply any tightness related to fear. The lack of explicit descriptive elements leaves it ambiguous and does not invoke the feeling of fear directly, unlike the rewritten version.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Without any additional context, the original does not express anger or a fiery sentiment. The rewritten sentence conveys a strong sense of anger that is not implied in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not suggest any element of surprise or excitement. The rewritten version clearly indicates an emotional response that the original lacks entirely.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

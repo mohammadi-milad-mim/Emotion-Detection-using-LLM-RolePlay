@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Took a girl out to a nice expensive dinner and we had a great time.\", \"rewritten_form_joy\": \"I took a girl out to a lovely expensive dinner and we had such an amazing time!\", \"rewritten_form_sadness\": \"I took a girl out to a nice expensive dinner, but it feels like it couldn't change anything between us.\", \"rewritten_form_fear\": \"I took a girl out to a nice expensive dinner, and I was so anxious hoping she had a good time.\", \"rewritten_form_anger\": \"I took a girl out to a nice expensive dinner, and I can't believe how much I spent for such a mediocre experience!\", \"rewritten_form_surprise\": \"I took a girl out to a nice expensive dinner, and it was surprisingly fun!\", \"rewritten_form_disgust\": \"I took a girl out to a nice expensive dinner, which was just a waste of money on someone so ungrateful.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive experience (having a great time) associated with taking someone out, which aligns closely with the joy rewritten form that emphasizes an amazing time at dinner.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original sentence is positive, the sadness rewritten form introduces a sense of lost potential in a relationship, which is not present in the original text, indicating little alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey any sense of anxiety or worry, as seen in the fear rewritten form. It reflects a straightforward experience rather than apprehension about the girl's enjoyment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not convey frustration or anger about the costs involved; it is just a description of a nice experience, unlike the anger rewritten form that expresses dissatisfaction regarding the value of the experience.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not indicate any unexpected elements, contrasting with the surprise rewritten form that highlights an unexpected enjoyment. Thus, it has no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

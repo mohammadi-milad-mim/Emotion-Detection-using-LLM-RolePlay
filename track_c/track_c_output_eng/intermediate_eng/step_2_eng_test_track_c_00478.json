@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I still see a eerie blue spot when I close my eyes.\", \"rewritten_form_joy\": \"I still see a bright, captivating blue spot when I close my eyes!\", \"rewritten_form_sadness\": \"I still see an unsettling blue spot when I close my eyes, and it lingers in my mind.\", \"rewritten_form_fear\": \"I still see a haunting blue spot when I close my eyes, and it fills me with dread.\", \"rewritten_form_anger\": \"I still see that annoying blue spot when I close my eyes, and it drives me crazy!\", \"rewritten_form_surprise\": \"I still see a strange blue spot when I close my eyes, and it\\u2019s so unexpected!\", \"rewritten_form_disgust\": \"I still see an unpleasant blue spot when I close my eyes, and it sickens me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an eerie blue spot, which does not evoke a sense of joy. The rewritten joyful sentence emphasizes brightness and captivation, contrasting with the original's eerie connotation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence contains an 'eerie' tone that can align with a sense of unsettling feeling, similar to the rewritten sentence which speaks of lingering thoughts. This suggests a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The use of 'eerie' suggests a sense of discomfort or unease, which aligns with the fear implied in the rewritten version that describes the blue spot as 'haunting' and filling one 'with dread'. This indicates a significant connection to fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original statement does not express annoyance or anger. While the rewritten anger sentence describes the spot as 'annoying' and 'driving crazy', this is a stark contrast to the more passive description in the original statement.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original phrase 'eerie blue spot' does not imply surprise. The rewritten sentence, which highlights unexpectedness, diverges from the original tone of a haunting image.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

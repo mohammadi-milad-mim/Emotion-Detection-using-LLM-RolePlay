@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Anyway, the pain in my knuckles is making typing quite difficult, so I apologise for any typos now.\", \"rewritten_form_joy\": \"Anyway, even though my knuckles hurt, I'm excited to share my thoughts, so forgive any typos!\", \"rewritten_form_sadness\": \"Anyway, the pain in my knuckles makes typing hard, and I\\u2019m really sorry for any typos I might make.\", \"rewritten_form_fear\": \"Anyway, the pain in my knuckles is making typing quite difficult, and I'm worried there could be more problems; I apologize for any typos now.\", \"rewritten_form_anger\": \"Anyway, it's frustrating that the pain in my knuckles is making typing so difficult, so I apologize in advance for any typos!\", \"rewritten_form_surprise\": \"Anyway, surprisingly, the pain in my knuckles is making typing quite difficult, so I apologize for any typos now!\", \"rewritten_form_disgust\": \"Anyway, it\\u2019s irritating how the pain in my knuckles is making typing a chore, so sorry for any typos!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence acknowledges pain but lacks the enthusiasm or positivity expressed in the rewritten joy version. There is no excitement or happiness about sharing thoughts despite the difficulty. Therefore, it doesn\u2019t align with joy very well.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys difficulty due to pain and includes an apology, which creates a sense of regret or sadness. This aligns closely with the sadness rewritten version that expresses difficulty and sorry feelings.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence mentions difficulty but does not express concern about potential further issues; it remains more factual than fearful. The fear version implies worry about worsening conditions, which is absent in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does communicate difficulty and includes an apology, but it does not express frustration or anger, which is more prominent in the rewritten anger version. Thus, the emotional intensity of anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey surprise; it simply states a fact about pain impacting typing. The surprise version infers an unexpected quality that isn't present in the original. So there is no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

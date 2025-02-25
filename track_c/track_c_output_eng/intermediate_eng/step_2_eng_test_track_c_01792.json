@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She wanted to fight over every single little thing.\", \"rewritten_form_joy\": \"She was so passionate about everything, wanting to discuss each little detail!\", \"rewritten_form_sadness\": \"It felt so heavy that she wanted to fight over every single little thing.\", \"rewritten_form_fear\": \"I worried that she wanted to fight over every single little thing.\", \"rewritten_form_anger\": \"It was infuriating that she wanted to fight over every single little thing!\", \"rewritten_form_surprise\": \"I couldn\\u2019t believe she wanted to fight over every single little thing!\", \"rewritten_form_disgust\": \"It was revolting how she wanted to fight over every single little thing.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a feeling of strong engagement or passion, but it does not evoke happiness or positive sentiment like the rewritten joy version does. While there's an implication of enthusiasm for details, the idea of 'fighting' suggests conflict rather than pure joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence can imply a sense of burden in having to argue about trivial matters, aligning it somewhat with sadness as it hints at frustration or emotional weight.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original does not directly express fear, but the notion that someone is constantly ready to fight could elicit concern, aligning the original with a moderate level of apprehension.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The sentence conveys a clear sense of irritation or frustration due to the constant fighting over trivialities. This aligns strongly with anger, as the tone is aggressive and highly emotional.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "While the original sentence is somewhat surprising given the extreme behavior it describes, it doesn't evoke a strong sense of astonishment compared to the rewritten version which emphasizes disbelief more intensely.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

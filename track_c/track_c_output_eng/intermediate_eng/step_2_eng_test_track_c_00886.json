@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"But Maddy hasnt stopped.\", \"rewritten_form_joy\": \"But Maddy just keeps going!\", \"rewritten_form_sadness\": \"But Maddy hasn't stopped, and it hurts to see her struggle.\", \"rewritten_form_fear\": \"But Maddy hasn't stopped, and I dread what might happen next.\", \"rewritten_form_anger\": \"But Maddy hasn't stopped, and it's infuriating to watch her ignore the consequences.\", \"rewritten_form_surprise\": \"But Maddy hasn't stopped\\u2014I'm shocked she still continues like this!\", \"rewritten_form_disgust\": \"But Maddy hasn't stopped, and it's honestly quite repulsive to witness.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it suggests persistence rather than positivity or happiness, unlike the rewritten joy form which emphasizes a positive and enthusiastic continuation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a difficult situation where Maddy is persistently struggling, which aligns with the sadness expressed in the rewritten version that highlights hurt and struggle.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence hints at a sense of ongoing struggle without clear resolution, which could provoke a sense of concern or fear about future developments, making it moderately aligned with the fear rewritten form.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence suggests a frustrating situation, but it lacks explicit anger. The angry rewritten form amplifies this sentiment by implying a conscious neglect of consequences, making the anger connection less intense.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The reaction of surprise regarding Maddy's continuation is not present in the original sentence; it simply states a fact without any indication of astonishment, leading to low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

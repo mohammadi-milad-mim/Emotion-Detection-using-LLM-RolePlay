@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I know I shouldn't have been touching my eyelids in the first place, but at night I get really curious and hopeful with my regrowth... so I stroked my upper eyelid, and I felt this sharp jab in one spot.\", \"rewritten_form_joy\": \"I know I really shouldn\\u2019t have been touching my eyelids, but at night my curiosity and excitement for my regrowth are just overwhelming! So, I cautiously stroked my upper eyelid, and wow, I felt this unexpected sharp jab in one spot!\", \"rewritten_form_sadness\": \"I know I shouldn\\u2019t have been touching my eyelids, yet at night my heart aches with curiosity and hope for my regrowth... so I stroked my upper eyelid, and then a sharp jab in one spot shocked me with discomfort.\", \"rewritten_form_fear\": \"I know I shouldn't have touched my eyelids, but at night, curiosity and a fleeting hope for my regrowth took over... so I gently stroked my upper eyelid, and suddenly, a sharp jab in one spot startled me.\", \"rewritten_form_anger\": \"I know I shouldn\\u2019t have messed with my eyelids, but at night, my curiosity and hope for regrowth got the best of me... so I brushed my upper eyelid, and out of nowhere, I felt this sharp jab in one spot! What was that?\", \"rewritten_form_surprise\": \"I know I shouldn\\u2019t have been touching my eyelids, but at night, I get so curious and hopeful about my regrowth! So, I stroked my upper eyelid, and then\\u2014whoa! I felt this sharp jab in one spot!\", \"rewritten_form_disgust\": \"I know I shouldn't have been touching my eyelids, but at night, my strange curiosity and hope for regrowth get the best of me... so I touched my upper eyelid, and yikes, I felt this sharp jab in one spot!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of curiosity and hope, especially regarding regrowth, which aligns with joyful or positive anticipation. However, the emotional intensity isn't as high as in the joyful rewrite, which uses more euphoric language like 'overwhelming' and 'excited'. Hence, the alignment is moderate.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original contains a hint of regret for touching the eyelids, aligning it with sadness. However, the original doesn't emphasize pain or deep emotional suffering as strongly as the rewritten version. Thus, the alignment with sadness is present but not very intense.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original displays elements of fear through the unexpected sharp jab, which implies concern or anxiety about the action. The rewrite captures this shock more vividly, suggesting a stronger emotional state. Thus, there is a moderate alignment with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The mention of 'messed with my eyelids' and 'out of nowhere' indicates frustration or irritation, aligning moderately with anger. However, it doesn't fully convey intense anger compared to the rewritten form, which heightens the emotional response. Therefore, the intensity remains moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The sharp jab indeed creates a sense of surprise, reflected in the original. While the rewrite captures more astonishment with 'whoa!', the original also conveys unexpectedness. Thus, the alignment is strong, although not maximal.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

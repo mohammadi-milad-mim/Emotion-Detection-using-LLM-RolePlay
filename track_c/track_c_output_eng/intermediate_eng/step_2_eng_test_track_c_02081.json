@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"a grin slowly formed on my face.\", \"rewritten_form_joy\": \"a joyful grin spread wide across my face.\", \"rewritten_form_sadness\": \"a weak grin slowly, almost painfully, appeared on my face.\", \"rewritten_form_fear\": \"a nervous grin trembled on my face.\", \"rewritten_form_anger\": \"a sarcastic grin twisted onto my face.\", \"rewritten_form_surprise\": \"a grin unexpectedly broke out on my face.\", \"rewritten_form_disgust\": \"a forced grin crept onto my face, masking my disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests a developing grin, which implies a positive emotion. However, it lacks the intensity and vividness of the rewritten joyful sentence. Therefore, there is a definite alignment with joy but it is more subdued.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence lacks the elements of pain or weakness associated with sadness as described in the rewritten version. The grin in the original does not imply sadness, so the alignment is minimal.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original does not convey any elements of nervousness or fear, unlike the rewritten version which suggests a trembling grin. There is no alignment with fear in the original sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence conveys a simple grin, which does not inherently involve sarcasm or anger as suggested in the rewritten version. Therefore, there is no alignment with anger in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence describes a grin forming slowly, while the rewritten version emphasizes the unexpectedness of the grin. Though there's a slight shift from neutral to positive, it does not capture the element of surprise as distinctly as the rewritten version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

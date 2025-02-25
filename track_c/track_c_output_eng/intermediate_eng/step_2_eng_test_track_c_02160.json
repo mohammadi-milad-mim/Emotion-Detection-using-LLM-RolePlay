@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My shoulder had stopped hurting shortly after I got in the chair.\", \"rewritten_form_joy\": \"I felt such relief when my shoulder stopped hurting shortly after I settled into the chair!\", \"rewritten_form_sadness\": \"My shoulder finally stopped hurting, but it was a long time coming as I sat in the chair.\", \"rewritten_form_fear\": \"I couldn't help but worry if the pain would return, but thankfully, my shoulder stopped hurting once I got in the chair.\", \"rewritten_form_anger\": \"It's infuriating that it took this long, but at least my shoulder stopped hurting right after I sat in the chair!\", \"rewritten_form_surprise\": \"I was totally surprised when my shoulder stopped hurting shortly after I got in the chair!\", \"rewritten_form_disgust\": \"It's just awful that it hurt so much, but at least it finally stopped once I got in the chair.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a cessation of pain right after entering the chair, which can be interpreted positively. However, it is more neutral without an overt expression of joy or relief compared to the rewritten joy version, which emphasizes 'relief'.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not focus on the duration of the pain or the negative emotions associated with it, unlike the rewritten sadness sentence that implies a previous struggle before relief. Thus, the alignment is low.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original text does not express any anxiety or concern over the possibility of pain returning, which is present in the fear rewrite. Therefore, this alignment is minimal.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence conveys an end to pain, it does not communicate frustration or anger about the duration of the pain, as suggested in the anger rewrite, which is more explicit in its sentiment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original simply states a fact without expressing any astonishment, while the surprise version emphasizes being 'totally surprised'. Thus, the sentiment does not wholly match.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

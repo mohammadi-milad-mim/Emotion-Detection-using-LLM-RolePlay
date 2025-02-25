@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Here's my problem: I hurt my ankle -- when I was 15.\", \"rewritten_form_joy\": \"You won't believe it, but I actually hurt my ankle when I was just 15, and I can laugh about it now!\", \"rewritten_form_sadness\": \"Here's my problem: I hurt my ankle when I was 15, and it still reminds me of that tough time.\", \"rewritten_form_fear\": \"Here's my worrying problem: I hurt my ankle when I was 15, and I'm so scared it might happen again.\", \"rewritten_form_anger\": \"Here's my frustrating problem: I hurt my ankle back when I was 15, and it still makes me so angry!\", \"rewritten_form_surprise\": \"Here's an unexpected problem: I hurt my ankle when I was just 15, and I still can't believe it!\", \"rewritten_form_disgust\": \"Here's my disgusting problem: I hurt my ankle when I was 15, and it was such a painful memory.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a straightforward problem without humor or positivity about the experience, which are essential for aligning with joy. The rewritten version suggests a retrospective humor and lightness that is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does convey a sense of ongoing conflict regarding the ankle injury, but it does not explicitly indicate feelings of sadness. The rewritten version captures a more reflective tone on how the injury still evokes memories of a tough time, aligning the original more with moderate sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey any element of fear or anxiety about re-injury. The rewritten version adds a layer of worry about the past injury, which is not present in the original, suggesting little alignment with this emotion.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence talks about a problem, it does not carry the emotional weight of frustration or anger. The rewritten version highlights feelings of anger associated with the incident, a tone that the original does not convey, resulting in little connection to anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is straightforward and does not carry an unexpected element. The rewritten version introduces an element of surprise regarding the memory of the injury, which does not exist in the original, indicating low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Not sure if it will be actually enforced or not.\", \"rewritten_form_joy\": \"I really hope it will be enforced; that would be amazing!\", \"rewritten_form_sadness\": \"It\\u2019s disheartening to think it might not be enforced at all...\", \"rewritten_form_fear\": \"I\\u2019m really worried that it won\\u2019t be enforced as it should be.\", \"rewritten_form_anger\": \"It\\u2019s infuriating that we can\\u2019t be sure if it will even be enforced!\", \"rewritten_form_surprise\": \"Wow, I can\\u2019t believe that we\\u2019re not sure if it will be enforced or not!\", \"rewritten_form_disgust\": \"I can\\u2019t stand the thought that it might not be enforced; it\\u2019s just unacceptable!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses uncertainty, which is more neutral than joyful. There is no strong positive sentiment, unlike the hopeful tone of the rewritten sentence about joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text expresses uncertainty, which can evoke a mild sense of disappointment, aligning with the sadness expressed in the rewritten sentence about disheartening feelings.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The mention of uncertainty in enforcement resonates with the fear of potential outcomes, similar to the worried tone in the rewritten fear sentence.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not convey strong emotions, though it hints at frustration by questioning enforcement. However, it lacks the defined anger expressed in the rewritten anger sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence has an element of uncertainty that could evoke surprise, but the tone is not as pronounced as the rewritten surprise sentence, which emphasizes disbelief.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

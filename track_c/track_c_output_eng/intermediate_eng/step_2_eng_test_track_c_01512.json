@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Probably just a hell of a coincidence, but super weird.\", \"rewritten_form_joy\": \"What an amazing coincidence! It's so wonderfully weird!\", \"rewritten_form_sadness\": \"It's likely just a sad coincidence, but it's really strange.\", \"rewritten_form_fear\": \"It might just be a frightening coincidence, but it feels super strange.\", \"rewritten_form_anger\": \"It's probably just an irritating coincidence, but what a weird situation!\", \"rewritten_form_surprise\": \"Wow, what an unexpected coincidence! That's really weird!\", \"rewritten_form_disgust\": \"I guess it's probably just a disturbing coincidence, but it's seriously weird.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence suggests an odd coincidence but maintains a neutral tone. The joy in the rewritten sentence is absent in the original, which lacks excitement or positivity about the coincidence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original does not convey any sadness; it describes something as being weird without an emotional undertone related to disappointment or sorrow. The revised version suggests a sad sentiment that doesn't align with the original's tone.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the original mentions something feeling \"super weird,\" it does not actively suggest fear or distress about the coincidence. The rewritten version conveys a sense of danger or discomfort that is missing from the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The word 'hell' in the original reflects an informal and slightly frustrated tone, but not enough to denote strong anger. The rewritten version emphasizes irritation, which is not present in the original context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original describes the circumstance as a 'weird coincidence,' which aligns somewhat with surprise but lacks the excitement or unexpected nature highlighted in the rewritten sentence. However, there is a minor element of surprise in considering it a coincidence.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

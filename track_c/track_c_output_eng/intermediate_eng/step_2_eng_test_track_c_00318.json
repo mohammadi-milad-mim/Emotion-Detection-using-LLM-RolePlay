@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My hands and foot feel cold while face feels hot.\", \"rewritten_form_joy\": \"It's such an interesting feeling that my hands and feet are cold, but my face is warm and flushed!\", \"rewritten_form_sadness\": \"It's troubling that my hands and feet are cold while my face feels hot, like something isn't quite right.\", \"rewritten_form_fear\": \"I'm worried because my hands and feet feel so cold, yet my face is burning up, like something is wrong.\", \"rewritten_form_anger\": \"I can't believe my hands and feet are freezing while my face feels hot; it's so frustrating!\", \"rewritten_form_surprise\": \"Wow, it's odd that my hands and feet are cold, but my face is feeling so hot!\", \"rewritten_form_disgust\": \"It's uncomfortable that my hands and feet are cold while my face is sweaty and hot.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy or excitement about the sensation reported; it simply states a fact. The rewritten joy sentence introduces a positive spin by describing it as 'interesting', which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a sense of discomfort due to the disparity in temperature but doesn't explicitly convey sadness. The rewritten sadness version implies a feeling of something being 'not quite right', which aligns with a deeper emotional interpretation that the original sentence lacks.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence produces a moderate level of concern about the body's conflicting temperature sensations, but it does not emphasize fear. The fear version suggests worry and something being wrong, which amplifies the concern to a higher level than the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence expresses discomfort, it lacks the intensity of anger. The rewritten anger sentence frames the feeling as 'frustrating', presenting a stronger reaction that is absent in the neutral tone of the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence describes an unusual combination of sensations, which could elicit surprise. However, it does not express that feeling directly. The rewritten surprise sentence does introduce a sense of novelty but the original is more matter-of-fact, thus indicating a lower intensity.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

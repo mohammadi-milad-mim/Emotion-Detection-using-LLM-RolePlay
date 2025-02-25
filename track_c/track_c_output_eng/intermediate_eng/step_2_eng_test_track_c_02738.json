@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Fast forward to the wedding, it's small and intimate, probably less than 50 people there, and they have the reception at some hotel with a bar.\", \"rewritten_form_joy\": \"Fast forward to the joyful wedding, it's wonderfully small and intimate, with probably less than 50 guests celebrating together, and they have a delightful reception at a charming hotel with a bar!\", \"rewritten_form_sadness\": \"Fast forward to the wedding, it's a small and intimate gathering, probably less than 50 people, and they have the reception at some hotel with a bar, but it feels like something's missing.\", \"rewritten_form_fear\": \"Fast forward to the wedding, it's small and intimate, probably less than 50 people, and they have the reception at some hotel with a bar, but I can't shake the feeling something might go wrong.\", \"rewritten_form_anger\": \"Fast forward to the wedding, it's frustratingly small and intimate, probably less than 50 people there, and they have the reception at some generic hotel with a bar, how disappointing!\", \"rewritten_form_surprise\": \"Fast forward to the wedding, it's unexpectedly small and intimate, probably less than 50 people there, and they have the reception at some hotel with a bar, what an intriguing choice!\", \"rewritten_form_disgust\": \"Fast forward to the wedding, it's a shockingly small and intimate affair, probably less than 50 people there, and they have the reception at some tacky hotel with a bar, how unappealing!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text describes a small and intimate wedding without expressing any joy or positive sentiment. The rewritten version for joy emphasizes celebration and delight, which is absent from the original context. The lack of any overly positive descriptors results in a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original mentions a small and intimate wedding, but it doesn't clearly convey a sense of loss or sadness. The sadness indicator in the rewritten version suggests something is missing, which the original does not imply strongly. There is a minor emotional resonance, but it is not pronounced.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence describes the wedding in neutral terms but doesn\u2019t evoke any fear or worry. The rewritten version introduces a sense of anxiety about things going wrong, which is not reflected in the original. The emotional tie is weak, leading to a low intensity.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not express any frustration or anger about the wedding arrangements. While the rewritten for anger introduces a strong negative sentiment, the original remains neutral, reflecting very little alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The tone of the original is neutral, lacking any surprises or unexpected elements. The surprise version implies an intriguing choice regarding the wedding's nature, which does not connect with the original's straightforward description. Any element of surprise is marginal.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

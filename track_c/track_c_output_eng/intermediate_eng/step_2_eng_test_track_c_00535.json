@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I closed my eyes and listened to the silence which revealed birdsong, a light breeze and nothing else, except maybe the universe breathing.\", \"rewritten_form_joy\": \"I closed my eyes and listened to the delightful silence, where birdsong danced in the air, a light breeze caressed my cheeks, and everything felt alive, as if the universe was joyfully breathing.\", \"rewritten_form_sadness\": \"I closed my eyes and listened to the inescapable silence, where birdsong felt lonely, a light breeze brushed past me, and all I sensed was the universe sighing its quiet sorrow.\", \"rewritten_form_fear\": \"I closed my eyes and listened to the silence, an eerie stillness pierced by distant birdsong, a light breeze gave me chills, and the universe felt like it was holding its breath ominously.\", \"rewritten_form_anger\": \"I closed my eyes and listened to the silence, which was unsettling, where the birdsong felt mocking, a light breeze stirred frustration, and the universe seemed indifferent to my turmoil.\", \"rewritten_form_surprise\": \"I closed my eyes and listened to the unexpected silence that unveiled vibrant birdsong, a light breeze gently surprised me, and it felt as if the universe was uniquely breathing in harmony.\", \"rewritten_form_disgust\": \"I closed my eyes and listened to the silence, where the birdsong felt irritating, a light breeze carried unpleasantness, and the universe breathing seemed just an uncomfortable reminder.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of tranquility and beauty through nature, aligning strongly with joy. The mention of birdsong and a light breeze brings to mind gentle and uplifting imagery.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence's tone does not suggest deep sadness, as it emphasizes peace rather than loneliness or sorrow, which makes the sadness rewrite feel less aligned. It may capture a hint of wistfulness, but overall it lacks the stronger elements of sadness present in the rewritten version.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not evoke any fear or eeriness; it has a serene quality that contrasts sharply with the fear rewrite, which portrays anxiety and chills. Therefore, there is no real alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The tone of the original sentence is peaceful and does not express frustration or anger. The rewritten anger version introduces a negative perspective on the silence that the original does not hold, leading to no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While both the original and the surprise rewrite invoke an element of revelation, the original doesn't have a strong sense of unexpectedness as the surprise rewrite suggests. There is a moderate feeling of discovery but not a strong association with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

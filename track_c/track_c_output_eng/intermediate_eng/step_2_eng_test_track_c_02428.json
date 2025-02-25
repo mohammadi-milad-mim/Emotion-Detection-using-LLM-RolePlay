@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Paul was harassing me with a flag for a bit, plopping it on my head.\", \"rewritten_form_joy\": \"Paul was playfully teasing me with a flag for a bit, plopping it on my head!\", \"rewritten_form_sadness\": \"Paul was bothering me with a flag for a bit, plopping it on my head.\", \"rewritten_form_fear\": \"Paul was intimidating me with a flag for a bit, plopping it on my head.\", \"rewritten_form_anger\": \"Paul was annoying me with a flag for a bit, plopping it on my head!\", \"rewritten_form_surprise\": \"Paul suddenly started harassing me with a flag for a bit, plopping it on my head!\", \"rewritten_form_disgust\": \"Paul was irritating me with a flag for a bit, plopping it on my head.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a negative connotation with the word 'harassing', which contrasts with the positive connotation of 'playfully teasing'. While there's some potential for playful interpretation, the dominant tone remains negative, indicating low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The word 'bothering' in the sadness rewrite captures a mild negative experience, which aligns slightly with the original sentence's feeling of annoyance but does not fully encapsulate sadness. Hence, there's a low level of alignment here.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The term 'intimidating' implies a higher level of distress compared to the original sentence, which suggests annoyance rather than fear. Therefore, the original does not align closely with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original phrase 'harassing me' aligns closely with 'annoying me', suggesting a feeling of irritation or anger. The use of 'harassing' indicates a stronger emotion of anger than mere annoyance.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence lacks the element of the unexpected that the word 'suddenly' introduces in the surprise version. There is no indication in the original that the event was surprising, therefore, the alignment is low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

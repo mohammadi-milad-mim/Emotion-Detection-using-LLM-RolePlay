@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The bell rang and I staggered toward my opponent, my knees clanging together in fear.\", \"rewritten_form_joy\": \"The bell rang, and I excitedly staggered toward my opponent, my heart racing with joy.\", \"rewritten_form_sadness\": \"The bell rang, and I sadly staggered toward my opponent, my knees clanging together with a heavy heart.\", \"rewritten_form_fear\": \"The bell rang, and I staggered toward my opponent, my knees clanging together in overwhelming fear.\", \"rewritten_form_anger\": \"The bell rang, and I staggered toward my opponent, my knees clanging together in furious defiance.\", \"rewritten_form_surprise\": \"The bell rang, and I staggered toward my opponent, my knees clanging together in shocked disbelief.\", \"rewritten_form_disgust\": \"The bell rang, and I staggered toward my opponent, my knees clanging together in utter disgust.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence focuses on fear and apprehension, while the rewritten joy sentence emphasizes excitement and joy. Thus, the original does not align well with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence contains a sense of fear, and the rewritten sadness sentence reflects a heavy heart. While there is a certain level of discomfort in the original, it is less about sadness and more about fear.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence explicitly mentions 'fear' and describes physical manifestations of it, which aligns perfectly with the rewritten fear sentence, indicating a high intensity of fear present in the original.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not convey anger at all; rather, it portrays fear and hesitation. The rewritten anger sentence conveys defiance, which is not present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence communicates fear rather than surprise, and the two are quite distinct in feeling. The rewritten surprise sentence implies shock that is not communicated in the original text.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

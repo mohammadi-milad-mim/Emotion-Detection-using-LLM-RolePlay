@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"On Friday night, minutes before friends were to arrive at our house for a prayer meeting for Berkeley, I sliced my finger open very, very deep with a very sharp pair of scissors and I found myself driving to the Emergency Room alone -- apparently with my face as pale as a ghost.\", \"rewritten_form_joy\": \"On Friday night, just minutes before friends were set to arrive at our house for a joyful prayer meeting for Berkeley, I accidentally sliced my finger open deep with a very sharp pair of scissors, and there I was, driving to the Emergency Room alone, feeling a little lightheaded but somehow still smiling!\", \"rewritten_form_sadness\": \"On Friday night, just moments before friends were supposed to gather for a prayer meeting for Berkeley, I tragically sliced my finger open very deep with a very sharp pair of scissors, and I found myself driving alone to the Emergency Room, feeling utterly desolate, my face pale as a ghost.\", \"rewritten_form_fear\": \"On Friday night, just minutes before friends arrived for a prayer meeting for Berkeley, I horrifyingly sliced my finger open deep with a very sharp pair of scissors, and I drove to the Emergency Room alone, my face pale with fear as I tried to steady my hands on the wheel.\", \"rewritten_form_anger\": \"On Friday night, right before friends were due for a prayer meeting for Berkeley, I carelessly sliced my finger open deep with a sharp pair of scissors, and I found myself fuming while driving alone to the Emergency Room, my face pale with frustration at the whole situation.\", \"rewritten_form_surprise\": \"On Friday night, just moments before friends were to arrive for a prayer meeting for Berkeley, shockingly, I sliced my finger open very, very deep with a sharp pair of scissors, and I found myself unexpectedly driving to the Emergency Room alone, my face pale as a ghost!\", \"rewritten_form_disgust\": \"On Friday night, just before friends arrived for a prayer meeting for Berkeley, I disgustingly sliced my finger open very, very deep with a sharp pair of scissors, and I found myself driving to the Emergency Room alone, my face pale with the grossness of the whole ordeal.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a joyful sentiment; instead, it focuses on a serious injury and a stressful situation. The rewritten joy version introduces a lighthearted tone and a smiling demeanor that the original does not reflect.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of loneliness and a serious situation, but it does not cross into deep sadness; it remains more about the event than emotional despair. The rewritten sadness version heightens this emotional state to one of desolation, which is not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original presents a scenario likely to evoke fear due to the injury and driving to the ER alone. It maintains a sense of seriousness akin to the rewritten fear version, where the emotion of fear is more pronounced. Hence, there's good alignment with the fear emotion.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence describes an accident, it does not suggest anger or frustration. The rewritten anger version implies a significant level of frustration that is not present in the original, making this a mismatch.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise element is somewhat present in the original sentence, as slicing one's finger open unexpectedly can elicit surprise. However, the tone in the original is serious, while the rewritten version amplifies this surprise. The original does express some level of unexpectedness, but not to the level of shock stated in the rewrite.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

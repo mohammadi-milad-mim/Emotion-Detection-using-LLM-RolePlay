@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Then she opened up a package to reveal a small looking scalpel which she then used to `` prick '' my finger.\", \"rewritten_form_joy\": \"Then she opened up a package to reveal a small looking scalpel, and with a playful smile, she gently used it to prick my finger!\", \"rewritten_form_sadness\": \"Then she opened up a package to reveal a small looking scalpel, and with a heavy heart, she used it to prick my finger.\", \"rewritten_form_fear\": \"Then she opened up a package to reveal a small looking scalpel, and my heart raced as she used it to prick my finger.\", \"rewritten_form_anger\": \"Then she opened up a package to reveal a small looking scalpel, and I felt a surge of anger as she carelessly used it to prick my finger.\", \"rewritten_form_surprise\": \"Then she opened up a package to reveal a small looking scalpel, and I was taken aback when she suddenly used it to prick my finger!\", \"rewritten_form_disgust\": \"Then she opened up a package to reveal a small looking scalpel, and I recoiled in disgust as she used it to prick my finger.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has a neutral or slightly negative tone about the act of pricking a finger with a scalpel, lacking any cheerful or joyful context. The rewritten joy version introduces a playful smile which is completely absent from the original, making it misaligned for joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey any feelings of sadness; it simply describes an action without emotional weight. The sadness rewrite introduces a heavy heart, which indicates a deeper emotional conflict not present in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence describes an action (using a scalpel to prick a finger) that could elicit fear, particularly due to the context of using a sharp object. The fear rewrite emphasizes a racing heart, closely relating to the potential apprehension a person might feel while experiencing a similar situation.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence lacks any context of anger or frustration; it describes an action in a straightforward manner. The anger rewrite adds a surge of anger that does not correlate with the original tone, suggesting misalignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence implies an unexpected action (using a scalpel), but it does not create a sense of astonishment or surprise. The surprise rewrite, however, emphasizes being taken aback, which does not strongly reflect in the original text.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

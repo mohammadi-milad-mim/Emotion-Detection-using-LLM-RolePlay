@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Either way that mother fucker is gone.\", \"rewritten_form_joy\": \"Either way, that incredible person is gone!\", \"rewritten_form_sadness\": \"Either way, that person is gone now, and it hurts.\", \"rewritten_form_fear\": \"Either way, that menacing figure is gone, and I feel uneasy.\", \"rewritten_form_anger\": \"Either way, that bastard is gone, and I'm furious about it.\", \"rewritten_form_surprise\": \"Either way, wow, that person is actually gone now!\", \"rewritten_form_disgust\": \"Either way, that repulsive individual is finally gone.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it expresses finality and an unsentimental tone about someone's absence. The rewritten joy version uses positive language ('incredible person'), which contrasts sharply with the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates the loss of someone, suggesting an emotional weight. The rewritten sentence captures this feeling of loss and adds an emotional depth with phrases like 'it hurts', aligning with the sadness present in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence suggests a dismissive and harsh tone towards the subject, which does not evoke fear. The fear version describes the absent person as 'menacing', which is contrary to the more straightforward tone of the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original contains a strong negative sentiment ('mother fucker'), suggesting a degree of anger at the person. The rewritten anger sentence reinforces this sentiment with 'bastard' and 'I'm furious', which reflects a high alignment with the original's tone.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence states a fact without expressing surprise. The 'wow' in the rewritten version suggests a shock that is not present in the original's straightforward tone regarding someone's absence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

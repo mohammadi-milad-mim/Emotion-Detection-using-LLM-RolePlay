@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Well here you go.\", \"rewritten_form_joy\": \"Yay! Here you go, I'm so excited to share this!\", \"rewritten_form_sadness\": \"Well, here you go, I hope this helps a little.\", \"rewritten_form_fear\": \"Well, here you go... I really hope this is okay.\", \"rewritten_form_anger\": \"Well, here you go! I can\\u2019t believe I have to give this to you now!\", \"rewritten_form_surprise\": \"Wow, well here you go! I didn't expect this to happen!\", \"rewritten_form_disgust\": \"Ugh, well here you go, but I really didn\\u2019t want to deal with this.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'Well here you go.' lacks the excitement and enthusiasm present in the joyful rewrite, which expresses happiness and eagerness to share something positive. Therefore, there is a low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sentence conveys a sense of trying to help despite sadness, which is not clearly present in the original sentence. While there is a mild connection due to the supportive tone, the original does not strongly align with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original phrase does not express any fear; it simply conveys a neutral transfer of something. The fear rewrite implies concern which is not communicated in the original, resulting in a low connection to fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of anger within the original sentence. The rewrite expresses frustration about the circumstances but this emotion is absent in 'Well here you go.', leading to a 0 intensity score for anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original lacks any element of surprise. The rewritten form highlights an unexpected outcome, while the original maintains a plain tone, signaling no surprise is conveyed.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

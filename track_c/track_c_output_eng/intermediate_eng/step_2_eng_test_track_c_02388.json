@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So they took my x-rays, and lo and behold, my tooth with the giant filling in it was cracking.\", \"rewritten_form_joy\": \"So they took my x-rays, and guess what? My tooth with the giant filling in it was cracking! What a funny surprise!\", \"rewritten_form_sadness\": \"So they took my x-rays, and sadly, my tooth with the giant filling in it was cracking.\", \"rewritten_form_fear\": \"So they took my x-rays, and to my horror, my tooth with the giant filling in it was cracking!\", \"rewritten_form_anger\": \"So they took my x-rays, and can you believe it? My tooth with the giant filling in it was cracking! How frustrating!\", \"rewritten_form_surprise\": \"So they took my x-rays, and unexpectedly, my tooth with the giant filling in it was cracking! Wow!\", \"rewritten_form_disgust\": \"So they took my x-rays, and grossly, my tooth with the giant filling in it was cracking! How disgusting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy. The phrase 'lo and behold' suggests a mild surprise but lacks the positivity or humor present in the rewritten joy sentence. Therefore, it has a low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original text implies an issue with the tooth, which could lead to a degree of sadness, similar to the rewritten sadness version. However, it does not express overt sadness or emotional weight. This alignment is moderate.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence contains an element of concern (a crumbling tooth), which can evoke fear. However, the expression is more neutral than the fearful rewrite. The original does suggest some level of concern, indicating a low degree of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence suggests a problem without expressing anger or frustration. While the rewritten anger version clearly conveys irritation, the original lacks that emotional charge. Thus, the alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The use of 'lo and behold' introduces a minor surprise element but does not convey the shock or excitement found in the rewritten surprise sentence. There is some unexpectedness, but it's not strong enough to warrant a high intensity score.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

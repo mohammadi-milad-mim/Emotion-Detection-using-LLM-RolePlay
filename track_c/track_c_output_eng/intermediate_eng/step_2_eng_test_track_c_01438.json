@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I could not summon up the courage to get up.\", \"rewritten_form_joy\": \"I found it hard to find the courage to get up, but I know I can try again!\", \"rewritten_form_sadness\": \"I struggled to summon the courage to get up, feeling overwhelmed and lost.\", \"rewritten_form_fear\": \"I couldn't find the courage to get up, my heart racing in fear of what awaited me.\", \"rewritten_form_anger\": \"I was so frustrated that I couldn't summon the courage to get up and face the day!\", \"rewritten_form_surprise\": \"I was shocked that I couldn't summon the courage to just get up and go!\", \"rewritten_form_disgust\": \"I felt a deep disgust at myself for not being able to summon the courage to get up.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a feeling of being unable to take action, lacking any motivational or optimistic sentiment found in the joyful version. Therefore, it lacks the positive tone needed for joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects an emotional struggle with courage, aligning closely with feelings of sadness which emphasize feeling overwhelmed. This reflects a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is an implicit sense of fear in the original sentence, relating to the inability to get up due to concern about what lies ahead, but it doesn't explicitly showcase the heart racing element described in the rewritten fear sentence. This suggests a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not contain the frustration or anger present in the rewritten version. Instead, it reflects a more passive state of difficulty, indicating a very low connection with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks the shocking reaction present in the surprise version, which implies a sudden realization or unexpected inability. Consequently, it does not align well with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

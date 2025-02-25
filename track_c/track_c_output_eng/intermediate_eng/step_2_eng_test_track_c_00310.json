@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I opened my mouth to reply, but there was a loud pop, and then, slowly, the bus came to a stop.\", \"rewritten_form_joy\": \"I opened my mouth to reply, but then there was an unexpected pop, and wow, the bus finally came to a stop!\", \"rewritten_form_sadness\": \"I opened my mouth to reply, but then a loud pop shattered the moment, and sadly, the bus came to a stop.\", \"rewritten_form_fear\": \"I opened my mouth to reply, but there was a terrifying loud pop, and then, dreadfully, the bus came to a stop.\", \"rewritten_form_anger\": \"I opened my mouth to reply, but out of nowhere, there was a loud pop, and frustratingly, the bus came to a stop.\", \"rewritten_form_surprise\": \"I opened my mouth to reply, but suddenly there was a loud pop, and surprisingly, the bus came to a stop!\", \"rewritten_form_disgust\": \"I opened my mouth to reply, but then there was a gross loud pop, and reluctantly, the bus came to a stop.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a situation with a loud pop without expressing excitement or happiness. The rewritten joy sentence adds an enthusiastic tone with words like 'wow' and 'finally', which are not present in the original, indicating a lack of joy in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original does not convey sadness but describes a moment leading to a stop. The rewritten sadness version incorporates words like 'shattered' and 'sadly' to infuse sorrow, which is absent in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence hints at a surprising moment but does not clearly convey fear. The fear rewrite uses 'terrifying' and 'dreadfully', heightening the sense of fear that the original does not possess.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not embody anger; it is more observational. The rewritten anger version introduces frustration with 'out of nowhere' and 'frustratingly', which do not resonate with the original tone at all.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original describes an unexpected event (the pop) and the bus stopping, which implies a certain level of surprise. The rewritten surprise effectively uses 'suddenly' and 'surprisingly', aligning well with the original feeling of being taken aback by the unfolding situation.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

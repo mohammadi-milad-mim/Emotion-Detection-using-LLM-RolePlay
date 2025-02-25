@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"So there's that...\", \"rewritten_form_joy\": \"So there's that, how wonderful!\", \"rewritten_form_sadness\": \"So there's that, it's just so disappointing...\", \"rewritten_form_fear\": \"So there's that, what does it mean for us...?\", \"rewritten_form_anger\": \"So there's that, can you believe this?\", \"rewritten_form_surprise\": \"So there's that, I did not see that coming!\", \"rewritten_form_disgust\": \"So there's that, it's absolutely revolting...\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks an explicit positive sentiment that would convey joy. It is neutral and does not express happiness or delight as suggested in the joy rewrite.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not show any disappointment or sadness; it appears neutral. The sad rewrite suggests a strong feeling of disappointment which is not present in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence implies uncertainty but does not evoke a strong sense of fear. The fear rewrite suggests a significant anxiety about implications that the original lacks.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express any anger or frustration. Although the anger rewrite shows incredulity and annoyance, the original is too neutral to evoke anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence has a subtle implication of something unexpected but lacks a strong emotional response to evoke surprise. The surprise rewrite indicates a stronger emotional reaction than what is conveyed in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my heart doesn't know what to feel.\", \"rewritten_form_joy\": \"my heart is bursting with so many wonderful feelings!\", \"rewritten_form_sadness\": \"my heart is heavy and lost in confusion.\", \"rewritten_form_fear\": \"my heart is racing, unsure of what might happen next.\", \"rewritten_form_anger\": \"my heart is tangled in this frustration, unable to settle!\", \"rewritten_form_surprise\": \"my heart is caught off guard, overwhelmed by unexpected emotions!\", \"rewritten_form_disgust\": \"my heart feels repulsed and unsettled by this confusion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys uncertainty and confusion, which contrasts sharply with the joyful expression of a bursting heart with wonderful feelings. There is no indication of joy in the original, so the alignment is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence closely aligns with the sadness rewritten version, as both express a sense of confusion and emotional heaviness. The language reflects a deep emotional struggle, indicating a high degree of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence suggests emotional turmoil, which can imply a sense of fear or anxiety about the unknown. However, it does not explicitly convey racing emotions, limiting the alignment to a moderate level.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While there's a sense of inner turmoil in the original sentence, it does not strongly evoke anger. The rewritten version implies frustration, which is more intense than what's conveyed in the original. Thus, the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The idea of a heart being caught off guard suggests an element of surprise. However, the original sentence does not imply something unexpected; rather, it expresses confusion over unclear feelings. Therefore, the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

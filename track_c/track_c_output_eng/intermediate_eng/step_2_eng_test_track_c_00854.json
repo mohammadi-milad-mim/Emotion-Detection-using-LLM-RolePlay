@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Fast forward two weeks, cops are combing through the small forest that is behind our backyard fence.\", \"rewritten_form_joy\": \"Fast forward two weeks, and the cops are joyfully combing through the small forest that is behind our backyard fence, determined to find something wonderful.\", \"rewritten_form_sadness\": \"Fast forward two weeks, and the cops are sadly combing through the small forest that is behind our backyard fence, searching for answers that seem so far away.\", \"rewritten_form_fear\": \"Fast forward two weeks, and the cops are nervously combing through the small forest behind our backyard fence, each rustle making my heart race.\", \"rewritten_form_anger\": \"Fast forward two weeks, and the cops are angrily combing through the small forest behind our backyard fence, as if they're expecting to find incompetence everywhere.\", \"rewritten_form_surprise\": \"Fast forward two weeks, and to my surprise, the cops are combing through the small forest behind our backyard fence, investigating the unexpected.\", \"rewritten_form_disgust\": \"Fast forward two weeks, and the cops are disgustingly combing through the small forest that is behind our backyard fence, as if they have nothing better to do.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions cops combing through a forest, which does not inherently convey joy. The rewritten joy version adds the notion of joyfulness and determination to find something wonderful, altering the emotional tone significantly. Therefore, the original sentence aligns weakly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests a searching effort by the cops, which could imply loss or concern, similar to the sadness in the rewritten sentence. However, it lacks explicit emotional content pointing to sadness or a feeling of despair, leading to a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence describes cops searching a forest, which could evoke a sense of uncertainty or danger in context, although it doesn't explicitly state fear. The rewritten version captures that heightened tension with fear, creating a slight alignment, but it is not directly stated in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence describes an action, it lacks any sign of anger or frustration. The rewritten anger version suggests a context of incompetence and agitation, which is not present in the original, resulting in low alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not provide an element of surprise; it states a fact about the cops searching. The rewritten surprise sentence introduces the idea of unexpectedness, creating a discrepancy between the original and the rewritten. Thus, the original does not align with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

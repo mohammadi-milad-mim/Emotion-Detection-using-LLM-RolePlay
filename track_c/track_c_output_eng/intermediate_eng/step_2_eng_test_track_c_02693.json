@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I managed to throw a strike to the guy after that, but it didn't feel right, which prompted me to turn to Stropes and say, my arm is dead.\", \"rewritten_form_joy\": \"I managed to throw a strike to the guy after that, and even though it felt a bit off, I turned to Stropes with a grin and said, my arm is dead!\", \"rewritten_form_sadness\": \"I managed to throw a strike to the guy after that, but it just didn't feel right at all, and I turned to Stropes and said, my arm is dead, feeling defeated.\", \"rewritten_form_fear\": \"I managed to throw a strike to the guy after that, but it didn't feel right, which made me uneasy. I turned to Stropes and said, my arm is dead, worried about what might happen next.\", \"rewritten_form_anger\": \"I managed to throw a strike to the guy after that, but it felt completely wrong, which made me slam my words at Stropes: my arm is dead!\", \"rewritten_form_surprise\": \"I managed to throw a strike to the guy after that, but unexpectedly, it didn\\u2019t feel right! I turned to Stropes and exclaimed, my arm is dead!\", \"rewritten_form_disgust\": \"I managed to throw a strike to the guy after that, but it felt so off that I turned to Stropes and said in disgust, my arm is dead.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence communicates a sense of achievement in throwing a strike but contrasts it with a feeling of discomfort. The joy version emphasizes excitement and positivity with a grin, which is not present in the original. Overall, the tone leans more toward discomfort than joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence acknowledges discomfort in the action of throwing a strike, which aligns well with the sadness version that depicts feeling defeated and emphasizes disappointment. There is a clear sense of sadness stemming from the discomfort expressed in both the original and rewritten versions.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original conveys unease about the strike felt incorrectly, which aligns closely with the fear version that brings out worry about future consequences. There's a hint of anxiety in the original, supporting a moderate degree of fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original shows discomfort, it does not convey outright anger. The anger version intensifies the discomfort into a form of frustration resulting in a more aggressive tone. The original does not reach that level of anger, hence the score is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement expresses something unexpected regarding the way the strike felt, aligning somewhat with the surprise version, but it does not convey a sense of shock or excitement that the surprise version displays. Therefore, the alignment is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

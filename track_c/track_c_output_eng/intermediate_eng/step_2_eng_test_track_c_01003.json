@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The man was baffled.\", \"rewritten_form_joy\": \"The man was utterly delighted and amazed!\", \"rewritten_form_sadness\": \"The man was deeply confused and lost.\", \"rewritten_form_fear\": \"The man was incredibly frightened and bewildered.\", \"rewritten_form_anger\": \"The man was infuriated by the confusion.\", \"rewritten_form_surprise\": \"The man was completely taken aback!\", \"rewritten_form_disgust\": \"The man was disgusted and appalled by it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy, as it describes a state of confusion rather than delight. The rewritten version emphasizes positive emotions that are absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence suggests confusion, it does not explicitly express deep sadness. The rewritten form adds a layer of emotional suffering that is not present in 'baffled.'",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence hints at a state of confusion but lacks strong fear elements. The rewritten form exaggerates the emotional state into actual fear, which is not indicated in the original text.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence presents a state of confusion rather than anger. The rewritten form introduces an emotional response of infuriation, which is absent in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence implies surprise through the word 'baffled,' but it is not strong enough to match the high emotional intensity in the rewritten form that conveys being 'completely taken aback.'",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

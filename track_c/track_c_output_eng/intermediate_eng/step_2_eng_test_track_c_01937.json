@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We still felt terrified.\", \"rewritten_form_joy\": \"We were filled with excitement!\", \"rewritten_form_sadness\": \"We felt so deeply scared.\", \"rewritten_form_fear\": \"We were absolutely paralyzed with terror.\", \"rewritten_form_anger\": \"We were furious with fear!\", \"rewritten_form_surprise\": \"We couldn't believe how terrified we still felt!\", \"rewritten_form_disgust\": \"We felt utterly repulsed by our own terror.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses fear rather than joy, as it indicates a feeling of terror rather than excitement or happiness.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does convey a sense of fear which can be tied to sadness, but it primarily expresses terror rather than a deep feeling of sadness. Therefore, the alignment is weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence directly states that the speaker felt terrified, which strongly aligns with the rewritten version that highlights being paralyzed with terror.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While fear can lead to anger, the original sentence does not express any anger itself; rather, it purely states a feeling of terror. Thus, the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence conveys a feeling of ongoing terror but does not inherently express surprise about that feeling; its focus is on the fright itself rather than the unexpected nature of it. Thus, the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

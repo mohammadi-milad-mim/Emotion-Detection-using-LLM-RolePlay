@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I *never* saw him move.\", \"rewritten_form_joy\": \"I was so delighted; I *never* saw him move at all!\", \"rewritten_form_sadness\": \"It's heartbreaking that I *never* saw him move.\", \"rewritten_form_fear\": \"It's terrifying that I *never* saw him move.\", \"rewritten_form_anger\": \"I can't believe it; I *never* saw him move.\", \"rewritten_form_surprise\": \"I was shocked; I *never* saw him move!\", \"rewritten_form_disgust\": \"Ugh, I *never* saw him move. How unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys an absence of movement without any positive sentiment. While the rewritten joyful version expresses delight, the original does not imply any happiness or joy, resulting in a low alignment.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sad version reflects a sense of loss regarding the lack of movement. The original sentence can convey a feeling of disappointment or missed opportunities, which slightly aligns with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version emphasizes a terrifying aspect of not seeing movement, which isn't present in the original. The original is more neutral and does not evoke fear, leading to no alignment with this emotion.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger version suggests frustration or disbelief regarding the lack of movement, which could resonate with a sense of irritation in the original. This implies some level of annoyance, but it's not strongly expressed in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version strongly portrays shock about not seeing movement. The original could imply a level of astonishment, but it does not explicitly convey that emotion, resulting in only a moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

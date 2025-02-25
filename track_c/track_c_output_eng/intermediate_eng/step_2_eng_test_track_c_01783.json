@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I slept better this night because it wasn't as cold although I had burned my face and shoulders from lack of adequate sunblock so that was a bit painful.\", \"rewritten_form_joy\": \"I had a surprisingly wonderful sleep last night since it wasn\\u2019t as cold, even though my face and shoulders have some painful sunburn from forgetting the sunblock!\", \"rewritten_form_sadness\": \"I managed to sleep a little better last night since it was warmer, but the sunburn on my face and shoulders still hurts a lot.\", \"rewritten_form_fear\": \"I slept a bit better last night because it wasn't too cold, but I\\u2019m worried about how painful the sunburn on my face and shoulders is going to get.\", \"rewritten_form_anger\": \"I finally slept better last night because it was warmer, but it\\u2019s frustrating that I burned my face and shoulders so badly from not using enough sunblock!\", \"rewritten_form_surprise\": \"I can't believe I slept better last night since it was warmer, but I was shocked to find that my face and shoulders were burned from the sun!\", \"rewritten_form_disgust\": \"I slept better last night since it wasn\\u2019t as cold, but I\\u2019m so disgusted with myself for burning my face and shoulders from not applying enough sunblock.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence doesn't convey strong feelings of joy; it mentions a better night's sleep but is overshadowed by the pain from sunburn. Thus, the tone appears more neutral with a hint of gratitude for warmth, rather than joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence acknowledges that while the sleep was better due to warmer conditions, it also explicitly mentions the pain from sunburn. This recognition of pain contributes to a feeling of sadness, aligning moderately with the rewritten sadness sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence suggests a concern about the sunburn without explicitly stating fear. While there is a hint of worry about the pain, it doesn't strongly convey fear, making it align with a lower intensity.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence notes a feeling of pain related to sunburn but does not express any anger or frustration about the situation. However, the idea of neglecting sunblock does imply a minor sense of frustration, but it's not pronounced enough to elevate the intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is a minor element of surprise in the context of sleeping better due to warmth, but the surprise element over the sunburn itself isn't distinctly conveyed in the original. Thus, the connection to surprise remains weak.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

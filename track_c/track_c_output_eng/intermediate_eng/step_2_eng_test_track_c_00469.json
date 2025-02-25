@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yes, some of the veggies went into the bag and some to my belly.\", \"rewritten_form_joy\": \"Absolutely! Some of the veggies went into the bag, and I happily devoured some too!\", \"rewritten_form_sadness\": \"I guess some of the veggies went into the bag, and I reluctantly ate a few myself.\", \"rewritten_form_fear\": \"I can't believe it, but some of the veggies went into the bag, and I\\u2019m just hoping I don\\u2019t regret eating the rest.\", \"rewritten_form_anger\": \"I can't believe it! Some of the veggies got tossed into the bag, and I just had to eat some out of frustration!\", \"rewritten_form_surprise\": \"Wow! Some of the veggies actually went into the bag, and I was surprised to find I had eaten some too!\", \"rewritten_form_disgust\": \"Ugh, some of those veggies ended up in the bag, and honestly, I could barely force some into my belly.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence shows contentment with eating vegetables, which aligns well with the joyful tone of the rewritten joy version that emphasizes happiness and enjoyment in eating.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original implies a neutral action towards the veggies, but the rewritten sadness version suggests reluctance which is not present in the original. This suggests a lower alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original has a casual tone toward eating veggies, whereas the fear version introduces apprehension about regretting the action. The original does not convey any fear, so the alignment is low.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten anger version implies frustration not present in the original sentence, which conveys a more neutral tone, showing little to no anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence reflects a casual acknowledgment of eating veggies, but there is no indication of surprise. The surprise version infers astonishment, which the original does not align with.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

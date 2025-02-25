@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My foot hurts.\", \"rewritten_form_joy\": \"My foot hurts, but I can't help but smile at how much I\\u2019ve been enjoying my activities lately!\", \"rewritten_form_sadness\": \"My foot hurts, and it just adds to the weary heaviness I\\u2019m feeling today.\", \"rewritten_form_fear\": \"My foot hurts, and I can\\u2019t shake the worry that something might be seriously wrong.\", \"rewritten_form_anger\": \"My foot hurts, and I am so frustrated that this keeps getting in the way of what I want to do!\", \"rewritten_form_surprise\": \"My foot hurts! I didn\\u2019t see that coming after all the fun I had last weekend.\", \"rewritten_form_disgust\": \"My foot hurts, and it\\u2019s absolutely revolting that something so trivial can cause me so much discomfort.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a straightforward physical experience without any positive sentiment. It contrasts with the joy rewritten version, which includes a positive reflection on activities despite the pain. Therefore, it does not align closely with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks emotional depth or a sense of despair. While the sadness rewritten version builds on the pain to express a larger emotional burden, the original is less complex. There's some alignment, but it remains mild.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey concern or suspense about the pain's implications. The rewritten fear version evokes a sense of anxiety about a potential serious issue, which the original does not imply. Thus, there's little alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original statement is neutral and lacks any expression of frustration or rage. The rewritten anger version draws on irritation about the pain interfering with activities, which is not present in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is straightforward and does not provide any unexpected elements, while the rewritten surprise version introduces an unanticipated twist on the experience of pain. Hence, it does not align with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

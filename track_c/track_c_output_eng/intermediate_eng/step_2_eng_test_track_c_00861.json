@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I said in my heart, '' This too is meaningless. ''\", \"rewritten_form_joy\": \"I said in my heart, '' This too is just a little bump in the road! ''\", \"rewritten_form_sadness\": \"I said in my heart, '' This too feels so utterly meaningless. ''\", \"rewritten_form_fear\": \"I said in my heart, '' This too might lead to something terrible. ''\", \"rewritten_form_anger\": \"I said in my heart, '' This too is infuriatingly meaningless! ''\", \"rewritten_form_surprise\": \"I said in my heart, '' This too is unexpectedly meaningless! ''\", \"rewritten_form_disgust\": \"I said in my heart, '' This too is just disgustingly meaningless. ''\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of futility or meaninglessness, which contrasts with the hopeful tone of the joy rewritten sentence. This indicates a low degree of joy in the original context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates a feeling of meaninglessness, aligning closely with the sadness rewritten form that enhances the emotion, suggesting an underlying sorrow about life's lack of meaning.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "While the original implies a sense of futility, it doesn't express dread or anxiety about potential negative outcomes, which the fear rewritten sentences do, leading to a lower alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence has a neutral tone regarding meaninglessness. However, the anger rewritten form expresses a stronger emotional response, indicating some frustration but not to a high degree.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not convey surprise; it is more resigned to the meaninglessness aspect. The surprise rewritten form suggests a reaction to something unexpected, which does not align with the original context.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

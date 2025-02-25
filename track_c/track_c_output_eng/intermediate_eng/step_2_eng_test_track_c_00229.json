@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I will never forget that feeling.\", \"rewritten_form_joy\": \"I will always cherish that incredible feeling!\", \"rewritten_form_sadness\": \"I will forever mourn the loss of that feeling.\", \"rewritten_form_fear\": \"I can never shake off that terrifying feeling.\", \"rewritten_form_anger\": \"I will always rage against that awful feeling.\", \"rewritten_form_surprise\": \"I will always remember how astonishing that feeling was!\", \"rewritten_form_disgust\": \"I will never erase that repulsive feeling from my mind.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of strong memory but does not convey the joy or positivity that is present in the rewritten joy sentence. There is no indication of cherishing or positivity about the feeling, so the alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not explicitly express sadness or loss, but there is a somber tone to the phrase 'I will never forget', which suggests some level of attachment; however, it lacks the deep sorrow present in the rewritten version.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not communicate fear. While it reflects a strong attachment to a memory, it lacks the element of terror or anxiety highlighted in the rewritten fear sentence, indicating minimal alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no anger conveyed in the original sentence. It reflects merely a sense of remembrance without the emotional intensity of rage present in the rewritten anger sentence, resulting in no alignment with the theme of anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not emphasize astonishment or a surprising element about the feeling, while the rewritten surprise sentence captures that element clearly. Thus, the intensity of surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

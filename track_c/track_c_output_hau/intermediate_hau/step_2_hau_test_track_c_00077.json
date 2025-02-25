@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Sosai makowa man u bata tsoro karawa da kowa, man united we stand \\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\", \"rewritten_form_joy\": \"Sosai makowa man u bata tsoro karawa da kowa! Man united we stand and it's so uplifting! \\ud83d\\udc96\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\", \"rewritten_form_sadness\": \"Sosai makowa man u bata tsoro karawa da kowa, it's a tough time, but man united we stand. \\ud83d\\udc94\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\", \"rewritten_form_fear\": \"Sosai makowa man u bata tsoro karawa da kowa, I can't help but feel apprehensive, but man united we stand... \\ud83d\\udca5\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\", \"rewritten_form_anger\": \"Sosai makowa man u bata tsoro karawa da kowa! It's infuriating, but man united we stand \\ud83d\\udca2\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\", \"rewritten_form_surprise\": \"Sosai makowa man u bata tsoro karawa da kowa! I didn't expect this, but man united we stand! \\ud83c\\udf1f\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\", \"rewritten_form_disgust\": \"Sosai makowa man u bata tsoro karawa da kowa, it's frustrating and I can't believe this! Man united we stand... \\ud83e\\udd22\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\\ud83d\\udcaa\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence has an exuberant spirit due to the repetition of 'man united we stand' which provides a rallying cry suggesting unity and upliftment. However, it lacks the explicit positive emotion found in the rewritten joy sentence that emphasizes being uplifting. Therefore, I would assign a moderate intensity score.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence suggests a degree of struggle with the phrase 'bata tsoro karawa da kowa', but does not explicitly communicate deep sorrow or a tough emotional state, as found in the rewritten sadness sentence. As a result, the intensity score for sadness should be low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Though the original contains a tone of apprehension, the lack of clear fear and anxiety in its phrasing makes it less aligned with the rewritten fear sentence that indicates stronger feelings of apprehension. Thus, I would assign a low intensity score here.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original expression evokes a sense of frustration but does not convey an intense level of anger which is evident in the rewritten anger sentence that includes explicit expressions of infuriation. Therefore, the alignment is moderate, meriting a moderate score.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not contain an element of surprise; it presents more of a statement on unity in adversity. Hence, it does not align closely with the enthusiastic expression of unexpectedness from the rewritten surprise sentence, resulting in a score of low intensity.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The language in the original sentence does not explicitly suggest disgust or repulsion. While there may be frustration, it doesn't reach the level of disgust described in the rewritten sentence. This results in a low alignment, warranting a low intensity score.",
+        "disgust_intensity": 1
+    }
+}

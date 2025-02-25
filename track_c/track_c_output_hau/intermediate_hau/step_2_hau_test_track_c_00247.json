@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yaron yana shan maginar sa\", \"rewritten_form_joy\": \"Yaron yana shan maginar sa da murna a zuciyar sa!\", \"rewritten_form_sadness\": \"Yaron yana shan maginar sa, amma a cikin hakan, akwai wani zafi.\", \"rewritten_form_fear\": \"Yaron yana shan maginar sa, yana jin tsoro a kowane shan.\", \"rewritten_form_anger\": \"Yaron yana shan maginar sa, ina jin takaici da wannan hali.\", \"rewritten_form_surprise\": \"Yaron yana shan maginar sa, ban ta\\u0253a tsammanin hakan ba!\", \"rewritten_form_disgust\": \"Yaron yana shan maginar sa, yana da ban tsoro da wannan!.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence simply states that 'Yaron yana shan maginar sa', which does not convey any joyful sentiments. In contrast, the joy rewritten version adds a note of happiness with 'da murna a zuciyar sa!', indicating a strong emotional uplift. Thus, the original sentence does not align with joy at all.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness version implies a deeper emotional state with 'amma a cikin hakan, akwai wani zafi', suggesting pain or hurt associated with the act mentioned in the original. The original itself lacks this emotional depth, leading to a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The rewritten form of fear indicates a sense of trepidation during the act of drinking 'yana jin tsoro a kowane shan'. The original sentence does not reflect this apprehension, therefore, it aligns poorly with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger version presents a strong negative emotion towards the habitual action of the subject ('ina jin takaici'), suggesting discontent. The original text does not convey any anger, leading to a low alignment with this feeling.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version expresses unexpectedness with 'ban ta'a tsammanin hakan ba!', which the original sentence does not capture. The original just states a fact and does not imply any surprise, resulting in no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust rewriting includes an element of shame or horror ('yana da ban tsoro da wannan!'). However, the original sentence does not have any negativity related to disgust, hence the alignment is weak.",
+        "disgust_intensity": 1
+    }
+}

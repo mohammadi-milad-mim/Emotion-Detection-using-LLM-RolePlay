@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Abincin nan duk yayi yami, kana sa hannu zaka ji wani yau\\u0199i ya biyo \\u01b4an yatsunka\", \"rewritten_form_joy\": \"Abincin nan duk yayi yami, kana sa hannu zaka ji wani yau\\u0199i mai kyau ya biyo \\u01b4an yatsunka!\", \"rewritten_form_sadness\": \"Abincin nan duk yayi yami, kana sa hannu zaka ji wani yau\\u0199i mai ra\\u0257a\\u0257i ya biyo \\u01b4an yatsunka.\", \"rewritten_form_fear\": \"Abincin nan duk yayi yami, kana sa hannu zaka ji wani yau\\u0199i ya biyo \\u01b4an yatsunka, ka kiyayi!\", \"rewritten_form_anger\": \"Abincin nan duk yayan, kana sa hannu zaka ji wani yau\\u0199i ya biyo \\u01b4an yatsunka, me ya sa hakan?\", \"rewritten_form_surprise\": \"Abincin nan duk yayi yami, kana sa hannu zaka ji wani yau\\u0199i ya biyo \\u01b4an yatsunka! Kai, yanayi ne mai ban mamaki!\", \"rewritten_form_disgust\": \"Abincin nan duk yayi yami, kana sa hannu zaka ji wani yau\\u0199i mai ban tsoro ya biyo \\u01b4an yatsunka.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses an anticipation of experiencing something upon reaching for the food, which can be interpreted as a potentially positive or joyful experience. However, the tone lacks exuberance or a clear indication of happiness present in the joy rewritten form, which specifically mentions a 'mai kyau' (good) taste.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness rewritten form introduces an aspect of disappointment with 'mai ra'ayi' (bad taste), which is not present in the original. The original sentence doesn't evoke a sense of sorrow or loss, remaining neutral instead.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The fear rewritten form suggests a need for caution with 'ka kiyayi' (be careful), which adds a layer of apprehension not evident in the original. The original lacks any direct indication of danger or fear, suggesting a neutral state.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Anger is implied in the rewritten form through the questioning of why something is amiss with the word 'me ya sa hakan?' (why is that?). The original sentence does not express frustration or anger; it simply states a sensory experience.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise rewritten form emphasizes an unexpected or amazing aspect. The original does imply something unusual happening but does not express the level of astonishment conveyed in the surprise form. It is intriguing but does not elicit surprise strongly.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust rewritten form includes 'mai ban tsoro' (terrifying), which introduces a negative sensory appraisal that isn\u2019t suggested in the original. The original does not convey repulsion or discomfort that would align with disgust.",
+        "disgust_intensity": 0
+    }
+}

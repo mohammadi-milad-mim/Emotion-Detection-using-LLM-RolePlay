@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This put almost all the strain on my shoulders, particularly the left shoulder, which experienced very sharp pain.\", \"rewritten_form_joy\": \"I felt a little strain on my shoulders, especially my left shoulder, which occasionally throbbed a bit.\", \"rewritten_form_sadness\": \"This burden settled heavily on my shoulders, particularly the left, which ached with sharp pain.\", \"rewritten_form_fear\": \"This overwhelming pressure was all on my shoulders, with my left shoulder feeling a sharp pain, making me worry what might happen next.\", \"rewritten_form_anger\": \"This unfair load was crushing down on my shoulders, especially my left shoulder, which hurt with a sharp pain that frustrated me.\", \"rewritten_form_surprise\": \"I didn\\u2019t expect this strain to land mostly on my shoulders, particularly the left, which suddenly shot with sharp pain.\", \"rewritten_form_disgust\": \"This ridiculous strain was thrown onto my shoulders, especially the left, making me feel a sharp pain that was utterly unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a significant level of strain and sharp pain, which is quite the opposite of a joyful or light-hearted experience. The rewritten joy sentence indicates only a little strain and occasional throb, suggesting a much lighter emotional state versus the original's intensity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence's description of strain and sharp pain aligns closely with the sadness version, which captures the heaviness and discomfort. The use of 'burden' and 'ached' also evokes a sense of deep sorrow, directly correlating with the original emotions expressed.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While there is an implication of worry in the fear version, the original sentence does not convey a sense of impending doom. It focuses more on the physical sensations than on the anxious emotional response. Thus, the alignment with fear is moderate but not overwhelming.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence conveys frustration stemming from the physical strain and pain in the left shoulder. The rewritten anger version aligns well since it adds an element of unfairness to the burden, enhancing that feeling of being crushed by something unjust, which parallels the original intensity of emotion.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original mentions unexpected strain that isn't surprising; it's expected considering the context. While the surprise rewrite suggests an element of shock at the experience, the original lacks that unexpected twist; hence the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

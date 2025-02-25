@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My cheeks more red than before.\", \"rewritten_form_joy\": \"My cheeks are so wonderfully red now!\", \"rewritten_form_sadness\": \"My cheeks feel even redder than before, as if they carry my sadness.\", \"rewritten_form_fear\": \"My cheeks are unusually red now, and it makes me anxious.\", \"rewritten_form_anger\": \"My cheeks are redder than ever, fueled by my frustration.\", \"rewritten_form_surprise\": \"Wow, my cheeks are much redder than they were before!\", \"rewritten_form_disgust\": \"Ugh, my cheeks are even redder now, and I can't stand it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a change in skin color but does not convey the same level of enthusiasm or delight as the rewritten joy sentence. While there is a hint of positivity in the redness, it does not strongly align with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not explicitly suggest sadness, though the mention of red cheeks could imply some emotional weight. The rewritten version connects redness with sadness more directly, which the original lacks.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not evoke fear; it merely states an observable change. The rewritten version creates a stronger association with anxiety. There is a slight hint of discomfort but not enough to define fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The redness could imply anger, but the original sentence does not express frustration or anger explicitly. The rewritten anger version conveys a stronger emotional state than the original does.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks the vibrant astonishment that the rewritten version conveys. While there is a subtle element of change, it does not match the level of surprise implied in the rewritten form.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

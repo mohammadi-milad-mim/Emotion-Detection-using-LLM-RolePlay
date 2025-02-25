@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I pulled it away, probably a bit too violently.\", \"rewritten_form_joy\": \"I pulled it away, maybe with a little too much excitement!\", \"rewritten_form_sadness\": \"I pulled it away, perhaps a bit too harshly, and it makes me feel bad.\", \"rewritten_form_fear\": \"I pulled it away, possibly a bit too violently, and it scared me.\", \"rewritten_form_anger\": \"I yanked it away, definitely a bit too violently, and now I'm frustrated.\", \"rewritten_form_surprise\": \"I pulled it away, and wow, I think I did it a bit too violently!\", \"rewritten_form_disgust\": \"I pulled it away, probably a bit too violently, which honestly feels kind of gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a physical action that could be interpreted as somewhat clumsy rather than joyful. There's a contrast in tone with the rewritten joy sentence, which adds excitement rather than the mild regret suggested by the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence contains a hint of regret due to the use of 'probably a bit too violently', which aligns somewhat with the added emotional weight in the sadness rewrite, but it does not strongly convey sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence hints at potential fear because of the violent action described. However, the fear rewrite introduces an emotion that is not explicitly present in the original, leading to a moderate but still low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The word 'violently' in the original can imply anger, but it lacks the direct expression of frustration shown in the anger rewrite. Nonetheless, there is a connection to the frustration felt with the action done too forcefully.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The use of the word 'probably' in the original signals an unexpected outcome, fitting with a sense of surprise, but it does not express the same level of enthusiasm or incredulity as the rewritten sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

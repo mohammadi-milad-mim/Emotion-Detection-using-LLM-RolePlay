@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My stomach was burning, and I came home and curled up in a ball and fell asleep.\", \"rewritten_form_joy\": \"My stomach was burning, so I came home, curled up in a ball, and drifted off to sleep, feeling a sense of relief.\", \"rewritten_form_sadness\": \"My stomach was burning, and I came home, curled up in a ball, and fell asleep, hoping to escape the discomfort.\", \"rewritten_form_fear\": \"My stomach was burning, and when I got home, I curled up in a ball, falling asleep in panic about what might be wrong.\", \"rewritten_form_anger\": \"My stomach was burning, and I came home and curled up in a ball, falling asleep out of frustration with this pain.\", \"rewritten_form_surprise\": \"My stomach was burning unexpectedly, so I came home, curled up in a ball, and fell asleep, shocked by how tired I felt.\", \"rewritten_form_disgust\": \"My stomach was burning, and I came home and curled up in a ball, falling asleep while feeling sickened by it all.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "While the original sentence indicates discomfort and implies a need for rest, it does not express any sense of relief or contentment that characterizes joy. The rewritten joy form adds a sense of relief, which is absent in the original text.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has a tone of discomfort and a retreat into sleep, which resonates with the sadness rewritten form that expresses a hope to escape discomfort. This emotional state aligns more closely than joy, as it implies a need for solace due to pain.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence suggests a response to physical discomfort but does not convey panic or fear about what might be wrong, as represented in the rewritten form for fear. Therefore, it lacks the intense emotion of fear implied in the rewrite.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original mentions physical pain but does not communicate frustration or any strong reaction to it that would warrant the higher intensity of anger as provided in the rewritten form. Although there is discomfort, it doesn't seem to traverse into outright anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not indicate any unexpectedness or shock, which the surprise rewrite heavily emphasizes. The lack of an unexpected element in the experience presented in the original statement shows misalignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

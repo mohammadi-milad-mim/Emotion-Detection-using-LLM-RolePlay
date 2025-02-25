@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It was around ten o'clock at night and I decided I wanted ice cream.\", \"rewritten_form_joy\": \"It was around ten o'clock at night, and I joyfully decided I wanted ice cream!\", \"rewritten_form_sadness\": \"It was around ten o'clock at night, and I sadly decided I wanted ice cream, but I knew I shouldn't.\", \"rewritten_form_fear\": \"It was around ten o'clock at night, and I hesitated, thinking about how I wanted ice cream, but worried it was too late to go out.\", \"rewritten_form_anger\": \"It was around ten o'clock at night, and I was so frustrated that I decided I wanted ice cream when I knew the shops might be closed.\", \"rewritten_form_surprise\": \"It was around ten o'clock at night, and to my surprise, I suddenly decided I wanted ice cream!\", \"rewritten_form_disgust\": \"It was around ten o'clock at night and I reluctantly thought about wanting ice cream, ugh why would I crave that so late?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence contains a simple expression of wanting ice cream, which can suggest a light-hearted or happy tone. However, without additional emotional qualifiers, it doesn\u2019t strongly convey joy as the rewritten joyful version does.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not imply any sense of regret or sadness, differing from the rewritten version, which explicitly mentions a sad decision. The original lacks the emotional weight associated with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not indicate hesitation or worry about going out late, which are present in the fear version. It simply states the desire for ice cream as a decision without any fear involved. Therefore, it aligns very minimally with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not display any frustration or anger regarding the time or the desire for ice cream, contrasting with the rewritten angry version. It remains neutral in tone without conveying anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks an element of surprise or suddenness. The decision appears straightforward without any unexpected emotions. Thus, it aligns minimally with the surprise emotion compared to the more lively rewritten version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

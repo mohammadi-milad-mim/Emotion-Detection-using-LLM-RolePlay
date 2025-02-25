@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"What he saw was a hotel bedroom, like his, and in the corner was a woman whose skin was completely white.\", \"rewritten_form_joy\": \"What he saw was a hotel bedroom, just like his, and in the corner was a striking woman with completely white skin!\", \"rewritten_form_sadness\": \"What he saw was a hotel bedroom, just like his, and in the corner was a lonely woman whose skin was completely white.\", \"rewritten_form_fear\": \"What he saw was a hotel bedroom, like his, and in the corner was a pale woman whose skin was completely white, sending a chill down his spine.\", \"rewritten_form_anger\": \"What he saw was a hotel bedroom, like his, and in the corner stood a woman whose skin was completely white, and it just made him furious!\", \"rewritten_form_surprise\": \"What he saw was a hotel bedroom, like his, and in the corner there was a woman with completely white skin\\u2014he didn't expect that at all!\", \"rewritten_form_disgust\": \"What he saw was a hotel bedroom, like his, and in the corner was a woman whose skin was completely white, and it made his stomach turn.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a scene neutrally without any positive feelings or excitement. The rewritten version infuses joy with the use of 'striking' and an exclamation point, creating a contrast with the original's lack of positive emotion.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not imply loneliness or sadness as the woman is not depicted as being alone or distressed. Hence, there is no alignment with the sadness rewritten sentence's emotional tone.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence presents a woman with white skin, but it does not explicitly convey fear or a sense of danger. The addition of 'sending a chill down his spine' in the fear version represents an exaggerated sense of fear that is not captured in the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any explicit indication of anger or frustration regarding the woman or the situation. The rewritten version expresses a strong reaction ('made him furious') that does not exist in the original, indicating low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence reveals an unexpected detail about the woman\u2019s appearance, which could evoke a sense of surprise. While this aligns somewhat with the surprise rewrite, it doesn't have the same impact, as the element of surprise is not strongly emphasized.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Better late then never!\", \"rewritten_form_joy\": \"I'm so glad it's finally here, better late than never!\", \"rewritten_form_sadness\": \"I wish it had come sooner, but better late than never, I guess.\", \"rewritten_form_fear\": \"I hope this isn\\u2019t too late\\u2014better late than never, right?\", \"rewritten_form_anger\": \"How frustrating this delay has been, but better late than never!\", \"rewritten_form_surprise\": \"Wow, it actually happened! Better late than never!\", \"rewritten_form_disgust\": \"I can\\u2019t believe it took this long; better late than never, but seriously?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses an optimistic sentiment about timing, similar to the rewritten version that conveys happiness about the arrival of something, suggesting a positive outcome despite the delay.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The reference to wishing something had come sooner adds a layer of regret to the understanding of 'better late than never,' indicating a recognition of lost opportunity, which aligns with a sense of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The rewritten version expresses concern about timing and the possibility that it may negatively impact the situation, hinting at anxiety which is not strongly expressed in the original but is somewhat present.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The mention of frustration in the rewritten version indicates strong feelings about the delay. The original acknowledges a delay but does not convey strong anger, making this a moderate alignment.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprised response about something finally happening reflects a reaction that could apply to the original sentence, suggesting that the outcome, despite the wait, was unexpected and noteworthy.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

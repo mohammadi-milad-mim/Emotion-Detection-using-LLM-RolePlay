@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I have to close my eyes and breath.\", \"rewritten_form_joy\": \"I can't wait to close my eyes and take a deep breath of joy!\", \"rewritten_form_sadness\": \"I have to close my eyes and breathe, trying to hold back my tears.\", \"rewritten_form_fear\": \"I have to close my eyes and breathe, hoping everything will be alright.\", \"rewritten_form_anger\": \"I have to close my eyes and breathe, fighting against this frustration.\", \"rewritten_form_surprise\": \"I have to close my eyes and breathe; I can't believe this is happening!\", \"rewritten_form_disgust\": \"I have to close my eyes and breathe, trying to shake off this nauseating feeling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral action of closing eyes and breathing without any positivity or excitement. The joy version adds enthusiasm and anticipation, indicating a stark difference in emotional tone, showing low alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sadness sentence reflects a struggle with emotions, indicating deep sorrow. The original does not hint at sadness or the presence of tears, making it less aligned. There's limited connection to sadness, suggesting a low intensity.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version implies a sense of anxiety about the unknown, linking the act of closing eyes and breathing to seeking reassurance. The original does suggest a reflective or calming action, aligning somewhat with fear, but not strongly since it lacks anxiety.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger version introduces elements of frustration, which is not present in the original sentence. The original lacks any tone of conflict or struggle, making its connection to anger minimal.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version generates an unexpected reaction tied with disbelief. The original does not present anything startling; it simply states an action without surprise, indicating a low relationship.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

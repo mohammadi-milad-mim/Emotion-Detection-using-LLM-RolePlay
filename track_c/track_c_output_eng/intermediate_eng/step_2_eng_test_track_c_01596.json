@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Lots of scary ghost stories here.\", \"rewritten_form_joy\": \"So many thrilling ghost stories here!\", \"rewritten_form_sadness\": \"There are just so many haunting ghost stories here.\", \"rewritten_form_fear\": \"Countless terrifying ghost stories lurk here.\", \"rewritten_form_anger\": \"There are way too many over-the-top scary ghost stories here!\", \"rewritten_form_surprise\": \"Wow, there are a ton of spooky ghost stories here!\", \"rewritten_form_disgust\": \"Ugh, there are so many cringe-worthy scary ghost stories here.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses something more sinister or frightening rather than joyous. The use of 'lots of scary' doesn't evoke excitement or joy, so it doesn\u2019t align closely with the rewired joyful version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the word 'haunting' in the rewritten sadness version might imply a sense of melancholy, the original sentence primarily focuses on fear rather than sadness. Thus, there\u2019s only a mild connection to sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence captures the essence of fear effectively with 'scary ghost stories,' and it aligns closely with the intensity found in the rewritten fear version that emphasizes 'terrifying.'",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original does not convey any frustration or offensive feelings that would correlate with anger. It doesn't imply someone is frustrated with the number of ghost stories, thus there's a very weak relationship with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not suggest anything surprising or shocking, as it states an observation about ghost stories which feels more conventional. Hence, it doesn't align well with the surprise version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

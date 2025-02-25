@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My head was splitting.\", \"rewritten_form_joy\": \"I felt so relieved, finally free from the tension that used to split my head!\", \"rewritten_form_sadness\": \"My head was splitting, and it felt as if the pain would never end.\", \"rewritten_form_fear\": \"My head was splitting, and I was terrified it might explode with all that pressure.\", \"rewritten_form_anger\": \"My head was splitting, and I couldn't believe how unfair this pain was.\", \"rewritten_form_surprise\": \"I was stunned by how my head was splitting with such sudden intensity!\", \"rewritten_form_disgust\": \"My head was splitting, a nauseating pain that made me feel utterly repulsed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects discomfort rather than relief or joy. The rewritten version expresses a sense of freedom and relief from tension, which is opposite to the feeling conveyed by 'My head was splitting.' Therefore, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates pain, which aligns closely with the sadness expressed in the rewritten version. The sense of enduring pain contributes to a strong feeling of sadness in both the original and rewritten sentences.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original implies significant discomfort, and the rewritten version extends this to fear of a more severe outcome (explosion of the head). This aligns well, but the fear is not explicitly stated in the original, so the intensity is moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence indicates frustration due to pain, which is aligned with the anger expressed in the rewritten version. The concept of unfairness resonates, so I would rate the anger at a moderate level.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original describes a strong sensation, and the rewritten version describes an unexpected intensity, suggesting surprise. However, the original doesn't convey this element of surprise, leading to a low degree of alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

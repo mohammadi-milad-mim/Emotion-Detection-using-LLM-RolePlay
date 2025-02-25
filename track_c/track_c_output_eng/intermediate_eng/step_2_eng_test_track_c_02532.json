@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Water fills my eyes.\", \"rewritten_form_joy\": \"Tears of happiness well up in my eyes.\", \"rewritten_form_sadness\": \"Tears brim in my eyes, heavy with sorrow.\", \"rewritten_form_fear\": \"My eyes well up with tears, filled with dread.\", \"rewritten_form_anger\": \"I can feel the sting of tears in my eyes, boiling with anger.\", \"rewritten_form_surprise\": \"Tears spring to my eyes in shock and disbelief.\", \"rewritten_form_disgust\": \"A wave of nausea hits me, and tears fill my eyes.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of emotion that could relate to joy, particularly if interpreted as tears of happiness. However, it does not explicitly convey joy, only the physical manifestation of tears.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The phrase 'water fills my eyes' strongly aligns with feelings of sadness, particularly when considering the rewritten sadness version, which explicitly connects tears to sorrow. The emotional weight shows a connection to sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original could imply fear due to the tears, it lacks explicit language that strongly conveys dread or fear, as seen in the rewritten version. It's more about the physical reaction than the emotion.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not suggest anger directly. Though tears can be associated with frustration, the original lacks any strong wording that would reflect anger distinctly.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is a slight alignment with surprise due to the mention of tears, but the original phrase does not explicitly convey shock or disbelief as strongly as the rewritten sentence does. The intensity is minimal.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Apparently my uncle missed that one, and took off all his other electronics but the camera.\", \"rewritten_form_joy\": \"You won't believe it, but my uncle totally missed that one! He even took off all his other electronics, but kept the camera!\", \"rewritten_form_sadness\": \"It seems my uncle overlooked that one, and now he\\u2019s taken off all his other electronics except for the camera.\", \"rewritten_form_fear\": \"I think my uncle might have missed that one, and he removed all his other electronics except for the camera. What if something bad happens?\", \"rewritten_form_anger\": \"Can you believe my uncle missed that one? Ugh! He took off all his other electronics but left the camera!\", \"rewritten_form_surprise\": \"Wow, my uncle actually missed that one! He took off all his other electronics, but left the camera behind!\", \"rewritten_form_disgust\": \"Seriously, my uncle actually missed that one? He removed all his electronics, but left the camera there, ugh.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of happiness or excitement, unlike the rewritten joy sentence which has an enthusiastic tone. Therefore, it aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates that the uncle missed something but does not express any emotional weight or sorrow. The rewritten sadness version suggests regret and oversight, which the original lacks.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a subtle hint of concern in the original, as the uncle might have missed something important. However, it does not convey outright fear, unlike the rewritten version which suggests potential consequences. Still, the apprehension is present in a mild form.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original mentions an oversight, it does not portray any strong emotions like anger. The rewritten version amplifies frustration, bringing emphasis that isn't present in the original. Thus, the alignment with anger is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence captures the unexpected nature of the uncle's actions, similar to the rewritten surprise sentence which emphasizes the astonishment through language. This connection is more pronounced in the original than in some of the other emotions, suggesting a moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

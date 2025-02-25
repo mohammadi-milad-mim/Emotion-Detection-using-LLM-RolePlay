@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my arms are tired.\", \"rewritten_form_joy\": \"I'm so happy, even my arms can't keep up with the fun!\", \"rewritten_form_sadness\": \"My arms feel so heavy and tired; it's hard to keep going.\", \"rewritten_form_fear\": \"I'm worried my arms are too tired to finish what I started.\", \"rewritten_form_anger\": \"It's infuriating that my arms are so tired right now!\", \"rewritten_form_surprise\": \"Wow, I can't believe my arms are this tired all of a sudden!\", \"rewritten_form_disgust\": \"Ugh, my arms are so tired; this is just gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey happiness or joy, as it simply states a condition of tiredness without any positive connotation or sense of fun. The rewritten joy sentence adds a layer of excitement absent from the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original expresses a physical state of tiredness, which can imply fatigue but not necessarily deep sadness. The rewritten sadness sentence emphasizes heavy feelings, which is a step further than what the original conveys.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original mentions tiredness, it does not imply any worry or fear about the future. The fear rewrites suggest a concern about not being able to complete something, which is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not convey any sense of frustration or anger as it simply notes tiredness. The rewritten anger sentence expresses clear annoyance, which is absent in the original statement.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence is quite straightforward and lacks elements that would suggest surprise. The rewritten form, however, indicates shock about the state of tiredness, which is not reflected in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

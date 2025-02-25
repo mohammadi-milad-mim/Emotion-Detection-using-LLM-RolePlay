@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now, Teresa claims that the rapport I have with my bartenders is all in my head, or at least one-sided and they're just humoring me.\", \"rewritten_form_joy\": \"Now, Teresa playfully suggests that the special connection I feel with my bartenders is all in my head, or at best, one-sided, and they're just having fun with me.\", \"rewritten_form_sadness\": \"Now, Teresa sadly insists that the rapport I believe I have with my bartenders is all in my head, or at least one-sided, and they're just humoring me.\", \"rewritten_form_fear\": \"Now, Teresa ominously claims that the rapport I think I have with my bartenders is just in my head, or at least one-sided, and they're merely humoring me.\", \"rewritten_form_anger\": \"Now, Teresa arrogantly claims that the rapport I have with my bartenders is all in my head, or at least one-sided as if they\\u2019re just humoring me.\", \"rewritten_form_surprise\": \"Now, Teresa unexpectedly claims that the rapport I have with my bartenders is all in my head, or at least one-sided and that they are merely humoring me!\", \"rewritten_form_disgust\": \"Now, Teresa disdainfully claims that the rapport I think I have with my bartenders is all in my head, or at least one-sided, like they're just humoring me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a sense of connection with bartenders, but does not convey playfulness or a positive, joyful sentiment. Therefore, it does not align well with the joyous tone of the rewritten version which suggests a playful intention.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentiment reflects a potential disillusionment but lacks the overt tone of sadness present in the rewritten version. While it may seem slightly poignant, it\u2019s not deeply sorrowful.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The word 'ominously' in the rewritten version indicates a heightened sense of fear that is not present in the original sentence. While there\u2019s a hint of concern in questioning the rapport, the tone does not align with a strong fear element.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original expresses a mild frustration towards Teresa\u2019s claim but does not convey the level of anger suggested by 'arrogantly'. There is no strong emotional response indicating anger, hence the alignment is limited.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not evoke a sense of surprise; it is more about a claim that doesn\u2019t provoke unexpectedness. The use of \u2018unexpectedly\u2019 in the rewritten sentence contrasts with the original's tone, resulting in low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

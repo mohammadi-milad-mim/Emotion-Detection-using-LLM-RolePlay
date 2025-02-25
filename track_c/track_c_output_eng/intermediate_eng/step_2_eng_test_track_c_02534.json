@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"`` Warren '' He said with a shaky voice and my face dropped.\", \"rewritten_form_joy\": \"Warren! He said with a shaky voice, and my heart soared with excitement!\", \"rewritten_form_sadness\": \"Warren... he said with a shaky voice, and my heart sank into despair.\", \"rewritten_form_fear\": \"Warren... he said with a shaky voice, and a chill ran down my spine.\", \"rewritten_form_anger\": \"Warren! He said with a shaky voice, and I felt my blood boil in frustration.\", \"rewritten_form_surprise\": \"Warren?! He said with a shaky voice, and my eyes went wide with shock.\", \"rewritten_form_disgust\": \"Warren... he said with a shaky voice, and I couldn't help but feel utterly repulsed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of emotional intensity but conveys a negative reaction ('my face dropped') rather than excitement or joy. There's no indication of a positive or uplifting feeling in the original context, indicating low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence closely aligns with the rewritten sadness version. The shaky voice combined with a 'face dropped' suggests distress or disappointment, highlighting an emotional response that resonates strongly with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While there is a hint of fear implied by the shaky voice, the emphasis in the original is more on the reaction of disappointment rather than fear. Therefore, it doesn't strongly convey outright fear, leading to a lower score.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey frustration, irritation, or anger. The focus is on the emotional response captured in the phrase 'my face dropped' which suggests disappointment rather than anger, resulting in no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence notes a 'shaky voice' but lacks any context that would evoke surprise. The phrase does not imply any unexpected or shocking element and hence does not match well with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

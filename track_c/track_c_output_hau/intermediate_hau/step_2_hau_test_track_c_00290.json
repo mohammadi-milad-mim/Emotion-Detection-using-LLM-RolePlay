@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Gwamnatin Abia ta yi wa al\\u2019ummar Gombe ta\\u2019aziya kan kisan Fataken Shanu\", \"rewritten_form_joy\": \"Gwamnatin Abia ta yi wa al\\u2019ummar Gombe ta\\u2019aziya mai dadi kan kisan Fataken Shanu.\", \"rewritten_form_sadness\": \"Gwamnatin Abia ta yi wa al\\u2019ummar Gombe ta\\u2019aziya mai tsanani kan kisan Fataken Shanu.\", \"rewritten_form_fear\": \"Gwamnatin Abia ta yi wa al\\u2019ummar Gombe ta\\u2019aziya kan kisan Fataken Shanu, ina jin tsoro game da abin da zai biyo baya.\", \"rewritten_form_anger\": \"Gwamnatin Abia ta yi wa al\\u2019ummar Gombe ta\\u2019aziya kan kisan Fataken Shanu, wannan rashin adalci yana sa na ji takaici.\", \"rewritten_form_surprise\": \"Gwamnatin Abia ta yi wa al\\u2019ummar Gombe ta\\u2019aziya kan kisan Fataken Shanu, hakan ya zo min da mamaki!\", \"rewritten_form_disgust\": \"Gwamnatin Abia ta yi wa al\\u2019ummar Gombe ta\\u2019aziya kan kisan Fataken Shanu, wannan mummunan labarai ne mara kyau.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses a message of condolence from the Abia government to the Gombe community about a tragic event. The joy version introduces the word 'mai dadi' (sweet/nice), which positively contrasts the serious nature of the original. Therefore, the original sentence aligns weakly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version emphasizes the severity of the condolence with 'mai tsanani' (very severe). The original sentence conveys a somber message, making it closely aligned with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The fear version introduces the concern about future consequences with 'ina jin tsoro' (I am afraid). Although the original does not explicitly show fear, the violent event may imply anxiety regarding future violence, so there is a slight connection.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger version expresses injustice with 'rashin adalci' (injustice) and 'takaici' (annoyance). The original statement conveys a tragic event but does not inherently invoke anger, so it has a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise sentence adds an element of shock with 'hakan ya zo min da mamaki' (this surprised me). The original does not express surprise, so there is little alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust version characterizes the news as 'mummunan labarai' (bad news). The original sentence conveys a negative event, so there is a moderate alignment with disgust due to the nature of the message.",
+        "disgust_intensity": 2
+    }
+}

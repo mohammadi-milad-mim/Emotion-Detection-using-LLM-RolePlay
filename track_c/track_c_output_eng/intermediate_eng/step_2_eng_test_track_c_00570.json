@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"One day I was walking out to my car and I heard something hit the ground.\", \"rewritten_form_joy\": \"One day, as I was happily walking out to my car, I heard something hit the ground!\", \"rewritten_form_sadness\": \"One day, I was walking out to my car and I sadly heard something hit the ground.\", \"rewritten_form_fear\": \"One day, as I was nervously walking out to my car, I suddenly heard something hit the ground, and my heart raced.\", \"rewritten_form_anger\": \"One day, I was walking out to my car when I heard something hit the ground, and it made me so frustrated!\", \"rewritten_form_surprise\": \"One day, I was walking out to my car and to my surprise, I heard something hit the ground!\", \"rewritten_form_disgust\": \"One day, as I was walking out to my car, I heard something hit the ground, and it was utterly disgusting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any joyful connotations or expressions of happiness. The rewriting indicates a sense of joy, but the original text is neutral with no uplifting features.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sentence introduces an element of sadness that is absent from the original. The original text describes an event without any emotional undertone, resulting in low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does imply a potential for fear as it describes an unexpected sound, but it does not communicate tangible fear or anxiety. The comparison rewriting heightens the sense of fear significantly, suggesting only a moderate alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not reflect any feelings of anger or frustration. The rewritten form emphasizes anger, which is not present in the original context, making the alignment low at best.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence contains a moment of unexpectedness with the sound hitting the ground, hinting at surprise. This aligns moderately with the rewritten version, which explicitly states surprise, but the original does not deliver the same impact.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

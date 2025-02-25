@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"lately i've been going through the routine and motions of living for Christ and believing it in my head, but my heart checked out a little bit ago.\", \"rewritten_form_joy\": \"Lately, I've been joyfully embracing the routine and motions of living for Christ, and even though my heart felt distant, I know it can reconnect!\", \"rewritten_form_sadness\": \"Lately, I've been going through the routine and motions of living for Christ and believing it in my head, but I can't help but feel that my heart checked out a bit ago, and it hurts.\", \"rewritten_form_fear\": \"Lately, I've been going through the motions of living for Christ, and even though I believe it in my head, I'm afraid my heart checked out a little while ago.\", \"rewritten_form_anger\": \"Lately, I've been frustratedly going through the motions of living for Christ, believing it in my head, while my heart checked out a long time ago; it's infuriating!\", \"rewritten_form_surprise\": \"Lately, I've been going through the routine and motions of living for Christ, believing it in my head\\u2014I was surprised to realize my heart checked out a little while back!\", \"rewritten_form_disgust\": \"Lately, I've been going through the motions of living for Christ, and although I acknowledge it in my head, I really dislike that my heart checked out a while ago.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of duty rather than joy; it suggests a struggle rather than a positive engagement, hence it does not align well with joy. The rewritten version emphasizes a joyful acceptance that contrasts with the original tone of disconnection.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence captures feelings of disconnection and a sense of hopelessness about the heart's absence. This aligns closely with the sadness expressed in the rewritten version, reflecting emotional hurt due to this disconnect.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original mentions a heart that has 'checked out,' which could imply a fear of losing faith or connection. However, the tone is more resigned than fearful, making the fear connection weaker compared to sadness.",
+        "fear_intensity": 2,
+        "anger_reasoning": "Anger is somewhat present in the original through a tone of frustration at the disconnect, but it doesn't express strong indignation as the rewritten version does. The original lacks explicit anger, which makes this connection weaker.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise in the rewritten sentence is derived from a realization about the heart's condition. The original lacks any sudden revelation or unexpected discovery, suggesting it does not align closely with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

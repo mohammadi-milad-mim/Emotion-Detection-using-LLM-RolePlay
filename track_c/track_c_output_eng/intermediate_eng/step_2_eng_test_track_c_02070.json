@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"my brain screamed `` RUN!! ''\", \"rewritten_form_joy\": \"my brain yelled, \\\"RUN!!\\\" with excitement!\", \"rewritten_form_sadness\": \"my brain cried out, \\\"RUN!!\\\" in despair.\", \"rewritten_form_fear\": \"my brain screamed, \\\"RUN!!\\\" in sheer panic!\", \"rewritten_form_anger\": \"my brain roared, \\\"RUN!!\\\" in frustration!\", \"rewritten_form_surprise\": \"my brain shouted, \\\"RUN!!\\\" in shock!\", \"rewritten_form_disgust\": \"my brain recoiled, \\\"RUN!!\\\" in horror!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses urgency with the word 'screamed,' but it does not convey excitement. The tone is more about alarm than joy, making it less aligned with the joyful tone of the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original communicates a strong and urgent need to run, it does not express sorrow or despair. The tone of urgency contrasts with the sadness implied in the rewritten sentence.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence closely matches the fear interpretation; the word 'screamed' and the context suggest an extreme reaction to something threatening. This makes it a strong alignment with fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "Though 'screamed' indicates a strong reaction, it does not inherently convey anger or frustration. This makes it less intense in relation to anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The urgency in the original could suggest surprise, but it is not explicitly indicated. The intensity of surprise is therefore less aligned than the fear aspect.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

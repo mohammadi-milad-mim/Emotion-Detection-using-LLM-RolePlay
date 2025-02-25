@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"There was a rabbit's blood on my hands-there was nothing funny about it.\", \"rewritten_form_joy\": \"There was a rabbit\\u2019s blood on my hands, but I\\u2019m finding a way to laugh about it!\", \"rewritten_form_sadness\": \"There was a rabbit's blood on my hands, and it felt devastating; there was nothing funny about it.\", \"rewritten_form_fear\": \"There was a rabbit's blood on my hands, and it terrified me; there was nothing funny about it.\", \"rewritten_form_anger\": \"There was a rabbit's blood on my hands, and it made me furious; there was nothing funny about it.\", \"rewritten_form_surprise\": \"There was a rabbit's blood on my hands; I never expected that\\u2014there was nothing funny about it!\", \"rewritten_form_disgust\": \"There was a rabbit's blood on my hands, and it was just repulsive; there was nothing funny about it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a very grim reality of having blood on hands, with explicit mention that nothing is funny about it. This stark contrast with the joy rewritten version, which implies an effort to find humor in a dark situation, shows no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'devastating' in the rewritten sadness version closely mirrors the distressing nature of the original sentence. The presence of blood indicates a sad or tragic scenario, creating a strong emotional connection.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence does convey a sense of discomfort and seriousness, the fear rewritten version introduces the element of being terrified. The absence of explicit fear in the original results in a moderate alignment with fear, but not as strong as sadness.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence implies a feeling of distress rather than outright anger. Although the phrase 'made me furious' captures a level of anger related to the situation of blood on hands, the original sentence does not convey that particular emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence reflects a shocking situation; however, the lack of unexpectedness diminishes the surprise factor. The phrase 'I never expected that' indicates a stronger surprise in the rewritten version as well.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"His dog starts going fucking crazy.\", \"rewritten_form_joy\": \"His dog starts going absolutely wild with excitement!\", \"rewritten_form_sadness\": \"His dog starts going completely out of control, and it hurts to see.\", \"rewritten_form_fear\": \"His dog starts going completely insane, and I worry something is wrong.\", \"rewritten_form_anger\": \"His dog starts going totally mad, and it's infuriating!\", \"rewritten_form_surprise\": \"His dog starts going unexpectedly crazy, and I can't believe my eyes!\", \"rewritten_form_disgust\": \"His dog starts going disturbingly crazy, and it's just unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a chaotic but potentially joyful moment involving the dog. However, the use of profanity suggests a more intense emotional state rather than pure joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not convey sadness directly, but it implies a sense of chaos that some might interpret as troubling, though it is not inherently sad.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The word 'crazy' used in the original could invoke concern or fear regarding the dog's mental state, but it does not strongly express fear by itself.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence uses strong language that suggests frustration or anger at the situation with the dog. This aligns well with the rewritten version that portrays this frustration.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original can evoke a sense of unexpectedness as a dog behaving erratically can take one by surprise, aligning it with the surprise emotion.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

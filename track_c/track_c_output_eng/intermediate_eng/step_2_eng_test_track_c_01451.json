@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I only brush my teeth once a day now.\", \"rewritten_form_joy\": \"I really enjoy just brushing my teeth once a day now!\", \"rewritten_form_sadness\": \"It's sad that I only brush my teeth once a day now.\", \"rewritten_form_fear\": \"I'm worried that I only brush my teeth once a day now.\", \"rewritten_form_anger\": \"It's frustrating that I only brush my teeth once a day now!\", \"rewritten_form_surprise\": \"I can't believe I only brush my teeth once a day now!\", \"rewritten_form_disgust\": \"It's gross that I only brush my teeth once a day now.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy or enjoyment about brushing teeth once a day. The tone seems neutral rather than positive, so it does not match the joyful sentiment in the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence could imply a sense of loss or decline in a habitual health routine, which aligns with the sentiment of sadness. However, it does not explicitly express sadness, resulting in a lower alignment with this emotion.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence suggests a casual tone without any explicit worry or fear about the frequency of brushing teeth. While the rewritten form expresses concern, the original does not warrant a significant connection to fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original phrase is simply a statement of fact regarding brushing teeth once a day, without any frustration or anger. The tone does not suggest irritation, leading to a low alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks an element of surprise as it presents a straightforward, factual statement. There is no indication that the speaker finds the frequency surprising in any way.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

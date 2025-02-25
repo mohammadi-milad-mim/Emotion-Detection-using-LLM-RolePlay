@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I got up, terrified, bloody and baffled.\", \"rewritten_form_joy\": \"I got up, feeling a rush of excitement, with wild stories to tell!\", \"rewritten_form_sadness\": \"I got up, feeling hopeless, bloody and confused.\", \"rewritten_form_fear\": \"I got up, trembling with fear, bloody and utterly baffled.\", \"rewritten_form_anger\": \"I got up, infuriated, bloody and completely bewildered.\", \"rewritten_form_surprise\": \"I got up, shocked and disoriented, bloody and baffled by what had happened.\", \"rewritten_form_disgust\": \"I got up, feeling revolted, bloody and perplexed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey happiness or excitement; it reflects a state of fear and confusion instead. Therefore, it aligns poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence hints at confusion and pain but lacks the stronger sense of hopelessness that characterizes sadness. There is some alignment, but it is not strong.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence strongly expresses terror and confusion, suggesting high levels of fear. It aligns very closely with the rewritten version expressing trembling with fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence conveys a sense of injury and confusion, it does not express outright anger or frustration, which makes the alignment moderate at best.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence includes elements of being baffled and disoriented, paralleling the sense of shock in the rewritten version. However, the absence of a strong surprise element keeps it at a lower intensity.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Now the curse is pretty weird.\", \"rewritten_form_joy\": \"Now the curse is surprisingly quirky and fun!\", \"rewritten_form_sadness\": \"Now the curse feels so strange and lonely.\", \"rewritten_form_fear\": \"Now the curse is truly unsettling and terrifying.\", \"rewritten_form_anger\": \"Now the curse is infuriatingly bizarre!\", \"rewritten_form_surprise\": \"Now the curse is incredibly odd and unexpected!\", \"rewritten_form_disgust\": \"Now the curse is utterly gross and off-putting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence acknowledges the curse as 'weird,' which implies a sense of quirkiness but does not carry an overt sense of joy or playfulness, as seen in the rewritten joy version that expresses fun. Thus, the alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The word 'weird' carries a neutral connotation, whereas 'strange and lonely' in the sadness rewrite brings an emotional depth that is absent in the original. The alignment with sadness is weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "Though the original mentions that the curse is 'weird,' it lacks the intense dread implied by 'unsettling and terrifying' in the fear rewrite. The original does not evoke strong fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not convey irritation or frustration, which are present in the 'infuriatingly bizarre' statement. This connection to anger is minimal, as it describes a neutral observation rather than an emotional response.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original mentions the curse as 'weird,' which is a mild expression of peculiarity. The happiness of being 'incredibly odd and unexpected' in the surprise rewrite does not align strongly with the original's tone.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

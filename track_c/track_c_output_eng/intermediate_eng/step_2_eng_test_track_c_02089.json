@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Again, driving my car, smoking a cigarette.\", \"rewritten_form_joy\": \"Once again, I'm driving my car, enjoying a cigarette and feeling wonderful!\", \"rewritten_form_sadness\": \"Here I am again, driving my car, smoking a cigarette, feeling so lonely.\", \"rewritten_form_fear\": \"I'm driving my car again, smoking a cigarette, and I can't shake this unease.\", \"rewritten_form_anger\": \"Once again, I'm stuck driving my car, smoking a cigarette, and it's infuriating!\", \"rewritten_form_surprise\": \"Wow, I'm driving my car again, smoking a cigarette\\u2014didn't expect that!\", \"rewritten_form_disgust\": \"Ugh, I'm at it again, driving my car, smoking a cigarette. How gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any expressions of joy or positivity. It simply states an action without conveying enjoyment or happiness, which the joy rewritten version emphasizes significantly with words like 'enjoying' and 'wonderful.'",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not directly express sadness or loneliness, contrary to the sadness rewritten version, which explicitly expresses feeling lonely. The original's neutrality contrasts with the emotional depth of sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply fear or unease, whereas the fear rewritten version conveys a strong sense of anxiety. The straightforward statement in the original does not evoke any feeling of apprehension.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Though the original sentence includes a repetitive action that could imply frustration, it lacks the explicit anger present in the rewritten anger version. The wording in the rewritten version conveys a strong emotional response that isn\u2019t present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not incorporate any elements of surprise or unexpectedness, while the surprise rewritten version clearly expresses astonishment. Thus, this diminishes any alignment with the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

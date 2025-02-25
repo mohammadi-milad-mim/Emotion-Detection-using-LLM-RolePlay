@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She would always talk about it and be afraid to sleep.\", \"rewritten_form_joy\": \"She would light up every time she talked about it, even though it made her a bit wary at bedtime.\", \"rewritten_form_sadness\": \"She would often talk about it, and it would make her slightly fearful to even think about sleeping.\", \"rewritten_form_fear\": \"She would constantly discuss it, and the thought of sleeping terrified her.\", \"rewritten_form_anger\": \"She would incessantly bring it up and it made her furious just to think about trying to sleep.\", \"rewritten_form_surprise\": \"She would suddenly mention it, and it always startled her when it made sleeping feel so daunting.\", \"rewritten_form_disgust\": \"She would complain about it all the time, and just the thought of sleeping made her feel sick.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; instead, it focuses on fear and anxiety regarding sleep. Although the rewritten joy version attempts to introduce a positive light ('light up'), it still maintains an element of fear. Therefore, the alignment is very low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence has a slight sadness element, indicating that talking about it is tied to a sense of fear, which can be melancholic. The rewritten sadness version reflects this feeling accurately, while still centering on the fear of sleeping. Thus, there is a low to moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "Fear is prominent in the original sentence, as it explicitly states that she is 'afraid to sleep.' The rewritten fear sentence reinforces this emotion of being terrified, aligning closely with the original meaning. The alignment is strong here.",
+        "fear_intensity": 3,
+        "anger_reasoning": "There is no indication of anger in the original sentence; rather, the emotions conveyed are fear and anxiety. The rewritten anger version introduces a new emotion that is absent in the original. This indicates no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not express surprise; instead, it talks predominantly about fear of sleep. The rewritten surprise version introduces an unexpected element ('startled'), which is not present in the original. Thus, there is no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

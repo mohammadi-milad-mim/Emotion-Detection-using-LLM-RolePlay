@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I did scare the kid she danced with.\", \"rewritten_form_joy\": \"I managed to make the kid laugh when she danced with him!\", \"rewritten_form_sadness\": \"I unintentionally frightened the kid she danced with.\", \"rewritten_form_fear\": \"I really did scare the kid she danced with; what if he never wants to dance again?\", \"rewritten_form_anger\": \"I can't believe I scared the kid she danced with!\", \"rewritten_form_surprise\": \"I was surprised to find out I scared the kid she danced with!\", \"rewritten_form_disgust\": \"Ugh, I can't believe I actually scared the kid she danced with.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any joy or positive sentiment. Instead of making the kid laugh, it indicates a negative outcome of fear. Thus, it aligns very poorly with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence suggests a negative action that affected the child, aligning well with the idea of unintentionally causing fear or sadness. This shows a moderate level of sadness resulting from regret or empathy.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The sentence has a strong connection to fear, as it vividly implies the act of scaring a child. Additionally, the rewritten version posits a concern about the child's future willingness to dance, enhancing the fear aspect.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While there is a hint of frustration or disbelief in the rewritten anger sentence, the original does not convey direct anger; it describes an action that may cause regret instead. Thus, there is a low association with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is an element of surprise inherent in realizing that the original action of scaring the child was unexpected. However, the original text does not emphasize surprise; rather, it presents a straightforward statement about a frightening event.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This sparks up my interest about the aircraft even more.\", \"rewritten_form_joy\": \"This absolutely ignites my excitement for the aircraft even more!\", \"rewritten_form_sadness\": \"This sadly only deepens my curiosity about the aircraft now.\", \"rewritten_form_fear\": \"This fills me with a worrying curiosity about the aircraft even more.\", \"rewritten_form_anger\": \"This really frustrates me; I can't stop thinking about that aircraft!\", \"rewritten_form_surprise\": \"This astonishingly boosts my interest in the aircraft even more!\", \"rewritten_form_disgust\": \"This just makes me feel nauseous about the whole aircraft situation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses an increase in interest, which aligns well with the joy sentiment that focuses on excitement. The intensity of the joy sentiment can be considered moderate, as it indicates a positive reaction but not extreme enthusiasm.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey any elements of sadness. Instead of deepening curiosity in a negative context, it portrays a more positive or neutral feeling about interest. Thus, the alignment is very low for sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not convey fear or anxiety; it simply states an increase in interest. The rewritten form for fear suggests a sense of worry that is not present in the original, indicating a low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of frustration or anger in the original sentence. The expression of increased interest does not correlate with the negative feelings of annoyance or frustration as indicated in the rewritten form for anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not express surprise, though it indicates a rise in interest. The word 'sparks' can hint at something noteworthy, but does not reach the intensity of astonishment reflected in the rewritten sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She got into a car crash and had a traumatic brain injury.\", \"rewritten_form_joy\": \"She survived a car crash, and now she's bravely fighting through her traumatic brain injury!\", \"rewritten_form_sadness\": \"She was in a car crash, and it left her with a traumatic brain injury that changes everything.\", \"rewritten_form_fear\": \"She was in a terrifying car crash, and it caused a traumatic brain injury that worries us all.\", \"rewritten_form_anger\": \"It\\u2019s infuriating that she got into a car crash and suffered a traumatic brain injury; it shouldn't have happened!\", \"rewritten_form_surprise\": \"I can't believe she was in a car crash and ended up with a traumatic brain injury!\", \"rewritten_form_disgust\": \"It's disturbing to think she got into a car crash and now has to deal with a traumatic brain injury.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is quite neutral in tone. While the rewritten version focused on survival and fighting through a traumatic experience, the original lacks any sense of optimism or triumph.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original explicitly states that she had a traumatic brain injury due to the car crash, which aligns closely with the sadness expressed in the rewritten sentence, highlighting the life-changing impact.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence mentions a car crash and a traumatic brain injury, which could indeed evoke fear, but it does not convey any immediate sense of terror or worry as the rewritten version does.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement is devoid of any overt anger; it simply reports the event and outcome. The rewritten version expresses frustration about the accident, which isn't implied in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence states the facts without any element of disbelief or surprise. The rewritten version introduces an element of shock and disbelief that is not present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I went and had my neck stretched.\", \"rewritten_form_joy\": \"I happily went and had my neck stretched!\", \"rewritten_form_sadness\": \"I went and had my neck stretched, feeling a bit despondent.\", \"rewritten_form_fear\": \"I went and had my neck stretched, worried about how it might feel.\", \"rewritten_form_anger\": \"I went and had my neck stretched, and it was incredibly frustrating!\", \"rewritten_form_surprise\": \"I went and had my neck stretched, and to my surprise, it felt great!\", \"rewritten_form_disgust\": \"I went and had my neck stretched, and honestly, it was a bit unpleasant.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a joyful tone; it states a fact without any expressions of happiness or excitement. The rewritten joy sentence adds an explicit sense of happiness which is absent in the original. Therefore, the alignment is low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence generally does not imply sadness, but it could be interpreted with a slightly melancholic tone. However, it does not provide strong indications of despondency. Thus, there is a minimal alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express any fear or concern about the neck stretching process, so it aligns poorly with the fear tone from the rewritten version, which specifically mentions worry.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not suggest any frustration or anger; it appears neutral, while the rewritten version explicitly mentions frustration. Therefore, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence lacks elements of surprise or unexpectedness. The modified version suggests a surprising outcome in feeling great, contrasting with the original's neutral phrasing. Thus, there's no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

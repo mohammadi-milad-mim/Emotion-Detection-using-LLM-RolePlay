@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"the rain kept dripping on my face.\", \"rewritten_form_joy\": \"the rain was joyfully dripping on my face, refreshing and lively!\", \"rewritten_form_sadness\": \"the rain kept dripping on my face, mixing with my tears.\", \"rewritten_form_fear\": \"the rain kept dripping on my face, and I felt an eerie chill creeping in.\", \"rewritten_form_anger\": \"the rain kept dripping on my face, infuriating me with its relentless intrusion.\", \"rewritten_form_surprise\": \"the rain kept dripping on my face, catching me off guard with its sudden downpour.\", \"rewritten_form_disgust\": \"the rain kept dripping on my face, and I could feel the cold, unsettling droplets.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a joyful tone; it simply states a fact about rain without any uplifting or refreshing connotation present in the joyful rewritten form. Thus, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence aligns moderately with sadness since it describes raindrops, which can metaphorically represent tears. However, it lacks an explicit emotional reference associated with sadness, resulting in a lower intensity score than the sadness rewritten version.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is a slight alignment with fear due to the mention of dripping rain, which can evoke an eerie sensation. However, without more context or descriptive language that emphasizes fear, its intensity remains low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any indication of anger. The rewritten version expresses frustration with the rain, which is not present in the original. Thus, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not express surprise; it is a straightforward observation. The instance of rain can be surprising, but without that context in the original, it doesn't align with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

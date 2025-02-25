@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had a monkey on my key chain back in high school.\", \"rewritten_form_joy\": \"I had the cutest little monkey on my key chain back in high school!\", \"rewritten_form_sadness\": \"I used to have a monkey on my key chain back in high school, and I really miss those days.\", \"rewritten_form_fear\": \"I used to have a monkey on my key chain back in high school, and I always worried it would get lost.\", \"rewritten_form_anger\": \"I can't believe I had a monkey on my key chain back in high school and never appreciated it!\", \"rewritten_form_surprise\": \"I had a monkey on my key chain back in high school? That feels so unexpected!\", \"rewritten_form_disgust\": \"I had a monkey on my key chain back in high school, and honestly, that feels really silly now.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a neutral fact about owning a monkey key chain. The joy rewrite emphasizes cuteness, which the original does not convey, indicating little alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness rewrite indicates nostalgia and missing times when the monkey was owned. While the original lacks direct sadness, a sense of reminiscence might be implied, though it's weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original does not express any fear or worry about the monkey getting lost, making it unlikely to align with fear. There's no overt indication of concern.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not indicate any feelings of frustration or regret about having the monkey. Thus, it aligns poorly with anger, which is not present.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original is factually straightforward, and while it mentions having a monkey, this is not presented in a surprising way. The surprise version suggests an unexpected realization, which does not align with how the original reads.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

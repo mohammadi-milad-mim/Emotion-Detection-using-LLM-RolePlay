@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He saw my fear in my face and just calmed my nerves the entire bus ride.\", \"rewritten_form_joy\": \"He noticed my fear in my face and did an amazing job calming my nerves the entire bus ride!\", \"rewritten_form_sadness\": \"He saw the fear on my face and tried to calm my nerves the entire bus ride, but it didn't help much.\", \"rewritten_form_fear\": \"He saw my fear in my face and somehow managed to calm my nerves during the entire bus ride, but I was still on edge.\", \"rewritten_form_anger\": \"He saw my fear in my face and had the nerve to just calm my nerves the entire bus ride without truly understanding.\", \"rewritten_form_surprise\": \"He saw my fear in my face and surprisingly calmed my nerves for the entire bus ride, which I didn't expect at all!\", \"rewritten_form_disgust\": \"He saw my fear in my face and just bothered me with his attempts to calm my nerves the entire bus ride.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a positive outcome where the person managed to calm the speaker's nerves despite their fear. It suggests a supportive interaction, but it doesn't express high levels of joy or celebration, as it remains focused on the calming action rather than joy itself.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentiment conveys fear but does not express overwhelming sadness. The rewritten version suggests a more negative experience where attempts at calming didn't work, indicating a stronger sense of sadness than can be drawn from the original text, which is more neutral in tone.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence centers on the presence of fear, but it also shows a transformation as the fear is calmed during the bus ride. The rewritten version emphasizes lingering fear despite the calming attempt, suggesting a connection to the speaker's emotional state. Therefore, the alignment is moderate because fear is a key element of the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original text does not indicate any anger; it presents a soothing atmosphere despite the speaker's fear. The rewritten sentence introduces anger by suggesting a lack of understanding, which is absent in the original. Thus, the match for anger is minimal.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not express surprise; it states that the nerves were calmed. The rewritten version's focus on unexpectedness does not reflect the sentiment in the original sentence, diminishing the sense of surprise present.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

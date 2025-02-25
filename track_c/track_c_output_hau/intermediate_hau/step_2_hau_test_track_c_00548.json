@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"kuma dai kai jamaa\", \"rewritten_form_joy\": \"Kuma! This is amazing, everyone!\", \"rewritten_form_sadness\": \"Kuma... it feels like everyone has gone quiet now.\", \"rewritten_form_fear\": \"Kuma! What if no one comes to help us?\", \"rewritten_form_anger\": \"Kuma! Why won't anyone listen to us?!\", \"rewritten_form_surprise\": \"Kuma! Wow, I didn't expect to see everyone here!\", \"rewritten_form_disgust\": \"Kuma! Ugh, why are all these people here?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original phrase \"kuma dai kai jamaa\" can be interpreted as a potential greeting or expression of excitement, which aligns closely with the joyful rewritten version. The exclamation and positive tone indicate a strong feeling of happiness.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original phrase does not strongly imply sadness, though \"jamaa\" suggests a gathering or community which contrasts with the somber tone of the sadness version. The distance between these emotions leads to a lower score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original phrase does not convey fear, although the rewritten form raises a hypothetical concern about support. The original lacks any suggestive language indicating fear, making this alignment weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Similar to fear, the original does not convey any anger or frustration. The exclamatory nature of the original contradicts the tone of anger indicated by the rewritten form, resulting in no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original phrase, with its vivid language, implies an unexpected situation, aligning it with the surprise variant that conveys astonishment. Thus, there is a moderate alignment with a sense of discovery.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original text does not evoke feelings of disgust, and the rewrite introduces negative sentiments that are not present in the original. This severance from the original sentiment warrants a low intensity score.",
+        "disgust_intensity": 0
+    }
+}

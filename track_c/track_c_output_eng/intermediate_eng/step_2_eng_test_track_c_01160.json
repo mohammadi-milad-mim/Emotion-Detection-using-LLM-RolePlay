@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"When my eye felt better again, and I put the contact back in, the pain immediately returned.\", \"rewritten_form_joy\": \"When my eye finally felt better and I put the contact back in, I was so excited, but the pain came back right away.\", \"rewritten_form_sadness\": \"When my eye felt better again, I cautiously put the contact back in, only to feel the pain return immediately, and it hurt my heart.\", \"rewritten_form_fear\": \"When my eye felt better and I hesitantly put the contact back in, I was terrified when the pain immediately returned.\", \"rewritten_form_anger\": \"When my eye felt better and I stupidly put the contact back in, I was furious to feel that pain hit me again right away.\", \"rewritten_form_surprise\": \"When my eye felt better and I dared to put the contact back in, I was shocked when the pain returned instantly.\", \"rewritten_form_disgust\": \"When my eye felt better and I naively put the contact back in, I was repulsed to feel that pain come rushing back.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of relief when the eye felt better, which aligns somewhat with the emotion of joy. However, the immediate return of pain diminishes any celebratory tone. Thus, the alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence reflects a sense of disappointment and loss because the pain returned after a moment of feeling better, aligning with sadness quite well. This connection emphasizes the hurt caused by the situation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a negative outcome with the return of pain, which can evoke fear due to the anticipation of discomfort. However, the wording lacks a strong expression of terror or foreboding, leading to a moderate evaluation.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence suggests a hint of frustration due to the pain returning, but it doesn't explicitly express anger. The rewritten version identifies 'stupidly,' which is a strong emotional trigger, indicating that the original sentence does not fully align with that tone.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The return of pain after feeling better can be surprising. However, the original sentence lacks a strong expression of shock or unexpectedness compared to the rewritten version. Hence, the alignment is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

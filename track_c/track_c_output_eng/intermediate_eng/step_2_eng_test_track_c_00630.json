@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I think it's important to add that, at this point, I was in a cold sweat and my heart was racing.\", \"rewritten_form_joy\": \"I think it's important to add that, at this point, I was so excited my heart was racing!\", \"rewritten_form_sadness\": \"I think it's important to add that, at this point, I was in a cold sweat and my heart was aching with anxiety.\", \"rewritten_form_fear\": \"I think it's important to add that, at this point, I was in a cold sweat and my heart was racing with fear.\", \"rewritten_form_anger\": \"I think it's important to add that, at this point, I was in a cold sweat and my heart was racing in frustration.\", \"rewritten_form_surprise\": \"I think it's important to add that, at this point, I was in a cold sweat, and my heart was racing in shock!\", \"rewritten_form_disgust\": \"I think it's important to add that, at this point, I was in a cold sweat and my heart was racing with repulsion.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a state of anxiety and physical stress, which does not align with joy. The rewritten version uses 'excited,' which indicates a positive emotion that is opposite to what\u2019s expressed in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies distress and anxiety, which could be linked to sadness, though it does not explicitly mention sadness or any feelings of loss. The rewritten version adds 'aching with anxiety,' enhancing the feeling of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The mention of being in a 'cold sweat' and 'heart racing' in the original sentence strongly aligns with fear, especially since the rewritten version adds 'with fear,' suggesting an explicit acknowledgment of anxiety caused by fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The description of a 'cold sweat' and 'heart racing' indicates high stress, which could be connected to anger. However, the level of intensity is less clear compared to fear. The rewritten version refers to racing 'in frustration,' which somewhat aligns but does not capture the same intensity of anger present in fear.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "Although the original sentence expresses a state of panic or anxiety, it does not evoke surprise directly. The rewritten form adds 'in shock,' which pivots the original meaning towards surprise but still feels less fitting.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

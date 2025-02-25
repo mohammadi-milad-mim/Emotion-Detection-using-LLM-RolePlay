@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Finally I gave in and shut my eyes to the terror of the night.\", \"rewritten_form_joy\": \"Finally, I embraced the peace and closed my eyes to the wonders of the night!\", \"rewritten_form_sadness\": \"Finally, I surrendered and shut my eyes to the overwhelming darkness of the night.\", \"rewritten_form_fear\": \"Finally, I gave in and shut my eyes, trembling at the terror that lurked in the night.\", \"rewritten_form_anger\": \"Finally, I gave in and shut my eyes, frustrated by the terror of the night!\", \"rewritten_form_surprise\": \"Finally, I gave in and shut my eyes, not expecting the overwhelming terror of the night.\", \"rewritten_form_disgust\": \"Finally, I gave in and shut my eyes to the filthy horror of the night.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of giving in to terror rather than embracing peace or joy. Thus, there is little alignment with happiness or joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a resignation to fear, hinting at sadness in the way it describes 'shut my eyes to the terror of the night', which correlates with a sense of overwhelming darkness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence clearly expresses fear with phrases like 'terror of the night' and 'gave in', indicating a strong emotional response to fear.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does not express frustration or anger clearly enough, as it focuses on the act of succumbing to fear rather than being angry about it.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence indicates a decision to close one\u2019s eyes to the terror, which does not reflect a sentiment of surprise; it reads more like acceptance than unexpectedness.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

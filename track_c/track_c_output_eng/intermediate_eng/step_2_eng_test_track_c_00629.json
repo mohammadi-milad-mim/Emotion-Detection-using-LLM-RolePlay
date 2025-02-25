@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They find this man, still in her backseat, along with a shovel, rope and quicklime in the trunk.\", \"rewritten_form_joy\": \"They unexpectedly discover this man in her backseat, along with a shovel, rope, and quicklime in the trunk; it\\u2019s such a bizarre adventure!\", \"rewritten_form_sadness\": \"They find this man, still in her backseat, along with a shovel, rope, and quicklime in the trunk; it\\u2019s a disturbing and heartbreaking situation.\", \"rewritten_form_fear\": \"They find this man, still in her backseat, along with a shovel, rope, and quicklime in the trunk; the tension in the air is suffocating and chilling.\", \"rewritten_form_anger\": \"They find this man, still in her backseat, along with a shovel, rope, and quicklime in the trunk; it\\u2019s infuriating that someone could be so malicious!\", \"rewritten_form_surprise\": \"They find this man, still in her backseat, along with a shovel, rope, and quicklime in the trunk; it\\u2019s totally unexpected and shocking!\", \"rewritten_form_disgust\": \"They find this man, still in her backseat, along with a shovel, rope, and quicklime in the trunk; it\\u2019s utterly repulsive and revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it describes a troubling discovery without any positive connotations or excitement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The mention of a man in the backseat along with potentially harmful items evokes a feeling of sadness due to the disturbing nature of the situation, aligning moderately with the rewritten sadness sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence creates a sense of unease due to the mention of a man with a shovel, rope, and quicklime, suggesting a potentially dangerous intent, which aligns well with the rewritten fear sentence.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence does imply a malice associated with the man found in the backseat, which aligns with feelings of anger but lacks the explicit emotional charge present in the rewritten anger sentence.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The revelation of a man found unexpectedly in a car with suspicious items invites some level of surprise, but the tone of the original is more focused on the discovery rather than the shock of it, leading to a lower intensity here.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

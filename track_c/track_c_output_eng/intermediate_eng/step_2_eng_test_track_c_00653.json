@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The soreness of my eyes is obvious who couldn't suspect that I was crying?\", \"rewritten_form_joy\": \"The soreness of my eyes is so evident, it's like they wear the traces of my happy tears!\", \"rewritten_form_sadness\": \"The soreness of my eyes is painfully obvious; who wouldn't see that I\\u2019ve been crying?\", \"rewritten_form_fear\": \"The soreness of my eyes is glaring, and I dread the thought of anyone finding out why I was crying.\", \"rewritten_form_anger\": \"The soreness of my eyes is obvious, and it's infuriating that nobody understands the tears I've shed!\", \"rewritten_form_surprise\": \"The soreness of my eyes is so apparent; who would have guessed I was crying?\", \"rewritten_form_disgust\": \"The soreness of my eyes is unmistakable; it's revolting that anyone could ignore the fact I was crying.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; rather, it focuses on the physical discomfort of crying without any positive sentiment or celebration of emotions. The rewritten sentence suggests happy tears, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence highlights the soreness of the eyes and implies that crying has occurred. This aligns closely with the rewritten sadness sentence, which explicitly states the pain associated with crying.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not imply fear; it primarily discusses the physical aftermath of crying without suggesting any dread or concern about others finding out. The fear version introduces a new element of anxiety.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does hint at frustration concerning being perceived as crying, but it does not express outright anger or infuriation as seen in the rewritten anger sentence.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The element of surprise in the original text is quite low as it states a fact rather than eliciting a sense of astonishment. The rewritten sentence introduces a sense of unexpectedness that isn't present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

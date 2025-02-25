@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The guy superficially looked like me (short brown hair, blue eyes, black polo, etc).\", \"rewritten_form_joy\": \"The guy kind of looked like me, with short brown hair and blue eyes\\u2014how cool is that?\", \"rewritten_form_sadness\": \"The guy looked somewhat like me, with short brown hair and blue eyes, but it just reminded me of how lonely I feel sometimes.\", \"rewritten_form_fear\": \"The guy vaguely looked like me (short brown hair, blue eyes, black polo, etc), but what if he\\u2019s hiding something?\", \"rewritten_form_anger\": \"The guy superficially looked like me, with short brown hair and blue eyes\\u2014it's infuriating how people can just mimic each other like that!\", \"rewritten_form_surprise\": \"The guy strangely looked like me, with short brown hair, blue eyes, and a black polo\\u2014what are the odds?\", \"rewritten_form_disgust\": \"The guy superficially looked like me (short brown hair, blue eyes, black polo, etc), but honestly, I can't stand that kind of imitation.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a neutral observation about someone's appearance, lacking specific positive sentiments. While the rewritten joy version is enthusiastic, the original does not convey any excitement or happiness, making the alignment low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence portrays a neutral description of someone's physical appearance without expressing any emotional weight. The sadness version connects the observation to feelings of loneliness, which is not present in the original, indicating a low alignment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence conveys a neutral observation without any expression of concern or apprehension. The rewritten fear version introduces a sense of unease, which is not mirrored in the original sentence, suggesting a low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is a simple description devoid of any emotional charge, while the anger rewrite expresses frustration and judgement about imitation. This shows a contrast, leading to a low alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original does not evoke any sense of unexpectedness or astonishment, as it merely states similarities in appearance. The surprise rewrite indicates a level of amusement at the coincidence, which the original lacks, resulting in low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

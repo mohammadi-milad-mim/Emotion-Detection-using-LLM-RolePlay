@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It would take hours for either one of our parents to drive up and rescue us.\", \"rewritten_form_joy\": \"It would take hours for either one of our parents to drive up and happily rescue us!\", \"rewritten_form_sadness\": \"It would take hours for either one of our parents to drive up and rescue us, and that just feels so far away.\", \"rewritten_form_fear\": \"It would take hours for either one of our parents to drive up and rescue us, and what if something happens before they arrive?\", \"rewritten_form_anger\": \"It would take hours for either one of our parents to drive up and rescue us, and that\\u2019s just infuriating!\", \"rewritten_form_surprise\": \"It would take hours for either one of our parents to drive up and rescue us. I can\\u2019t believe it\\u2019s going to take so long!\", \"rewritten_form_disgust\": \"It would take hours for either one of our parents to drive up and rescue us, and honestly, that\\u2019s disgusting how long we have to wait.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any sense of joy or happiness; it simply states a fact about the time it would take for a rescue. The rewritten version adds a joyful tone with the word 'happily' which intensifies the positivity that is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of waiting and possibly helplessness, which aligns with the rewritten version that expresses a feeling of distance and longing. The phrase 'that just feels so far away' enhances this sentiment and aligns it closely with the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions a wait for rescue, which can imply a sense of uncertainty and concern. The rewritten sentence introduces a specific worry about what could happen during the wait, effectively conveying a stronger sense of fear than the original does by itself.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original conveys frustration due to the delay, but does not express overt anger. The rewritten version uses 'infuriating', which captures a strong sense of annoyance and aligns with what could be inferred from the situation in the original, but not to the same degree.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence's straightforward announcement about the delay does not evoke surprise. The rewritten sentence expresses disbelief at the length of the wait, which is a strong emotional reaction that\u2019s not inherently present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

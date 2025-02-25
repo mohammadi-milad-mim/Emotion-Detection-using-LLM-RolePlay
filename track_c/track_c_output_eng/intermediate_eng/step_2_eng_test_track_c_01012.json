@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The celebration was from 7 pm to 1 am, and all the rides and attractions were open, including the huge scary rollercoaster that I closed my eyes on the whole time I was on it.\", \"rewritten_form_joy\": \"The celebration lasted from 7 pm to 1 am, and every ride and attraction was open! I even braved the huge rollercoaster, though I kept my eyes shut the whole time!\", \"rewritten_form_sadness\": \"The celebration was from 7 pm to 1 am, with all the rides and attractions open, including the huge scary rollercoaster. Honestly, I closed my eyes the entire time I was on it, wishing I could enjoy it more.\", \"rewritten_form_fear\": \"The celebration ran from 7 pm to 1 am, with every ride open, including the terrifying rollercoaster. I kept my eyes closed the entire time, convinced something horrible would happen.\", \"rewritten_form_anger\": \"The celebration went on from 7 pm to 1 am, with all the rides open, but that huge scary rollercoaster? I had to keep my eyes shut the whole time\\u2014I was furious they even had it there!\", \"rewritten_form_surprise\": \"The celebration went from 7 pm to 1 am, and all the rides were open! I couldn\\u2019t believe I got on that enormous rollercoaster, even though I kept my eyes tightly shut the whole ride!\", \"rewritten_form_disgust\": \"The celebration was from 7 pm to 1 am, with all the rides open, including that huge, gross rollercoaster. I couldn\\u2019t even look at it, so I closed my eyes the entire time!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of celebration and enjoyment, but the mention of keeping eyes closed on the rollercoaster suggests a lack of complete joy. It aligns with the joy rewrite by emphasizing the celebration and the excitement of the rides with a slight twist of fear from the rollercoaster experience.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does convey a notion of wishing to enjoy the celebration more, specifically regarding the experience on the rollercoaster. The sadness rewrite captures this sentiment well by including a longing to enjoy the ride which aligns with the original sentiment of reluctance and fear.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original mentions the 'huge scary rollercoaster' and the act of keeping eyes closed throughout the ride, clearly aligning with fear. The fear rewrite emphasizes the terror of the rollercoaster further, which aligns strongly with the original sentence.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence implies frustration with the rollercoaster experience as indicated by the closing of eyes, but it does not strongly express anger. The anger rewrite exaggerates this frustration, making it more explicit. However, the original doesn't showcase enough anger to match the intensity of the rewrite.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise rewrite mentions disbelief at riding the enormous rollercoaster, which is in line with the original's tone of uncertainty about enjoying the ride. The element of surprise is moderately present in the original but is not a dominant emotion.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

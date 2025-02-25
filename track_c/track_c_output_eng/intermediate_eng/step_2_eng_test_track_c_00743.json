@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I had swung my legs over the ledge of the front porch to listen in and imagine for awhile.\", \"rewritten_form_joy\": \"I happily swung my legs over the ledge of the front porch to listen in and dream for a while.\", \"rewritten_form_sadness\": \"I slowly swung my legs over the ledge of the front porch, hoping to listen in and imagine for just a little while.\", \"rewritten_form_fear\": \"I cautiously swung my legs over the ledge of the front porch to listen in, my heart racing as I imagined what I might hear.\", \"rewritten_form_anger\": \"I swung my legs over the ledge of the front porch, so frustrated that I needed to listen in and imagine what was going on.\", \"rewritten_form_surprise\": \"I swung my legs over the ledge of the front porch, intrigued and eager to listen in and imagine what unexpected things might unfold.\", \"rewritten_form_disgust\": \"I reluctantly swung my legs over the ledge of the front porch, feeling a mix of contempt as I listened in and imagined what a mess it all was.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of casualness and light-heartedness when swinging legs over the ledge, but it lacks the explicit happiness present in the joy rewritten version. There is a less enthusiastic tone compared to the joy version and therefore the alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence suggests a thoughtful or reflective action, similar to the sadness version. However, it does not capture the slowness or the hopefulness emphasized in the sadness rewritten sentence, indicating a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey apprehension or tension, which is present in the fear rewritten version. It simply depicts an action without an emotional context of worry or caution, thus the alignment is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence does not show frustration or anger explicitly, it does suggest a desire to listen in. The anger rewritten version conveys a strong emotion that isn't represented in the original text. Therefore, the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence has a hint of curiosity about listening in, similar to the intrigue described in the surprise rewritten version. However, it does not imply an eagerness for unexpected twists, leading to a moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

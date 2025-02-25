@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"After about an hour into walking around my eye screen fogged up due to the heat and I couldn't see much of anything so for the last hour whenever we moved I had to be led by the hand.\", \"rewritten_form_joy\": \"After about an hour of walking around, my eye screen fogged up from the heat, and I couldn't see much of anything, so for the last hour, I happily let myself be led by the hand.\", \"rewritten_form_sadness\": \"After about an hour of walking around, my eye screen fogged up from the heat, and I couldn't see much of anything, so for the last hour, I felt lost and had to be led by the hand.\", \"rewritten_form_fear\": \"After about an hour of walking around, my eye screen fogged up from the heat, and I couldn't see much of anything, so for the last hour, I felt anxious and had to be led by the hand.\", \"rewritten_form_anger\": \"After about an hour of walking around, my eye screen fogged up from the heat, and I couldn't see much of anything! For the last hour, I had to be led by the hand, which was so frustrating!\", \"rewritten_form_surprise\": \"After about an hour of walking around, I was shocked to find my eye screen fogged up from the heat, and suddenly, I couldn't see anything! For the last hour, I had to be led by the hand!\", \"rewritten_form_disgust\": \"After about an hour of walking around, it was disgusting how my eye screen fogged up from the heat, and I couldn't see much of anything. For the last hour, I had to be led by the hand, which was so unpleasant!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a challenging experience, primarily focused on the inconvenience of fogged eyesight. It does not convey happiness or a positive sentiment, making it significantly misaligned with the joy rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes a frustrating situation, culminating in a feeling of not being able to see, which could imply a sense of being lost or struggling. This aligns moderately with the sadness rewritten sentence, where feelings of being lost are emphasized.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence describes a loss of visibility and a need for assistance, which can evoke anxiety about safety and navigation. However, the original wording doesn't strongly convey fear. Therefore, it aligns with the fear rewritten sentence but with moderate intensity.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does express frustration indirectly through the description of an inconvenient situation. While it does not explicitly state anger, the implied irritation at needing to be led suggests a connection with the anger rewritten sentence. However, the intensity is not as strong because the original sentence lacks overtly angry language.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence describes an unexpected situation related to vision issues, but it does not express a sense of shock or sudden realization. The sense of surprise is minimal compared to the emphasized shock in the rewritten sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

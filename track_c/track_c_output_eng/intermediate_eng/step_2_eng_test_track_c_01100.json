@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Not fifteen minutes later, she is sobbing inconsolably.\", \"rewritten_form_joy\": \"Not fifteen minutes later, she is laughing joyfully!\", \"rewritten_form_sadness\": \"Not fifteen minutes later, she is sobbing inconsolably, her heart shattered.\", \"rewritten_form_fear\": \"Not fifteen minutes later, she is sobbing inconsolably, terrified of what\\u2019s to come.\", \"rewritten_form_anger\": \"Not fifteen minutes later, she is sobbing inconsolably, furious at the situation.\", \"rewritten_form_surprise\": \"Not fifteen minutes later, she is sobbing inconsolably, shockingly overwhelmed by her emotions.\", \"rewritten_form_disgust\": \"Not fifteen minutes later, she is sobbing inconsolably, utterly repelled by the memories.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys deep sorrow, which is the opposite of joy. The rewritten version depicts laughter and happiness, contrasting strongly with the emotion expressed in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly describes a state of inconsolable sobbing, which closely aligns with the rewritten sentence that emphasizes a profound heartbreak, reinforcing high emotional intensity.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence does indicate distress, it does not convey the specific element of fear or anxiety about future events, making it less aligned with the fear-based rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not indicate any feelings of anger. It focuses solely on sadness, making it poorly aligned with the rewritten sentence that includes furiosity in response to a situation.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The feeling of surprise regarding emotional overwhelm is somewhat present in the original sentence, but it lacks the element of shock or unexpectedness described in the rewritten version, resulting in a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

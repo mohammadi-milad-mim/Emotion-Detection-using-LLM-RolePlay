@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Simple, straightforward, no nonsense.\", \"rewritten_form_joy\": \"Absolutely delightful and refreshingly clear!\", \"rewritten_form_sadness\": \"So simple yet it's a reminder of the things we often overlook.\", \"rewritten_form_fear\": \"It\\u2019s simple, straightforward, but what if it\\u2019s too good to be true?\", \"rewritten_form_anger\": \"Why can\\u2019t things just be simple and straightforward without all this nonsense?\", \"rewritten_form_surprise\": \"Wow, it\\u2019s so simple and straightforward\\u2014what a rare find!\", \"rewritten_form_disgust\": \"Ugh, can we not just make things overly complicated instead of this dull simplicity?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes something as simple and straightforward, lacking any complex or joyful elements. However, the rewritten version encapsulates a sense of delight that isn't present in the original, indicating a disconnect in emotional tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While the original is straightforward, the rewritten version captures a sense of nostalgia for overlooked things, suggesting a recognition of loss or simplicity's shortcomings. The original does touch on simplicity, but does not evoke the sentiment of sadness associated with it, though there is a slight connection.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence is neutral and positive, while the rewritten version introduces a sense of apprehension about simplicity being too good to be true. The original doesn't hint at any fear, making this disconnect clear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The rewritten form introduces frustration regarding complexity, which aligns slightly with the original\u2019s simplicity but doesn't resonate strongly with the overall sentiment presented in the original sentence. As such, there's some level of alignment, but it's low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The use of 'wow' in the rewritten version indicates amazement at simplicity, suggesting an unusual quality. The original's matter-of-fact tone does not lead to any surprise, making this a weak alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

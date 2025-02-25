@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My tooth was cracked.\", \"rewritten_form_joy\": \"My tooth was cracked, but I'm so grateful it can be fixed!\", \"rewritten_form_sadness\": \"My tooth was cracked, and it really breaks my heart.\", \"rewritten_form_fear\": \"My tooth was cracked, and I\\u2019m terrified of what that means for my dental health.\", \"rewritten_form_anger\": \"I can\\u2019t believe my tooth was cracked; this is so frustrating!\", \"rewritten_form_surprise\": \"I was shocked to discover that my tooth was cracked!\", \"rewritten_form_disgust\": \"I can't believe my tooth was cracked; it's just so gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any joy; it simply states a fact about a tooth being cracked, which is usually a negative experience. The joy version introduces gratitude and optimism about fixing the tooth, which is absent from the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The mention of a cracked tooth can certainly evoke sadness, as it implies something negative. The rewritten sadness version explicitly conveys heartbreak, aligning well with the implications of the original sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence conveys a potential problem, which could lead to fear regarding dental health, especially as indicated in the fear rewritten version. While the original doesn\u2019t explicitly state fear, it opens the door to it.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence indicates a problem but does not express any anger. The anger version expresses frustration which is not present in the original; therefore, there is no strong connection.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is factual and does not convey surprise, while the rewritten surprise sentence clearly conveys shock at the discovery of a crack. Thus, there isn\u2019t a direct alignment with the tone of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

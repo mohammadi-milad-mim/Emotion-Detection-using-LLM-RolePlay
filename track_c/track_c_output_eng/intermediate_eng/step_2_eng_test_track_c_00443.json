@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This addiction does kill people.\", \"rewritten_form_joy\": \"It\\u2019s heartbreaking, but I find hope in helping others break free from this addiction before it harms them.\", \"rewritten_form_sadness\": \"This addiction tragically takes lives, and it\\u2019s so painful to see.\", \"rewritten_form_fear\": \"This addiction can be deadly, and that thought weighs heavily on my mind.\", \"rewritten_form_anger\": \"It infuriates me that this addiction continues to kill people in our society.\", \"rewritten_form_surprise\": \"I was shocked to learn that this addiction can actually kill people!\", \"rewritten_form_disgust\": \"It disgusts me that this addiction is killing people; it\\u2019s completely unacceptable.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a stark reality about addiction, which contrasts with the hopefulness implied in the joy rewritten sentence. There is a lack of positivity or hope in the original, leaving little room for joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly states that addiction kills people, aligning strongly with the tragic and painful tone of the sadness rewritten sentence, making it one of the more emotional connections.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence presents a harsh truth about addiction, which can instill fear of its deadly consequences. The sense of danger and concern resonates with the fear rewritten sentence but is less emotionally charged than sadness here.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While the original sentence communicates a factual and unsettling reality, it lacks the emotional outrage that the anger rewritten sentence expresses. Thus, it resonates with anger to a degree but is not as strong.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence states a fact about addiction without an element of surprise, making it less aligned with the shocked reaction in the surprise rewritten sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

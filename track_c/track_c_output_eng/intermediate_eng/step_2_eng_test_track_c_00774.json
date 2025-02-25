@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She never cleans and leaves dirty dishes everywhere.\", \"rewritten_form_joy\": \"She has such a carefree spirit, leaving her unique mark with dirty dishes everywhere!\", \"rewritten_form_sadness\": \"It\\u2019s sad how she never cleans, leaving dirty dishes everywhere that just pile up.\", \"rewritten_form_fear\": \"It\\u2019s unsettling that she never cleans and leaves dirty dishes everywhere\\u2014it feels chaotic.\", \"rewritten_form_anger\": \"It\\u2019s infuriating that she never cleans and just leaves dirty dishes everywhere, it\\u2019s so disrespectful!\", \"rewritten_form_surprise\": \"I can\\u2019t believe she never cleans and actually leaves dirty dishes everywhere\\u2014it\\u2019s shocking!\", \"rewritten_form_disgust\": \"Ugh, she never cleans and leaves dirty dishes everywhere, it\\u2019s absolutely revolting!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a negative behavior (not cleaning), which contradicts the positive spin of joy found in the rewritten version. Thus, the alignment is quite low.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of neglect and the negative consequence of dirtiness, which aligns moderately with sadness, as it evokes feelings of disappointment about the situation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence suggests a lack of order and cleanliness, which can be associated with fear of chaos. The connection is moderate, but it's more about dissatisfaction than true fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence strongly indicates frustration and annoyance about someone\u2019s lack of responsibility, paralleling the intense feelings of anger expressed in the rewritten version.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original statement does highlight a somewhat shocking behavior of neglecting cleanliness. However, it doesn't evoke a strong sense of surprise as it's rooted in a behavior that can be anticipated.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

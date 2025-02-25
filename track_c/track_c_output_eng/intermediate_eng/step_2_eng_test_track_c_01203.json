@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My worst birthday was last year, my 18th.\", \"rewritten_form_joy\": \"My 18th birthday was supposed to be amazing, but it ended up being my worst one yet!\", \"rewritten_form_sadness\": \"Last year\\u2019s birthday, my 18th, was the worst day I can remember.\", \"rewritten_form_fear\": \"I still can't believe how terrible my 18th birthday turned out to be last year; it really scared me.\", \"rewritten_form_anger\": \"I can\\u2019t believe last year\\u2019s birthday, my 18th, was such a disaster; it made me so angry!\", \"rewritten_form_surprise\": \"I never expected my 18th birthday last year to turn out so poorly; what a shock!\", \"rewritten_form_disgust\": \"Last year's birthday, my 18th, was absolutely disgusting; I can hardly stand to think about it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a negative experience regarding a significant milestone, indicating a lack of joy. The rewritten joy sentence implies a contrast between expectation and reality but does not convey joy as the outcome was disappointing.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly states that the birthday was the worst, aligning closely with the rewritten sadness sentence, which emphasizes the negative feelings associated with that day.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence contains an implication of disappointment but lacks explicit fear. The rewritten fear sentence suggests a stronger emotional response than the original conveys.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original conveys frustration about the birthday, and the rewritten anger sentence captures that sentiment of being upset about the experience, which aligns well.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original mentions a negative outcome of the 18th birthday without hints of surprise; the rewritten surprise sentence implies an unexpected outcome, which is somewhat different from the original's tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

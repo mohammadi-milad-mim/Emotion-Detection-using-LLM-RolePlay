@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\u9cb8\\u843d\\u4e8e\\u6d77\\uff0c\\u661f\\u6c89\\u4e8e\\u6d3c\\uff0c\\u98ce\\u9690\\u4e8e\\u5bc6\\u6797\\uff0c\\u8749\\u9e23\\u6f0f\\u8fdb\\u590f\\u81f3\\u3002\\u60f3\\u8ba9\\u4e16\\u95f4\\u6240\\u6709\\u6e29\\u67d4\\u4f4f\\u8fdb\\u4ed6\\u773c\\u91cc\\u3002\", \"rewritten_form_joy\": \"\\u9cb8\\u843d\\u4e8e\\u6d77\\uff0c\\u661f\\u6c89\\u4e8e\\u6d3c\\uff0c\\u98ce\\u9690\\u4e8e\\u5bc6\\u6797\\uff0c\\u8749\\u9e23\\u6f0f\\u8fdb\\u590f\\u81f3\\u3002\\u6211\\u591a\\u5e0c\\u671b\\u4e16\\u95f4\\u6240\\u6709\\u7684\\u6e29\\u67d4\\u90fd\\u80fd\\u9a7b\\u7559\\u5728\\u4ed6\\u773c\\u91cc\\u3002\", \"rewritten_form_sadness\": \"\\u9cb8\\u843d\\u4e8e\\u6d77\\uff0c\\u661f\\u6c89\\u4e8e\\u6d3c\\uff0c\\u98ce\\u9690\\u4e8e\\u5bc6\\u6797\\uff0c\\u8749\\u9e23\\u6f0f\\u8fdb\\u590f\\u81f3\\u3002\\u6211\\u53ea\\u5e0c\\u671b\\u4e16\\u95f4\\u7684\\u6240\\u6709\\u6e29\\u67d4\\uff0c\\u80fd\\u5728\\u4ed6\\u773c\\u91cc\\u627e\\u4e2a\\u5b89\\u653e\\u7684\\u5730\\u65b9\\u3002\", \"rewritten_form_fear\": \"\\u9cb8\\u843d\\u4e8e\\u6d77\\uff0c\\u661f\\u6c89\\u4e8e\\u6d3c\\uff0c\\u98ce\\u9690\\u4e8e\\u5bc6\\u6797\\uff0c\\u8749\\u9e23\\u6f0f\\u8fdb\\u590f\\u81f3\\u3002\\u6211\\u5e0c\\u671b\\u4e16\\u95f4\\u6240\\u6709\\u6e29\\u67d4\\u80fd\\u4f4f\\u8fdb\\u4ed6\\u773c\\u91cc\\uff0c\\u4f46\\u6211\\u53c8\\u6015\\u90a3\\u4e9b\\u6e29\\u67d4\\u65e0\\u6cd5\\u62b5\\u8fbe\\u3002\", \"rewritten_form_anger\": \"\\u9cb8\\u843d\\u4e8e\\u6d77\\uff0c\\u661f\\u6c89\\u4e8e\\u6d3c\\uff0c\\u98ce\\u9690\\u4e8e\\u5bc6\\u6797\\uff0c\\u8749\\u9e23\\u6f0f\\u8fdb\\u590f\\u81f3\\u3002\\u6211\\u771f\\u60f3\\u8ba9\\u4e16\\u95f4\\u6240\\u6709\\u6e29\\u67d4\\u90fd\\u5c45\\u4f4f\\u5728\\u4ed6\\u773c\\u91cc\\uff0c\\u4e3a\\u4ec0\\u4e48\\u8fd9\\u4e48\\u96be\\uff1f\", \"rewritten_form_surprise\": \"\\u9cb8\\u843d\\u4e8e\\u6d77\\uff0c\\u661f\\u6c89\\u4e8e\\u6d3c\\uff0c\\u98ce\\u9690\\u4e8e\\u5bc6\\u6797\\uff0c\\u8749\\u9e23\\u6f0f\\u8fdb\\u590f\\u81f3\\u3002\\u5c45\\u7136\\u60f3\\u8ba9\\u4e16\\u95f4\\u6240\\u6709\\u6e29\\u67d4\\u4f4f\\u8fdb\\u4ed6\\u773c\\u91cc\\uff0c\\u8fd9\\u4e2a\\u60f3\\u6cd5\\u771f\\u662f\\u592a\\u7f8e\\u4e86\\uff01\", \"rewritten_form_disgust\": \"\\u9cb8\\u843d\\u4e8e\\u6d77\\uff0c\\u661f\\u6c89\\u4e8e\\u6d3c\\uff0c\\u98ce\\u9690\\u4e8e\\u5bc6\\u6797\\uff0c\\u8749\\u9e23\\u6f0f\\u8fdb\\u590f\\u81f3\\u3002\\u5c45\\u7136\\u60f3\\u628a\\u4e16\\u95f4\\u7684\\u6e29\\u67d4\\u90fd\\u585e\\u8fdb\\u4ed6\\u773c\\u91cc\\uff0c\\u771f\\u662f\\u4e0d\\u53ef\\u601d\\u8bae\\u3002\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a peaceful and serene desire for the world to exist in harmony. This aligns closely with the joy rewritten version, which adds a specific element of hopefulness that resonates with feelings of joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence conveys a longing for a tranquil world but lacks an overt tone of sadness. While the rewritten sadness version reflects a more somber outlook on searching for calm, the original does not strongly match that sentiment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "In the original, there is a mild concern about the tranquility of the world as indicated by the longing expressed. However, it does not convey direct fear or anxiety, which is present in the rewritten fear version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There are no elements in the original that express anger or frustration. The desire for a peaceful world does not suggest any conflict or hostility, which is necessary for anger to be present.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence has a contemplative tone, suggesting a beautiful idea about the world. The rewritten surprise version amplifies this to an astonished level of beauty, which is not present in the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "There\u2019s no indication of disgust in the original sentence. The longing for peace does not suggest any feelings of aversion or distaste.",
+        "disgust_intensity": 0
+    }
+}

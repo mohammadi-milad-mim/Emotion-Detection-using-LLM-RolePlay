@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This greatly accelerated the pickles necrosing.\", \"rewritten_form_joy\": \"This really sped up the pickles necrosing in such an exciting way!\", \"rewritten_form_sadness\": \"This sadly accelerated the pickles necrosing more than I expected.\", \"rewritten_form_fear\": \"This has alarmingly accelerated the pickles necrosing, and it worries me.\", \"rewritten_form_anger\": \"This has infuriatingly accelerated the pickles necrosing!\", \"rewritten_form_surprise\": \"I can\\u2019t believe this actually accelerated the pickles necrosing so quickly!\", \"rewritten_form_disgust\": \"This has grimly accelerated the pickles necrosing, and it\\u2019s just revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral tone about the acceleration of pickles necrosing, lacking the excitement suggested in the joyful rewrite. Therefore, it does not strongly align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The term 'sadly' in the rewritten version implies a negative emotion regarding the acceleration, which the original sentence only loosely touches upon by being neutral. Thus, sadness is not strongly present.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original statement doesn't imply alarm or worry, as it simply states a fact about necrosing. The fear rewrite indicates a high level of concern, which is not present in the original sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence discusses acceleration, it does not convey any frustration or anger. The anger rewrite describes the situation as infuriating, which is absent from the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks any element of disbelief or surprise, making it misaligned with the astonishment expressed in the surprise rewrite.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

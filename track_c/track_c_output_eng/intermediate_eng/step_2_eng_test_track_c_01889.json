@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They dance and shiver and grin and laugh.\", \"rewritten_form_joy\": \"They dance joyfully, shivering with excitement, grinning wide, and laughing heartily.\", \"rewritten_form_sadness\": \"They dance, shivering and grinning, yet their laughter feels hollow and distant.\", \"rewritten_form_fear\": \"They dance, shivering with fear, grinning nervously, and laughing uneasily.\", \"rewritten_form_anger\": \"They dance and shiver, grinning through clenched teeth and laughing out of frustration.\", \"rewritten_form_surprise\": \"They dance, shivering in shock, grinning in disbelief, and laughing unexpectedly.\", \"rewritten_form_disgust\": \"They dance and shiver, grinning in a forced manner, laughing in a way that feels utterly fake.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence evokes a sense of joy and playfulness through the actions of dancing, grinning, and laughing, similar to the rewritten joy version which amplifies these emotions with descriptors that emphasize excitement and happiness.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original sentence lacks any indication of sadness or hollowness; the actions described are purely joyful without any emotional weight suggesting loss or longing, making the rewritten sadness version feel out of place.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "While the actions of dancing and shivering could be interpreted as fearful, the original sentence does not convey that fearfulness explicitly; thus, the alignment with fear is weak and the intensity low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not suggest any anger; it depicts cheerful actions without any hint of frustration or tension as in the anger rewritten version, resulting in no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence contains no aspects of shock or disbelief; it clearly reflects joyful actions without surprising elements, making it misaligned with the idea of surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

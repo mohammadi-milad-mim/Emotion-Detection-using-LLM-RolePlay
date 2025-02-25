@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I said out loud, \\\"welcome\\\" and smiled.\", \"rewritten_form_joy\": \"I said out loud, \\\"welcome!\\\" and beamed with joy.\", \"rewritten_form_sadness\": \"I said out loud, \\\"welcome,\\\" but my smile felt heavy.\", \"rewritten_form_fear\": \"I nervously said, \\\"welcome,\\\" and forced a smile.\", \"rewritten_form_anger\": \"I said out loud, \\\"welcome,\\\" and smiled tightly, annoyed.\", \"rewritten_form_surprise\": \"I exclaimed, \\\"welcome!\\\" with a wide-eyed smile.\", \"rewritten_form_disgust\": \"I said out loud, \\\"welcome\\\" with a forced smile, feeling utterly repulsed.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a positive action of saying 'welcome' paired with a smile, which aligns well with the joy implied in the rewritten version. However, it lacks the exuberance ('beamed with joy') that is present in the rewritten form.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence implies pleasure in saying 'welcome,' whereas the sadness version implies a burdened smile. There is no indication of heaviness or sadness in the original, so while there may be a slight contrast, overall it does not align with this emotion.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not present any anxiety or fear, as the tone is welcoming. The fear version suggests nervousness, which is not present in the original. Thus, there is no alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no indication of annoyance or tightness in the smile in the original text. The smile seems genuine, which contrasts with the sentiment of annoyance in the anger version. Therefore, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original has a welcoming tone but lacks the element of surprise that comes from 'exclaiming' and having a 'wide-eyed smile.' While it is an affirmative greeting, it does not elicit surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

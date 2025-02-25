@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Gaskiya ne musamman a Nigeria\\ud83d\\ude2d\\ud83d\\ude2d\\ud83d\\ude2d mudai muna cikin jarafta\", \"rewritten_form_joy\": \"Gaskiya ne musamman a Nigeria! \\ud83d\\ude04 Muna cikin jarafta sosai!\", \"rewritten_form_sadness\": \"Gaskiya ne musamman a Nigeria... \\ud83d\\ude22 Tabbas muna cikin jarafta.\", \"rewritten_form_fear\": \"Gaskiya ne musamman a Nigeria! \\ud83d\\ude30 Muna cikin jarafta, abin da ke damun zuciya.\", \"rewritten_form_anger\": \"Gaskiya ne musamman a Nigeria! \\ud83d\\ude21 Muna cikin jarafta, wanda ba zai yuwu ba!\", \"rewritten_form_surprise\": \"Gaskiya ne musamman a Nigeria?! \\ud83d\\ude32 Mun fada cikin jarafta!\", \"rewritten_form_disgust\": \"Gaskiya ne musamman a Nigeria! \\ud83d\\ude44 Muna cikin jarafta, abin da \\u0257ayan ba na sha'awa ba ne!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a serious concern expressed with tears, which is inconsistent with joy, where there should be exclamation marks and positive emotions, like happiness or enthusiasm.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence includes the crying emoji, suggesting a sense of sadness and the sentiment aligns closely with the rewritten sadness version, which also uses the crying emoji and conveys a more somber tone.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original has an emotional undertone, it lacks direct expression of fear present in the rewritten form, which indicates something worrying and distressing. The original does not evoke fear strongly enough.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Although the topic of being in 'jarafta' can evoke strong emotions, the original text does not express pure anger. The addition of exclamation marks in the rewritten form indicates anger that is not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is little to no element of surprise in the original sentence as it conveys a straightforward observation rather than unexpected news, unlike the surprise version which expresses astonishment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not express disgust; it presents a dire situation, and the rewritten disgust version elaborates on a strong aversion that is not implied in the original context.",
+        "disgust_intensity": 1
+    }
+}

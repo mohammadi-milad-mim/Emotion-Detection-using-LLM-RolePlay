@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yadda ake bikin murnar rabuwar aure a kasashen Larabawa\", \"rewritten_form_joy\": \"Yadda ake murnar rabuwar aure a kasashen Larabawa cikin farin ciki!\", \"rewritten_form_sadness\": \"Yadda ake bikin rabuwar aure a kasashen Larabawa, duk da cewa zuciya ta yi rauni.\", \"rewritten_form_fear\": \"Yadda ake bikin rabuwar aure a kasashen Larabawa, wanda ke jawo fargaba da tsoro.\", \"rewritten_form_anger\": \"Yadda ake bikin murnar rabuwar aure a kasashen Larabawa, abin da ke sa na ji takaici!\", \"rewritten_form_surprise\": \"Yaya murnar rabuwar aure a kasashen Larabawa ta kasance, abin mamaki!\", \"rewritten_form_disgust\": \"Yadda ake bikin rabuwar aure a kasashen Larabawa, wanda hakan yana da Washiya!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions 'bikin murnar rabuwar aure' (celebration of divorce), which can imply a neutral or serious context without explicit joy. The rewritten joyful version adds an explicit expression of happiness, which the original lacks, showing only a factual tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten version captures the sadness through the phrase 'duk da cewa zuciya ta yi rauni' (even though my heart is weak), which conveys emotional pain not directly evident in the original sentence, suggesting a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The presence of 'fargaba da tsoro' (fear and dread) in the rewritten form implies that the topic of divorce can be alarming, but there is no indication of fear in the original sentence itself. This indicates a lower alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten form evokes anger by incorporating feelings of frustration with 'abin da ke sa na ji takaici' (this makes me feel frustrated), which is a strong emotional response not indicated in the original. Therefore, the alignment is moderate.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The revised sentence for surprise mentions it as 'abin mamaki' (something surprising). The original does not exhibit any elements of surprise, showing that the original is more neutral and factual than the rewritten form indicates.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust rewritten version uses 'hakan yana da Washiya' (this is disgusting), a strong expression of distaste not indicated in the original statement, suggesting that disgust may not be a present feeling in the original context.",
+        "disgust_intensity": 1
+    }
+}

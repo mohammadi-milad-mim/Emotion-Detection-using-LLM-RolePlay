@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I woke up that morning feeling awful, and begged my mom to stay home from school.\", \"rewritten_form_joy\": \"I woke up that morning feeling a bit off, but I was excited to convince my mom to let me stay home from school!\", \"rewritten_form_sadness\": \"I woke up that morning feeling awful, and desperately pleaded with my mom to let me stay home from school.\", \"rewritten_form_fear\": \"I woke up that morning feeling awful, and I was so anxious I begged my mom to let me stay home from school.\", \"rewritten_form_anger\": \"I woke up that morning feeling awful, and I was so frustrated that I had to beg my mom to let me stay home from school.\", \"rewritten_form_surprise\": \"I woke up that morning feeling awful, and I was shocked when I had to beg my mom to let me stay home from school.\", \"rewritten_form_disgust\": \"I woke up that morning feeling awful, and I found it revolting to ask my mom to let me stay home from school.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a negative feeling ('feeling awful') rather than joy, and the asking to stay home does not carry an excited or positive tone. Thus, joy is not present.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses a clear feeling of 'awful' and the use of 'begged' suggests desperation, aligning closely with the rewritten version expressing sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence's feeling of being 'awful' could imply anxiety; however, there is no strong indication of fear present in the way the request was made, making the alignment moderate at best.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While there is an implication of frustration in having to beg, the original sentence lacks a strong expression of anger as the tone is more desperate than angry, resulting in low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not present any elements of surprise. It straightforwardly discusses feeling bad and asking for a favor without any unexpected elements.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

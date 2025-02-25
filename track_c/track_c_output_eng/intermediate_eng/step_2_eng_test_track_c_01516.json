@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This week is the 1-year anniversary of the last time He Who Must Not Be Named broke my heart.\", \"rewritten_form_joy\": \"This week marks a whole year since He Who Must Not Be Named broke my heart, and I\\u2019ve grown so much since then!\", \"rewritten_form_sadness\": \"This week is the painful 1-year anniversary of the last time He Who Must Not Be Named broke my heart.\", \"rewritten_form_fear\": \"This week, I can\\u2019t help but dread the 1-year anniversary of the last time He Who Must Not Be Named broke my heart.\", \"rewritten_form_anger\": \"This week is the frustrating 1-year anniversary of the last time He Who Must Not Be Named broke my heart.\", \"rewritten_form_surprise\": \"This week is already the 1-year anniversary of the last time He Who Must Not Be Named broke my heart? Time really flies!\", \"rewritten_form_disgust\": \"This week is the gross 1-year anniversary of the last time He Who Must Not Be Named broke my heart.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks a sense of joy or celebration. Although the rewritten joy sentence emphasizes growth, the original sentiment is clearly more focused on a painful memory without a positive twist.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of melancholy in recognizing the anniversary of a heartbreak, which aligns well with the rewritten sadness sentence that explicitly describes the moment as painful.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While there is a sense of discomfort regarding the anniversary, the original sentence does not communicate a strong feeling of dread or fear as suggested by the rewritten version. The fear in the rewritten form is more intense than what is present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not suggest any anger toward the situation or person involved. The rewritten anger sentence adds a layer of frustration that is not evident in the original, leading to a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original acknowledges the anniversary of the heartbreak but does not express surprise at how time has passed. The rewritten surprise sentence contrasts this with its exclamatory tone about the passage of time.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

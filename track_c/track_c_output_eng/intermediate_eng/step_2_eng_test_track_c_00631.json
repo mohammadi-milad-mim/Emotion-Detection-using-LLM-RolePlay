@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"This friend is a musician.\", \"rewritten_form_joy\": \"This friend is a fantastic musician!\", \"rewritten_form_sadness\": \"This friend is a musician, but I miss their performances.\", \"rewritten_form_fear\": \"This friend is a musician, and I worry about their future in this industry.\", \"rewritten_form_anger\": \"This friend is a musician, yet they get no recognition for their talent!\", \"rewritten_form_surprise\": \"I can't believe this friend is a musician!\", \"rewritten_form_disgust\": \"This friend is a musician, but their recent work is just not good.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral fact about a friend being a musician, without any enthusiasm. The joy rewritten version emphasizes the positive aspects of being a 'fantastic musician,' which adds an element of excitement and praise not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence states a fact with no emotional implication, while the sadness version includes the sentiment of missing performances, implying a sense of loss or longing. This emotional context is absent from the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original\u2019s neutrality contrasts with the fear version, which expresses concern about the friend's future, a feeling not implied in the original statement. The original does not evoke any worry or fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original lacks any indication of anger or frustration. In contrast, the anger version points to a perceived injustice regarding recognition. This sentiment does not emerge from the original text.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is factual and straightforward, while the surprise version expresses disbelief. This adds an element of unexpectedness that the original sentence doesn't convey.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

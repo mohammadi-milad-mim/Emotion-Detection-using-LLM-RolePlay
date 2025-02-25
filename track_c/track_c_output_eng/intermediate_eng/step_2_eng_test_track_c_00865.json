@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"THEY STOLE MY BALLOON!\", \"rewritten_form_joy\": \"They took my balloon! How fun is that?\", \"rewritten_form_sadness\": \"They stole my balloon... I can't believe it.\", \"rewritten_form_fear\": \"They stole my balloon! What if they take more?\", \"rewritten_form_anger\": \"They had the audacity to steal my balloon!\", \"rewritten_form_surprise\": \"They actually stole my balloon! I can't believe it!\", \"rewritten_form_disgust\": \"They stole my balloon? That's just low.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of loss without any positive connotation, so it does not align with joy, which implies a fun or positive experience.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence resonates with sadness since it conveys a sense of loss ('stole' implies regret), which aligns closely with the rewritten sad version.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence indicates a theft, it does not imply fear of further loss or consequences, which is present in the fear rewritten version. Thus, the alignment is not strong.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The tone of the original conveys a strong emotional reaction to an act of stealing, which relates directly to anger as expressed in the rewritten form.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original statement does not convey shock or disbelief; hence, it does not align with surprise. It states a fact rather than an unexpected event.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

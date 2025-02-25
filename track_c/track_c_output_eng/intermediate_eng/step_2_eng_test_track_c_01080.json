@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"She was so confused.\", \"rewritten_form_joy\": \"She was full of wonder, not knowing what delightful surprise awaited her.\", \"rewritten_form_sadness\": \"She was lost in a fog of confusion, her heart heavy with uncertainty.\", \"rewritten_form_fear\": \"She felt a deep confusion gnawing at her, making her anxious about the unknown.\", \"rewritten_form_anger\": \"She was incredibly frustrated, drowning in a sea of confusion that made no sense.\", \"rewritten_form_surprise\": \"She was utterly bewildered, caught off guard by the unexpected twists of events.\", \"rewritten_form_disgust\": \"She was sickened by the confusion, it felt like a muddled mess she couldn't escape.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses confusion, which is more neutral and doesn't align with the joyful tone of the rewritten sentence that suggests wonder and delight. Confusion can precede joy, but it is not inherently joyful.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence indicates confusion, which can relate to feelings of sadness, especially when combined with the imagery in the rewritten version of being lost. Thus, there is a moderate alignment in terms of emotional depth.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The feeling of confusion can lead to anxiety and fear, as conveyed in the rewritten version. There is a clear connection, as confusion often accompanies feelings of being lost in the unknown.",
+        "fear_intensity": 2,
+        "anger_reasoning": "While confusion can cause frustration, the original sentence does not convey strong anger directly. The rewritten version adds an intense layer of frustration that is not explicitly present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The notion of being confused aligns moderately with the idea of being caught off guard. However, 'surprise' carries a more striking tone than mere confusion, leading to a moderate alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

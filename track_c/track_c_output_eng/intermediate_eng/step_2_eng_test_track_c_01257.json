@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I learned SO much from these classes and now my head is spinning with ideas.\", \"rewritten_form_joy\": \"I can't believe how much I've learned in these classes! My head is bursting with exciting ideas!\", \"rewritten_form_sadness\": \"I learned a lot from these classes, but my head is spinning with overwhelming thoughts and confusion.\", \"rewritten_form_fear\": \"I learned so much in these classes, but now I feel anxious with my head spinning and so many ideas to manage.\", \"rewritten_form_anger\": \"I learned a ton from these classes, but it's frustrating how my head is spinning with overwhelming ideas!\", \"rewritten_form_surprise\": \"I learned so much from these classes that I'm completely blown away\\u2014my head is spinning with all these incredible ideas!\", \"rewritten_form_disgust\": \"I learned a lot from these classes, but honestly, it's nauseating how my head is spinning with so many chaotic ideas.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a positive reaction to learning, suggesting a sense of excitement and joy. This aligns well with the rewritten joy sentence, which amplifies that feeling with exuberant language ('can't believe', 'bursting with exciting ideas'). Thus, there is a strong alignment with joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "The original mentions a 'head spinning with ideas', but lacks a direct connection to sadness. The rewritten sadness version frames it with overwhelming thoughts and confusion, which introduces a negative connotation not prominent in the original. Therefore, the alignment here is weak.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "There is a slight implication of anxiety because of the 'head spinning' in the original, which suggests some level of mental overwhelm. However, the original does not express fear directly, making this connection more moderate. The revised version enhances that anxiety concept, but the original remains more positive in tone.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original statement does not convey frustration or anger, as it remains largely positive about the learning process. The rewritten anger forms imply annoyance, which is absent from the original. Consequently, there's a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The expression of being overwhelmed by ideas can evoke surprise, as indicated in the rewritten sentence by the phrase 'completely blown away'. The original closely corresponds to this notion of surprise, as both communicate an unexpected abundance of ideas.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

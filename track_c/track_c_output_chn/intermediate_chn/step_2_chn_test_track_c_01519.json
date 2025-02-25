@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"We'restandingsidebyside\\uff0c\\u6b64\\u65f6\\u6211\\u4eec\\u80a9\\u5e76\\u80a9\\u7684\\u7ad9\\u7740\\u3002\", \"rewritten_form_joy\": \"We're standing side by side, and it feels so wonderful to be together like this!\", \"rewritten_form_sadness\": \"We're standing side by side, but it feels lonely somehow as we share this moment.\", \"rewritten_form_fear\": \"We're standing side by side, but I can't shake this feeling of unease that hangs over us.\", \"rewritten_form_anger\": \"We're standing side by side, and it infuriates me that we have to be here like this!\", \"rewritten_form_surprise\": \"We're standing side by side, and wow, I didn't expect us to be so close!\", \"rewritten_form_disgust\": \"We're standing side by side, and honestly, I find this situation really unsettling.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of togetherness by emphasizing proximity ('standing side by side'). However, it lacks the positive emotional nuance present in the joy rewritten version, which celebrates the connection. There is a neutral tone in the original sentence that doesn't convey strong happiness.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While the original conveys a shared experience, it does not imply any loneliness or sadness itself. In contrast, the sadness rewritten version explicitly suggests a feeling of loneliness in the same situation. Thus, the original does not align closely with sadness but hints at emotional depth.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not convey fear or unease. The rewritten fear sentence introduces apprehension, which is absent in the original. The original simply states the fact of being together without implying any danger or dread.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no anger implied in the original sentence. The rewritten anger sentence introduces a strong negative sentiment about the situation, which is not reflected in the neutral original phrase. Therefore, the original sentence does not resonate with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not elicit surprise; it presents a straightforward statement about proximity. The rewritten surprise sentence indicates an unexpected closeness, which is not present in the original. Thus, there is no strong alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not express any disgust or unsettling feelings about the situation. The rewritten disgust version introduces a negative perception of the circumstances, which is not found in the neutral tone of the original sentence.",
+        "disgust_intensity": 0
+    }
+}

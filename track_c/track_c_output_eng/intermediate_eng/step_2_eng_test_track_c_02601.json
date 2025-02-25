@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"and then i took a shower, and made popcorn and watched some tv with dad before coming in here, doing my nails and now doing this.\", \"rewritten_form_joy\": \"and then I took a lovely shower, made delicious popcorn, and shared some laughs watching TV with dad before coming in here to pamper myself doing my nails and now this!\", \"rewritten_form_sadness\": \"and then I took a quiet shower, made some popcorn, and sat with dad watching TV before coming in here to do my nails and now this, feeling a bit alone.\", \"rewritten_form_fear\": \"and then I took a quick shower, made popcorn, and nervously watched some TV with dad before coming in here, doing my nails and now this, hoping everything is okay.\", \"rewritten_form_anger\": \"and then I was forced to take a shower, made popcorn, and watched TV with dad before coming in here to do my nails and now this, feeling frustrated.\", \"rewritten_form_surprise\": \"and then I took a shower, made popcorn, and watched some TV with dad, which I didn\\u2019t expect to enjoy so much before coming in here, doing my nails and now this!\", \"rewritten_form_disgust\": \"and then I took a shower, made popcorn, and watched some TV with dad, which felt so pointless before coming in here to do my nails and now this, ugh.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a routine activity with a neutral tone, contrasting with the rewritten joyful version that adds descriptors like 'lovely' and 'delicious', emphasizing happiness and positive emotions. While there is enjoyment implied, it lacks the same degree of exuberance.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sad version captures feelings of loneliness and reflection, which is not conveyed in the original text. Although the original has a somewhat solitary nature, it does not express outright sadness or aloneness, thus aligning very weakly on the emotional scale.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence doesn't convey a sense of fear or anxiety, while the rewritten fearful version introduces feelings of nervousness and concern. The original text simply outlines actions without implying any worry or tension about them.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not indicate any frustration or resentment; it simply describes daily activities. The rewritten angry version suggests being forced and feeling frustrated, which is not present in the original. Thus, the original aligns very weakly with this emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is no sense of unexpectedness or astonishment in the original sentence. The rewritten surprise version emphasizes enjoyment that was not anticipated, but the original text reveals no implication of surprise, making it score low on this emotional scale.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

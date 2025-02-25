@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"very real to me.\", \"rewritten_form_joy\": \"It feels so wonderfully real to me!\", \"rewritten_form_sadness\": \"It's painfully real to me.\", \"rewritten_form_fear\": \"It's frighteningly real to me.\", \"rewritten_form_anger\": \"It's infuriatingly real to me.\", \"rewritten_form_surprise\": \"It's unexpectedly real to me!\", \"rewritten_form_disgust\": \"It's disturbingly real to me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original phrase 'very real to me' does not inherently convey joy; it is neutral in terms of sentiment. The rewritten joy sentence adds an element of positive feeling with 'wonderfully,' which is lacking in the original, indicating little to no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original phrase could imply a strong emotional connection or significance; however, it does not express sadness on its own. The sadness sentence emphasizes pain, which is not reflected in the original, leading to a low alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The phrase 'very real to me' does not inherently express fear or anxiety. The fear sentence introduces a fearful connotation with 'frighteningly,' suggesting little to no alignment with the emotion of fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original suggests a strong feeling, it does not evoke anger directly. The angry version uses 'infuriatingly,' implying strong negative emotions which are absent in the original, resulting in little to no connection with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original phrase does not convey surprise at all; it is quite straightforward. The surprise response uses 'unexpectedly' to create a contrast that is not present in the original, indicating no alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

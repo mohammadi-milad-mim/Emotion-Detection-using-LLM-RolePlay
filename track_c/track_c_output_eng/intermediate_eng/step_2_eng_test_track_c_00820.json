@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My eyes are sunken.\", \"rewritten_form_joy\": \"My eyes have a bit of a unique depth to them!\", \"rewritten_form_sadness\": \"My eyes feel so sunken and heavy with sadness.\", \"rewritten_form_fear\": \"My eyes look so sunken, like something is really wrong.\", \"rewritten_form_anger\": \"I can't believe how sunken my eyes are; it's infuriating!\", \"rewritten_form_surprise\": \"Wow, my eyes are really sunken\\u2014what's going on?\", \"rewritten_form_disgust\": \"Ugh, my eyes are so sunken, it\\u2019s just awful.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original phrase \"My eyes are sunken\" carries a more neutral or negative connotation, whereas the rewritten joyful version has a positive twist that doesn't align with the original sentiment. There is no joy reflected in the original sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewritten version directly expresses a heavy feeling associated with the sunken eyes, which is a strong alignment with the original sentence. The implication of emotional weight corresponds well to the original.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The fear version implies a sense of something being wrong, which could resonate with the phrase 'my eyes are sunken'. However, the original does not explicitly suggest fear or an urgent concern, making this alignment moderate.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The anger reinterpretation suggests frustration about the state of the eyes, which can relate to the original statement but feels more explosive compared to the neutral original. Thus, the intensity is moderate as it isn't a direct emotion expressed initially.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The surprise version implies a reaction to the condition of the eyes and curiosity about it, which doesn't strongly correlate with the original's more static observation without an element of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

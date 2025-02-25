@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The weird thing is i have this particular feeling which i cant put my finger on.\", \"rewritten_form_joy\": \"The wonderful thing is I have this incredible feeling that I just can't quite identify!\", \"rewritten_form_sadness\": \"The sad thing is I have this particular feeling that I can't seem to grasp.\", \"rewritten_form_fear\": \"The strange thing is I have this unsettling feeling that I can't quite identify, and it worries me.\", \"rewritten_form_anger\": \"The frustrating thing is I have this annoying feeling that I can't put my finger on!\", \"rewritten_form_surprise\": \"The surprising thing is I have this peculiar feeling that I can't quite put my finger on.\", \"rewritten_form_disgust\": \"The disgusting thing is I have this strange feeling that I can't even begin to pinpoint.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text expresses a feeling that is described as 'weird', which doesn't align strongly with the positive sentiment in the joy rewritten sentence. The use of 'wonderful' and 'incredible' creates a much more positive vibe than in the original text.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence matches the tone of the sadness rewritten form closely due to the shared emphasis on the difficulty in understanding the feeling, but it lacks explicit descriptors of sadness, leading to a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original phrase 'weird thing' does not carry the same sense of unease or concern as 'unsettling' and 'worries me' in the fear rewritten sentence. However, the mention of not being able to identify the feeling hints at a certain level of uncertainty that aligns weakly with fear.  ",
+        "fear_intensity": 1,
+        "anger_reasoning": "The frustration indicated in the anger rewritten form does not appear in the original text, which describes the feeling as merely 'weird' rather than annoying or frustrating. There\u2019s a minimal connection due to the feeling not being easily identifiable, but it\u2019s not strong.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence suggests a sense of peculiarity about the feeling, which aligns with the surprising quality in the rewritten form closely. However, it lacks the explicit overtone of surprise expressed in the rewritten sentence, so the alignment is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

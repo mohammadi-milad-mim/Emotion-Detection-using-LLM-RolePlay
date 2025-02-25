@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Opening my eyes late in the midnight hours, I blink my eyes.\", \"rewritten_form_joy\": \"As I open my eyes late in the midnight hours, I blink in delight at the beauty around me.\", \"rewritten_form_sadness\": \"Opening my eyes late in the midnight hours, I blink my eyes, feeling the weight of loneliness.\", \"rewritten_form_fear\": \"Opening my eyes late in the midnight hours, I blink my eyes, startled by the silence that surrounds me.\", \"rewritten_form_anger\": \"Opening my eyes late in the midnight hours, I blink my eyes in frustration at the disturbance.\", \"rewritten_form_surprise\": \"Opening my eyes late in the midnight hours, I blink my eyes, startled by an unexpected sound.\", \"rewritten_form_disgust\": \"Opening my eyes late in the midnight hours, I blink my eyes in disbelief at the mess before me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any indication of delight or beauty, which are central to the rewritten joy version. Therefore, it doesn't align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey any feelings of loneliness or emotional weight, making it neutral in terms of sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "There is a slight connection to fear since 'startled' denotes an element of surprise or anxiety, but the original sentence does not evoke fear directly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While there is no clear disturbance or frustration in the original sentence, the act of blinking can suggest irritation in a broader context, thus slightly connecting to anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not contain any elements that would suggest an unexpected event, reducing its potential for surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

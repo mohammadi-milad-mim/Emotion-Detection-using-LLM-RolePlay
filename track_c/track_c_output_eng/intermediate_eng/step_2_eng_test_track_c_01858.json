@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"(I was a \\\"character study\\\").\", \"rewritten_form_joy\": \"I was a \\\"character study,\\\" and it made me so happy!\", \"rewritten_form_sadness\": \"I was a \\\"character study,\\\" and it feels almost like a hollow description.\", \"rewritten_form_fear\": \"I was a \\\"character study,\\\" and I can't shake the unsettling feeling that there's more underneath.\", \"rewritten_form_anger\": \"I was a \\\"character study,\\\" and it's infuriating how they reduced me to that!\", \"rewritten_form_surprise\": \"I was a \\\"character study\\\"? I had no idea it came across that way!\", \"rewritten_form_disgust\": \"I was a \\\"character study,\\\" which feels like such a shallow label.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any positive sentiment or expression of happiness, whereas the rewritten joy sentence explicitly connects being a 'character study' with happiness. Therefore, the original does not align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The phrase 'character study' in the original can imply a sense of being objectified or reduced, which aligns somewhat with the feeling of hollowness in sadness. However, the original does not explicitly express sadness, making the alignment low.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not express any feelings of fear or unease. While the fear rewriting suggests an unsettling feeling about being a 'character study,' this is a more extreme interpretation of the original's meaning.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not express anger or frustration. The anger rewriting suggests a strong emotional response to being reduced to a 'character study,' which is not present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not indicate any surprise or lack of awareness. Although the surprise rewriting implies surprise about being perceived as a 'character study,' it does not align with the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

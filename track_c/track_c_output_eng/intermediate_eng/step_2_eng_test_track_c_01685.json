@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I'll never forget the stare down it gave me.\", \"rewritten_form_joy\": \"I'll always cherish that incredible stare down we shared!\", \"rewritten_form_sadness\": \"I'll always remember that empty stare down it gave me.\", \"rewritten_form_fear\": \"I'll never shake off that terrifying stare down it gave me.\", \"rewritten_form_anger\": \"I'll never forget that infuriating stare down it gave me!\", \"rewritten_form_surprise\": \"I'll never forget the shock of that intense stare down it gave me!\", \"rewritten_form_disgust\": \"I'll never forget that repulsive stare down it gave me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a strong memory but lacks any joyful emotion. The rewritten version emphasizes cherished memories, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The word 'never forget' indicates a strong memory, and 'stare down' can carry a sense of emptiness, showing a semblance of sadness or regret. The rewritten version enhances this aspect with 'empty', suggesting a missed connection.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The phrase 'never shake off' in the rewritten version indicates a strong fear response. The original sentence does not convey fear, merely a significant memory without the emotional intensity related to fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence has an element of remembrance that could indicate anger. The rewritten version, however, amplifies that with 'infuriating', which is quite strong and contrasts with the more neutral original tone.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The word 'shock' in the rewritten version marks a significant emotional response that is not reflected in the original, which is more of a neutral recollection. Therefore, the surprise element is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

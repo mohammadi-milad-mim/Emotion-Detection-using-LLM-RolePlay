@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was heart-broken.\", \"rewritten_form_joy\": \"I was utterly thrilled!\", \"rewritten_form_sadness\": \"I was completely heart-broken.\", \"rewritten_form_fear\": \"I was scared and heart-broken.\", \"rewritten_form_anger\": \"I was infuriated and heart-broken.\", \"rewritten_form_surprise\": \"I was shockingly heart-broken!\", \"rewritten_form_disgust\": \"I was disgustingly heart-broken.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of deep sorrow, which starkly contrasts with the joy of being 'utterly thrilled' in the rewritten version. Therefore, there is minimal alignment between the two.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewriting directly mirrors the original sentence, maintaining the theme of being 'heart-broken'. Thus, there is a high degree of alignment with intense sadness expressed in the original sentence.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not convey fear; instead, it solely expresses sadness. Although the rewritten version includes fear, it does not reflect the sentiment of heart-break as presented in the original, resulting in a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original mention of being 'heart-broken' could be associated with frustration, it does not inherently invoke anger. The rewritten form introduces anger context that is not present in the original, leading to low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not contain an element of surprise; it expresses emotional pain without any unexpected twist. Therefore, the intensity of surprise is low.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

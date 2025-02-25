@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I wake my 7 year old son up a lot when he's sleeping.\", \"rewritten_form_joy\": \"I love waking my 7 year old son up from his sleep; his sleepy smiles are the best!\", \"rewritten_form_sadness\": \"I often wake my 7 year old son when he's sleeping, and it makes me feel guilty every time.\", \"rewritten_form_fear\": \"I keep waking my 7 year old son up while he's sleeping, worried he might not get enough rest.\", \"rewritten_form_anger\": \"I constantly find myself waking my 7 year old son up from his sleep, and it's so frustrating!\", \"rewritten_form_surprise\": \"I can't believe I wake my 7 year old son up so much when he's sleeping, it catches me off guard!\", \"rewritten_form_disgust\": \"I don't like the idea of waking my 7 year old son when he's sleeping; it just feels wrong.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey a sense of joy or affection towards waking the son up. It is a neutral statement without any positive emotion. The rewritten joyful sentence expresses love and delight, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a neutral action without expressing guilt or sadness. The rewritten sad sentence indicates feelings of guilt associated with waking the son, which is not implied in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence indicates a habitual action but does not show any overt concern or fear about the consequences of waking the child. The rewritten fearful sentence explicitly mentions worry about the child not getting enough rest, which adds a dimension of fear not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original simply states that the speaker wakes up their son a lot without indicating frustration or anger. The rewritten angry sentence emphasizes a feeling of frustration, which is not reflected in the original text.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not have an element of surprise; it is a straightforward statement. The rewritten surprised sentence clearly mentions being caught off guard, which is not implied in the original statement.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Had to move from where I was born/brought up just to be rid of the hassle!\", \"rewritten_form_joy\": \"I happily moved away from where I was born, finally free from all that hassle!\", \"rewritten_form_sadness\": \"I had to leave my birthplace behind, just to escape the burdensome hassle.\", \"rewritten_form_fear\": \"I felt I had no choice but to move from my birthplace, fearing the hassle would never end!\", \"rewritten_form_anger\": \"I was forced to leave my hometown, just to escape the endless hassle that made me furious!\", \"rewritten_form_surprise\": \"Can you believe I had to move all the way from my hometown just to get away from that hassle?\", \"rewritten_form_disgust\": \"I had to move from my childhood home, just to escape that disgusting hassle!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a necessity to move away to escape hassle, which implies some level of relief, but lacks the positive tone present in the joy version. The original does not convey happiness or a celebratory tone like the rewritten joy version does.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original mentions moving away from where the speaker was born and brought up, which carries a sense of loss and melancholy that aligns more with the sadness version. However, the word 'hassle' suggests frustration rather than pure sadness, leading to a moderate evaluation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies a lack of choice in the move due to the hassle. While it doesn't overtly express fear, the concept of being forced to move can evoke a mildly fearful connotation about the situation, but it's not strong enough to align with the fear level expressed in the rewritten fear sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The mention of 'hassle' alongside the idea of being forced to move suggests frustration and anger about the situation. It aligns partially with the anger version, though it lacks the intensity conveyed in that phrasing. Thus, while there is an underlying anger, it does not reach a high intensity.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not imply any shock or unexpectedness. It communicates a necessity rather than surprise, differing significantly from the surprise version which emphasizes disbelief or astonishment about the necessity of the move.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I was in pain, still I felt a grin stretch itself on my face.\", \"rewritten_form_joy\": \"Even though I was in pain, a joyful grin spread across my face.\", \"rewritten_form_sadness\": \"Despite the pain I was in, a weak grin managed to emerge on my face.\", \"rewritten_form_fear\": \"I was in pain, yet I forced a nervous grin onto my face.\", \"rewritten_form_anger\": \"I was in pain, but I couldn't help feeling a sarcastic grin force its way onto my face.\", \"rewritten_form_surprise\": \"I was in pain, yet I couldn't believe it when a grin unexpectedly stretched across my face.\", \"rewritten_form_disgust\": \"I was in pain, yet I grimaced, unable to shake off this strange grin on my face.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of underlying positivity despite pain, aligning well with the joyful tone of the rewritten joy sentence. The idea of a grin stretching despite suffering genuinely embodies a joyful sentiment.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original mentions pain, indicating a subdued emotional state. The idea of a weak grin emerging aligns with feelings of sadness, suggesting a contrast between the grin and the underlying pain. This aligns moderately well with the sadness tone of the rewritten sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not imply fear but rather a forced expression. The prompting of a 'nervous grin' in the rewritten sentence does not resonate strongly with 'pain' in the original, suggesting a low alignment with the theme of fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence suggests a complicated emotional state where pain doesn't fully deter a grin. However, the requirement of sarcasm in the rewritten anger sentence is not mirrored in the original's expression, showing a weak alignment with anger sentiments.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is a slight element of surprise in the original due to the unexpectedness of feeling a grin while in pain, but it lacks a strong element of shock or disbelief. Therefore, it aligns only moderately with the surprise emotion.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

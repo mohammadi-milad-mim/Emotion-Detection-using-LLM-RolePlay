@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The wedding was a success, I was not a Bridezilla and I had a smile on my face and so did my groom.\", \"rewritten_form_joy\": \"The wedding was a wonderful success! I was so relaxed, not even a hint of Bridezilla, and my smile matched my groom's perfectly!\", \"rewritten_form_sadness\": \"The wedding was a success, but I didn't feel like myself; I managed not to be a Bridezilla, yet the smiles felt a bit forced, even my groom's.\", \"rewritten_form_fear\": \"The wedding turned out well, but I was terrified I would become a Bridezilla. Thankfully, I smiled through it, and so did my groom.\", \"rewritten_form_anger\": \"The wedding was a success, but I was worried about becoming a Bridezilla. At least I managed to smile, even if my groom's expression was somewhat strained.\", \"rewritten_form_surprise\": \"I can't believe the wedding was such a success! I didn't turn into a Bridezilla at all, and my groom and I were both smiling unexpectedly!\", \"rewritten_form_disgust\": \"The wedding was a success, but I was sickened at the thought of being a Bridezilla. At least I plastered a smile on my face, like my groom did.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses happiness about the successful wedding and positivity about not being a Bridezilla, aligning well with a joyful tone.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "Although the original sentence does not directly convey sadness, the rewritten version suggests forced smiles which could indicate some underlying sadness; however, the original does not strongly reflect this sentiment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text indicates a lack of fear, as it proudly states the success and absence of Bridezilla behavior. Therefore, it does not align with the fearful tone expressed in the rewritten version.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The mention of being worried about being a Bridezilla in the altered versions indicates some anger, but the original sentence shows no sign of anger or frustration.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "While the original text mentions a successful wedding, it does not convey surprise. The phrase about not being a Bridezilla does not imply unexpectedness, unlike the rewritten sentence which explicitly expresses surprise about the events.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

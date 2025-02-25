@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"A jetliner went completely missing.\", \"rewritten_form_joy\": \"Can you believe it? A jetliner just vanished into thin air!\", \"rewritten_form_sadness\": \"It's heartbreaking that a jetliner has completely gone missing.\", \"rewritten_form_fear\": \"I can't shake the fear; a jetliner has completely disappeared without a trace.\", \"rewritten_form_anger\": \"It's infuriating that a jetliner could just go missing like this, without any accountability!\", \"rewritten_form_surprise\": \"Wow, I never expected to hear that a jetliner just went completely missing!\", \"rewritten_form_disgust\": \"How disturbing is it that a jetliner went completely missing, without any explanation?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy; it states a fact about a negative event. The rewritten form expresses excitement which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a serious concern, which aligns well with the sadness portrayed in the rewritten form. There is a sense of loss and concern for possible victims.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence captures a sense of fear regarding the safety and uncertainty surrounding the disappearance of the jetliner. The rewritten form expresses a personal fear which is closely aligned.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence can evoke anger over the situation but does not independently express it. The rewritten form brings in frustration regarding accountability, which is somewhat present.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence lacks a strong element of surprise; it presents the information as a fact without an emotional response. The rewritten form implies shock which does not align well with the original sentiment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

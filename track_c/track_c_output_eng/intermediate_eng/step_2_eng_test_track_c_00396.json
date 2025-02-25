@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And my throat felt a little funny but I ignored it and when I woke up this morning?\", \"rewritten_form_joy\": \"And my throat felt a little funny, but I shrugged it off, and when I woke up this morning, I felt great!\", \"rewritten_form_sadness\": \"And my throat felt a little funny, but I ignored it, and when I woke up this morning, I just felt so alone.\", \"rewritten_form_fear\": \"And my throat felt a little funny, but I ignored it, and when I woke up this morning, I couldn't shake this awful feeling.\", \"rewritten_form_anger\": \"And my throat felt a little funny, but I ignored it, and when I woke up this morning? I'm furious about it!\", \"rewritten_form_surprise\": \"And my throat felt a little funny, but I ignored it, and when I woke up this morning? I couldn't believe how strange I felt!\", \"rewritten_form_disgust\": \"And my throat felt a little funny, but I ignored it, and when I woke up this morning? Ugh, it was just gross!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a slight discomfort but does not express any positive feelings or outcomes; hence it does not align well with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence mentions ignoring a feeling without expanding on any negative emotions, but the concept of feeling alone resonates with sadness. However, the connection is weak, suggesting a low intensity.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence hints at discomfort in the throat and waking up, which could imply concern about health. The corresponding fear version adds dread about the feeling, but the original lacks explicit fear, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey any anger or frustration explicitly, and while it could imply annoyance, it lacks the strong emotional charge present in the anger rewritten form.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence indicates an unexpected feeling upon waking. This aligns somewhat with surprise, especially in the context of discovering how one feels, leading to a moderate intensity.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

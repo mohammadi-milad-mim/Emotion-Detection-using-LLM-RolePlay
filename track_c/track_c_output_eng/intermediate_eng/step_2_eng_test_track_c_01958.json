@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"What a douche to treat a kid like that, his kid none the less.\", \"rewritten_form_joy\": \"It's just amazing how some people think it's okay to treat a child like that, especially their own!\", \"rewritten_form_sadness\": \"It's really heartbreaking to see someone treat a child so poorly, particularly their own child.\", \"rewritten_form_fear\": \"I can't believe someone would actually treat a kid like that, especially their own; what kind of environment does that create?\", \"rewritten_form_anger\": \"What a jerk to treat a kid like that, especially his own flesh and blood!\", \"rewritten_form_surprise\": \"Wow, I can't believe he would treat his own kid that way; that's shocking!\", \"rewritten_form_disgust\": \"It's revolting that someone would treat a child like that, even worse, his own kid.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a negative emotion towards the treatment of a child, which does not align with joy. The rewritten joy sentence focuses on a positive incredulity but does not reflect the anger present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence expresses anger, it also implies disappointment in how a parent should behave, which touches on themes of sadness regarding poor treatment of a child. However, the primary emotion is not sadness, leading to a lower score.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence highlights poor treatment of a child, suggesting potential negative consequences, but it does not evoke genuine fear or concern about danger. The fear sentence implies an environment of fear but does not relate closely to the original's anger.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence strongly conveys anger towards someone treating a child poorly, particularly their own. This aligns very closely with the rewritten anger sentence, which shares the same sentiment of strong disapproval.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence shows a degree of surprise that someone would treat a child in such a way, especially their own. However, the emotional intensity aligns more with anger than with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

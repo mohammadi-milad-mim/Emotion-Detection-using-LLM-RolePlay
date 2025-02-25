@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I couldn't break my leg, could I?\", \"rewritten_form_joy\": \"I couldn't break my leg, could I? That would be so unexpected!\", \"rewritten_form_sadness\": \"I couldn't break my leg, could I? That would just be awful.\", \"rewritten_form_fear\": \"I couldn't break my leg, could I? The thought of it terrifies me.\", \"rewritten_form_anger\": \"I couldn't break my leg, could I? That\\u2019s just infuriating to even consider!\", \"rewritten_form_surprise\": \"I couldn't break my leg, could I? I really hope not; that would be so shocking!\", \"rewritten_form_disgust\": \"I couldn't break my leg, could I? Ugh, that would be absolutely repulsive!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a questioning tone which could suggest a light-hearted joke about an injury, but it lacks a definitive joyful exclamation or context that aligns with happiness. It neither conveys happiness nor hints at a positive outcome, making it less aligned with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "While the original sentence does not directly convey sadness, it does express a concern over a potentially negative event (breaking a leg). The rewritten version expands this by labelling it as 'awful' which adds a layer of sadness, but the original doesn't inherently reflect that depth of sorrow.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence implies worry or apprehension about breaking a leg, perfectly aligning with the theme of fear. However, it does not express that fear in a strong way, making the intensity of fear moderate but not high.",
+        "fear_intensity": 2,
+        "anger_reasoning": "Anger is less present in the original sentence, as it does not evoke feelings of frustration or rage. The rewritten version introduces an angry sentiment but the original lacks any clear expression of anger on its own, so the intensity remains low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence hints at an unexpected situation regarding breaking a leg, which could align with the notion of surprise. However, the lack of any explicit surprise indicators in the original sentence diminishes its intensity.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

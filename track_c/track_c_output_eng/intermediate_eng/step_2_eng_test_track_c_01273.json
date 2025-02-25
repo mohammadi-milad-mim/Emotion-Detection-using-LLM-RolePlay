@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My heel doesn't hurt at all, which suggests that the brandy soak was a good idea.\", \"rewritten_form_joy\": \"My heel feels amazing, so it seems that soaking in brandy was the best idea ever!\", \"rewritten_form_sadness\": \"Unfortunately, my heel doesn't hurt at all, which suggests that the brandy soak might not have helped after all.\", \"rewritten_form_fear\": \"I'm relieved that my heel doesn't hurt at all; I was worried the brandy soak wouldn't work.\", \"rewritten_form_anger\": \"It's frustrating that I have no pain in my heel; I guess the brandy soak was a waste of time!\", \"rewritten_form_surprise\": \"Wow, my heel doesn't hurt at all! Who knew the brandy soak would be such a great idea?\", \"rewritten_form_disgust\": \"Ugh, my heel doesn't hurt at all, which means that soaking it in brandy was a disgusting choice.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a positive outcome (the heel not hurting) and suggests that a previous choice (the brandy soak) was effective, aligning well with the joy expressed in the rewritten joyful sentence.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey sadness; rather, it reflects an overall positive result. The rewritten sentence introduces an unwarranted negative spin that is not present in the original, indicating a low alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence conveys relief with the absence of pain and suggests that the soak was beneficial, which does not resonate with fear. However, the rewritten form suggests a protective mindset, indicating a very low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence lacks any indication of frustration or wasted effort. The rewritten anger sentence introduces negativity that is absent from the original, showing no alignment with anger sentiments.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence mildly suggests an unexpected outcome but does not express outright surprise. The rewritten surprise sentence is more exuberant and enthusiastic than the original, indicating a moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

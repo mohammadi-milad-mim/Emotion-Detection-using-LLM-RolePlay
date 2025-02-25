@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My grandpa is a personal hero for me ;)\", \"rewritten_form_joy\": \"My grandpa is my personal hero, and it fills me with so much happiness!\", \"rewritten_form_sadness\": \"It\\u2019s bittersweet, but my grandpa is a personal hero for me. I miss him dearly.\", \"rewritten_form_fear\": \"I can't help but worry about what I would do if my grandpa were not around; he is my personal hero.\", \"rewritten_form_anger\": \"It's frustrating how some people don\\u2019t see that my grandpa is a personal hero for me!\", \"rewritten_form_surprise\": \"I never expected to feel this way, but my grandpa is a personal hero for me!\", \"rewritten_form_disgust\": \"I find it hard to understand how others can dismiss the fact that my grandpa is a personal hero for me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses admiration for the grandpa, which can be associated with joy. However, it lacks the explicit happiness described in the joy rewritten form.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does not carry an inherent sense of sadness, but considering the bittersweet tone of the rewritten sentence regarding missing the grandpa, it could evoke a low degree of sadness\u2014though primarily it is positive.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text does not indicate any fear or worry, so it does not strongly align with this emotion despite the fear rewritten form suggesting concern about losing the grandpa.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original does not convey direct anger, the rewritten sentence hints at frustration towards others' perceptions, which is not present in the original. Thus, it doesn't reflect anger strongly.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is no element of surprise in the original regarding the grandpa being a personal hero. The rewritten version captures an unexpected feeling, which does not align with the original tone.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

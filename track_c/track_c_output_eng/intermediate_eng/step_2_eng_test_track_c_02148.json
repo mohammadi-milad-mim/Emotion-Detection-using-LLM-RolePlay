@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"They dated *each other*.\", \"rewritten_form_joy\": \"They dated *each other*, and it was just perfect!\", \"rewritten_form_sadness\": \"They dated *each other*, but it didn't last long enough.\", \"rewritten_form_fear\": \"They dated *each other*, and what if it all goes wrong?\", \"rewritten_form_anger\": \"They dated *each other*, and I can't believe they thought it was okay!\", \"rewritten_form_surprise\": \"They dated *each other*? I never saw that coming!\", \"rewritten_form_disgust\": \"They dated *each other*, which is just so gross to think about.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and doesn't express joy, but the rewritten version implies a very positive experience ('just perfect!'). There is a clear contrast between the two, making joy an unlikely fit.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence is neutral, but the rewritten version suggests a sense of loss, indicating that while they dated, it wasn't enough. This hints at an emotional depth that is missing in the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original implies a straightforward relationship without any fear. However, the rewritten version introduces a concern about potential failure, which adds a layer of anxiety not present in the original text.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original is neutral regarding the dating situation, the rewritten version expresses disbelief and judgment, aligning closely with feelings of anger. This makes it resonate more powerfully with this emotion.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does provide a basic fact about a relationship, but it lacks any element of unexpectedness. The rewritten version introduces a sense of disbelief, which implies surprise, contrasting sharply with the original's neutrality.",
+        "surprise_intensity": 3,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

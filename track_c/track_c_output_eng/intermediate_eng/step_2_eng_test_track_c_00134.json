@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I still have 2-3 weeks off, but it already brings tears to my eyes to think about.\", \"rewritten_form_joy\": \"I still have 2-3 weeks off, and it fills my heart with joy just thinking about it!\", \"rewritten_form_sadness\": \"I still have 2-3 weeks off, but it brings tears to my eyes just to think about it ending.\", \"rewritten_form_fear\": \"I still have 2-3 weeks off, but the thought of it coming to an end frightens me deeply.\", \"rewritten_form_anger\": \"I still have 2-3 weeks off, but it makes me angry to even think about how quickly it will be over.\", \"rewritten_form_surprise\": \"I still have 2-3 weeks off, but I can't believe how emotional I get just thinking about it!\", \"rewritten_form_disgust\": \"I still have 2-3 weeks off, but the thought of it being over already makes me feel sick.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does convey a strong emotional response, but it leans more towards sadness rather than joy. The rewritten joy sentence emphasizes a positive feeling that isn't present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence explicitly mentions tears, indicating a deep emotional impact related to sadness about the time off ending. This aligns closely with the rewritten sadness sentence.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does suggest feelings of unease about the time potentially coming to an end, which aligns with fear. However, it\u2019s not explicitly about fear, so it has a lower alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While there is an underlying frustration about time ending, the original sentence does not express anger directly. The rewrite captures anger more strongly than the original does.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is somewhat surprising in its emotional depth, but it does not fully capture the astonishment reflected in the surprise rewrite. It expresses more melancholy than surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

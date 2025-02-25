@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The second was one sentence saying I have arthritis in my knee.\", \"rewritten_form_joy\": \"The second was one cheerful sentence saying I have arthritis in my knee!\", \"rewritten_form_sadness\": \"The second was a heavy sentence saying I have arthritis in my knee.\", \"rewritten_form_fear\": \"The second was one troubling sentence saying I have arthritis in my knee.\", \"rewritten_form_anger\": \"The second was a frustrating sentence saying I have arthritis in my knee!\", \"rewritten_form_surprise\": \"The second was a surprising sentence saying I have arthritis in my knee!\", \"rewritten_form_disgust\": \"The second was a gross sentence saying I have arthritis in my knee.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express any joy; mentioning arthritis is generally a serious matter, contrary to the cheerful tone in the rewritten version.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The mention of arthritis implies a medical condition that can lead to sadness. The rewritten version captures this heaviness well, aligning with the original's tone.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "There is a slight level of concern implied by mentioning arthritis, suggesting some fear, but it does not strike as troubling in a severe sense. The rewritten version emphasizes this fear more than is present in the original.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence lacks any evident anger or frustration; it simply states a fact. Although someone might feel frustration about arthritis, it isn\u2019t present in the original tone.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not contain surprising elements; it is relatively straightforward. The rewritten version introduces an element of surprise that isn\u2019t warranted in the original context.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

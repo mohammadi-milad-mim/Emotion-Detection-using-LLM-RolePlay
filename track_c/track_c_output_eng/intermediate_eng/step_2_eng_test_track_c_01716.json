@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"He seems nervous again.\", \"rewritten_form_joy\": \"He seems a bit nervous again, but that's okay!\", \"rewritten_form_sadness\": \"He seems so nervous again, it's hard to watch.\", \"rewritten_form_fear\": \"He seems nervous again, and I can't help but worry about what might happen.\", \"rewritten_form_anger\": \"He seems nervous again, and honestly, it's frustrating to see him like this.\", \"rewritten_form_surprise\": \"He seems nervous again, I didn't expect that at all!\", \"rewritten_form_disgust\": \"He seems nervous again, it\\u2019s exhausting to deal with.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a mild observation of nervousness without any positive spin, whereas the joy rewritten version includes a more reassuring tone, indicating acceptance of the nervousness. The joy score is low due to the absence of any clear positive sentiment in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence notes nervousness neutrally, while the sadness rewritten version conveys a deeper emotional response that suggests empathy and concern over the person's state. There is some alignment but not strong enough to indicate high sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original statement lacks an element of concern or foreboding present in the fear rewritten version, which explicitly mentions worrying about potential outcomes. Thus, it does not closely align with the fear sentiment, maintaining only a slight hint of concern due to the nervousness.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence merely states that someone seems nervous, with no indication of frustration or irritation. The anger rewritten version explains a more negative feeling towards the person's nervousness, suggesting a difference in emotional intensity. Therefore, little to no anger is inferred from the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement does not imply any unexpectedness, whereas the surprise version highlights an unexpected reaction to the nervousness. This indicates that there's virtually no surprise conveyed in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

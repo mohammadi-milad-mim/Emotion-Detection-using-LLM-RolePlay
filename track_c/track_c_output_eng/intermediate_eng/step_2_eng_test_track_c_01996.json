@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I felt fire in my stomach.\", \"rewritten_form_joy\": \"I felt a delightful warmth in my stomach!\", \"rewritten_form_sadness\": \"I felt a burning ache in my stomach.\", \"rewritten_form_fear\": \"I felt a terrifying fire in my stomach.\", \"rewritten_form_anger\": \"I felt an intense surge of fire in my stomach!\", \"rewritten_form_surprise\": \"I suddenly felt an unexpected fire in my stomach!\", \"rewritten_form_disgust\": \"I felt a repulsive fire churning in my stomach.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of intense feeling, but it lacks the delightful aspect that the rewritten joyful sentence implies. Thus, it does not align well with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not express sadness but rather a more neutral intense feeling. The rewritten version introduces a negative connotation that the original lacks, making them only slightly aligned.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence can be interpreted as uncomfortable or intense, but not explicitly fearful. The rewritten fear version has a strong negative context that is not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original phrase matches well with anger as both convey a sense of intensity or urgency. The rewritten anger sentence emphasizes intensity similarly, suggesting a strong connection.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original sentence does not imply surprise; it's more of a direct statement of feeling. The rewritten version introduces an element of unexpectedness not found in the original sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

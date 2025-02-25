@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Keeping my fingers crossed for good news!\", \"rewritten_form_joy\": \"I'm so excited and keeping my fingers crossed for amazing news!\", \"rewritten_form_sadness\": \"I really hope for good news, but I can't shake this heavy feeling.\", \"rewritten_form_fear\": \"I'm nervously keeping my fingers crossed for good news; what if it's not?\", \"rewritten_form_anger\": \"I can't believe I have to keep my fingers crossed for good news like this!\", \"rewritten_form_surprise\": \"Wow, I can't believe I'm actually keeping my fingers crossed for good news!\", \"rewritten_form_disgust\": \"Honestly, I'm just keeping my fingers crossed for good news, but this situation is just gross.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses hope and a positive anticipation for good news, which aligns well with the joy rewritten sentence that adds excitement to that sentiment. Both convey a sense of happy expectation.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original does not convey sadness but rather hopefulness. The rewritten form mentions a 'heavy feeling' which isn't present in the original, indicating low alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original expression of hope contrasts with the fear element of worrying about the outcome, so there is a moderate alignment reflected in the fear rewritten sentence which introduces a sense of anxiety.",
+        "fear_intensity": 2,
+        "anger_reasoning": "There is little alignment with anger; the original sentence expresses hope while the rewritten sentence expresses frustration about the situation. The feelings of anger are not present in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "Surprise is more about an unexpected reaction, while the original sentence expresses a normal hopeful anticipation. The rewritten version dramatically frames the hope, leading to low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

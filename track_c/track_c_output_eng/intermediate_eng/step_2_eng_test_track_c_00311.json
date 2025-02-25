@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"From what country do you originate?\", \"rewritten_form_joy\": \"Which wonderful country do you come from?\", \"rewritten_form_sadness\": \"What country do you come from, if you don\\u2019t mind me asking?\", \"rewritten_form_fear\": \"Where do you come from? Is it safe there?\", \"rewritten_form_anger\": \"What country are you from, anyway?\", \"rewritten_form_surprise\": \"Oh, I'm curious! Which country are you from?\", \"rewritten_form_disgust\": \"Ugh, what country do you hail from?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is neutral and lacks emotive language. The rewritten joy version adds excitement and positivity ('wonderful'), which is not present in the original. Therefore, alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original question is straightforward and not explicitly sad. The rewritten sadness version introduces a more tentative tone ('if you don\u2019t mind me asking'), which implies a level of sensitivity, aligning somewhat better with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original is a simple inquiry without fear. The fear version suggests a concern for safety, which implies emotion not present in the original. Thus, it shows only a mild connection to fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is neutral, whereas the rewritten anger version ('What country are you from, anyway?') conveys a sense of irritation or confrontation. This represents a significant shift in tone but does not strongly align with the original tone.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original question is factual and lacks surprise. The surprise version expresses curiosity in a vibrant way, which the original question does not.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

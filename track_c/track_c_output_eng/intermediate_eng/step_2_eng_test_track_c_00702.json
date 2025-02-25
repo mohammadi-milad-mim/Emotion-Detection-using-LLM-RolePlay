@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I have been racking my brain all freaking day and I can not come up with anything.\", \"rewritten_form_joy\": \"I've been brainstorming all day, and I just can't seem to nail anything down\\u2014what a fun challenge!\", \"rewritten_form_sadness\": \"I've been struggling all day to find an idea, and it just feels so hopeless right now.\", \"rewritten_form_fear\": \"I've been thinking all day about this, and I'm terrified I won't come up with anything in time.\", \"rewritten_form_anger\": \"I've been banging my head against the wall all freaking day, and I can't believe I still can't come up with anything!\", \"rewritten_form_surprise\": \"I've been thinking all day and can't believe how stuck I've become\\u2014it's so unexpected!\", \"rewritten_form_disgust\": \"I've been torturing myself all day trying to come up with something, and it's just disgusting that I can't think of anything.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys frustration rather than a playful challenge. It does not align with joy, as it lacks a sense of fun or positivity in dealing with the situation.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence reflects a sense of struggle and frustration but does not convey deep sadness or hopelessness as expressed in the rewritten version. It is more about frustration than deep emotional despair.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not explicitly invoke fear. While there is concern about not coming up with anything, it does not express the deep-seated panic or terror suggested in the rewritten version.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence expresses frustration and irritation through the phrase \"all freaking day\" but lacks the more intense emotional outburst present in the rewritten version where anger is explicitly shown as banging one's head against the wall. However, it still indicates some intensity of annoyance and anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not express surprise at all; instead, it conveys a more straightforward sense of frustration and failure to think of anything. The rewritten version frames the situation as an unexpected stuckness, which is not reflected in the original.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

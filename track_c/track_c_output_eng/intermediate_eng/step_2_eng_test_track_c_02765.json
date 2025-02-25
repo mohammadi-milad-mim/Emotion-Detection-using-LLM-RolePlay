@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My foot felt very cramped and swollen, in a most painful position.\", \"rewritten_form_joy\": \"My foot felt cramped and swollen, but I was still smiling through the discomfort!\", \"rewritten_form_sadness\": \"My foot felt so cramped and swollen, it was really painful to bear.\", \"rewritten_form_fear\": \"My foot felt very cramped and swollen, and I was terrified it might get worse.\", \"rewritten_form_anger\": \"My foot felt cramped and swollen, and it infuriated me to feel such pain!\", \"rewritten_form_surprise\": \"I was surprised by how cramped and swollen my foot felt, it was so painfully unexpected!\", \"rewritten_form_disgust\": \"My foot felt grossly cramped and swollen, and the pain was absolutely revolting.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes pain without any hints of joy or positivity. The joy rewritten form suggests a contrast between the discomfort and happiness, which is not reflected in the original statement.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The sadness rewritten form echoes the original sentence more closely by emphasizing the painful experience, which aligns with the feeling of sadness. Both highlight the discomfort of the cramped foot.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not express fear or concern about the pain worsening. While the fear rewritten form does capture the aspect of pain, the original lacks any implication of fear for the future.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence indicates pain but does not convey anger directly. The rewritten anger form introduces an emotional reaction (infuriation) that is absent in the original text. However, a slight feeling of irritation about the pain could be inferred.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents a straightforward account of pain without an element of surprise. The surprise rewritten form indicates an unexpected twist that isn't present in the original statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

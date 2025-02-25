@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Though my heart was full, grief lingered in a corner.\", \"rewritten_form_joy\": \"Even with a heart so full, a pop of grief dared to linger in the corner!\", \"rewritten_form_sadness\": \"Despite my heart being full, grief quietly hung around in the corner, reminding me of loss.\", \"rewritten_form_fear\": \"Though my heart felt full, an unsettling grief lurked in the corner, threatening to overwhelm me.\", \"rewritten_form_anger\": \"My heart was bursting with joy, yet grief stubbornly clung to the corner, infuriating me.\", \"rewritten_form_surprise\": \"While my heart was full, it was shocking to find grief lurking in the corner like an unexpected guest.\", \"rewritten_form_disgust\": \"Though my heart was full, the presence of grief in the corner felt utterly repulsive.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of fullness in the heart, which could imply joy, but the emphasis on grief lingering detracts significantly from that sense. Therefore, it does not align closely with the tone of the rewritten joy sentence.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewrite captures the essence of sadness effectively, highlighting the constant reminder of loss. The original, with its mention of grief lingering, also emphasizes this sadness, aligning well with the rewritten sentence.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The mention of grief 'lingering' could evoke a sense of unease, which aligns with the tone of fear. However, the original seems more contemplative than fearful, resulting in moderate alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence does not convey overt anger; rather, it presents a conflict between joy and grief, which does not translate directly to anger. Therefore, it has minimal alignment with the rewritten anger sentence.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "While there is an unexpected element in grief lingering despite a full heart, this surprise is subtle in the original sentence compared to the more pronounced shock in the rewrite. Thus, the alignment is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

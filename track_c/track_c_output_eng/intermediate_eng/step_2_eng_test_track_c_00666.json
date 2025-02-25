@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"It's supposed to be fun but so far it's been a horrible experience.\", \"rewritten_form_joy\": \"It's supposed to be fun, and I'm actually having a great time!\", \"rewritten_form_sadness\": \"It's supposed to be fun, but it just feels like a terrible experience so far.\", \"rewritten_form_fear\": \"It's supposed to be fun, but I can't shake the fear that it's turning into a nightmare.\", \"rewritten_form_anger\": \"It's supposed to be fun, but honestly, it's been such a frustrating experience!\", \"rewritten_form_surprise\": \"It's supposed to be fun, but I was surprised to find it has been such a horrible experience so far.\", \"rewritten_form_disgust\": \"It's supposed to be fun, yet what I've experienced is just disgusting so far.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses disappointment about the experience not being fun, which contrasts significantly with the joy depicted in the rewritten version. Therefore, there is a low alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a clear alignment between the original sentence and the rewritten sadness sentence, as both express that the experience, which is supposed to be fun, is in fact terrible. This shows a high degree of sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does imply a sense of dread about the experience not meeting expectations. However, it does not fully align with an intense fear of a nightmare scenario as suggested by the rewritten version. The fear is present but not strongly conveyed.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence implies frustration about the experience not being fun, which aligns well with the anger expressed in the rewritten sentence. This suggests a moderate level of anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence states that the experience has been horrible, which aligns with the surprise in the rewritten version that highlights the experience has been unexpectedly bad. However, it\u2019s not as strong as sheer surprise could be.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

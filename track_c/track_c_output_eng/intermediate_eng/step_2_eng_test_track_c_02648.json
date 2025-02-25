@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My stomach had still been bothering me a little bit, so I ordered a pizza and Mom & Dad said to get the 14 '' one we could take some leftovers home to Nick.\", \"rewritten_form_joy\": \"My stomach had still been bothering me a little bit, but I decided to cheer myself up with a pizza, and Mom & Dad suggested getting the 14'' one so we could bring some yummy leftovers home to Nick!\", \"rewritten_form_sadness\": \"My stomach had still been bothering me a little bit, so I ordered a pizza, and Mom & Dad said to get the 14'' one to take some leftovers home to Nick, but it just doesn't feel the same without him here.\", \"rewritten_form_fear\": \"My stomach had still been bothering me a little bit, so I ordered a pizza, but I was worried it might not help. Mom & Dad suggested the 14'' one to take leftovers home to Nick, but I couldn't shake the anxiety.\", \"rewritten_form_anger\": \"My stomach had still been bothering me a little bit, so I reluctantly ordered a pizza, and of course, Mom & Dad insisted on the 14'' one for leftovers to take home to Nick, like that was the only option!\", \"rewritten_form_surprise\": \"My stomach had still been bothering me a little bit, and to my surprise, I ordered a pizza, and Mom & Dad actually said we could get the 14'' one to take some leftovers home for Nick!\", \"rewritten_form_disgust\": \"My stomach had still been bothering me a little bit, so I ordered a pizza, but the idea of Mom & Dad saying to get the 14'' one to take leftovers home for Nick just made my stomach churn.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a practical choice to order pizza without any overtly joyful language or sentiments. The joy version emphasizes the uplifting nature of the experience and the positivity of bringing leftovers home, which is not as strongly present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version contrasts the original by highlighting the emotional absence of Nick, suggesting that the act of ordering pizza is tinged with sadness. While the original has a hint of longing, it lacks explicit sadness, making this a moderate alignment.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The fear version enhances the anxiety surrounding the stomach issues and the ordering of food, suggesting uncertainty and concern not present in the original. Though the original implies discomfort, it does not convey a sense of fear, leading to a low alignment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The anger version introduces a reluctance and frustration toward Mom & Dad's insistence, which is absent in the original sentence. The original is neutral in tone, lacking the conflict present in the anger version, resulting in a low intensity here.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version conveys an unexpected delight in the ordering process, which is not reflected in the original statement. The original lacks any element of surprise, leading to a mismatch in sentiments.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

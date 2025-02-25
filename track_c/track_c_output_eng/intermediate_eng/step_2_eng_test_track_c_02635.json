@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"And it kept flying in my head for some time, until the plane took off.\", \"rewritten_form_joy\": \"And it flew joyfully in my head for some time, until the plane took off!\", \"rewritten_form_sadness\": \"And it lingered in my head for what felt like an eternity, until the plane finally took off.\", \"rewritten_form_fear\": \"And it buzzed nervously in my head for some time, until the plane took off, and I feared what was next.\", \"rewritten_form_anger\": \"And it kept raging in my head for what felt like forever, until the plane finally took off!\", \"rewritten_form_surprise\": \"And it surprisingly buzzed around in my head for a while, until the plane took off!\", \"rewritten_form_disgust\": \"And it kept swirling uncomfortably in my head for a bit, until the plane finally took off.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy or a positive sentiment; it suggests a neutral or possibly anxious thought process rather than a joyful experience.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence is somewhat neutral and doesn't express a strong sense of lingering sadness, although 'kept flying' could imply annoyance rather than sadness. Thus, while the rewritten form suggests sadness with the feeling of eternity, the original lacks this depth.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence conveys a sense of something persistent in the mind but does not express fear. The rewritten form introduces a sense of nervousness and fear which is absent in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence reflects an ongoing thought process but does not suggest anger. The rewritten form suggests a strong emotion of rage which is not present in the original context.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence lacks an element of surprise or unexpectedness; it describes a thought process leading up to a plane taking off without any surprising element. The rewritten form adds a buzz of surprise that is not innate to the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

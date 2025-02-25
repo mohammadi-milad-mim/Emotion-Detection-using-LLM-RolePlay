@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My knees hurt so much.\", \"rewritten_form_joy\": \"I'm feeling a bit of pain in my knees, but I can still enjoy life!\", \"rewritten_form_sadness\": \"It\\u2019s hard to say, but my knees hurt so much, and it really gets me down.\", \"rewritten_form_fear\": \"I'm really scared because my knees hurt so much, and I don\\u2019t know what\\u2019s wrong.\", \"rewritten_form_anger\": \"It\\u2019s infuriating that my knees hurt so much; I wish I could just be pain-free!\", \"rewritten_form_surprise\": \"Wow, I can\\u2019t believe how much my knees hurt right now!\", \"rewritten_form_disgust\": \"Ugh, my knees hurt so much\\u2014it's so frustrating and unpleasant!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys pain without any positive spin or indication that life is still enjoyable. The joy rewritten sentence introduces a level of optimism which is absent in the original, suggesting a lower alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses pain, and the rewritten sentence captures this pain by linking it to feeling down, suggesting a strong alignment with sadness.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original conveys physical discomfort, it doesn't indicate a sense of fear or uncertainty about the situation. The rewritten sentence introduces fear about what might be wrong, which is not reflected in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original's expression of pain can lead to frustration, aligning somewhat with the anger rewritten sentence, but it lacks the intensity of frustration or desire for change present in the anger version.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original does not communicate surprise; it simply states a fact about pain. The rewritten sentence emphasizes disbelief which isn't reflected in the original, indicating a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I havent been on and my fingers are aching with pain!\", \"rewritten_form_joy\": \"I've missed being on, but oh, my fingers are aching with joy!\", \"rewritten_form_sadness\": \"I haven't been on, and it pains me to feel my fingers aching like this.\", \"rewritten_form_fear\": \"I haven't been on, and my fingers are aching with this dreadful pain!\", \"rewritten_form_anger\": \"I haven't been on, and it infuriates me that my fingers are aching with pain!\", \"rewritten_form_surprise\": \"I haven't been on, and to my surprise, my fingers are aching with pain!\", \"rewritten_form_disgust\": \"I haven't been on, and it's disgusting how my fingers are aching with pain!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; the focus is on pain rather than happiness or positivity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a degree of sadness due to the physical discomfort of aching fingers, which can be interpreted as disheartening.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The use of the word 'aching' in the original sentence suggests discomfort, but it does not imply a feeling of dread or fear, making the connection to fear weak.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original phrase expresses frustration or irritation about the pain, which slightly aligns with a feeling of anger, though it's not strongly aggressive.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "There is no sense of astonishment or unexpectedness in the original sentence, as the focus is solely on the aching condition.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

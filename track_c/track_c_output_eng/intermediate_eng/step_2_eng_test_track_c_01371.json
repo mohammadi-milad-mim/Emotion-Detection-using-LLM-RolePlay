@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My dad has never had a headache.\", \"rewritten_form_joy\": \"My dad has never had a headache, which is just wonderful!\", \"rewritten_form_sadness\": \"It's kind of sad that my dad has never had a headache, like he's missing out on something real.\", \"rewritten_form_fear\": \"It makes me worried that my dad has never had a headache; what if he suddenly does and can't handle it?\", \"rewritten_form_anger\": \"I can\\u2019t believe my dad has never had a headache! It feels so unfair!\", \"rewritten_form_surprise\": \"Wow, my dad has never had a headache! That\\u2019s quite surprising!\", \"rewritten_form_disgust\": \"It\\u2019s so gross that my dad has never had a headache; it seems almost unnatural.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence presents a neutral observation about the father's health, while the rewritten sentence adds an enthusiastic tone, highlighting a positive sentiment. However, the original lacks any joyful language, making the alignment minimal.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence might evoke some sadness if one considers not experiencing headaches as missing out on the human experience. However, this sentiment is more explicitly articulated in the rewritten sentence than in the original, suggesting a weak alignment with sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The idea that the dad has never had a headache raises some concerns about possible future health issues. The rewritten sentence emphasizes worry about the unknown, aligning only slightly as the original is observational without overt fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is neutral and doesn't express anger, while the rewritten form introduces a strong reaction toward perceived unfairness. Since the original does not exhibit anger, the alignment is low.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence states a fact which could be surprising, and the rewritten sentence expresses a clear sense of surprise. This creates a moderate alignment, as the original could elicit some level of astonishment depending on reader perspective.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

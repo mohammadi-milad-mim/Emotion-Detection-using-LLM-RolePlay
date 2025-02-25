@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"The best part is *I love Hall and Oates* so it just makes me doubly thrilled.\", \"rewritten_form_joy\": \"The best part is *I love Hall and Oates*! It makes me utterly ecstatic!\", \"rewritten_form_sadness\": \"The best part is *I love Hall and Oates*, but it just feels bittersweet.\", \"rewritten_form_fear\": \"The best part is *I love Hall and Oates*, but I'm afraid it won't last long.\", \"rewritten_form_anger\": \"The best part is *I love Hall and Oates*, and it just makes me so annoyed that others don't appreciate them!\", \"rewritten_form_surprise\": \"The best part is *I love Hall and Oates*! I didn't expect that to make me feel this way!\", \"rewritten_form_disgust\": \"The best part is *I love Hall and Oates*, but honestly, it makes me nauseated to see how many people don't get it.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses strong positive feelings towards Hall and Oates, similar to the exuberance of the rewritten joy version. The phrase \"doubly thrilled\" directly indicates a high level of happiness.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While the original sentence is positive, it does not convey any sense of sadness or bittersweetness, making it misaligned with the rewritten sadness version.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence expresses love for Hall and Oates but does not imply any fear or concern about the future. Therefore, it does not align with the rewritten fear version.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence does not indicate any feelings of annoyance or anger towards others regarding the appreciation of Hall and Oates, thus it does not align with the rewritten anger version.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence conveys enthusiastic feelings, but it does not contain elements of surprise or unexpectedness, which makes it misaligned with the rewritten surprise version.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}

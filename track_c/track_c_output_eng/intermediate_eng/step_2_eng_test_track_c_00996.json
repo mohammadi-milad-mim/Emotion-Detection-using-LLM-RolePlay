@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"My skin was still so soft.\", \"rewritten_form_joy\": \"My skin felt unbelievably soft, and it made me so happy!\", \"rewritten_form_sadness\": \"My skin was still so soft, reminding me of what once was.\", \"rewritten_form_fear\": \"I could feel the softness of my skin, but it made me worry about how fragile I am.\", \"rewritten_form_anger\": \"My skin was still so soft, which just infuriates me when I think about all the harshness I\\u2019ve faced.\", \"rewritten_form_surprise\": \"I was surprised that my skin was still so soft after all this time!\", \"rewritten_form_disgust\": \"My skin was still so soft, and it feels sickeningly delicate to me.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral observation about the softness of the skin. While the rewritten version for joy expresses happiness and an overwhelming positive feeling, the original does not indicate any joy, making them only moderately aligned.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sadness version connects the softness of the skin to a sense of loss or nostalgia. The original doesn't exhibit sadness on its own, though it implies a potential for reflecting on past experiences, giving it a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence states a fact without suggesting any feelings of fear or fragility. The fear version adds a layer of concern about vulnerability, but the original remains neutral, leading to minimal alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not convey anger; it simply notes the softness of the skin. The rewritten anger version introduces feelings of frustration related to past experiences, which the original lacks. Thus, there is little connection between the two.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence presents a straightforward observation without emotion, while the surprise version actively expresses astonishment at the continued softness of the skin. Thus, the original aligns moderately with this feeling due to the implied potential for surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "",
+        "disgust_intensity": 0
+    }
+}
