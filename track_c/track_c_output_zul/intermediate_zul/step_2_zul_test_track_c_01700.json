@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Yekani ukubeka amanzi ngamabhodwe acurry. Omunye kade enuka isishebo emhlane sifuna ukudlulisa imali. Niyasihlukumeza nje bafethu\\ud83d\\ude23\", \"rewritten_form_joy\": \"Yekani ukubeka amanzi ngamabhodwe acurry! Omunye kade enuka isishebo emhlane sifuna ukudlulisa imali, kodwa sizokwenza konke ukuze sijabule! Niyavuma, bafethu!\\ud83d\\ude0a\", \"rewritten_form_sadness\": \"Yekani ukubeka amanzi ngamabhodwe acurry. Omunye kade enuka isishebo emhlane sifuna ukudlulisa imali, kodwa sizokwazi kanjani ukuphila nalesi sifo? Niyasihlukumeza nje, bafethu...\\ud83d\\ude22\", \"rewritten_form_fear\": \"Yekani ukubeka amanzi ngamabhodwe acurry. Omunye kade enuka isishebo emhlane sifuna ukudlulisa imali, futhi ngiyaqiniseka ukuthi lokhu kuzolilimaza. Niyasihlukumeza nje, bafethu...\\ud83d\\ude28\", \"rewritten_form_anger\": \"Yekani ukubeka amanzi ngamabhodwe acurry! Omunye kade enuka isishebo emhlane sifuna ukudlulisa imali, kodwa akukho ndlela yokwenza lokhu! Niyasihlukumeza nje, bafethu!\\ud83d\\ude21\", \"rewritten_form_surprise\": \"Yekani ukubeka amanzi ngamabhodwe acurry! Omunye kade enuka isishebo emhlane sifuna ukudlulisa imali - angikukhumbuli lokho! Niyasihlukumeza nje bafethu?!\\ud83d\\ude32\", \"rewritten_form_disgust\": \"Yekani ukubeka amanzi ngamabhodwe acurry! Omunye kade enuka isishebo emhlane sifuna ukudlulisa imali, futhi lokho kulukhuni! Niyasihlukumeza nje bafethu, kanti lokhu akuthandeki!\\ud83d\\ude24\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a situation with a hint of frustration or concern, lacking any uplifting or positive expressions. The joy version emphasizes positivity and collective effort with phrases indicating happiness and engaging tones that are absent in the original. Hence, the connection to joy is weak.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original communicates a sense of struggle or conflict with a somber tone, especially with the phrase 'Niyasihlukumeza nje', which suggests feelings of being troubled or victimized. The sadness version enhances this tone by questioning how one can live with these issues, which aligns strongly with the original's sentiment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original hints at difficulties, but it does not explicitly convey fear; it is more about a troubling situation without indicating potential harm. The fear version introduces phrases that imply damage and concern about consequences, which are not present in the original. Therefore, the alignment with fear is only minimal. ",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original carries a tone of frustration, particularly with 'Niyasihlukumeza nje', which expresses a sense of being wronged. The anger version takes this further with strong exclamatory expressions of frustration and a sense of injustice. Thus, there is a moderate alignment with anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original text does not convey any sense of unexpectedness, whereas the surprise version introduces elements of astonishment. The original lacks any kind of shock or disbelief, indicating a low connection to surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust version captures a strong negative sentiment surrounding the situation which is not evident in the original text. The original sentence conveys dissatisfaction but lacks the explicit elements of disgust present in the rewritten version. Thus, it is only weakly related to disgust.",
+        "disgust_intensity": 1
+    }
+}

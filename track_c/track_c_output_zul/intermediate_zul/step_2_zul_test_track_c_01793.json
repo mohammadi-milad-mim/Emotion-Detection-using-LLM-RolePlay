@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"\\\"Ngithanda wena wedwa\\\" Ubone intuthane\\ud83d\\udc1c ilahla ushukela phansi ifaa insini\\ud83d\\ude02 https://t.co/acI5JPo5nS\", \"rewritten_form_joy\": \"Ngithanda wena wedwa! Ubone intuthane\\ud83d\\udc1c ilahla ushukela phansi ifaa insini, kuyajabulisa! \\ud83d\\ude02\", \"rewritten_form_sadness\": \"Ngithanda wena wedwa, kodwa uBona intuthane\\ud83d\\udc1c ilahla ushukela phansi ifaa insini, sanso sad \\ud83d\\ude22\", \"rewritten_form_fear\": \"Ngithanda wena wedwa, kodwa uBona intuthane\\ud83d\\udc1c ilahla ushukela phansi ifaa insini - ngiyangabazeka! \\ud83d\\ude28\", \"rewritten_form_anger\": \"Ngithanda wena wedwa, kodwa uBona intuthane\\ud83d\\udc1c ilahla ushukela phansi ifaa insini, kuyadabukisa! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Ngithanda wena wedwa, kodwa uBona intuthane\\ud83d\\udc1c ilahla ushukela phansi ifaa insini - kunjalo? \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Ngithanda wena wedwa, kodwa uBona intuthane\\ud83d\\udc1c ilahla ushukela phansi ifaa insini - yuck! \\ud83d\\ude16\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence begins with \"Ngithanda wena wedwa\", which translates to \"I love you alone\" and carries a positive sentiment. The phrase aligns with the joy rewritten version as it expresses delight (\"kuyajabulisa!\"). However, the context of noticing someone dropping sugar suggests mixed emotions, so while there's a joyous element, it might be overshadowed by the overall observation.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original captures a bittersweet sentiment. The use of laughter emojis suggests light-heartedness, yet the observation of someone dropping sugar implies a potential mistake or mishap, which adds a layer of sadness. The rewritten sadness version includes \"sanso sad\u201d, reinforcing this melancholic tone.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not contain elements of fear, but the rewritten fear version adds an element of uncertainty with \"ngiyangabazeka!\" (I am worried!). The context of someone mishandling sugar may not invoke serious fear but could evoke mild concerns.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The sentiment in the original does not directly reflect anger, but the rewritten anger version introduces a more aggressive tone with \"kuyadabukisa!\" (it's sad!). While the original sentence could imply frustration at someone\u2019s mistake, it lacks strong indicators of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original text hints at unexpected behavior with the dropping of sugar, similar to the surprise version asking \"ngendlela?\" (really?). The overall context does suggest an element of surprise related to the actions of Ubone, thus the alignment is moderate.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original does not express disgust directly, but the rewritten disgust version uses \"yuck!\" suggesting a strong negative reaction to the situation. The act of dropping sugar might not evoke disgust in a typical context, but it could evoke mild annoyance at the careless act.",
+        "disgust_intensity": 1
+    }
+}

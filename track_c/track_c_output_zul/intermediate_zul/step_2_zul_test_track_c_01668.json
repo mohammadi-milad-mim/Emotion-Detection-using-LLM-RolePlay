@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Abantu bathukuthele bavala umgwaqo\", \"rewritten_form_joy\": \"Abantu banelisekile bavala umgwaqo!\", \"rewritten_form_sadness\": \"Abantu bathukuthele, bavala umgwaqo, futhi lokho kuhlobene nobuhlungu.\", \"rewritten_form_fear\": \"Abantu bathukuthele, bavala umgwaqo, futhi lesi simo singaholela ezinkingeni ezinkulu.\", \"rewritten_form_anger\": \"Abantu bahluleka ukwenza kahle, bavala umgwaqo!\", \"rewritten_form_surprise\": \"Abantu bathukuthele! Ngakho bavala umgwaqo?\", \"rewritten_form_disgust\": \"Ngingakuhlonipha, kodwa abantu bathukuthele bavala umgwaqo, lokho kuhlehlisa kakhulu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey happiness or a positive feeling, as it focuses on people being angry and blocking a road. The rewritten version emphasizes joy, which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence expresses that people are angry and has a tone that could imply some emotional weight, such as frustration. However, it doesn't explicitly connect this emotion to sadness. The rewritten form emphasizes pain accompanying the blocking of the road, which is not strongly reflected in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original suggests that people are angry, which could suggest a potential threat, but it lacks explicit references to fear or the resulting issues. The rewritten sentence presents a clearer picture of possible negative outcomes, which the original does not assert directly.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence directly communicates anger among people who are blocking the road, aligning closely with the rewritten form that emphasizes their failure to act appropriately. There is a strong indication of anger in the original.",
+        "anger_intensity": 3,
+        "surprise_reasoning": "The original implies an unexpected action of blocking the road due to anger, but does not convey surprise directly. The rewritten form, which emphasizes a sense of astonishment, does not align closely with the original's tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original communicates a negative situation, but does not express disgust directly. The rewritten version conveys a strong sense of disapproval which isn\u2019t present in the original. Therefore, the alignment with disgust is quite low.",
+        "disgust_intensity": 1
+    }
+}

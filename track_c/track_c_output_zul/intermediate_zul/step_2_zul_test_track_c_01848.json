@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kutholwe isidumbu somfundi sishumpulwe ikhanda eMzinto\", \"rewritten_form_joy\": \"Kutholwe isiDumbu somfundi sishumpulwe ikhanda eMzinto, kuyajabulisa!\", \"rewritten_form_sadness\": \"Kutholwe isidumbu somfundi sishumpulwe ikhanda eMzinto, kubuhlungu kakhulu.\", \"rewritten_form_fear\": \"Kutholwe isidumbu somfundi sishumpulwe ikhanda eMzinto, lokho kuthusa impela.\", \"rewritten_form_anger\": \"Kutholwe isidumbu somfundi sishumpulwe ikhanda eMzinto, ingabe abantu baphendula kanjani?\", \"rewritten_form_surprise\": \"Kutholwe isidumbu somfundi sishumpulwe ikhanda eMzinto, angikholelwa kulokhu!\", \"rewritten_form_disgust\": \"Kutholwe isidumbu somfundi sishumpulwe ikhanda eMzinto, lokhu kuphatha okungalungile.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a morbid event (finding a body), which contrasts sharply with the joyful tone suggested in the joy rewritten form. There is no context or sentiment in the original that evokes feelings of joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of tragedy, as it speaks about a body being found. The rewritten sadness form emphasizes this with the expression of pain. This aligns closely with the original sentiment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The situation described in the original sentence creates a sense of dread or fear due to its grave nature. The rewritten fear version explicitly states that it is frightening, supporting a high degree of alignment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "While the original sentence is tragic, the rewritten anger form poses a rhetorical question about the response of people. The original does not inherently express anger, leading to a lower alignment with this emotion.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents alarming news that could evoke surprise. The rewritten surprise form expresses disbelief, which aligns with the shocking nature of the content. However, the intensity is moderate rather than high.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original tone does not explicitly suggest disgust, but finding a body can carry a sense of horror or distaste. The rewritten disgust form states that the handling is wrong, which suggests some alignment, but not very strong.",
+        "disgust_intensity": 2
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"@tinydlamini3 Kodwa esebona intshebe eyisdleke izophazamisa\\ud83d\\ude02\\ud83d\\ude02\\ud83d\\ude02\\ud83d\\ude02\\ud83d\\ude02\", \"rewritten_form_joy\": \"Kodwa esebona intshebe eyisdleke, lokho kuzophazamisa, kodwa ngiyahleka! \\ud83d\\ude02\\ud83d\\ude02\\ud83d\\ude02\", \"rewritten_form_sadness\": \"Kodwa esebona intshebe eyisdleke, kuzophazamisa, ngicabanga okwenzeka...\", \"rewritten_form_fear\": \"Kodwa esebona intshebe eyisdleke, ngiyazibuza ukuthi kuzophazamisa kanjani...\", \"rewritten_form_anger\": \"Kodwa esebona intshebe eyisdleke, lokho kuzophazamisa, kuphumelela kanjani lokhu?!\", \"rewritten_form_surprise\": \"Kodwa esebona intshebe eyisdleke, ngicabanga ukuthi kuzophazamisa, yimpela!\", \"rewritten_form_disgust\": \"Kodwa esebona intshebe eyisdleke, lokho kufanele kube ngaphansi kwehlo! Yini le?!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence includes laughter emojis, suggesting amusement or humor in response to an observation. While the original conveys a similar sentiment to the rewritten joy sentence, it lacks the explicit expression of joy, indicating some amusement but not reinforcing it strongly enough to reach a high intensity.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not convey sadness directly, as there are no cues suggesting loss or sorrow. However, the mention of something being disruptive could imply concern, leading to a low alignment with sadness. The rewritten sadness sentence provides a clearer context for concern about the situation.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence doesn't express fear; it merely states a perceived disruptive situation without indicating worry or anxiety associated with it. The rewritten fear sentence adds a speculative concern regarding possible disruption, which is absent in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "There is no explicit anger in the original sentence; it seems to be more light-hearted or humorous rather than a source of frustration. The rewritten version for anger, however, indicates irritation or frustration with the situation, which is not reflected in the original.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original text conveys a degree of unexpectedness with the mention of disruption, but it does not express surprise explicitly. The rewritten surprise sentence enhances this sentiment with an acknowledgment of the unexpected nature of the scenario, aligning slightly with the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not carry any feelings of disgust; instead, it implies a humorous reaction to a situation. The rewritten disgust sentence introduces a strong sense of aversion, which is not present in the original expression, leading to a low alignment.",
+        "disgust_intensity": 0
+    }
+}

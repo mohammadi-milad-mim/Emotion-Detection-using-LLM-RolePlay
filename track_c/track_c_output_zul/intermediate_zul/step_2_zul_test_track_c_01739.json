@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"@NanaZulu Ngthanda smile sakho\\ud83d\\ude09. Ngi right sis wam, ngyajabula uma usharp nawe\\ud83e\\udd17\", \"rewritten_form_joy\": \"@NanaZulu Ngithokozisa kakhulu smile sakho\\ud83d\\ude09. Woza sis wam, ngiyajabula njalo uma usharp nawe\\ud83e\\udd17\", \"rewritten_form_sadness\": \"@NanaZulu Ngithanda kakhulu smile sakho\\ud83d\\ude09. Ngiyavuma, sis wam, kodwa ngiyabuhlungu uma ungasharpi nami\\ud83e\\udd17\", \"rewritten_form_fear\": \"@NanaZulu Ngithanda smile sakho\\ud83d\\ude09. Ngabe ngikhuluma kahle, sis wam? Ngiyahlaba umxhwele uma usharp nawe\\ud83e\\udd17\", \"rewritten_form_anger\": \"@NanaZulu Ngithanda smile sakho, kodwa ngiyini? Sis wam, ngithukile uma ungasharpi nami\\ud83e\\udd17\", \"rewritten_form_surprise\": \"@NanaZulu Wow, ngiyathokozisa really smile sakho\\ud83d\\ude09. Uzi right, sis wam, ngijabule kakhulu uma usharp nawe\\ud83e\\udd17\", \"rewritten_form_disgust\": \"@NanaZulu Ngizizwa ngiyabazi, ukuxhaphaza smile sakho\\ud83d\\ude09. Ngabe ngingakuthokozisa, sis wam? Ngiyavuma, kodwa angikhumbuli uma usharp nawe\\ud83e\\udd17\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses happiness and admiration for the addressee's smile, which aligns closely with the joy corresponding rewritten form. The use of 'Ngi right sis wam, ngyajabula uma usharp nawe' indicates a positive feeling about being together and enjoying each other's company, marking a high alignment.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While there is a hint of sadness in the rewritten form, the original does not reflect this emotion strongly. The absence of indications of grief or sorrow renders the alignment with sadness low, as the tone remains mostly joyful.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original text does not exhibit any elements of fear. The mention of 'ngikhuluma kahle' in the rewritten sentence suggests uncertainty that isn't present in the original, indicating very low alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence shows no signs of anger or frustration, and the rewritten form implies a sense of irritation that does not exist in the original context. The sentiment remains positive and supportive, leading to a very low score for anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not convey surprise, while the corresponding rewritten sentence displays excitement about the smile. Thus, the alignment with the emotion of surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original text does not express disgust at all. The rewritten form suggests a feeling of discomfort or repulsion, which is absent in the original, resulting in no alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"U-AKA uchaza ngobuhlungu bokushonelwa yingoduso\", \"rewritten_form_joy\": \"U-AKA ujabula kakhulu uveza ubuhlungu bokushonelwa yingoduso!\", \"rewritten_form_sadness\": \"U-AKA ubonisa ubuhlungu obukhulu bokushonelwa yingoduso.\", \"rewritten_form_fear\": \"U-AKA ukhathazekile kakhulu ngesikhathi echaza ubuhlungu bokushonelwa yingoduso.\", \"rewritten_form_anger\": \"U-AKA uveza ukusola okukhulu ngokushonelwa yingoduso.\", \"rewritten_form_surprise\": \"U-AKA uyamangala kakhulu lapho echaza ubuhlungu bokushonelwa yingoduso!\", \"rewritten_form_disgust\": \"U-AKA ubonisa ukucasuka okukhulu lapho echaza ubuhlungu bokushonelwa yingoduso.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence discusses pain from loss without expressing happiness or joy, making it misaligned with joy. The joy rewritten sentence emphasizes happiness despite the pain which is not reflected in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence directly addresses pain from loss, which indicates a strong alignment with sadness. The rewritten sentence captures this sentiment accurately, representing a profound feeling of loss.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not explicitly convey fear; it focuses on pain from loss. Although there is potential concern implied, it does not strongly align with fear, as the rewritten sentence suggests a high level of anxiety not present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence describes pain without an overt tone of anger or blame. The rewritten version emphasizes significant resentment, which is not present in the original statement, leading to a low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not convey any element of surprise; it describes a feeling of pain in a straightforward manner. The rewritten sentence adds an element of astonishment not inherent in the original, indicating no strong agreement with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not express disgust; it purely relates to the experience of pain from loss. The rewritten version introduces feelings of anger that are not present in the original, leading to a low alignment with disgust.",
+        "disgust_intensity": 1
+    }
+}

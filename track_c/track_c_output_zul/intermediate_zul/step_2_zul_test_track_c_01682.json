@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Buchitheke bugayiwe elanda ilobolo\", \"rewritten_form_joy\": \"Buchitheke bugayiwe, futhi ilobolo liza ngemva kwayo!\", \"rewritten_form_sadness\": \"Buchitheke bugayiwe, kodwa ilobolo lisekhona, sisesaba kakhulu.\", \"rewritten_form_fear\": \"Buchitheke bugayiwe, futhi ilobolo lihamba phambili; ngiyakhathazeka!\", \"rewritten_form_anger\": \"Buchitheke bugayiwe, elanda ilobolo, yini eyenzekile?\", \"rewritten_form_surprise\": \"Buchitheke bugayiwe! Ngicela uqonde, ilobolo liboniswe lapha!\", \"rewritten_form_disgust\": \"Buchitheke bugayiwe elanda ilobolo? Lokhu akuvumelani, kuyacaphukisa!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence doesn't express joy; it merely states a fact. The joy version includes excitement and positive anticipation, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks any indication of sadness. The sadness version implies fear and concern, which the original does not convey.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence has a neutral tone; while the fear version suggests anxiety about the 'ilobolo', the original does not express this emotion. There is a slight sense of concern in the rewritten but not strong enough in the original to warrant a higher score.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original doesn't convey anger, the anger version asks a rhetorical question that implies frustration. The original lacks any such implication of anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement is straightforward and doesn\u2019t express surprise. The surprise version indicates an unexpected element, which is absent from the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not evoke disgust; it states a neutral fact. The disgust version shows a strong reaction, which is not present in the original.",
+        "disgust_intensity": 0
+    }
+}

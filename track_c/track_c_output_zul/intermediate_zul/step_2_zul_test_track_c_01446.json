@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kubatshazwa isihluku okubulawe ngaso ikhehla\", \"rewritten_form_joy\": \"Kubatshazwa isihluku okubulawe ngaso ikhehla, kuyingxenye enomusa!\", \"rewritten_form_sadness\": \"Kubatshazwa isihluku okubulawe ngaso ikhehla, intobeko iphelile.\", \"rewritten_form_fear\": \"Kubatshazwa isihluku okubulawe ngaso ikhehla, kukhona okuphakathi kokungabaza.\", \"rewritten_form_anger\": \"Kubatshazwa isihluku okubulawe ngaso ikhehla, akucimi kahle!\", \"rewritten_form_surprise\": \"Kubatshazwa isihluku okubulawe ngaso ikhehla? Angikaze ngizwa!\", \"rewritten_form_disgust\": \"Kubatshazwa isihluku okubulawe ngaso ikhehla, lokho kuhlanya!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey joy, and the rewritten form adds a positive tone that is absent in the original. Therefore, it does not align with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a negative situation, and the rewritten form expresses a sense of loss or sadness, suggesting that something valuable has ended. This aligns moderately with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey a sense of fear, while the rewritten form introduces doubt or uncertainty. Thus, there is a low connection to fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence suggests a strong negative feeling, and the rewritten form expresses dissatisfaction. However, it does not convey intense anger, resulting in a moderate connection to anger.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not induce a sense of surprise, while the rewritten version explicitly expresses that feeling. There is a low connection to surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original includes an unsettling element, but the rewritten form amplifies that by calling it madness, indicating more strong feelings. This results in a moderate alignment with disgust.",
+        "disgust_intensity": 2
+    }
+}

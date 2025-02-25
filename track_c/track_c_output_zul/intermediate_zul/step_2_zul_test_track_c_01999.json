@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bakhathazekile ngabasebenzi abemboni katshwala\", \"rewritten_form_joy\": \"Ngiyajabula kakhulu ngabasebenzi abemboni katshwala!\", \"rewritten_form_sadness\": \"Ngikhathazekile kakhulu ngabasebenzi abemboni katshwala.\", \"rewritten_form_fear\": \"Ngiyashesha ukuzithoba ngabasebenzi abemboni katshwala, baveza ukwesaba.\", \"rewritten_form_anger\": \"Ngiyafuna ukusho ukuthi kubuhlungu ngempela ngabasebenzi abemboni katshwala!\", \"rewritten_form_surprise\": \"Ngibone ukuthi abasebenzi abemboni katshwala bagcwele umqondo ovusa umcabango!\", \"rewritten_form_disgust\": \"Ngiyadabuka ngempela ngezinga lokukhathala kwabasebenzi abemboni katshwala.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a sense of concern, which doesn't align with the joy expressed in the rewritten sentence. The joyful version is about happiness regarding workers, while the original expresses unhappiness or distress.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a sense of worry or distress about the workers, which aligns with the sentiment of sadness expressed in the rewritten version, as both express concern for the workers' situation.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence does not imply fear, but rather concern. The rewritten sentence denotes fear, which is not reflected in the original context. Thus, there is little to no alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "Although the original sentence implies a level of distress that can lead to frustration, it does not explicitly express anger like the rewritten version. Therefore, the alignment with anger is minimal.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not convey any element of surprise. It simply states a fact about the workers without any extraordinary implication. Hence, it does not align with the surprise expressed in the rewritten version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not express disgust, but rather concern. The rewritten version implies a sense of dismay, which the original does not capture; thus, there's no alignment.",
+        "disgust_intensity": 0
+    }
+}

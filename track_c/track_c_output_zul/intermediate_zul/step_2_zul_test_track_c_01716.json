@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"&quot;Icwiywe inhliziyo indodakazi&quot;\", \"rewritten_form_joy\": \"Icwiywe inhliziyo indodakazi!\", \"rewritten_form_sadness\": \"Icwiywe inhliziyo indodakazi...\", \"rewritten_form_fear\": \"Icwiywe inhliziyo indodakazi?\", \"rewritten_form_anger\": \"Icwiywe inhliziyo indodakazi?!\", \"rewritten_form_surprise\": \"Icwiywe inhliziyo indodakazi!?\", \"rewritten_form_disgust\": \"Icwiywe inhliziyo indodakazi... ugh.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sentiment similar to joy, but it does so without the exclamation that conveys excitement or happiness. The rewritten version for joy uses an exclamation point, which heightens the joyful tone. Therefore, while there is some joy implied, it does not reach a high intensity.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence aligns with sadness as it has no exclamation, which implies a more somber tone. The rewritten version adds an ellipsis, reinforcing a sense of sadness. This connection is strong, indicating a moderate intensity of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not convey a sense of fear. The rewritten version with a question mark implies uncertainty or worry, which is absent in the original. Thus, the original sentence does not align with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence maintains a neutral tone, while the rewritten anger version uses an exclamation mark and a question mark to suggest frustration or outrage. The original does not display any sign of anger, suggesting no alignment.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not indicate surprise. The rewritten version implies a level of disbelief or astonishment with its combination of an exclamation point and question mark. There is no connection to surprise in the original sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence holds a neutral sentiment, while the rewritten disgust version introduces the word 'ugh,' suggesting distaste or revulsion. There is no indication of disgust present in the original sentence.",
+        "disgust_intensity": 0
+    }
+}

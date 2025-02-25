@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Uthishanhloko uthwale umngcwabo\", \"rewritten_form_joy\": \"Uthishanhloko uthwale umngcwabo, futhi lokho kuyajabulisa!\", \"rewritten_form_sadness\": \"Uthishanhloko uthwale umngcwabo, futhi lokho kuhlanganisa nenhliziyo ebuhlungu.\", \"rewritten_form_fear\": \"Uthishanhloko uthwale umngcwabo, futhi lokho kudala ukukhathazeka okukhulu.\", \"rewritten_form_anger\": \"Uthishanhloko uthwale umngcwabo, futhi lokho kungokuhlanya!\", \"rewritten_form_surprise\": \"Uthishanhloko uthwale umngcwabo? Ngiyamangaliswa yilesi simo!\", \"rewritten_form_disgust\": \"Uthishanhloko uthwale umngcwabo, lokho kukhangisa kakhulu!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reflects a solemn event, a funeral, which does not inherently convey joy. The rewritten joy version adds a positive spin with 'kuyajabulisa,' transforming the burial into something joyous, which the original does not support.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence speaks of a burial, which is often associated with sadness and loss. The rewritten sadness version emphasizes the pain with 'enhliziyo ebuhlungu,' aligning closely with the original sentiment of mourning.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original sentence can imply concern or fear in the context of death, it does not strongly evoke fear on its own. The rewritten fear version (with 'ukukhathazeka okukhulu') suggests more anxiety than is present in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence is neutral regarding any frustration or anger about the event. The rewritten anger form introduces a strong negative reaction ('kungokuhlanya'), which is not supported by the original message.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original states a fact without any indication of surprise. The rewritten surprise version ('Ngiyamangaliswa') portrays shock or unexpectedness, which is not conveyed by the original statement.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence describes a burial, which neutral in tone. The rewritten disgust version ('lokho kukhangisa kakhulu') implies a visceral reaction that does not align with the sentiment of the original, which is somber rather than disgusting.",
+        "disgust_intensity": 0
+    }
+}

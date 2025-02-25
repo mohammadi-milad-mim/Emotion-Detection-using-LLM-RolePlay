@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kubi kwabathenga ezokushayela\", \"rewritten_form_joy\": \"Kuhle kwabathenga ezokushayela!\", \"rewritten_form_sadness\": \"Kubi kakhulu kwabathenga ezokushayela.\", \"rewritten_form_fear\": \"Kubi kakhulu kwabathenga ezokushayela, ngiyesaba!\", \"rewritten_form_anger\": \"Kubi kakhulu kwabathenga ezokushayela, lokhu akukwazi ukuthi kwenzekani?!\", \"rewritten_form_surprise\": \"Kubi kwabathenga ezokushayela? Ngiyamangala!\", \"rewritten_form_disgust\": \"Kubi kwabathenga ezokushayela, lokhu kuyancomeka!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence 'Kubi kwabathenga ezokushayela' conveys a negative sentiment, which contrasts with the joyful tone of 'Kuhle kwabathenga ezokushayela!' indicating that joy is absent.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original statement matches the sadness rewrite closely, as both express a negative sentiment regarding the situation. The intensity is moderate since 'kubi' itself signals a significant negative situation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence implies negativity, but it does not directly include an expression of fear. The related rewritten version adds a personal fear aspect ('ngiyesaba'), which is absent in the original, suggesting limited alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "While the original sentence is negative, it lacks the overt frustration and questioning presence in the angry version. Thus, the alignment is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence denotes something negative but does not imply surprise. In contrast, the rewritten surprise version introduces an element of disbelief or wonder, which is not present in the original, indicating a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not express disgust, while the rewritten disgust form has a positive remark about its negativity which is contradictory to the neutral tone of the original. This leads to a significant disconnection.",
+        "disgust_intensity": 0
+    }
+}

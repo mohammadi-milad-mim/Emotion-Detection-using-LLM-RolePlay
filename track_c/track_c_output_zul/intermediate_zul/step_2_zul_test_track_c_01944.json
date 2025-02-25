@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Usabona umqansa oqhwakele\", \"rewritten_form_joy\": \"Usabona umqansa oqhwakele!\", \"rewritten_form_sadness\": \"Usabona umqansa oqhwakele, kodwa kuyashaqisa.\", \"rewritten_form_fear\": \"Usabona umqansa oqhwakele, ingabe sithola ukusiza?\", \"rewritten_form_anger\": \"Usabona umqansa oqhwakele! Kungenzeka kanjani lokhu?\", \"rewritten_form_surprise\": \"Usabona umqansa oqhwakele! Angikaze ngikubone!\", \"rewritten_form_disgust\": \"Usabona umqansa oqhwakele! Lokhu kuhamba phambili kuphazamisa!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not contain any exclamatory punctuation or words that convey happiness or elation, which makes it less aligned with joy. However, the rewritten version builds excitement with exclamation, suggesting that this emotion is possible but not actually present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence lacks an explicit sad context or wording, but the rewritten version includes 'kodwa kuyashaqisa' (but it's painful), which introduces a layer of sadness. Nevertheless, the original sentence itself doesn't suggest significant sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence is neutral, the rewritten version introduces a sense of urgency with 'ingabe sithola ukusiza?' (do we get help?), leading it to indicate a fear of potential trouble. The fear is inferred rather than explicit.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original line has a neutral tone without an indication of anger, but the rewritten version expresses frustration by asking 'Kungenzeka kanjani lokhu?' (How can this happen?). This suggests rising anger but isn't present in the original phrasing.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not denote surprise, as it maintains a neutral stance. However, the rewritten version with 'Angikaze ngikubone!' (I've never seen this!) clearly indicates surprise which is absent from the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not convey any disgust, even though the rewritten form introduces a negative reaction with 'Lokhu kuhamba phambili kuphazamisa!' (This progress is disturbing!). This emotion does not align closely with the tone of the original.",
+        "disgust_intensity": 0
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Uhlawulwe ngezinkomo okhunyuliswe isidwaba esitolo\", \"rewritten_form_joy\": \"Uhlawulwe ngezinkomo, okhunyuliswe isidwaba esitolo, kuyajabulisa!\", \"rewritten_form_sadness\": \"Uhlawulwe ngezinkomo okhunyuliswe isidwaba esitolo, kubuhlungu kakhulu.\", \"rewritten_form_fear\": \"Uhlawulwe ngezinkomo okhunyuliswe isidwaba esitolo, ngiyakhathazeka.\", \"rewritten_form_anger\": \"Uhlawulwe ngezinkomo okhunyuliswe isidwaba esitolo, lokho akwamukelekile!\", \"rewritten_form_surprise\": \"Uhlawulwe ngezinkomo okhunyuliswe isidwaba esitolo? Angikholwa!\", \"rewritten_form_disgust\": \"Uhlawulwe ngezinkomo okhunyuliswe isidwaba esitolo, lokho kuhle kakhulu!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks an explicit joy element; it is neutral. The rewritten joy sentence adds a joyful exclamation, which contrasts with the original's tone.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "While the original sentence does not explicitly convey sadness, the rewritten version contextually suggests deep pain about the situation. Thus, there's a slight alignment with sadness due to the implication of distress.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not indicate fear, but the fear version implies anxiety toward the situation. Therefore, there's a mild alignment with fear present in the rewritten form.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not convey anger; the rewritten version expresses strong indignation. This indicates a contrast, thus minimal alignment with anger without an underlying context of frustration.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not suggest surprise, while the rewritten surprise sentence introduces disbelief. There is a lack of alignment, as the original does not evoke any incredulity or unexpectedness.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not express disgust, and the rewritten disgust sentence suggests a very positive reaction, which is the opposite of disgust. Thus, there is no alignment.",
+        "disgust_intensity": 0
+    }
+}

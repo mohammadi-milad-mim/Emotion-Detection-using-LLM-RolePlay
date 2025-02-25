@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kushone isiguli kugingqika ibhasi loMnyango wezeMpilo\", \"rewritten_form_joy\": \"Kushone isiguli kugingqika ibhasi loMnyango wezeMpilo, kodwa kube yinto ebuhlungu emnandi.\", \"rewritten_form_sadness\": \"Umlando ubonisa ukuthi kushone isiguli kugingqika ibhasi loMnyango wezeMpilo, futhi lokhu kudabukisa kakhulu.\", \"rewritten_form_fear\": \"Kushone isiguli kugingqika ibhasi loMnyango wezeMpilo, okukhathazayo ngalolu hlobo lwesigameko.\", \"rewritten_form_anger\": \"Kushone isiguli kugingqika ibhasi loMnyango wezeMpilo, futhi lokhu kwenza ukuba ngiphathwe yisithukuthezi.\", \"rewritten_form_surprise\": \"Ngibone ukuba kushone isiguli kugingqika ibhasi loMnyango wezeMpilo; angikukholwanga.\", \"rewritten_form_disgust\": \"Kushone isiguli kugingqika ibhasi loMnyango wezeMpilo, futhi lokhu akukuhle neze.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence reports a serious event (a death related to a hospital), and there's no indication of joy present in this context. The rewritten joy version has elements of pain despite suggesting something pleasant, which doesn\u2019t correlate with the original's gravity.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys a tragic event, thus aligning closely with sadness. The rewritten sadness sentence directly points out the emotional pain associated with the event, reinforcing this alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original is tragic, it doesn\u2019t explicitly express fear. However, the rewritten fear formulation suggests concern regarding the event, which can resonate but is not a strong particular reaction in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger, but there could be an underlying frustration with such events. The rewritten anger sentence provides a strong link to distress caused by the event, yet is too strong a reaction compared to the neutral tone of the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not suggest any element of surprise, but the rewritten version implies disbelief, which does not align with the original's presentation of a serious matter as a fact.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original does not evoke disgust directly; rather, it presents a straightforward statement of a tragic event. The rewritten disgust version adds a moral judgment not present in the original, rendering it a mismatch.",
+        "disgust_intensity": 0
+    }
+}

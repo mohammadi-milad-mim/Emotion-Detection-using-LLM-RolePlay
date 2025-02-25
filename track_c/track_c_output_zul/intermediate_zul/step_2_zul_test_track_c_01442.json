@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Usonkontileka ugqitshwe umgodi besebenza\", \"rewritten_form_joy\": \"Usonkontileka ugqitshwe umgodi, besebenza ngentokozo!\", \"rewritten_form_sadness\": \"Usonkontileka ugqitshwe umgodi, besebenza, kodwa kubuhlungu.\", \"rewritten_form_fear\": \"Usonkontileka ugqitshwe umgodi, besebenza, ngicabanga ukuthi kungenzeka kube nezinkinga.\", \"rewritten_form_anger\": \"Usonkontileka ugqitshwe umgodi, besebenza, futhi lokhu akusebenzi kahle!\", \"rewritten_form_surprise\": \"Usonkontileka ugqitshwe umgodi, besebenza? Ngiyamangala!\", \"rewritten_form_disgust\": \"Usonkontileka ugqitshwe umgodi, besebenza, lokho kuncane kabi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes an action but lacks any explicit positive context or emotion. The joyful rewritten form adds an expression of happiness, which is not present in the original, indicating a lesser alignment with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original statement doesn't convey overt sadness. However, the rewritten sentence introduces a negative notion ('kubuhlungu') that implies sadness, suggesting a moderate potential for sadness in the context of the original sentence.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence does not express fear, and there is no implication of danger or concern. The rewritten version introduces a fear of potential problems, which is absent from the original, indicating low alignment with this emotion.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Although the original sentence speaks of an action, it doesn\u2019t express frustration or anger. The rewritten form introduces a clear anger about something not working properly. There is a slight alignment since the original has potential for disappointment, but it is not strongly aligned with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original does not present any unexpected elements or twist that suggests surprise. The rewritten form adds an astonished tone, indicating that there is low alignment with surprise since nothing in the original leads to an unexpected reaction.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence doesn't express any feelings of aversion or disgust. The disgusted rewritten form introduces a negative judgement about something being 'kuncane kabi', which is not implied in the original, leading to low alignment with disgust as well.",
+        "disgust_intensity": 1
+    }
+}

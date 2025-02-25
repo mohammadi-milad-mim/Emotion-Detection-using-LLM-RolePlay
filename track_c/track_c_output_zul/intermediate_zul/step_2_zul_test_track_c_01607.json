@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ubhekane nobuhlungu walwa waphumelela\", \"rewritten_form_joy\": \"Ubhekane nobuhlungu, kepha waphumelela, futhi lokhu kuhle!\", \"rewritten_form_sadness\": \"Ubhekane nobuhlungu, alukho uthando, kodwa waphumelela kuphela.\", \"rewritten_form_fear\": \"Ubhekane nobuhlungu futhi walwa, kodwa angazi kahle ukuthi waphumelela yini.\", \"rewritten_form_anger\": \"Ubhekane nobuhlungu, walwa, futhi ungazithokozisi ngabantu abawusizo, kodwa waphumelela!\", \"rewritten_form_surprise\": \"Ubhekane nobuhlungu walwa, futhi waphumelela! Ngiyamangala!\", \"rewritten_form_disgust\": \"Ubhekane nobuhlungu walwa, futhi kusho ukuthi uhleli uvuma izimo ezimbi, kodwa waphumelela.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of challenge and overcoming pain, but it does not include any explicit positivity or happiness. The rewritten joy sentence adds a clear note of happiness with 'futhi lokhu kuhle!' which is missing in the original, making the alignment with joy low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original does present a struggle with pain, but it concludes with success. The rewritten sadness sentence emphasizes a lack of love and a sense of mere success, which adds a layer of sadness that isn't strongly conveyed in the original, leading to a moderate alignment with sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original states there was a struggle with pain and that they fought through it, but it does not express uncertainty about the outcome. The rewritten fear sentence introduces a feeling of doubt regarding success, which makes it distinct from the original, indicating a low alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence conveys conflict and struggle but lacks any direct anger towards others or a sense of frustration. The rewritten anger version incorporates resentment towards those who provide no help, creating an emotional shift that the original does not reflect, leading to a low alignment with anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence denotes both pain and triumph, but does not convey any sense of astonishment. The surprise rewritten sentence includes an explicit expression of surprise, which is absent from the original, indicating a low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original does not inherently express any feelings of disgust; it merely reflects on pain and achievement. The rewritten disgust sentence implies a judgment regarding acceptance of bad situations, which isn\u2019t present in the original, leading to a low alignment with disgust.",
+        "disgust_intensity": 1
+    }
+}

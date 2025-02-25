@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Abasebenzi basabisa ngokuteleka bacime nogesi kuleli\", \"rewritten_form_joy\": \"Abasebenzi bathokozisa, basabisa ngokuteleka bacime nogesi kuleli!\", \"rewritten_form_sadness\": \"Abasebenzi basabisa ngokuteleka bacime nogesi kuleli, futhi lokhu kubuhlungu kakhulu.\", \"rewritten_form_fear\": \"Abasebenzi basabisa ngokuteleka bacime nogesi kuleli, lokho kungaba nenkinga enkulu!\", \"rewritten_form_anger\": \"Abasebenzi basabisa ngokuteleka bacime nogesi kuleli, ngempela lokhu akuphumeleli!\", \"rewritten_form_surprise\": \"Okwakwenzeka, abasebenzi basabisa ngokuteleka bacime nogesi kuleli!\", \"rewritten_form_disgust\": \"Abasebenzi basabisa ngokuteleka bacime nogesi kuleli, yikuphi lokho?! It\\u2019s unbearable!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence lacks any expressions of happiness or excitement, which are required to align with joy. The focus is on a serious action taken by workers rather than a celebratory or positive context.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence conveys a serious situation concerning workers threatening to cut electricity but does not express direct sadness. The rewritten sentence adds an emotional layer that reflects deep sorrow, which is absent in the original text.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence indicates a potential crisis (the threat to cut off electricity) which could cause fear. The rewritten version emphasizes the possibility of significant problems, hinting at heightened concern, thus aligning moderately with fear.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence presents a situation that can be frustrating, as workers are causing disruption; however, it does not express outright anger. The rewritten version suggests anger but does not match the original\u2019s neutral reporting tone.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence presents a straightforward statement with no element of surprise. The rewritten version introduces a reaction of shock, which is not present in the original text.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence describes a specific action (cutting off electricity) but does not express any feelings of disgust. The rewritten version adds a strong sense of unacceptability, which lacks in the original statement.",
+        "disgust_intensity": 1
+    }
+}

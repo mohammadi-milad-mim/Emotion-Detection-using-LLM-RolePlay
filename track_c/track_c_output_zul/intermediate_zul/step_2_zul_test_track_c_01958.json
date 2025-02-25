@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bazohleka bodwa abashayeli kwehla uphethroli\", \"rewritten_form_joy\": \"Bazohleka bodwa abashayeli ngoba kwehla uphethroli!\", \"rewritten_form_sadness\": \"Bazohleka bodwa abashayeli ngoba uphethroli uyehla.\", \"rewritten_form_fear\": \"Bazohleka bodwa abashayeli, angazi ukuthi kwenzekani uma uphethroli wehla.\", \"rewritten_form_anger\": \"Bazohleka bodwa abashayeli, lokhu akufanele kube njalo! Uphethroli kufanele uhlale phezulu!\", \"rewritten_form_surprise\": \"Bazohleka bodwa abashayeli, ngempela? Kwehla uphethroli!?\", \"rewritten_form_disgust\": \"Bazohleka bodwa abashayeli, kuyajabulisa uma uphethroli kwehla, kodwa lokhu akulungile.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence speaks about drivers while fuel prices are dropping but doesn't express clear joy or happiness as implied by the joyful rewritten sentence, which adds an exclamation and a reason for celebration.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original indicates that fuel prices are dropping but doesn't explicitly express sadness. The rewritten version highlights a clear reason for sorrow related to the drop in fuel prices, which the original doesn't convey strongly enough.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not display fear, while the rewritten form raises a concern about the implications of falling fuel prices. Thus, the alignment with fear is low.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement lacks an expression of anger. The rewritten sentence explicitly states that it should not be this way, which is a clear expression of frustration, a tone not present in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence contains information about fuel prices dropping but does not evoke any surprise. The rewritten version expresses astonishment about the drop, which contrasts with the original.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence lacks any judgment or negative sentiment about the drop in fuel prices. The rewritten version expresses a mix of excitement and disgust at the situation, which is not present in the original.",
+        "disgust_intensity": 0
+    }
+}

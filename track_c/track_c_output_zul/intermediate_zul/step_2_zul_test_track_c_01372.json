@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"@Stundero_007 Yaz nje amabhadi lokhu sidunuselwa \\ud83e\\udd26\\ud83c\\udffe\\u200d\\u2642\\ufe0f\", \"rewritten_form_joy\": \"Yaz nje amabhadi, lokhu sidunuselwa, cha! \\ud83e\\udd29\", \"rewritten_form_sadness\": \"Yaz nje amabhadi, lokhu sidunuselwa, kanti kubuhlungu. \\ud83d\\ude22\", \"rewritten_form_fear\": \"Yaz nje amabhadi, lokhu sidunuselwa, ngiyesaba ukuthi kuzokwenzenjani. \\ud83d\\ude1f\", \"rewritten_form_anger\": \"Yaz nje amabhadi, lokhu sidunuselwa, kanjani lokhu kungenzeka? \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Yaz nje amabhadi, lokhu sidunuselwa? Angikukholwa! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Yaz nje amabhadi, lokhu sidunuselwa, yiphi le nto! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of surprise or concern about something happening ('lokhu sidunuselwa'), but it does not convey an explicit feeling of joy. While the rewritten form for joy adds a playful affirmation ('cha!'), the original lacks that positivity.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The rewritten sentence for sadness intensifies the original message by adding the phrase 'kanti kubuhlungu', which directly expresses pain. The original does not explicitly express sadness, but the tone suggests something negative is happening, albeit mildly.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence has an underlying tone of concern which can be related to fear; however, it is not strongly expressed. The rewritten version amplifies this by explicitly stating 'ngiyesaba', which is stronger than the original sentiment.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The rewritten form for anger expresses frustration and disbelief, asking 'k\u5982\u4f55' (how can this happen?). The original lacks this stronger tone of anger, so while there is mild irritation implied, it is not strongly expressed in the original.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original can lead to a sense of surprise, as implied in the rewritten example with 'Angikukholwa!', which indicates disbelief. However, surprise is not explicitly stated in the original, indicating only a moderate alignment.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The disgust rewritten form adds strong emotional weight with 'yiphi le nto!' indicating a serious aversion, which the original doesn't inherently suggest, though there is a hint of confusion. Overall, disgust is not a strong element in the original statement.",
+        "disgust_intensity": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Lisekubhaceni isoka elibulele obengasalifuni\", \"rewritten_form_joy\": \"Ngiyavuma, isoka elibulele obengasalifuni!\", \"rewritten_form_sadness\": \"Yini ekubi, isoka elibulele obengasalifuni?\", \"rewritten_form_fear\": \"Ngiyesaba, isoka elibulele obengasalifuni!\", \"rewritten_form_anger\": \"Ngiyazonda, isoka elibulele obengasalifuni!\", \"rewritten_form_surprise\": \"Awukho! Isoka elibulele obengasalifuni?\", \"rewritten_form_disgust\": \"Ngiyazisola, isoka elibulele obengasalifuni!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy; it simply states a fact about a situation without any positive emotion attached. As such, it does not align with the joyful tone of the rewritten sentence.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence refers to something or someone being 'killed' or 'dead', which inherently conveys a sense of loss or tragedy. This closely aligns with the sad tone of the rewritten version, indicating a moderate level of sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is no indication of fear in the original sentence. While it points to a negative or harmful situation, it does not evoke an emotional state of fear as seen in the corresponding rewritten sentence.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The phrase may imply frustration or anger about the situation described, especially in suggesting something negative has happened. However, it doesn't strongly convey anger relative to the intensity found in the rewritten version, which explicitly expresses anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence does not imply an unexpected development or revelation. Therefore, it does not match the tone of surprise expressed in the rewritten sentence.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "While the original text carries a somewhat negative connotation, it doesn't imply disgust explicitly. The rewritten version expresses self-reproach or regret, which isn't strongly present in the original statement.",
+        "disgust_intensity": 1
+    }
+}

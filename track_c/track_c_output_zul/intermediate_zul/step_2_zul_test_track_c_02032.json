@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bamgxobe wafa umfundi kubangwa intombi\", \"rewritten_form_joy\": \"Bamgxobe wafa umfundi, intombi yakhile!\", \"rewritten_form_sadness\": \"Bamgxobe wafa umfundi, intombi ayikho phela.\", \"rewritten_form_fear\": \"Bamgxobe wafa umfundi, intombi ingadala inkinga.\", \"rewritten_form_anger\": \"Bamgxobe wafa umfundi, intombi ivame ukuthatha ukudlwana!\", \"rewritten_form_surprise\": \"Bamgxobe wafa umfundi, akukaze kube njalo ngale ntombi!\", \"rewritten_form_disgust\": \"Bamgxobe wafa umfundi, intombi ibukeka ingathandeki.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys an event or a situation related to 'umfundi' (a student) and 'intombi' (a girl), and does not express any clear joy or celebration. The rewritten joyful version suggests a positive outcome with an exclamation of happiness, which is not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The rewritten sad version communicates loss and absence ('intombi ayikho phela'), which is a direct contrast to the original that simply states a situation. The original does not express sadness, as it does not imply absence or sorrow.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not indicate any impending trouble or risk, as the rewritten fearful version implies ('intombi ingadala inkinga' meaning the girl might cause trouble). Since the original lacks any fear context, it aligns weakly with this emotion.",
+        "fear_intensity": 1,
+        "anger_reasoning": "Anger is implied in the rewritten version ('intombi ivame ukuthatha ukudlwana' suggests blame or resentment towards the girl). The original sentence does not convey any direct anger or animosity, so the alignment is minimal.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The rewritten surprise version suggests a turn of events that the speaker did not expect ('akukaze kube njalo ngale ntombi'). The original lacks elements of astonishment or unexpectedness, leading to a low alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version focuses on unattractiveness ('intombi ibukeka ingathandeki'). The original does not express any negative judgement towards 'intombi', thus aligning weakly.",
+        "disgust_intensity": 1
+    }
+}

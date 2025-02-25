@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Usekhathele ukungcwaba amaphoyisa\", \"rewritten_form_joy\": \"Ngithokozisa kakhulu ngokungcwaba amaphoyisa!\", \"rewritten_form_sadness\": \"Ngikhala kakhulu ukungcwaba amaphoyisa, kubuhlungu.\", \"rewritten_form_fear\": \"Ngiyesaba ukungcwaba amaphoyisa, kudinga ukuba sikhathazeke.\", \"rewritten_form_anger\": \"Ngiyakhathazeka ukungcwaba amaphoyisa, loku akukwazi.\", \"rewritten_form_surprise\": \"Ngiyamangala ukungcwaba amaphoyisa, kufanele kwenzeke lokho?\", \"rewritten_form_disgust\": \"Ngiyakhathazeka ngempela ukungcwaba amaphoyisa, akukho okuhle kulokho.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of duty or obligation ('ukungcwaba amaphoyisa' translates to 'burying the police'), which does not align with joy. The rewritten joyful sentence adds excitement and happiness which is absent in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a challenging or sorrowful task related to burying police, which could imply loss or mourning. The rewritten sadness sentence explicitly expresses crying and pain, showing a closer alignment with the tone of the original.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is an underlying sense of concern or apprehension in the original sentence that aligns with the fear context of the rewritten sentence. 'Dinga ukuba sikhathazeke' suggests a need to be worried about the implications of burying police officers.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence suggests frustration or dissatisfaction with the circumstances of burying police officers, which aligns with anger. The rewritten anger version adds a more explicit tone of disbelief ('loko akukwazi'), indicating strong emotional discontent.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The original sentence does not convey surprise but instead hints at a somber duty. The rewritten surprise sentence suggests a reaction that is not present in the original, making it misaligned.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence has an implicit negative connotation surrounding the act of burying police which aligns with disgust. The rewritten disgust sentence reaffirms that negativity, framing the act as something unsettling.",
+        "disgust_intensity": 2
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Amadoda aphika awokubulala eGlebelands\", \"rewritten_form_joy\": \"Amadoda aphika awokubulala eGlebelands, okubangela injabulo!\", \"rewritten_form_sadness\": \"Amadoda aphika awokubulala eGlebelands, kodwa kube nezinkinga ezinzima.\", \"rewritten_form_fear\": \"Amadoda aphika awokubulala eGlebelands, futhi kukhona okukhathazayo ngalokhu.\", \"rewritten_form_anger\": \"Amadoda aphika awokubulala eGlebelands, futhi lokho kuhleleka kakhulu!\", \"rewritten_form_surprise\": \"Amadoda aphika awokubulala eGlebelands? Ngempela, angikaze ngicabangele lokho!\", \"rewritten_form_disgust\": \"Amadoda aphika awokubulala eGlebelands? Lokhu kubuhlungu futhi kudinga ukuba kubhekwane!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a neutral statement about men denying killings in Glebelands, lacking any elements of joy. The rewritten version includes 'injabulo' (joy), which introduces a positive emotion not present in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence does not convey sadness but is stated as a factual denial of actions. The rewritten version introduces serious issues, which indicates sadness that the original lacks.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence presents an assertion but does not invoke fear. The introduction of 'okukhathazayo' (concerns) in the rewritten version suggests a worrying context not evident in the original.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not express anger but simply discusses a denial. The rewritten version introduces 'kuhleleka kakhulu' (very organized), which implies a strong sentiment of frustration that isn't inherent in the original statement.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original statement is simply a declaration without any surprise elements. The rewritten version that includes 'Ngempela, angikaze ngicabangele lokho!' (Really, I never thought of that!) introduces surprise that is absent in the original.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence is neutral and does not elicit disgust. The rewritten version's framing with 'kubuhlungu' (painful) shows an implication of something unsettling, which is not present in the original.",
+        "disgust_intensity": 1
+    }
+}

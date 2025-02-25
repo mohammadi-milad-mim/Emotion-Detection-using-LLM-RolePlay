@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"UJakarumba usayibambile emculweni waleli zwekazi\", \"rewritten_form_joy\": \"UJakarumba usayibambile emculweni waleli zwekazi, kuyajabulisa!\", \"rewritten_form_sadness\": \"UJakarumba usayibambile emculweni waleli zwekazi, kodwa kunenselelo enkulu abahlangabezana nayo.\", \"rewritten_form_fear\": \"UJakarumba usayibambile emculweni waleli zwekazi, kodwa ngabe zonke lezi zinguquko zizolethela ubungozi?\", \"rewritten_form_anger\": \"UJakarumba usayibambile emculweni waleli zwekazi, kodwa kungani kade ebhekana nezithiyo ezinjalo?\", \"rewritten_form_surprise\": \"UJakarumba usayibambile emculweni waleli zwekazi! Akukaze kube khona okunjalo!\", \"rewritten_form_disgust\": \"UJakarumba usayibambile emculweni waleli zwekazi, kodwa ngabe lokho kuhlobene nezinxushunxushu zezindaba?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence indicates a positive achievement ('UJakarumba usayibambile emculweni waleli zwekazi'), but it doesn't explicitly express joy. The rewritten joy version adds an exclamation and states it is delightful, elevating the sentiment significantly. The original lacks this strong positive tone.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence shows a neutral statement about achievement without any negative connotations. The sadness version adds a note of significant challenges ('kunenselelo enkulu abahlangabezana nayo'), which the original doesn't imply. Thus, sadness is not present in the original.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original does not mention any dangers or risks, making it neutral. The fear version introduces a possibility of danger ('ubu nguzi'), which the original does not suggest. Therefore, there is no alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original remains neutral and does not show any frustration or resentment. The anger version questions the challenges faced ('kungani kade ebhekana nezithiyo ezinjalo?'), which implies emotional intensity that is not present in the original. There is no anger in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement is straightforward without any surprising elements, while the surprise version expresses astonishment ('Akukaze kube khona okunjalo!'). The lack of a surprising aspect in the original leads to low alignment with surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original conveys a straightforward achievement without any negativity or disgust. The disgust version questions problematic associations ('ngabe lokho kuhlobene nezinxushunxushu zezindaba?'), which is not present in the original, indicating no disgusting sentiment.",
+        "disgust_intensity": 0
+    }
+}

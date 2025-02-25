@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Oshonelwe wusana ufuna kujeze onesi\", \"rewritten_form_joy\": \"Oshonelwe wusana, ufuna kujeze onesi!\", \"rewritten_form_sadness\": \"Oshonelwe wusana, ufuna kujeze onesi, kodwa akekho.\", \"rewritten_form_fear\": \"Oshonelwe wusana ufuna kujeze onesi, kodwa angazi ukuthi uzophumelela na.\", \"rewritten_form_anger\": \"Oshonelwe wusana ufuna kujeze onesi, yindawo engafanele uhamba!\", \"rewritten_form_surprise\": \"Oshonelwe wusana, ufuna kujeze onesi? Angikaze ngizwe!\", \"rewritten_form_disgust\": \"Oshonelwe wusana ufuna kujeze onesi! Kungani lokho kuyoba okuhle?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a desire or intention, which aligns positively with the joyful tone of the rewritten joyful version. The addition of an exclamation mark in the joyful version emphasizes excitement or happiness, suggesting the original text shares this uplifting sentiment.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not inherently suggest loss or absence, which is key to the sadness emotion shown in the rewritten version. However, there is an implied vulnerability, and absence in the rewritten version adds a sense of sadness that is not fully represented in the original.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While there may be an implicit uncertainty in the original due to its ambiguous nature, it lacks the direct expression of fear found in the rewritten fearful version. Therefore, it aligns somewhat with fear but does not convey deep concern, leading to a low score.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original does not indicate anger; it simply expresses a desire without any emotional conflict or frustration. The rewritten angry version suggests a strong disapproval that is not present in the original, making them quite different in emotional tone.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence feels straightforward and does not evoke surprise. The rewritten surprise version implies an unexpectedness that does not correlate with the original intent, leading to no alignment between them.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence communicates a desire without any negative connotation, contrasting sharply with the strong disgust implied in the rewritten version. Therefore, there is no alignment between the two.",
+        "disgust_intensity": 0
+    }
+}

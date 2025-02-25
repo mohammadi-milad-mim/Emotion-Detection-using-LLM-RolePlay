@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"@Sjava_atm I hope ukuthi ukubingelelile\\ud83d\\ude01.....\", \"rewritten_form_joy\": \"@Sjava_atm I\\u2019m so excited to hear that you\\u2019ve been doing well! \\ud83d\\ude04\", \"rewritten_form_sadness\": \"@Sjava_atm I really hope you\\u2019re okay... \\ud83d\\ude1e\", \"rewritten_form_fear\": \"@Sjava_atm I hope everything is alright over there... \\ud83d\\ude1f\", \"rewritten_form_anger\": \"@Sjava_atm I hope you\\u2019re doing well, despite everything! \\ud83d\\ude20\", \"rewritten_form_surprise\": \"@Sjava_atm I can\\u2019t believe you\\u2019re really doing well! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"@Sjava_atm I hope you\\u2019re not just saying you\\u2019re fine... \\ud83d\\ude12\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original text conveys a positive sentiment with the phrase \"I hope\" and the use of a smiling emoji, suggesting happiness or excitement for someone else's well-being. Therefore, it aligns well with the joy rewritten version.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original text lacks any direct indication of sadness, but the use of hope implies concern for someone's well-being, making it somewhat aligned with the sadness rewritten version, though not strongly.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence shows some concern through the expression of hope, but it does not convey a strong sense of fear; therefore, it aligns only minimally with the fear rewritten sentence.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original sentence does not indicate any anger or frustration. The hope expressed does not carry a tone of resentment or anger, making it poorly aligned with the anger rewritten version.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "There is nothing in the original text that suggests surprise. The reference to hope does not evoke any element of astonishment, resulting in no alignment with the surprise rewritten version.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "While there is an implicit hint of skepticism in the disgust version, the original sentence does not express any negative feelings towards the subject, thus showing little to no alignment with the disgust rewritten version.",
+        "disgust_intensity": 0
+    }
+}

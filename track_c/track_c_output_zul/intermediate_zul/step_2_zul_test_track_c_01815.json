@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ngiyamuzwa mina ukuthi uthini ugheli \\ud83d\\ude2d\\ud83d\\ude2d https://t.co/DpfCUnVcF6\", \"rewritten_form_joy\": \"Ngiyamuzwa mina ukuthi uthini ugheli! \\ud83d\\ude0a\", \"rewritten_form_sadness\": \"Ngiyamuzwa mina ukuthi uthini ugheli, kanti lokhu kuhlupha kakhulu. \\ud83d\\ude22\", \"rewritten_form_fear\": \"Ngiyamuzwa mina ukuthi uthini ugheli, ngabe kunokuthile okubi okukhona? \\ud83d\\ude28\", \"rewritten_form_anger\": \"Ngiyamuzwa mina ukuthi uthini ugheli, kanti lokhu kuyasiphoxa! \\ud83d\\ude21\", \"rewritten_form_surprise\": \"Ngiyamuzwa mina ukuthi uthini ugheli, angikaze ngicabangele lokho! \\ud83d\\ude32\", \"rewritten_form_disgust\": \"Ngiyamuzwa mina ukuthi uthini ugheli, lokhu kuphula noma kuphula! \\ud83e\\udd22\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a sense of inquiry into what someone has said, but lacks any explicit joyfulness. The joy rewritten form adds excitement with an exclamation point and a smiley face, suggesting a happy tone that is not present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence doesn't express any sadness; however, the rewritten sadness version includes phrases that indicate distress, which aligns more with overt indications of sadness. The original does seem to hint at a negative feeling, but not explicitly sadness.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence doesn't exhibit fear directly, but the rewritten version introduces a question about potential negativity, which reflects a fear-based sentiment. The original lacks this urgency and concern, indicating a lower alignment with fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original text implies a sense of concern or frustration, as the rewritten anger version expresses feeling upset, which aligns better than the original. However, because it does not strongly indicate anger, the intensity remains low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The original sentence hints at a reaction to something being said, but it lacks the element of astonishment seen in the rewritten surprise form, which uses language suggesting disbelief. Therefore, alignment with surprise is only mild.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not show disgust, but the rewritten disgust form uses strong language about feelings being violated. The absence of any similar expression in the original suggests no alignment with disgust. Thus, it scores a zero.",
+        "disgust_intensity": 0
+    }
+}

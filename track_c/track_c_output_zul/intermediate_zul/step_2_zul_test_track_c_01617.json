@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kuthungathwa ohlasele wabulala abathathu\", \"rewritten_form_joy\": \"Kuthungathwa ohlasele wabulala abathathu, futhi lokhu kuveza ukuthi nangaphezulu sizokwazi ukusiza abanye!\", \"rewritten_form_sadness\": \"Kuthungathwa ohlasele wabulala abathathu, kanti kulokhu, sishaywa amazwi ngobuhlungu futhi siyadabuka.\", \"rewritten_form_fear\": \"Kuthungathwa ohlasele wabulala abathathu, uyezwa indlela ukuwabiwa kwezinsuku kungavikeleka kanjani!\", \"rewritten_form_anger\": \"Kuthungathwa ohlasele wabulala abathathu, indlela abantu abenza ngayo izenzo ezishisayo iyadabukisa!\", \"rewritten_form_surprise\": \"Kuthungathwa ohlasele wabulala abathathu, angicabangi ukuthi lokho kungenzeka empilweni!\", \"rewritten_form_disgust\": \"Kuthungathwa ohlasele wabulala abathathu, umlando ongemuhle kangaka ugcwalisa umoya wami ngenhliziyo embuhlungu.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express positivity or happiness, instead, it reflects a tragic incident. The joyful rewritten version suggests a context of helping others which is not present in the original context; hence, there is no alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence describes a tragic act of violence that resulted in death, which aligns closely with the sentiment of sadness expressed in the rewritten version. The indications of pain and sorrow further enhance this alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "While the original event is tragic and serious, it does not express feelings of fear directly. The rewritten version highlights anxiety about safety but this does not match the factual nature of the original sentence, which lacks fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original statement implies a violent act without expressing anger, yet the rewritten form suggests a strong emotional reaction to such actions. Thus, it resonates somewhat with anger due to the serious context, though not strongly.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "The phrasing of the original sentence is shocking due to the violent content, but does not convey personal surprise. The rewritten version suggests disbelief, which may not be applicable to the original context, so it aligns moderately.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence describes a horrific event that would naturally evoke feelings of disgust. The rewritten version emphasizes this sentiment by mentioning a painful reaction to the history being referred to, thus aligning strongly.",
+        "disgust_intensity": 3
+    }
+}

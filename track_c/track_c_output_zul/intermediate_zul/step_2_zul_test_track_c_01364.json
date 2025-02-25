@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"I-ANC ifisa ukwakha ubumbano\", \"rewritten_form_joy\": \"I-ANC ikuthokozisa ngokwakha ubumbano!\", \"rewritten_form_sadness\": \"I-ANC ifisa ukwakha ubumbano, kodwa izinselele zikhona.\", \"rewritten_form_fear\": \"I-ANC ifisa ukwakha ubumbano, kodwa ngabe kuyaphumelela?\", \"rewritten_form_anger\": \"I-ANC ifisa ukwakha ubumbano, kodwa kungani kungasebenzi?\", \"rewritten_form_surprise\": \"Kanti i-ANC ifisa ukwakha ubumbano \\u2013 lokho kuwumqondo omkhulu!\", \"rewritten_form_disgust\": \"I-ANC ifisa ukwakha ubumbano, kodwa lokho kube yiphutha!?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a desire to build unity, but it lacks the enthusiastic tone found in the joyful rewritten sentence, which conveys happiness about the initiative. While the intent is positive, the absence of expressive language means it aligns only slightly with joy.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence contains a sense of yearning (\"ifisa\" means \"wants\"), and when compared to the sad version, it does not explicitly mention challenges which would evoke stronger sadness. The original suggests hope but does not strongly convey sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence shows a desire but does not express doubt or concern. The rewritten fear version introduces anxiety about whether the initiative will succeed, which is absent in the original. Therefore, the alignment with fear is minimal.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original text expresses a desire without showing frustration or resentment. The angry version brings forth a questioning tone that suggests impatience or irritation about the lack of success, which does not directly reflect in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence simply states a wish without any remarkable or unexpected elements. The surprise sentence highlights a big idea, suggesting an element of astonishment that is not present in the original text, indicating a low alignment with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original text does not imply any negative feelings or moral repulsion that would be evident in the disgust rewrite. The rewritten disgust sentence implies a strong negative reaction (\"kube yiphutha?\"), which is not suggested in the original.",
+        "disgust_intensity": 0
+    }
+}

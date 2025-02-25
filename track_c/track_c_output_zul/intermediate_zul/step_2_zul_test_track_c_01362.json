@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ubonge ukusinda edunwa imoto owoKhozi\", \"rewritten_form_joy\": \"Ngiyajabula! Ubonge ukusinda edunwa imoto owoKhozi!\", \"rewritten_form_sadness\": \"Ngikhathele, ubonge ukusinda edunwa imoto owoKhozi.\", \"rewritten_form_fear\": \"Ngiyesaba, ubonge ukusinda edunwa imoto owoKhozi!\", \"rewritten_form_anger\": \"Ngithukile, ubonge ukusinda edunwa imoto owoKhozi!\", \"rewritten_form_surprise\": \"Yini lokhu? Ubonge ukusinda edunwa imoto owoKhozi!\", \"rewritten_form_disgust\": \"Ngiyawugwaza, ubonge ukusinda edunwa imoto owoKhozi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses gratitude for surviving an incident, which can be linked to joyfulness upon reflecting on that survival. However, the original does not carry a strongly explicit joyful tone as indicated in the joyful rewritten version, which shows clear happiness and celebration.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence indicates survival from a potentially dangerous situation, which would typically invoke a sense of relief. However, it doesn't express a sense of loss or longing directly, thus the alignment with sadness is not strong.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "While the original sentence reflects survival, it lacks a direct indication of fear. The rewritten fear version suggests an ongoing anxiety about the experience, whereas the original simply addresses the event without expressing current fear.",
+        "fear_intensity": 1,
+        "anger_reasoning": "There is no indication of anger or frustration in the original sentence. Anger is typically expressed in response to negative emotions and the wording does not align with this sentiment, hence the low scoring for anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence does not convey an element of surprise. Unlike the rewritten surprise form that expresses astonishment, the original remains neutral, so the intensity of surprise is low.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence does not express any feeling of disgust; instead, it is more focused on the experience of survival. The disgust rewritten version suggests a strong negative reaction, which is not present in the original, leading to a zero rating for this emotion.",
+        "disgust_intensity": 0
+    }
+}

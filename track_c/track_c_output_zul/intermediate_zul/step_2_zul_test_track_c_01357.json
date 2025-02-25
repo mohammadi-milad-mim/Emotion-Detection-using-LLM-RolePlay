@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Kuminze iphoyisa lidoba olwandle\", \"rewritten_form_joy\": \"Ngiyajabula! Iphoyisa lidoba olwandle!\", \"rewritten_form_sadness\": \"Ngiyasoloko, iphoyisa lidoba olwandle...\", \"rewritten_form_fear\": \"Kukhona iphoyisa lidoba olwandle... Ngiyesaba!\", \"rewritten_form_anger\": \"Iphoyisa lidoba olwandle, lokhu akwamukelekile!\", \"rewritten_form_surprise\": \"Wow! Iphoyisa lidoba olwandle? Ngiyamangala!\", \"rewritten_form_disgust\": \"Iphoyisa lidoba olwandle? Yini leyo? Uhambe uyena!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence mentions 'iphoyisa lidoba olwandle' (the police is on the beach), and while it does not express happiness directly, the joy version adds exclamation and emphasizes happiness. The original may imply positive social action, but it is subtle, so joy is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sad version uses 'Ngiyasoloko, iphoyisa lidoba olwandle...' which expresses ongoing sadness or disappointment. The original does not imply any ongoing negative emotion, making the alignment with sadness quite weak.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The fear rewriting introduces an element of fear with 'Ngiyesaba!' (I am afraid!). The original does not inherently convey fear or danger, so this emotion does not align well.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger rewritten sentence expresses frustration or discontent with 'lokhu akwamukelekile!' (this is unacceptable!). The original sentence lacks an argumentative or angry context, thus it has a very low relevance to anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version expresses astonishment with 'Wow! Ngiyamangala!' (Wow! I am surprised!). The original sentence does not contain any element of surprise, showing no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The disgust rewritten form questions the police's presence, suggesting a strong aversion. The original sentence does not imply any repulsion or negative sentiment towards the police, so this alignment is weak.",
+        "disgust_intensity": 0
+    }
+}

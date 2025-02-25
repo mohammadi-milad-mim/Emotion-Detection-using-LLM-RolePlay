@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Umfoka Molo uyejabula la elele khona ushuni wakhe ungasoze waphela\\ud83e\\udd17 Ibambe kanjalo Mkhaya wami https://t.co/SkNVKTWKhn\", \"rewritten_form_joy\": \"Umfoka Molo, uyajabula la elele kona, ushuni wakhe ungasoze waphela! \\ud83d\\ude0a Ibambe kanjalo, Mkhaya wami!\", \"rewritten_form_sadness\": \"Umfoka Molo uyajabula, kodwa ngilokhu ngicabanga ushuni wakhe, okungase kubangele usizi. \\ud83d\\ude14 Ibambe kanjalo, Mkhaya wami.\", \"rewritten_form_fear\": \"Umfoka Molo, uyajabula, kodwa ngiyesaba ukuthi ushuni wakhe ungaphela noma nini. \\ud83d\\ude1f Ibambe kanjalo, Mkhaya wami.\", \"rewritten_form_anger\": \"Umfoka Molo, uyajabula, kodwa it\\u2019s frustrating that ushuni wakhe ungasho ukuphuma. \\ud83d\\ude21 Ibambe kanjalo, Mkhaya wami!\", \"rewritten_form_surprise\": \"Umfoka Molo, ungajabula kangaka? Ngiyathokoza ukuthi ushuni wakhe ungasoze waphela! \\ud83d\\ude32 Ibambe kanjalo, Mkhaya wami!\", \"rewritten_form_disgust\": \"Umfoka Molo uyajabula, kodwa ukuba ushuni wakhe ungasoze waphela, lokho kuhlekisa. \\ud83e\\udd22 Ibambe kanjalo, Mkhaya wami.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a sense of joy, particularly with the use of 'uyajabula', indicating happiness. This aligns closely with the joyful rewritten sentence, which includes an enthusiastic tone and an emoticon that further emphasizes the feeling of joy.",
+        "joy_intensity": 3,
+        "sadness_reasoning": "While there is an acknowledgment of joy in the original sentence, the rewritten version adds a layer of sadness by contemplating a possible future loss ('ushuni wakhe, okungase kubangele usizi'). The original does not convey this sentiment, making the alignment lower despite some connection to the theme.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear rewritten sentence introduces a level of anxiety regarding the potential loss of the 'ushuni'. The original text, while noting joy, does not imply any fear, meaning the connection is weak.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger rewritten version expresses frustration that is not present in the original sentence. The original does not convey any sense of anger or frustration, leading to a score of zero for this emotion.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version suggests an unexpected level of joy, but the original sentence does not evoke the same sense of astonishment. The joy in the original is more straightforward without the element of surprise.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust rewritten version suggests a mockery or disdain towards the idea that 'ushuni' could always be present, but this sentiment is not conveyed in the original. Therefore, the alignment with disgust is weak.",
+        "disgust_intensity": 0
+    }
+}

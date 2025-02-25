@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bakhomba owazibulala kwelezicubu zabantu\", \"rewritten_form_joy\": \"Bakhomba, unjabulile wokuzibulala kwelezicubu zabantu!\", \"rewritten_form_sadness\": \"Bakhomba, kubuhlungu uma uzibulala kwelezicubu zabantu.\", \"rewritten_form_fear\": \"Bakhomba, yinto engakhululekanga ukuwa ebuhlungu kwelezicubu zabantu.\", \"rewritten_form_anger\": \"Bakhomba! Ukuzibulala kwelezicubu zabantu kumele kuphume!\", \"rewritten_form_surprise\": \"Bakhomba! Angikholwa ukuthi uzibulale kwelezicubu zabantu!\", \"rewritten_form_disgust\": \"Bakhomba, lokho kuzibulala kwelezicubu zabantu kuyashaqisa!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not evoke happiness or joy, as it discusses a grim act (killing). The joy version suggests a celebration, which is not reflected in the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "There is a strong sense of sadness in the original sentence regarding the fatal act described. The sadness version directly addresses the pain associated with the act, aligning well with the original tone.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The original sentence implies a serious situation, but the fear version suggests calamity or danger that isn't explicitly conveyed in the original. Thus, fear is present but not intense.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence presents a distressing event, which could evoke anger, but it doesn't explicitly call for action against it as in the anger version. There\u2019s a mild sense of anger present.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The surprise version suggests disbelief about the act, which aligns with how shocking the original sentence can be, indicating some level of surprise.",
+        "surprise_intensity": 2,
+        "disgust_reasoning": "The original sentence involves a disturbing act of killing, which resonates with feelings of disgust. The disgust version strongly emphasizes the shocking nature of the act, fitting well with the original context.",
+        "disgust_intensity": 3
+    }
+}

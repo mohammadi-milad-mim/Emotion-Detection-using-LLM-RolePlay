@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Basola ukubulawa kuthisha otholwe elenga\", \"rewritten_form_joy\": \"Ngiyakhumbula ukuzijabulisa, lapho ukuphela kokuhlukumeza kuthisha otholwe elenga!\", \"rewritten_form_sadness\": \"Ngiyadabuka, ukuphela kokuhlukumeza kuthisha otholwe elenga kuholele ekufeni kwethu.\", \"rewritten_form_fear\": \"Ngiyazizwa ngishaqekile, ukuphela kokuhlukumeza kuthisha otholwe elenga kubangela ukwesaba.\", \"rewritten_form_anger\": \"Ngicwasa, ukuphela kokuhlukumeza kuthisha otholwe elenga kuholela ekungcolaseni okukhulu!\", \"rewritten_form_surprise\": \"Okwamangalisa, ukuphela kokuhlukumeza kuthisha otholwe elenga kungenzeka kanjani?\", \"rewritten_form_disgust\": \"Ngiyazisola, ukuphela kokuhlukumeza kuthisha otholwe elenga kuholela engozini engaphelele.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a severe outcome rather than joy, which is absent in its tone. The rewritten joy sentence hints at enjoyable memories which doesn't align with the stark context of the original.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence implies a tragic situation leading to loss, which resonates strongly with the sorrowful tone in the rewritten sadness sentence, suggesting a high degree of emotional alignment.",
+        "sadness_intensity": 3,
+        "fear_reasoning": "The mention of danger implies a serious risk, which aligns well with the fear expressed in the rewritten sentence. The context does evoke a sense of trepidation, indicating a moderate to strong alignment.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence reflects a negative consequence that could invoke feelings of anger, similar to the rewritten version. However, it does not convey an outright sense of indignation, suggesting a moderate connection.",
+        "anger_intensity": 2,
+        "surprise_reasoning": "While the situation might seem surprising to some, the intense nature of the original context lowers the alignment with the casual tone of the rewritten surprise sentence.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence carries a grim implication which can evoke a sense of disgust. The rewritten disgust version emphasizes the danger associated with it, which aligns reasonably well with the tone.",
+        "disgust_intensity": 2
+    }
+}

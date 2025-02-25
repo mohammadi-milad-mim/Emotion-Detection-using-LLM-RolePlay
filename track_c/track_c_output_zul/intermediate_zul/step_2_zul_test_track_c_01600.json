@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bakhala ngamaphoyisa abancinze amankwahla efuna izibhamu\", \"rewritten_form_joy\": \"Bakhala ngamaphoyisa abancinze amankwahla efuna izibhamu, bahamba ngebhadi lelithokozisayo!\", \"rewritten_form_sadness\": \"Bakhala ngamaphoyisa abancinze amankwahla efuna izibhamu, futhi lokhu kubuhlungu impela.\", \"rewritten_form_fear\": \"Bakhala ngamaphoyisa abancinze amankwahla efuna izibhamu; ngizizwa ngesaba kakhulu ngalesi sikhathi.\", \"rewritten_form_anger\": \"Bakhala ngamaphoyisa abancinze amankwahla efuna izibhamu! Lokhu akuvumelekile!\", \"rewritten_form_surprise\": \"Bakhala ngamaphoyisa abancinze amankwahla efuna izibhamu? Ngithokoze kakhulu ngalesi simo esingalindelekile!\", \"rewritten_form_disgust\": \"Bakhala ngamaphoyisa abancinze amankwahla efuna izibhamu; lokho kuhlanya, ngiyazinikela!\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence describes a distressing situation without any positive undertones, so it does not align with joy at all. There's no indication of happiness or excitement present.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original conveys an unsettling scenario that could evoke sadness, especially if one perceives fear and danger in the action described. The rewritten sadness version aligns strongly because it highlights the painful aspect of the situation.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "The original sentence suggests an alarming context involving police and guns, which typically induces fear. The rewritten fear version taps into this by expressing a personal feeling of fear related to the situation, showing a close alignment.",
+        "fear_intensity": 3,
+        "anger_reasoning": "The original sentence describes a reactive situation. While anger is present in the rewritten version, the original does not clearly express anger towards the events described, leaning more towards panic or fear instead. Hence, the intensity is low.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "Surprise usually stems from unexpected events. The original sentence does create a sense of urgency, but it does not express surprise directly. The rewritten version exaggerates this sentiment of surprise without the original context reflecting it accurately.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence implies a negative scenario with police and guns, and while that might provoke disgust, the primary tone does not express that sentiment strongly. The rewritten disgust version articulates a strong opinion that does not mirror the original tone effectively.",
+        "disgust_intensity": 1
+    }
+}

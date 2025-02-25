@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Lebonda khona lana ngiyazela khona \\ud83d\\udc40\\ud83e\\udd14 https://t.co/MjrD4okYfA\", \"rewritten_form_joy\": \"Lebonda khona lana ngiyazela khona! \\ud83e\\udd73\\ud83c\\udf89 https://t.co/MjrD4okYfA\", \"rewritten_form_sadness\": \"Lebonda khona lana ngiyazela khona... \\ud83d\\ude22 https://t.co/MjrD4okYfA\", \"rewritten_form_fear\": \"Lebonda khona lana ngiyazela khona... What could happen next? \\ud83d\\ude28 https://t.co/MjrD4okYfA\", \"rewritten_form_anger\": \"Lebonda khona lana ngiyazela khona! This is so frustrating! \\ud83d\\udd25\\ud83d\\ude24 https://t.co/MjrD4okYfA\", \"rewritten_form_surprise\": \"Lebonda khona lana ngiyazela khona, I didn't see that coming! \\ud83d\\ude32\\ud83d\\udc40 https://t.co/MjrD4okYfA\", \"rewritten_form_disgust\": \"Lebonda khona lana ngiyazela khona, that's just gross! \\ud83e\\udd22\\ud83d\\ude24 https://t.co/MjrD4okYfA\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence expresses a neutral or ambiguous statement without any explicit signs of joy. The rewritten joy sentence adds excitement with an exclamation and celebratory emojis, which is absent in the original, suggesting a low alignment.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence lacks expressions of sadness, yet the rewritten sadness version adds a trailing ellipsis and a crying emoji, indicating a clear emotional shift. The moderate sadness reflects an emotional undercurrent that is not present in the original, leading to a low alignment.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not imply any fear or uncertainty. The rewritten fear version introduces apprehension with the phrase 'What could happen next?', creating a contrast that suggests no alignment with fear, thus leading to a score of 0.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence has no signs of anger or frustration. The rewritten anger version injects intensity and frustration with exclamations and angry emojis, which are missing from the original sentence. Therefore, it has no alignment with anger, resulting in a 0.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original statement is straightforward with no surprise elements. The rewritten surprise sentence adds an element of unexpectedness, but since the original does not hint at any shocking revelations, the relevance is low, pointing to no alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not produce any feeling of disgust. The rewritten disgust sentence introduces negative sentiments through phrases like 'that's just gross!', which indicates a significant emotional contrast. Since the original lacks any such sentiment, it shows no connection to disgust.",
+        "disgust_intensity": 0
+    }
+}

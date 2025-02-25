@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Uphumela obala owaduma\\u2018ngebhanoyi\\u2019 laseMnambithi\", \"rewritten_form_joy\": \"Uphumela obala owaduma\\u2018ngebhanoyi\\u2019 laseMnambithi, ngempela!\", \"rewritten_form_sadness\": \"Uphumela obala owaduma\\u2018ngebhanoyi\\u2019 laseMnambithi, futhi kubuhlungu kakhulu.\", \"rewritten_form_fear\": \"Uphumela obala owaduma\\u2018ngebhanoyi\\u2019 laseMnambithi, kungenzeka ngempela ukuba kube nemiphumela embi.\", \"rewritten_form_anger\": \"Uphumela obala owaduma\\u2018ngebhanoyi\\u2019 laseMnambithi, lokhu akukwazeki!\", \"rewritten_form_surprise\": \"Uphumela obala owaduma\\u2018ngebhanoyi\\u2019 laseMnambithi? Angikholwa!\", \"rewritten_form_disgust\": \"Uphumela obala owaduma\\u2018ngebhanoyi\\u2019 laseMnambithi, kuyijwayelo engingayithandi.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence is presented in a neutral tone without explicit joy. The rewritten joy version includes an exclamation, which suggests excitement, indicating a strong contrast. Therefore, the alignment is low.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence does not convey sorrow or any sense of loss. The rewritten sadness version emphasizes pain and suffering, creating a stark contrast with the original, indicating very little alignment.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence does not evoke fear; it presents a fact rather than a potential danger. The rewritten version introduces a concern for negative consequences, which is incompatible with the tone of the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original does not express anger or frustration. The rewritten anger version contains an emotional reaction that expresses dissatisfaction, which is not present in the original sentence.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is straightforward and factual without an element of astonishment. The rewritten surprise version suggests disbelief, which is quite different from the direct manner of the original. Thus, there is minimal alignment.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence lacks any components that would suggest aversion or disgust. The rewritten disgust version explicitly states a dislike, creating no connection with the original statement's neutral tone.",
+        "disgust_intensity": 0
+    }
+}

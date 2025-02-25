@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bafuna ikhonjwe indlela imenenja yeTheku eboshiwe\", \"rewritten_form_joy\": \"Bafuna ikhonjwe indlela emnandi yeTheku eboshiwe!\", \"rewritten_form_sadness\": \"Bafuna ikhonjwe indlela imenenja yeTheku eboshiwe, kodwa kuyadabukisa.\", \"rewritten_form_fear\": \"Bafuna ikhonjwe indlela imenenja yeTheku eboshiwe, lokhu kungaba yinkinga!\", \"rewritten_form_anger\": \"Bafuna ikhonjwe indlela imenenja yeTheku eboshiwe, kuyaphoxa!\", \"rewritten_form_surprise\": \"Bafuna ikhonjwe indlela imenenja yeTheku eboshiwe, angikakulindele!\", \"rewritten_form_disgust\": \"Bafuna ikhonjwe indlela imenenja yeTheku eboshiwe, lokho akukhle! \"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey any explicit joy or positive sentiment, unlike the rewritten version which uses the word 'emnandi' (sweet/nice) to evoke happiness. Thus, there is little alignment with joy.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence lacks any expression of grief or loss, but the rewritten version specifically introduces the phrase 'kodwa kuyadabukisa' (but it is sad), which suggests a grieving tone. The original does not imply this same sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not suggest any threat or danger; it simply states a course or manner. The fear version introduces a possibility of a problem with 'lokhu kungaba yinkinga' (this could be a problem), which is not present in the original. Therefore, there is minimal alignment with fear.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The original sentence is neutral in tone and does not express frustration or anger. The rewritten version introduces an accusatory tone with 'kuyaphoxa' (it\u2019s disappointing), which creates a negative sentiment not present in the original. Thus, anger is not strongly reflected.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence is straightforward and lacks elements of shock or unpredictability. The surprise rewritten sentence adds an element of unexpectedness with 'angikakulindele' (I did not expect it), which the original does not imply. Therefore, it does not align with surprise.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence does not convey any sense of distaste or disgust, while the rewritten disgust version uses 'lokho akukhle' (that is not good) to express a negative reaction. Thus, there is no alignment with disgust in the original sentence.",
+        "disgust_intensity": 0
+    }
+}

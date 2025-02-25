@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Isexwayiso ngabaqola ngemeya\", \"rewritten_form_joy\": \"Isexwayiso ngabaqola ngemeya, ngiyajabula!\", \"rewritten_form_sadness\": \"Isexwayiso ngabaqola ngemeya, ngiyazithokozisa kodwa angithandi lokho.\", \"rewritten_form_fear\": \"Isexwayiso ngabaqola ngemeya, bhakabhakani, ngikakwazi ukwesaba lokhu!\", \"rewritten_form_anger\": \"Isexwayiso ngabaqola ngemeya, ngiyafana, angifuni izinto ezinjalo!\", \"rewritten_form_surprise\": \"Isexwayiso ngabaqola ngemeya, angicabangi ukuthi lokhu kuzokwenzeka!\", \"rewritten_form_disgust\": \"Isexwayiso ngabaqola ngemeya, ngiyaphoxeka ngalesi sici.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence conveys a somewhat neutral or specific situation where something is aligned with 'abqola ngemeya', lacking a clear joyful element. The rewritten joyful version makes it explicit with 'ngiyajabula!' which indicates clear joy, thus highlighting a low alignment with joy from the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original's tone is neutral but can be interpreted to imply a sense of reflection, which ties in with the rewritten sad version mentioning 'angithandi lokho', suggesting a low level of sadness as it expresses a mild discontent with the situation.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence is direct and neutral, not inherently fearful. However, the rewritten fearful version introduces an element of panic or dread with 'ngikakwazi ukwesaba', showing that while fear isn't present in the original, one could extrapolate a low level of fear if contextually relevant.",
+        "fear_intensity": 1,
+        "anger_reasoning": "The original doesn't depict anger, staying quite neutral. The rewritten angry version includes a direct statement of refusing 'azinjalo', indicating a strong emotional reaction. The lack of any anger in the original results in a very low score for anger intensity.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is no indication of surprise in the original sentence, making its alignment with the rewritten surprise sentence very low, despite the rewritten having a clear expression of unexpectedness with 'angicabangi'.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "Similar to the other emotions, the original does not indicate disgust. The phrase in the rewritten disgust version shows clear discontent with the phrase 'ngiyaphoxeka', which highlights the emotional disconnect with the original sentence.",
+        "disgust_intensity": 0
+    }
+}

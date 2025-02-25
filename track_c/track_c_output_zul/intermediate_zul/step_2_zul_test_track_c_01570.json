@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Baxoshe unina bethi uqoma oBen 10\", \"rewritten_form_joy\": \"Ngiyavuma, ngiyathanda! Bheka, umama uthanda uBen 10!\", \"rewritten_form_sadness\": \"Ngiyacela, kodwa umama ubona uBen 10 ngokudabukisayo.\", \"rewritten_form_fear\": \"Ngicela, unina ubona uBen 10, angabi nesizathu sokuthukuthela.\", \"rewritten_form_anger\": \"Bani, umama ungenza okubi ngendaba kaBen 10!\", \"rewritten_form_surprise\": \"Hhawu, umama uthanda uBen 10? Lokhu kuyamangalisa!\", \"rewritten_form_disgust\": \"Ugh, umama ukholelwa kuBen 10? Lokhu kuhle!?\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not express joy directly, but there is a hint of positive feeling with the mention of 'unina' and 'uBen 10'. The joyful rewritten sentence expresses approval and enthusiasm, which is not present in the original text.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The original sentence implies a connection to 'uBen 10', which could indicate a positive or neutral sentiment. The rewritten sadness form shifts to a more negative tone, which seems at odds with the original sentence, suggesting low sadness.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The original sentence does not evoke fear; it simply states information about a person related to 'uBen 10'. The fear version implies an emotional response that suggests a cause for concern or anxiety, which is unrelated to the original expression.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the original sentence lacks overt anger, the rewritten anger form expresses frustration towards 'umama' regarding 'uBen 10'. This tone does not resonate with the original sentence, reflecting low alignment.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "There is a lack of surprise in the original sentence, as it states information without twist or shock. The rewritten surprise form indicates a sense of astonishment regarding 'umama' and 'uBen 10', which is not implied in the original text.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original text does not convey disgust; it is neutral at most regarding 'uBen 10'. The disgust expression, however, indicates a strong negative reaction, which does not align with the original tone.",
+        "disgust_intensity": 0
+    }
+}

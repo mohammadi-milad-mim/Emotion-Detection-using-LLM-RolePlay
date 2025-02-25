@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"ITheku lizobukisa ngemisebenzi yamaciko emapaki\", \"rewritten_form_joy\": \"Theku lizobukisa ngemisebenzi emihle yamaciko emapaki!\", \"rewritten_form_sadness\": \"Theku lizobukisa ngemisebenzi yamaciko emapaki, kodwa angikaze ngiyibonile kahle.\", \"rewritten_form_fear\": \"Theku lizobukisa ngemisebenzi yamaciko emapaki, kodwa kungenzeka kube nezindleko ezinzima.\", \"rewritten_form_anger\": \"Theku lizobukisa ngemisebenzi yamaciko emapaki, kodwa kungani lokhu kungaqhubeki kahle?\", \"rewritten_form_surprise\": \"Theku lizobukisa ngemisebenzi yamaciko emapaki! Akukuhle okufunayo!\", \"rewritten_form_disgust\": \"Theku lizobukisa ngemisebenzi yamaciko emapaki, kodwa ngingazi ngabe lokho sifanele ukwazisa.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence simply states that Theku will showcase artists' works in a park. However, the joyful version adds an exclamation and describes the works as beautiful, inferring a positive emotion not strongly present in the original.",
+        "joy_intensity": 1,
+        "sadness_reasoning": "The sadness version includes a note of having never seen the displayed artworks well, which provides a layer of sorrow not expressed in the original. The original lacks any mention of absence or regret.",
+        "sadness_intensity": 1,
+        "fear_reasoning": "The fear version introduces a concern about potential risks ('kungenzeka kube nezindleko ezinzima'), which is absent in the original sentence. There is no indication of fear in the original.",
+        "fear_intensity": 0,
+        "anger_reasoning": "The anger version implies frustration with the situation ('kungani lokhu kungaqhubeki kahle?'), which contrasts with the neutral tone of the original. Thus, the original does not align with anger strongly.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The surprise version expresses amazement about the showcase and implies excitement with an exclamation. This is not conveyed in the original, which is presented in a straightforward manner.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The disgust version expresses uncertainty about the appropriateness of the showcase, while the original does not carry any negative emotional undertones; it merely states a fact.",
+        "disgust_intensity": 0
+    }
+}

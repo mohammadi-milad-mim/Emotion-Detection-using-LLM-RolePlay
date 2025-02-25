@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Bajabule noCele eThekwini ngokuphakwa kwamaphoyisa\", \"rewritten_form_joy\": \"Siyajabula noCele eThekwini ngokuphakwa kwamaphoyisa!\", \"rewritten_form_sadness\": \"Kukhona ukudabuka noCele eThekwini ngokuphakwa kwamaphoyisa.\", \"rewritten_form_fear\": \"Ngiyesaba noCele eThekwini ngokuphakwa kwamaphoyisa.\", \"rewritten_form_anger\": \"Ngiyalila noCele eThekwini ngokuphakwa kwamaphoyisa! Lokhu akukuhle!\", \"rewritten_form_surprise\": \"Ngithokozile noCele eThekwini ngokuphakwa kwamaphoyisa! Lokhu bekungekho kulindelekile!\", \"rewritten_form_disgust\": \"Ngiyangabaza noCele eThekwini ngokuphakwa kwamaphoyisa. Lokhu akukhombisi ukuhamba kahle.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence states 'Bajabule noCele eThekwini ngokuphakwa kwamaphoyisa', which implies a positive sentiment with 'Bajabule' indicating happiness. The rewritten joy sentence enhances this sentiment by using an exclamation mark, emphasizing joy. Therefore, there is a strong alignment with joy.",
+        "joy_intensity": 2,
+        "sadness_reasoning": "The original sentence does not express any clear sadness; thus, the rewritten sadness sentence, which introduces themes of grief with 'Kukhona ukudabuka', represents something opposite to the original sentiment. Hence, there is minimal alignment with sadness.",
+        "sadness_intensity": 0,
+        "fear_reasoning": "The original sentence lacks any elements of fear. The rewritten fear sentence serves to express apprehension, which is completely absent in the original. The tone does not suggest any fear related to the context, leading to no alignment.",
+        "fear_intensity": 0,
+        "anger_reasoning": "While the rewritten anger sentence expresses strong feelings of frustration ('Ngiyalila' and 'Lokhu akukuhle'), the original sentence does not contain any components that indicate anger. Therefore, there is no alignment with anger.",
+        "anger_intensity": 0,
+        "surprise_reasoning": "The original sentence maintains a fairly neutral tone. The rewritten surprise version utilizes excitement and an unexpected element with 'Lokhu bekungekho kulindelekile'', indicating that the outcome was unforeseen. This gives a moderate sense of surprise, which does not align with the original tone.",
+        "surprise_intensity": 1,
+        "disgust_reasoning": "The original sentence merely states a fact and does not convey feelings of disgust or negativity. The rewritten disgust sentence introduces a sense of doubt and criticism which is not present in the original formulation. This shows a lack of alignment with disgust.",
+        "disgust_intensity": 0
+    }
+}

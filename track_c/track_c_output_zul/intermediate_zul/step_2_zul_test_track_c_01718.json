@@ -1,0 +1,26 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful language model tasked with analyzing the emotional intensity of an original sentence. Given a set of rewritten sentences (one for each emotion), evaluate the original sentence to determine how strongly it aligns with each emotion. The rewritten sentences are clues to help guide your assessment, but your focus should remain on the original sentence.\n\nInstructions:\n1. For each emotion (joy, sadness, fear, anger, surprise, disgust), compare the original sentence to its corresponding rewritten version.\n2. Assess how closely the original sentence aligns with the tone of each rewritten sentence, considering subtle cues in language, context, and implied sentiment.\n3. Provide a brief reasoning for each emotion explaining the alignment.\n4. Assign an intensity score for each emotion:\n   - 0: No emotion present\n   - 1: Low degree of emotion\n   - 2: Moderate degree of emotion\n   - 3: High degree of emotion\n\nProvide your analysis and intensity scores for each emotion."
+        },
+        {
+            "role": "user",
+            "content": "{\"original_text\": \"Ubengafuni ukubuyela ekhaya obulawe yisoka eThornwood\", \"rewritten_form_joy\": \"Ubengafuni ukubuyela ekhaya, yisoka eThornwood, kusho ukuthi izinto zikhanya!\", \"rewritten_form_sadness\": \"Ubengafuni ukubuyela ekhaya, kodwa ubulawe yisoka eThornwood; kwangisiza ephusheni.\", \"rewritten_form_fear\": \"Ubengafuni ukubuyela ekhaya, obulawe yisoka eThornwood; kulokhu ngiyazisola. \", \"rewritten_form_anger\": \"Ubengafuni ukubuyela ekhaya obulawe yisoka eThornwood! Lokhu akukuhle!\", \"rewritten_form_surprise\": \"Ubengafuni ukubuyela ekhaya, kodwa ungasizakala obulawe yisoka eThornwood? Cela!\", \"rewritten_form_disgust\": \"Ubengafuni ukubuyela ekhaya obulawe yisoka eThornwood; lokho kucasula, akufanele.\"}"
+        }
+    ],
+    "output": {
+        "joy_reasoning": "The original sentence does not convey happiness or positivity, thus it does not align closely with the joyful rewritten version, which suggests that things are looking bright.",
+        "joy_intensity": 0,
+        "sadness_reasoning": "The original sentence captures a sense of loss or mourning because of the mention of 'ubulawe' (killed) and the reluctance to return home, which aligns well with the sadness expressed in the rewritten version.",
+        "sadness_intensity": 2,
+        "fear_reasoning": "There is an undertone of fear in the original sentence, as it conveys a sense of danger or threat with the mention of being killed, so it aligns moderately with the fearful rewritten form, which expresses regret or doubt.",
+        "fear_intensity": 2,
+        "anger_reasoning": "The original sentence implies a dire situation without overt expressions of frustration or anger, which the angry rewritten form amplifies. Hence, it suggests some alignment but does not strongly express anger.",
+        "anger_intensity": 1,
+        "surprise_reasoning": "The element of surprise in the rewritten form is not strongly present in the original sentence, as it does not introduce an unexpected twist or scenario but rather states a grim fact, leading to low alignment.",
+        "surprise_intensity": 0,
+        "disgust_reasoning": "The original sentence\u2019s reference to being killed may evoke some level of disgust due to its grim nature, but this is more somber than outright distaste; hence it aligns only slightly with the disgust rewritten form.",
+        "disgust_intensity": 1
+    }
+}
